@@ -1,0 +1,214 @@
+import React from 'react';
+import {
+  View,
+  StyleSheet,
+  Text,
+  FlatList,
+  Image,
+  ScrollView,
+  StatusBar,
+} from 'react-native';
+import {Header} from '../../../componrnts';
+import Images from '../../../constants';
+
+const Notification = () => {
+  const data = [
+    {
+      Img1: Images.BackGround.Bg1,
+      name: 'Alexa Martin',
+      text: ' Lorem ipsum dolor sit amet.',
+      time: '0.2.00 AM',
+      Date: '11/12/21',
+    },
+    {
+      Img1: Images.BackGround.Bg1,
+      name: 'Fiona Collin',
+      text: ' Lorem ipsum dolor sit amet.',
+      time: '0.2.00 AM',
+      Date: '11/12/21',
+    },
+    {
+      Img1: Images.BackGround.Bg1,
+      name: 'Niki Martin',
+      text: ' Lorem ipsum dolor sit amet.',
+      time: '0.2.00 AM',
+      Date: '11/12/21',
+    },
+    {
+      Img1: Images.BackGround.Bg1,
+      name: 'Martha jose',
+      text: ' Lorem ipsum dolor sit amet.',
+      time: '0.2.00 AM',
+      Date: '11/12/21',
+    },
+    {
+      Img1: Images.BackGround.Bg1,
+      name: 'Ziouhan Change',
+      text: ' Lorem ipsum dolor sit amet.',
+      time: '0.2.00 AM',
+      Date: '11/12/21',
+    },
+    {
+      Img1: Images.BackGround.Bg1,
+      name: 'Ziouhan Change',
+      text: ' Lorem ipsum dolor sit amet.',
+      time: '0.2.00 AM',
+      Date: '11/12/21',
+    },
+  ];
+  return (
+    <View style={styles.main}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{flexGrow: 1}}>
+        <StatusBar
+          animated={true}
+          backgroundColor="#000"
+          // barStyle={statusBarStyle}
+          // showHideTransition={statusBarTransition}
+          // hidden={hidden}
+        />
+        <View
+          style={{
+            marginVertical: 10,
+            marginTop: 20,
+            width: '90%',
+            alignSelf: 'center',
+          }}>
+          <Header header2 headertext="Notification" color="#211E1F" />
+          <View
+            style={{
+              width: '90%',
+              marginVertical: 15,
+              justifyContent: 'flex-end',
+            }}>
+            <Text style={{color: '#F54F84', textAlign: 'left'}}>Clear All</Text>
+          </View>
+          <View
+            style={{
+              marginVertical: 10,
+              justifyContent: 'space-between',
+              flexDirection: 'row',
+            }}>
+            <View
+              style={{
+                backgroundColor: 'grey',
+                width: '28%',
+                height: 1,
+                marginTop: 15,
+              }}></View>
+            <View style={{}}>
+              <Text style={{fontSize: 18, fontWeight: 'bold', color: '#000'}}>
+                Recent Notification
+              </Text>
+            </View>
+
+            <View
+              style={{
+                backgroundColor: 'grey',
+                width: '28%',
+                height: 1,
+                marginTop: 15,
+              }}></View>
+          </View>
+          <View style={styles.boxouter}>
+            <FlatList
+              data={data}
+              renderItem={({item}) => {
+                return (
+                  <View style={{width: '100%'}}>
+                    <View style={styles.box}>
+                      <View style={styles.img}>
+                        <Image
+                          source={item.Img1}
+                          style={{width: 60, height: 60, borderRadius: 100}}
+                        />
+                      </View>
+                      <View style={styles.txtview}>
+                        <Text style={styles.text1}>{item.name}</Text>
+                        <Text
+                          style={[
+                            styles.text1,
+                            {
+                              fontWeight: '400',
+                              fontSize: 14,
+                              marginVertical: 5,
+                            },
+                          ]}>
+                          {item.text}
+                        </Text>
+                      </View>
+                      <View style={{marginTop: 10, marginRight: 20}}>
+                        <Text
+                          style={{
+                            fontSize: 12,
+                            color: '#000',
+                            fontWeight: 'bold',
+                          }}>
+                          {item.time}
+                        </Text>
+                        <Text
+                          style={{
+                            fontSize: 12,
+                            color: '#000',
+                            marginTop: 30,
+                            fontWeight: 'bold',
+                          }}>
+                          {item.Date}
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                );
+              }}
+            />
+          </View>
+        </View>
+      </ScrollView>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  main: {
+    flex: 1,
+    // backgroundColor: 'pink',
+  },
+  box: {
+    marginVertical: 10,
+    justifyContent: 'space-between',
+    width: '100%',
+    borderRadius: 30,
+    height: 86,
+    borderWidth: 1,
+    borderColor: 'grey',
+    flexDirection: 'row',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 1,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    // elevation: 1,
+  },
+
+  boxouter: {},
+  img: {
+    marginTop: 10,
+    marginLeft: 5,
+    // marginRight: 10,
+  },
+
+  txtview: {
+    marginTop: 20,
+    marginRight: 15,
+  },
+  text1: {
+    fontSize: 13,
+    fontWeight: 'bold',
+    color: '#000',
+  },
+});
+export default Notification;
