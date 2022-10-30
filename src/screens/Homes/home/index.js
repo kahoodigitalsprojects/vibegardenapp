@@ -9,7 +9,7 @@ import {
   FlatList,
   StatusBar,
 } from 'react-native';
-import {Header, Imgbox, SeeAll, StoryData} from '../../../componrnts';
+import { Header, Imgbox, SeeAll, StoryData } from '../../../componrnts';
 import Images from '../../../constants';
 
 const Home = () => {
@@ -55,13 +55,13 @@ const Home = () => {
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
+        contentContainerStyle={{ flexGrow: 1 }}>
         <StatusBar
           animated={true}
           backgroundColor="#000"
-          // barStyle={statusBarStyle}
-          // showHideTransition={statusBarTransition}
-          // hidden={hidden}
+        // barStyle={statusBarStyle}
+        // showHideTransition={statusBarTransition}
+        // hidden={hidden}
         />
         <View
           style={{
@@ -73,11 +73,17 @@ const Home = () => {
           <Header homeheader={true} />
         </View>
         <View style={styles.Box1}>
-          <View style={{width: '90%', alignSelf: 'center'}}>
+          <View style={{ width: '90%', alignSelf: 'center' }}>
             <Text
-              style={{textAlign: 'center', fontSize: 28, fontWeight: '600'}}>
-              Hi, You.
+              style={{
+                textAlign: 'center',
+                fontSize: 28,
+                fontWeight: '600',
+                color: '#000000',
+              }}>
+              Hi, You
             </Text>
+
           </View>
           <View style={styles.centerbox}>
             <View
@@ -116,7 +122,7 @@ const Home = () => {
                 <FlatList
                   numColumns={2}
                   data={Data}
-                  renderItem={({item}) => {
+                  renderItem={({ item }) => {
                     return (
                       <View
                         style={{

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -9,27 +9,41 @@ import {
 } from 'react-native';
 import Images from '../../constants';
 
-const Greenbox = navigation => {
+const Greenbox = ({ img1, img2 }) => {
   const [data1, setdata1] = useState(0);
   const Data = [
     {
       Image1: Images.Icons.upload,
+      Image2: Images.Icons.upload,
       title: 'Top',
-      name: 'Buddhism',
-    },
-    {
-      Image1: Images.Icons.light,
-      title: 'Tools For Light',
-      name: 'Quant',
+      title2: 'Top',
+
     },
     {
       Image1: Images.Icons.circle,
-      title: 'Tools for Shadow',
-      name: 'Buddhism',
+      Image2: Images.Icons.circle,
+      title: 'Tools For Light',
+      title2: 'Essents',
+
     },
     {
+      Image1: Images.Icons.circle,
+      Image2: Images.Icons.circle,
+      title: 'Tools for Shadow',
+      title2: 'build Blocks',
+
+    },
+    {
+      Image2: Images.Icons.circle,
       Image1: Images.Icons.triangle,
       title: 'Tools for Content',
+      title2: 'Deep Dives',
+    },
+    {
+      Image2: Images.Icons.circle,
+      Image1: Images.Icons.triangle,
+      title: 'Tools for Content',
+      title2: 'Play',
     },
   ];
   const data = [
@@ -42,76 +56,114 @@ const Greenbox = navigation => {
     {
       name: 'Tools for Content',
     },
-    {
-      name: '+',
-    },
+
   ];
   return (
-    <View style={{marginVertical: 10}}>
+    <View style={{ marginVertical: 10, }}>
       <FlatList
         horizontal={true}
         data={Data}
-        renderItem={({item, index}) => {
+        renderItem={({ item, index }) => {
           return (
             <TouchableOpacity
               onPress={() =>
-                index === 0 ? navigation.navigate('/') : setdata1(index - 1)
+                index === true ? "" : setdata1(index)
               }
               style={{
-                backgroundColor: data1 === index - 0 ? '#1C5C2E87' : '#fff',
+                backgroundColor: data1 === index ? '#1C5C2E87' : '#fff',
+                elevation: data1 === index ? 0 : 5,
                 width: 90,
                 height: 80,
                 borderRadius: 15,
+
                 margin: 5,
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <View style={{width: 24, height: 24}}>
-                <Image
-                  source={item.Image1}
-                  style={{width: '100%', height: '100%'}}
-                />
+              {img1 && (
+                <>
+                  <View style={{ width: 24, height: 24, alignSelf: 'center' }}>
+                    <Image
+                      source={item.Image1}
+                      style={{ width: '100%', height: '100%', }}
+                    />
+                  </View>
+                  <Text
+                    style={{
+                      textAlign: 'center',
+                      color: data1 === index ? '#fff' : '#000',
+                    }}>
+                    {item.title}
+                  </Text>
+                </>
+
+              )}
+              <View>
+                {img2 && (
+                  <>
+                    <View style={{ width: 24, height: 24, alignSelf: 'center' }}>
+                      <Image
+                        source={item.Image2}
+                        style={{ width: '100%', height: '100%', }}
+                      />
+                    </View>
+                    <Text
+                      style={{
+                        textAlign: 'center',
+                        color: data1 === index ? '#fff' : '#000',
+                      }}>
+                      {item.title2}
+                    </Text>
+                  </>
+
+                )}
               </View>
-              <Text
-                style={{
-                  textAlign: 'center',
-                  color: data1 === index - 0 ? '#fff' : '#000',
-                }}>
-                {item.title}
-              </Text>
+
             </TouchableOpacity>
           );
         }}
       />
-      <View>
-        <FlatList
-          horizontal={true}
-          data={data}
-          renderItem={({item, index}) => {
-            return (
-              <View
-                style={{
-                  backgroundColor: '#BCCFC1',
-                  margin: 5,
-                  padding: 5,
-                  borderRadius: 8,
-                }}>
-                <Text
+      <View View style={{ marginVertical: 30, flexDirection: 'row' }}>
+        <View>
+          <FlatList
+            horizontal={true}
+            data={data}
+            renderItem={({ item, index }) => {
+              return (
+                <View
                   style={{
-                    textAlign: 'center',
-                    fontSize: 12,
+                    elevation: 2,
+
+                    backgroundColor: '#BCCFC1',
+                    margin: 5,
+                    padding: 5,
+                    borderRadius: 8,
                   }}>
-                  {item.name}
-                </Text>
-              </View>
-            );
-          }}
-        />
-        <View style={styles.greebbtn}>
-          <Text>hhjfffj</Text>
+                  <Text
+                    style={{
+                      textAlign: 'center',
+                      fontSize: 12,
+                    }}>
+                    {item.name}
+                  </Text>
+                </View>
+              );
+            }}
+          />
         </View>
-      </View>
-    </View>
+
+
+        <View style={{
+          marginTop: 6,
+          backgroundColor: '#1C5C2E', width: 25, height: 25, color: '#fff',
+
+          borderRadius: 100, justifyContent: 'center', alignItems: 'center'
+        }}>
+          <Text style={{ color: '#fff' }} >+</Text>
+        </View>
+      </View >
+
+    </View >
   );
 };
 
@@ -146,4 +198,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export {Greenbox};
+export { Greenbox };
