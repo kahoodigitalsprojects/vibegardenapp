@@ -7,18 +7,18 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-import { Pinkbtn } from '../../../componrnts';
+import {Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 
 const Login = () => {
   return (
     <View style={styles.main}>
-      <View style={{ marginTop: 30, width: '90%' }}>
-        <View style={{ marginVertical: 30 }}>
+      <View style={{marginTop: 30, width: '90%'}}>
+        <View style={{marginVertical: 30}}>
           <Image source={Images.Logos.logo1} style={{}} />
         </View>
         <View>
-          <Text style={{ fontSize: 18 }}>Login With Email</Text>
+          <Text style={{fontSize: 18}}>Login With Email</Text>
 
           <View style={styles.input}>
             <TextInput placeholder="Email Address" />
@@ -35,7 +35,7 @@ const Login = () => {
             }}>
             Forgot Password?
           </Text>
-          <View style={{ marginTop: 20 }}>
+          <View style={{marginTop: 20}}>
             <Pinkbtn width={'60%'} btntxt="Continue" />
           </View>
           <Text
@@ -57,7 +57,7 @@ const Login = () => {
               fontWeight: '500',
             }}>
             Don't have an account ?
-            <Text styles={{ fontWeight: 'bold' }}>Sign Up</Text>{' '}
+            <Text styles={{fontWeight: 'bold'}}>Sign Up</Text>{' '}
           </Text>
         </View>
       </View>
@@ -66,7 +66,7 @@ const Login = () => {
 };
 
 const styles = StyleSheet.create({
-  main: { flex: 1, alignItems: 'center' },
+  main: {flex: 1, alignItems: 'center'},
   input: {
     flexDirection: 'row',
     justifyContent: 'space-between',

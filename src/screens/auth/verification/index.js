@@ -6,46 +6,62 @@ import {
   Image,
   TextInput,
   TouchableOpacity,
+  StatusBar,
 } from 'react-native';
-import {Pinkbtn} from '../../../componrnts';
+import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
-const Verification = () => {
+const Verify = props => {
   return (
-    <View style={styles.main}>
-      <View style={{marginTop: 30, width: '85%'}}>
-        <View>
-          <View style={{marginLeft: -40, marginTop: 30}}>
-            <Image source={Images.Icons.envelop} style={{}} />
-          </View>
-          <View style={{width: '70%'}}>
-            <Text style={{fontSize: 16, color: '#1C5C2E', fontWeight: '600'}}>
-              Show Us Its You Please Check Your Email To Continue
-            </Text>
-          </View>
+    <>
+      <StatusBar animated={true} backgroundColor="#000" />
 
-          <View style={styles.input}>
-            <TextInput placeholder="text" />
-          </View>
+      <View style={styles.main}>
+        <View style={{width: '90%', marginTop: 30}}>
+          <Header header2 />
+        </View>
 
-          <Text
-            style={{
-              textAlign: 'center',
-              marginVertical: 10,
-              color: '#1C5C2E',
-              fontSize: 18,
-              fontWeight: '500',
-            }}>
-            Didn't sent email?
-            <Text styles={{fontWeight: 'bold', color: ' red'}}>Resend.</Text>
+        <View style={{width: '85%', marginTop: 30}}>
+          <View
+            style={{width: 100, height: 100, marginTop: 30, marginLeft: -10}}>
+            <Image
+              source={Images.Icons.envelop}
+              style={{width: '100%', height: '100%'}}
+            />
+          </View>
+          <Text style={{fontSize: 16, color: '#1C5C2E', fontWeight: '600'}}>
+            Show Us Its You Please Check Your Email To Continue
           </Text>
-          <View style={{marginTop: 20}}>
-            <Pinkbtn width={'60%'} btntxt="Continue" />
+          <View>
+            <View style={styles.input}>
+              <TextInput placeholder="" />
+            </View>
+            <View
+              style={{
+                justifyContent: 'center',
+                flexDirection: 'row',
+                marginTop: 20,
+              }}>
+              <Text style={styles.txt1}>Didn't sent email?</Text>
+              <Text style={[styles.txt1, {color: 'red', marginLeft: 5}]}>
+                Resend.
+              </Text>
+            </View>
+            <View style={{marginTop: 20}}>
+              <Pinkbtn
+                onPress={() =>
+                  props.navigation.navigate('Homes', {screen: 'journey'})
+                }
+                width={'60%'}
+                btntxt="Continue"
+              />
+            </View>
           </View>
         </View>
       </View>
-    </View>
+    </>
   );
 };
+export default Verify;
 
 const styles = StyleSheet.create({
   main: {flex: 1, alignItems: 'center'},
@@ -57,6 +73,9 @@ const styles = StyleSheet.create({
     marginVertical: 20,
     marginTop: 20,
   },
+  txt1: {
+    color: '#1C5C2E',
+    textAlign: 'center',
+    fontSize: 16,
+  },
 });
-
-export default Verification;

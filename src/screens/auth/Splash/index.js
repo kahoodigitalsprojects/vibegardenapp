@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, Text, StyleSheet, Image, StatusBar} from 'react-native';
 import Images from '../../../constants';
 
 const Spalsh = ({navigation}) => {
@@ -9,9 +9,12 @@ const Spalsh = ({navigation}) => {
     }, 2000);
   });
   return (
-    <View style={styles.main}>
-      <Image source={Images.Logos.logo1} />
-    </View>
+    <>
+      <StatusBar animated={true} backgroundColor="#000" />
+      <View style={styles.main}>
+        <Image source={Images.Logos.logo1} />
+      </View>
+    </>
   );
 };
 

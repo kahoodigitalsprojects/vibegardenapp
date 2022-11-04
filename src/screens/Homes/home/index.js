@@ -9,14 +9,52 @@ import {
   FlatList,
   StatusBar,
 } from 'react-native';
-import { Header, Imgbox, SeeAll, StoryData } from '../../../componrnts';
+import {Header, Imgbox, SeeAll, StoryData} from '../../../componrnts';
 import Images from '../../../constants';
 
-const Home = () => {
+const Home = props => {
   const Data = [
     {
       bg1: Images.BackGround.black,
       bg12: Images.BackGround.greenbg,
+      heart1: Images.Icons.heart1,
+      name: 'TONGLEN',
+      title: 'title',
+      myicon: 'plus',
+    },
+    {
+      bg1: Images.BackGround.black,
+      bg12: Images.BackGround.greenbg,
+      heart1: Images.Icons.heart1,
+      name: 'TONGLEN',
+      title: 'title',
+      myicon: 'plus',
+    },
+    {
+      bg1: Images.BackGround.black,
+      bg12: Images.BackGround.greenbg,
+      heart1: Images.Icons.heart1,
+      name: 'TONGLEN',
+      title: 'title',
+    },
+    {
+      bg1: Images.BackGround.black,
+      bg12: Images.BackGround.greenbg,
+      heart1: Images.Icons.heart1,
+      name: 'TONGLEN',
+      title: 'title',
+    },
+    {
+      bg1: Images.BackGround.black,
+      bg12: Images.BackGround.greenbg,
+      heart1: Images.Icons.heart1,
+      name: 'TONGLEN',
+      title: 'title',
+    },
+    {
+      bg1: Images.BackGround.black,
+      bg12: Images.BackGround.greenbg,
+      heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
     },
@@ -25,43 +63,27 @@ const Home = () => {
       bg12: Images.BackGround.greenbg,
       name: 'TONGLEN',
       title: 'title',
+      myicon: 'plus',
     },
     {
       bg1: Images.BackGround.black,
       bg12: Images.BackGround.greenbg,
       name: 'TONGLEN',
       title: 'title',
-    },
-    {
-      bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
-      name: 'TONGLEN',
-      title: 'title',
-    },
-    {
-      bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
-      name: 'TONGLEN',
-      title: 'title',
-    },
-    {
-      bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
-      name: 'TONGLEN',
-      title: 'title',
+      myicon: 'plus',
     },
   ];
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ flexGrow: 1 }}>
+        contentContainerStyle={{flexGrow: 1}}>
         <StatusBar
           animated={true}
           backgroundColor="#000"
-        // barStyle={statusBarStyle}
-        // showHideTransition={statusBarTransition}
-        // hidden={hidden}
+          // barStyle={statusBarStyle}
+          // showHideTransition={statusBarTransition}
+          // hidden={hidden}
         />
         <View
           style={{
@@ -70,10 +92,10 @@ const Home = () => {
             marginVertical: 5,
             marginTop: 15,
           }}>
-          <Header homeheader={true} />
+          <Header heartplus homeheader={true} heart plus />
         </View>
         <View style={styles.Box1}>
-          <View style={{ width: '90%', alignSelf: 'center' }}>
+          <View style={{width: '90%', alignSelf: 'center'}}>
             <Text
               style={{
                 textAlign: 'center',
@@ -81,9 +103,8 @@ const Home = () => {
                 fontWeight: '600',
                 color: '#000000',
               }}>
-              Hi, You
+              Hi, You.
             </Text>
-
           </View>
           <View style={styles.centerbox}>
             <View
@@ -92,7 +113,13 @@ const Home = () => {
                   // backgroundColor: 'red'
                 }
               }>
-              <SeeAll textA="FRESH BLOOMS" textB="SeeAll" />
+              <SeeAll
+                onPress={() =>
+                  props.navigation.navigate('Homes', {screen: 'FressBlooms'})
+                }
+                textA="FRESH BLOOMS"
+                textB="SeeAll"
+              />
               <View style={styles.box2}>
                 <ScrollView
                   horizontal={true}
@@ -102,6 +129,8 @@ const Home = () => {
                       <View style={{}}>
                         <Imgbox
                           homemainbox
+                          heart1={item.heart1}
+                          myicon={item.myicon}
                           bghome={item.bg1}
                           name={item.name}
                         />
@@ -122,7 +151,7 @@ const Home = () => {
                 <FlatList
                   numColumns={2}
                   data={Data}
-                  renderItem={({ item }) => {
+                  renderItem={({item}) => {
                     return (
                       <View
                         style={{
@@ -132,6 +161,7 @@ const Home = () => {
                         }}>
                         <Imgbox
                           homebox
+                          myicon={item.myicon}
                           bghome2={item.bg12}
                           title={item.title}
                         />

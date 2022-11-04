@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -10,8 +10,8 @@ import {
   StatusBar,
   TouchableOpacity,
 } from 'react-native';
-import { act } from 'react-test-renderer';
-import { Greenbox, Header, Imgbox, SeeAll, StoryData } from '../../../componrnts';
+import {act} from 'react-test-renderer';
+import {Greenbox, Header, Imgbox, SeeAll, StoryData} from '../../../componrnts';
 import Images from '../../../constants';
 
 const Tools = () => {
@@ -66,14 +66,12 @@ const Tools = () => {
       name: 'TONGLEN',
       title: 'title',
     },
-
-
   ];
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ flexGrow: 1 }}>
+        contentContainerStyle={{flexGrow: 1}}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
@@ -82,10 +80,10 @@ const Tools = () => {
             marginVertical: 5,
             marginTop: 15,
           }}>
-          <Header homeheader={true} />
+          <Header homeheader={true} heart={true} heartplus plus />
         </View>
         <View style={styles.Box1}>
-          <View style={{ width: '90%', alignSelf: 'center' }}>
+          <View style={{width: '90%', alignSelf: 'center'}}>
             <Text
               style={{
                 textAlign: 'center',
@@ -96,7 +94,7 @@ const Tools = () => {
               Tools
             </Text>
           </View>
-          <View style={{ width: '90%', alignSelf: 'center' }}>
+          <View style={{width: '90%', alignSelf: 'center'}}>
             <Text
               style={{
                 textAlign: 'center',
@@ -119,7 +117,7 @@ const Tools = () => {
                 <FlatList
                   numColumns={2}
                   data={Data}
-                  renderItem={({ item }) => {
+                  renderItem={({item}) => {
                     return (
                       <View
                         style={{

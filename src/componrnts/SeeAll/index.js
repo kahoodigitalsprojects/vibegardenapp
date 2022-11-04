@@ -5,14 +5,16 @@ const SeeAll = props => {
   return (
     <View
       style={{
-        backgroundColor: 'pink',
+        // backgroundColor: 'pink',
         width: '100%',
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingVertical: 10,
       }}>
       <Text style={styles.txtA}>{props.textA}</Text>
-      <TouchableOpacity style={{borderBottomWidth: 1, borderColor: '#1C5C2E'}}>
+      <TouchableOpacity
+        onPress={props.onPress}
+        style={{borderBottomWidth: 1, borderColor: '#1C5C2E'}}>
         <Text style={styles.txtB}>{props.textB}</Text>
       </TouchableOpacity>
     </View>

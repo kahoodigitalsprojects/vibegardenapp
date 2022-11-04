@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import Images from '../../constants';
 
-const Greenbox = ({ img1, img2 }) => {
+const Greenbox = ({img1, img2}) => {
   const [data1, setdata1] = useState(0);
   const Data = [
     {
@@ -17,21 +17,18 @@ const Greenbox = ({ img1, img2 }) => {
       Image2: Images.Icons.upload,
       title: 'Top',
       title2: 'Top',
-
     },
     {
       Image1: Images.Icons.circle,
       Image2: Images.Icons.circle,
       title: 'Tools For Light',
       title2: 'Essents',
-
     },
     {
       Image1: Images.Icons.circle,
       Image2: Images.Icons.circle,
       title: 'Tools for Shadow',
       title2: 'build Blocks',
-
     },
     {
       Image2: Images.Icons.circle,
@@ -56,19 +53,16 @@ const Greenbox = ({ img1, img2 }) => {
     {
       name: 'Tools for Content',
     },
-
   ];
   return (
-    <View style={{ marginVertical: 10, }}>
+    <View style={{marginVertical: 10}}>
       <FlatList
         horizontal={true}
         data={Data}
-        renderItem={({ item, index }) => {
+        renderItem={({item, index}) => {
           return (
             <TouchableOpacity
-              onPress={() =>
-                index === true ? "" : setdata1(index)
-              }
+              onPress={() => (index === true ? '' : setdata1(index))}
               style={{
                 backgroundColor: data1 === index ? '#1C5C2E87' : '#fff',
                 elevation: data1 === index ? 0 : 5,
@@ -82,10 +76,10 @@ const Greenbox = ({ img1, img2 }) => {
               }}>
               {img1 && (
                 <>
-                  <View style={{ width: 24, height: 24, alignSelf: 'center' }}>
+                  <View style={{width: 24, height: 24, alignSelf: 'center'}}>
                     <Image
                       source={item.Image1}
-                      style={{ width: '100%', height: '100%', }}
+                      style={{width: '100%', height: '100%'}}
                     />
                   </View>
                   <Text
@@ -96,15 +90,14 @@ const Greenbox = ({ img1, img2 }) => {
                     {item.title}
                   </Text>
                 </>
-
               )}
               <View>
                 {img2 && (
                   <>
-                    <View style={{ width: 24, height: 24, alignSelf: 'center' }}>
+                    <View style={{width: 24, height: 24, alignSelf: 'center'}}>
                       <Image
                         source={item.Image2}
-                        style={{ width: '100%', height: '100%', }}
+                        style={{width: '100%', height: '100%'}}
                       />
                     </View>
                     <Text
@@ -115,20 +108,18 @@ const Greenbox = ({ img1, img2 }) => {
                       {item.title2}
                     </Text>
                   </>
-
                 )}
               </View>
-
             </TouchableOpacity>
           );
         }}
       />
-      <View View style={{ marginVertical: 30, flexDirection: 'row' }}>
+      <View View style={{marginVertical: 30, flexDirection: 'row'}}>
         <View>
           <FlatList
             horizontal={true}
             data={data}
-            renderItem={({ item, index }) => {
+            renderItem={({item, index}) => {
               return (
                 <View
                   style={{
@@ -152,18 +143,22 @@ const Greenbox = ({ img1, img2 }) => {
           />
         </View>
 
+        <View
+          style={{
+            marginTop: 6,
+            backgroundColor: '#1C5C2E',
+            width: 25,
+            height: 25,
+            color: '#fff',
 
-        <View style={{
-          marginTop: 6,
-          backgroundColor: '#1C5C2E', width: 25, height: 25, color: '#fff',
-
-          borderRadius: 100, justifyContent: 'center', alignItems: 'center'
-        }}>
-          <Text style={{ color: '#fff' }} >+</Text>
+            borderRadius: 100,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <Text style={{color: '#fff'}}>+</Text>
         </View>
-      </View >
-
-    </View >
+      </View>
+    </View>
   );
 };
 
@@ -198,4 +193,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { Greenbox };
+export {Greenbox};

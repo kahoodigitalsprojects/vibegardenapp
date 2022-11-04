@@ -1,29 +1,34 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, ScrollView, StatusBar} from 'react-native';
 import {Header, StoryData} from '../../../componrnts';
 import Images from '../../../constants';
 
-const BlueLotus = () => {
+const BlueLotus = ({route, navigation}) => {
+  const {Image1, newtext, Heading} = route.params;
   return (
-    <View style={styles.main}>
-      <View
-        style={{
-          marginVertical: 10,
-          marginTop: 20,
-          width: '90%',
-          alignSelf: 'center',
-        }}>
-        <Header header2 headertext="Meet Blue Lotus" />
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={{flexGrow: 1}}>
+      <StatusBar animated={true} backgroundColor="#000" />
+      <View style={styles.main}>
+        <View
+          style={{
+            marginVertical: 10,
+            marginTop: 20,
+            width: '90%',
+            alignSelf: 'center',
+          }}>
+          <Header
+            header2
+            headertext={Heading}
+            OnPress={() => navigation.goBack()}
+          />
+        </View>
+        <View style={{marginTop: 10}}>
+          <StoryData storytext1 storytext={newtext} storyimage Img={Image1} />
+        </View>
       </View>
-      <View style={{marginTop: 10}}>
-        <StoryData
-          storytext1
-          storytext="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-          storyimage
-          Img={Images.BackGround.BlueL}
-        />
-      </View>
-    </View>
+    </ScrollView>
   );
 };
 

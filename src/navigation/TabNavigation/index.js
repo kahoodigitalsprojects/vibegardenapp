@@ -1,9 +1,11 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Image, View} from 'react-native';
+import {Image, View, StyleSheet} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Images from '../../constants';
 import Welcome from '../../screens/auth/Welcome';
+import GroundWork from '../../screens/Homes/Groundwork';
 import Home from '../../screens/Homes/home';
+import Me from '../../screens/Homes/ME';
 import Notification from '../../screens/Homes/notification';
 import Tools from '../../screens/Homes/Tools';
 
@@ -12,9 +14,9 @@ const Tab = createBottomTabNavigator();
 function Mytabs() {
   return (
     <Tab.Navigator
-      initialRouteName="Welcome"
+      initialRouteName=""
       screenOptions={{
-        tabBarActiveTintColor: '#e91e63',
+        tabBarActiveTintColor: '#1C5C2E',
       }}>
       <Tab.Screen
         name="Home"
@@ -22,9 +24,12 @@ function Mytabs() {
         options={{
           headerShown: false,
           tabBarLabel: 'Garden',
-          tabBarIcon: ({color, size}) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
-          ),
+          tabBarIcon: ({focused}) =>
+            focused ? (
+              <Image source={Images.Logos.greenlogo} style={styles.activeImg} />
+            ) : (
+              <Image source={Images.Logos.greylog} style={styles.deActiveImg} />
+            ),
         }}
       />
 
@@ -34,31 +39,45 @@ function Mytabs() {
         options={{
           headerShown: false,
           tabBarLabel: 'Tools',
-          tabBarIcon: ({color, size}) => (
-            <View style={{marginVertical: 10}}>
-              <Image source={Images.Logos.hands} style={{}} />
-            </View>
-          ),
+          tabBarIcon: ({focused}) =>
+            focused ? (
+              <Image source={Images.Logos.hands} style={styles.activeImg} />
+            ) : (
+              <Image source={Images.Logos.layer2} style={styles.deActiveImg} />
+            ),
         }}
       />
       <Tab.Screen
-        name="notification"
-        component={Notification}
+        name="Ground work"
+        component={GroundWork}
         options={{
+          tabBarActiveTintColor: '#1C5C2E',
           headerShown: false,
           tabBarLabel: 'Groundwork',
-          tabBarIcon: ({color, size}) => (
-            // <MaterialCommunityIcons name="bell" color={color} size={size} />
-            <View>
-              <View style={{marginVertical: 10}}>
-                <Image source={Images.Logos.hands} style={{}} />
-              </View>
-            </View>
-          ),
-          tabBarBadge: 3,
+          tabBarIcon: ({focused}) =>
+            focused ? (
+              <Image source={Images.Icons.leaf} style={styles.activeImg} />
+            ) : (
+              <Image source={Images.Logos.layer} style={styles.deActiveImg} />
+            ),
+        }}
+      />
+      <Tab.Screen
+        name="Me"
+        component={Me}
+        options={{
+          headerShown: false,
+          tabBarLabel: 'Me',
+          tabBarIcon: ({focused}) =>
+            focused ? (
+              <Image source={Images.Icons.small} style={styles.activeImg} />
+            ) : (
+              <Image source={Images.Icons.small} style={styles.deActiveImg} />
+            ),
         }}
       />
     </Tab.Navigator>
   );
 }
+const styles = StyleSheet.create({});
 export default Mytabs;
