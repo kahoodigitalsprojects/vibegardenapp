@@ -10,6 +10,7 @@ import {
   ScrollView,
   StatusBar,
 } from 'react-native';
+import { Pinkbtn } from '../../../componrnts';
 import Images from '../../../constants';
 
 const Welcome = props => {
@@ -18,7 +19,7 @@ const Welcome = props => {
       <StatusBar animated={true} backgroundColor="#000" />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
+        contentContainerStyle={{ flexGrow: 1 }}>
         <ImageBackground
           source={Images.BackGround.Bg1}
           resizeMode="cover"
@@ -60,20 +61,17 @@ const Welcome = props => {
               Tools, tips & magic for growing your communication to you!
             </Text>
           </View>
-          <View style={{marginTop: 50}}>
-            <TouchableOpacity
-              onPress={() =>
-                props.navigation.replace('Mytabs', {screen: 'home'})
-              }
-              style={styles.btn1}>
-              <Text style={{fontWeight: 'bold', color: '#fff'}}>
-                Get Started
-              </Text>
-            </TouchableOpacity>
+          <View style={{ marginTop: 50 }}>
+            <View style={{}}>
+              <Pinkbtn width={'80%'} btntxt=" Get Started" onPress={() =>
+                props.navigation.replace('Mytabs', { screen: 'home' })
+              } />
+            </View>
+
             <TouchableOpacity
               onPress={() => props.navigation.navigate('namescreen')}
               style={styles.btn2}>
-              <Text style={{fontWeight: 'bold', color: '#fff'}}>Login In</Text>
+              <Text style={{ fontWeight: 'bold', color: '#fff' }}>Login In</Text>
             </TouchableOpacity>
           </View>
         </ImageBackground>
@@ -111,9 +109,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '70%',
-    height: 44,
-    borderRadius: 20,
+    width: '80%',
+    height: 55,
+    borderRadius: 30,
     borderWidth: 2,
     borderColor: '#fff',
   },

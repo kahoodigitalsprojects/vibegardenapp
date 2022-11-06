@@ -11,7 +11,7 @@ import {
   SafeAreaView,
 } from 'react-native';
 
-import {Header, Pinkbtn} from '../../../componrnts';
+import { Header, Pinkbtn } from '../../../componrnts';
 import Images from '../../../constants';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -21,9 +21,9 @@ const SignUp = props => {
       <StatusBar animated={true} backgroundColor="#000" />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
-        <View style={{width: '90%'}}>
-          <View style={{width: '90%', marginTop: 10}}>
+        contentContainerStyle={{ flexGrow: 1 }}>
+        <View style={{ width: '90%', alignSelf: 'center' }}>
+          <View style={{ width: '100%', marginTop: 10 }}>
             <Header
               header2
               OnPress={() => props.navigation.replace('Welcome')}
@@ -42,14 +42,14 @@ const SignUp = props => {
             }}>
             Let's Get You Setup With An Account
           </Text>
-          <View style={{marginVertical: 20}}>
+          <View style={{ marginVertical: 20 }}>
             <Image
               source={Images.Logos.logo1}
-              style={{width: 64, height: 65}}
+              style={{ width: 64, height: 65 }}
             />
           </View>
           <View>
-            <Text style={{fontSize: 18}}>Sign Up With Email</Text>
+            <Text style={{ fontSize: 18 }}>Sign Up With Email</Text>
 
             <View style={styles.input}>
               <TextInput
@@ -61,16 +61,16 @@ const SignUp = props => {
               <TextInput placeholder="Password" />
             </View>
 
-            <View style={{marginTop: 20}}>
+            <View style={{ marginTop: 20 }}>
               <Pinkbtn
-                onPress={() => props.navigation.navigate('verify')}
+                onPress={() => props.navigation.navigate('registerd')}
                 width={'60%'}
                 btntxt="Continue"
               />
             </View>
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate('');
+                props.navigation.navigate('loginoption');
               }}>
               <Text
                 style={{
@@ -80,12 +80,12 @@ const SignUp = props => {
                   textAlign: 'center',
                 }}>
                 Already have an account?
-                <Text style={{fontWeight: 'bold'}}>Login</Text>
+                <Text style={{ fontWeight: 'bold' }}>Login</Text>
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => {
-                props.navigation.navigate('Homes', {screen: 'story1'});
+                props.navigation.navigate('Homes', { screen: 'story1' });
               }}
               style={{
                 flexDirection: 'row',
@@ -113,7 +113,7 @@ const SignUp = props => {
 };
 
 const styles = StyleSheet.create({
-  main: {flex: 1, alignItems: 'center'},
+  main: { flex: 1, alignItems: 'center' },
   input: {
     flexDirection: 'row',
     justifyContent: 'space-between',

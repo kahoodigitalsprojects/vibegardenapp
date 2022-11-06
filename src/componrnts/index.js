@@ -6,3 +6,4 @@ export * from './imgbox';
 export * from './greenbox';
 export * from './ResetComponent';
 export * from './percentage';
+export * from './greenbtn'
