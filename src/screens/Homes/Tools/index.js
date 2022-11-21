@@ -12,59 +12,30 @@ import {
 } from 'react-native';
 import {act} from 'react-test-renderer';
 import {Greenbox, Header, Imgbox, SeeAll, StoryData} from '../../../componrnts';
+import All from '../../../componrnts/all';
 import Images from '../../../constants';
 
-const Tools = () => {
+const Tools = props => {
   const [active, setActive] = useState();
   const [data1, setdata1] = useState(0);
   const Data = [
     {
+      id: 1,
       bg1: Images.BackGround.black,
       bg12: Images.BackGround.greenbg,
+      heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
+      plus: 'plus',
     },
     {
+      id: 2,
       bg1: Images.BackGround.black,
       bg12: Images.BackGround.greenbg,
+      heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
-    },
-    {
-      bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
-      name: 'TONGLEN',
-      title: 'title',
-    },
-    {
-      bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
-      name: 'TONGLEN',
-      title: 'title',
-    },
-    {
-      bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
-      name: 'TONGLEN',
-      title: 'title',
-    },
-    {
-      bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
-      name: 'TONGLEN',
-      title: 'title',
-    },
-    {
-      bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
-      name: 'TONGLEN',
-      title: 'title',
-    },
-    {
-      bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
-      name: 'TONGLEN',
-      title: 'title',
+      plus: 'plus',
     },
   ];
   return (
@@ -83,7 +54,7 @@ const Tools = () => {
           <Header homeheader={true} heart={true} heartplus plus />
         </View>
         <View style={styles.Box1}>
-          <View style={{width: '90%', alignSelf: 'center'}}>
+          <View style={{width: '100%', alignSelf: 'center'}}>
             <Text
               style={{
                 textAlign: 'center',
@@ -101,40 +72,42 @@ const Tools = () => {
                 fontSize: 20,
                 // fontWeight: '600',
                 color: '#000000',
-                marginVertical: 10,
+                // marginVertical: 10,
               }}>
               Its Blooms Time
             </Text>
           </View>
 
           <View style={styles.centerbox}>
-            <Greenbox img1 />
+            <Greenbox
+              img1
+              onPress={() => {
+                props.navigation.navigate('Homes', {screen: 'resonance'});
+              }}
+            />
             <View
-              style={{
-                backgroundColor: 'blue',
-              }}>
-              <View style={styles.box1}>
-                <FlatList
-                  numColumns={2}
-                  data={Data}
-                  renderItem={({item}) => {
-                    return (
-                      <View
-                        style={{
-                          alignSelf: 'center',
-                          display: 'flex',
-                          flexGrow: 1,
-                        }}>
-                        <Imgbox
-                          homebox
-                          bghome2={item.bg12}
-                          title={item.title}
-                        />
-                      </View>
-                    );
-                  }}
-                />
-              </View>
+              style={
+                {
+                  // backgroundColor: 'blue',
+                }
+              }></View>
+            <View style={styles.box1}>
+              <FlatList
+                keyExtractor={item => item.id}
+                data={Data}
+                renderItem={({item}) => {
+                  return (
+                    <All
+                      textA={item.textA}
+                      textB={item.textB}
+                      homebox
+                      plus={item.plus}
+                      bghome2={item.bg12}
+                      title={item.title}
+                    />
+                  );
+                }}
+              />
             </View>
           </View>
         </View>
@@ -157,11 +130,10 @@ const styles = StyleSheet.create({
     // backgroundColor: '#1C5C2E',
     width: '100%',
     // // height: '100%',
-    marginVertical: 10,
     justifyContent: 'center',
   },
   box1: {
-    width: '90%',
+    width: '95%',
     alignSelf: 'center',
     // height: '100%',
     // backgroundColor: 'yellow',

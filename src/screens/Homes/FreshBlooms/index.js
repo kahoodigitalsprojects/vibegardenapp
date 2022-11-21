@@ -1,9 +1,18 @@
 import React from 'react';
-import {View, StyleSheet, Text, ScrollView, StatusBar} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Text,
+  ScrollView,
+  StatusBar,
+  FlatList,
+} from 'react-native';
 import {Header} from '../../../componrnts';
 import Reset from '../../../componrnts/ResetComponent';
+import Result from '../result';
 
-const FressBlooms = () => {
+const FressBlooms = props => {
+  const data = [{}, {}, {}, {}];
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
@@ -17,9 +26,20 @@ const FressBlooms = () => {
             width: '90%',
             alignSelf: 'center',
           }}>
-          <Header header2 headertext="Fresh Blooms" />
-          <View style={{marginVertical: 10}}>
-            <Reset />
+          <Header
+            iconName="closesquareo"
+            fontSize={18}
+            header2
+            headertext="Fresh Blooms"
+            OnPress={() => props.navigation.replace('Mytabs', {screen: 'Home'})}
+          />
+          <View style={{marginTop: 30}}>
+            <FlatList
+              data={data}
+              renderItem={({items}) => {
+                return <Reset />;
+              }}
+            />
           </View>
         </View>
       </View>

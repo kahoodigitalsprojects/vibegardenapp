@@ -49,6 +49,7 @@ const Percentage = ({
             marginHorizontal: margin1,
           }}>
           <Image source={Image1} style={[styles.img]} resizeMode="contain" />
+          <Text style={{textAlign: 'center', color: 'green'}}>0-25%</Text>
         </View>
 
         <Text

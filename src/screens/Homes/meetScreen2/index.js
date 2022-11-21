@@ -27,7 +27,11 @@ const MeetScreen2 = ({route, navigation}) => {
           <StatusBar animated={true} backgroundColor="#000" />
 
           <View style={{width: '90%', alignSelf: 'center'}}>
-            <Header header2 OnPress={() => navigation.goBack()} />
+            <Header
+              header2
+              iconName="arrowleft"
+              OnPress={() => navigation.goBack()}
+            />
 
             <View style={{}}>
               <View style={styles.box}>

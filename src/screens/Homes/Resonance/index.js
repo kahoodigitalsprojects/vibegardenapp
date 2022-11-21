@@ -7,48 +7,40 @@ import {
   Switch,
   FlatList,
 } from 'react-native';
-import {Header, Pinkbtn, StoryData} from '../../../componrnts';
+import {Header, Pinkbtn, StoryData, Switch1} from '../../../componrnts';
 import Images from '../../../constants';
 
-const Resonance = () => {
+const Resonance = props => {
   const [isEnabled, setIsEnabled] = useState(false);
-
-  const toggle = () => {
-    setIsEnabled(!isEnabled);
-  };
+  const [data1, setData1] = useState();
 
   const data = [
     {
-      name: 'Buddhism',
+      Texts: 'Buddhism',
     },
-    {
-      name: 'Buddhism',
-    },
-    {
-      name: 'Buddhism',
-    },
-    {
-      name: 'Buddhism',
-    },
-    {
-      name: 'Buddhism',
-    },
+    {Texts: 'Nature'},
+    {Texts: 'Quntum Physics'},
+    {Texts: 'Asteven Master'},
+    {Texts: 'Plants'},
   ];
+
   return (
     <View style={styles.main}>
-      <View
-        style={{
-          marginVertical: 10,
-          marginTop: 20,
-          width: '90%',
-          alignSelf: 'center',
-        }}>
-        <Header header2 />
+      <View style={styles.container}>
+        <Header
+          iconName="closesquareo"
+          header2
+          OnPress={() => props.navigation.goBack('')}
+        />
         <View style={{marginTop: 10}}>
           <Text style={styles.text}>Select Your Topic Resonance?</Text>
           <View style={styles.row}>
             <Text style={styles.text}>OR Try Our </Text>
-            <TouchableOpacity style={styles.btn}>
+            <TouchableOpacity
+              onPress={() => {
+                props.navigation.navigate('question');
+              }}
+              style={styles.btn}>
               <Text style={{color: '#fff', margin: 10}}>Resonance Finder</Text>
             </TouchableOpacity>
           </View>
@@ -58,15 +50,13 @@ const Resonance = () => {
               renderItem={({item}) => {
                 return (
                   <View style={styles.switchView}>
-                    <Switch
-                      trackColor={{false: '#75997E', true: '#1C5C2E'}}
-                      value={isEnabled}
-                      onValueChange={toggle}
-                      style={{marginRight: 20, width: 58, height: 29}}
-                    />
                     <View styles={{}}>
-                      <Text styles={{color: '#000', fontSize: 14}}>
-                        {item.name}
+                      <Switch1 />
+                    </View>
+                    <View styles={{marginTop: 5}}>
+                      <Text
+                        styles={{color: '#000', fontSize: 14, marginLeft: 20}}>
+                        {item.Texts}
                       </Text>
                     </View>
                   </View>
@@ -76,6 +66,9 @@ const Resonance = () => {
           </View>
           <View style={{marginTop: 10}}>
             <Pinkbtn
+              onPress={() => {
+                props.navigation.navigate('question2');
+              }}
               btntxt="
             Save"
               width={230}
@@ -92,6 +85,12 @@ const styles = StyleSheet.create({
     flex: 1,
     // backgroundColor: 'pink',
   },
+  container: {
+    marginVertical: 10,
+    marginTop: 20,
+    width: '90%',
+    alignSelf: 'center',
+  },
   row: {
     flexDirection: 'row',
     // backgroundColor: 'yellow',
@@ -99,13 +98,13 @@ const styles = StyleSheet.create({
   },
   text: {
     // backgroundColor: 'green',
-    color: 'green',
+    color: '#1C5C2E',
     fontWeight: '500',
     fontSize: 24,
     marginTop: 5,
   },
   btn: {
-    backgroundColor: 'green',
+    backgroundColor: '#75997E',
     borderRadius: 10,
     height: 44,
     justifyContent: 'center',

@@ -6,15 +6,28 @@ import Icon3 from 'react-native-vector-icons/Ionicons';
 import Images from '../../constants';
 
 const Header = props => {
-  const {color, heartplus, toggle, plus, heart} = props;
+  const {
+    color,
+    heartplus,
+    toggle,
+    plus,
+    heart,
+    iconName,
+    press1,
+    press2,
+    search,
+    fontSize,
+  } = props;
   const [state, setState] = useState(false);
   return (
     <View style={{width: '100%'}}>
       {props.homeheader && (
         <View style={styles.header}>
-          <View style={{width: '15%', marginTop: 5}}>
+          <TouchableOpacity
+            onPress={search}
+            style={{width: '15%', marginTop: 5}}>
             <Icon name="search" size={25} color="#1C5C2E" />
-          </View>
+          </TouchableOpacity>
           <View>
             <View style={{width: 45, height: 45}}>
               <Image
@@ -30,23 +43,25 @@ const Header = props => {
                 <TouchableOpacity
                   onPress={() => setState(!state)}
                   style={styles.greenbox}>
-                  <Icon3 name="md-menu-sharp" size={25} color="#1C5C2E" />
+                  <Icon3 name="ios-menu" size={25} color="#1C5C2E" />
                 </TouchableOpacity>
                 {state === true ? (
-                  <View>
+                  <View style={{}}>
                     <TouchableOpacity
+                      onPress={props.OnPress}
                       style={[
-                        styles.greenbox,
+                        styles.greenbox1,
                         {width: 40, height: 40, position: 'relative'},
                       ]}>
-                      <Icon3 name="md-menu-sharp" size={25} color="yellow" />
+                      <Icon3 name="md-notifications" size={25} color="#fff" />
                     </TouchableOpacity>
                     <TouchableOpacity
+                      onPress={props.OnPress1}
                       style={[
-                        styles.greenbox,
+                        styles.greenbox1,
                         {width: 40, height: 40, position: 'relative'},
                       ]}>
-                      <Icon3 name="md-menu-sharp" size={25} color="pink" />
+                      <Icon3 name="settings" size={25} color="#fff" />
                     </TouchableOpacity>
                   </View>
                 ) : null}
@@ -75,7 +90,7 @@ const Header = props => {
         <View style={styles.header}>
           <TouchableOpacity
             onPress={props.OnPress}
-            style={{width: '20%', marginTop: 5}}>
+            style={{width: '10%', marginTop: 5}}>
             <View
               style={{
                 width: 40,
@@ -85,15 +100,15 @@ const Header = props => {
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <Icon2 name="arrowleft" size={25} color="#fff" />
+              <Icon2 name={iconName} size={25} color="#fff" />
             </View>
           </TouchableOpacity>
-          <View style={{width: '90%'}}>
+          <View style={{width: '90%', alignItems: 'center'}}>
             <Text
               style={{
-                fontSize: 25,
-                marginTop: 10,
-                color: {color},
+                fontSize: fontSize,
+                marginTop: 8,
+                color: color,
                 fontWeight: '500',
               }}>
               {props.headertext}
@@ -110,6 +125,15 @@ export {Header};
 const styles = StyleSheet.create({
   greenbox: {
     backgroundColor: '#CFDCD2',
+    marginVertical: 2,
+    height: 43,
+    width: 43,
+    borderRadius: 12,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  greenbox1: {
+    backgroundColor: '#1C5C2E',
     marginVertical: 2,
     height: 43,
     width: 43,

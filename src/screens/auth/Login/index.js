@@ -7,18 +7,25 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-import { Pinkbtn } from '../../../componrnts';
+import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 
-const Login = (props) => {
+const Login = props => {
   return (
     <View style={styles.main}>
-      <View style={{ marginTop: 30, width: '90%' }}>
-        <View style={{ marginVertical: 30 }}>
+      <View style={{marginTop: 10, width: '90%'}}>
+        <View style={{width: '100%', marginTop: 10}}>
+          <Header
+            iconName="arrowleft"
+            header2
+            OnPress={() => props.navigation.replace('loginoption')}
+          />
+        </View>
+        <View style={{marginVertical: 40}}>
           <Image source={Images.Logos.logo1} style={{}} />
         </View>
         <View>
-          <Text style={{ fontSize: 18 }}>Login With Email</Text>
+          <Text style={{fontSize: 18}}>Login With Email</Text>
 
           <View style={styles.input}>
             <TextInput placeholder="Email Address" />
@@ -26,7 +33,8 @@ const Login = (props) => {
           <View style={styles.input}>
             <TextInput placeholder="Password" />
           </View>
-          <TouchableOpacity onPress={() => props.navigation.navigate('forgerpsaaword')}>
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate('forgerpsaaword')}>
             <Text
               style={{
                 textAlign: 'right',
@@ -35,9 +43,22 @@ const Login = (props) => {
                 fontWeight: '900',
               }}>
               Forgot Password?
-            </Text></TouchableOpacity>
-          <View style={{ marginTop: 20 }}>
-            <Pinkbtn width={'60%'} btntxt="Continue" />
+            </Text>
+          </TouchableOpacity>
+          <View style={{marginTop: 10}}>
+            <Pinkbtn
+              onPress={() =>
+                props.navigation.navigate(
+                  'Auth',
+                  {screen: 'NotRegisterd'},
+                  {
+                    itemId: 86,
+                  },
+                )
+              }
+              width={'60%'}
+              btntxt="Continue"
+            />
           </View>
           <Text
             style={{
@@ -49,8 +70,14 @@ const Login = (props) => {
             }}>
             Or
           </Text>
-          <TouchableOpacity onPress={() => props.navigation.navigate('signup')}>
-
+          <TouchableOpacity
+            onPress={() =>
+              props.navigation.navigate('signup', {
+                registerd1: () => navigation.navigate('registerd'),
+                itemId: 86,
+                otherParam: 'anything you want here',
+              })
+            }>
             <Text
               style={{
                 textAlign: 'center',
@@ -60,7 +87,7 @@ const Login = (props) => {
                 fontWeight: '500',
               }}>
               Don't have an account ?
-              <Text styles={{ fontWeight: 'bold' }}>Sign Up</Text>{' '}
+              <Text styles={{fontWeight: 'bold'}}>Sign Up</Text>{' '}
             </Text>
           </TouchableOpacity>
         </View>
@@ -70,7 +97,7 @@ const Login = (props) => {
 };
 
 const styles = StyleSheet.create({
-  main: { flex: 1, alignItems: 'center' },
+  main: {flex: 1, alignItems: 'center'},
   input: {
     flexDirection: 'row',
     justifyContent: 'space-between',

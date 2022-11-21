@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
+import Icon2 from 'react-native-vector-icons/AntDesign';
 import {Tooltip} from 'react-native-elements';
 import Images from '../../constants';
 
@@ -44,22 +45,9 @@ const Reset = () => {
         </View>
         <View style={{}}>
           <View style={{}}>
-            <Tooltip
-              backgroundColor="#eee"
-              withOverlay={false}
-              containerStyle={{backgroundColor: 'red'}}
-              width={100}
-              height={33}
-              popover={
-                <View style={{flexDirection: 'row'}}>
-                  <Icon name="delete" size={22} />
-                  <Text style={{fontSize: 12}}>Remove</Text>
-                </View>
-              }>
-              <Icon name="dots-three-horizontal" size={22} />
-            </Tooltip>
+            <Icon name="dots-three-horizontal" size={22} />
           </View>
-          <View style={{marginTop: 30}}>
+          <View style={{marginTop: 40}}>
             <Icon name="heart" size={22} color="red" />
           </View>
         </View>

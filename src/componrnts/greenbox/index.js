@@ -9,35 +9,36 @@ import {
 } from 'react-native';
 import Images from '../../constants';
 
-const Greenbox = ({img1, img2}) => {
+const Greenbox = ({img1, img2, onPress, Press}) => {
   const [data1, setdata1] = useState(0);
   const Data = [
     {
       Image1: Images.Icons.upload,
-      Image2: Images.Icons.upload,
+      Image2: Images.Icons.up1,
       title: 'Top',
       title2: 'Top',
+      Press: Press,
     },
     {
-      Image1: Images.Icons.circle,
-      Image2: Images.Icons.circle,
+      Image1: Images.Icons.light,
+      Image2: Images.Icons.gleaf,
       title: 'Tools For Light',
       title2: 'Essents',
     },
     {
       Image1: Images.Icons.circle,
-      Image2: Images.Icons.circle,
+      Image2: Images.Icons.blocks,
       title: 'Tools for Shadow',
       title2: 'build Blocks',
     },
     {
-      Image2: Images.Icons.circle,
+      Image2: Images.Icons.gdownload,
       Image1: Images.Icons.triangle,
       title: 'Tools for Content',
       title2: 'Deep Dives',
     },
     {
-      Image2: Images.Icons.circle,
+      Image2: Images.Logos.greenheart,
       Image1: Images.Icons.triangle,
       title: 'Tools for Content',
       title2: 'Play',
@@ -57,6 +58,7 @@ const Greenbox = ({img1, img2}) => {
   return (
     <View style={{marginVertical: 10}}>
       <FlatList
+        showsHorizontalScrollIndicator={false}
         horizontal={true}
         data={Data}
         renderItem={({item, index}) => {
@@ -121,7 +123,8 @@ const Greenbox = ({img1, img2}) => {
             data={data}
             renderItem={({item, index}) => {
               return (
-                <View
+                <TouchableOpacity
+                  onPress={Press}
                   style={{
                     elevation: 2,
 
@@ -137,13 +140,14 @@ const Greenbox = ({img1, img2}) => {
                     }}>
                     {item.name}
                   </Text>
-                </View>
+                </TouchableOpacity>
               );
             }}
           />
         </View>
 
-        <View
+        <TouchableOpacity
+          onPress={onPress}
           style={{
             marginTop: 6,
             backgroundColor: '#1C5C2E',
@@ -156,7 +160,7 @@ const Greenbox = ({img1, img2}) => {
             alignItems: 'center',
           }}>
           <Text style={{color: '#fff'}}>+</Text>
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );

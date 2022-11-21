@@ -11,7 +11,7 @@ import {
 import {Header} from '../../../componrnts';
 import Images from '../../../constants';
 
-const Notification = () => {
+const Notification = props => {
   const data = [
     {
       Img1: Images.BackGround.Bg1,
@@ -75,14 +75,27 @@ const Notification = () => {
             width: '90%',
             alignSelf: 'center',
           }}>
-          <Header header2 headertext="Notification" color="#211E1F" />
+          <Header
+            iconName="closesquareo"
+            header2
+            headertext="Notification"
+            OnPress={() => props.navigation.goBack('')}
+          />
+
           <View
             style={{
               width: '90%',
               marginVertical: 15,
               justifyContent: 'flex-end',
             }}>
-            <Text style={{color: '#F54F84', textAlign: 'left'}}>Clear All</Text>
+            <Text
+              style={{
+                color: '#F54F84',
+                textAlign: 'right',
+                fontWeight: 'bold',
+              }}>
+              Clear All
+            </Text>
           </View>
           <View
             style={{
@@ -116,7 +129,7 @@ const Notification = () => {
               data={data}
               renderItem={({item}) => {
                 return (
-                  <View style={{width: '100%'}}>
+                  <View style={{width: '95%', alignSelf: 'center'}}>
                     <View style={styles.box}>
                       <View style={styles.img}>
                         <Image
@@ -180,8 +193,10 @@ const styles = StyleSheet.create({
     width: '100%',
     borderRadius: 30,
     height: 86,
-    borderWidth: 1,
-    borderColor: 'grey',
+    // borderWidth: 1,
+    backgroundColor: '#fff',
+    elevation: 5,
+    // borderColor: 'grey',
     flexDirection: 'row',
     shadowColor: '#000',
     shadowOffset: {

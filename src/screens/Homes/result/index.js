@@ -11,7 +11,7 @@ import {Header} from '../../../componrnts';
 import Reset from '../../../componrnts/ResetComponent';
 import Images from '../../../constants';
 
-const Result = () => {
+const Result = props => {
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
@@ -25,7 +25,12 @@ const Result = () => {
             width: '90%',
             alignSelf: 'center',
           }}>
-          <Header header2 headertext="Resonance Finder" />
+          <Header
+            iconName="closesquareo"
+            header2
+            OnPress={() => props.navigation.navigate('me')}
+            headertext="Resonance Finder"
+          />
           <View style={{marginVertical: 10}}>
             <Text
               style={{

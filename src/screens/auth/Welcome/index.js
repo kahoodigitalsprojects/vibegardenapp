@@ -10,7 +10,7 @@ import {
   ScrollView,
   StatusBar,
 } from 'react-native';
-import { Pinkbtn } from '../../../componrnts';
+import {Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 
 const Welcome = props => {
@@ -19,7 +19,7 @@ const Welcome = props => {
       <StatusBar animated={true} backgroundColor="#000" />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ flexGrow: 1 }}>
+        contentContainerStyle={{flexGrow: 1}}>
         <ImageBackground
           source={Images.BackGround.Bg1}
           resizeMode="cover"
@@ -61,17 +61,21 @@ const Welcome = props => {
               Tools, tips & magic for growing your communication to you!
             </Text>
           </View>
-          <View style={{ marginTop: 50 }}>
+          <View style={{marginTop: 50}}>
             <View style={{}}>
-              <Pinkbtn width={'80%'} btntxt=" Get Started" onPress={() =>
-                props.navigation.replace('Mytabs', { screen: 'home' })
-              } />
+              <Pinkbtn
+                width={'80%'}
+                btntxt=" Get Started"
+                onPress={() =>
+                  props.navigation.replace('Auth', {screen: 'login'})
+                }
+              />
             </View>
 
             <TouchableOpacity
               onPress={() => props.navigation.navigate('namescreen')}
               style={styles.btn2}>
-              <Text style={{ fontWeight: 'bold', color: '#fff' }}>Login In</Text>
+              <Text style={{fontWeight: 'bold', color: '#fff'}}>Login In</Text>
             </TouchableOpacity>
           </View>
         </ImageBackground>

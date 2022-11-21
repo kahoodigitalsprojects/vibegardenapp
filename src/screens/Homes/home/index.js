@@ -10,67 +10,75 @@ import {
   StatusBar,
 } from 'react-native';
 import {Header, Imgbox, SeeAll, StoryData} from '../../../componrnts';
+import All from '../../../componrnts/all';
+import MainBox from '../../../componrnts/mainbox';
 import Images from '../../../constants';
 
 const Home = props => {
   const Data = [
     {
+      id: 1,
+      bg1: Images.BackGround.rectangle2,
+      bg12: Images.BackGround.greenbg,
+      // heart1: Images.Icons.heart1,
+      name: 'TONGLEN',
+      title: 'title',
+      textA: 'FEATURED TOOLS',
+      textB: 'See ALL',
+      plus: 'plus',
+      img4: Images.BackGround.rectangle2,
+      one: Images.Icons.circleplus,
+    },
+    {
+      id: 2,
       bg1: Images.BackGround.black,
       bg12: Images.BackGround.greenbg,
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
-      myicon: 'plus',
+      textA: 'FEATURED GROUNDWORK',
+      textB: 'See ALL',
+      img4: Images.BackGround.rectangle2,
+      one: Images.Icons.circleplus,
+      heart1: Images.Icons.heart1,
     },
     {
+      id: 3,
+      bg1: Images.BackGround.black,
+      bg12: Images.BackGround.greenbg,
+      name: 'TONGLEN',
+      title: 'title',
+      textA: 'BUDDHISM',
+      plus: 'plus',
+      textB: 'See ALL',
+      img4: Images.BackGround.rectangle2,
+      one: Images.Icons.circleplus,
+      heart1: Images.Icons.heart1,
+    },
+    {
+      id: 4,
       bg1: Images.BackGround.black,
       bg12: Images.BackGround.greenbg,
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
-      myicon: 'plus',
-    },
-    {
-      bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      textA: 'QUANTUM PHYSICS',
+      textB: 'See ALL',
+      img4: Images.BackGround.rectangle2,
+      one: Images.Icons.circleplus,
       heart1: Images.Icons.heart1,
-      name: 'TONGLEN',
-      title: 'title',
     },
     {
-      bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
-      heart1: Images.Icons.heart1,
-      name: 'TONGLEN',
-      title: 'title',
-    },
-    {
-      bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
-      heart1: Images.Icons.heart1,
-      name: 'TONGLEN',
-      title: 'title',
-    },
-    {
-      bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
-      heart1: Images.Icons.heart1,
-      name: 'TONGLEN',
-      title: 'title',
-    },
-    {
+      id: 5,
       bg1: Images.BackGround.black,
       bg12: Images.BackGround.greenbg,
       name: 'TONGLEN',
       title: 'title',
-      myicon: 'plus',
-    },
-    {
-      bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
-      name: 'TONGLEN',
-      title: 'title',
-      myicon: 'plus',
+      textA: 'BUDDHISM',
+      plus: 'plus',
+      textB: 'See ALL',
+      img4: Images.BackGround.rectangle2,
+      one: Images.Icons.circleplus,
     },
   ];
   return (
@@ -78,13 +86,7 @@ const Home = props => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        <StatusBar
-          animated={true}
-          backgroundColor="#000"
-          // barStyle={statusBarStyle}
-          // showHideTransition={statusBarTransition}
-          // hidden={hidden}
-        />
+        <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
             width: '90%',
@@ -92,7 +94,15 @@ const Home = props => {
             marginVertical: 5,
             marginTop: 15,
           }}>
-          <Header heartplus homeheader={true} heart plus />
+          <Header
+            heartplus
+            homeheader={true}
+            search={() =>
+              props.navigation.navigate('Homes', {screen: 'Search'})
+            }
+            heart
+            plus
+          />
         </View>
         <View style={styles.Box1}>
           <View style={{width: '90%', alignSelf: 'center'}}>
@@ -123,16 +133,18 @@ const Home = props => {
               <View style={styles.box2}>
                 <ScrollView
                   horizontal={true}
-                  showsHorizontalScrollIndicator={true}>
+                  showsHorizontalScrollIndicator={false}>
                   {Data.map((item, index) => {
                     return (
                       <View style={{}}>
-                        <Imgbox
-                          homemainbox
-                          heart1={item.heart1}
-                          myicon={item.myicon}
-                          bghome={item.bg1}
-                          name={item.name}
+                        <MainBox
+                          left={100}
+                          bgcolor={'#4E805C'}
+                          img2={item.img4}
+                          item={item.ImgICon}
+                          color={'green'}
+                          textone="TONGLEN"
+                          text2={'5 min'}
                         />
                       </View>
                     );
@@ -146,26 +158,25 @@ const Home = props => {
                   // backgroundColor: 'blue'
                 }
               }>
-              <SeeAll textA="FRESH BLOOMS" textB="SeeAll" />
               <View style={styles.box1}>
                 <FlatList
-                  numColumns={2}
+                  showsHorizontalScrollIndicator={false}
+                  keyExtractor={item => item.id}
                   data={Data}
                   renderItem={({item}) => {
                     return (
-                      <View
-                        style={{
-                          alignSelf: 'center',
-                          display: 'flex',
-                          flexGrow: 1,
-                        }}>
-                        <Imgbox
-                          homebox
-                          myicon={item.myicon}
-                          bghome2={item.bg12}
-                          title={item.title}
-                        />
-                      </View>
+                      <All
+                        pressI={() =>
+                          props.navigation.navigate('Homes', {screen: 'Video'})
+                        }
+                        heart1={item.heart1}
+                        textA={item.textA}
+                        textB={item.textB}
+                        homebox
+                        plus={item.plus}
+                        bghome2={item.bg12}
+                        title={item.title}
+                      />
                     );
                   }}
                 />
@@ -196,7 +207,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   box1: {
-    width: '90%',
+    width: '100%',
     alignSelf: 'center',
     // height: '100%',
     // backgroundColor: 'yellow',

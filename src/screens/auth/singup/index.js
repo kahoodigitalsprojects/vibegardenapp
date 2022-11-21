@@ -11,22 +11,24 @@ import {
   SafeAreaView,
 } from 'react-native';
 
-import { Header, Pinkbtn } from '../../../componrnts';
+import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-const SignUp = props => {
+const SignUp = ({route, navigation}) => {
+  const {itemId, otherParam, registerd1} = route.params;
   return (
     <SafeAreaView style={styles.main}>
       <StatusBar animated={true} backgroundColor="#000" />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ flexGrow: 1 }}>
-        <View style={{ width: '90%', alignSelf: 'center' }}>
-          <View style={{ width: '100%', marginTop: 10 }}>
+        contentContainerStyle={{flexGrow: 1}}>
+        <View style={{width: '90%', alignSelf: 'center'}}>
+          <View style={{marginTop: 20}}>
             <Header
+              iconName="arrowleft"
               header2
-              OnPress={() => props.navigation.replace('Welcome')}
+              OnPress={() => navigation.replace('Welcome')}
             />
           </View>
 
@@ -42,14 +44,14 @@ const SignUp = props => {
             }}>
             Let's Get You Setup With An Account
           </Text>
-          <View style={{ marginVertical: 20 }}>
+          <View style={{marginVertical: 20}}>
             <Image
               source={Images.Logos.logo1}
-              style={{ width: 64, height: 65 }}
+              style={{width: 64, height: 65}}
             />
           </View>
           <View>
-            <Text style={{ fontSize: 18 }}>Sign Up With Email</Text>
+            <Text style={{fontSize: 18}}>Sign Up With Email</Text>
 
             <View style={styles.input}>
               <TextInput
@@ -61,16 +63,12 @@ const SignUp = props => {
               <TextInput placeholder="Password" />
             </View>
 
-            <View style={{ marginTop: 20 }}>
-              <Pinkbtn
-                onPress={() => props.navigation.navigate('registerd')}
-                width={'60%'}
-                btntxt="Continue"
-              />
+            <View style={{marginTop: 10}}>
+              <Pinkbtn onPress={registerd1} width={'60%'} btntxt="Continue" />
             </View>
             <TouchableOpacity
               onPress={() => {
-                props.navigation.navigate('loginoption');
+                navigation.navigate('loginoption');
               }}>
               <Text
                 style={{
@@ -80,12 +78,12 @@ const SignUp = props => {
                   textAlign: 'center',
                 }}>
                 Already have an account?
-                <Text style={{ fontWeight: 'bold' }}>Login</Text>
+                <Text style={{fontWeight: 'bold'}}>Login</Text>
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => {
-                props.navigation.navigate('Homes', { screen: 'story1' });
+                navigation.navigate('Homes', {screen: 'story1'});
               }}
               style={{
                 flexDirection: 'row',
@@ -113,7 +111,7 @@ const SignUp = props => {
 };
 
 const styles = StyleSheet.create({
-  main: { flex: 1, alignItems: 'center' },
+  main: {flex: 1, alignItems: 'center'},
   input: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -123,7 +121,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   headtext: {
-    marginTop: 40,
+    marginTop: 20,
     color: '#1C5C2E',
     fontSize: 25,
     fontWeight: '700',

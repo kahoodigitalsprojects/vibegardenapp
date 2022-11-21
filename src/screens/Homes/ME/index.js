@@ -54,9 +54,24 @@ const Me = props => {
             width: '90%',
             alignSelf: 'center',
             marginTop: 10,
-            paddingVertical: 20,
+            // paddingVertical: 20,
+            // position: 'absolute',
+            // top: 8,
+            height: 60,
           }}>
-          <Header toggle homeheader={true} />
+          <Header
+            toggle
+            homeheader={true}
+            search={() => {
+              props.navigation.navigate('Homes', {screen: 'Search'});
+            }}
+            OnPress={() =>
+              props.navigation.navigate('Homes', {screen: 'notification'})
+            }
+            OnPress1={() =>
+              props.navigation.navigate('Homes', {screen: 'settings'})
+            }
+          />
         </View>
         <View style={styles.Box1}>
           <View style={{width: '90%', alignSelf: 'center'}}>
@@ -81,6 +96,7 @@ const Me = props => {
                 margin1={10}
                 text1="Current Bloom:"
                 Image1={Images.Imgs.lotus1}
+                icons={true}
               />
             </View>
             <View style={styles.data}>
@@ -111,10 +127,20 @@ const Me = props => {
               <View style={{marginTop: 10}}>
                 <Pinkbtn
                   onPress={() => {
-                    props.navigation.navigate('chuchuhuasDetails', {});
+                    props.navigation.navigate('BloomsCheck', {
+                      Heading: 'Meet Blue Lotus',
+                      Image1: Images.Imgs.lotusb,
+                      Image2: Images.Imgs.lotusa,
+                      Image3: Images.Imgs.lotus1,
+                      Images4: Images.Imgs.lotus1,
+                      Image5: Images.Imgs.lotus1,
+                      Image6: Images.BackGround.BlueL,
+                      newtext:
+                        'Meaning , How Connected to your feel to your light , your Unique essence',
+                    });
                   }}
                   width={'60%'}
-                  btntxt="Continue"
+                  btntxt="Update Current Blooms"
                 />
               </View>
             </View>
@@ -128,17 +154,8 @@ const styles = StyleSheet.create({
   main: {
     flex: 1,
   },
-  Box1: {
-    overflow: 'hidden',
-    width: '90%',
-    alignSelf: 'center',
-  },
-  centerbox: {
-    overflow: 'visible',
-    width: '100%',
-    marginVertical: 10,
-    justifyContent: 'center',
-  },
+  Box1: {marginTop: 10},
+  centerbox: {},
   data: {
     // position: 'relative',
   },

@@ -11,7 +11,7 @@ import {
 import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 
-const Spalsh2 = props => {
+const Spalsh2 = ({navigation}) => {
   return (
     <>
       <SafeAreaView style={styles.main}>
@@ -35,7 +35,13 @@ const Spalsh2 = props => {
               </Text>
               <View style={{marginTop: 20}}>
                 <Pinkbtn
-                  onPress={() => props.navigation.navigate('signup')}
+                  onPress={() =>
+                    navigation.navigate('signup', {
+                      registerd1: () => navigation.navigate('verify'),
+                      itemId: 86,
+                      otherParam: 'anything you want here',
+                    })
+                  }
                   width={'60%'}
                   btntxt="Let's Roll"
                 />

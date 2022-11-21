@@ -17,7 +17,7 @@ const Verify = props => {
 
       <View style={styles.main}>
         <View style={{width: '90%', marginTop: 30}}>
-          <Header header2 />
+          <Header iconName="arrowleft" header2 />
         </View>
 
         <View style={{width: '85%', marginTop: 30}}>

@@ -47,6 +47,7 @@ function Mytabs() {
             ),
         }}
       />
+
       <Tab.Screen
         name="Ground work"
         component={GroundWork}

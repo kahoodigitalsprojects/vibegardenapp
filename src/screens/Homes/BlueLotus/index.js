@@ -20,6 +20,9 @@ const BlueLotus = ({route, navigation}) => {
           }}>
           <Header
             header2
+            iconName="arrowleft"
+            color="#1C5C2E"
+            fontSize={25}
             headertext={Heading}
             OnPress={() => navigation.goBack()}
           />
@@ -35,7 +38,7 @@ const BlueLotus = ({route, navigation}) => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    // backgroundColor: 'pink',
+    backgroundColor: '#fff',
   },
 });
 export default BlueLotus;

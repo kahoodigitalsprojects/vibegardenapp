@@ -54,6 +54,9 @@ const ChuchuasDetails = ({route, navigation}) => {
           <View style={{width: '90%', alignSelf: 'center'}}>
             <Header
               header2
+              iconName="arrowleft"
+              fontSize={25}
+              color="#1C5C2E"
               OnPress={() => {
                 navigation.navigate('Bluelotus', {
                   Heading: Heading,
@@ -187,19 +190,6 @@ const ChuchuasDetails = ({route, navigation}) => {
                     })
                   }
                 />
-
-                {/* <View style={{marginVertical: 10}}>
-                  <Pinkbtn
-                    onPress={() =>
-                      navigation.navigate('MeetScreen2', {
-                        Image1: Image1,
-                        newtext: '',
-                      })
-                    }
-                    width={'60%'}
-                    btntxt="Continue"
-                  />
-                </View> */}
               </View>
             </View>
           </View>
