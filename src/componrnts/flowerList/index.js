@@ -18,71 +18,51 @@ import Icon2 from 'react-native-vector-icons/AntDesign';
 import Icon3 from 'react-native-vector-icons/Ionicons';
 import Images from '../../constants';
 
-const Flowers = ({
-  text1,
-  text2,
-  text3,
-  text4,
-  text5,
-  text6,
-  name,
-  name2,
-  number,
-  video,
-  video2,
-  image1,
-  flowwerlist,
-  Statement,
-  flow,
-  direction,
-  direction2,
-  iconone,
-  icontwo,
-}) => {
-  const data = [
-    {text1: text1, img1: Images.Imgs.R1},
-
-    {
-      text1: text2,
-      img1: Images.Imgs.R2,
-    },
-    {
-      text1: text3,
-      img1: Images.Imgs.R3,
-    },
-    {
-      text1: text4,
-      img1: Images.Imgs.R4,
-    },
-  ];
-
+const Flowers = ({text1, img1, onPress, headtext, flower1}) => {
   return (
     <>
-        <View style={styles.container}>
-        
-                <>
-                  <View style={{margin: 5}}>
-                    <TouchableOpacity
-                      onPress={onPress}
-                      style={styles.circle}>
-                      <Image source={img1} />
-                    </TouchableOpacity>
-                    <View style={{fontSize: 10, width: 80}}>
-                      <Text
-                        style={{
-                          margin: 5,
-                          fontSize: 18,
-                          color: '#000',
-                          textAlign: 'center',
-                          color: '#1C5C2E',
-                        }}>
-                        {text1}
-                      </Text>
-                    </View>
-                  </View>
-                </>
-          
-        </View>
+      <View style={styles.container}>
+        <>
+          {headtext && (
+            <View style={{margin: 5}}>
+              <TouchableOpacity onPress={onPress} style={styles.circle}>
+                <Image source={img1} />
+              </TouchableOpacity>
+              <View style={{fontSize: 10, width: 80}}>
+                <Text
+                  style={{
+                    margin: 5,
+                    fontSize: 18,
+                    color: '#000',
+                    textAlign: 'center',
+                    color: '#1C5C2E',
+                  }}>
+                  {text1}
+                </Text>
+              </View>
+            </View>
+          )}
+          {flower1 && (
+            <View style={{margin: 5}}>
+              <TouchableOpacity onPress={onPress} style={styles.circle}>
+                <Image source={img1} />
+              </TouchableOpacity>
+              <View style={{fontSize: 10, width: 80}}>
+                <Text
+                  style={{
+                    margin: 5,
+                    fontSize: 18,
+                    color: '#000',
+                    textAlign: 'center',
+                    color: '#1C5C2E',
+                  }}>
+                  {text1}
+                </Text>
+              </View>
+            </View>
+          )}
+        </>
+      </View>
     </>
   );
 };

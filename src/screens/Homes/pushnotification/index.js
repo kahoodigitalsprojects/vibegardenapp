@@ -33,6 +33,8 @@ const Pushnotification = props => {
             iconName="left"
             header2
             headertext="Push Notification"
+            fontSize={25}
+            color="#000"
             // OnPress={() => props.navigation.replace('Home')}
           />
           <View style={{marginTop: 30, marginVertical: 10}}>
@@ -79,11 +81,7 @@ const Pushnotification = props => {
             </View>
             <View style={{marginTop: 20}}>
               <Pinkbtn
-                // onPress={() =>
-                //   props.navigation.navigate('signup', {
-                //     registerd1: () => props.navigation.navigate('signup'),
-                //   })
-                // }
+                onPress={() => props.navigation.goBack('')}
                 width={'60%'}
                 btntxt="Save"
               />

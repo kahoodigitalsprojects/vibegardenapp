@@ -1,7 +1,6 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-
 import Splash from '../../screens/auth/Splash/index';
 import Welcome from '../../screens/auth/Welcome';
 import Login from '../../screens/auth/Login';
@@ -43,6 +42,12 @@ import Packages from '../../screens/Homes/packages';
 import ManageSubscription from '../../screens/Homes/manageSubscription';
 import NotRegisterd from '../../screens/auth/notregistered';
 import Video from '../../screens/Homes/video';
+import EmailNotification from '../../screens/Homes/emailNotification';
+import Pushnotification from '../../screens/Homes/pushnotification';
+import EditScreen from '../../screens/auth/editScreen';
+import Contactus from '../../screens/Homes/contactus';
+import PrivacyPolicy from '../../screens/Homes/privacyPolicy';
+import Buddhisim from '../../screens/Budhisim';
 
 const Stack = createNativeStackNavigator();
 
@@ -107,6 +112,22 @@ const Auth = () => {
       <Stack.Screen
         name="NotRegisterd"
         component={NotRegisterd}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="EmailNotification"
+        component={EmailNotification}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Pushnotification"
+        component={Pushnotification}
+        options={{headerShown: false}}
+      />
+
+      <Stack.Screen
+        name="PrivacyPolicy"
+        component={PrivacyPolicy}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
@@ -237,6 +258,11 @@ export const Homes = () => {
         options={{headerShown: false}}
       />
       <Stack.Screen
+        name="EditScreen"
+        component={EditScreen}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
         name="Packges"
         component={Packages}
         options={{headerShown: false}}
@@ -249,6 +275,16 @@ export const Homes = () => {
       <Stack.Screen
         name="Video"
         component={Video}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Contactus"
+        component={Contactus}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Buddhisim"
+        component={Buddhisim}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

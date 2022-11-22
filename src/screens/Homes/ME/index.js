@@ -20,27 +20,47 @@ const Me = props => {
     {
       img1: Images.Icons.gpluse,
       text1: 'Tools to try',
-      onPress: () => props.navigation.naviagate('FressBlooms'),
+      onPress: () => {
+        props.navigation.navigate('Homes', {
+          screen: 'FressBlooms',
+        });
+      },
     },
     {
       img1: Images.Icons.arrow,
       text1: 'Recent Content',
-      onPress: () => props.navigation.naviagate('FressBlooms'),
+      onPress: () => {
+        props.navigation.navigate('Homes', {
+          screen: 'FressBlooms',
+        });
+      },
     },
     {
       img1: Images.Icons.gheart,
       text1: 'Favorites',
-      onPress: () => props.navigation.naviagate('FressBlooms'),
+      onPress: () => {
+        props.navigation.navigate('Homes', {
+          screen: 'FressBlooms',
+        });
+      },
     },
     {
       img1: Images.Icons.star,
       text1: 'Top Tools',
-      onPress: () => props.navigation.naviagate('FressBlooms'),
+      onPress: () => {
+        props.navigation.navigate('Homes', {
+          screen: 'FressBlooms',
+        });
+      },
     },
     {
       img1: Images.Icons.spiral,
       text1: 'Your Resonance Finder Result',
-      onPress: () => props.navigation.naviagate('Result'),
+      onPress: () => {
+        props.navigation.navigate('Homes', {
+          screen: 'Result',
+        });
+      },
     },
   ];
   return (

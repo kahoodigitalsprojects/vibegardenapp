@@ -32,10 +32,11 @@ import Home from './src/screens/Homes/home';
 import Video from './src/screens/Homes/video';
 import Question2 from './src/screens/Homes/question2';
 import Buddhisim from './src/screens/Budhisim';
+import Settings from './src/screens/Homes/settings';
 
 const App = props => {
   return <MyStack {...props} />;
-  // return <Buddhisim />;
+  // return <Settings />;
 };
 
 export default App;

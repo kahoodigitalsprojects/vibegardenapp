@@ -12,14 +12,36 @@ import {
   FlatList,
 } from 'react-native';
 
-import {Header, Pinkbtn, QComponents, Userdetails} from '../../../componrnts';
+import {
+  Flowers,
+  Header,
+  Pinkbtn,
+  QComponents,
+  Userdetails,
+} from '../../../componrnts';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Images from '../../../constants';
 import MainBox from '../../../componrnts/mainbox';
 import All from '../../../componrnts/all';
 
 const Video = props => {
-  const Data3 = [{}, {}];
+  const Data3 = [
+    {text1: 'Not Really', img11: Images.Imgs.R1},
+
+    {
+      text1: 'Baby Bloom',
+      img11: Images.Imgs.R2,
+    },
+    {
+      text1: 'Solid Bloom',
+      img11: Images.Imgs.R3,
+    },
+    {
+      text1: 'Big Bloom',
+      img11: Images.Imgs.R4,
+    },
+  ];
+
   const data = [
     {
       text1: 'Yeah,no',
@@ -91,8 +113,14 @@ const Video = props => {
                 alignSelf: 'center',
               }}>
               <Header
-                iconName="closesquareo"
-                header2
+                heartplus
+                plus
+                heart
+                fontSize={25}
+                logo11
+                color="#fff"
+                gbg="#1C5C2E"
+                homeheader
                 headertext="Resonance Finder"
                 OnPress={() => props.navigation.goBack('')}
               />
@@ -149,6 +177,32 @@ const Video = props => {
                   );
                 }}
               />
+              <View style={{}}>
+                <FlatList
+                  horizontal={true}
+                  showsHorizontalScrollIndicator={false}
+                  data={Data3}
+                  renderItem={({item}) => {
+                    return (
+                      <>
+                        <View
+                          style={{
+                            marginTop: 20,
+                            marginVertical: 5,
+
+                            alignSelf: 'center',
+                          }}>
+                          <Flowers
+                            flower1
+                            img1={item.img11}
+                            text1={item.text1}
+                          />
+                        </View>
+                      </>
+                    );
+                  }}
+                />
+              </View>
               <View style={styles.row}>
                 <Text
                   style={{
@@ -164,6 +218,7 @@ const Video = props => {
             </View>
             <View style={{}}>
               <FlatList
+                showsHorizontalScrollIndicator={false}
                 data={data}
                 renderItem={({item}) => {
                   return (
@@ -202,6 +257,7 @@ const Video = props => {
             </View>
             <View style={styles.box1}>
               <FlatList
+                showsHorizontalScrollIndicator={false}
                 keyExtractor={item => item.id}
                 data={Data2}
                 renderItem={({item}) => {
@@ -241,6 +297,7 @@ const Video = props => {
           </View>
           <View style={{}}>
             <FlatList
+              showsHorizontalScrollIndicator={false}
               data={Data3}
               renderItem={({item}) => {
                 return (

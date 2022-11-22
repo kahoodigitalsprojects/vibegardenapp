@@ -93,7 +93,7 @@ const GroundWork = props => {
             </Text>
           </View>
           <View style={styles.centerbox}>
-            <Greenbox img2 Press={() => props.navigation.navigate('')} />
+            <Greenbox img2 />
             <View
               style={
                 {

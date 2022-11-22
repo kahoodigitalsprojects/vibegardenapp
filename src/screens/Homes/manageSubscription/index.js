@@ -25,8 +25,10 @@ const ManageSubscription = props => {
           <Header
             iconName="closesquareo"
             header2
-            OnPress={() => props.navigation.navigate('me')}
+            OnPress={goback}
             headertext="Manage Subscription"
+            fontSize={25}
+            color="#000"
           />
         </View>
         <View style={styles.firstview}>

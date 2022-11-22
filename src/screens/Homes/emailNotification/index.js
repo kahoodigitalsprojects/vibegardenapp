@@ -40,21 +40,21 @@ const EmailNotification = props => {
           OnPress={() => props.navigation.goBack('')}
         />
         <View style={{marginTop: 10}}>
-          <View style={{width: '100%'}}>
+          <View style={{width: '90%'}}>
             <FlatList
               data={data}
               renderItem={({item}) => {
                 return (
                   <View>
                     <View style={styles.switchView}>
-                      <View styles={{}}>
+                      <View styles={{width: '95%'}}>
                         <Text style={styles.text1}>{item.text1}</Text>
                       </View>
-                      <View styles={{}}>
+                      <View styles={{width: '5%'}}>
                         <Switch1 />
                       </View>
                     </View>
-                    <View style={{}}>
+                    <View style={{width: '100%', alignSelf: 'center'}}>
                       <Text style={styles.text2}>{item.text2}</Text>
                     </View>
                   </View>
@@ -83,13 +83,13 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginVertical: 4,
-    textAlign: 'left',
+  
   },
-  text2: {color: '#000', fontSize: 18, textAlign: 'left'},
+  text2: {color: '#000', fontSize: 18,textAlign:'justify'},
 
   switchView: {
     // backgroundColor: 'green',
-    width: '90%',
+    width: '100%',
     alignSelf: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',

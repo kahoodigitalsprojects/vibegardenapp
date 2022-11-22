@@ -2,7 +2,7 @@ import React from 'react';
 import {View, StyleSheet, Text, ScrollView, StatusBar} from 'react-native';
 import {Header, StoryData} from '../../../componrnts';
 
-const PrivacyPolicy = () => {
+const PrivacyPolicy = props => {
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
@@ -12,18 +12,25 @@ const PrivacyPolicy = () => {
         <View
           style={{
             marginVertical: 20,
-            marginTop: 20,
+            marginTop: 10,
             width: '90%',
             alignSelf: 'center',
           }}>
-          <Header header2 headertext="Privacy Policy" />
+          <Header
+            iconName="left"
+            header2
+            OnPress={() => props.navigation.goBack('')}
+            headertext="Privacy Policy"
+            fontSize={25}
+            color="#000"
+          />
         </View>
         <View
           style={{
-            marginTop: 10,
+            marginTop: 15,
             width: '85%',
             alignSelf: 'center',
-            marginVertical: 10,
+            marginVertical: 20,
           }}>
           <Text style={{textAlign: 'left', fontSize: 14, color: '#000000'}}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -35,20 +42,25 @@ const PrivacyPolicy = () => {
             et dolore magna aliquyam erat, sed diaro eos et accusam et justo duo
             dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
             sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-            ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-            eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-            gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+          </Text>
+          <Text style={{textAlign: 'left', fontSize: 14, color: '#000000'}}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
             et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
             Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
             sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-            no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-            dolor sit amet, consetetur sadipscing elitr,
+            et dolore magna aliquyam erat, sed diaro eos et accusam et justo duo
+            dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+            sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+          </Text>
+          <Text style={{textAlign: 'left', fontSize: 14, color: '#000000'}}>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. Lorem ipsum dolor sit amet,
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
           </Text>
         </View>
       </View>

@@ -31,7 +31,10 @@ const Contactus = props => {
           <Header
             iconName="left"
             header2
-            OnPress={() => props.navigation.replace('Home')}
+            OnPress={() => props.navigation.replace('')}
+            headertext="Contact Us"
+            fontSize={25}
+            color="#000"
           />
 
           <View style={{marginVertical: 5, alignSelf: 'center'}}>
@@ -49,7 +52,7 @@ const Contactus = props => {
               </Text>
             </View>
 
-            <TouchableOpacity
+            <View
               style={{
                 marginVertical: 20,
                 marginTop: 40,
@@ -61,9 +64,7 @@ const Contactus = props => {
                 flexDirection: 'row',
                 padding: 15,
               }}
-              onPress={() => {
-                props.navigation.navigate('signup');
-              }}>
+     >
               <View
                 style={{
                   alignSelf: 'center',
@@ -82,7 +83,7 @@ const Contactus = props => {
                 }}>
                 Bloomsupport@vibgarden.com
               </Text>
-            </TouchableOpacity>
+            </View>
 
             <View
               style={{
