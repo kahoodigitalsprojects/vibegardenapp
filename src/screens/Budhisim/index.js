@@ -16,7 +16,34 @@ import All from '../../componrnts/all';
 import Images from '../../constants';
 
 const Buddhisim = props => {
-  const data = [{}];
+  const data = [
+    {
+      
+      Img1: Images.Imgs.user1,
+      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.',
+      name: 'Michael Grower',
+    },
+    {
+      text1: 'No idea What a Multiverse is',
+      texlist: 'Quantum physics',
+      Img1: Images.Imgs.user2,
+      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.',
+      name: 'Michael Grower',
+    },
+    {
+      text1: 'SMCA Peepsceen to think so',
+      texlist: 'Nature',
+      Img1: Images.Imgs.user2,
+      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.',
+      name: 'Michael Grower',
+    },
+    {
+      text1: 'Shall we Question Heap',
+      Img1: Images.Imgs.user2,
+      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.',
+      name: 'Michael Grower',
+    },
+  ];
   const Data = [
     {
       id: 1,
@@ -121,8 +148,25 @@ const Buddhisim = props => {
                 textA="Teacher Related"
               />
               <View style={{marginVertical: 3}}>
-                <Userdetails databox1 />
-                <Userdetails databox1 />
+                <View style={{}}>
+                  <FlatList
+                    showsHorizontalScrollIndicator={false}
+                    data={data}
+                    renderItem={({item}) => {
+                      return (
+                        <>
+                          <View style={{marginVertical: 10}}>
+                            <Userdetails
+                              databox2
+                              bear={item.Img1}
+                              nametext={item.nametext}
+                            />
+                          </View>
+                        </>
+                      );
+                    }}
+                  />
+                </View>
               </View>
             </View>
           </View>

@@ -35,12 +35,14 @@ const All = ({
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
+      iconimg1: Images.Icons.Pcircle,
     },
     {
       id: 2,
       bg1: Images.BackGround.black,
       bg12: Images.BackGround.greenbg,
       heart1: Images.Icons.heart1,
+      iconimg1: Images.Icons.prectangel,
       name: 'TONGLEN',
       title: 'title',
     },
@@ -51,6 +53,7 @@ const All = ({
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
+      iconimg1: Images.Icons.sun,
     },
     {
       id: 4,
@@ -147,7 +150,6 @@ const All = ({
                           style={{
                             width: 30,
                             height: 30,
-                            backgroundColor: 'green',
                           }}>
                           <Image
                             source={iconimg1}

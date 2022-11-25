@@ -21,6 +21,9 @@ const Header = props => {
     gbg,
     flower,
     img23,
+    heading,
+    img1,
+    search1,
   } = props;
   const [state, setState] = useState(false);
   return (
@@ -29,11 +32,54 @@ const Header = props => {
         <View style={styles.header}>
           <TouchableOpacity
             onPress={search}
-            style={{width: 30, height: 35, marginTop: 5, backgroundColor: gbg}}>
-            <Icon name="search" size={25} color={color} />
+            style={{
+              width: 40,
+              height: 40,
+              marginTop: 5,
+              backgroundColor: gbg,
+              justifyContent: 'center',
+              alignItems: 'center',
+              borderRadius: 10,
+            }}>
+            <Icon2 name={search1} size={20} color={color} />
           </TouchableOpacity>
+          {img1 && (
+            <View style={{width: 40, height: 40}}>
+              <Image
+                source={Images.Logos.logo1}
+                resizeMode="contain"
+                style={{width: 40, height: 40}}
+              />
+            </View>
+          )}
+          {heading && (
+            <View
+              style={{
+                width: '80%',
+                alignItems: 'center',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <View style={{width: 25, height: 25, margin: 5}}>
+                <Image
+                  source={Images.Logos.greenicon1}
+                  resizeMode="contain"
+                  style={{width: '100%', height: '100%'}}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: fontSize,
+                  color: '#000',
+                  fontWeight: '300',
+                }}>
+                {props.headertext}
+              </Text>
+            </View>
+          )}
 
-          {props.header21 && (
+          {/* {props.header21 && (
             <View style={styles.header}>
               <TouchableOpacity
                 onPress={props.OnPress}
@@ -62,23 +108,7 @@ const Header = props => {
                 </Text>
               </View>
             </View>
-          )}
-          {heartplus && (
-            <TouchableOpacity
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-
-                marginTop: 5,
-              }}>
-              {plus && (
-                <View style={{marginRight: 8}}>
-                  <Icon name="plus" size={25} color="#1C5C2E" style={{}} />
-                </View>
-              )}
-              {heart && <Icon name="heart" size={25} color="#900" />}
-            </TouchableOpacity>
-          )}
+          )} */}
 
           {toggle && (
             <>
@@ -191,7 +221,11 @@ const Header = props => {
                   width: 34,
                   height: 34,
                 }}>
-                <Image source={img23} resizeMode="contain" style={{width: '100%', height: '100%'}} />
+                <Image
+                  source={img23}
+                  resizeMode="contain"
+                  style={{width: '100%', height: '100%'}}
+                />
               </View>
             )}
 
@@ -235,3 +269,22 @@ const styles = StyleSheet.create({
 
   header: {marginTop: 5, flexDirection: 'row', justifyContent: 'space-between'},
 });
+
+//  {
+//    heartplus && (
+//      <TouchableOpacity
+//        style={{
+//          flexDirection: 'row',
+//          justifyContent: 'space-between',
+
+//          marginTop: 5,
+//        }}>
+//        {plus && (
+//          <View style={{marginRight: 8}}>
+//            <Icon name="plus" size={25} color="#1C5C2E" style={{}} />
+//          </View>
+//        )}
+//        {heart && <Icon name="heart" size={25} color="#900" />}
+//      </TouchableOpacity>
+//    );
+//  }

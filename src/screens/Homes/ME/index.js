@@ -79,8 +79,11 @@ const Me = props => {
             // top: 8,
             height: 60,
           }}>
+     
           <Header
+            img1
             toggle
+            search1="search1"
             homeheader={true}
             search={() => {
               props.navigation.navigate('Homes', {screen: 'Search'});
@@ -147,17 +150,7 @@ const Me = props => {
               <View style={{marginTop: 10}}>
                 <Pinkbtn
                   onPress={() => {
-                    props.navigation.navigate('BloomsCheck', {
-                      Heading: 'Meet Blue Lotus',
-                      Image1: Images.Imgs.lotusb,
-                      Image2: Images.Imgs.lotusa,
-                      Image3: Images.Imgs.lotus1,
-                      Images4: Images.Imgs.lotus1,
-                      Image5: Images.Imgs.lotus1,
-                      Image6: Images.BackGround.BlueL,
-                      newtext:
-                        'Meaning , How Connected to your feel to your light , your Unique essence',
-                    });
+                    props.navigation.navigate('Homes', {screen: 'BloomsCheck'});
                   }}
                   width={'60%'}
                   btntxt="Update Current Blooms"

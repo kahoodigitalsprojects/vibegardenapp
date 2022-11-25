@@ -9,14 +9,15 @@ import {
   ScrollView,
   StatusBar,
   TouchableOpacity,
+  ImageBackground,
 } from 'react-native';
 import Swiper from 'react-native-swiper';
-import {Header, StoryData} from '../../../componrnts';
+import {Header, Pinkbtn, StoryData} from '../../../componrnts';
 
 import Images from '../../../constants';
 
-const Story1 = () => {
-  const [state, setState] = useState(0);
+const Story1 = props => {
+  const [state, setState] = useState(false);
 
   const handleClick = () => {};
   return (
@@ -30,24 +31,90 @@ const Story1 = () => {
             <Swiper
               autoplay={false}
               // showsButtons={true}
-              buttonWrapperStyle={{
-                // marginTop: 250,
-                backgroundColor: 'transparent',
-                flexDirection: 'row',
-                position: 'absolute',
-                top: 338,
-                left: 0,
-                flex: 1,
-                paddingVertical: 70,
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                paddingHorizontal: 100,
-              }}
+              buttonWrapperStyle={{}}
+              // showsButtons
               style={styles.wrapper}
               activeDotColor={'#CD258D'}
-              dotStyle={{width: 15, height: 15, borderRadius: 15}}
-              activeDotStyle={{width: 15, height: 15, borderRadius: 15}}>
-              <View style={styles.slide1}>
+              dotStyle={{
+                width: 15,
+                height: 15,
+                borderRadius: 15,
+                backgroundColor: '#eee',
+              }}
+              activeDotStyle={{
+                width: 15,
+                height: 15,
+                borderRadius: 15,
+              }}>
+              <SafeAreaView style={styles.slide1}>
+                <ImageBackground
+                  source={Images.BackGround.Bg1}
+                  resizeMode="cover"
+                  style={styles.mainbg}>
+                  <View
+                    style={{
+                      marginTop: 40,
+                      // marginVertical: 20,
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                    }}>
+                    <Image source={Images.Logos.logo1} style={{}} />
+                  </View>
+                  <View
+                    style={{
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      // marginVertical: 40,
+                    }}>
+                    <Text style={styles.headtext}>
+                      <Text style={{fontWeight: 'bold'}}>VIBE</Text>GARDEN
+                    </Text>
+                    <Text
+                      style={{
+                        color: '#fff',
+                        fontSize: 16,
+                        textAlign: 'center',
+                      }}>
+                      You're In full bloom
+                    </Text>
+                    <Text
+                      style={{
+                        color: '#fff',
+                        fontSize: 20,
+                        textAlign: 'center',
+                        marginVertical: 5,
+                      }}>
+                      Tools, tips & magic for growing your communication to you!
+                    </Text>
+                  </View>
+                  <View
+                    style={{
+                      width: '80%',
+                      marginTop: 130,
+                      alignSelf: 'center',
+                    }}>
+                    <View style={{}}>
+                      <Pinkbtn
+                        width={'80%'}
+                        btntxt=" Get Started"
+                        onPress={() =>
+                          props.navigation.replace('Auth', {
+                            screen: 'login',
+                          })
+                        }
+                      />
+                    </View>
+                    <TouchableOpacity
+                      onPress={() => props.navigation.navigate('namescreen')}
+                      style={styles.btn2}>
+                      <Text style={{fontWeight: 'bold', color: '#fff'}}>
+                        Login In
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                </ImageBackground>
+              </SafeAreaView>
+              <View style={styles.slide2}>
                 <View style={styles.img}>
                   <Image
                     source={Images.BackGround.storybg1}
@@ -65,8 +132,20 @@ const Story1 = () => {
                     </Text>
                   </View>
                 </View>
+                <View
+                  style={{
+                    backgroundColor: '#ffff',
+                    marginVertical: 20,
+                    position: 'absolute',
+                    alignSelf: 'center',
+                    bottom: -20,
+                  }}>
+                  <Text style={{alignSelf: 'center'}}>
+                    Swipe To See How It Works
+                  </Text>
+                </View>
               </View>
-              <View style={styles.slide2}>
+              <View style={styles.slide3}>
                 <View style={styles.img}>
                   <Image
                     source={Images.BackGround.storybg2}
@@ -84,30 +163,23 @@ const Story1 = () => {
                     </Text>
                   </View>
                 </View>
-              </View>
-              <View style={styles.slide3}>
-                <View style={styles.img}>
-                  <Image
-                    source={Images.BackGround.storybg3}
-                    resizeMode="contain"
-                    style={{width: '100%', height: '80%'}}
-                  />
-                </View>
-                <View>
-                  <View style={{width: '90%', alignSelf: 'center'}}>
-                    <Text style={[styles.txt]}>
-                      AND. Embodying our fullness down here can be tricky! So
-                      with VibeBloom, we quest together. Kindling one another,
-                      as we employ joyful, powerful tools for coming home to
-                      ourselves and being all that we truly, uniquely are.
-                    </Text>
-                  </View>
+                <View
+                  style={{
+                    backgroundColor: '#ffff',
+                    marginVertical: 20,
+                    position: 'absolute',
+                    alignSelf: 'center',
+                    bottom: -20,
+                  }}>
+                  <Text style={{alignSelf: 'center'}}>
+                    Swipe To See How It Works
+                  </Text>
                 </View>
               </View>
               <View style={styles.slide4}>
                 <View style={styles.img}>
                   <Image
-                    source={Images.BackGround.story4}
+                    source={Images.BackGround.storybg}
                     resizeMode="contain"
                     style={{width: '100%', height: '80%'}}
                   />
@@ -122,35 +194,81 @@ const Story1 = () => {
                     </Text>
                   </View>
                 </View>
+                <View
+                  style={{
+                    backgroundColor: '#ffff',
+                    marginVertical: 20,
+                    position: 'absolute',
+                    alignSelf: 'center',
+                    bottom: -20,
+                  }}>
+                  <Text style={{alignSelf: 'center'}}>
+                    Swipe To See How It Works
+                  </Text>
+                </View>
               </View>
               <View style={styles.slide5}>
-                <View style={styles.img}>
+                <View style={[styles.img]}>
                   <Image
-                    source={Images.BackGround.story5}
+                    source={Images.BackGround.story4}
                     resizeMode="contain"
-                    style={{width: '100%', height: '80%'}}
+                    style={{width: '100%', height: '100%'}}
                   />
                 </View>
                 <View>
-                  <TouchableOpacity
-                    onPress={() => prop.navigation.navigate('Welcome')}
-                    style={{width: '90%', alignSelf: 'center'}}>
+                  <View style={{height: 400, position: 'absolute'}}>
                     <Text style={[styles.txt]}>
                       AND. Embodying our fullness down here can be tricky! So
                       with VibeBloom, we quest together. Kindling one another,
                       as we employ joyful, powerful tools for coming home to
                       ourselves and being all that we truly, uniquely are.
                     </Text>
-                  </TouchableOpacity>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    backgroundColor: '#ffff',
+                    marginVertical: 20,
+                    position: 'absolute',
+                    alignSelf: 'center',
+                    bottom: -20,
+                  }}>
+                  <Text style={{alignSelf: 'center'}}>
+                    Swipe To See How It Works
+                  </Text>
                 </View>
               </View>
-              {state === true ? '' : handleClick}
+              <View style={styles.slide6}>
+                <View style={styles.img}>
+                  <Image
+                    source={Images.BackGround.story5}
+                    resizeMode="contain"
+                    style={{width: '100%', height: '100%'}}
+                  />
+                </View>
+                <View>
+                  <View style={{width: '90%', alignSelf: 'center'}}>
+                    <Text style={[styles.txt]}>
+                      AND. Embodying our fullness down here can be tricky! So
+                      with VibeBloom, we quest together. Kindling one another,
+                      as we employ joyful, powerful tools for coming home to
+                      ourselves and being all that we truly, uniquely are.
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    backgroundColor: '#ffff',
+                    marginVertical: 20,
+                    position: 'absolute',
+                    bottom: -20,
+                  }}>
+                  <Text style={{alignSelf: 'center'}}>
+                    Swipe To See How It Works
+                  </Text>
+                </View>
+              </View>
             </Swiper>
-            <View style={{backgroundColor: '#ffff', marginVertical: 10}}>
-              <Text style={{alignSelf: 'center'}}>
-                Swipe To See How It Works
-              </Text>
-            </View>
           </View>
         </View>
       </ScrollView>
@@ -165,45 +283,75 @@ const styles = StyleSheet.create({
   },
   slide1: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#fff',
+
+    // backgroundColor: '#fff',
   },
   slide2: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+
     backgroundColor: '#fff',
   },
   slide3: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#fff',
   },
   slide4: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#fff',
   },
   slide5: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#fff',
+  },
+  slide6: {
+    flex: 1,
   },
   text: {
     color: '#fff',
     fontSize: 30,
     fontWeight: 'bold',
   },
-  img: {alignSelf: 'center', width: '100%', height: 360},
+  img: {alignSelf: 'center', width: 350, height: 430, marginVertical: 10},
   txt: {
     textAlign: 'center',
     fontSize: 14,
     color: '#1C5C2E',
     letterSpacing: 0.5,
+  },
+  main: {
+    flex: 1,
+  },
+  mainbg: {
+    width: '100%',
+    height: '100%',
+    // position: 'absolute',
+  },
+  headtext: {
+    fontWeight:'300',
+    fontSize: 32,
+    color: '#fff',
+    marginVertical: 15,
+  },
+  btn1: {
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '70%',
+    height: 44,
+    borderRadius: 20,
+    backgroundColor: '#FF4053',
+  },
+  btn2: {
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '80%',
+    height: 55,
+    borderRadius: 30,
+    borderWidth: 2,
+    borderColor: '#fff',
+    marginBottom: 10,
   },
 });
 

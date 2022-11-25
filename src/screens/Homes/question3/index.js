@@ -25,15 +25,24 @@ const Question3 = props => {
             alignSelf: 'center',
           }}>
           <Header
+            color="#000"
+            fontSize={25}
             iconName="closesquareo"
             header2
             headertext="Resonance Finder"
             OnPress={() => props.navigation.goBack('')}
           />
           <QComponents
+            iconone
+            name2="chevron-down"
+            direction2="Description:"
+            flowwerlist={true}
+            Statement="Statement"
+            flow="Flow Thtough"
             image1={true}
+            text="No idea What a Multiverse is"
+            headingtext
             number={'3/20'}
-            name="chevron-down"
             text1={'Dont Teast Data'}
             text2="Whose Data?"
             text3={'Sometimes'}

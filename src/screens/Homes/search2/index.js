@@ -22,6 +22,7 @@ const Search2 = ({route, navigation, otherParam}) => {
   // const {newtext} = route.params;
 
   const [data1, setData1] = useState(0);
+  const data2 = [{}, {}, {}];
   const data = [
     {
       text1: 'All',
@@ -346,9 +347,34 @@ const Search2 = ({route, navigation, otherParam}) => {
                     textB="SeeAll"
                   />
                 </View>
-                <View style={{marginVertical: 3}}>
-                  <Userdetails databox1 />
-                  <Userdetails databox1 />
+
+                <View style={{}}>
+                  <FlatList
+                    showsHorizontalScrollIndicator={false}
+                    data={data2}
+                    renderItem={({item}) => {
+                      return (
+                        <>
+                          <View
+                            style={{
+                              marginTop: 20,
+                              marginVertical: 5,
+                              width: '100%',
+                              alignSelf: 'center',
+                            }}>
+                            <Userdetails
+                              backgroundColor={'#00000029'}
+                              databox2
+                              Img1={item.Img1}
+                              name={item.name}
+                              time={item.time}
+                              text={item.text}
+                            />
+                          </View>
+                        </>
+                      );
+                    }}
+                  />
                 </View>
               </>
             ) : null}
@@ -373,10 +399,10 @@ const Search2 = ({route, navigation, otherParam}) => {
                     }}
                     style={styles.topics}>
                     <Text style={{color: '#1C5C2E', fontSize: 16, margin: 6}}>
-                      Quantum Physics
+                      Topics
                     </Text>
                     <Icon
-                      name="close"
+                      name="chevron-down"
                       size={18}
                       color="#1C5C2E"
                       style={{margin: 6}}
@@ -409,6 +435,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                 <View style={{}}>
                   <View style={styles.box1}>
                     <FlatList
+                      showsHorizontalScrollIndicator={false}
                       keyExtractor={item => item.id}
                       numColumns={2}
                       data={Data}
@@ -421,11 +448,10 @@ const Search2 = ({route, navigation, otherParam}) => {
                               flexGrow: 1,
                             }}>
                             <All
+                            iconimg
                               I1={item.three}
                               textA={item.textA}
                               textB={item.textB}
-                              iconimg
-                              iconimg1={item.img}
                               homebox
                               plus={item.plus}
                               bghome2={item.bg12}
@@ -453,7 +479,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                       Quantum Physics
                     </Text>
                     <Icon
-                      name="chevron-down"
+                      name="close"
                       size={18}
                       color="#1C5C2E"
                       style={{margin: 6}}
@@ -487,6 +513,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                   <View style={styles.box1}>
                     <FlatList
                       keyExtractor={item => item.id}
+                      showsHorizontalScrollIndicator={false}
                       numColumns={2}
                       data={Data}
                       renderItem={({item}) => {

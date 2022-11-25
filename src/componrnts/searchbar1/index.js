@@ -1,42 +1,61 @@
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  TextInput,
+} from 'react-native';
 import React from 'react';
 import {SearchBar} from 'react-native-elements';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Searcbart1 = props => {
+  const {close1} = props;
   return (
     <View>
       <TouchableOpacity onPress={props.onpress1}>
         <View
           style={{
             width: '90%',
+            height: 40,
+            backgroundColor: '#BCCFC1',
             alignSelf: 'center',
             marginTop: 20,
-            borderRadius: 15,
+            borderRadius: 12,
             border: ' none',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
           }}>
-          <SearchBar
-            clearIcon={{
-              type: 'material-community',
-              color: 'green',
-              name: 'close',
-            }}
-            searchIcon={{
-              type: 'material-community',
-              color: 'green',
-              name: 'magnify',
-            }}
-            showLoading={false}
-            leftIconContainerStyle={{borderRightWidth: 0.8}}
-            platform={Platform.OS}
-            // clearIcon={true}
-            onChangeText={text => params.handleSearch(text)}
-            onClearText={() => console.log('onClearText')}
-            placeholder="Search.."
-            cancelButtonTitle="Cancel"
-            lightTheme
-            containerStyle={{backgroundColor: 'none', border: 'none'}}
-            inputContainerStyle={styles.input}
-          />
+          <View
+            style={{
+              width: '90%',
+              flexDirection: 'row',
+            }}>
+            <TouchableOpacity
+              onPress={close1}
+              style={{
+                width: 40,
+                height: 40,
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderRadius: 10,
+              }}>
+              <Icon name="search" size={25} color="#1C5C2E" />
+            </TouchableOpacity>
+            <TextInput placeholder="Heart"></TextInput>
+          </View>
+
+          <TouchableOpacity
+            onPress={close1}
+            style={{
+              width: 40,
+              height: 40,
+              justifyContent: 'center',
+              alignItems: 'center',
+              borderRadius: 10,
+            }}>
+            <Icon name="close" size={25} color="#1C5C2E" />
+          </TouchableOpacity>
         </View>
       </TouchableOpacity>
     </View>

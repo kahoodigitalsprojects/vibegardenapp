@@ -26,7 +26,6 @@ const Tools = props => {
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
-      plus: 'plus',
     },
     {
       id: 2,
@@ -35,7 +34,6 @@ const Tools = props => {
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
-      plus: 'plus',
     },
   ];
   return (
@@ -51,7 +49,15 @@ const Tools = props => {
             marginVertical: 5,
             marginTop: 15,
           }}>
-          <Header homeheader={true} heart={true} heartplus plus />
+          <Header
+            img1
+            heartplus
+            search1="search1"
+            homeheader={true}
+            search={() => navigation.navigate('Homes', {screen: 'Search'})}
+            heart
+            plus
+          />
         </View>
         <View style={styles.Box1}>
           <View style={{width: '100%', alignSelf: 'center'}}>
@@ -97,15 +103,20 @@ const Tools = props => {
                 data={Data}
                 renderItem={({item}) => {
                   return (
-                    <All
-                      textA={item.textA}
-                      textB={item.textB}
-                      homebox
-                      plus={item.plus}
-                      bghome2={item.bg12}
-                      title={item.title}
-                    />
-                  );
+                      <All
+                        pressI={() =>
+                          props.navigation.navigate('Homes', {screen: 'Video'})
+                        }
+                        heart1={item.heart1}
+                        textA={item.textA}
+                        textB={item.textB}
+                        homebox
+                        plus={item.plus}
+                        bghome2={item.bg12}
+                        title={item.title}
+                      />
+                    );
+                 
                 }}
               />
             </View>

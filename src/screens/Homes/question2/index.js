@@ -36,6 +36,8 @@ const Question2 = props => {
             alignSelf: 'center',
           }}>
           <Header
+            color="#000"
+            fontSize={25}
             iconName="closesquareo"
             header2
             headertext="Resonance Finder"

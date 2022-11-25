@@ -10,11 +10,10 @@ import Notification from '../../screens/Homes/notification';
 import Tools from '../../screens/Homes/Tools';
 
 const Tab = createBottomTabNavigator();
-
-function Mytabs() {
+Mytabs = props => {
   return (
     <Tab.Navigator
-      initialRouteName=""
+      initialRouteName={props.fisrt}
       screenOptions={{
         tabBarActiveTintColor: '#1C5C2E',
       }}>
@@ -79,6 +78,6 @@ function Mytabs() {
       />
     </Tab.Navigator>
   );
-}
+};
 const styles = StyleSheet.create({});
 export default Mytabs;

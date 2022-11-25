@@ -37,7 +37,7 @@ const Spalsh2 = ({navigation}) => {
                 <Pinkbtn
                   onPress={() =>
                     navigation.navigate('signup', {
-                      registerd1: () => navigation.navigate('verify'),
+                      registerd2: () => navigation.navigate('verify'),
                       itemId: 86,
                       otherParam: 'anything you want here',
                     })

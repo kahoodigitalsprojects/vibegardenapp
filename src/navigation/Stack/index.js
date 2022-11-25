@@ -22,7 +22,6 @@ import Result from '../../screens/Homes/result';
 import MeetScreen2 from '../../screens/Homes/meetScreen2';
 import BlueLotus from '../../screens/Homes/BlueLotus';
 import LoginOption from '../../screens/auth/loginOption';
-import Story1 from '../../screens/Homes/Story1';
 import Registerd from '../../screens/auth/registered';
 import forgetPassword from '../../screens/auth/forgotPassword';
 import Search from '../../screens/Homes/search';
@@ -48,6 +47,7 @@ import EditScreen from '../../screens/auth/editScreen';
 import Contactus from '../../screens/Homes/contactus';
 import PrivacyPolicy from '../../screens/Homes/privacyPolicy';
 import Buddhisim from '../../screens/Budhisim';
+import Story1 from '../../screens/Homes/Story1';
 
 const Stack = createNativeStackNavigator();
 
@@ -124,10 +124,14 @@ const Auth = () => {
         component={Pushnotification}
         options={{headerShown: false}}
       />
-
       <Stack.Screen
         name="PrivacyPolicy"
         component={PrivacyPolicy}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Story1"
+        component={Story1}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
@@ -192,11 +196,7 @@ export const Homes = () => {
         component={BlueLotus}
         options={{headerShown: false}}
       />
-      <Stack.Screen
-        name="story1"
-        component={Story1}
-        options={{headerShown: false}}
-      />
+
       <Stack.Screen
         name="Search"
         component={Search}

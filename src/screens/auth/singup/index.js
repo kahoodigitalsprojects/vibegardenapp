@@ -16,7 +16,7 @@ import Images from '../../../constants';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const SignUp = ({route, navigation}) => {
-  const {itemId, otherParam, registerd1} = route.params;
+  const registerd2 = route.params?.registerd2 || null;
   return (
     <SafeAreaView style={styles.main}>
       <StatusBar animated={true} backgroundColor="#000" />
@@ -64,7 +64,19 @@ const SignUp = ({route, navigation}) => {
             </View>
 
             <View style={{marginTop: 10}}>
-              <Pinkbtn onPress={registerd1} width={'60%'} btntxt="Continue" />
+              <Pinkbtn
+                onPress={() => {
+                  registerd2
+                    ? navigation.navigate('verify', {})
+                    : navigation.navigate('registerd', {
+                        registerd1: () => navigation.navigate('signup'),
+                        itemId: 86,
+                        otherParam: 'anything you want here',
+                      });
+                }}
+                width={'60%'}
+                btntxt="Continue"
+              />
             </View>
             <TouchableOpacity
               onPress={() => {
@@ -72,7 +84,7 @@ const SignUp = ({route, navigation}) => {
               }}>
               <Text
                 style={{
-                  marginTop: 25,
+                  marginTop: 35,
                   color: '#1C5C2E',
                   fontSize: 18,
                   textAlign: 'center',
@@ -88,7 +100,7 @@ const SignUp = ({route, navigation}) => {
               style={{
                 flexDirection: 'row',
                 alignSelf: 'center',
-                marginVertical: 20,
+                // marginVertical: 20,
               }}>
               <View style={styles.blue}>
                 <Icon name="play" color={'#fff'} size={12} />
@@ -111,7 +123,7 @@ const SignUp = ({route, navigation}) => {
 };
 
 const styles = StyleSheet.create({
-  main: {flex: 1, alignItems: 'center'},
+  main: {flex: 1},
   input: {
     flexDirection: 'row',
     justifyContent: 'space-between',

@@ -9,10 +9,10 @@ import {
   StatusBar,
   ScrollView,
   SafeAreaView,
+  ImageBackground,
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/AntDesign';
-
 import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 
@@ -20,7 +20,7 @@ const Meet = props => {
   const [data2, setData2] = useState({});
   const [data, setdata] = useState();
   // const [data1, setdata1] = useState(true);
-  const [data1, setdata1] = useState(0);
+  const [data1, setdata1] = useState();
 
   const Data = [
     {
@@ -56,6 +56,7 @@ const Meet = props => {
             </Text>
             <View>
               <FlatList
+                showsHorizontalScrollIndicator={false}
                 data={Data}
                 numColumns={2}
                 renderItem={({item, index}) => {
@@ -137,28 +138,36 @@ const Meet = props => {
                           }}>
                           <>
                             {data1 === index ? (
-                              <View
-                                style={{
-                                  width: 136,
-                                  height: 136,
-                                  borderRadius: 100,
-                                  justifyContent: 'center',
-                                  alignItems: 'center',
-                                  alignSelf: 'center',
-                                  backgroundColor:
-                                    data1 === index ? '#CD258D' : '',
-                                  opacity: 0.8,
-                                  elevation: data1 === index ? 0 : 5,
-                                }}>
-                                <View style={{}}>
-                                  <Icon
-                                    name="check"
-                                    size={39}
-                                    color="#fff"
-                                    style={{}}
-                                  />
+                              <ImageBackground
+                                source={item.img1}
+                                style={[
+                                  styles.img,
+                                  {marginTop: 0, opacity: 0.7},
+                                ]}
+                                resizeMode="contain">
+                                <View
+                                  style={{
+                                    width: 136,
+                                    height: 136,
+                                    borderRadius: 100,
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    alignSelf: 'center',
+                                    backgroundColor:
+                                      data1 === index ? '#CD258D' : '',
+                                    opacity: 0.8,
+                                    elevation: data1 === index ? 0 : 5,
+                                  }}>
+                                  <View style={{}}>
+                                    <Icon
+                                      name="check"
+                                      size={39}
+                                      color="#fff"
+                                      style={{}}
+                                    />
+                                  </View>
                                 </View>
-                              </View>
+                              </ImageBackground>
                             ) : (
                               <View
                                 style={{

@@ -10,15 +10,16 @@ import {
 import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 
-const Login = props => {
+const Login = ({route, navigation}) => {
+  const registerd1 = route.params?.registerd1 || null;
   return (
     <View style={styles.main}>
-      <View style={{marginTop: 10, width: '90%'}}>
+      <View style={{width: '90%'}}>
         <View style={{width: '100%', marginTop: 10}}>
           <Header
             iconName="arrowleft"
             header2
-            OnPress={() => props.navigation.replace('loginoption')}
+            OnPress={() => navigation.replace('loginoption')}
           />
         </View>
         <View style={{marginVertical: 40}}>
@@ -34,7 +35,7 @@ const Login = props => {
             <TextInput placeholder="Password" />
           </View>
           <TouchableOpacity
-            onPress={() => props.navigation.navigate('forgerpsaaword')}>
+            onPress={() => navigation.navigate('forgerpsaaword')}>
             <Text
               style={{
                 textAlign: 'right',
@@ -47,15 +48,25 @@ const Login = props => {
           </TouchableOpacity>
           <View style={{marginTop: 10}}>
             <Pinkbtn
-              onPress={() =>
-                props.navigation.navigate(
-                  'Auth',
-                  {screen: 'NotRegisterd'},
-                  {
-                    itemId: 86,
-                  },
-                )
-              }
+              onPress={() => {
+                {
+                  registerd1
+                    ? navigation.navigate(
+                        'Mytabs',
+                        {screen: 'Home'},
+                        {
+                          itemId: 86,
+                        },
+                      )
+                    : navigation.navigate(
+                        'Auth',
+                        {screen: 'NotRegisterd'},
+                        {
+                          itemId: 86,
+                        },
+                      );
+                }
+              }}
               width={'60%'}
               btntxt="Continue"
             />
@@ -71,13 +82,16 @@ const Login = props => {
             Or
           </Text>
           <TouchableOpacity
-            onPress={() =>
-              props.navigation.navigate('signup', {
-                registerd1: () => navigation.navigate('registerd'),
+            style={{}}
+            onPress={() => {
+              navigation.navigate('signup', {
+                registerd1: () => navigation.navigate('signup'),
                 itemId: 86,
+                registerd2: () =>
+                  navigation.navigate('Homes', {Screen: 'Home'}),
                 otherParam: 'anything you want here',
-              })
-            }>
+              });
+            }}>
             <Text
               style={{
                 textAlign: 'center',
@@ -103,7 +117,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     borderBottomWidth: 1,
     borderColor: 'lightgrey',
-    marginVertical: 20,
+    marginVertical: 10,
     marginTop: 20,
   },
 });

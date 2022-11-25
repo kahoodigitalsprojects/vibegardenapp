@@ -17,6 +17,7 @@ import Icon from 'react-native-vector-icons/Entypo';
 import Icon2 from 'react-native-vector-icons/AntDesign';
 import Icon3 from 'react-native-vector-icons/Ionicons';
 import Images from '../../constants';
+import {color} from 'react-native-elements/dist/helpers';
 
 const QComponents = ({
   text1,
@@ -117,11 +118,11 @@ const QComponents = ({
 
           <View style={{flexDirection: 'row'}}>
             <Text style={styles.text2}>{direction2}</Text>
-            <View style={{}}>
-              <Text style={[styles.text2, {color: '#000'}]}>{flow}</Text>
+            <View style={{flexDirection:'row'}}>
+              <Text style={[styles.text2, {color: '#000',fontSize:18,marginLeft:5}]}>{flow}</Text>
               {iconone && (
-                <TouchableOpacity onPress={() => {}} style={{}}>
-                  <Icon name={name2} size={30} color="#1C5C2E" />
+                <TouchableOpacity onPress={() => {}} style={{marginTop:5,marginLeft:5}}>
+                  <Icon name={name2} size={18} color="#1C5C2E" />
                 </TouchableOpacity>
               )}
             </View>
@@ -144,9 +145,20 @@ const QComponents = ({
             <Text style={[styles.text2, {color: '#000'}]}>{text5}</Text>
           </View>
           <View>
-            <Text style={styles.text2}>{Statement}</Text>
+            <Text
+              style={[
+                styles.text2,
+                {
+                  color: 'black',
+                  fontWeight: '350',
+                  fontSize: 16,
+                  lineHeight: 26,
+                },
+              ]}>
+              {Statement}
+            </Text>
           </View>
-          <View>
+          <View style={{marginVertical: 20}}>
             <Text style={[styles.text1, {textAlign: 'left'}]}>{text6}</Text>
           </View>
         </View>
@@ -207,7 +219,6 @@ const styles = StyleSheet.create({
     fontWeight: '400',
   },
   text2: {
-    marginVertical: 2,
     fontSize: 20,
     // textAlign: 'center',
     color: '#1C5C2E',

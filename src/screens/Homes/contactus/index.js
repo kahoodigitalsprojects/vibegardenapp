@@ -31,7 +31,7 @@ const Contactus = props => {
           <Header
             iconName="left"
             header2
-            OnPress={() => props.navigation.replace('')}
+            OnPress={() => props.navigation.goBack('')}
             headertext="Contact Us"
             fontSize={25}
             color="#000"
@@ -63,8 +63,7 @@ const Contactus = props => {
                 backgroundColor: '#fff',
                 flexDirection: 'row',
                 padding: 15,
-              }}
-     >
+              }}>
               <View
                 style={{
                   alignSelf: 'center',

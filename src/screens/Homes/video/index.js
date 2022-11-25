@@ -23,8 +23,11 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Images from '../../../constants';
 import MainBox from '../../../componrnts/mainbox';
 import All from '../../../componrnts/all';
+import Question from '../Question';
 
 const Video = props => {
+  const {route} = props;
+  const Flowersbox = route.params?.Flowersbox || null;
   const Data3 = [
     {text1: 'Not Really', img11: Images.Imgs.R1},
 
@@ -35,10 +38,6 @@ const Video = props => {
     {
       text1: 'Solid Bloom',
       img11: Images.Imgs.R3,
-    },
-    {
-      text1: 'Big Bloom',
-      img11: Images.Imgs.R4,
     },
   ];
 
@@ -114,22 +113,25 @@ const Video = props => {
               }}>
               <Header
                 heartplus
-                plus
                 heart
-                fontSize={25}
+                heading
+                fontSize={20}
+                search1="closesquareo"
                 logo11
                 color="#fff"
                 gbg="#1C5C2E"
                 homeheader
-                headertext="Resonance Finder"
-                OnPress={() => props.navigation.goBack('')}
+                headertext="FAMILY OF LIGHT"
+                search={() =>
+                  props.navigation.navigate('Mytabs', {screen: 'GroundWork'})
+                }
               />
             </View>
 
             <View style={{}}>
               <QComponents
                 //   video={true}
-
+                name="heart-outlined"
                 video2={true}
                 direction="Description:"
                 icontwo={true}
@@ -177,39 +179,26 @@ const Video = props => {
                   );
                 }}
               />
-              <View style={{}}>
-                <FlatList
-                  horizontal={true}
-                  showsHorizontalScrollIndicator={false}
-                  data={Data3}
-                  renderItem={({item}) => {
-                    return (
-                      <>
-                        <View
-                          style={{
-                            marginTop: 20,
-                            marginVertical: 5,
-
-                            alignSelf: 'center',
-                          }}>
-                          <Flowers
-                            flower1
-                            img1={item.img11}
-                            text1={item.text1}
-                          />
-                        </View>
-                      </>
-                    );
-                  }}
-                />
-              </View>
-              <View style={styles.row}>
+              {Data3.map(index => {
+                return (
+                  <View style={{}}>
+                    <View
+                      style={{
+                        alignSelf: 'center',
+                      }}>
+                      {Flowersbox ? (
+                        <Flowers flower1 img1={img11} text1={text1} />
+                      ) : null}
+                    </View>
+                  </View>
+                );
+              })}
+              <View style={[styles.row, {marginVertical: 20}]}>
                 <Text
                   style={{
                     color: 'black',
                     fontSize: 14,
                     color: '#1C5C2E',
-                    marginTop: 5,
                   }}>
                   Comments
                 </Text>
@@ -217,25 +206,26 @@ const Video = props => {
               </View>
             </View>
             <View style={{}}>
-              <FlatList
-                showsHorizontalScrollIndicator={false}
-                data={data}
-                renderItem={({item}) => {
-                  return (
-                    <>
-                      <View>
+              {Data3.map(index => {
+                return (
+                  <View style={{height: 80, marginVertical: 20}}>
+                    <ScrollView style={{}}>
+                      <View style={styles.item1}>
                         <Userdetails
                           databox1
-                          Img1={item.Img1}
-                          name={item.name}
-                          time={item.time}
-                          text={item.text}
+                          name={'Michael Grower'}
+                          Img1={Images.Imgs.user2}
+                          // name={name}
+                          time={'12/8/22-03:00 PM'}
+                          text={
+                            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.'
+                          }
                         />
                       </View>
-                    </>
-                  );
-                }}
-              />
+                    </ScrollView>
+                  </View>
+                );
+              })}
             </View>
           </View>
 
@@ -298,7 +288,7 @@ const Video = props => {
           <View style={{}}>
             <FlatList
               showsHorizontalScrollIndicator={false}
-              data={Data3}
+              data={data2}
               renderItem={({item}) => {
                 return (
                   <>
@@ -310,6 +300,7 @@ const Video = props => {
                         alignSelf: 'center',
                       }}>
                       <Userdetails
+                        backgroundColor={'#00000029'}
                         databox2
                         Img1={item.Img1}
                         name={item.name}
@@ -352,6 +343,10 @@ const styles = StyleSheet.create({
     color: '#000',
     fontWeight: '400',
   },
+  item1: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
   text2: {
     marginVertical: 2,
     fontSize: 20,
@@ -383,14 +378,14 @@ const styles = StyleSheet.create({
     // backgroundColor: 'green',
     width: '90%',
     alignSelf: 'center',
-    marginVertical: 10,
+
     flexDirection: 'row',
   },
   line: {
     width: '80%',
     height: 1,
     backgroundColor: '#afafaf',
-    marginTop: 16,
+    marginTop: 12,
     marginLeft: 2,
   },
 });

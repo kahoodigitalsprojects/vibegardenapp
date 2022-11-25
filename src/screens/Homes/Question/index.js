@@ -25,17 +25,24 @@ const Question = props => {
             alignSelf: 'center',
           }}>
           <Header
+            color="#000"
+            fontSize={25}
             iconName="closesquareo"
             header2
             headertext="Resonance Finder"
             OnPress={() => props.navigation.goBack('')}
           />
-       
+
           <QComponents
-            name="chevron-down"
+            iconone
+            name2="chevron-down"
+            direction2="Description:"
             flowwerlist={true}
-            image1={true}
+            Statement="Statement"
+            flow="Flow Thtough"
             number={'2/20'}
+            name="chevron-down"
+            image1={true}
             text="No idea What a Multiverse is"
             headingtext
             text1={'Yeah,no'}
@@ -43,9 +50,6 @@ const Question = props => {
             text3={'SMCA Peepsceen to think so'}
             text4="Shall we Question Heap"
             text6={'The Multiverse is Real'}
-            text5={
-              'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.'
-            }
           />
         </View>
         <View style={{marginTop: 20}}>

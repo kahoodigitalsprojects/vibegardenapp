@@ -51,7 +51,9 @@ const MeetScreen2 = ({route, navigation}) => {
               </View>
               <View style={{marginVertical: 20}}>
                 <Pinkbtn
-                  onPress={() => navigation.replace('Mytabs', {screen: 'Home'})}
+                  onPress={() =>
+                    navigation.navigate('Mytabs', {screen: 'Home'})
+                  }
                   width={'60%'}
                   btntxt="Take Me To the Garden"
                 />

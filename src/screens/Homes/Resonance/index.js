@@ -38,7 +38,7 @@ const Resonance = props => {
             <Text style={styles.text}>OR Try Our </Text>
             <TouchableOpacity
               onPress={() => {
-                props.navigation.navigate('question');
+                props.navigation.navigate('question2');
               }}
               style={styles.btn}>
               <Text style={{color: '#fff', margin: 10}}>Resonance Finder</Text>
@@ -67,7 +67,7 @@ const Resonance = props => {
           <View style={{marginTop: 10}}>
             <Pinkbtn
               onPress={() => {
-                props.navigation.navigate('question2');
+                props.navigation.navigate('question');
               }}
               btntxt="
             Save"

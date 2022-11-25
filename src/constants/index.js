@@ -31,6 +31,7 @@ const Images = {
     greylog: require('../assests/images/greylogo.png'),
     greenlogo: require('../assests/images/greenlogo.png'),
     greenheart: require('../assests/images/greenheart.png'),
+    greenicon1: require('../assests/images/greenicon1.png'),
   },
   Icons: {
     upload: require('../assests/images/upload.png'),
@@ -65,6 +66,9 @@ const Images = {
     person: require('../assests/images/person.png'),
     lock: require('../assests/images/lock.png'),
     video: require('../assests/images/video.png'),
+    Pcircle: require('../assests/images/Pcircle.png'),
+    prectangel: require('../assests/images/prectangle.png'),
+    sun: require('../assests/images/sun.png'),
   },
   Imgs: {
     pic1: require('../assests/images/pic1.png'),

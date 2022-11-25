@@ -5,7 +5,7 @@ import Images from '../../../constants';
 const Spalsh = ({navigation}) => {
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace('Welcome');
+      navigation.replace('Story1');
     }, 2000);
   });
   return (

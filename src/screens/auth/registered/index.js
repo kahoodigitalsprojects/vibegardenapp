@@ -10,7 +10,9 @@ import {
 } from 'react-native';
 import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
-const Registerd = props => {
+const Registerd = ({route, navigation}) => {
+  const {registerd1} = route.params;
+
   return (
     <>
       <StatusBar animated={true} backgroundColor="#000" />
@@ -20,7 +22,7 @@ const Registerd = props => {
           <Header
             iconName="closesquareo"
             header2
-            OnPress={() => props.navigation.goBack()}
+            OnPress={() => navigation.goBack()}
           />
         </View>
 
@@ -31,7 +33,15 @@ const Registerd = props => {
               style={{width: '100%', height: '100%'}}
             />
           </View>
-          <TouchableOpacity onPress={() => props.navigation.navigate('login')}>
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate('login', {
+                registerd1: () =>
+                  navigation.navigate('Homes', {Screen: 'Home'}),
+                itemId: 86,
+                otherParam: 'anything you want here',
+              })
+            }>
             <Text style={styles.txt1}>
               This Email Is Already Registered With Vibegarden, Please
               <Text
@@ -51,7 +61,7 @@ const Registerd = props => {
             </Text>
           </View>
           <TouchableOpacity
-            onPress={() => props.navigation.navigate('forgerpsaaword')}>
+            onPress={() => navigation.navigate('forgerpsaaword')}>
             <Text style={styles.txt1}>
               Or If You’ve Forgotten Your Password,
               <Text

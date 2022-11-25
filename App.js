@@ -36,7 +36,7 @@ import Settings from './src/screens/Homes/settings';
 
 const App = props => {
   return <MyStack {...props} />;
-  // return <Settings />;
+  // return <Search2 />;
 };
 
 export default App;

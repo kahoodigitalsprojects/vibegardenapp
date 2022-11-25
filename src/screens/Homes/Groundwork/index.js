@@ -24,7 +24,7 @@ const GroundWork = props => {
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
-      plus: 'plus',
+    
     },
     {
       id: 2,
@@ -34,7 +34,7 @@ const GroundWork = props => {
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
-      plus: 'plus',
+ 
     },
     {
       id: 3,
@@ -44,7 +44,7 @@ const GroundWork = props => {
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
-      plus: 'plus',
+
     },
     {
       id: 4,
@@ -54,7 +54,7 @@ const GroundWork = props => {
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
-      plus: 'plus',
+
     },
   ];
   return (
@@ -70,7 +70,15 @@ const GroundWork = props => {
             marginVertical: 5,
             marginTop: 15,
           }}>
-          <Header heartplus heart homeheader={true} />
+          <Header
+            img1
+            heartplus
+            search1="search1"
+            homeheader={true}
+            search={() => navigation.navigate('Homes', {screen: 'Search'})}
+            heart
+            // plus
+          />
         </View>
         <View style={styles.Box1}>
           <View style={{width: '90%', alignSelf: 'center'}}>
@@ -93,7 +101,12 @@ const GroundWork = props => {
             </Text>
           </View>
           <View style={styles.centerbox}>
-            <Greenbox img2 />
+            <Greenbox
+              img2
+              onPress1={() => {
+                props.navigation.navigate('Homes', {screen: 'Buddhisim'});
+              }}
+            />
             <View
               style={
                 {
@@ -141,11 +154,16 @@ const GroundWork = props => {
                           flexGrow: 1,
                         }}>
                         <All
+                          pressI={() =>
+                            props.navigation.navigate('Homes', {
+                              screen: 'Video',
+                            })
+                          }
+                          heart1={item.heart1}
                           textA={item.textA}
                           textB={item.textB}
                           homebox
-                          heart1={item.heart1}
-                          // plus={item.plus}
+                          plus={item.plus}
                           bghome2={item.bg12}
                           title={item.title}
                         />

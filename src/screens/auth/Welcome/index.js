@@ -16,7 +16,7 @@ import Images from '../../../constants';
 const Welcome = props => {
   return (
     <SafeAreaView style={styles.main}>
-      <StatusBar animated={true} backgroundColor="#000" />
+      <StatusBar animated={true} backgroundColor="#000" pagi />
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>

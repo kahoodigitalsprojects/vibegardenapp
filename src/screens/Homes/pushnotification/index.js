@@ -35,7 +35,7 @@ const Pushnotification = props => {
             headertext="Push Notification"
             fontSize={25}
             color="#000"
-            // OnPress={() => props.navigation.replace('Home')}
+            OnPress={() => props.navigation.navigate('Homes',{screen:'me'})}
           />
           <View style={{marginTop: 30, marginVertical: 10}}>
             <Text style={styles.text1}>

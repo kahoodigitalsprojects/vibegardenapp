@@ -28,12 +28,22 @@ const Question3 = props => {
             iconName="closesquareo"
             header2
             headertext="Resonance Finder"
+            color="#000"
+            fontSize={25}
             OnPress={() => props.navigation.goBack('')}
           />
           <QComponents
-            image1={true}
-            number={'3/20'}
+            iconone
+            name2="chevron-down"
+            direction2="Description:"
+            flowwerlist={true}
+            Statement="Statement"
+            flow="Flow Thtough"
             name="chevron-down"
+            image1={true}
+            text="No idea What a Multiverse is"
+            headingtext
+            number={'4/20'}
             text1={'Angels are some people made upto better'}
             text2="I wish"
             text3={'I Wrap Myself in that way Nightly'}

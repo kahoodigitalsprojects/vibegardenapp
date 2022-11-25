@@ -9,6 +9,7 @@ import {
   StatusBar,
   ScrollView,
   SafeAreaView,
+  ImageBackground
 } from 'react-native';
 import {Icon} from 'react-native-elements';
 import {yellow100} from 'react-native-paper/lib/typescript/styles/colors';
@@ -63,7 +64,7 @@ const Journey = props => {
                   return (
                     <>
                       <View style={{marginVertical: 10, width: '50%'}}>
-                        <View style={{marginVertical: 10, width: '100%'}}>
+                        <View style={{ width: '100%'}}>
                           <TouchableOpacity
                             onPress={() =>
                               index === true ? '' : setdata1(index)
@@ -71,6 +72,13 @@ const Journey = props => {
                             style={{}}>
                             <>
                               {data1 === index ? (
+                                  <ImageBackground
+                                  source={item.img1}
+                                  style={[
+                                    styles.img,
+                                    {marginTop: 0, opacity: 0.7},
+                                  ]}
+                                  resizeMode="contain">
                                 <View
                                   style={{
                                     width: 100,
@@ -91,6 +99,7 @@ const Journey = props => {
                                     style={{}}
                                   />
                                 </View>
+                                </ImageBackground>
                               ) : (
                                 <View style={{}}>
                                   <Image

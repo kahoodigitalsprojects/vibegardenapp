@@ -44,7 +44,12 @@ const Settings = props => {
             </View>
           </View>
 
-          <View
+          <TouchableOpacity
+            onPress={() => {
+              props.navigation.navigate('Auth', {
+                screen: 'EmailNotification',
+              });
+            }}
             style={[
               styles.row,
               {
@@ -58,25 +63,23 @@ const Settings = props => {
               style={{
                 flexDirection: 'row',
               }}>
-              <TouchableOpacity style={{marginTop: 8, margin: 5}}>
-                <Image
-                  source={Images.Icons.envelop1}
-                  style={{width: 15, height: 11}}
-                />
-              </TouchableOpacity>
+              <Image
+                source={Images.Icons.envelop1}
+                style={{width: 15, height: 12, marginTop: 12, margin: 5}}
+              />
               <Text style={styles.text1}>Email Notification</Text>
             </View>
-            <TouchableOpacity
-              onPress={() => {
-                props.navigation.navigate('Auth', {
-                  screen: 'EmailNotification',
-                });
-              }}
-              style={{marginTop: 6}}>
+            <View style={{marginTop: 6}}>
               <Icon name="angle-right" color={'#1C5C2E'} />
-            </TouchableOpacity>
-          </View>
-          <View
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => {
+              props.navigation.navigate('Auth', {
+                screen: 'Pushnotification',
+              });
+            }}
             style={[
               styles.row,
               {
@@ -90,21 +93,17 @@ const Settings = props => {
               style={{
                 flexDirection: 'row',
               }}>
-              <TouchableOpacity style={{marginTop: 6, margin: 5}}>
-                <Image source={Images.Icons.notify} />
-              </TouchableOpacity>
+              <Image
+                source={Images.Icons.notify}
+                style={{width: 15, height: 18, marginTop: 12, margin: 5}}
+              />
+
               <Text style={styles.text1}>Push Notification</Text>
             </View>
-            <TouchableOpacity
-              onPress={() => {
-                props.navigation.navigate('Auth', {
-                  screen: 'Pushnotification',
-                });
-              }}
-              style={{marginTop: 6}}>
+            <View style={{marginTop: 6}}>
               <Icon name="angle-right" color={'#1C5C2E'} />
-            </TouchableOpacity>
-          </View>
+            </View>
+          </TouchableOpacity>
         </View>
         <View style={styles.firstview}>
           <View style={styles.first}>
@@ -270,7 +269,12 @@ const Settings = props => {
               <View style={styles.line}></View>
             </View>
           </View>
-          <View
+          <TouchableOpacity
+            onPress={() => {
+              props.navigation.navigate('Homes', {
+                screen: 'Contactus',
+              });
+            }}
             style={[
               styles.row,
               {
@@ -284,22 +288,24 @@ const Settings = props => {
               style={{
                 flexDirection: 'row',
               }}>
-              <TouchableOpacity style={{marginTop: 6, margin: 5}}>
-                <Image source={Images.Icons.headphone} />
-              </TouchableOpacity>
+              <Image
+                source={Images.Icons.headphone}
+                style={{width: 15, height: 12, marginTop: 12, margin: 5}}
+              />
+
               <Text style={styles.text1}>Contact us</Text>
             </View>
-            <TouchableOpacity
-              onPress={() => {
-                props.navigation.navigate('Homes', {
-                  screen: 'Contactus',
-                });
-              }}
-              style={{marginTop: 6}}>
+            <View style={{marginTop: 6}}>
               <Icon name="angle-right" color={'#1C5C2E'} />
-            </TouchableOpacity>
-          </View>
-          <View
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => {
+              props.navigation.navigate('Auth', {
+                screen: 'PrivacyPolicy',
+              });
+            }}
             style={[
               styles.row,
               {
@@ -313,22 +319,23 @@ const Settings = props => {
               style={{
                 flexDirection: 'row',
               }}>
-              <TouchableOpacity style={{marginTop: 8, margin: 4}}>
-                <Image source={Images.Icons.bars} />
-              </TouchableOpacity>
+              <Image
+                source={Images.Icons.bars}
+                style={{width: 15, height: 12, marginTop: 12, margin: 5}}
+              />
+
               <Text style={styles.text1}>Privacy Policy</Text>
             </View>
-            <TouchableOpacity
-              onPress={() => {
-                props.navigation.navigate('Auth', {
-                  screen: 'PrivacyPolicy',
-                });
-              }}
-              style={{marginTop: 6}}>
+            <View style={{marginTop: 6}}>
               <Icon name="angle-right" color={'#1C5C2E'} />
-            </TouchableOpacity>
-          </View>
-          <View
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              props.navigation.navigate('Auth', {
+                screen: 'PrivacyPolicy',
+              });
+            }}
             style={[
               styles.row,
               {
@@ -342,15 +349,16 @@ const Settings = props => {
               style={{
                 flexDirection: 'row',
               }}>
-              <TouchableOpacity style={{marginTop: 8, margin: 4}}>
-                <Image source={Images.Icons.folder} />
-              </TouchableOpacity>
+              <Image
+                source={Images.Icons.folder}
+                style={{width: 15, height: 12, marginTop: 12, margin: 5}}
+              />
               <Text style={styles.text1}>Terms of use</Text>
             </View>
-            <TouchableOpacity style={{marginTop: 6}}>
+            <View style={{marginTop: 6}}>
               <Icon name="angle-right" color={'#1C5C2E'} />
-            </TouchableOpacity>
-          </View>
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     </ScrollView>

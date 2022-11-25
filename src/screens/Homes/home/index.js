@@ -14,7 +14,7 @@ import All from '../../../componrnts/all';
 import MainBox from '../../../componrnts/mainbox';
 import Images from '../../../constants';
 
-const Home = props => {
+const Home = ({navigation, route}) => {
   const Data = [
     {
       id: 1,
@@ -95,11 +95,11 @@ const Home = props => {
             marginTop: 15,
           }}>
           <Header
+            img1
             heartplus
+            search1="search1"
             homeheader={true}
-            search={() =>
-              props.navigation.navigate('Homes', {screen: 'Search'})
-            }
+            search={() => navigation.navigate('Homes', {screen: 'Search'})}
             heart
             plus
           />
@@ -125,7 +125,7 @@ const Home = props => {
               }>
               <SeeAll
                 onPress={() =>
-                  props.navigation.navigate('Homes', {screen: 'FressBlooms'})
+                  navigation.navigate('Homes', {screen: 'FressBlooms'})
                 }
                 textA="FRESH BLOOMS"
                 textB="SeeAll"
@@ -167,7 +167,7 @@ const Home = props => {
                     return (
                       <All
                         pressI={() =>
-                          props.navigation.navigate('Homes', {screen: 'Video'})
+                          navigation.navigate('Homes', {screen: 'Video'})
                         }
                         heart1={item.heart1}
                         textA={item.textA}

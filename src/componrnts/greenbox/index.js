@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import Images from '../../constants';
 
-const Greenbox = ({img1, img2, onPress, Press,navigation}) => {
+const Greenbox = ({img1, img2, onPress, onPress1, Press, navigation}) => {
   const [data1, setdata1] = useState(0);
   const Data = [
     {
@@ -47,7 +47,7 @@ const Greenbox = ({img1, img2, onPress, Press,navigation}) => {
   const data = [
     {
       name: 'Buddhism',
-      Press: () => navigation.navigate('Buddhisim'),
+    
     },
     {
       name: 'Quantum Physics',
@@ -125,7 +125,7 @@ const Greenbox = ({img1, img2, onPress, Press,navigation}) => {
             renderItem={({item, index}) => {
               return (
                 <TouchableOpacity
-                  onPress={Press}
+                  onPress={onPress1}
                   style={{
                     elevation: 2,
 

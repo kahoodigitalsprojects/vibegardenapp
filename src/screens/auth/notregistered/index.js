@@ -41,6 +41,7 @@ const NotRegisterd = props => {
               onPress={() =>
                 props.navigation.navigate('signup', {
                   registerd1: () => props.navigation.navigate('registerd'),
+                  registerd12: () => props.navigation.navigate('registerd'),
                   itemId: 86,
                   otherParam: 'anything you want here',
                 })

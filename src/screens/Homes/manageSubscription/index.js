@@ -25,7 +25,7 @@ const ManageSubscription = props => {
           <Header
             iconName="closesquareo"
             header2
-            OnPress={goback}
+            OnPress={props.goback}
             headertext="Manage Subscription"
             fontSize={25}
             color="#000"

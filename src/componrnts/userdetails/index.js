@@ -21,10 +21,14 @@ const Userdetails = ({
   databox,
   databox1,
   databox2,
+  backgroundColor,
+  nametext,
+  bear,
 }) => {
   return (
     <>
-      <View style={{}}>
+      <View
+        style={{width: '90%', alignSelf: 'center'}}>
         {databox1 && (
           <View style={styles.boxouter}>
             <View style={{width: '95%', alignSelf: 'center'}}>
@@ -46,7 +50,7 @@ const Userdetails = ({
                     style={{width: 60, height: 60, borderRadius: 100}}
                   />
                 </View>
-                <View style={{width: '70%'}}>
+                <View style={{width: '70%',height:100,}}>
                   <View
                     style={{
                       width: '100%',
@@ -61,7 +65,7 @@ const Userdetails = ({
                         color: '#000',
                         fontWeight: 'bold',
                       }}>
-                      {time}
+                    {time}
                     </Text>
                   </View>
 
@@ -95,7 +99,7 @@ const Userdetails = ({
       </View>
 
       {databox2 && (
-        <View style={{backgroundColor: '#BCCFC1', borderRadius: 12}}>
+        <View style={{backgroundColor: backgroundColor, borderRadius: 12}}>
           <View
             style={{
               flexDirection: 'row',
@@ -107,6 +111,7 @@ const Userdetails = ({
                 resizeMode="contain"
                 style={{width: '100%', height: '100%'}}
               />
+              {nametext && <Text style={{margin: 6, color: '#000'}}>Mark</Text>}
             </View>
             <View>
               <Text style={{fontSize: 12, marginTop: 16}}>
