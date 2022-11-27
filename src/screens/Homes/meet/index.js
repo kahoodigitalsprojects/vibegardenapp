@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -11,16 +11,17 @@ import {
   SafeAreaView,
   ImageBackground,
 } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 import Icon from 'react-native-vector-icons/AntDesign';
-import {Header, Pinkbtn} from '../../../componrnts';
+import { Header, Pinkbtn } from '../../../componrnts';
 import Images from '../../../constants';
 
 const Meet = props => {
   const [data2, setData2] = useState({});
   const [data, setdata] = useState();
   // const [data1, setdata1] = useState(true);
-  const [data1, setdata1] = useState();
+  const [data1, setdata1] = useState(false);
 
   const Data = [
     {
@@ -45,10 +46,10 @@ const Meet = props => {
       <SafeAreaView style={styles.main}>
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{flexGrow: 1}}>
+          contentContainerStyle={{ flexGrow: 1 }}>
           <StatusBar animated={true} backgroundColor="#000" />
 
-          <View style={{width: '95%', marginTop: 20}}>
+          <View style={{ width: '95%', marginTop: 20 }}>
             {/* <Header header2 /> */}
 
             <Text style={styles.txt}>
@@ -59,7 +60,7 @@ const Meet = props => {
                 showsHorizontalScrollIndicator={false}
                 data={Data}
                 numColumns={2}
-                renderItem={({item, index}) => {
+                renderItem={({ item, index }) => {
                   return (
                     <>
                       <View
@@ -75,18 +76,18 @@ const Meet = props => {
                             let obj = {};
                             index === 0
                               ? (obj = {
-                                  Heading: 'Meet Blue Lotus',
-                                  Image1: Images.Imgs.lotusb,
-                                  Image2: Images.Imgs.lotusa,
-                                  Image3: Images.Imgs.lotus1,
-                                  Images4: Images.Imgs.lotus1,
-                                  Image5: Images.Imgs.lotus1,
-                                  Image6: Images.BackGround.BlueL,
-                                  newtext:
-                                    'Meaning , How Connected to your feel to your light , your Unique essence',
-                                })
+                                Heading: 'Meet Blue Lotus',
+                                Image1: Images.Imgs.lotusb,
+                                Image2: Images.Imgs.lotusa,
+                                Image3: Images.Imgs.lotus1,
+                                Images4: Images.Imgs.lotus1,
+                                Image5: Images.Imgs.lotus1,
+                                Image6: Images.BackGround.BlueL,
+                                newtext:
+                                  'Meaning , How Connected to your feel to your light , your Unique essence',
+                              })
                               : index === 1
-                              ? (obj = {
+                                ? (obj = {
                                   Heading: 'Meet Divine Ross',
                                   Image1: Images.Imgs.rose1,
                                   Image2: Images.Imgs.rose2,
@@ -97,31 +98,31 @@ const Meet = props => {
                                   newtext:
                                     'Meaning , How Connected to your feel to your light , your Unique essence',
                                 })
-                              : index === 2
-                              ? (obj = {
-                                  Heading: 'Meet Mushrooms',
-                                  Image1: Images.Imgs.mushroomsa,
-                                  Image2: Images.Imgs.mushroomsb,
-                                  Image3: Images.Imgs.mushrooms,
-                                  Images4: Images.Imgs.mushrooms,
-                                  Image5: Images.Imgs.mushrooms,
-                                  Image6: Images.BackGround.larggeMushrom,
-                                  newtext:
-                                    'Meaning , How Connected to your feel to your light , your Unique essence',
-                                })
-                              : index === 3
-                              ? (obj = {
-                                  Heading: 'Meet Chuchuhuas',
-                                  Image1: Images.Imgs.chuchuhuasa,
-                                  Image2: Images.Imgs.cuhuchuhuas1,
-                                  Image3: Images.Imgs.cuhuchuhuasb,
-                                  Images4: Images.Imgs.chuchuhuasc,
-                                  Image5: Images.Imgs.chuchuhuasc,
-                                  Image6: Images.BackGround.lageChuchu,
-                                  newtext:
-                                    'Meaning , How Connected to your feel to your light , your Unique essence',
-                                })
-                              : null;
+                                : index === 2
+                                  ? (obj = {
+                                    Heading: 'Meet Mushrooms',
+                                    Image1: Images.Imgs.mushroomsa,
+                                    Image2: Images.Imgs.mushroomsb,
+                                    Image3: Images.Imgs.mushrooms,
+                                    Images4: Images.Imgs.mushrooms,
+                                    Image5: Images.Imgs.mushrooms,
+                                    Image6: Images.BackGround.larggeMushrom,
+                                    newtext:
+                                      'Meaning , How Connected to your feel to your light , your Unique essence',
+                                  })
+                                  : index === 3
+                                    ? (obj = {
+                                      Heading: 'Meet Chuchuhuas',
+                                      Image1: Images.Imgs.chuchuhuasa,
+                                      Image2: Images.Imgs.cuhuchuhuas1,
+                                      Image3: Images.Imgs.cuhuchuhuasb,
+                                      Images4: Images.Imgs.chuchuhuasc,
+                                      Image5: Images.Imgs.chuchuhuasc,
+                                      Image6: Images.BackGround.lageChuchu,
+                                      newtext:
+                                        'Meaning , How Connected to your feel to your light , your Unique essence',
+                                    })
+                                    : null;
 
                             setData2(obj);
                           }}
@@ -142,7 +143,7 @@ const Meet = props => {
                                 source={item.img1}
                                 style={[
                                   styles.img,
-                                  {marginTop: 0, opacity: 0.7},
+                                  { marginTop: 0, opacity: 0.7 },
                                 ]}
                                 resizeMode="contain">
                                 <View
@@ -192,7 +193,7 @@ const Meet = props => {
                           </>
                         </TouchableOpacity>
 
-                        <View style={{marginVertical: 5, margin: 10}}>
+                        <View style={{ marginVertical: 5, margin: 10 }}>
                           <Text
                             style={{
                               textAlign: 'center',
@@ -208,15 +209,20 @@ const Meet = props => {
                 }}
               />
             </View>
-            <View style={{marginTop: 10}}>
-              <Pinkbtn
-                onPress={() => {
-                  props.navigation.navigate('chuchuhuasDetails', data2);
-                }}
-                width={'60%'}
-                btntxt="Continue"
-              />
+
+            <View>
+
             </View>
+            <TouchableOpacity disabled={data1 === false ? true : false} onPress={() => {
+              props.navigation.navigate('chuchuhuasDetails', data2);
+            }} style={{ alignSelf: 'center', width: '100%', alignItems: 'center', marginTop: 10 }} >
+              <LinearGradient
+                colors={['#ED535E', '#CD258D']}
+                style={styles.btn1}>
+                <Text style={{ fontWeight: 'bold', color: '#fff' }}>Continue</Text>
+              </LinearGradient>
+            </TouchableOpacity>
+
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -226,7 +232,7 @@ const Meet = props => {
 export default Meet;
 
 const styles = StyleSheet.create({
-  main: {flex: 1, alignItems: 'center', paddingTop: 15},
+  main: { flex: 1, alignItems: 'center', paddingTop: 15 },
 
   img: {
     width: 136,
@@ -248,4 +254,8 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#030303',
   },
+  btn1: {
+    width: '60%', height: 55, borderRadius: 30,
+    justifyContent: 'center', alignItems: 'center'
+  }
 });

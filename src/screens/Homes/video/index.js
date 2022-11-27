@@ -25,11 +25,13 @@ import MainBox from '../../../componrnts/mainbox';
 import All from '../../../componrnts/all';
 import Question from '../Question';
 
-const Video = props => {
-  const {route} = props;
-  const Flowersbox = route.params?.Flowersbox || null;
+const Video = ({ route, navigation, otherParam }) => {
+
+  // const { headertext1 } = route.params;
+  const Heading = route.params?.Heading || null;
+  // const { Heading } = route.params;
   const Data3 = [
-    {text1: 'Not Really', img11: Images.Imgs.R1},
+    { text1: 'Not Really', img11: Images.Imgs.R1 },
 
     {
       text1: 'Baby Bloom',
@@ -39,45 +41,25 @@ const Video = props => {
       text1: 'Solid Bloom',
       img11: Images.Imgs.R3,
     },
+    {
+      text1: 'Solid Bloom',
+      img11: Images.Imgs.R3,
+    },
   ];
 
-  const data = [
-    {
-      text1: 'Yeah,no',
-      texlist: 'Buddhidum',
-      Img1: Images.Imgs.user2,
-      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.',
-      name: 'Michael Grower',
-      time: '12/8/22-03:00 PM',
-    },
-    {
-      text1: 'No idea What a Multiverse is',
-      texlist: 'Quantum physics',
-      Img1: Images.Imgs.user2,
-      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.',
-      name: 'Michael Grower',
-      time: '12/8/22-03:00 PM',
-    },
-    {
-      text1: 'SMCA Peepsceen to think so',
-      texlist: 'Nature',
-      Img1: Images.Imgs.user2,
-      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.',
-      name: 'Michael Grower',
-      time: '12/8/22-03:00 PM',
-    },
-    {
-      text1: 'Shall we Question Heap',
-      Img1: Images.Imgs.user2,
-      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.',
-      name: 'Michael Grower',
-      time: '12/8/22-03:00 PM',
-    },
-  ];
   const data2 = [
-    {texlist: 'Buddhidum'},
-    {texlist: 'Quantum physics'},
-    {texlist: 'Nature'},
+    {
+      texlist: 'Buddhidum',
+      img1: Images.Imgs.bear
+    },
+    {
+      texlist: 'Quantum physics',
+      img1: Images.Imgs.bear
+    },
+    {
+      texlist: 'Nature',
+      img1: Images.Imgs.bear
+    },
   ];
   const Data2 = [
     {
@@ -87,6 +69,7 @@ const Video = props => {
       name: 'TONGLEN',
       title: 'title',
       plus: 'plus',
+
     },
   ];
 
@@ -95,7 +78,7 @@ const Video = props => {
       <SafeAreaView style={styles.main}>
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{flexGrow: 1}}>
+          contentContainerStyle={{ flexGrow: 1 }}>
           <StatusBar animated={true} backgroundColor="#000" />
 
           <View
@@ -121,13 +104,12 @@ const Video = props => {
                 color="#fff"
                 gbg="#1C5C2E"
                 homeheader
-                headertext="FAMILY OF LIGHT"
+                headertext={Heading}
                 search={() =>
-                  props.navigation.navigate('Mytabs', {screen: 'GroundWork'})
+                  navigation.navigate('Mytabs', { screen: 'GroundWork' })
                 }
               />
             </View>
-
             <View style={{}}>
               <QComponents
                 //   video={true}
@@ -135,6 +117,8 @@ const Video = props => {
                 video2={true}
                 direction="Description:"
                 icontwo={true}
+                iconone1
+                name11="plus"
                 name2="heart"
                 Statement="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.."
               />
@@ -149,7 +133,7 @@ const Video = props => {
                 data={data2}
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}
-                renderItem={({item}) => {
+                renderItem={({ item }) => {
                   return (
                     <>
                       <View
@@ -170,7 +154,7 @@ const Video = props => {
                           }}
                           style={styles.topics}>
                           <Text
-                            style={{color: '#1C5C2E', fontSize: 12, margin: 3}}>
+                            style={{ color: '#1C5C2E', fontSize: 12, margin: 3 }}>
                             {item.texlist}
                           </Text>
                         </TouchableOpacity>
@@ -179,21 +163,30 @@ const Video = props => {
                   );
                 }}
               />
-              {Data3.map(index => {
-                return (
-                  <View style={{}}>
-                    <View
-                      style={{
-                        alignSelf: 'center',
-                      }}>
-                      {Flowersbox ? (
-                        <Flowers flower1 img1={img11} text1={text1} />
-                      ) : null}
-                    </View>
-                  </View>
-                );
-              })}
-              <View style={[styles.row, {marginVertical: 20}]}>
+              {otherParam ?
+                (
+                  <FlatList
+                    showsHorizontalScrollIndicator={false}
+                    horizontal={true}
+                    data={Data3}
+                    renderItem={({ item, index }) => {
+                      return (
+                        <>
+                          <View style={{}}>
+                            <Flowers flower1 img1={item.img11} text1={item.text1} />
+
+                          </View>
+                        </>
+
+                      )
+                    }}
+                  />
+
+
+                ) : null}
+
+
+              <View style={[styles.row, { marginVertical: 20 }]}>
                 <Text
                   style={{
                     color: 'black',
@@ -208,7 +201,7 @@ const Video = props => {
             <View style={{}}>
               {Data3.map(index => {
                 return (
-                  <View style={{height: 80, marginVertical: 20}}>
+                  <View style={{ height: 80, marginVertical: 20 }}>
                     <ScrollView style={{}}>
                       <View style={styles.item1}>
                         <Userdetails
@@ -250,7 +243,7 @@ const Video = props => {
                 showsHorizontalScrollIndicator={false}
                 keyExtractor={item => item.id}
                 data={Data2}
-                renderItem={({item}) => {
+                renderItem={({ item }) => {
                   return (
                     <All
                       textA={item.textA}
@@ -269,7 +262,7 @@ const Video = props => {
                 alignSelf: 'center',
               }}>
               <Text style={styles.text}>Additional Resonance:</Text>
-              <Text style={[styles.text, {textDecorationLine: 'underline'}]}>
+              <Text style={[styles.text, { textDecorationLine: 'underline' }]}>
                 Links
               </Text>
               <Text
@@ -289,7 +282,7 @@ const Video = props => {
             <FlatList
               showsHorizontalScrollIndicator={false}
               data={data2}
-              renderItem={({item}) => {
+              renderItem={({ item }) => {
                 return (
                   <>
                     <View
@@ -302,7 +295,7 @@ const Video = props => {
                       <Userdetails
                         backgroundColor={'#00000029'}
                         databox2
-                        Img1={item.Img1}
+                        bear={item.img1}
                         name={item.name}
                         time={item.time}
                         text={item.text}

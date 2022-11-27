@@ -8,15 +8,15 @@ import {
   TouchableOpacity,
   StatusBar,
 } from 'react-native';
-import {Greenbtn, Header, Pinkbtn} from '../../../componrnts';
+import { Greenbtn, Header, Pinkbtn } from '../../../componrnts';
 import Images from '../../../constants';
-const forgetPassword = props => {
+const ForgetPassword = props => {
   return (
     <>
       <StatusBar animated={true} backgroundColor="#000" />
 
       <View style={styles.main}>
-        <View style={{width: '90%', marginTop: 30}}>
+        <View style={{ width: '90%', marginTop: 30 }}>
           <Header
             fontSize={25}
             color="#191919B8"
@@ -27,8 +27,8 @@ const forgetPassword = props => {
           />
         </View>
 
-        <View style={{width: '85%', marginTop: 30}}>
-          <Text style={{fontSize: 20, lineHeight: 33, marginTop: 20}}>
+        <View style={{ width: '85%', marginTop: 30 }}>
+          <Text style={{ fontSize: 20, lineHeight: 33, marginTop: 20 }}>
             Enter Your Registered Email To Get The Password Reset Link
           </Text>
 
@@ -46,10 +46,10 @@ const forgetPassword = props => {
 
           <View>
             <View style={styles.input}>
-              <TextInput placeholder="Email" style={{paddingLeft: 20}} />
+              <TextInput placeholder="Email" style={{ paddingLeft: 20 }} />
             </View>
 
-            <View style={{marginTop: 10}}>
+            <View style={{ marginTop: 10 }}>
               <Greenbtn
                 width={'100%'}
                 text1="Submit"
@@ -64,10 +64,10 @@ const forgetPassword = props => {
     </>
   );
 };
-export default forgetPassword;
+export default ForgetPassword;
 
 const styles = StyleSheet.create({
-  main: {flex: 1, alignItems: 'center'},
+  main: { flex: 1, alignItems: 'center' },
   input: {
     flexDirection: 'row',
     justifyContent: 'space-between',

@@ -9,7 +9,7 @@ import {
   FlatList,
   StatusBar,
 } from 'react-native';
-import {Greenbox, Header, Imgbox, SeeAll, StoryData} from '../../../componrnts';
+import { Greenbox, Header, Imgbox, SeeAll, StoryData } from '../../../componrnts';
 import All from '../../../componrnts/all';
 import MainBox from '../../../componrnts/mainbox';
 import Images from '../../../constants';
@@ -24,7 +24,7 @@ const GroundWork = props => {
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
-    
+
     },
     {
       id: 2,
@@ -34,7 +34,7 @@ const GroundWork = props => {
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
- 
+
     },
     {
       id: 3,
@@ -61,7 +61,7 @@ const GroundWork = props => {
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
+        contentContainerStyle={{ flexGrow: 1 }}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
@@ -75,13 +75,13 @@ const GroundWork = props => {
             heartplus
             search1="search1"
             homeheader={true}
-            search={() => navigation.navigate('Homes', {screen: 'Search'})}
+            search={() => navigation.navigate('Homes', { screen: 'Search' })}
             heart
-            // plus
+          // plus
           />
         </View>
         <View style={styles.Box1}>
-          <View style={{width: '90%', alignSelf: 'center'}}>
+          <View style={{ width: '90%', alignSelf: 'center' }}>
             <Text
               style={{
                 textAlign: 'center',
@@ -104,7 +104,7 @@ const GroundWork = props => {
             <Greenbox
               img2
               onPress1={() => {
-                props.navigation.navigate('Homes', {screen: 'Buddhisim'});
+                props.navigation.navigate('Homes', { screen: 'Buddhisim' }, {});
               }}
             />
             <View
@@ -116,7 +116,7 @@ const GroundWork = props => {
               <View style={styles.box2}>
                 <ScrollView
                   horizontal={true}
-                  showsHorizontalScrollIndicator={true}>
+                  showsHorizontalScrollIndicator={false}>
                   {Data.map((item, index) => {
                     return (
                       <View style={{}}>
@@ -143,9 +143,10 @@ const GroundWork = props => {
               <View style={styles.box1}>
                 <FlatList
                   keyExtractor={item => item.id}
+                  showsHorizontalScrollIndicator={false}
                   numColumns={2}
                   data={Data}
-                  renderItem={({item}) => {
+                  renderItem={({ item }) => {
                     return (
                       <View
                         style={{

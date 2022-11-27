@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import MyStack from './src/navigation/Stack';
 import Login from './src/screens/auth/Login';
 import BlueLotus from './src/screens/Homes/BlueLotus';
@@ -16,7 +16,6 @@ import Meet from './src/screens/Homes/meet';
 import LoginOption from './src/screens/auth/loginOption';
 import ChuchuasDetails from './src/screens/Homes/ChuchuhuasDetails';
 import MeetScreen2 from './src/screens/Homes/meetScreen2';
-
 import Resonance from './src/screens/Homes/Resonance';
 import Search3 from './src/screens/Homes/Search3';
 import Search2 from './src/screens/Homes/search2';
@@ -31,12 +30,12 @@ import Search from './src/screens/Homes/search';
 import Home from './src/screens/Homes/home';
 import Video from './src/screens/Homes/video';
 import Question2 from './src/screens/Homes/question2';
-import Buddhisim from './src/screens/Budhisim';
 import Settings from './src/screens/Homes/settings';
+import Buddhisim from './src/screens/Homes/Budhisim';
 
 const App = props => {
   return <MyStack {...props} />;
-  // return <Search2 />;
+  // return <FressBlooms />;
 };
 
 export default App;

@@ -7,26 +7,26 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-import {Header, Pinkbtn} from '../../../componrnts';
+import { Header, Pinkbtn } from '../../../componrnts';
 import Images from '../../../constants';
 
-const Login = ({route, navigation}) => {
+const Login = ({ route, navigation }) => {
   const registerd1 = route.params?.registerd1 || null;
   return (
     <View style={styles.main}>
-      <View style={{width: '90%'}}>
-        <View style={{width: '100%', marginTop: 10}}>
+      <View style={{ width: '90%' }}>
+        <View style={{ width: '100%', marginTop: 10 }}>
           <Header
             iconName="arrowleft"
             header2
-            OnPress={() => navigation.replace('loginoption')}
+            OnPress={() => navigation.navigate('loginoption')}
           />
         </View>
-        <View style={{marginVertical: 40}}>
+        <View style={{ marginVertical: 40 }}>
           <Image source={Images.Logos.logo1} style={{}} />
         </View>
         <View>
-          <Text style={{fontSize: 18}}>Login With Email</Text>
+          <Text style={{ fontSize: 18 }}>Login With Email</Text>
 
           <View style={styles.input}>
             <TextInput placeholder="Email Address" />
@@ -46,25 +46,25 @@ const Login = ({route, navigation}) => {
               Forgot Password?
             </Text>
           </TouchableOpacity>
-          <View style={{marginTop: 10}}>
+          <View style={{ marginTop: 10 }}>
             <Pinkbtn
               onPress={() => {
                 {
                   registerd1
                     ? navigation.navigate(
-                        'Mytabs',
-                        {screen: 'Home'},
-                        {
-                          itemId: 86,
-                        },
-                      )
+                      'Mytabs',
+                      { screen: 'Home' },
+                      {
+                        itemId: 86,
+                      },
+                    )
                     : navigation.navigate(
-                        'Auth',
-                        {screen: 'NotRegisterd'},
-                        {
-                          itemId: 86,
-                        },
-                      );
+                      'Auth',
+                      { screen: 'NotRegisterd' },
+                      {
+                        itemId: 86,
+                      },
+                    );
                 }
               }}
               width={'60%'}
@@ -88,7 +88,7 @@ const Login = ({route, navigation}) => {
                 registerd1: () => navigation.navigate('signup'),
                 itemId: 86,
                 registerd2: () =>
-                  navigation.navigate('Homes', {Screen: 'Home'}),
+                  navigation.navigate('Homes', { Screen: 'Home' }),
                 otherParam: 'anything you want here',
               });
             }}>
@@ -101,7 +101,7 @@ const Login = ({route, navigation}) => {
                 fontWeight: '500',
               }}>
               Don't have an account ?
-              <Text styles={{fontWeight: 'bold'}}>Sign Up</Text>{' '}
+              <Text styles={{ fontWeight: 'bold' }}>Sign Up</Text>{' '}
             </Text>
           </TouchableOpacity>
         </View>
@@ -111,7 +111,7 @@ const Login = ({route, navigation}) => {
 };
 
 const styles = StyleSheet.create({
-  main: {flex: 1, alignItems: 'center'},
+  main: { flex: 1, alignItems: 'center' },
   input: {
     flexDirection: 'row',
     justifyContent: 'space-between',
