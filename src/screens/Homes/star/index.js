@@ -1,4 +1,4 @@
-import React, {startTransition, useState} from 'react';
+import React, { startTransition, useState } from 'react';
 import {
   View,
   Text,
@@ -9,7 +9,7 @@ import {
   Image,
 } from 'react-native';
 
-import {Header, Pinkbtn, QComponents} from '../../../componrnts';
+import { Header, Pinkbtn, QComponents } from '../../../componrnts';
 import Images from '../../../constants';
 
 const Star = props => {
@@ -17,7 +17,7 @@ const Star = props => {
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
+        contentContainerStyle={{ flexGrow: 1 }}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
@@ -41,7 +41,7 @@ const Star = props => {
             <Image source={Images.Imgs.nebula} />
           </View>
 
-          <View style={{marginVertical: 5, alignSelf: 'center'}}>
+          <View style={{ marginVertical: 5, alignSelf: 'center' }}>
             <Text
               style={{
                 fontSize: 25,

@@ -1,6 +1,6 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Splash from '../../screens/auth/Splash/index';
 import Welcome from '../../screens/auth/Welcome';
 import Login from '../../screens/auth/Login';
@@ -35,7 +35,7 @@ import Question4 from '../../screens/Homes/question4';
 import Settings from '../../screens/Homes/settings';
 import BloomsCheck from '../../screens/Homes/bloomsCheck';
 import BigBlooms from '../../screens/Homes/BigBlooms';
-import {StoryData} from '../../componrnts';
+import { StoryData } from '../../componrnts';
 import Star from '../../screens/Homes/star';
 import Packages from '../../screens/Homes/packages';
 import ManageSubscription from '../../screens/Homes/manageSubscription';
@@ -49,6 +49,7 @@ import PrivacyPolicy from '../../screens/Homes/privacyPolicy';
 import Story1 from '../../screens/Homes/Story1';
 import Buddhisim from '../../screens/Homes/Budhisim';
 import PaymentMethod from '../../screens/Homes/paymentmethode';
+import CancelSubscription from '../../screens/Homes/cancelSubsceiption';
 
 const Stack = createNativeStackNavigator();
 
@@ -58,82 +59,82 @@ const Auth = () => {
       <Stack.Screen
         name="Splash"
         component={Splash}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Splash2"
         component={Spalsh2}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Welcome"
         component={Welcome}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="login"
         component={Login}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Tools"
         component={Tools}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="namescreen"
         component={NameScreen}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="signup"
         component={SignUp}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="verify"
         component={Verify}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="loginoption"
         component={LoginOption}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="registerd"
         component={Registerd}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="forgerpsaaword"
         component={forgetPassword}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="NotRegisterd"
         component={NotRegisterd}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="EmailNotification"
         component={EmailNotification}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Pushnotification"
         component={Pushnotification}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="PrivacyPolicy"
         component={PrivacyPolicy}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Story1"
         component={Story1}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
     </Stack.Navigator>
   );
@@ -144,154 +145,159 @@ export const Homes = () => {
       <Stack.Screen
         name="Home"
         component={Home}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="notification"
         component={Notification}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="tools"
         component={Tools}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="journey"
         component={Journey}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="meet"
         component={Meet}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="chuchuhuasDetails"
         component={ChuchuasDetails}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="FressBlooms"
         component={FressBlooms}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="GroundWork"
         component={GroundWork}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Result"
         component={Result}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
-      <Stack.Screen name="me" component={Me} options={{headerShown: false}} />
+      <Stack.Screen name="me" component={Me} options={{ headerShown: false }} />
       <Stack.Screen
         name="MeetScreen2"
         component={MeetScreen2}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Bluelotus"
         component={BlueLotus}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
 
       <Stack.Screen
         name="Search"
         component={Search}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Search2"
         component={Search2}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Search3"
         component={Search3}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="resonance"
         component={Resonance}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="question"
         component={Question}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="question2"
         component={Question2}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="question3"
         component={Question3}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="question4"
         component={Question4}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="settings"
         component={Settings}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="BloomsCheck"
         component={BloomsCheck}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Bigblooms"
         component={BigBlooms}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="star"
         component={Star}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="EditScreen"
         component={EditScreen}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Packges"
         component={Packages}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="ManageSubscription"
         component={ManageSubscription}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Video"
         component={Video}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Contactus"
         component={Contactus}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Buddhisim"
         component={Buddhisim}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="PaymentMethod"
         component={PaymentMethod}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="CancelSubscription"
+        component={CancelSubscription}
+        options={{ headerShown: false }}
       />
     </Stack.Navigator>
   );
@@ -303,17 +309,17 @@ const MyStack = () => {
         <Stack.Screen
           name="Auth"
           component={Auth}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="Homes"
           component={Homes}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="Mytabs"
           component={Mytabs}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>

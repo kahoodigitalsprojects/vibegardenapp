@@ -11,7 +11,7 @@ import {
   SafeAreaView,
   ImageBackground,
 } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
+
 
 import Icon from 'react-native-vector-icons/AntDesign';
 import { Header, Pinkbtn } from '../../../componrnts';
@@ -216,11 +216,11 @@ const Meet = props => {
             <TouchableOpacity disabled={data1 === false ? true : false} onPress={() => {
               props.navigation.navigate('chuchuhuasDetails', data2);
             }} style={{ alignSelf: 'center', width: '100%', alignItems: 'center', marginTop: 10 }} >
-              <LinearGradient
-                colors={['#ED535E', '#CD258D']}
+              <View
+
                 style={styles.btn1}>
                 <Text style={{ fontWeight: 'bold', color: '#fff' }}>Continue</Text>
-              </LinearGradient>
+              </View>
             </TouchableOpacity>
 
           </View>
@@ -255,7 +255,7 @@ const styles = StyleSheet.create({
     color: '#030303',
   },
   btn1: {
-    width: '60%', height: 55, borderRadius: 30,
+    width: '60%', height: 55, borderRadius: 30, backgroundColor: "#ED535E",
     justifyContent: 'center', alignItems: 'center'
   }
 });
