@@ -23,7 +23,8 @@ const All = ({
   textB,
   onPress,
   iconimg,
-  iconimg1,
+  circle,
+  iconimg2,
   plus,
   pressI,
 }) => {
@@ -35,14 +36,13 @@ const All = ({
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
-      iconimg1: Images.Icons.Pcircle,
+      iconimg2: Images.Icons.Pcircle,
     },
     {
       id: 2,
       bg1: Images.BackGround.black,
       bg12: Images.BackGround.greenbg,
       heart1: Images.Icons.heart1,
-      iconimg1: Images.Icons.prectangel,
       name: 'TONGLEN',
       title: 'title',
     },
@@ -53,7 +53,7 @@ const All = ({
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
-      iconimg1: Images.Icons.sun,
+      iconimg2: Images.Icons.sun,
     },
     {
       id: 4,
@@ -149,10 +149,11 @@ const All = ({
                         <View
                           style={{
                             width: 30,
-                            height: 30,
+                            height: 25,
+                            // backgroundColor: 'yellow',
                           }}>
                           <Image
-                            source={iconimg1}
+                            source={Images.Icons.prectangel}
                             resizeMode="contain"
                             style={{
                               width: '100%',

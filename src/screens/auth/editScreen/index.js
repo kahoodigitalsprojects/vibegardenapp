@@ -41,7 +41,7 @@ const EditScreen = ({navigation, route}) => {
             headertext={itemId}
             fontSize={25}
             color="#000"
-            // OnPress={() => props.navigation.replace('Home')}
+            OnPress={() => navigation.navigate('Homes', {screen: 'settings'})}
           />
           <View style={{marginTop: 50}}>
             <View style={styles.center}>

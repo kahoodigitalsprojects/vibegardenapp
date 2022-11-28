@@ -40,6 +40,9 @@ const Search3 = ({route, navigation}) => {
     },
     {
       text1: otherParam2,
+      onPress: () => {
+        navigation.goBack('');
+      },
     },
     {
       text1: otherParam3,
@@ -131,7 +134,6 @@ const Search3 = ({route, navigation}) => {
             }}
           />
         </View>
-      
       </ScrollView>
     </SafeAreaView>
   );

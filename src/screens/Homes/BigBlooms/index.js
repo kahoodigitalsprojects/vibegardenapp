@@ -42,10 +42,12 @@ const BigBlooms = props => {
       <View style={styles.main}>
         <View style={{alignSelf: 'center', width: '90%', marginTop: 5}}>
           <Header
-            iconName="closesquareo"
+            iconName="arrowleft"
             header2
-            OnPress={() => props.navigation.navigate('me')}
+            OnPress={() => props.navigation.goBack('')}
             headertext="Resonance Finder"
+            fontSize={25}
+            color="#000"
           />
         </View>
         <View style={styles.itms}>
@@ -83,23 +85,33 @@ const BigBlooms = props => {
                 fontSize: 16,
                 // textAlign: 'center',
                 color: '#1C5C2E',
-                fontWeight: '400',
+                fontWeight: '500',
                 marginVertical: 5,
               }}>
               ADDED TONGLEN FAVORITES
             </Text>
-            <View
-              style={{marginVertical: 5, borderBottomWidth: 1, width: '32%'}}>
-              <Text
-                style={{
-                  fontSize: 18,
-                  // textAlign: 'center',
-                  color: '#000',
-                  // fontWeight: 'bold',
-                }}>
-                Tell Us More
-              </Text>
-            </View>
+
+            <Text
+              style={{
+                fontSize: 18,
+                // textAlign: 'center',
+                color: '#000',
+                // fontWeight: 'bold',
+                marginVertical: 10,
+                textDecorationLine: 'underline',
+              }}>
+              Tell Us More
+            </Text>
+
+            <Text
+              style={{
+                fontSize: 18,
+                // textAlign: 'center',
+                color: '#000',
+                // fontWeight: 'bold',
+              }}>
+              Did This Tools
+            </Text>
           </View>
 
           <FlatList

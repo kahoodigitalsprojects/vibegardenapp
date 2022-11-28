@@ -23,9 +23,11 @@ const ManageSubscription = props => {
       <View style={styles.main}>
         <View style={{marginVertical: 30, width: '90%', alignSelf: 'center'}}>
           <Header
-            iconName="closesquareo"
+            iconName="left"
             header2
-            OnPress={props.goback}
+            OnPress={() =>
+              props.navigation.navigate('Homes', {screen: 'settings'})
+            }
             headertext="Manage Subscription"
             fontSize={25}
             color="#000"
@@ -103,7 +105,11 @@ const ManageSubscription = props => {
               147
             </Text>
           </View>
-          <TouchableOpacity style={{flexDirection: 'row', marginVertical: 10}}>
+          <TouchableOpacity
+            onPress={() => {
+              props.navigation.navigate('PaymentMethod');
+            }}
+            style={{flexDirection: 'row', marginVertical: 10}}>
             <Icon1
               name="check-square"
               size={15}
@@ -115,12 +121,11 @@ const ManageSubscription = props => {
               Edit Payment Methods
             </Text>
           </TouchableOpacity>
-        </View>
-
-        <View style={styles.endtext}>
-          <Text style={[{color: '#1492E6', fontSize: 16}]}>
-            Cancel Subscription
-          </Text>
+          <View style={{alignSelf: 'center'}}>
+            <Text style={[{color: '#1492E6', fontSize: 16}]}>
+              Cancel Subscription
+            </Text>
+          </View>
         </View>
       </View>
     </ScrollView>
@@ -183,10 +188,10 @@ const styles = StyleSheet.create({
     marginTop: 6,
   },
   endtext: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
-    justifyContent: 'space-around',
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
+    // justifyContent: 'space-around',
   },
 });
 export default ManageSubscription;

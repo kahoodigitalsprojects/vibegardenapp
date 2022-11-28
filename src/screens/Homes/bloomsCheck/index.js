@@ -17,9 +17,9 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import Images from '../../../constants';
 import All from '../../../componrnts/all';
 
-const BloomsCheck = ({route, navigation}) => {
-  const {Image1, Image2, Image3, Image4, newtext, Image5, Image6, Heading} =
-    route.params;
+const BloomsCheck = ({route, navigation, newtext, Heading}) => {
+  // const {Image1, Image2, Image3, Image4, newtext, Image5, Image6, Heading} =
+  //   route.params;
 
   const [data1, setdata1] = useState();
   const Data1 = [
@@ -53,23 +53,23 @@ const BloomsCheck = ({route, navigation}) => {
   ];
   const Data = [
     {
-      image2: Image1,
+      image2: Images.Imgs.lotus1,
       text: '0-25%',
     },
     {
-      image2: Image2,
+      image2: Images.Imgs.lotusb,
       text: '25-50%',
     },
     {
-      image2: Image3,
+      image2: Images.Imgs.lotusa,
       text: '50-75%',
     },
     {
-      image2: Image5,
+      image2: Images.Imgs.lotusa,
       text: '75-100%',
     },
     {
-      image2: Image5,
+      image2: Images.Imgs.lotusa,
       text: '75-100%',
     },
   ];
@@ -86,18 +86,18 @@ const BloomsCheck = ({route, navigation}) => {
               header2
               iconName="closesquareo"
               OnPress={() => {
-                navigation.navigate('Bluelotus', {
-                  Heading: Heading,
-                  newtext:
-                    'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
-                  Image1: Image6,
-                });
+                navigation.navigate('Bluelotus', {});
               }}
             />
 
             <View style={{}}>
+              <Text style={{textAlign: 'center', fontSize: 28, color: '#000'}}>
+                Blooms Check
+              </Text>
+
               <Text style={styles.txt}>
-                Finally How Bloom is Your Vibe Today?
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore
               </Text>
               <Text
                 style={{
@@ -110,6 +110,7 @@ const BloomsCheck = ({route, navigation}) => {
 
               <View style={{marginTop: 30}}>
                 <FlatList
+                  showsHorizontalScrollIndicator={false}
                   data={Data}
                   horizontal={true}
                   renderItem={({item, index}) => {
@@ -206,17 +207,20 @@ const BloomsCheck = ({route, navigation}) => {
                 Refine your Vibe:
               </Text>
               <View style={styles.box}>
-                <Percentage icons={true} Image1={Image1} btntxt="continue" />
-
+                <Percentage
+                  icons={true}
+                  btntxt="continue"
+                  Image1={Images.Imgs.lotusb}
+                />
                 <View style={{marginVertical: 10}}>
                   <Pinkbtn
                     onPress={() =>
                       navigation.navigate('Bigblooms', {
-                        Image1: Image1,
+                        // Image1: Image1,
                         newtext: '',
                       })
                     }
-                    width={'60%'}
+                    width={'50%'}
                     btntxt="Save"
                   />
                 </View>
@@ -224,6 +228,7 @@ const BloomsCheck = ({route, navigation}) => {
             </View>
             <View style={styles.box1}>
               <FlatList
+                showsHorizontalScrollIndicator={false}
                 keyExtractor={item => item.id}
                 data={Data1}
                 renderItem={({item}) => {
@@ -259,11 +264,11 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   txt: {
-    textAlign: 'left',
-    fontSize: 24,
-    color: '#1C5C2E',
+    textAlign: 'center',
+    fontSize: 16,
+    color: '#000',
     fontWeight: '400',
-    marginVertical: 20,
+    marginTop: 10,
   },
 
   txt1: {

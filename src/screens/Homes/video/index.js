@@ -25,13 +25,12 @@ import MainBox from '../../../componrnts/mainbox';
 import All from '../../../componrnts/all';
 import Question from '../Question';
 
-const Video = ({ route, navigation, otherParam }) => {
-
+const Video = ({route, navigation, otherParam}) => {
   // const { headertext1 } = route.params;
   const Heading = route.params?.Heading || null;
   // const { Heading } = route.params;
   const Data3 = [
-    { text1: 'Not Really', img11: Images.Imgs.R1 },
+    {text1: 'Not Really', img11: Images.Imgs.R1},
 
     {
       text1: 'Baby Bloom',
@@ -50,15 +49,15 @@ const Video = ({ route, navigation, otherParam }) => {
   const data2 = [
     {
       texlist: 'Buddhidum',
-      img1: Images.Imgs.bear
+      img1: Images.Imgs.bear,
     },
     {
       texlist: 'Quantum physics',
-      img1: Images.Imgs.bear
+      img1: Images.Imgs.bear,
     },
     {
       texlist: 'Nature',
-      img1: Images.Imgs.bear
+      img1: Images.Imgs.bear,
     },
   ];
   const Data2 = [
@@ -69,7 +68,6 @@ const Video = ({ route, navigation, otherParam }) => {
       name: 'TONGLEN',
       title: 'title',
       plus: 'plus',
-
     },
   ];
 
@@ -78,7 +76,7 @@ const Video = ({ route, navigation, otherParam }) => {
       <SafeAreaView style={styles.main}>
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ flexGrow: 1 }}>
+          contentContainerStyle={{flexGrow: 1}}>
           <StatusBar animated={true} backgroundColor="#000" />
 
           <View
@@ -104,9 +102,9 @@ const Video = ({ route, navigation, otherParam }) => {
                 color="#fff"
                 gbg="#1C5C2E"
                 homeheader
-                headertext={Heading}
+                headertext={'FAMILY OF LIGHT'}
                 search={() =>
-                  navigation.navigate('Mytabs', { screen: 'GroundWork' })
+                  navigation.navigate('Mytabs', {screen: 'GroundWork'})
                 }
               />
             </View>
@@ -133,7 +131,7 @@ const Video = ({ route, navigation, otherParam }) => {
                 data={data2}
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}
-                renderItem={({ item }) => {
+                renderItem={({item}) => {
                   return (
                     <>
                       <View
@@ -154,7 +152,7 @@ const Video = ({ route, navigation, otherParam }) => {
                           }}
                           style={styles.topics}>
                           <Text
-                            style={{ color: '#1C5C2E', fontSize: 12, margin: 3 }}>
+                            style={{color: '#1C5C2E', fontSize: 12, margin: 3}}>
                             {item.texlist}
                           </Text>
                         </TouchableOpacity>
@@ -163,30 +161,28 @@ const Video = ({ route, navigation, otherParam }) => {
                   );
                 }}
               />
-              {otherParam ?
-                (
-                  <FlatList
-                    showsHorizontalScrollIndicator={false}
-                    horizontal={true}
-                    data={Data3}
-                    renderItem={({ item, index }) => {
-                      return (
-                        <>
-                          <View style={{}}>
-                            <Flowers flower1 img1={item.img11} text1={item.text1} />
+              {otherParam ? (
+                <FlatList
+                  showsHorizontalScrollIndicator={false}
+                  horizontal={true}
+                  data={Data3}
+                  renderItem={({item, index}) => {
+                    return (
+                      <>
+                        <View style={{}}>
+                          <Flowers
+                            flower1
+                            img1={item.img11}
+                            text1={item.text1}
+                          />
+                        </View>
+                      </>
+                    );
+                  }}
+                />
+              ) : null}
 
-                          </View>
-                        </>
-
-                      )
-                    }}
-                  />
-
-
-                ) : null}
-
-
-              <View style={[styles.row, { marginVertical: 20 }]}>
+              <View style={[styles.row, {marginVertical: 20}]}>
                 <Text
                   style={{
                     color: 'black',
@@ -201,7 +197,7 @@ const Video = ({ route, navigation, otherParam }) => {
             <View style={{}}>
               {Data3.map(index => {
                 return (
-                  <View style={{ height: 80, marginVertical: 20 }}>
+                  <View style={{height: 80, marginVertical: 20}}>
                     <ScrollView style={{}}>
                       <View style={styles.item1}>
                         <Userdetails
@@ -243,7 +239,7 @@ const Video = ({ route, navigation, otherParam }) => {
                 showsHorizontalScrollIndicator={false}
                 keyExtractor={item => item.id}
                 data={Data2}
-                renderItem={({ item }) => {
+                renderItem={({item}) => {
                   return (
                     <All
                       textA={item.textA}
@@ -262,7 +258,7 @@ const Video = ({ route, navigation, otherParam }) => {
                 alignSelf: 'center',
               }}>
               <Text style={styles.text}>Additional Resonance:</Text>
-              <Text style={[styles.text, { textDecorationLine: 'underline' }]}>
+              <Text style={[styles.text, {textDecorationLine: 'underline'}]}>
                 Links
               </Text>
               <Text
@@ -282,7 +278,7 @@ const Video = ({ route, navigation, otherParam }) => {
             <FlatList
               showsHorizontalScrollIndicator={false}
               data={data2}
-              renderItem={({ item }) => {
+              renderItem={({item}) => {
                 return (
                   <>
                     <View

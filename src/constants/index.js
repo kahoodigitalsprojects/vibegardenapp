@@ -32,6 +32,7 @@ const Images = {
     greenlogo: require('../assests/images/greenlogo.png'),
     greenheart: require('../assests/images/greenheart.png'),
     greenicon1: require('../assests/images/greenicon1.png'),
+    payment: require('../assests/images/payments.png'),
   },
   Icons: {
     upload: require('../assests/images/upload.png'),

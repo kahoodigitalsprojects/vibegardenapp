@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   StyleSheet,
@@ -9,20 +9,19 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-import { Header } from '../../../componrnts';
-import Tooltip from "react-native-walkthrough-tooltip";
+import {Header} from '../../../componrnts';
+import Tooltip from 'react-native-walkthrough-tooltip';
 import Reset from '../../../componrnts/ResetComponent';
 import Result from '../result';
 
-const FressBlooms = props => {
+const FressBlooms = ({route, navigation}) => {
   const [showTip, setTip] = useState(true);
-  const data = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
+  const data = [{id: 1}, {id: 2}, {id: 3}, {id: 4}];
   return (
-
     <>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ flexGrow: 1 }}>
+        contentContainerStyle={{flexGrow: 1}}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View style={styles.main}>
           <View
@@ -37,13 +36,13 @@ const FressBlooms = props => {
               fontSize={18}
               header2
               headertext="Fresh Blooms"
-              OnPress={() => props.navigation.replace('Mytabs', { screen: 'Home' })}
+              OnPress={() => navigation.replace('Mytabs', {screen: 'Home'})}
             />
-            <View style={{ marginTop: 30 }}>
+            <View style={{marginTop: 30}}>
               <FlatList
                 data={data}
                 keyExtractor={item => item.id}
-                renderItem={({ items }) => {
+                renderItem={({items}) => {
                   return <Reset />;
                 }}
               />
@@ -52,7 +51,6 @@ const FressBlooms = props => {
         </View>
       </ScrollView>
     </>
-
   );
 };
 const styles = StyleSheet.create({

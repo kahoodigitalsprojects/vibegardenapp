@@ -1,4 +1,4 @@
-import React, { isValidElement, useState } from 'react';
+import React, {isValidElement, useState} from 'react';
 import {
   View,
   StyleSheet,
@@ -8,21 +8,19 @@ import {
   Image,
   TouchableOpacity,
   Modal,
-  TextInput
+  TextInput,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
 import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
-import Tooltip from "react-native-walkthrough-tooltip";
+import Tooltip from 'react-native-walkthrough-tooltip';
 import Images from '../../constants';
-import { SeeAll } from '../SeeAll';
+import {SeeAll} from '../SeeAll';
 
-const Reset = ({ helo }) => {
+const Reset = ({Iname}) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [toolTipVisible, setToolTipVisible] = useState(false);
   return (
     <>
-
-
       <View style={styles.main}>
         <View
           style={{
@@ -32,22 +30,24 @@ const Reset = ({ helo }) => {
             flexDirection: 'row',
             justifyContent: 'space-between',
           }}>
-          <View style={{ width: 112, height: 80, marginTop: 10 }}>
+          <View style={{width: 112, height: 80, marginTop: 10}}>
             <Image source={Images.Imgs.pic1} />
           </View>
-          <View style={{ margin: 15, marginVertical: 10 }}>
-            <View style={{ marginVertical: 3 }}>
-              <Text style={{ color: '#1C5C2E', fontSize: 16, fontWeight: '500' }}>
+          <View style={{margin: 15, marginVertical: 10}}>
+            <View style={{marginVertical: 3}}>
+              <Text style={{color: '#1C5C2E', fontSize: 16, fontWeight: '500'}}>
                 Calm and Rest
               </Text>
             </View>
 
-            <View style={{ marginVertical: 3 }}>
-              <Text style={{ color: '#000' }}>The session is about becomi...</Text>
+            <View style={{marginVertical: 3}}>
+              <Text style={{color: '#000'}}>
+                The session is about becomi...
+              </Text>
             </View>
 
-            <View style={{ marginVertical: 3 }}>
-              <Text style={{ color: '' }}>3 min * Date: 10-17-2022</Text>
+            <View style={{marginVertical: 3}}>
+              <Text style={{color: ''}}>3 min * Date: 10-17-2022</Text>
             </View>
           </View>
           <View style={{}}>
@@ -60,49 +60,49 @@ const Reset = ({ helo }) => {
                   onRequestClose={() => {
                     // Alert.alert("Modal has been closed.");
                     setModalVisible(!modalVisible);
-                  }}
-                >
-                  <View style={{
-                    width: '15%', margin: 5,
-                    alignSelf: 'flex-end', marginTop: 140,
                   }}>
+                  <View
+                    style={{
+                      width: '18%',
+                      margin: 5,
+                      alignSelf: 'flex-end',
+                      marginTop: 150,
+                    }}>
                     <TouchableOpacity
                       onPress={() => setModalVisible(!modalVisible)}
                       style={{
-                        backgroundColor: '#fff', height: 30, marginTop: 5,
-                        borderRadius: 10, justifyContent: 'center', alignItems: 'center',
+                        backgroundColor: '#fff',
+                        width: 66,
+                        height: 36,
+                        marginTo4: 5,
+                        borderRadius: 10,
+                        marginRight: 20,
+                        justifyContent: 'center',
+                        alignItems: 'center',
                         flexDirection: 'row',
-                        padding: 5
-
+                        padding: 1,
                       }}>
                       <Icon2 name="delete" size={12} />
-                      <View style={{ marginLeft: 6 }}>
-
-                        <Text style={{ fontSize: 10 }}>Hello</Text>
+                      <View style={{marginLeft: 4}}>
+                        <Text style={{fontSize: 12}}>Remove</Text>
                       </View>
-
                     </TouchableOpacity>
                   </View>
                 </Modal>
-
               </View>
               <TouchableOpacity
-                style={[{ marginTop: 5 },
-                styles.button]}
-                onPress={() => setModalVisible(true)}
-              >
+                style={[{marginTop: 5}, styles.button]}
+                onPress={() => setModalVisible(true)}>
                 <Icon name="dots-three-horizontal" size={22} />
               </TouchableOpacity>
             </View>
-            <TouchableOpacity style={{ marginTop: 35 }}>
-              <Icon name="heart" size={22} color="red" />
+            <TouchableOpacity style={{marginTop: 35}}>
+              <Icon name={Iname} size={22} color="red" />
             </TouchableOpacity>
-
           </View>
         </View>
       </View>
     </>
-
   );
 };
 const styles = StyleSheet.create({

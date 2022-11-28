@@ -79,7 +79,6 @@ const Me = props => {
             // top: 8,
             height: 60,
           }}>
-     
           <Header
             img1
             toggle
@@ -150,7 +149,20 @@ const Me = props => {
               <View style={{marginTop: 10}}>
                 <Pinkbtn
                   onPress={() => {
-                    props.navigation.navigate('Homes', {screen: 'BloomsCheck'});
+                    props.navigation.navigate(
+                      'Homes',
+                      {screen: 'BloomsCheck'},
+                      {
+                        Image1: Images.Imgs.Rainbow,
+                        Image2: Images.Imgs.Rainbow,
+                        Image3: Images.Imgs.Rainbow,
+                        Image4: Images.Imgs.Rainbow,
+                        newtext: 'Update Current Blooms',
+                        Image5: Images.Imgs.Rainbow,
+                        Image6: Images.Imgs.Rainbow,
+                        Heading: 'Update Current Blooms',
+                      },
+                    );
                   }}
                   width={'60%'}
                   btntxt="Update Current Blooms"

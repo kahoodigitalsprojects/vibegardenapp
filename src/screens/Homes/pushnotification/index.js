@@ -35,7 +35,9 @@ const Pushnotification = props => {
             headertext="Push Notification"
             fontSize={25}
             color="#000"
-            OnPress={() => props.navigation.navigate('Homes',{screen:'me'})}
+            OnPress={() =>
+              props.navigation.navigate('Homes', {screen: 'settings'})
+            }
           />
           <View style={{marginTop: 30, marginVertical: 10}}>
             <Text style={styles.text1}>
@@ -81,7 +83,7 @@ const Pushnotification = props => {
             </View>
             <View style={{marginTop: 20}}>
               <Pinkbtn
-                onPress={() => props.navigation.goBack('')}
+                onPress={() =>   props.navigation.navigate('Homes', {screen: 'settings'})}
                 width={'60%'}
                 btntxt="Save"
               />

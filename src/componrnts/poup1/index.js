@@ -13,7 +13,7 @@ import {Button, Overlay} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Images from '../../constants';
 
-const PopUp = ({Visible, setVisible, onpress1, poup1, poup2}) => {
+const PopUp = ({Visible, setVisible, onpress1, poup1, poup2, poup3}) => {
   const [state1, setState1] = useState(false);
   return (
     <>
@@ -109,6 +109,37 @@ const PopUp = ({Visible, setVisible, onpress1, poup1, poup2}) => {
             </View>
             <TouchableOpacity
               style={[styles.button, styles.buttonClose]}
+              onPress={onpress1}>
+              <Text style={[styles.textStyle]}>Done</Text>
+            </TouchableOpacity>
+          </View>
+        </Overlay>
+      )}
+      {poup3 && (
+        <Overlay
+          overlayStyle={{borderRadius: 20, elevation: 10, width: '85%'}}
+          style={{}}
+          // animationType="slide" // transparent={false}
+          visible={Visible}
+          onRequestClose={() => {
+            // Alert.alert('Modal has been closed.');
+            setVisible(Visible);
+          }}>
+          <View style={styles.modalView}>
+            <View
+              style={{
+                marginVertical: 10,
+                alignItems: 'center',
+                alignSelf: 'center',
+              }}>
+              <Image source={require('../../assests/images/greencheck.png')} />
+              <Text
+                style={[styles.modalText, {fontWeight: '600', marginTop: 15}]}>
+                Updated Successfully
+              </Text>
+            </View>
+            <TouchableOpacity
+              style={[styles.button, styles.buttonClose, {width: 200}]}
               onPress={onpress1}>
               <Text style={[styles.textStyle]}>Done</Text>
             </TouchableOpacity>

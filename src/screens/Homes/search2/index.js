@@ -41,6 +41,7 @@ const Search2 = ({route, navigation, otherParam}) => {
       img4: Images.BackGround.rectangle2,
       two: Images.Imgs.heart1,
       one: Images.Icons.circleplus,
+      iconimg2: Images.Icons.Pcircle,
     },
     {
       text1: 'Ground Work',
@@ -63,6 +64,7 @@ const Search2 = ({route, navigation, otherParam}) => {
       title: 'title',
       plus: 'plus',
       img: Images.Imgs.heart1,
+      // iconimg2: Images.Icons.Pcircle,
     },
     {
       id: 2,
@@ -72,6 +74,7 @@ const Search2 = ({route, navigation, otherParam}) => {
       name: 'TONGLEN',
       title: 'title',
       plus: 'plus',
+      // iconimg2: Images.Icons.prectangel,
     },
     {
       id: 3,
@@ -81,6 +84,7 @@ const Search2 = ({route, navigation, otherParam}) => {
       name: 'TONGLEN',
       title: 'title',
       plus: 'plus',
+      // iconimg2: Images.Icons.Pcircle,
     },
     {
       id: 4,
@@ -90,6 +94,31 @@ const Search2 = ({route, navigation, otherParam}) => {
       name: 'TONGLEN',
       title: 'title',
       plus: 'plus',
+      // iconimg2: Images.Icons.Pcircle,
+    },
+  ];
+  const Data2 = [
+    {
+      id: 1,
+      bg1: Images.BackGround.black,
+      bg12: Images.BackGround.greenbg,
+      heart1: Images.Icons.heart1,
+      img2: Images.BackGround.nopath2,
+      name: 'TONGLEN',
+      title: 'title',
+      plus: 'plus',
+      img: Images.Imgs.heart1,
+      // iconimg2: Images.Icons.Pcircle,
+    },
+    {
+      id: 2,
+      bg1: Images.BackGround.black,
+      bg12: Images.BackGround.greenbg,
+      heart1: Images.Icons.heart1,
+      name: 'TONGLEN',
+      title: 'title',
+      plus: 'plus',
+      // iconimg2: Images.Icons.prectangel,
     },
   ];
   return (
@@ -394,7 +423,6 @@ const Search2 = ({route, navigation, otherParam}) => {
                         otherParam1: 'Tools For Light',
                         otherParam2: 'Tools For Shadow',
                         otherParam3: 'Tools For Connections',
-                        otherParam4: 'Buddhism',
                       });
                     }}
                     style={styles.topics}>
@@ -448,7 +476,8 @@ const Search2 = ({route, navigation, otherParam}) => {
                               flexGrow: 1,
                             }}>
                             <All
-                            iconimg
+                              iconimg={true}
+                              iconimg2
                               I1={item.three}
                               textA={item.textA}
                               textB={item.textB}
@@ -515,7 +544,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                       keyExtractor={item => item.id}
                       showsHorizontalScrollIndicator={false}
                       numColumns={2}
-                      data={Data}
+                      data={Data2}
                       renderItem={({item}) => {
                         return (
                           <View
@@ -525,6 +554,8 @@ const Search2 = ({route, navigation, otherParam}) => {
                               flexGrow: 1,
                             }}>
                             <All
+                              iconimg={true}
+                              iconimg2
                               heart1={item.heart1}
                               textA={item.textA}
                               textB={item.textB}

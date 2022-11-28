@@ -9,12 +9,12 @@ import {
   FlatList,
   StatusBar,
 } from 'react-native';
-import { Header, Imgbox, SeeAll, StoryData } from '../../../componrnts';
+import {Header, Imgbox, SeeAll, StoryData} from '../../../componrnts';
 import All from '../../../componrnts/all';
 import MainBox from '../../../componrnts/mainbox';
 import Images from '../../../constants';
 
-const Home = ({ navigation, route }) => {
+const Home = ({navigation, route}) => {
   const Data = [
     {
       id: 1,
@@ -85,7 +85,7 @@ const Home = ({ navigation, route }) => {
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ flexGrow: 1 }}>
+        contentContainerStyle={{flexGrow: 1}}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
@@ -99,13 +99,13 @@ const Home = ({ navigation, route }) => {
             heartplus
             search1="search1"
             homeheader={true}
-            search={() => navigation.navigate('Homes', { screen: 'Search' })}
+            search={() => navigation.navigate('Homes', {screen: 'Search'})}
             heart
             plus
           />
         </View>
         <View style={styles.Box1}>
-          <View style={{ width: '90%', alignSelf: 'center' }}>
+          <View style={{width: '90%', alignSelf: 'center'}}>
             <Text
               style={{
                 textAlign: 'center',
@@ -125,7 +125,7 @@ const Home = ({ navigation, route }) => {
               }>
               <SeeAll
                 onPress={() =>
-                  navigation.navigate('Homes', { screen: 'FressBlooms' })
+                  navigation.navigate('Homes', {screen: 'FressBlooms'})
                 }
                 textA="FRESH BLOOMS"
                 textB="SeeAll"
@@ -160,15 +160,14 @@ const Home = ({ navigation, route }) => {
               }>
               <View style={styles.box1}>
                 <FlatList
-
                   showsHorizontalScrollIndicator={false}
                   keyExtractor={item => item.id}
                   data={Data}
-                  renderItem={({ item }) => {
+                  renderItem={({item}) => {
                     return (
                       <All
                         pressI={() =>
-                          navigation.navigate('Homes', { screen: 'Video' })
+                          navigation.navigate('Homes', {screen: 'Video'})
                         }
                         heart1={item.heart1}
                         textA={item.textA}
