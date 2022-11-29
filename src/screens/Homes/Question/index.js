@@ -32,14 +32,13 @@ const Question = props => {
             headertext="Resonance Finder"
             OnPress={() => props.navigation.goBack('')}
           />
-
           <QComponents
             iconone
             name2="chevron-down"
             direction2="Description:"
             flowwerlist={true}
             Statement="Statement"
-            flow="Flow Thtough"
+            flow="Flow Through"
             number={'2/20'}
             name="chevron-down"
             image1={true}

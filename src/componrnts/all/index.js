@@ -117,7 +117,7 @@ const All = ({
                       style={{
                         // backgroundColor: 'pink',
                         top: 35,
-                        right: 40,
+                        right: 20,
                         position: 'absolute',
                         height: 33,
                         width: 33,

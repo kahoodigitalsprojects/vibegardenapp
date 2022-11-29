@@ -32,6 +32,7 @@ const Search2 = ({route, navigation, otherParam}) => {
       one: Images.Icons.circleplus,
       heart1: Images.Icons.heart1,
       img: Images.Imgs.heart1,
+      centertexr: 'TOOLS FOR LIGHT',
     },
     {
       text1: 'Tools',
@@ -279,7 +280,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                                 left={60}
                                 bgcolor={'#FF4053'}
                                 TONGLEN="TONGLEN"
-                                textone={'TOOLS FOR LIGHT'}
+                                textone={item.centertexr}
                                 I1={item.one}
                                 item={item.ImgICon}
                                 img2={item.img2}
@@ -316,7 +317,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                                 left={60}
                                 bgcolor={'#FF4053'}
                                 TONGLEN="TONGLEN"
-                                textone={'TOOLS FOR LIGHT'}
+                                textone={item.centertexr}
                                 I1={item.heart1}
                                 img2={item.img3}
                                 color={'green'}
@@ -355,7 +356,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                                 left={60}
                                 bgcolor={'#FF4053'}
                                 TONGLEN="TONGLEN"
-                                textone={'TOOLS FOR LIGHT'}
+                                textone={item.centertexr}
                                 text2={'5 min'}
                               />
                             </View>
@@ -440,11 +441,10 @@ const Search2 = ({route, navigation, otherParam}) => {
                     onPress={() => {
                       /* 1. Navigate to the Details route with params */
                       navigation.navigate('Search3', {
-                        itemId: 'Groundwork Types',
+                        itemId: 'Types',
                         otherParam1: 'Tools For Light',
                         otherParam2: 'Tools For Shadow',
                         otherParam3: 'Tools For Connections',
-                        otherParam4: 'Buddhism',
                       });
                     }}
                     style={styles.topics}>

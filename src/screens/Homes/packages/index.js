@@ -76,6 +76,9 @@ const Packages = props => {
         <PopUp
           poup1={true}
           Visible={state}
+          onpressA={() => {
+            props.navigation.navigate('PaymentMethod');
+          }}
           setVisible={setstate}
           onpress1={() => {
             setstate(false);

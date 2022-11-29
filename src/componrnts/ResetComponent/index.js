@@ -16,7 +16,7 @@ import Tooltip from 'react-native-walkthrough-tooltip';
 import Images from '../../constants';
 import {SeeAll} from '../SeeAll';
 
-const Reset = ({Iname}) => {
+const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [toolTipVisible, setToolTipVisible] = useState(false);
   return (
@@ -83,9 +83,18 @@ const Reset = ({Iname}) => {
                         padding: 1,
                       }}>
                       <Icon2 name="delete" size={12} />
-                      <View style={{marginLeft: 4}}>
-                        <Text style={{fontSize: 12}}>Remove</Text>
-                      </View>
+                      {icontrue && (
+                        <View style={{marginLeft: 4}}>
+                          <Text style={{fontSize: 12}}>Remove</Text>
+                        </View>
+                      )}
+                      {imgtrue && (
+                        <View style={{marginLeft: 4, backgroundColor: 'green'}}>
+                          <View style={{marginLeft: 4}}>
+                            <Text style={{fontSize: 12}}>Remove</Text>
+                          </View>
+                        </View>
+                      )}
                     </TouchableOpacity>
                   </View>
                 </Modal>
@@ -97,7 +106,7 @@ const Reset = ({Iname}) => {
               </TouchableOpacity>
             </View>
             <TouchableOpacity style={{marginTop: 35}}>
-              <Icon name={Iname} size={22} color="red" />
+              <Icon name={iconname} size={22} color="red" />
             </TouchableOpacity>
           </View>
         </View>

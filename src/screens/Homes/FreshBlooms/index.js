@@ -15,8 +15,15 @@ import Reset from '../../../componrnts/ResetComponent';
 import Result from '../result';
 
 const FressBlooms = ({route, navigation}) => {
-  const [showTip, setTip] = useState(true);
-  const data = [{id: 1}, {id: 2}, {id: 3}, {id: 4}];
+  const [isdata, setIsdata] = useState(true);
+  const [state, setState] = useState(false);
+
+  const data = [
+    {id: 1, icon1: 'heart'},
+    {id: 2, icon1: 'heart'},
+    {id: 3, icon1: 'heart'},
+    {id: 4, icon1: 'heart'},
+  ];
   return (
     <>
       <ScrollView
@@ -35,15 +42,19 @@ const FressBlooms = ({route, navigation}) => {
               iconName="closesquareo"
               fontSize={18}
               header2
-              headertext="Fresh Blooms"
+              headertext={hedindg}
               OnPress={() => navigation.replace('Mytabs', {screen: 'Home'})}
             />
             <View style={{marginTop: 30}}>
               <FlatList
                 data={data}
                 keyExtractor={item => item.id}
-                renderItem={({items}) => {
-                  return <Reset />;
+                renderItem={({item}) => {
+                  return (
+                    <Reset
+                    
+                    />
+                  );
                 }}
               />
             </View>

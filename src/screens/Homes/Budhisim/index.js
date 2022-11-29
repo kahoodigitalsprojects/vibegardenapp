@@ -83,7 +83,7 @@ const Buddhisim = props => {
             iconName="left"
             header2
             headertext="Buddhisim"
-            // OnPress={() => props.navigation.replace('Home')}
+            OnPress={() => props.navigation.goBack('')}
           />
         </View>
         <View style={styles.Box1}>

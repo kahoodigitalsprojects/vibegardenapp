@@ -3,10 +3,7 @@ import React from 'react';
 import Images from '../../constants';
 
 const MainBox = ({
-  color,
-  TONGLEN,
-  text2,
-  greenicon,
+
   img2,
   bgcolor,
   I1,
@@ -21,10 +18,7 @@ const MainBox = ({
           style={{
             width: '100%',
             height: '100%',
-            borderRadius: 10,
-            // justifyContent: 'center',
-            // alignItems: 'center',
-          }}
+            borderRadius: 10,}}
           source={img2}
         />
       </View>
@@ -44,7 +38,6 @@ const MainBox = ({
           style={{width: '100%', height: '100%'}}
         />
       </View>
-
       <View
         style={{
           position: 'absolute',

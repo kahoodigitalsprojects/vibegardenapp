@@ -27,6 +27,8 @@ const Result = props => {
           }}>
           <Header
             iconName="closesquareo"
+            fontSize={25}
+            color="#1C5C2E"
             header2
             OnPress={() => props.navigation.navigate('me')}
             headertext="Resonance Finder"
@@ -101,7 +103,7 @@ const Result = props => {
                 <Text style={styles.text2}>Inner dim light Beings</Text>
                 <Text style={styles.text2}>Mindfullness</Text>
                 <Text style={styles.text2}>Western Physics</Text>
-                <Text style={styles.text2}>Ascended MAster</Text>
+                <Text style={styles.text2}>Ascended Master</Text>
                 <Text style={styles.text2}>Ascent Wisdom</Text>
                 <Text style={styles.text2}>Nature</Text>
               </View>

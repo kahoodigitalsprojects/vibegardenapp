@@ -16,18 +16,18 @@ const EmailNotification = props => {
 
   const data = [
     {
-      text1: '   Tools Recommendations:',
-      text2: '  Personalized tools suggestions based on your resonance ',
+      text1: 'Tools Recommendations:',
+      text2: 'Personalized tools suggestions based on your resonance ',
     },
     {
-      text1: '    VibeGarden Updates:',
+      text1: 'VibeGarden Updates:',
       text2:
-        '    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy. ',
+        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy. ',
     },
     {
       text1: 'Surveys:',
       text2:
-        '    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy. ',
+        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy. ',
     },
   ];
 

@@ -68,18 +68,6 @@ const Home = ({navigation, route}) => {
       one: Images.Icons.circleplus,
       heart1: Images.Icons.heart1,
     },
-    {
-      id: 5,
-      bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
-      name: 'TONGLEN',
-      title: 'title',
-      textA: 'BUDDHISM',
-      plus: 'plus',
-      textB: 'See ALL',
-      img4: Images.BackGround.rectangle2,
-      one: Images.Icons.circleplus,
-    },
   ];
   return (
     <SafeAreaView style={styles.main}>

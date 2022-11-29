@@ -80,8 +80,9 @@ const ChuchuasDetails = ({route, navigation}) => {
                 {newtext}
               </Text>
 
-              <View style={{marginTop: 30}}>
+              <View style={{marginTop: 30,margin:8}}>
                 <FlatList
+                showsHorizontalScrollIndicator={false}
                   data={Data}
                   horizontal={true}
                   renderItem={({item, index}) => {

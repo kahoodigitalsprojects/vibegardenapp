@@ -46,7 +46,7 @@ const Question3 = props => {
             text1={'Dont Teast Data'}
             text2="Whose Data?"
             text3={'Sometimes'}
-            text4="Always9i"
+            text4="Always"
             text6={'Data Help me Accept new concepts.'}
           />
         </View>

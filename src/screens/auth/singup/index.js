@@ -24,7 +24,7 @@ const SignUp = ({route, navigation}) => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
         <View style={{width: '90%', alignSelf: 'center'}}>
-          <View style={{marginTop: 20}}>
+          <View style={{marginTop: 10}}>
             <Header
               iconName="arrowleft"
               header2
@@ -63,7 +63,7 @@ const SignUp = ({route, navigation}) => {
               <TextInput placeholder="Password" />
             </View>
 
-            <View style={{marginTop: 10}}>
+            <View style={{marginTop: 50}}>
               <Pinkbtn
                 onPress={() => {
                   registerd2
@@ -77,44 +77,45 @@ const SignUp = ({route, navigation}) => {
                 width={'60%'}
                 btntxt="Continue"
               />
+
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate('loginoption');
+                }}>
+                <Text
+                  style={{
+                    marginTop: 35,
+                    color: '#1C5C2E',
+                    fontSize: 18,
+                    textAlign: 'center',
+                  }}>
+                  Already have an account?
+                  <Text style={{fontWeight: 'bold'}}>Login</Text>
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate('Homes', {screen: 'story1'});
+                }}
+                style={{
+                  flexDirection: 'row',
+                  alignSelf: 'center',
+                  // marginVertical: 20,
+                }}>
+                <View style={styles.blue}>
+                  <Icon name="play" color={'#fff'} size={12} />
+                </View>
+                <Text
+                  style={{
+                    marginTop: 20,
+                    color: '#1492E6',
+                    fontSize: 18,
+                    textAlign: 'center',
+                  }}>
+                  Want to See How Works?
+                </Text>
+              </TouchableOpacity>
             </View>
-            <TouchableOpacity
-              onPress={() => {
-                navigation.navigate('loginoption');
-              }}>
-              <Text
-                style={{
-                  marginTop: 35,
-                  color: '#1C5C2E',
-                  fontSize: 18,
-                  textAlign: 'center',
-                }}>
-                Already have an account?
-                <Text style={{fontWeight: 'bold'}}>Login</Text>
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => {
-                navigation.navigate('Homes', {screen: 'story1'});
-              }}
-              style={{
-                flexDirection: 'row',
-                alignSelf: 'center',
-                // marginVertical: 20,
-              }}>
-              <View style={styles.blue}>
-                <Icon name="play" color={'#fff'} size={12} />
-              </View>
-              <Text
-                style={{
-                  marginTop: 20,
-                  color: '#1492E6',
-                  fontSize: 18,
-                  textAlign: 'center',
-                }}>
-                Want to See How Works?
-              </Text>
-            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>

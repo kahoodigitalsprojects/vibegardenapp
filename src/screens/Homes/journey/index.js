@@ -9,7 +9,7 @@ import {
   StatusBar,
   ScrollView,
   SafeAreaView,
-  ImageBackground
+  ImageBackground,
 } from 'react-native';
 import {Icon} from 'react-native-elements';
 import {yellow100} from 'react-native-paper/lib/typescript/styles/colors';
@@ -64,7 +64,7 @@ const Journey = props => {
                   return (
                     <>
                       <View style={{marginVertical: 10, width: '50%'}}>
-                        <View style={{ width: '100%'}}>
+                        <View style={{width: '100%'}}>
                           <TouchableOpacity
                             onPress={() =>
                               index === true ? '' : setdata1(index)
@@ -72,33 +72,33 @@ const Journey = props => {
                             style={{}}>
                             <>
                               {data1 === index ? (
-                                  <ImageBackground
+                                <ImageBackground
                                   source={item.img1}
                                   style={[
                                     styles.img,
                                     {marginTop: 0, opacity: 0.7},
                                   ]}
                                   resizeMode="contain">
-                                <View
-                                  style={{
-                                    width: 100,
-                                    height: 100,
-                                    borderRadius: 100,
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    alignSelf: 'center',
-                                    backgroundColor:
-                                      data1 === index ? '#CD258D' : '',
-                                    opacity: 0.8,
-                                    elevation: data1 === index ? 0 : 5,
-                                  }}>
-                                  <Icon
-                                    name="check"
-                                    size={39}
-                                    color="#fff"
-                                    style={{}}
-                                  />
-                                </View>
+                                  <View
+                                    style={{
+                                      width: 100,
+                                      height: 100,
+                                      borderRadius: 100,
+                                      justifyContent: 'center',
+                                      alignItems: 'center',
+                                      alignSelf: 'center',
+                                      backgroundColor:
+                                        data1 === index ? '#CD258D' : '',
+                                      opacity: 0.8,
+                                      elevation: data1 === index ? 0 : 5,
+                                    }}>
+                                    <Icon
+                                      name="check"
+                                      size={39}
+                                      color="#fff"
+                                      style={{}}
+                                    />
+                                  </View>
                                 </ImageBackground>
                               ) : (
                                 <View style={{}}>

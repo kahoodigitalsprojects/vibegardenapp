@@ -8,7 +8,7 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import { Header } from '../../../componrnts';
+import {Header} from '../../../componrnts';
 import Reset from '../../../componrnts/ResetComponent';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon1 from 'react-native-vector-icons/Feather';
@@ -18,15 +18,15 @@ const ManageSubscription = props => {
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
-      contentContainerStyle={{ flexGrow: 1 }}>
+      contentContainerStyle={{flexGrow: 1}}>
       <StatusBar animated={true} backgroundColor="#000" />
       <View style={styles.main}>
-        <View style={{ marginVertical: 30, width: '90%', alignSelf: 'center' }}>
+        <View style={{marginVertical: 30, width: '90%', alignSelf: 'center'}}>
           <Header
             iconName="left"
             header2
             OnPress={() =>
-              props.navigation.navigate('Homes', { screen: 'settings' })
+              props.navigation.navigate('Homes', {screen: 'settings'})
             }
             headertext="Manage Subscription"
             fontSize={25}
@@ -35,73 +35,72 @@ const ManageSubscription = props => {
         </View>
         <View style={styles.firstview}>
           <View style={styles.row}>
-            <Text style={[styles.text1, { color: 'black' }]}>
+            <Text style={[styles.text1, {color: 'black'}]}>
               Subscriptions Info:
             </Text>
             <View style={styles.line}></View>
           </View>
-          <View style={[styles.row, { justifyContent: 'space-between' }]}>
-            <Text style={[styles.text1, { fontSize: 14 }]}>
+          <View style={[styles.row, {justifyContent: 'space-between'}]}>
+            <Text style={[styles.text1, {fontSize: 14}]}>
               Subscriptions Date:
             </Text>
-            <Text style={[styles.text1, { fontSize: 14, color: '#1C5C2E' }]}>
+            <Text style={[styles.text1, {fontSize: 14, color: '#1C5C2E'}]}>
               7/8/2022
             </Text>
           </View>
-          <View style={[styles.row, { justifyContent: 'space-between' }]}>
-            <Text style={[styles.text1, { fontSize: 14 }]}>
+          <View style={[styles.row, {justifyContent: 'space-between'}]}>
+            <Text style={[styles.text1, {fontSize: 14}]}>
               Next Billing Date:
             </Text>
-            <Text style={[styles.text1, { fontSize: 14, color: '#1C5C2E' }]}>
+            <Text style={[styles.text1, {fontSize: 14, color: '#1C5C2E'}]}>
               7/10/2022
             </Text>
           </View>
-          <View style={[styles.row, { justifyContent: 'space-between' }]}>
-            <Text style={[styles.text1, { fontSize: 14, marginTop: 5 }]}>
+          <View style={[styles.row, {justifyContent: 'space-between'}]}>
+            <Text style={[styles.text1, {fontSize: 14, marginTop: 5}]}>
               Package Selected:
             </Text>
             <TouchableOpacity
-              style={[styles.box, { left: 10 }]}
+              style={[styles.box, {left: 10}]}
               onPress={() => {
-                props.navigation.navigate('signup');
+                props.navigation.navigate('Packges');
               }}>
-              <Text style={{ fontSize: 12, marginTop: 5 }}>Monthly</Text>
-              <TouchableOpacity style={{}}>
-                <Icon
-                  name="sort-down"
-                  size={25}
-                  color="#1C5C2E"
-                  style={{ marginBottom: 5 }}
-                />
-              </TouchableOpacity>
+              <Text style={{fontSize: 12, marginTop: 5}}>Monthly</Text>
+
+              <Icon
+                name="sort-down"
+                size={25}
+                color="#1C5C2E"
+                style={{marginBottom: 5}}
+              />
             </TouchableOpacity>
           </View>
           <View style={styles.row}>
-            <Text style={[styles.text1, { color: 'black' }]}>Billing Info:</Text>
+            <Text style={[styles.text1, {color: 'black'}]}>Billing Info:</Text>
             <View style={styles.line}></View>
           </View>
-          <View style={[styles.row, { justifyContent: 'space-between' }]}>
-            <View style={{ flexDirection: 'row', marginTop: 10 }}>
-              <Text style={[styles.text1, { fontSize: 14 }]}>Card No:</Text>
-              <Text style={[{ fontSize: 12, marginLeft: 10, marginTop: 3 }]}>
+          <View style={[styles.row, {justifyContent: 'space-between'}]}>
+            <View style={{flexDirection: 'row', marginTop: 10}}>
+              <Text style={[styles.text1, {fontSize: 14}]}>Card No:</Text>
+              <Text style={[{fontSize: 12, marginLeft: 10, marginTop: 3}]}>
                 48605678xxxxxx
               </Text>
             </View>
             <Image
               source={Images.Icons.visa}
-              style={{ width: 50, height: 30 }}
+              style={{width: 50, height: 30}}
               resizeMode="contain"
             />
           </View>
-          <View style={{ flexDirection: 'row' }}>
-            <Text style={[styles.text1, { fontSize: 14 }]}>Card No:</Text>
-            <Text style={[{ fontSize: 12, marginLeft: 10, marginTop: 3 }]}>
+          <View style={{flexDirection: 'row'}}>
+            <Text style={[styles.text1, {fontSize: 14}]}>Card No:</Text>
+            <Text style={[{fontSize: 12, marginLeft: 10, marginTop: 3}]}>
               5/2025
             </Text>
           </View>
-          <View style={{ flexDirection: 'row', marginTop: 10 }}>
-            <Text style={[styles.text1, { fontSize: 14 }]}>Card No:</Text>
-            <Text style={[{ fontSize: 12, marginLeft: 10, marginTop: 3 }]}>
+          <View style={{flexDirection: 'row', marginTop: 10}}>
+            <Text style={[styles.text1, {fontSize: 14}]}>Card No:</Text>
+            <Text style={[{fontSize: 12, marginLeft: 10, marginTop: 3}]}>
               147
             </Text>
           </View>
@@ -109,20 +108,24 @@ const ManageSubscription = props => {
             onPress={() => {
               props.navigation.navigate('PaymentMethod');
             }}
-            style={{ flexDirection: 'row', marginVertical: 10 }}>
+            style={{flexDirection: 'row', marginVertical: 10}}>
             <Icon1
               name="check-square"
               size={15}
               color="#1C5C2E"
-              style={{ marginTop: 5 }}
+              style={{marginTop: 5}}
             />
             <Text
-              style={{ color: '#1C5C2E', fontSize: 12, marginLeft: 10, top: 4 }}>
+              style={{color: '#1C5C2E', fontSize: 12, marginLeft: 10, top: 4}}>
               Edit Payment Methods
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => { props.navigation.navigate('CancelSubscription') }} style={{ alignSelf: 'center', marginTop: 50 }}>
-            <Text style={[{ color: '#1492E6', fontSize: 16 }]}>
+          <TouchableOpacity
+            onPress={() => {
+              props.navigation.navigate('CancelSubscription');
+            }}
+            style={{alignSelf: 'center', marginTop: 50}}>
+            <Text style={[{color: '#1492E6', fontSize: 16}]}>
               Cancel Subscription
             </Text>
           </TouchableOpacity>

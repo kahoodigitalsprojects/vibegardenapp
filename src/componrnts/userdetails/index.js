@@ -26,22 +26,20 @@ const Userdetails = ({
   nametext,
   bear,
 
-  users
+  users,
 }) => {
   return (
     <>
-      <View
-        style={{ width: '90%', alignSelf: 'center' }}>
+      <View style={{width: '90%', alignSelf: 'center'}}>
         {databox1 && (
           <View style={styles.boxouter}>
-            <View style={{ width: '95%', alignSelf: 'center' }}>
+            <View style={{width: '95%', alignSelf: 'center'}}>
               <View
                 style={{
-                  marginVertical: 10,
                   justifyContent: 'space-between',
                   width: '100%',
                   borderRadius: 30,
-                  height: 86,
+                  height: 80,
                   backgroundColor: bgcolor,
                   elevation: elevation,
                   flexDirection: 'row',
@@ -50,10 +48,10 @@ const Userdetails = ({
                 <View style={styles.img}>
                   <Image
                     source={Img1}
-                    style={{ width: 60, height: 60, borderRadius: 100 }}
+                    style={{width: 60, height: 60, borderRadius: 100}}
                   />
                 </View>
-                <View style={{ width: '70%', height: 100, }}>
+                <View style={{width: '70%', height: 100}}>
                   <View
                     style={{
                       width: '100%',
@@ -84,7 +82,7 @@ const Userdetails = ({
                     {text}
                   </Text>
                 </View>
-                <View style={{ marginTop: 8 }}>
+                <View style={{marginTop: 8}}>
                   <Text
                     style={{
                       fontSize: 12,
@@ -102,22 +100,21 @@ const Userdetails = ({
       </View>
 
       {databox2 && (
-        <View style={{ backgroundColor: backgroundColor, borderRadius: 12 }}>
+        <View style={{backgroundColor: backgroundColor, borderRadius: 12}}>
           <View
             style={{
               flexDirection: 'row',
               width: '100%',
             }}>
-            <View style={{ width: 44, height: 45, margin: 15, }}>
+            <View style={{width: 44, height: 45, margin: 15}}>
               <Image
                 source={bear}
                 resizeMode="contain"
-                style={{ width: '100%', height: '100%' }}
+                style={{width: '100%', height: '100%'}}
               />
-
             </View>
             <View>
-              <Text style={{ fontSize: 12, marginTop: 16 }}>
+              <Text style={{fontSize: 12, marginTop: 16}}>
                 Lorem ipsum dolor sit amet, consetetur {'\n'} sadipscing elitr,
                 sed diam nonumy eirmod {'\n'} tepor
               </Text>
@@ -131,18 +128,19 @@ const Userdetails = ({
                 Link
               </Text>
             </View>
-
           </View>
           <View>
-            {nametext && <Text
-              style={{
-                marginLeft: 20, marginTop: -15,
-                fontWeight: 'bold',
-                fontSize: 16
-              }}>
-              {names}
-            </Text>
-            }
+            {nametext && (
+              <Text
+                style={{
+                  marginLeft: 20,
+                  marginTop: -15,
+                  fontWeight: 'bold',
+                  fontSize: 16,
+                }}>
+                {names}
+              </Text>
+            )}
           </View>
         </View>
       )}
@@ -194,4 +192,4 @@ const styles = StyleSheet.create({
     color: '#000',
   },
 });
-export { Userdetails };
+export {Userdetails};

@@ -46,7 +46,7 @@ const Question3 = props => {
             number={'4/20'}
             text1={'Angels are some people made upto better'}
             text2="I wish"
-            text3={'I Wrap Myself in that way Nightly'}
+            text3={`'It Feels That's way Sometime'`}
             text4="I Wrap Myself in that way Nightly"
             text6={'We Each Have Angles?'}
           />

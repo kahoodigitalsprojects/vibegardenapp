@@ -33,7 +33,7 @@ const Spalsh2 = ({navigation}) => {
               <Text style={styles.text1}>
                 A Few fun question help us personal your experience here
               </Text>
-              <View style={{marginTop: 20}}>
+              <View style={{marginTop: 30, justifyContent:'flex-end'}}>
                 <Pinkbtn
                   onPress={() =>
                     navigation.navigate('signup', {

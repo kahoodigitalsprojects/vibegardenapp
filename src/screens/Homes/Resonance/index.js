@@ -67,7 +67,7 @@ const Resonance = props => {
           <View style={{marginTop: 10}}>
             <Pinkbtn
               onPress={() => {
-                props.navigation.navigate('question');
+                props.navigation.navigate('question2');
               }}
               btntxt="
             Save"

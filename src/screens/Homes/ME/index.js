@@ -21,36 +21,52 @@ const Me = props => {
       img1: Images.Icons.gpluse,
       text1: 'Tools to try',
       onPress: () => {
-        props.navigation.navigate('Homes', {
-          screen: 'FressBlooms',
-        });
+        props.navigation.navigate(
+          'Homes',
+          {
+            screen: 'FressBlooms',
+          },
+          {icon1: 'ghjgghghhgf', hedindg: 'Tools To try'},
+        );
       },
     },
     {
       img1: Images.Icons.arrow,
       text1: 'Recent Content',
       onPress: () => {
-        props.navigation.navigate('Homes', {
-          screen: 'FressBlooms',
-        });
+        props.navigation.navigate(
+          'Homes',
+          {
+            screen: 'FressBlooms',
+          },
+          {icon1: 'ghjgghghhgf'},
+        );
       },
     },
     {
       img1: Images.Icons.gheart,
       text1: 'Favorites',
       onPress: () => {
-        props.navigation.navigate('Homes', {
-          screen: 'FressBlooms',
-        });
+        props.navigation.navigate(
+          'Homes',
+          {
+            screen: 'FressBlooms',
+          },
+          {icon1: 'ghjgghghhgf'},
+        );
       },
     },
     {
       img1: Images.Icons.star,
       text1: 'Top Tools',
       onPress: () => {
-        props.navigation.navigate('Homes', {
-          screen: 'FressBlooms',
-        });
+        props.navigation.navigate(
+          'Homes',
+          {
+            screen: 'FressBlooms',
+          },
+          {icon1: 'ghjgghghhgf'},
+        );
       },
     },
     {

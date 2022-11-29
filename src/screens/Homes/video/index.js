@@ -45,7 +45,6 @@ const Video = ({route, navigation, otherParam}) => {
       img11: Images.Imgs.R3,
     },
   ];
-
   const data2 = [
     {
       texlist: 'Buddhidum',
@@ -70,7 +69,6 @@ const Video = ({route, navigation, otherParam}) => {
       plus: 'plus',
     },
   ];
-
   return (
     <>
       <SafeAreaView style={styles.main}>
@@ -117,7 +115,7 @@ const Video = ({route, navigation, otherParam}) => {
                 icontwo={true}
                 iconone1
                 name11="plus"
-                name2="heart"
+                name2="heart-outlined"
                 Statement="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.."
               />
             </View>
@@ -197,7 +195,7 @@ const Video = ({route, navigation, otherParam}) => {
             <View style={{}}>
               {Data3.map(index => {
                 return (
-                  <View style={{height: 80, marginVertical: 20}}>
+                  <View style={{height: 80, marginVertical: 10}}>
                     <ScrollView style={{}}>
                       <View style={styles.item1}>
                         <Userdetails
@@ -220,7 +218,7 @@ const Video = ({route, navigation, otherParam}) => {
 
           <View
             style={{
-              width: '90%',
+              width: '95%',
               alignSelf: 'center',
             }}>
             <View style={styles.row}>
@@ -229,7 +227,6 @@ const Video = ({route, navigation, otherParam}) => {
                   color: 'black',
                   fontSize: 20,
                   color: '#1C5C2E',
-                  marginTop: 5,
                 }}>
                 Related Content:
               </Text>

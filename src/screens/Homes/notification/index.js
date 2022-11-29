@@ -76,6 +76,8 @@ const Notification = props => {
             alignSelf: 'center',
           }}>
           <Header
+          fontSize={25}
+          color=""
             iconName="closesquareo"
             header2
             headertext="Notification"

@@ -13,7 +13,7 @@ import {Button, Overlay} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Images from '../../constants';
 
-const PopUp = ({Visible, setVisible, onpress1, poup1, poup2, poup3}) => {
+const PopUp = ({Visible, setVisible, onpress1, poup1, poup2, poup3,onpressA}) => {
   const [state1, setState1] = useState(false);
   return (
     <>
@@ -66,7 +66,7 @@ const PopUp = ({Visible, setVisible, onpress1, poup1, poup2, poup3}) => {
                 <Text style={[styles.textStyle]}>Hide Modal</Text>
               </TouchableOpacity>
             </View>
-            <TouchableOpacity style={styles.btns}>
+            <TouchableOpacity onPress={onpressA} style={styles.btns}>
               <Text style={{color: '#1492E6', fontSize: 16}}>Try New Card</Text>
               <Icon
                 name="arrowright"

@@ -123,13 +123,28 @@ const Story1 = props => {
                   />
                 </View>
                 <View>
-                  <View style={{width: '90%', alignSelf: 'center'}}>
-                    <Text style={[styles.txt]}>
-                      AND. Embodying our fullness down here can be tricky! So
-                      with VibeBloom, we quest together. Kindling one another,
-                      as we employ joyful, powerful tools for coming home to
-                      ourselves and being all that we truly, uniquely are.
-                    </Text>
+                  <View>
+                    <View>
+                      <View
+                        style={{
+                          width: '90%',
+                          alignSelf: 'center',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                        }}>
+                        <Text
+                          style={[
+                            styles.txt,
+                            {width: '80%', textAlign: 'center', lineHeight: 26},
+                          ]}>
+                          AND. Embodying our fullness down here can be tricky!
+                          So with VibeBloom, we quest together. Kindling one
+                          another, as we employ joyful, powerful tools for
+                          coming home to ourselves and being all that we truly,
+                          uniquely are.
+                        </Text>
+                      </View>
+                    </View>
                   </View>
                 </View>
                 <View
@@ -154,13 +169,25 @@ const Story1 = props => {
                   />
                 </View>
                 <View>
-                  <View style={{width: '90%', alignSelf: 'center'}}>
-                    <Text style={[styles.txt]}>
-                      AND. Embodying our fullness down here can be tricky! So
-                      with VibeBloom, we quest together. Kindling one another,
-                      as we employ joyful, powerful tools for coming home to
-                      ourselves and being all that we truly, uniquely are.
-                    </Text>
+                  <View>
+                    <View
+                      style={{
+                        width: '90%',
+                        alignSelf: 'center',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                      }}>
+                      <Text
+                        style={[
+                          styles.txt,
+                          {width: '80%', textAlign: 'center', lineHeight: 26},
+                        ]}>
+                        AND. Embodying our fullness down here can be tricky! So
+                        with VibeBloom, we quest together. Kindling one another,
+                        as we employ joyful, powerful tools for coming home to
+                        ourselves and being all that we truly, uniquely are.
+                      </Text>
+                    </View>
                   </View>
                 </View>
                 <View
@@ -179,14 +206,24 @@ const Story1 = props => {
               <View style={styles.slide4}>
                 <View style={styles.img}>
                   <Image
-                    source={Images.BackGround.storybg}
+                    source={Images.BackGround.storybg3}
                     resizeMode="contain"
                     style={{width: '100%', height: '80%'}}
                   />
                 </View>
                 <View>
-                  <View style={{width: '90%', alignSelf: 'center'}}>
-                    <Text style={[styles.txt]}>
+                  <View
+                    style={{
+                      width: '90%',
+                      alignSelf: 'center',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}>
+                    <Text
+                      style={[
+                        styles.txt,
+                        {width: '80%', textAlign: 'center', lineHeight: 26},
+                      ]}>
                       AND. Embodying our fullness down here can be tricky! So
                       with VibeBloom, we quest together. Kindling one another,
                       as we employ joyful, powerful tools for coming home to
@@ -216,8 +253,59 @@ const Story1 = props => {
                   />
                 </View>
                 <View>
-                  <View style={{height: 400, position: 'absolute'}}>
-                    <Text style={[styles.txt]}>
+                  <View
+                    style={{
+                      width: '90%',
+                      alignSelf: 'center',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}>
+                    <Text
+                      style={[
+                        styles.txt,
+                        {width: '80%', textAlign: 'center', lineHeight: 26},
+                      ]}>
+                      AND. Embodying our fullness down here can be tricky! So
+                      with VibeBloom, we quest together. Kindling one another,
+                      as we employ joyful, powerful tools for coming home to
+                      ourselves and being all that we truly, uniquely are.
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    backgroundColor: '#ffff',
+                    marginVertical: 20,
+                    position: 'absolute',
+                    alignSelf: 'center',
+                    bottom: -20,
+                  }}>
+                  <Text style={{alignSelf: 'center', textAlign: 'center'}}>
+                    Swipe To See How It Works
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.slide6}>
+                <View style={styles.img}>
+                  <Image
+                    source={Images.BackGround.story5}
+                    resizeMode="contain"
+                    style={{width: '100%', height: '100%'}}
+                  />
+                </View>
+                <View>
+                  <View
+                    style={{
+                      width: '90%',
+                      alignSelf: 'center',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}>
+                    <Text
+                      style={[
+                        styles.txt,
+                        {width: '80%', textAlign: 'center', lineHeight: 26},
+                      ]}>
                       AND. Embodying our fullness down here can be tricky! So
                       with VibeBloom, we quest together. Kindling one another,
                       as we employ joyful, powerful tools for coming home to
@@ -238,36 +326,6 @@ const Story1 = props => {
                   </Text>
                 </View>
               </View>
-              <View style={styles.slide6}>
-                <View style={styles.img}>
-                  <Image
-                    source={Images.BackGround.story5}
-                    resizeMode="contain"
-                    style={{width: '100%', height: '100%'}}
-                  />
-                </View>
-                <View>
-                  <View style={{width: '90%', alignSelf: 'center'}}>
-                    <Text style={[styles.txt]}>
-                      AND. Embodying our fullness down here can be tricky! So
-                      with VibeBloom, we quest together. Kindling one another,
-                      as we employ joyful, powerful tools for coming home to
-                      ourselves and being all that we truly, uniquely are.
-                    </Text>
-                  </View>
-                </View>
-                <View
-                  style={{
-                    backgroundColor: '#ffff',
-                    marginVertical: 20,
-                    position: 'absolute',
-                    bottom: -20,
-                  }}>
-                  <Text style={{alignSelf: 'center'}}>
-                    Swipe To See How It Works
-                  </Text>
-                </View>
-              </View>
             </Swiper>
           </View>
         </View>
@@ -279,36 +337,36 @@ const Story1 = props => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FFFFFF',
   },
   slide1: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#ffffff',
 
-    // backgroundColor: '#fff',
+    // backgroundColor: '#ffffff',
   },
   slide2: {
     flex: 1,
 
-    backgroundColor: '#fff',
+    backgroundColor: '#ffffff',
   },
   slide3: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#ffffff',
   },
   slide4: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#ffffff',
   },
   slide5: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#ffffff',
   },
   slide6: {
     flex: 1,
   },
   text: {
-    color: '#fff',
+    color: '#ffffff',
     fontSize: 30,
     fontWeight: 'bold',
   },
@@ -328,7 +386,7 @@ const styles = StyleSheet.create({
     // position: 'absolute',
   },
   headtext: {
-    fontWeight:'300',
+    fontWeight: '300',
     fontSize: 32,
     color: '#fff',
     marginVertical: 15,

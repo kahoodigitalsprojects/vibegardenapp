@@ -106,7 +106,7 @@ const Search3 = ({route, navigation}) => {
         <View style={styles.container}>
           <Text
             style={{
-              fontSize: 20,
+              fontSize: 25,
               fontWeight: 'bold',
               color: '#1C5C2E',
               marginTop: -24,
@@ -124,6 +124,7 @@ const Search3 = ({route, navigation}) => {
                     alignItems: 'center',
                     alignSelf: 'center',
                     paddingVertical: 15,
+                    marginTop:20
                   }}>
                   <Text style={{fontSize: 18, color: '#000'}}>
                     {' '}
