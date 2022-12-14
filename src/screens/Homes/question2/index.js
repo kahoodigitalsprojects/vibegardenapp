@@ -36,31 +36,37 @@ const Question2 = props => {
             alignSelf: 'center',
           }}>
           <Header
-            color="#000"
+            // color="#000"
             fontSize={25}
             iconName="closesquareo"
             header2
+            color="#1C5C2E"
             headertext="Resonance Finder"
             OnPress={() => props.navigation.goBack('')}
           />
-          <View style={{}}>
+          <View style={{width: '100%'}}>
             <QComponents
-              icontwo
+              marginVertical={10}
+              flowwerlist11={true}
+              iconone
+              textforvideo="Resonance Finder Video Here"
               name2="chevron-up"
               video={true}
+              width={'90%'}
               direction2="Description:"
-              flowwerlist={true}
-              Statement="Statement"
-              flow="Flow Thtough"
+              Statement="Statement:"
+              flow="Flow Through"
+              margintopS={31}
               number={'1/20'}
               text1={'That Bananas'}
               text2="?"
+              fontSizetext2={34}
               text3={'May be but how do we know'}
-              text4="OH, 100%"
+              text4="OH,100%"
               text5={
                 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.'
               }
-              text6={' Plants are sentilents'}
+              text6={'Plants are sentilents'}
             />
           </View>
         </View>

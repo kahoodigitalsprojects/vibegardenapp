@@ -31,7 +31,6 @@ const SignUp = ({route, navigation}) => {
               OnPress={() => navigation.replace('Welcome')}
             />
           </View>
-
           <Text style={styles.headtext}>
             You're so very welcome,
             {'\n'} Erin
@@ -52,17 +51,15 @@ const SignUp = ({route, navigation}) => {
           </View>
           <View>
             <Text style={{fontSize: 18}}>Sign Up With Email</Text>
-
             <View style={styles.input}>
               <TextInput
                 placeholder="alexasamichael.125@gmail.com"
-                color="#1C5C2E"
+                placeholderTextColor="grey"
               />
             </View>
             <View style={styles.input}>
-              <TextInput placeholder="Password" />
+              <TextInput placeholder="Password" placeholderTextColor="grey" />
             </View>
-
             <View style={{marginTop: 50}}>
               <Pinkbtn
                 onPress={() => {
@@ -90,12 +87,20 @@ const SignUp = ({route, navigation}) => {
                     textAlign: 'center',
                   }}>
                   Already have an account?
-                  <Text style={{fontWeight: 'bold'}}>Login</Text>
+                  <Text
+                    style={{
+                      fontWeight: 'bold',
+                      textDecorationLine: 'underline',
+                    }}>
+                    Login
+                  </Text>
                 </Text>
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => {
-                  navigation.navigate('Homes', {screen: 'story1'});
+                  navigation.replace('Story1', {
+                    param: {istrue: true},
+                  });
                 }}
                 style={{
                   flexDirection: 'row',

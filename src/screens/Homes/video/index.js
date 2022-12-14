@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -25,9 +25,16 @@ import MainBox from '../../../componrnts/mainbox';
 import All from '../../../componrnts/all';
 import Question from '../Question';
 
-const Video = ({route, navigation, otherParam}) => {
-  // const { headertext1 } = route.params;
-  const Heading = route.params?.Heading || null;
+const Video = ({route, navigation}) => {
+  const [state, setState] = useState(icon1);
+  const {otherParam} = route.params;
+  const {otherParam1} = route.params;
+  const {itemId} = route.params;
+  const {heart} = route.params;
+  const {plus} = route.params;
+  const {icon1} = route.params;
+  const {redbtn} = route.params;
+  const {backoption} = route.params;
   // const { Heading } = route.params;
   const Data3 = [
     {text1: 'Not Really', img11: Images.Imgs.R1},
@@ -85,44 +92,57 @@ const Video = ({route, navigation, otherParam}) => {
             }}>
             <View
               style={{
-                marginVertical: 10,
-                marginTop: 10,
                 width: '90%',
+                marginTop: 10,
                 alignSelf: 'center',
               }}>
               <Header
+                greenicon1={
+                  state === icon1
+                    ? Images.Logos.greenicon1
+                    : Images.Logos.greenicon2
+                }
                 heartplus
                 heart
+                plus={plus}
+                size={22}
+                colorplus={'green'}
+                marginTopplus={2}
                 heading
                 fontSize={20}
                 search1="closesquareo"
                 logo11
+                hearttop={4}
                 color="#fff"
                 gbg="#1C5C2E"
                 homeheader
-                headertext={'FAMILY OF LIGHT'}
-                search={() =>
-                  navigation.navigate('Mytabs', {screen: 'GroundWork'})
-                }
+                headertext={otherParam1}
+                search={backoption}
               />
             </View>
-            <View style={{}}>
+            <View style={{width: '100%'}}>
               <QComponents
+                flowwerlist={otherParam}
+                iconone1={plus}
                 //   video={true}
+                name11="plus"
                 name="heart-outlined"
                 video2={true}
-                direction="Description:"
+                redbtn={redbtn}
+                direction="Descriptions:"
                 icontwo={true}
-                iconone1
-                name11="plus"
+                // iconone1
+                // name11="plus",
+                // marginVertical={24}
                 name2="heart-outlined"
+                width={'95%'}
                 Statement="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.."
               />
             </View>
 
             <View
               style={{
-                width: '95%',
+                width: '90%',
                 alignSelf: 'center',
               }}>
               <FlatList
@@ -137,20 +157,8 @@ const Video = ({route, navigation, otherParam}) => {
                           flexDirection: 'row',
                           alignSelf: 'flex-start',
                         }}>
-                        <TouchableOpacity
-                          onPress={() => {
-                            /* 1. Navigate to the Details route with params */
-                            navigation.navigate('Search3', {
-                              itemId: 86,
-                              otherParam1: 'Tools For Light',
-                              otherParam2: 'Tools For Shadow',
-                              otherParam3: 'Tools For Connections',
-                              otherParam4: 'Buddhism',
-                            });
-                          }}
-                          style={styles.topics}>
-                          <Text
-                            style={{color: '#1C5C2E', fontSize: 12, margin: 3}}>
+                        <TouchableOpacity style={[styles.topics, {padding: 6}]}>
+                          <Text style={{color: '#1C5C2E', fontSize: 12}}>
                             {item.texlist}
                           </Text>
                         </TouchableOpacity>
@@ -159,28 +167,49 @@ const Video = ({route, navigation, otherParam}) => {
                   );
                 }}
               />
-              {otherParam ? (
-                <FlatList
-                  showsHorizontalScrollIndicator={false}
-                  horizontal={true}
-                  data={Data3}
-                  renderItem={({item, index}) => {
-                    return (
-                      <>
-                        <View style={{}}>
-                          <Flowers
-                            flower1
-                            img1={item.img11}
-                            text1={item.text1}
-                          />
-                        </View>
-                      </>
-                    );
-                  }}
-                />
-              ) : null}
 
-              <View style={[styles.row, {marginVertical: 20}]}>
+              {otherParam && (
+                <>
+                  <View
+                    style={{
+                      width: '90%',
+                      alignSelf: 'center',
+                      marginVertical: 20,
+                    }}>
+                    <Text
+                      style={{
+                        fontSize: 20,
+                        color: '#1C5C2E',
+                      }}>
+                      Did you try this tools?
+                    </Text>
+                  </View>
+
+                  <FlatList
+                    showsHorizontalScrollIndicator={false}
+                    horizontal={true}
+                    data={Data3}
+                    renderItem={({item, index}) => {
+                      return (
+                        <>
+                          <View style={{}}>
+                            <Flowers
+                              flower1
+                              img1={item.img11}
+                              text1={item.text1}
+                            />
+                          </View>
+                        </>
+                      );
+                    }}
+                  />
+                </>
+              )}
+              <View
+                style={[
+                  styles.row,
+                  {marginVertical: 20, width: '95%', alignSelf: 'center'},
+                ]}>
                 <Text
                   style={{
                     color: 'black',
@@ -192,11 +221,11 @@ const Video = ({route, navigation, otherParam}) => {
                 <View style={styles.line}></View>
               </View>
             </View>
-            <View style={{}}>
+            <View style={{width: '95%', alignSelf: 'center'}}>
               {Data3.map(index => {
                 return (
-                  <View style={{height: 80, marginVertical: 10}}>
-                    <ScrollView style={{}}>
+                  <View style={{}}>
+                    <ScrollView style={{marginVertical: 10, height: 100}}>
                       <View style={styles.item1}>
                         <Userdetails
                           databox1
@@ -252,6 +281,8 @@ const Video = ({route, navigation, otherParam}) => {
             </View>
             <View
               style={{
+                width: '90%',
+                alignSelf: 'center',
                 alignSelf: 'center',
               }}>
               <Text style={styles.text}>Additional Resonance:</Text>
@@ -271,7 +302,8 @@ const Video = ({route, navigation, otherParam}) => {
               <Text style={styles.text}>Suggested Teachers:</Text>
             </View>
           </View>
-          <View style={{}}>
+          <View
+            style={{width: '90%', alignSelf: 'center', alignSelf: 'center'}}>
             <FlatList
               showsHorizontalScrollIndicator={false}
               data={data2}
@@ -282,7 +314,7 @@ const Video = ({route, navigation, otherParam}) => {
                       style={{
                         marginTop: 20,
                         marginVertical: 5,
-                        width: '90%',
+                        width: '95%',
                         alignSelf: 'center',
                       }}>
                       <Userdetails

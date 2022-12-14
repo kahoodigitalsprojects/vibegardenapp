@@ -45,13 +45,14 @@ const Userdetails = ({
                   flexDirection: 'row',
                   shadowColor: '#000',
                 }}>
-                <View style={styles.img}>
+                <View
+                  style={{width: 60, height: 60, marginTop: 12, margin: 10}}>
                   <Image
                     source={Img1}
                     style={{width: 60, height: 60, borderRadius: 100}}
                   />
                 </View>
-                <View style={{width: '70%', height: 100}}>
+                <View style={{width: '80%', height: 100, marginTop: 10}}>
                   <View
                     style={{
                       width: '100%',
@@ -59,7 +60,7 @@ const Userdetails = ({
                       flexDirection: 'row',
                       shadowColor: '#000',
                     }}>
-                    <Text style={styles.text1}>{name}</Text>
+                    <Text style={[styles.text1]}>{name}</Text>
                     <Text
                       style={{
                         fontSize: 12,
@@ -112,35 +113,35 @@ const Userdetails = ({
                 resizeMode="contain"
                 style={{width: '100%', height: '100%'}}
               />
+              <View>
+                {nametext && (
+                  <Text
+                    style={{
+                      textAlign: 'center',
+                      // marginLeft: 20,
+                      marginTop: 5,
+                      fontWeight: 'bold',
+                      fontSize: 13,
+                    }}>
+                    {names}
+                  </Text>
+                )}
+              </View>
             </View>
-            <View>
-              <Text style={{fontSize: 12, marginTop: 16}}>
-                Lorem ipsum dolor sit amet, consetetur {'\n'} sadipscing elitr,
-                sed diam nonumy eirmod {'\n'} tepor
-              </Text>
-              <Text
-                style={{
-                  textAlign: 'right',
-                  marginVertical: 5,
-                  color: '#1C5C2E',
-                  textDecorationLine: 'underline',
-                }}>
-                Link
+            <View style={{width: '76%', padding:3,marginVertical:4}}>
+              <Text style={{fontSize: 12, marginTop: 8,lineHeight:16}}>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat ,
+                <Text
+                  style={{
+                    color: '#1C5C2E',
+                    textDecorationLine: 'underline',
+                  }}>
+                  Link
+                </Text>
               </Text>
             </View>
-          </View>
-          <View>
-            {nametext && (
-              <Text
-                style={{
-                  marginLeft: 20,
-                  marginTop: -15,
-                  fontWeight: 'bold',
-                  fontSize: 16,
-                }}>
-                {names}
-              </Text>
-            )}
           </View>
         </View>
       )}

@@ -21,15 +21,15 @@ const ManageSubscription = props => {
       contentContainerStyle={{flexGrow: 1}}>
       <StatusBar animated={true} backgroundColor="#000" />
       <View style={styles.main}>
-        <View style={{marginVertical: 30, width: '90%', alignSelf: 'center'}}>
+        <View style={{marginVertical: 10, width: '90%', alignSelf: 'center'}}>
           <Header
             iconName="left"
             header2
             OnPress={() =>
               props.navigation.navigate('Homes', {screen: 'settings'})
             }
-            headertext="Manage Subscription"
-            fontSize={25}
+            headertext="Manage Subscriptions"
+            fontSize={20}
             color="#000"
           />
         </View>
@@ -106,7 +106,10 @@ const ManageSubscription = props => {
           </View>
           <TouchableOpacity
             onPress={() => {
-              props.navigation.navigate('PaymentMethod');
+              props.navigation.navigate('PaymentMethod', {
+                headertext1: 'Manage Subscriptions',
+                pressbtn: false,
+              });
             }}
             style={{flexDirection: 'row', marginVertical: 10}}>
             <Icon1
@@ -124,8 +127,13 @@ const ManageSubscription = props => {
             onPress={() => {
               props.navigation.navigate('CancelSubscription');
             }}
-            style={{alignSelf: 'center', marginTop: 50}}>
-            <Text style={[{color: '#1492E6', fontSize: 16}]}>
+            style={{
+              alignSelf: 'center',
+              marginTop: 110,
+              justifyContent: 'flex-end',
+            }}>
+            <Text
+              style={[{color: '#1492E6', fontSize: 16, marginVertical: 10}]}>
               Cancel Subscription
             </Text>
           </TouchableOpacity>

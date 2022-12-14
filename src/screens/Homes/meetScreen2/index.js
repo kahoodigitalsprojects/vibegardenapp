@@ -34,8 +34,8 @@ const MeetScreen2 = ({route, navigation}) => {
             />
 
             <View style={{}}>
-              <View style={styles.box}>
-                <Percentage check={true} Image1={Image1} />
+              <View style={{}}>
+                <Percentage check={true} Image1={Image1} paddingVertical={20} />
               </View>
               <View style={{marginTop: 30}}>
                 <Text style={styles.txt}>Perfect Erin!</Text>
@@ -43,7 +43,7 @@ const MeetScreen2 = ({route, navigation}) => {
                   style={{
                     fontSize: 18,
                     color: '#000',
-                    letterSpacing: 0.2,
+
                     lineHeight: 33,
                   }}>
                   {newtext}
@@ -52,9 +52,9 @@ const MeetScreen2 = ({route, navigation}) => {
               <View style={{marginVertical: 20}}>
                 <Pinkbtn
                   onPress={() =>
-                    navigation.navigate('Mytabs', {screen: 'Home'})
+                    navigation.replace('Mytabs', {screen: 'Home'})
                   }
-                  width={'60%'}
+                  width={'80%'}
                   btntxt="Take Me To the Garden"
                 />
               </View>

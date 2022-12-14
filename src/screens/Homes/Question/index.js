@@ -33,11 +33,11 @@ const Question = props => {
             OnPress={() => props.navigation.goBack('')}
           />
           <QComponents
+            flowwerlist11={true}
             iconone
             name2="chevron-down"
             direction2="Description:"
-            flowwerlist={true}
-            Statement="Statement"
+            Statement="Statement:"
             flow="Flow Through"
             number={'2/20'}
             name="chevron-down"
@@ -49,6 +49,7 @@ const Question = props => {
             text3={'SMCA Peepsceen to think so'}
             text4="Shall we Question Heap"
             text6={'The Multiverse is Real'}
+            marginVertical={10}
           />
         </View>
         <View style={{marginTop: 20}}>

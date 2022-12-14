@@ -2,7 +2,8 @@ import React from 'react';
 import {View, StyleSheet, Text, ScrollView, StatusBar} from 'react-native';
 import {Header, StoryData} from '../../../componrnts';
 
-const PrivacyPolicy = props => {
+const PrivacyPolicy = ({navigation, route}) => {
+  const {heading1} = route.params;
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
@@ -19,8 +20,8 @@ const PrivacyPolicy = props => {
           <Header
             iconName="left"
             header2
-            OnPress={() => props.navigation.goBack('')}
-            headertext="Privacy Policy"
+            OnPress={() => navigation.navigate('Homes', {screen: 'settings'})}
+            headertext={heading1}
             fontSize={25}
             color="#000"
           />

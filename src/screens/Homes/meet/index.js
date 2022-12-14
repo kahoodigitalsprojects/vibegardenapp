@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -12,9 +12,9 @@ import {
   ImageBackground,
 } from 'react-native';
 
-
 import Icon from 'react-native-vector-icons/AntDesign';
-import { Header, Pinkbtn } from '../../../componrnts';
+import {Header, Pinkbtn} from '../../../componrnts';
+import LinearGradient from 'react-native-linear-gradient';
 import Images from '../../../constants';
 
 const Meet = props => {
@@ -46,29 +46,25 @@ const Meet = props => {
       <SafeAreaView style={styles.main}>
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ flexGrow: 1 }}>
+          contentContainerStyle={{}}>
           <StatusBar animated={true} backgroundColor="#000" />
-
-          <View style={{ width: '95%', marginTop: 20 }}>
-            {/* <Header header2 /> */}
-
-            <Text style={styles.txt}>
-              Brilliant! And Now which Blooms Speaks To you heart ?
-            </Text>
-            <View>
+          <View style={{}}>
+            <View style={{width: '90%', alignSelf: 'center', marginTop: 10}}>
+              <Text style={styles.txt}>
+                Brilliant! And Now which Blooms Speaks To your heart?
+              </Text>
               <FlatList
                 showsHorizontalScrollIndicator={false}
                 data={Data}
                 numColumns={2}
-                renderItem={({ item, index }) => {
+                renderItem={({item, index}) => {
                   return (
                     <>
                       <View
                         style={{
-                          margin: 10,
-                          justifyContent: 'center',
-                          alignItems: 'center',
-                          alignSelf: 'center',
+                          marginTop: 30,
+                          marginVertical: 20,
+                          flexGrow: 2,
                         }}>
                         <TouchableOpacity
                           onPress={() => {
@@ -76,18 +72,18 @@ const Meet = props => {
                             let obj = {};
                             index === 0
                               ? (obj = {
-                                Heading: 'Meet Blue Lotus',
-                                Image1: Images.Imgs.lotusb,
-                                Image2: Images.Imgs.lotusa,
-                                Image3: Images.Imgs.lotus1,
-                                Images4: Images.Imgs.lotus1,
-                                Image5: Images.Imgs.lotus1,
-                                Image6: Images.BackGround.BlueL,
-                                newtext:
-                                  'Meaning , How Connected to your feel to your light , your Unique essence',
-                              })
+                                  Heading: 'Meet Blue Lotus',
+                                  Image1: Images.Imgs.lotusb,
+                                  Image2: Images.Imgs.lotusc,
+                                  Image3: Images.Imgs.lotus1,
+                                  Images4: Images.Imgs.lotus1,
+                                  Image5: Images.Imgs.lotus1,
+                                  Image6: Images.BackGround.BlueL,
+                                  newtext:
+                                    'Meaning , How Connected to your feel to your light , your Unique essence',
+                                })
                               : index === 1
-                                ? (obj = {
+                              ? (obj = {
                                   Heading: 'Meet Divine Ross',
                                   Image1: Images.Imgs.rose1,
                                   Image2: Images.Imgs.rose2,
@@ -98,31 +94,31 @@ const Meet = props => {
                                   newtext:
                                     'Meaning , How Connected to your feel to your light , your Unique essence',
                                 })
-                                : index === 2
-                                  ? (obj = {
-                                    Heading: 'Meet Mushrooms',
-                                    Image1: Images.Imgs.mushroomsa,
-                                    Image2: Images.Imgs.mushroomsb,
-                                    Image3: Images.Imgs.mushrooms,
-                                    Images4: Images.Imgs.mushrooms,
-                                    Image5: Images.Imgs.mushrooms,
-                                    Image6: Images.BackGround.larggeMushrom,
-                                    newtext:
-                                      'Meaning , How Connected to your feel to your light , your Unique essence',
-                                  })
-                                  : index === 3
-                                    ? (obj = {
-                                      Heading: 'Meet Chuchuhuas',
-                                      Image1: Images.Imgs.chuchuhuasa,
-                                      Image2: Images.Imgs.cuhuchuhuas1,
-                                      Image3: Images.Imgs.cuhuchuhuasb,
-                                      Images4: Images.Imgs.chuchuhuasc,
-                                      Image5: Images.Imgs.chuchuhuasc,
-                                      Image6: Images.BackGround.lageChuchu,
-                                      newtext:
-                                        'Meaning , How Connected to your feel to your light , your Unique essence',
-                                    })
-                                    : null;
+                              : index === 2
+                              ? (obj = {
+                                  Heading: 'Meet Mushrooms',
+                                  Image1: Images.Imgs.mushroomsa,
+                                  Image2: Images.Imgs.mushroomsb,
+                                  Image3: Images.Imgs.mushrooms,
+                                  Images4: Images.Imgs.mushrooms,
+                                  Image5: Images.Imgs.mushrooms,
+                                  Image6: Images.BackGround.larggeMushrom,
+                                  newtext:
+                                    'Meaning , How Connected to your feel to your light , your Unique essence',
+                                })
+                              : index === 3
+                              ? (obj = {
+                                  Heading: 'Meet Chuchuhuas',
+                                  Image1: Images.Imgs.chuchuhuasa,
+                                  Image2: Images.Imgs.chuchuhuasc,
+                                  Image3: Images.Imgs.cuhuchuhuas1,
+                                  Images4: Images.Imgs.chuchuhua,
+                                  Image5: Images.Imgs.cuhuchuhuas1,
+                                  Image6: Images.BackGround.lageChuchu,
+                                  newtext:
+                                    'Meaning , How Connected to your feel to your light , your Unique essence',
+                                })
+                              : null;
 
                             setData2(obj);
                           }}
@@ -130,8 +126,8 @@ const Meet = props => {
                             width: '100%',
                             display: 'flex',
                             flexGrow: 1,
-                            width: 136,
-                            height: 136,
+                            width: 100,
+                            height: 100,
                             borderRadius: 100,
                             justifyContent: 'center',
                             alignItems: 'center',
@@ -143,13 +139,13 @@ const Meet = props => {
                                 source={item.img1}
                                 style={[
                                   styles.img,
-                                  { marginTop: 0, opacity: 0.7 },
+                                  {marginTop: 0, opacity: 0.7},
                                 ]}
                                 resizeMode="contain">
                                 <View
                                   style={{
-                                    width: 136,
-                                    height: 136,
+                                    width: 100,
+                                    height: 100,
                                     borderRadius: 100,
                                     justifyContent: 'center',
                                     alignItems: 'center',
@@ -158,16 +154,7 @@ const Meet = props => {
                                       data1 === index ? '#CD258D' : '',
                                     opacity: 0.8,
                                     elevation: data1 === index ? 0 : 5,
-                                  }}>
-                                  <View style={{}}>
-                                    <Icon
-                                      name="check"
-                                      size={39}
-                                      color="#fff"
-                                      style={{}}
-                                    />
-                                  </View>
-                                </View>
+                                  }}></View>
                               </ImageBackground>
                             ) : (
                               <View
@@ -175,6 +162,8 @@ const Meet = props => {
                                   justifyContent: 'center',
                                   alignItems: 'center',
                                   alignSelf: 'center',
+                                  width: 100,
+                                  height: 100,
                                 }}>
                                 <Image
                                   source={item.img1}
@@ -193,11 +182,11 @@ const Meet = props => {
                           </>
                         </TouchableOpacity>
 
-                        <View style={{ marginVertical: 5, margin: 10 }}>
+                        <View style={{marginVertical: 5, margin: 5}}>
                           <Text
                             style={{
                               textAlign: 'center',
-                              fontSize: 18,
+                              fontSize: 16,
                               color: '#000',
                             }}>
                             {item.text}
@@ -209,20 +198,26 @@ const Meet = props => {
                 }}
               />
             </View>
-
-            <View>
-
-            </View>
-            <TouchableOpacity disabled={data1 === false ? true : false} onPress={() => {
-              props.navigation.navigate('chuchuhuasDetails', data2);
-            }} style={{ alignSelf: 'center', width: '100%', alignItems: 'center', marginTop: 10 }} >
-              <View
-
-                style={styles.btn1}>
-                <Text style={{ fontWeight: 'bold', color: '#fff' }}>Continue</Text>
-              </View>
+            <TouchableOpacity
+              disabled={data1 === false ? true : false}
+              onPress={() => {
+                props.navigation.navigate('chuchuhuasDetails', data2);
+              }}
+              style={{
+                marginVertical: 10,
+                width: '70%',
+                marginTop: 70,
+                alignItems: 'center',
+                alignSelf: 'center',
+              }}>
+              <LinearGradient
+                colors={['#ED535E', '#CD258D']}
+                style={[styles.btn1]}>
+                <Text style={{fontWeight: '400', color: '#fff', fontSize: 20}}>
+                  Continue
+                </Text>
+              </LinearGradient>
             </TouchableOpacity>
-
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -232,22 +227,24 @@ const Meet = props => {
 export default Meet;
 
 const styles = StyleSheet.create({
-  main: { flex: 1, alignItems: 'center', paddingTop: 15 },
+  main: {flex: 1, paddingTop: 15},
 
   img: {
-    width: 136,
-    height: 136,
+    // width: 136,
+    // height: 136,
+    width: ' 100%',
+    height: ' 100%',
     borderRadius: 100,
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
   },
   txt: {
-    textAlign: 'left',
+    // textAlign: 'left',
     fontSize: 24,
     color: '#1C5C2E',
     fontWeight: '400',
-    marginVertical: 20,
+    marginVertical: 10,
   },
   txt1: {
     textAlign: 'left',
@@ -255,7 +252,11 @@ const styles = StyleSheet.create({
     color: '#030303',
   },
   btn1: {
-    width: '60%', height: 55, borderRadius: 30, backgroundColor: "#ED535E",
-    justifyContent: 'center', alignItems: 'center'
-  }
+    width: '60%',
+    height: 55,
+    borderRadius: 30,
+    backgroundColor: '#ED535E',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });

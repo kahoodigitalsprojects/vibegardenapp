@@ -22,7 +22,47 @@ const Search2 = ({route, navigation, otherParam}) => {
   // const {newtext} = route.params;
 
   const [data1, setData1] = useState(0);
-  const data2 = [{}, {}, {}];
+  databox = [
+    {
+      heart1: Images.Icons.heart1,
+      title: 'Title',
+      iconimg1: Images.Icons.Pcircle,
+    },
+    {
+      heart1: Images.Icons.heart1,
+      title: 'Title',
+      iconimg1: Images.Icons.prectangel,
+    },
+
+    {
+      heart1: Images.Icons.heart1,
+      title: 'Title',
+      iconimg1: Images.Icons.sun,
+    },
+    {
+      heart1: Images.Icons.heart1,
+      title: 'Title',
+      iconimg1: Images.Icons.Pcircle,
+    },
+  ];
+  databox2 = [
+    {
+      heart1: Images.Icons.heart1,
+      title: 'Title',
+      iconimg1: Images.Icons.pinki,
+    },
+    {
+      heart1: Images.Icons.heart1,
+      title: 'Title',
+      iconimg1: Images.Icons.pinki,
+    },
+  ];
+
+  const data2 = [
+    {Img1: Images.Imgs.bear},
+    {Img1: Images.Imgs.bear},
+    {Img1: Images.Imgs.bear},
+  ];
   const data = [
     {
       text1: 'All',
@@ -33,9 +73,11 @@ const Search2 = ({route, navigation, otherParam}) => {
       heart1: Images.Icons.heart1,
       img: Images.Imgs.heart1,
       centertexr: 'TOOLS FOR LIGHT',
+      centertexr1: 'FAMILY OF LIGHT',
+      centertexr2: 'TONGLEN',
     },
     {
-      text1: 'Tools',
+      text1: 'TOOLS',
       img2: Images.BackGround.path1,
       img3: Images.BackGround.nopath2,
       img4: Images.BackGround.nopath2,
@@ -45,7 +87,7 @@ const Search2 = ({route, navigation, otherParam}) => {
       iconimg2: Images.Icons.Pcircle,
     },
     {
-      text1: 'Ground Work',
+      text1: 'GROUND WORK',
       img2: Images.BackGround.path1,
       img3: Images.BackGround.nopath2,
       img4: Images.BackGround.nopath2,
@@ -67,16 +109,7 @@ const Search2 = ({route, navigation, otherParam}) => {
       img: Images.Imgs.heart1,
       // iconimg2: Images.Icons.Pcircle,
     },
-    {
-      id: 2,
-      bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
-      heart1: Images.Icons.heart1,
-      name: 'TONGLEN',
-      title: 'title',
-      plus: 'plus',
-      // iconimg2: Images.Icons.prectangel,
-    },
+
     {
       id: 3,
       bg1: Images.BackGround.black,
@@ -85,7 +118,7 @@ const Search2 = ({route, navigation, otherParam}) => {
       name: 'TONGLEN',
       title: 'title',
       plus: 'plus',
-      // iconimg2: Images.Icons.Pcircle,
+      iconimg2: Images.Icons.Pcircle,
     },
     {
       id: 4,
@@ -148,8 +181,8 @@ const Search2 = ({route, navigation, otherParam}) => {
                   // width: '33%',
                   borderRadius: 5,
                   padding: 10,
-                  paddingLeft: 16,
-                  paddingRight: 16,
+                  paddingLeft: 20,
+                  paddingRight: 20,
                   alignSelf: 'center',
                   marginHorizontal: 28,
                   // backgroundColor: 'yellow',
@@ -180,6 +213,8 @@ const Search2 = ({route, navigation, otherParam}) => {
                   alignSelf: 'center',
                   marginHorizontal: 28,
                   // backgroundColor: 'yellow',
+                  paddingLeft: 20,
+                  paddingRight: 20,
                 }}>
                 <Text
                   style={{
@@ -207,6 +242,8 @@ const Search2 = ({route, navigation, otherParam}) => {
                   alignSelf: 'center',
                   marginHorizontal: 28,
                   // backgroundColor: 'yellow',
+                  paddingLeft: 20,
+                  paddingRight: 20,
                 }}>
                 <Text
                   style={{
@@ -238,11 +275,12 @@ const Search2 = ({route, navigation, otherParam}) => {
                         otherParam5: 'Nature',
                         otherParam6: 'Ascended Master',
                         otherParam7: 'Hight Dimensional',
-                        otherParam8: 'Light Beihngs',
+                        otherParam8: 'Light Beings',
                         otherParam9: 'Ancient Wisdom',
                         otherParam10: 'Western Psychology',
                         otherParam11: 'Mindfullness',
                         otherParam12: 'Science',
+                        Name: 'close',
                       });
                     }}
                     style={[styles.topics, {backgroundColor: '#fff'}]}>
@@ -262,9 +300,17 @@ const Search2 = ({route, navigation, otherParam}) => {
                   <View style={{marginVertical: 10}}>
                     <SeeAll
                       onPress={() =>
-                        navigation.navigate('Mytabs', {screen: 'Home'})
+                        navigation.navigate('Mytabs', {
+                          screen: 'tools',
+                          params: {
+                            backoption: navigation.navigate('Mytabs', {
+                              screen: 'me',
+                            }),
+                          },
+                        })
                       }
-                      textA="Tools"
+                      color1="#1C5C2E"
+                      textA="TOOLS"
                       textB="SeeAll"
                     />
                   </View>
@@ -286,7 +332,8 @@ const Search2 = ({route, navigation, otherParam}) => {
                                 img2={item.img2}
                                 heart1={item.heart1}
                                 color={'green'}
-                                text2={'5 min'}
+                                minutes={'5 min'}
+                                marginTop11={50}
                               />
                             </View>
                           </>
@@ -297,46 +344,10 @@ const Search2 = ({route, navigation, otherParam}) => {
                   <View style={{marginVertical: 10}}>
                     <SeeAll
                       onPress={() =>
-                        navigation.navigate('Homes', {
-                          screen: 'FressBlooms',
-                        })
+                        navigation.navigate('Mytabs', {screen: ''})
                       }
+                      color1="#1C5C2E"
                       textA="GROUND WORK"
-                      textB="SeeAll"
-                    />
-                  </View>
-                  <View style={styles.box2}>
-                    <ScrollView
-                      horizontal={true}
-                      showsHorizontalScrollIndicator={true}>
-                      {data.map((item, index) => {
-                        return (
-                          <>
-                            <View style={{}}>
-                              <MainBox
-                                left={60}
-                                bgcolor={'#FF4053'}
-                                TONGLEN="TONGLEN"
-                                textone={item.centertexr}
-                                I1={item.heart1}
-                                img2={item.img3}
-                                color={'green'}
-                                text2={'5 min'}
-                              />
-                            </View>
-                          </>
-                        );
-                      })}
-                    </ScrollView>
-                  </View>
-                  <View style={{marginVertical: 10}}>
-                    <SeeAll
-                      onPress={() =>
-                        navigation.navigate('Homes', {
-                          screen: 'FressBlooms',
-                        })
-                      }
-                      textA="FRESH BLOOMS"
                       textB="SeeAll"
                     />
                   </View>
@@ -349,6 +360,54 @@ const Search2 = ({route, navigation, otherParam}) => {
                           <>
                             <View style={{}}>
                               <MainBox
+                                marginTop11={50}
+                                left={60}
+                                bgcolor={'#FF4053'}
+                                TONGLEN="TONGLEN"
+                                textone={item.centertexr1}
+                                I1={item.heart1}
+                                img2={item.img3}
+                                color={'green'}
+                                minutes={'5 min'}
+                              />
+                            </View>
+                          </>
+                        );
+                      })}
+                    </ScrollView>
+                  </View>
+                  <View style={{marginVertical: 10}}>
+                    <SeeAll
+                      onPress={() => {
+                        navigation.navigate('Homes', {
+                          screen: 'FressBlooms',
+                          params: {
+                            otherParam: 'Fresh Blooms',
+                            heart: true,
+
+                            backoption: () =>
+                              navigation.navigate('Mytabs', {
+                                screen: 'me',
+                              }),
+                          },
+                        });
+                      }}
+                      textA="FRESH BLOOMS"
+                      textB="SeeAll"
+                      color1="#1C5C2E"
+                    />
+                  </View>
+                  <View style={{}}>
+                    <ScrollView
+                      horizontal={true}
+                      showsHorizontalScrollIndicator={false}>
+                      {data.map((item, index) => {
+                        return (
+                          <>
+                            <View style={{}}>
+                              <MainBox
+                                marginTop11={50}
+                                minutes={'5 min'}
                                 I1={item.heart1}
                                 img2={item.img4}
                                 item={item.ImgICon}
@@ -356,7 +415,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                                 left={60}
                                 bgcolor={'#FF4053'}
                                 TONGLEN="TONGLEN"
-                                textone={item.centertexr}
+                                textone={item.centertexr2}
                                 text2={'5 min'}
                               />
                             </View>
@@ -367,15 +426,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                   </View>
                 </View>
                 <View style={{}}>
-                  <SeeAll
-                    onPress={() =>
-                      navigation.navigate('Homes', {
-                        screen: 'FressBlooms',
-                      })
-                    }
-                    textA="TEACHERS"
-                    textB="SeeAll"
-                  />
+                  <SeeAll color1="#1C5C2E" textA="TEACHERS" textB="SeeAll" />
                 </View>
 
                 <View style={{}}>
@@ -395,7 +446,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                             <Userdetails
                               backgroundColor={'#00000029'}
                               databox2
-                              Img1={item.Img1}
+                              bear={item.Img1}
                               name={item.name}
                               time={item.time}
                               text={item.text}
@@ -416,17 +467,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                     flexDirection: 'row',
                     alignSelf: 'flex-start',
                   }}>
-                  <TouchableOpacity
-                    onPress={() => {
-                      /* 1. Navigate to the Details route with params */
-                      navigation.navigate('Search3', {
-                        itemId: 86,
-                        otherParam1: 'Tools For Light',
-                        otherParam2: 'Tools For Shadow',
-                        otherParam3: 'Tools For Connections',
-                      });
-                    }}
-                    style={styles.topics}>
+                  <TouchableOpacity style={styles.topics}>
                     <Text style={{color: '#1C5C2E', fontSize: 16, margin: 6}}>
                       Topics
                     </Text>
@@ -445,6 +486,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                         otherParam1: 'Tools For Light',
                         otherParam2: 'Tools For Shadow',
                         otherParam3: 'Tools For Connections',
+                        Name: 'close',
                       });
                     }}
                     style={styles.topics}>
@@ -460,30 +502,27 @@ const Search2 = ({route, navigation, otherParam}) => {
                   </TouchableOpacity>
                 </View>
 
-                <View style={{}}>
+                <View style={{marginTop: 20, width: '90%'}}>
                   <View style={styles.box1}>
                     <FlatList
                       showsHorizontalScrollIndicator={false}
                       keyExtractor={item => item.id}
                       numColumns={2}
-                      data={Data}
+                      data={databox}
                       renderItem={({item}) => {
                         return (
                           <View
                             style={{
                               alignSelf: 'center',
-                              display: 'flex',
-                              flexGrow: 1,
+                              // display: 'flex',
+                              // flexGrow: 1,
+                              width: '50%',
+                              margin: 10,
                             }}>
-                            <All
-                              iconimg={true}
-                              iconimg2
-                              I1={item.three}
-                              textA={item.textA}
-                              textB={item.textB}
+                            <Imgbox
+                              iconimg={item.iconimg1}
                               homebox
-                              plus={item.plus}
-                              bghome2={item.bg12}
+                              plus="plus"
                               title={item.title}
                             />
                           </View>
@@ -492,6 +531,27 @@ const Search2 = ({route, navigation, otherParam}) => {
                     />
                   </View>
                 </View>
+                {/* <View style={{}}>
+                  <View style={styles.box1}></View>
+                  <View style={{}}>
+                    <All
+                      plus="plus"
+                      homebox
+                      bghome2={Images.BackGround.greenbg}
+                      title={'title'}
+                    />
+                  </View>
+                  <View style={{}}>
+                    <All
+                      plus="plus"
+                      iconimg
+                      iconimg2={true}
+                      homebox
+                      bghome2={Images.BackGround.greenbg}
+                      title={'title'}
+                    />
+                  </View>
+                </View> */}
               </>
             ) : null}
             {data1 === 2 ? (
@@ -524,6 +584,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                         otherParam2: 'Building Blocks',
                         otherParam3: 'Deep Dives',
                         otherParam4: 'Play!',
+                        Name: 'close',
                       });
                     }}
                     style={styles.topics}>
@@ -538,13 +599,13 @@ const Search2 = ({route, navigation, otherParam}) => {
                     />
                   </TouchableOpacity>
                 </View>
-                <View style={{}}>
+                <View style={{marginTop: 20}}>
                   <View style={styles.box1}>
                     <FlatList
-                      keyExtractor={item => item.id}
                       showsHorizontalScrollIndicator={false}
+                      keyExtractor={item => item.id}
                       numColumns={2}
-                      data={Data2}
+                      data={databox2}
                       renderItem={({item}) => {
                         return (
                           <View
@@ -553,15 +614,10 @@ const Search2 = ({route, navigation, otherParam}) => {
                               display: 'flex',
                               flexGrow: 1,
                             }}>
-                            <All
-                              iconimg={true}
-                              iconimg2
-                              heart1={item.heart1}
-                              textA={item.textA}
-                              textB={item.textB}
+                            <Imgbox
+                              iconimg={item.iconimg1}
                               homebox
-                              myicon={item.myicon}
-                              bghome2={item.bg12}
+                              plus="plus"
                               title={item.title}
                             />
                           </View>
@@ -585,7 +641,7 @@ const styles = StyleSheet.create({
     // backgroundColor: '#fefe',
   },
   container: {
-    width: '90%',
+    width: '95%',
     // height: '100%',
     justifyContent: 'center',
     alignItems: 'center',

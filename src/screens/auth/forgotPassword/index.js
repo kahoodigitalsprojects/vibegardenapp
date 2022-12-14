@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   StatusBar,
 } from 'react-native';
-import { Greenbtn, Header, Pinkbtn } from '../../../componrnts';
+import {Greenbtn, Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 const ForgetPassword = props => {
   return (
@@ -16,7 +16,7 @@ const ForgetPassword = props => {
       <StatusBar animated={true} backgroundColor="#000" />
 
       <View style={styles.main}>
-        <View style={{ width: '90%', marginTop: 30 }}>
+        <View style={{width: '90%', marginTop: 20}}>
           <Header
             fontSize={25}
             color="#191919B8"
@@ -27,17 +27,18 @@ const ForgetPassword = props => {
           />
         </View>
 
-        <View style={{ width: '85%', marginTop: 30 }}>
-          <Text style={{ fontSize: 20, lineHeight: 33, marginTop: 20 }}>
+        <View style={{width: '85%', marginTop: 30}}>
+          <Text style={{fontSize: 20, lineHeight: 26, marginTop: 20}}>
             Enter Your Registered Email To Get The Password Reset Link
           </Text>
 
           <Text
             style={{
-              fontSize: 16,
+              fontSize: 20,
               color: '#1C5C2E',
               fontWeight: '600',
-              marginVertical: 30,
+              marginTop: 15,
+              marginVertical: 5,
               borderColor: '#1C5C2E',
               textDecorationLine: 'underline',
             }}>
@@ -46,16 +47,16 @@ const ForgetPassword = props => {
 
           <View>
             <View style={styles.input}>
-              <TextInput placeholder="Email" style={{ paddingLeft: 20 }} />
+              <TextInput placeholder="Email" style={{paddingLeft: 20}} />
             </View>
 
-            <View style={{ marginTop: 10 }}>
+            <View style={{marginTop: 10}}>
               <Greenbtn
                 width={'100%'}
                 text1="Submit"
-                onPress={() => {
-                  props.navigation.navigate('chuchuhuasDetails');
-                }}
+                // onPress={() => {
+                //   props.navigation.navigate('chuchuhuasDetails');
+                // }}
               />
             </View>
           </View>
@@ -67,7 +68,7 @@ const ForgetPassword = props => {
 export default ForgetPassword;
 
 const styles = StyleSheet.create({
-  main: { flex: 1, alignItems: 'center' },
+  main: {flex: 1, alignItems: 'center'},
   input: {
     flexDirection: 'row',
     justifyContent: 'space-between',

@@ -13,7 +13,11 @@ import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 import Icon from 'react-native-vector-icons/Feather';
 
-const BigBlooms = props => {
+const BigBlooms = ({route, navigation}) => {
+  const {newtext} = route.params;
+  const {heading1} = route.params;
+  const {Image1} = route.params;
+
   const data = [
     {
       text1: 'Support healing',
@@ -40,34 +44,49 @@ const BigBlooms = props => {
       contentContainerStyle={{flexGrow: 1}}>
       <StatusBar animated={true} backgroundColor="#000" />
       <View style={styles.main}>
-        <View style={{alignSelf: 'center', width: '90%', marginTop: 5}}>
+        <View style={{width: '90%', marginTop: 10}}>
           <Header
+          width={'25%'}
             iconName="arrowleft"
-            header2
-            OnPress={() => props.navigation.goBack('')}
-            headertext="Resonance Finder"
-            fontSize={25}
+            header4
+            OnPress={() => navigation.goBack('')}
+            headertext={newtext}
+            fontSize={20}
             color="#000"
           />
         </View>
         <View style={styles.itms}>
-          <View style={{}}>
+          <View
+            style={{
+              width: '90%',
+              alignSelf: 'center',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
             <Text
               style={{
                 fontSize: 28,
-                // textAlign: 'center',
+                textAlign: 'center',
                 color: '#000',
                 // fontWeight: 'bold',
                 marginTop: 25,
                 marginVertical: 10,
               }}>
+              {heading1}
               Big Blooms
             </Text>
+            <View
+              style={{
+                width: 75,
+                height: 75,
+                marginVertical: 10,
+                alignSelf: 'center',
+              }}>
+              <Image source={Image1} />
+            </View>
           </View>
-          <View style={{width: 75, height: 75, marginVertical: 10}}>
-            <Image source={Images.Imgs.R1} />
-          </View>
-          <View style={{width: '100%', marginVertical: 5}}>
+
+          <View style={{ marginVertical: 5, alignSelf: 'center'}}>
             <Text
               style={{
                 marginVertical: 10,
@@ -133,9 +152,9 @@ const BigBlooms = props => {
                   </TouchableOpacity>
                   <Text
                     style={{
-                      fontSize: 14,
+                      fontSize: 13,
                       marginTop: 3,
-                      marginLeft: 15,
+                      marginLeft: 8,
                       // textAlign: 'center',
                       color: '#000',
                       // fontWeight: 'bold',
@@ -150,7 +169,7 @@ const BigBlooms = props => {
             <Pinkbtn
               width={'60%'}
               btntxt="Submit"
-              onPress={() => props.navigation.navigate('star')}
+              onPress={() => navigation.navigate('star')}
             />
           </View>
         </View>
@@ -162,12 +181,13 @@ const styles = StyleSheet.create({
   main: {
     flex: 1,
     // backgroundColor: 'pink',
+    alignItems: 'center',
   },
   itms: {
     marginTop: 10,
     width: '90%',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
     alignSelf: 'center',
   },
   text1: {
@@ -190,7 +210,7 @@ const styles = StyleSheet.create({
     marginVertical: 15,
     letterSpacing: 0.6,
     color: '#000',
-    fontSize: 16,
+    fontSize: 14,
   },
 });
 export default BigBlooms;

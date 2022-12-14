@@ -18,7 +18,7 @@ import Icon2 from 'react-native-vector-icons/AntDesign';
 import Icon3 from 'react-native-vector-icons/Ionicons';
 import Images from '../../constants';
 
-const Flowers = ({text1, img1, onPress, headtext, flower1}) => {
+const Flowers = ({text1, img1, onPress, headtext, flower1, width}) => {
   return (
     <>
       <View style={styles.container}>
@@ -43,7 +43,7 @@ const Flowers = ({text1, img1, onPress, headtext, flower1}) => {
             </View>
           )}
           {flower1 && (
-            <View style={{margin: 5}}>
+            <View style={{margin: 5, width: width}}>
               <TouchableOpacity onPress={onPress} style={styles.circle}>
                 <Image source={img1} style={{width: '100%', height: '100%'}} />
               </TouchableOpacity>
@@ -51,7 +51,7 @@ const Flowers = ({text1, img1, onPress, headtext, flower1}) => {
                 <Text
                   style={{
                     margin: 5,
-                    fontSize: 18,
+                    fontSize: 12,
                     color: '#000',
                     textAlign: 'center',
                     color: '#1C5C2E',

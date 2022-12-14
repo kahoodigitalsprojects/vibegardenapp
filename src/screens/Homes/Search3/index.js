@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -19,7 +19,9 @@ import {Header, Userdetails} from '../../../componrnts';
 import Images from '../../../constants';
 
 const Search3 = ({route, navigation}) => {
+  const [state, setSate] = useState(false);
   const {
+    success,
     itemId,
     otherParam1,
     otherParam2,
@@ -33,6 +35,7 @@ const Search3 = ({route, navigation}) => {
     otherParam10,
     otherParam11,
     otherParam12,
+Name
   } = route.params;
   const data = [
     {
@@ -83,6 +86,57 @@ const Search3 = ({route, navigation}) => {
         contentContainerStyle={{flexGrow: 1}}>
         <StatusBar animated={true} backgroundColor="#000" />
 
+        {success && (
+          <View
+            style={{
+              marginVertical: 10,
+              marginTop: 10,
+              width: '90%',
+              alignSelf: 'center',
+            }}>
+            <Header
+              iconName="closesquareo"
+              header2
+              OnPress={() => navigation.replace( 'settings')}
+            />
+
+            <View style={{marginVertical: 5, alignSelf: 'center'}}>
+              <Text
+                style={{
+                  fontSize: 25,
+                  textAlign: 'center',
+                  color: '#afafaa',
+                  fontWeight: '450',
+                  marginVertical: 5,
+                }}>
+                Success
+              </Text>
+
+              <Text
+                style={{
+                  fontSize: 25,
+                  textAlign: 'center',
+                  color: '#1C5C2E',
+                  fontWeight: '600',
+                  marginVertical: 10,
+                }}>
+                Off You Go!
+              </Text>
+              <Text
+                style={{
+                  marginVertical: 10,
+                  fontSize: 18,
+                  textAlign: 'center',
+                  color: '#000',
+                  fontWeight: '450',
+                  lineHeight: 30,
+                }}>
+                Your Cancelation Is Submitted {'\n'} Be Well!
+              </Text>
+            </View>
+          </View>
+        )}
+
         <View
           style={{
             width: '90%',
@@ -99,7 +153,7 @@ const Search3 = ({route, navigation}) => {
               alignSelf: 'flex-end',
               justifyContent: 'flex-end',
             }}>
-            <Icon name="close" size={25} color="#1C5C2E" />
+            <Icon name={Name} size={25} color="#1C5C2E" />
           </TouchableOpacity>
         </View>
 
@@ -109,10 +163,10 @@ const Search3 = ({route, navigation}) => {
               fontSize: 25,
               fontWeight: 'bold',
               color: '#1C5C2E',
-              marginTop: -24,
+              marginTop: -30,
             }}>
-            {' '}
-            {itemId}{' '}
+     
+            {itemId}
           </Text>
           <FlatList
             data={data}
@@ -123,12 +177,11 @@ const Search3 = ({route, navigation}) => {
                   style={{
                     alignItems: 'center',
                     alignSelf: 'center',
-                    paddingVertical: 15,
-                    marginTop:20
+                    paddingVertical: 10,
+                    marginTop: 15,
                   }}>
                   <Text style={{fontSize: 18, color: '#000'}}>
-                    {' '}
-                    {item.text1}{' '}
+                    {item.text1}
                   </Text>
                 </TouchableOpacity>
               );

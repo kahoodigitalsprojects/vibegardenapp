@@ -7,13 +7,13 @@ import {
 } from 'react-native';
 import React from 'react';
 import {SearchBar} from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/AntDesign';
 
 const Searcbart1 = props => {
   const {close1} = props;
   return (
     <View>
-      <TouchableOpacity onPress={props.onpress1}>
+   
         <View
           style={{
             width: '90%',
@@ -28,11 +28,11 @@ const Searcbart1 = props => {
           }}>
           <View
             style={{
-              width: '90%',
+              width: '86%',
               flexDirection: 'row',
             }}>
             <TouchableOpacity
-              onPress={close1}
+              onPress={props.onpress1}
               style={{
                 width: 40,
                 height: 40,
@@ -40,13 +40,13 @@ const Searcbart1 = props => {
                 alignItems: 'center',
                 borderRadius: 10,
               }}>
-              <Icon name="search" size={25} color="#1C5C2E" />
+              <Icon name="search1" size={25} color="#1C5C2E" />
             </TouchableOpacity>
             <TextInput placeholder="Heart"></TextInput>
           </View>
 
           <TouchableOpacity
-            onPress={close1}
+            onPress={props.onpress1}
             style={{
               width: 40,
               height: 40,
@@ -57,7 +57,7 @@ const Searcbart1 = props => {
             <Icon name="close" size={25} color="#1C5C2E" />
           </TouchableOpacity>
         </View>
-      </TouchableOpacity>
+  
     </View>
   );
 };

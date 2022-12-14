@@ -71,13 +71,13 @@ const Notification = props => {
         <View
           style={{
             marginVertical: 10,
-            marginTop: 20,
-            width: '90%',
+            // marginTop: 20,
+            width: '95%',
             alignSelf: 'center',
           }}>
           <Header
-          fontSize={25}
-          color=""
+            fontSize={25}
+            color=""
             iconName="closesquareo"
             header2
             headertext="Notification"
@@ -86,7 +86,7 @@ const Notification = props => {
 
           <View
             style={{
-              width: '90%',
+              width: '95%',
               marginVertical: 15,
               justifyContent: 'flex-end',
             }}>
@@ -131,29 +131,45 @@ const Notification = props => {
               data={data}
               renderItem={({item}) => {
                 return (
-                  <View style={{width: '95%', alignSelf: 'center'}}>
+                  <View style={{width: '90%', alignSelf: 'center', margin: 3}}>
                     <View style={styles.box}>
-                      <View style={styles.img}>
-                        <Image
-                          source={item.Img1}
-                          style={{width: 60, height: 60, borderRadius: 100}}
-                        />
+                      <View style={{width: '75%', flexDirection: 'row'}}>
+                        <View style={styles.img}>
+                          <Image
+                            source={item.Img1}
+                            style={{
+                              width: 60,
+                              height: 60,
+                              borderRadius: 100,
+                              marginLeft: 10,
+                            }}
+                          />
+                        </View>
+                        <View style={styles.txtview}>
+                          <Text
+                            style={[
+                              styles.text1,
+                              {
+                                marginLeft: 10,
+                              },
+                            ]}>
+                            {item.name}
+                          </Text>
+                          <Text
+                            style={[
+                              styles.text1,
+                              {
+                                fontWeight: '400',
+                                fontSize: 14,
+                                marginVertical: 5,
+                                marginLeft: 6,
+                              },
+                            ]}>
+                            {item.text}
+                          </Text>
+                        </View>
                       </View>
-                      <View style={styles.txtview}>
-                        <Text style={styles.text1}>{item.name}</Text>
-                        <Text
-                          style={[
-                            styles.text1,
-                            {
-                              fontWeight: '400',
-                              fontSize: 14,
-                              marginVertical: 5,
-                            },
-                          ]}>
-                          {item.text}
-                        </Text>
-                      </View>
-                      <View style={{marginTop: 10, marginRight: 20}}>
+                      <View style={{marginTop: 10, marginRight: 24}}>
                         <Text
                           style={{
                             fontSize: 12,
@@ -166,7 +182,7 @@ const Notification = props => {
                           style={{
                             fontSize: 12,
                             color: '#000',
-                            marginTop: 30,
+                            marginTop: 35,
                             fontWeight: 'bold',
                           }}>
                           {item.Date}
@@ -220,7 +236,7 @@ const styles = StyleSheet.create({
 
   txtview: {
     marginTop: 20,
-    marginRight: 15,
+    marginRight: 5,
   },
   text1: {
     fontSize: 13,

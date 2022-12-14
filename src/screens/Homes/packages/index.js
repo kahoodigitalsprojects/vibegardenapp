@@ -10,9 +10,6 @@ import {
 } from 'react-native';
 import {Header, Pinkbtn, PopUp, StoryData, Switch1} from '../../../componrnts';
 import Icon from 'react-native-vector-icons/AntDesign';
-
-import Images from '../../../constants';
-
 const Packages = props => {
   const [state, setstate] = useState(false);
   const [state1, setState1] = useState(false);
@@ -20,11 +17,14 @@ const Packages = props => {
     <>
       <View style={styles.main}>
         <View style={styles.container}>
-          <View style={{marginTop: 20}}>
+          <View style={{marginTop: 10}}>
             <Header
-              iconName="left"
-              header2
+              iconName="closesquareo"
+              header4
               OnPress={() => props.navigation.goBack('')}
+              color="#000"
+              fontSize={20}
+              headertext2="Swich Packges"
             />
           </View>
           <View style={styles.switchView}>
@@ -76,8 +76,13 @@ const Packages = props => {
         <PopUp
           poup1={true}
           Visible={state}
+          btntext1="Cancel"
+          btntext2="Use This Card"
           onpressA={() => {
-            props.navigation.navigate('PaymentMethod');
+            props.navigation.navigate('PaymentMethod', {
+              headertext1: 'Pay Now',
+              pressbtn: true,
+            });
           }}
           setVisible={setstate}
           onpress1={() => {

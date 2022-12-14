@@ -25,20 +25,25 @@ const QComponents = ({
   text3,
   text4,
   text5,
+  marginVertical,
+  textflower,
   text6,
   name,
+  width,
   name11,
   name2,
   number,
   video,
   video2,
   image1,
-  flowwerlist,
+  flowwerlist11,
   Statement,
   flow,
   direction,
   direction2,
   iconone,
+  margintopS,
+
   iconone1,
   icontwo,
   redbtn,
@@ -68,34 +73,49 @@ const QComponents = ({
           <View
             style={{
               width: '100%',
+              height: 202,
               marginTop: 10,
             }}>
-            <Image
+            <ImageBackground
               resizeMode="cover"
               style={{
                 width: '100%',
-                position: 'absolute',
+                alignItems: 'center',
+                height: '100%',
+                justifyContent: 'center',
+                alignItems: 'center',
               }}
-              source={Images.BackGround.path1}
-            />
-            <View style={styles.starimgbg}>
-              <Image
-                source={Images.Icons.playbtn}
-                resizeMode="contain"
-                style={{width: '100%', height: '100%'}}
-              />
-            </View>
-            {redbtn && (
-              <View
-                style={{
-                  backgroundColor: '#EF3A71',
-                  width: 60,
-                  height: 60,
-                  borderRadius: 12,
-                }}>
-                5:00 Min
+              source={Images.BackGround.path1}>
+              <View style={{width: 100, height: 70, alignSelf: 'center'}}>
+                <Image
+                  source={Images.Icons.playbtn}
+                  resizeMode="contain"
+                  style={{width: '100%', height: '100%'}}
+                />
+                {redbtn && (
+                  <View
+                    style={{
+                      width: 77,
+                      alignSelf: 'center',
+                      height: 40,
+                      borderRadius: 12,
+                      // margin: 2,
+                      backgroundColor: '#FF4056',
+                    }}>
+                    <Text
+                      style={{
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        color: '#fff',
+                        textAlign: 'center',
+                        top: 10,
+                      }}>
+                      5 min
+                    </Text>
+                  </View>
+                )}
               </View>
-            )}
+            </ImageBackground>
           </View>
         </View>
       )}
@@ -158,88 +178,122 @@ const QComponents = ({
               {iconone && (
                 <TouchableOpacity
                   onPress={() => {}}
-                  style={{marginTop: 5, marginLeft: 5}}>
-                  <Icon name={name2} size={18} color="#1C5C2E" />
+                  style={{marginTop: 1, marginLeft: 5}}>
+                  <Icon name={name2} size={25} color="#1C5C2E" />
                 </TouchableOpacity>
               )}
             </View>
             <View
               style={{
-                backgroundColor: 'yewllow',
+                // backgroundColor: 'yellow',
                 width: '100%',
+                marginTop: -20,
                 flexDirection: 'row',
                 justifyContent: 'space-between',
               }}>
-              <Text style={styles.text2}>{direction}</Text>
+              <Text
+                style={{
+                  marginTop: margintopS,
+                  color: '#1C5C2E',
+                  // fontWeight: '300',
+                  fontSize: 20,
+                  lineHeight: 22,
+                }}>
+                {direction}
+              </Text>
               <View style={{flexDirection: 'row'}}>
                 {iconone1 && (
-                  <TouchableOpacity onPress={() => {}} style={{marginLeft: 5}}>
-                    <Icon name={name11} size={30} color="#1C5C2E" />
+                  <TouchableOpacity onPress={() => {}} style={{marginRight: 5}}>
+                    <Icon2 name={name11} size={22} color="#1C5C2E" />
                   </TouchableOpacity>
                 )}
                 {icontwo && (
                   <TouchableOpacity onPress={() => {}} style={{}}>
-                    <Icon name={name2} size={30} color="#EF3A71" />
+                    <Icon name={name2} size={22} color="#EF3A71" />
                   </TouchableOpacity>
                 )}
               </View>
             </View>
           </View>
-          <View style={{}}>
-            <Text style={[styles.text2, {color: '#000'}]}>{text5}</Text>
+          <View style={{marginTop: 6}}>
+            {text5 && (
+              <Text style={[{color: '#000', fontSize: 18, lineHeight: 30}]}>
+                {text5}
+              </Text>
+            )}
           </View>
-          <View>
+          <View style={{width: width, alignSelf: 'center'}}>
             <Text
               style={[
-                styles.text2,
                 {
+                  marginTop: margintopS,
                   color: '#1C5C2E',
-                  fontWeight: '500',
+                  // fontWeight: '300',
                   fontSize: 16,
-                  lineHeight: 26,
+                  lineHeight: 22,
+                  marginVertical: 5,
                 },
               ]}>
               {Statement}
             </Text>
           </View>
-          <View style={{marginVertical: 31}}>
-            <Text style={[styles.text1, {textAlign: 'left'}]}>{text6}</Text>
-          </View>
+          {text6 && (
+            <View style={{marginVertical: marginVertical}}>
+              <Text
+                style={[
+                  styles.text2,
+                  {
+                    color: '#1C5C2E',
+                    fontWeight: '450',
+                    fontSize: 22,
+                    letterSpacing: 1.5,
+                    fontSize: 20,
+                    color: '#000',
+                  },
+                ]}>
+                {text6}
+              </Text>
+            </View>
+          )}
+          {flowwerlist11 && (
+            <View style={{padding: 6}}>
+              <FlatList
+                horizontal={true}
+                data={data}
+                renderItem={({item, index}) => {
+                  return (
+                    <>
+                      <View style={{height: '100%'}}>
+                        <TouchableOpacity
+                          onPress={item.onPress}
+                          style={styles.circle}>
+                          <Image
+                            source={item.img1}
+                            style={{width: '100%', height: '100%'}}
+                          />
+                        </TouchableOpacity>
+                        <View style={{width: 78}}>
+                          <Text
+                            style={{
+                              margin: 3,
+                              marginTop: 5,
+                              fontSize: 12,
+                              color: '#000',
+                              textAlign: 'center',
+                              color: '#1C5C2E',
+                            }}>
+                            {item.text1}
+                          </Text>
+                        </View>
+                      </View>
+                    </>
+                  );
+                }}
+              />
+            </View>
+          )}
         </View>
       </View>
-      {flowwerlist && (
-        <View style={styles.container}>
-          <FlatList
-            horizontal={true}
-            data={data}
-            renderItem={({item, index}) => {
-              return (
-                <>
-                  <View style={{margin: 5}}>
-                    <TouchableOpacity
-                      onPress={item.onPress}
-                      style={styles.circle}>
-                      <Image source={item.img1} />
-                    </TouchableOpacity>
-                    <View style={{fontSize: 10, width: 80}}>
-                      <Text
-                        style={{
-                          margin: 5,
-                          fontSize: 12,
-                          color: '#000',
-                          textAlign: 'center',
-                          color: '#1C5C2E',
-                        }}>
-                        {item.text1}
-                      </Text>
-                    </View>
-                  </View>
-                </>
-              );
-            }}
-          />
-        </View>
-      )}
     </>
   );
 };
@@ -269,7 +323,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   starbg: {
-    width: 330,
+    width: '100%',
     height: 200,
     alignSelf: 'center',
     marginVertical: 10,
@@ -279,11 +333,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   starbg2: {
+    width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
   },
   starimgbg: {
-    width: 330,
+    width: '100%',
     height: 200,
     alignSelf: 'center',
     marginVertical: 10,
@@ -292,8 +347,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   circle: {
-    width: 80,
-    height: 80,
+    width: 74,
+    height: 74,
     borderRadius: 100,
     backgroundColor: '#fff',
     justifyContent: 'center',

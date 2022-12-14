@@ -13,8 +13,8 @@ import Icon from 'react-native-vector-icons/AntDesign';
 
 const Imgbox = props => {
   return (
-    <View style={{alignSelf: 'center', width: '90%'}}>
-      <View style={{width: 172, height: 239}}>
+    <>
+      {/* <View style={{width: 172, height: 239}}>
         <ImageBackground
           resizeMode="cover"
           source={props.bghome2}
@@ -63,8 +63,110 @@ const Imgbox = props => {
             </View>
           </View>
         </ImageBackground>
+      </View> */}
+      <View style={{}}>
+        <View
+          style={{
+            alignSelf: 'center',
+            width: '100%',
+            flexDirection: 'row',
+            //  backgroundColor:'yellow'
+          }}>
+          <View style={{width: 172, height: 239, marginTop: -20}}>
+            <ImageBackground
+              source={Images.BackGround.greenbg}
+              style={{
+                width: '100%',
+                height: '100%',
+                borderRadius: 10,
+              }}>
+              <TouchableOpacity
+                onPress={props.pressI}
+                style={{
+                  // backgroundColor: 'pink',
+                  top: 28,
+                  right: 30,
+                  position: 'absolute',
+                  height: 33,
+                  width: 33,
+                  alignSelf: 'flex-end',
+
+                  // backgroundColor: 'yellow',
+                }}>
+                <Image
+                  source={props.heart1}
+                  resizeMode="contain"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    marginLeft: -10,
+                  }}
+                />
+                <Icon
+                  name={props.plus}
+                  color={'#fefefe'}
+                  size={25}
+                  style={{fontWeight: 'bold', position: 'absolute'}}
+                />
+              </TouchableOpacity>
+              <View
+                style={{
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  position: 'absolute',
+                  top: 100,
+                  left: 60,
+                }}>
+                {props.iconimg && (
+                  <View
+                    style={{
+                      width: 30,
+                      height: 25,
+                      // backgroundColor: 'yellow',
+                    }}>
+                    <Image
+                      source={props.iconimg}
+                      resizeMode="contain"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                      }}
+                    />
+                  </View>
+                )}
+
+                <Text
+                  style={{
+                    textAlign: 'center',
+                    fontSize: 18,
+                    marginVertical: 5,
+                  }}>
+                  {props.title}
+                </Text>
+                <View
+                  style={{
+                    width: 40,
+                    height: 15,
+                    borderRadius: 10,
+                    justifyContent: 'center',
+                    backgroundColor: '#CD258D',
+                    alignItems: 'center',
+                  }}>
+                  <Text
+                    style={{
+                      color: '#fff',
+                      fontWeight: 'bold',
+                      fontSize: 10,
+                    }}>
+                    5Min
+                  </Text>
+                </View>
+              </View>
+            </ImageBackground>
+          </View>
+        </View>
       </View>
-    </View>
+    </>
   );
 };
 

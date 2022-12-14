@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -10,8 +10,8 @@ import {
   StatusBar,
   TouchableOpacity,
 } from 'react-native';
-import { act } from 'react-test-renderer';
-import { Greenbox, Header, Imgbox, SeeAll, StoryData } from '../../../componrnts';
+import {act} from 'react-test-renderer';
+import {Greenbox, Header, Imgbox, SeeAll, StoryData} from '../../../componrnts';
 import All from '../../../componrnts/all';
 import Images from '../../../constants';
 
@@ -42,27 +42,33 @@ const Tools = props => {
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ flexGrow: 1 }}>
+        contentContainerStyle={{flexGrow: 1}}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
             width: '90%',
             alignSelf: 'center',
             marginVertical: 5,
-            marginTop: 15,
+            marginTop: 25,
           }}>
           <Header
+            marginLeft={-15}
+            size={22}
+            colorplus={'green'}
+            marginTopplus={-2}
             img1
             heartplus
             search1="search1"
             homeheader={true}
-            search={() => props.navigation.navigate('Homes', { screen: 'Search' })}
+            search={() =>
+              props.navigation.navigate('Homes', {screen: 'Search'})
+            }
             heart
             plus
           />
         </View>
         <View style={styles.Box1}>
-          <View style={{ width: '100%', alignSelf: 'center' }}>
+          <View style={{width: '100%', alignSelf: 'center'}}>
             <Text
               style={{
                 textAlign: 'center',
@@ -73,7 +79,7 @@ const Tools = props => {
               Tools
             </Text>
           </View>
-          <View style={{ width: '90%', alignSelf: 'center', marginTop: 5 }}>
+          <View style={{width: '90%', alignSelf: 'center', marginTop: 5}}>
             <Text
               style={{
                 textAlign: 'center',
@@ -86,25 +92,52 @@ const Tools = props => {
             </Text>
           </View>
 
-          <View style={styles.centerbox}>
+          <View style={[styles.centerbox, {}]}>
             <Greenbox
+              boxtex1={'Buddhism'}
+              boxtex2="Quantum Physics"
+              boxtex3={'Plants'}
               img1
               onPress={() => {
-                props.navigation.navigate('Homes', { screen: 'resonance' });
+                props.navigation.navigate('Homes', {screen: 'resonance'});
               }}
             />
+
             <View
               style={
                 {
-                  // backgroundColor: 'blue',
+                  // backgroundColor: 'blue'
                 }
-              }></View>
-            <View style={styles.box1}>
+              }>
+              <View style={[styles.box2, {marginTop: -35}]}>
+                <FlatList
+                  showsHorizontalScrollIndicator={false}
+                  keyExtractor={item => item.id}
+                  data={Data}
+                  renderItem={({item}) => {
+                    return (
+                      <All
+                        // pressI={() =>
+                        //   navigation.navigate('Homes', {screen: 'Video'})
+                        // }
+                        textA={item.textA}
+                        heart1={item.heart1}
+                        textB={item.textB}
+                        homebox
+                        plus={item.plus}
+                        bghome2={item.bg12}
+                        title={item.title}
+                      />
+                    );
+                  }}
+                />
+              </View>
+            </View>
+            {/* <View style={styles.box1}>
               <FlatList
-
                 keyExtractor={item => item.id}
                 data={Data}
-                renderItem={({ item }) => {
+                renderItem={({item}) => {
                   return (
                     <All
                       showsHorizontalScrollIndicator={false}
@@ -120,10 +153,9 @@ const Tools = props => {
                       title={item.title}
                     />
                   );
-
                 }}
               />
-            </View>
+            </View> */}
           </View>
         </View>
       </ScrollView>

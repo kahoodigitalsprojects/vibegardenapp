@@ -13,7 +13,17 @@ import {Button, Overlay} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Images from '../../constants';
 
-const PopUp = ({Visible, setVisible, onpress1, poup1, poup2, poup3,onpressA}) => {
+const PopUp = ({
+  Visible,
+  setVisible,
+  onpress1,
+  poup1,
+  poup2,
+  poup3,
+  onpressA,
+  btntext1,
+  btntext2,
+}) => {
   const [state1, setState1] = useState(false);
   return (
     <>
@@ -53,17 +63,17 @@ const PopUp = ({Visible, setVisible, onpress1, poup1, poup2, poup3,onpressA}) =>
                 style={[
                   styles.button,
                   styles.buttonClose,
-                  {borderWidth: 1, backgroundColor: '#fff'},
+                  {borderWidth: 1, backgroundColor: '#fff', padding: 5},
                 ]}
                 onPress={setVisible}>
                 <Text style={[styles.textStyle, {color: '#1C5C2E'}]}>
-                  Hide Modal
+                  {btntext1}
                 </Text>
               </TouchableOpacity>
               <TouchableOpacity
                 style={[styles.button, styles.buttonClose]}
                 onPress={onpress1}>
-                <Text style={[styles.textStyle]}>Hide Modal</Text>
+                <Text style={[styles.textStyle, {}]}>{btntext2}</Text>
               </TouchableOpacity>
             </View>
             <TouchableOpacity onPress={onpressA} style={styles.btns}>
@@ -99,13 +109,27 @@ const PopUp = ({Visible, setVisible, onpress1, poup1, poup2, poup3,onpressA}) =>
               <Text style={styles.modalText}>
                 Payment Processed Successfully
               </Text>
-              <Text
-                style={[
-                  styles.modalText,
-                  {textAlign: 'center', color: '#2196F3'},
-                ]}>
-                1 Year Upgraded
-              </Text>
+              <View style={{flexDirection: 'row'}}>
+                <Text
+                  style={[
+                    styles.modalText,
+                    {textAlign: 'center', color: '#2196F3'},
+                  ]}>
+                  1 Year Upgraded
+                </Text>
+                <View
+                  style={{
+                    width: 20,
+                    height: 20,
+                    marginTop: 18,
+                    marginLeft: 10,
+                  }}>
+                  <Image
+                    source={require('../../assests/images/tick.png')}
+                    style={{}}
+                  />
+                </View>
+              </View>
             </View>
             <TouchableOpacity
               style={[styles.button, styles.buttonClose]}
@@ -168,7 +192,7 @@ const styles = StyleSheet.create({
     // elevation: 5,
   },
   button: {
-    width: 90,
+    width: 120,
     height: 39,
     borderRadius: 15,
     elevation: 2,

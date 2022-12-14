@@ -20,27 +20,27 @@ const Buddhisim = props => {
   const data = [
     {
       Img1: Images.Imgs.user2,
-      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.',
+      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy ',
       name: 'Michael Grower',
     },
     {
       text1: 'No idea What a Multiverse is',
       texlist: 'Quantum physics',
       Img1: Images.Imgs.user2,
-      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.',
+      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy ',
       name: 'Michael Grower',
     },
     {
       text1: 'SMCA Peepsceen to think so',
       texlist: 'Nature',
       Img1: Images.Imgs.user2,
-      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.',
+      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy',
       name: 'Michael Grower',
     },
     {
       text1: 'Shall we Question Heap',
       Img1: Images.Imgs.user2,
-      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.',
+      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy ',
       name: 'Michael Grower',
     },
   ];
@@ -127,13 +127,22 @@ const Buddhisim = props => {
                       />
                       <All
                         pressI={() =>
-                          props.navigation.navigate(
-                            'Homes',
-                            {screen: 'Video'},
-                            {
-                              Heading: Heading,
+                          props.navigation.navigate('Homes', {
+                            screen: 'Video',
+                            params: {
+                              otherParam: 'Tools to try',
+                              plus: true,
+                              otherParam1: 'TONGLEN',
+                              textflower: 'Did you try this tools?',
+                              icon1: true,
+                              redbtn: true,
+                              plus: true,
+                              backoption: () =>
+                                props.navigation.navigate('Mytabs', {
+                                  screen: 'GroundWork',
+                                }),
                             },
-                          )
+                          })
                         }
                         homebox
                         heart1={item.heart1}

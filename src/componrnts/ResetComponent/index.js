@@ -30,27 +30,39 @@ const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
             flexDirection: 'row',
             justifyContent: 'space-between',
           }}>
-          <View style={{width: 112, height: 80, marginTop: 10}}>
-            <Image source={Images.Imgs.pic1} />
-          </View>
-          <View style={{margin: 15, marginVertical: 10}}>
-            <View style={{marginVertical: 3}}>
-              <Text style={{color: '#1C5C2E', fontSize: 16, fontWeight: '500'}}>
-                Calm and Rest
-              </Text>
+          <View
+            style={{
+              // marginVertical: 20,
+              // marginTop: 20,
+              width: '80%',
+              flexDirection: 'row',
+              // justifyContent: 'space-between',
+            }}>
+            <View style={{width: 112, height: 80, marginTop: 10}}>
+              <Image source={Images.Imgs.pic1} />
             </View>
+            <View style={{margin: 15, marginVertical: 10}}>
+              <View style={{marginVertical: 3}}>
+                <Text
+                  style={{color: '#1C5C2E', fontSize: 16, fontWeight: '500'}}>
+                  Calm and Rest
+                </Text>
+              </View>
 
-            <View style={{marginVertical: 3}}>
-              <Text style={{color: '#000'}}>
-                The session is about becomi...
-              </Text>
-            </View>
+              <View style={{marginVertical: 3}}>
+                <Text style={{color: '#000'}}>
+                  The session is about becomi...
+                </Text>
+              </View>
 
-            <View style={{marginVertical: 3}}>
-              <Text style={{color: ''}}>3 min * Date: 10-17-2022</Text>
+              <View style={{marginVertical: 3}}>
+                <Text style={{color: '', fontSize: 12}}>
+                  3 min * Date: 10-17-2022
+                </Text>
+              </View>
             </View>
           </View>
-          <View style={{}}>
+          <View style={{width: '10%'}}>
             <View style={styles.container}>
               <View style={styles.centeredView}>
                 <Modal
@@ -83,30 +95,39 @@ const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
                         padding: 1,
                       }}>
                       <Icon2 name="delete" size={12} />
-                      {icontrue && (
-                        <View style={{marginLeft: 4}}>
-                          <Text style={{fontSize: 12}}>Remove</Text>
-                        </View>
-                      )}
-                      {imgtrue && (
-                        <View style={{marginLeft: 4, backgroundColor: 'green'}}>
-                          <View style={{marginLeft: 4}}>
-                            <Text style={{fontSize: 12}}>Remove</Text>
-                          </View>
-                        </View>
-                      )}
+                      <Text style={{fontSize: 12}}>Remove</Text>
                     </TouchableOpacity>
                   </View>
                 </Modal>
               </View>
               <TouchableOpacity
-                style={[{marginTop: 5}, styles.button]}
+                style={[{marginTop: 8}, styles.button]}
                 onPress={() => setModalVisible(true)}>
                 <Icon name="dots-three-horizontal" size={22} />
               </TouchableOpacity>
             </View>
             <TouchableOpacity style={{marginTop: 35}}>
-              <Icon name={iconname} size={22} color="red" />
+              {icontrue && (
+                <View style={{marginLeft: 4}}>
+                  <Icon2 name="heart" size={16} color="red" />
+                </View>
+              )}
+              {imgtrue && (
+                <View
+                  style={{
+                    marginLeft: 4,
+                    backgroundColor: '#1C5C2E',
+                    borderRadius: 100,
+                    width: 14,
+                    height: 14,
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}>
+                  <View style={{}}>
+                    <Icon2 name="plus" size={12} color="#fff" />
+                  </View>
+                </View>
+              )}
             </TouchableOpacity>
           </View>
         </View>

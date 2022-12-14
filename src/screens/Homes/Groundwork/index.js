@@ -34,24 +34,6 @@ const GroundWork = props => {
       name: 'TONGLEN',
       title: 'title',
     },
-    {
-      id: 3,
-      bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
-      img4: Images.BackGround.rectangle2,
-      heart1: Images.Icons.heart1,
-      name: 'TONGLEN',
-      title: 'title',
-    },
-    {
-      id: 4,
-      bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
-      img4: Images.BackGround.rectangle2,
-      heart1: Images.Icons.heart1,
-      name: 'TONGLEN',
-      title: 'title',
-    },
   ];
   return (
     <SafeAreaView style={styles.main}>
@@ -64,9 +46,12 @@ const GroundWork = props => {
             width: '90%',
             alignSelf: 'center',
             marginVertical: 5,
-            marginTop: 15,
+            marginTop: 25,
           }}>
           <Header
+            marginLeft={-15}
+            heartleft1={25}
+            hearttop={5}
             img1
             heartplus
             search1="search1"
@@ -98,6 +83,9 @@ const GroundWork = props => {
           </View>
           <View style={styles.centerbox}>
             <Greenbox
+              boxtex1={'Buddhism'}
+              boxtex2="Quantum Physics"
+              boxtex3={'Nature'}
               img2
               onPress1={() => {
                 props.navigation.navigate('Homes', {screen: 'Buddhisim'}, {});
@@ -117,10 +105,13 @@ const GroundWork = props => {
                     return (
                       <View style={{}}>
                         <MainBox
+                          marginTop11={40}
+                          minutes={'3 min'}
+                          icon2={true}
                           left={65}
                           img2={item.img4}
                           item={item.ImgICon}
-                          bgcolor={'#FF4053'}
+                          bgcolor={'#FF405679'}
                           textone="FAMILY OF LIGHT"
                           text2={'5 min'}
                         />
@@ -136,46 +127,48 @@ const GroundWork = props => {
                   // backgroundColor: 'blue'
                 }
               }>
-              <View style={styles.box1}>
-                <FlatList
-                  keyExtractor={item => item.id}
-                  showsHorizontalScrollIndicator={false}
-                  numColumns={2}
-                  data={Data}
-                  renderItem={({item}) => {
-                    return (
-                      <View
-                        style={{
-                          alignSelf: 'center',
-                          display: 'flex',
-                          flexGrow: 1,
-                        }}>
+              <View
+                style={
+                  {
+                    // backgroundColor: 'blue'
+                  }
+                }>
+                <View style={[styles.box2, {}]}>
+                  <FlatList
+                    showsHorizontalScrollIndicator={false}
+                    keyExtractor={item => item.id}
+                    data={Data}
+                    renderItem={({item}) => {
+                      return (
                         <All
                           pressI={() =>
-                            props.navigation.navigate(
-                              'Homes',
-                              {
-                                screen: 'Video',
+                            props.navigation.navigate('Homes', {
+                              screen: 'Video',
+                              params: {
+                                otherParam: false,
+                                plus: false,
+                                otherParam1: 'FAMILY OF LIGHT',
+                                icon1: false,
+                                backoption: () =>
+                                  props.navigation.navigate('Mytabs', {
+                                    screen: 'GroundWork',
+                                  }),
                               },
-                              {
-                                 Heading1:"fdsgshdshfdgsfdjdhgddsd",
-                                itemId: 86,
-                                otherParam: 'anything you want here',
-                              },
-                            )
+                            })
                           }
-                          heart1={item.heart1}
+                          onPressALL={item.pressAll}
                           textA={item.textA}
+                          heart1={item.heart1}
                           textB={item.textB}
                           homebox
                           plus={item.plus}
                           bghome2={item.bg12}
                           title={item.title}
                         />
-                      </View>
-                    );
-                  }}
-                />
+                      );
+                    }}
+                  />
+                </View>
               </View>
             </View>
           </View>

@@ -7,49 +7,59 @@ import {
   TextInput,
   TouchableOpacity,
   StatusBar,
+  ScrollView,
 } from 'react-native';
 import {Greenbtn, Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 const NotRegisterd = props => {
   return (
     <>
-      <StatusBar animated={true} backgroundColor="#000" />
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{flexGrow: 1}}>
+        <StatusBar animated={true} backgroundColor="#000" />
+        <View style={styles.main}>
+          <View style={{width: '90%', marginTop: 10}}>
+            <Header
+              iconName="closesquareo"
+              header2
+              OnPress={() => props.navigation.goBack('')}
+            />
 
-      <View style={styles.main}>
-        <View style={{width: '90%', marginTop: 30}}>
-          <Header
-            iconName="closesquareo"
-            header2
-            OnPress={() => props.navigation.goBack('')}
-          />
-
-          <View style={{marginTop: 30, alignItems: 'center'}}>
-            <View style={{width: 140, height: 140, marginTop: 30}}>
-              <Image
-                source={Images.Icons.envelop}
-                style={{width: '100%', height: '100%'}}
+            <View style={{width: '100%', arginTop: 30, alignItems: 'center'}}>
+              <View style={{width: 140, height: 140, marginTop: 30}}>
+                <Image
+                  source={Images.Icons.envelop}
+                  style={{width: '100%', height: '100%'}}
+                />
+              </View>
+            </View>
+            <View style={{width: '100%'}}>
+              <Text style={styles.txt1}>
+                That Email Is Not Registered , Please Try Creating
+                <Text style={[styles.txt1, {textAlign: 'left'}]}>
+                  {' '}
+                  An Account
+                </Text>
+              </Text>
+            </View>
+            <View style={{marginVertical: 40}}>
+              <Greenbtn
+                width={'80%'}
+                text1={'Create an Account'}
+                onPress={() =>
+                  props.navigation.navigate('signup', {
+                    registerd1: () => props.navigation.navigate('registerd'),
+                    registerd12: () => props.navigation.navigate('registerd'),
+                    itemId: 86,
+                    otherParam: 'anything you want here',
+                  })
+                }
               />
             </View>
-            <Text style={styles.txt1}>
-              That Email Is Not Registered, Please Try Creating An Account
-            </Text>
-          </View>
-          <View style={{marginVertical: 40}}>
-            <Greenbtn
-              width={'100%'}
-              text1={'Create an Account'}
-              onPress={() =>
-                props.navigation.navigate('signup', {
-                  registerd1: () => props.navigation.navigate('registerd'),
-                  registerd12: () => props.navigation.navigate('registerd'),
-                  itemId: 86,
-                  otherParam: 'anything you want here',
-                })
-              }
-            />
           </View>
         </View>
-      </View>
+      </ScrollView>
     </>
   );
 };
@@ -68,6 +78,7 @@ const styles = StyleSheet.create({
   txt1: {
     color: '#000',
     textAlign: 'left',
-    fontSize: 16,
+    fontSize: 15,
+    fontWeight: '400',
   },
 });

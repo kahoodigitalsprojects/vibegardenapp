@@ -16,57 +16,66 @@ import Icon2 from 'react-native-vector-icons/AntDesign';
 import Images from '../../../constants';
 
 const Me = props => {
+  const data = [{text1: 'Last Weak'}, {text1: '30 days'}, {text1: 'All'}];
   const data1 = [
     {
       img1: Images.Icons.gpluse,
       text1: 'Tools to try',
       onPress: () => {
-        props.navigation.navigate(
-          'Homes',
-          {
-            screen: 'FressBlooms',
+        props.navigation.navigate('Homes', {
+          screen: 'FressBlooms',
+          params: {
+            otherParam: 'Tools to try',
+            plus: true,
+            backoption: () =>
+              props.navigation.navigate('Mytabs', {screen: 'me'}),
           },
-          {icon1: 'ghjgghghhgf', hedindg: 'Tools To try'},
-        );
+        });
       },
     },
     {
       img1: Images.Icons.arrow,
       text1: 'Recent Content',
       onPress: () => {
-        props.navigation.navigate(
-          'Homes',
-          {
-            screen: 'FressBlooms',
+        props.navigation.navigate('Homes', {
+          screen: 'FressBlooms',
+          params: {
+            otherParam: 'Recent Content',
+            plus: true,
+            backoption: () =>
+              props.navigation.navigate('Mytabs', {screen: 'me'}),
           },
-          {icon1: 'ghjgghghhgf'},
-        );
+        });
       },
     },
     {
       img1: Images.Icons.gheart,
       text1: 'Favorites',
       onPress: () => {
-        props.navigation.navigate(
-          'Homes',
-          {
-            screen: 'FressBlooms',
+        props.navigation.navigate('Homes', {
+          screen: 'FressBlooms',
+          params: {
+            otherParam: 'Favorites',
+            heart: true,
+            backoption: () =>
+              props.navigation.navigate('Mytabs', {screen: 'me'}),
           },
-          {icon1: 'ghjgghghhgf'},
-        );
+        });
       },
     },
     {
       img1: Images.Icons.star,
       text1: 'Top Tools',
       onPress: () => {
-        props.navigation.navigate(
-          'Homes',
-          {
-            screen: 'FressBlooms',
+        props.navigation.navigate('Homes', {
+          screen: 'FressBlooms',
+          params: {
+            otherParam: 'Top Tools',
+            plus: true,
+            backoption: () =>
+              props.navigation.navigate('Mytabs', {screen: 'me'}),
           },
-          {icon1: 'ghjgghghhgf'},
-        );
+        });
       },
     },
     {
@@ -89,7 +98,7 @@ const Me = props => {
           style={{
             width: '90%',
             alignSelf: 'center',
-            marginTop: 10,
+            marginTop: 25,
             // paddingVertical: 20,
             // position: 'absolute',
             // top: 8,
@@ -98,6 +107,7 @@ const Me = props => {
           <Header
             img1
             toggle
+            marginLeft={-15}
             search1="search1"
             homeheader={true}
             search={() => {
@@ -112,13 +122,14 @@ const Me = props => {
           />
         </View>
         <View style={styles.Box1}>
-          <View style={{width: '90%', alignSelf: 'center'}}>
+          <View style={{width: '90%', alignSelf: 'center', marginTop: 20}}>
             <Text
               style={{
                 textAlign: 'center',
                 fontSize: 28,
                 fontWeight: '600',
                 color: '#000000',
+                marginVertical: 10,
               }}>
               Erin
             </Text>
@@ -156,14 +167,74 @@ const Me = props => {
                         onPress={item.onPress}
                         style={{flexDirection: 'row', marginVertical: 10}}>
                         <Image source={item.img1} />
-                        <Text style={{marginLeft: 25}}>{item.text1}</Text>
+                        <Text style={{marginLeft: 15}}>{item.text1}</Text>
                       </TouchableOpacity>
                     </>
                   );
                 }}
               />
+              <Text
+                style={{
+                  color: '#000',
+                  fontSize: 20,
+                  fontWeight: '500',
+                  marginVertical: 10,
+                }}>
+                Bloom 'o' Meter:
+              </Text>
+              <View>
+                <FlatList
+                  horizontal={true}
+                  data={data}
+                  renderItem={({item}) => {
+                    return (
+                      <View
+                        style={{
+                          width: 80,
+                          height: 30,
+                          backgroundColor: '#BCCFC1',
+                          borderRadius: 10,
+                          margin: 5,
+                          justifyContent: 'center',
+                        }}>
+                        <Text style={{textAlign: 'center', color: '#fefefe'}}>
+                          {item.text1}
+                        </Text>
+                      </View>
+                    );
+                  }}
+                />
+              </View>
+
+              <View
+                style={{
+                  width: '100%',
+                  height: 80,
+                  marginVertical: 10,
+                  flexDirection: 'row',
+                }}>
+                <View style={{width: '73%', height: 80, marginVertical: 10}}>
+                  <Image
+                    source={Images.Logos.graph}
+                    resizeMode="contain"
+                    style={styles.cropimg}
+                  />
+                </View>
+                <Text
+                  style={{
+                    // color: '#000',
+                    fontSize: 12,
+                    fontWeight: '500',
+                    // marginVertical: 10,
+                    marginTop: 40,
+                    marginLeft: -30,
+                  }}>
+                  Your Graph will appear{'\n'}after 2 days of tracking
+                </Text>
+              </View>
               <View style={{marginTop: 10}}>
                 <Pinkbtn
+                  width={'65%'}
                   onPress={() => {
                     props.navigation.navigate(
                       'Homes',
@@ -180,7 +251,6 @@ const Me = props => {
                       },
                     );
                   }}
-                  width={'60%'}
                   btntxt="Update Current Blooms"
                 />
               </View>

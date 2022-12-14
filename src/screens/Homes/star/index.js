@@ -29,7 +29,7 @@ const Star = props => {
           <Header
             iconName="closesquareo"
             header2
-            OnPress={() => props.navigation.replace('Homes')}
+            OnPress={() => props.navigation.replace('Mytabs',{screen: 'Homes'})}
           />
           <View
             style={{
@@ -55,7 +55,7 @@ const Star = props => {
             <Text
               style={{
                 marginVertical: 10,
-                fontSize: 18,
+                fontSize: 16,
                 textAlign: 'center',
                 color: '#000',
                 fontWeight: '400',

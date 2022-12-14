@@ -12,10 +12,10 @@ const Greenbtn = ({text1, width, onPress}) => {
           backgroundColor: '#1C5C2E',
           justifyContent: 'center',
           alignItems: 'center',
-          borderRadius: 25,
+          borderRadius: 15,
         }}
         onPress={onPress}>
-        <Text style={{fontWeight: 'bold', color: '#fff'}}>{text1}</Text>
+        <Text style={{color: '#fff', fontSize: 20}}>{text1}</Text>
       </TouchableOpacity>
     </View>
   );

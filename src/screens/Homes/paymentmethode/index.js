@@ -14,8 +14,13 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Images from '../../../constants';
 import Settings from '../settings';
 
-const PaymentMethod = props => {
+const PaymentMethod = ({navigation, route, pres}) => {
+  const [press, setPress] = useState();
+  const {headertext1} = route.params;
+  const {pressbtn} = route.params;
+
   const [state1, setState1] = useState(false);
+  const [state, setState] = useState(false);
   return (
     <>
       <SafeAreaView style={styles.main}>
@@ -30,13 +35,14 @@ const PaymentMethod = props => {
               width: '90%',
               alignSelf: 'center',
             }}>
+          
             <Header
               iconName="left"
-              header2
+              header4
               OnPress={() => props.navigation.goBack('')}
-              headertext="Manage Subscriptions"
-              fontSize={20}
               color="#000"
+              fontSize={20}
+              headertext2={headertext1}
             />
             <View style={{marginTop: 30, alignSelf: 'center', width: '100%'}}>
               <Text
@@ -92,7 +98,7 @@ const PaymentMethod = props => {
                       fontWeight: '400',
                       marginLeft: 10,
                     }}>
-                    Bloomsupport@vibgarden.com
+                    4860567867261538
                   </Text>
                 </View>
               </View>
@@ -179,7 +185,7 @@ const PaymentMethod = props => {
                   width={'60%'}
                   text1="Update"
                   onPress={() => {
-                    setState1(!state1);
+                    pressbtn ? setState(!state) : setState1(!state1);
                   }}
                 />
               </View>
@@ -203,7 +209,15 @@ const PaymentMethod = props => {
           Visible={state1}
           setVisible={setState1}
           onpress1={() => {
-            setState1(false);
+            navigation.navigate('ManageSubscription');
+          }}
+        />
+        <PopUp
+          poup2={true}
+          Visible={state}
+          setVisible={setState}
+          onpress1={() => {
+            navigation.navigate('ManageSubscription');
           }}
         />
       </View>

@@ -27,10 +27,8 @@ const Search = props => {
             props.navigation.navigate('Search2');
           }}
         />
-        <TouchableOpacity
-          onPress={() => {
-            props.navigation.navigate('Search2');
-          }}
+        <View
+     
           style={styles.container}>
           <View
             style={{
@@ -53,11 +51,12 @@ const Search = props => {
                 fontSize: 18,
                 lineHeight: 35,
                 marginTop: 20,
+                textAlign: 'center',
               }}>
-              Search Tools,And{'\n'}Groundwork Videos
+              Search Tools , And{'\n'}Groundwork Videos
             </Text>
           </View>
-        </TouchableOpacity>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );

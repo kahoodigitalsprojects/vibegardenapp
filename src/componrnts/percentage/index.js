@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import {Pinkbtn} from '../pinkbtn';
+import {PreventRemoveContext} from '@react-navigation/native';
 
 const Percentage = ({
   Image1,
@@ -13,20 +14,27 @@ const Percentage = ({
   btntxt,
   simpletext,
   simpletext1,
+  width,
+  paddingVertical,
+  
+
   btn,
+  Pertext,
 }) => {
   const [count, setCount] = useState(23);
   return (
-    <View style={styles.box}>
+    <View style={[styles.box, {paddingVertical: paddingVertical}]}>
       {simpletext && (
         <Text
           style={[
-            styles.txt1,
             {
               textAlign: 'center',
               marginVertical: 10,
               marginTop: 30,
               // lineHeight: 40,
+              fontSize: 18,
+              color: '#000',
+              fontWeight: '600',
             },
           ]}>
           {simpletext1}
@@ -49,7 +57,9 @@ const Percentage = ({
             marginHorizontal: margin1,
           }}>
           <Image source={Image1} style={[styles.img]} resizeMode="contain" />
-          <Text style={{textAlign: 'center', color: 'green'}}>0-25%</Text>
+          {Pertext && (
+            <Text style={{textAlign: 'center', color: 'green'}}>0-25%</Text>
+          )}
         </View>
 
         <Text
@@ -94,7 +104,7 @@ const Percentage = ({
       </View>
       {btn && (
         <View style={{marginVertical: 10}}>
-          <Pinkbtn onPress={onPress} width={'60%'} btntxt={btntxt} />
+          <Pinkbtn onPress={onPress} width={width} btntxt={btntxt} />
         </View>
       )}
     </View>
@@ -108,6 +118,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     // height: 273,
     elevation: 10,
+  
   },
   img: {
     width: 80,

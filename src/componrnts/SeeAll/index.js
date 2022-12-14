@@ -13,7 +13,7 @@ const SeeAll = ({color1, textA, textB, onPress}) => {
       }}>
       <Text style={[styles.txtA, {color: color1}]}>{textA}</Text>
       <TouchableOpacity onPress={onPress} style={{}}>
-        <Text style={styles.txtB}>{textB}</Text>
+        <Text style={[styles.txtB, {color: color1}]}>{textB}</Text>
       </TouchableOpacity>
     </View>
   );

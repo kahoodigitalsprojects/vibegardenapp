@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   View,
   Text,
@@ -6,6 +6,7 @@ import {
   Image,
   SafeAreaView,
   ScrollView,
+  BackHandler,
   FlatList,
   StatusBar,
 } from 'react-native';
@@ -15,6 +16,16 @@ import MainBox from '../../../componrnts/mainbox';
 import Images from '../../../constants';
 
 const Home = ({navigation, route}) => {
+  const backAction = () => {
+    // navigation.navigate('Mytabes', {screen: 'homes'});
+  };
+  BackHandler.addEventListener('hardwareBackPress', () => {
+    // navigation.navigate('Mytabes', {screen: 'homes'});
+    console.log('home baclhandler called');
+    // BackHandler.exitApp();
+  });
+  useEffect(() => {}, []);
+
   const Data = [
     {
       id: 1,
@@ -22,12 +33,22 @@ const Home = ({navigation, route}) => {
       bg12: Images.BackGround.greenbg,
       // heart1: Images.Icons.heart1,
       name: 'TONGLEN',
-      title: 'title',
+      title: 'Title',
       textA: 'FEATURED TOOLS',
-      textB: 'See ALL',
+      textB: 'See All',
       plus: 'plus',
       img4: Images.BackGround.rectangle2,
       one: Images.Icons.circleplus,
+      pressAll: () => {
+        navigation.navigate('Homes', {
+          screen: 'FressBlooms',
+          params: {
+            otherParam: 'Tools to try',
+            plus: true,
+            backoption: () => navigation.navigate('Mytabs', {screen: 'Home'}),
+          },
+        });
+      },
     },
     {
       id: 2,
@@ -35,9 +56,9 @@ const Home = ({navigation, route}) => {
       bg12: Images.BackGround.greenbg,
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
-      title: 'title',
+      title: 'Title',
       textA: 'FEATURED GROUNDWORK',
-      textB: 'See ALL',
+      textB: 'See All',
       img4: Images.BackGround.rectangle2,
       one: Images.Icons.circleplus,
       heart1: Images.Icons.heart1,
@@ -47,10 +68,10 @@ const Home = ({navigation, route}) => {
       bg1: Images.BackGround.black,
       bg12: Images.BackGround.greenbg,
       name: 'TONGLEN',
-      title: 'title',
-      textA: 'BUDDHISM',
+      title: 'Title',
+      textA: 'BUDDHISIM',
       // plus: 'plus',
-      textB: 'See ALL',
+      textB: 'See All',
       img4: Images.BackGround.rectangle2,
       one: Images.Icons.circleplus,
       heart1: Images.Icons.heart1,
@@ -59,14 +80,15 @@ const Home = ({navigation, route}) => {
       id: 4,
       bg1: Images.BackGround.black,
       bg12: Images.BackGround.greenbg,
-      heart1: Images.Icons.heart1,
+      // heart1: Images.Icons.heart1,
       name: 'TONGLEN',
-      title: 'title',
+      title: 'Title',
       textA: 'QUANTUM PHYSICS',
-      textB: 'See ALL',
+      textB: 'See All',
+      plus: 'plus',
       img4: Images.BackGround.rectangle2,
       one: Images.Icons.circleplus,
-      heart1: Images.Icons.heart1,
+      // heart1: Images.Icons.heart1,
     },
   ];
   return (
@@ -80,16 +102,21 @@ const Home = ({navigation, route}) => {
             width: '90%',
             alignSelf: 'center',
             marginVertical: 5,
-            marginTop: 15,
+            marginTop: 25,
           }}>
           <Header
+            marginLeft={-15}
             img1
             heartplus
             search1="search1"
+            color="green"
             homeheader={true}
             search={() => navigation.navigate('Homes', {screen: 'Search'})}
             heart
             plus
+            size={22}
+            colorplus={'green'}
+            marginTopplus={-2}
           />
         </View>
         <View style={styles.Box1}>
@@ -100,6 +127,7 @@ const Home = ({navigation, route}) => {
                 fontSize: 28,
                 fontWeight: '600',
                 color: '#000000',
+                marginTop: 20,
               }}>
               Hi, You.
             </Text>
@@ -113,12 +141,22 @@ const Home = ({navigation, route}) => {
               }>
               <SeeAll
                 onPress={() =>
-                  navigation.navigate('Homes', {screen: 'FressBlooms'})
+                  navigation.navigate('Homes', {
+                    screen: 'FressBlooms',
+                    params: {
+                      otherParam: 'Fresh Blooms',
+                      heart: true,
+                      icon1: false,
+                      backoption: () =>
+                        navigation.navigate('Mytabs', {screen: 'Home'}),
+                    },
+                  })
                 }
+                color1="#1C5C2E"
                 textA="FRESH BLOOMS"
-                textB="SeeAll"
+                textB="See All"
               />
-              <View style={styles.box2}>
+              <View style={[styles.box2, {}]}>
                 <ScrollView
                   horizontal={true}
                   showsHorizontalScrollIndicator={false}>
@@ -126,12 +164,15 @@ const Home = ({navigation, route}) => {
                     return (
                       <View style={{}}>
                         <MainBox
+                          minutes={'5 min'}
+                          Wheart
                           left={100}
-                          bgcolor={'#4E805C'}
+                          bgcolor={'#4E805C89'}
                           img2={item.img4}
                           item={item.ImgICon}
                           color={'green'}
                           textone="TONGLEN"
+                          date1={'Posted Date:12-01-2022'}
                           text2={'5 min'}
                         />
                       </View>
@@ -146,25 +187,40 @@ const Home = ({navigation, route}) => {
                   // backgroundColor: 'blue'
                 }
               }>
-              <View style={styles.box1}>
+              <View style={[styles.box2, {marginVertical: 10}]}>
                 <FlatList
                   showsHorizontalScrollIndicator={false}
                   keyExtractor={item => item.id}
                   data={Data}
                   renderItem={({item}) => {
                     return (
-                      <All
-                        pressI={() =>
-                          navigation.navigate('Homes', {screen: 'Video'})
-                        }
-                        heart1={item.heart1}
-                        textA={item.textA}
-                        textB={item.textB}
-                        homebox
-                        plus={item.plus}
-                        bghome2={item.bg12}
-                        title={item.title}
-                      />
+                      <>
+                        <All
+                          color1="#1C5C2E"
+                          pressI={() =>
+                            navigation.navigate('Homes', {
+                              screen: 'Video',
+                              params: {
+                                otherParam: false,
+                                plus: false,
+                                otherParam1: 'FAMILY OF LIGHT',
+                                backoption: () =>
+                                  navigation.navigate('Mytabs', {
+                                    screen: 'GroundWork',
+                                  }),
+                              },
+                            })
+                          }
+                          // onPressALL={item.pressAll}
+                          textA={item.textA}
+                          heart1={item.heart1}
+                          textB={item.textB}
+                          homebox
+                          plus={item.plus}
+                          bghome2={item.bg12}
+                          title={item.title}
+                        />
+                      </>
                     );
                   }}
                 />
@@ -198,7 +254,7 @@ const styles = StyleSheet.create({
     width: '100%',
     alignSelf: 'center',
     // height: '100%',
-    // backgroundColor: 'yellow',
+    backgroundColor: 'yellow',
   },
 });
 

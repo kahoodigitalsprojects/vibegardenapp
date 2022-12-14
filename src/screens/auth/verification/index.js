@@ -16,7 +16,7 @@ const Verify = props => {
       <StatusBar animated={true} backgroundColor="#000" />
 
       <View style={styles.main}>
-        <View style={{width: '90%', marginTop: 30}}>
+        <View style={{width: '90%', marginTop: 10}}>
           <Header iconName="arrowleft" header2 />
         </View>
 

@@ -17,10 +17,12 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import Images from '../../../constants';
 
 const ChuchuasDetails = ({route, navigation}) => {
+
   const {Image1, Image2, Image3, Image4, newtext, Image5, Image6, Heading} =
     route.params;
 
   const [data1, setdata1] = useState();
+
   const Data = [
     {
       image2: Image1,
@@ -33,10 +35,6 @@ const ChuchuasDetails = ({route, navigation}) => {
     {
       image2: Image3,
       text: '50-75%',
-    },
-    {
-      image2: Image5,
-      text: '75-100%',
     },
     {
       image2: Image5,
@@ -80,9 +78,14 @@ const ChuchuasDetails = ({route, navigation}) => {
                 {newtext}
               </Text>
 
-              <View style={{marginTop: 30,margin:8}}>
+              <View
+                style={{
+                  marginTop: 30,
+
+                  alignItems: 'center',
+                }}>
                 <FlatList
-                showsHorizontalScrollIndicator={false}
+                  showsHorizontalScrollIndicator={false}
                   data={Data}
                   horizontal={true}
                   renderItem={({item, index}) => {
@@ -90,7 +93,7 @@ const ChuchuasDetails = ({route, navigation}) => {
                       <>
                         <View
                           style={{
-                            margin: 5,
+                            margin: 4,
                             marginTop: 10,
                             justifyContent: 'center',
                             alignItems: 'center',
@@ -104,8 +107,8 @@ const ChuchuasDetails = ({route, navigation}) => {
                               width: '100%',
                               display: 'flex',
                               flexGrow: 1,
-                              width: 80,
-                              height: 80,
+                              width: 76,
+                              height: 78,
                               borderRadius: 100,
                               justifyContent: 'center',
                               alignItems: 'center',
@@ -175,7 +178,7 @@ const ChuchuasDetails = ({route, navigation}) => {
                   }}
                 />
               </View>
-              <View style={styles.box}>
+              <View style={{marginVertical: 20}}>
                 <Percentage
                   simpletext={true}
                   simpletext1="Dial It In If You Have Any Wish:"
@@ -183,6 +186,7 @@ const ChuchuasDetails = ({route, navigation}) => {
                   icons={true}
                   Image1={Image1}
                   btntxt="continue"
+                  width={'50%'}
                   onPress={() =>
                     navigation.navigate('MeetScreen2', {
                       Image1: Image1,

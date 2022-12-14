@@ -6,7 +6,7 @@ const StoryData = props => {
     <View>
       {props.storytext1 && (
         <View style={{width: '90%', alignSelf: 'center', marginVertical: 10}}>
-          <Text style={[styles.txt, {textAlign: 'left'}]}>
+          <Text style={[styles.txt, {textAlign: 'left',lineHeight:24}]}>
             {props.storytext}
           </Text>
         </View>

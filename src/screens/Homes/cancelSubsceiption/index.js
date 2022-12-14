@@ -70,44 +70,54 @@ const CancelSubscription = props => {
               text6={'Leaving Because:'}
             />
           </View>
-          <FlatList
-            data={data}
-            renderItem={({item}) => {
-              return (
-                <View
-                  style={{
-                    marginVertical: 8,
-                    flexDirection: 'row',
-                    width: '100%',
-                  }}>
-                  <TouchableOpacity
-                    onPress={() => {}}
+          <View
+            style={{
+              marginVertical: 8,
+
+              width: '90%',
+              alignSelf: 'center',
+            }}>
+            <FlatList
+              data={data}
+              renderItem={({item}) => {
+                return (
+                  <View
                     style={{
-                      marginTop: 2,
+                      marginVertical: 8,
+                      flexDirection: 'row',
+                      width: '100%',
                     }}>
-                    <Icon name="check-square" size={25} color="#1C5C2E" />
-                  </TouchableOpacity>
-                  <Text
-                    style={{
-                      fontSize: 14,
-                      marginTop: 3,
-                      marginLeft: 15,
-                      // textAlign: 'center',
-                      color: '#000',
-                      // fontWeight: 'bold',
-                    }}>
-                    {item.text1}
-                  </Text>
-                </View>
-              );
-            }}
-          />
+                    <TouchableOpacity
+                      onPress={() => {}}
+                      style={{
+                        marginTop: 2,
+                      }}>
+                      <Icon name="check-square" size={25} color="#1C5C2E" />
+                    </TouchableOpacity>
+                    <Text
+                      style={{
+                        fontSize: 14,
+                        marginTop: 3,
+                        marginLeft: 15,
+                        // textAlign: 'center',
+                        color: '#000',
+                        // fontWeight: 'bold',
+                      }}>
+                      {item.text1}
+                    </Text>
+                  </View>
+                );
+              }}
+            />
+          </View>
         </View>
 
         <View style={{marginTop: 20}}>
           <Pinkbtn
             onPress={() => {
-              props.navigation.navigate('star');
+              props.navigation.navigate('Search3', {
+                success: true,
+              });
             }}
             width={'60%'}
             btntxt="Submit"

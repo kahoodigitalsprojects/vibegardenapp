@@ -9,6 +9,7 @@ import {
   Switch,
   Image,
   TouchableOpacity,
+  Appearance
 } from 'react-native';
 
 import {Header, Pinkbtn, QComponents, Switch1} from '../../../componrnts';
@@ -16,6 +17,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Images from '../../../constants';
 
 const EditScreen = ({navigation, route}) => {
+   let colorScheme = Appearance.getColorScheme();
+   console.log(colorScheme);
   const {itemId} = route.params;
   const {otherParam} = route.params;
   const {otherParam1} = route.params;
@@ -27,7 +30,7 @@ const EditScreen = ({navigation, route}) => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        <StatusBar animated={true} backgroundColor="#000" />
+        <StatusBar backgroundColor={'transparent'} translucent={true} />
         <View
           style={{
             marginVertical: 10,
@@ -45,7 +48,7 @@ const EditScreen = ({navigation, route}) => {
           />
           <View style={{marginTop: 50}}>
             <View style={styles.center}>
-              <Text style={styles.Text}>{otherParam1} </Text>
+              <Text style={[styles.Text]}>{otherParam1} </Text>
             </View>
             {two && (
               <View style={styles.center}>

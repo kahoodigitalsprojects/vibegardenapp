@@ -4,6 +4,8 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
+  StatusBar,
+  ScrollView,
   Switch,
   FlatList,
 } from 'react-native';
@@ -25,58 +27,64 @@ const Resonance = props => {
   ];
 
   return (
-    <View style={styles.main}>
-      <View style={styles.container}>
-        <Header
-          iconName="closesquareo"
-          header2
-          OnPress={() => props.navigation.goBack('')}
-        />
-        <View style={{marginTop: 10}}>
-          <Text style={styles.text}>Select Your Topic Resonance?</Text>
-          <View style={styles.row}>
-            <Text style={styles.text}>OR Try Our </Text>
-            <TouchableOpacity
-              onPress={() => {
-                props.navigation.navigate('question2');
-              }}
-              style={styles.btn}>
-              <Text style={{color: '#fff', margin: 10}}>Resonance Finder</Text>
-            </TouchableOpacity>
-          </View>
-          <View style={{marginVertical: 20}}>
-            <FlatList
-              data={data}
-              renderItem={({item}) => {
-                return (
-                  <View style={styles.switchView}>
-                    <View styles={{}}>
-                      <Switch1 />
-                    </View>
-                    <View styles={{marginTop: 5}}>
-                      <Text
-                        styles={{color: '#000', fontSize: 14, marginLeft: 20}}>
-                        {item.Texts}
-                      </Text>
-                    </View>
-                  </View>
-                );
-              }}
-            />
-          </View>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={{flexGrow: 1}}>
+      <StatusBar animated={true} backgroundColor="#000" />
+      <View style={styles.main}>
+        <View style={styles.container}>
+          <Header
+            iconName="closesquareo"
+            header2
+            OnPress={() => props.navigation.goBack('')}
+          />
           <View style={{marginTop: 10}}>
-            <Pinkbtn
-              onPress={() => {
-                props.navigation.navigate('question2');
-              }}
-              btntxt="
+            <Text style={styles.text}>Select Your Topic Resonance?</Text>
+            <View style={styles.row}>
+              <Text style={styles.text}>OR Try Our </Text>
+              <TouchableOpacity
+                onPress={() => {
+                  props.navigation.navigate('question2');
+                }}
+                style={styles.btn}>
+                <Text style={{color: '#fff', margin: 10}}>
+                  Resonance Finder
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <View style={{marginVertical: 20}}>
+              <FlatList
+                data={data}
+                renderItem={({item}) => {
+                  return (
+                    <View style={{flexDirection: 'row', marginVertical: 15}}>
+                      <View styles={{}}>
+                        <Switch1 marginRight={20} />
+                      </View>
+                      <View style={{marginTop: 5}}>
+                        <Text styles={{color: '#000', fontSize: 14}}>
+                          {item.Texts}
+                        </Text>
+                      </View>
+                    </View>
+                  );
+                }}
+              />
+            </View>
+            <View style={{marginTop: 8}}>
+              <Pinkbtn
+                onPress={() => {
+                  props.navigation.navigate('question2');
+                }}
+                btntxt="
             Save"
-              width={230}
-            />
+                width={230}
+              />
+            </View>
           </View>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -114,8 +122,9 @@ const styles = StyleSheet.create({
   },
   switchView: {
     // backgroundColor: 'green',
+    width: '90%',
     flexDirection: 'row',
-    marginVertical: 15,
+    justifyContent: 'space-around',
   },
 });
 export default Resonance;

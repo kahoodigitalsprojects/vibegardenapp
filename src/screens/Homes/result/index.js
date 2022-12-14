@@ -20,8 +20,6 @@ const Result = props => {
       <View style={styles.main}>
         <View
           style={{
-            marginVertical: 20,
-            marginTop: 20,
             width: '90%',
             alignSelf: 'center',
           }}>
@@ -30,7 +28,12 @@ const Result = props => {
             fontSize={25}
             color="#1C5C2E"
             header2
-            OnPress={() => props.navigation.navigate('me')}
+            OnPress={() =>
+              props.navigation.replace('me', {
+                backoption: () =>
+                  props.navigation.replace('Mytabs', {screen: 'me'}),
+              })
+            }
             headertext="Resonance Finder"
           />
           <View style={{marginVertical: 10}}>
@@ -61,7 +64,7 @@ const Result = props => {
             <Text
               style={{
                 marginVertical: 10,
-                fontSize: 20,
+                fontSize: 19,
                 // textAlign: 'center',
                 color: '#000',
                 fontWeight: '500',
@@ -83,7 +86,7 @@ const Result = props => {
             <Text
               style={{
                 marginVertical: 10,
-                fontSize: 20,
+                fontSize: 19,
                 // textAlign: 'center',
                 color: '#000',
                 fontWeight: '400',
@@ -112,7 +115,6 @@ const Result = props => {
           <View style={{borderBottomWidth: 1, width: 68}}>
             <Text style={styles.text3}>Note:</Text>
           </View>
-
           <Text style={styles.text4}>
             as You grow and heal your feelings of resonance will definitely
             change as it moves close your the essential resonance!
@@ -145,7 +147,7 @@ const styles = StyleSheet.create({
   },
   text3: {
     color: '#000',
-    fontSize: 28,
+    fontSize: 26,
   },
   text4: {
     marginVertical: 15,

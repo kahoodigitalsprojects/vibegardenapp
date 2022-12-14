@@ -36,7 +36,7 @@ const Question3 = props => {
             iconone
             name2="chevron-down"
             direction2="Description:"
-            flowwerlist={true}
+            flowwerlist11={true}
             Statement="Statement"
             flow="Flow Thtough"
             name="chevron-down"
@@ -55,7 +55,10 @@ const Question3 = props => {
           <Pinkbtn
             width={'60%'}
             btntxt="See Results"
-            onPress={() => props.navigation.navigate('Result')}
+            onPress={() => props.navigation.navigate('Result',
+            {
+              
+            })}
           />
         </View>
       </ScrollView>

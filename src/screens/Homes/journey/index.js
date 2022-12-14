@@ -40,7 +40,7 @@ const Journey = props => {
       st: 3,
     },
     {
-      img1: Images.Imgs.bird,
+      img1: Images.Logos.dolphin,
       text: 'Meet Bird Women',
       st: 4,
     },
@@ -52,19 +52,23 @@ const Journey = props => {
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{}}>
           <StatusBar animated={true} backgroundColor="#000" />
-          <View style={{width: '95%', marginTop: 10, alignSelf: 'center'}}>
-            <Text style={styles.txt}>
-              Which of these journey resonates must?
-            </Text>
-            <View style={{width: '100%', marginTop: 10, alignSelf: 'center'}}>
+          <View style={{}}>
+            <View style={{width: '90%', alignSelf: 'center', marginTop: 10}}>
+              <Text style={styles.txt}>
+                Which of these journey resonates must?
+              </Text>
               <FlatList
                 data={Data}
                 numColumns={2}
                 renderItem={({item, index}) => {
                   return (
                     <>
-                      <View style={{marginVertical: 10, width: '50%'}}>
-                        <View style={{width: '100%'}}>
+                      <View style={{marginVertical: 10, flexGrow: 2}}>
+                        <View
+                          style={{
+                            width: '100%',
+                            justifyContent: 'space-around',
+                          }}>
                           <TouchableOpacity
                             onPress={() =>
                               index === true ? '' : setdata1(index)
@@ -116,7 +120,8 @@ const Journey = props => {
                             <Text
                               style={{
                                 textAlign: 'center',
-                                fontSize: 18,
+                                margin: 5,
+                                fontSize: 16,
                                 color: '#000',
                               }}>
                               {item.text}
@@ -147,7 +152,7 @@ const Journey = props => {
 export default Journey;
 
 const styles = StyleSheet.create({
-  main: {flex: 1, alignItems: 'center'},
+  main: {flex: 1,},
 
   img: {
     width: 100,

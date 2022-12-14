@@ -16,64 +16,90 @@ const Registerd = ({route, navigation}) => {
   return (
     <>
       <StatusBar animated={true} backgroundColor="#000" />
-
       <View style={styles.main}>
-        <View style={{width: '90%', marginTop: 30}}>
+        <View
+          style={{
+            width: '95%',
+            alignSelf: 'center',
+            marginTop: 20,
+            alignItems: 'center',
+          }}>
           <Header
             iconName="closesquareo"
             header2
             OnPress={() => navigation.goBack()}
           />
-        </View>
-
-        <View style={{marginTop: 30, alignItems: 'center'}}>
-          <View style={{width: 140, height: 140, marginTop: 30}}>
+          <View
+            style={{
+              width: 100,
+              height: 100,
+              marginTop: 30,
+              alignSelf: 'center',
+            }}>
             <Image
               source={Images.Icons.envelop}
               style={{width: '100%', height: '100%'}}
             />
           </View>
-          <TouchableOpacity
-            onPress={() =>
-              navigation.navigate('login', {
-                registerd1: () =>
-                  navigation.navigate('Homes', {Screen: 'Home'}),
-                itemId: 86,
-                otherParam: 'anything you want here',
-              })
-            }>
-            <Text style={styles.txt1}>
-              This Email Is Already Registered With Vibegarden, Please
+
+          <View style={{width: '90%', alignSelf: 'center'}}>
+            <TouchableOpacity
+              style={
+                {
+                  // backgroundColor: 'pink',
+                }
+              }
+              onPress={() =>
+                navigation.navigate('login', {
+                  registerd1: () =>
+                    navigation.replace('Homes', {Screen: 'Home'}),
+                  itemId: 86,
+                  otherParam: 'anything you want here',
+                })
+              }>
+              <View style={{width: '100%'}}>
+                <Text style={{fontSize: 15, color: '#000'}}>
+                  This Email Is Already Registered With Vibegarden , Please ,
+                  <Text
+                    style={{
+                      fontWeight: '600',
+                      color: '#1C5C2E',
+                      paddingLeft: 10,
+                      textDecorationLine: 'underline',
+                      letterSpacing: 1,
+                    }}>
+                    Log In.
+                  </Text>
+                </Text>
+              </View>
+            </TouchableOpacity>
+            <View style={{marginVertical: 20, alignSelf: 'center'}}>
               <Text
-                style={{
-                  fontWeight: '600',
-                  color: '#1C5C2E',
-                  paddingLeft: 10,
-                }}>
-                Log In.
+                style={{fontWeight: '600', color: '#1C5C2E', paddingLeft: 10}}>
+                Or
               </Text>
-            </Text>
-          </TouchableOpacity>
-          <View style={{marginVertical: 20}}>
-            <Text
-              style={{fontWeight: '600', color: '#1C5C2E', paddingLeft: 10}}>
-              Or
-            </Text>
+            </View>
+            <TouchableOpacity
+              style={{
+                // backgroundColor: 'pink',
+                flexDirection: 'row',
+              }}
+              onPress={() => navigation.navigate('forgerpsaaword')}>
+              <Text style={{fontSize: 15, color: '#000'}}>
+                Or If You’ve Forgotten Your Password,
+                <Text
+                  style={{
+                    fontWeight: '600',
+                    color: '#1C5C2E',
+                    marginLeft: 3,
+                    fontSize: 15,
+                    textDecorationLine: 'underline',
+                  }}>
+                  Click Here
+                </Text>
+              </Text>
+            </TouchableOpacity>
           </View>
-          <TouchableOpacity
-            onPress={() => navigation.navigate('forgerpsaaword')}>
-            <Text style={styles.txt1}>
-              Or If You’ve Forgotten Your Password,
-              <Text
-                style={{
-                  fontWeight: '600',
-                  color: '#1C5C2E',
-                  paddingLeft: 10,
-                }}>
-                Click Here
-              </Text>
-            </Text>
-          </TouchableOpacity>
         </View>
       </View>
     </>
@@ -82,7 +108,7 @@ const Registerd = ({route, navigation}) => {
 export default Registerd;
 
 const styles = StyleSheet.create({
-  main: {flex: 1, alignItems: 'center'},
+  main: {flex: 1},
   input: {
     flexDirection: 'row',
     justifyContent: 'space-between',

@@ -33,12 +33,12 @@ const Contactus = props => {
             header2
             OnPress={() => props.navigation.goBack('')}
             headertext="Contact Us"
-            fontSize={25}
+            fontSize={20}
             color="#000"
           />
 
-          <View style={{marginVertical: 5, alignSelf: 'center'}}>
-            <View style={{marginTop: 30, alignSelf: 'center', width: '70%'}}>
+          <View style={{marginVertical: 25, alignSelf: 'center'}}>
+            <View style={{ alignSelf: 'center', width: '80%',marginTop:20}}>
               <Text
                 style={{
                   fontSize: 18,
@@ -46,7 +46,7 @@ const Contactus = props => {
                   color: '#000',
                   fontWeight: '500',
                   marginVertical: 5,
-                  lineHeight: 39,
+                  lineHeight: 34,
                 }}>
                 Please Feel Free To Reach Out To Us To Directly
               </Text>
@@ -54,15 +54,14 @@ const Contactus = props => {
 
             <View
               style={{
-                marginVertical: 20,
-                marginTop: 40,
+                marginVertical: 30,
                 borderWidth: 1,
                 borderColor: 'green',
                 borderRadius: 25,
                 elevation: 1,
                 backgroundColor: '#fff',
                 flexDirection: 'row',
-                padding: 15,
+          padding:15
               }}>
               <View
                 style={{

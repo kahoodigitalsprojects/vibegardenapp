@@ -32,7 +32,14 @@ const Images = {
     greenlogo: require('../assests/images/greenlogo.png'),
     greenheart: require('../assests/images/greenheart.png'),
     greenicon1: require('../assests/images/greenicon1.png'),
+    greenicon2: require('../assests/images/greenicon2.png'),
     payment: require('../assests/images/payments.png'),
+    redleaf1: require('../assests/images/redleaf1.png'),
+    redleaf2: require('../assests/images/redleaf2.png'),
+    redleaf3: require('../assests/images/redleaf3.png'),
+    redleaf4: require('../assests/images/redleaf4.png'),
+    dolphin: require('../assests/images/imag5.png'),
+    graph: require('../assests/images/graphp.png'),
   },
   Icons: {
     upload: require('../assests/images/upload.png'),
@@ -69,6 +76,7 @@ const Images = {
     video: require('../assests/images/video.png'),
     Pcircle: require('../assests/images/Pcircle.png'),
     prectangel: require('../assests/images/prectangle.png'),
+    pinki: require('../assests/images/pinki.png'),
     sun: require('../assests/images/sun.png'),
   },
   Imgs: {
@@ -105,6 +113,9 @@ const Images = {
     pegasus: require('../assests/images/Pegasus.png'),
     user1: require('../assests/images/user1 35.png'),
     user2: require('../assests/images/user2.png'),
+    smallblue1: require('../assests/images/smallblue1.png'),
+    bluelotus: require('../assests/images/bluelotus.png'),
+    lotusD: require('../assests/images/lotusd.png'),
   },
 };
 

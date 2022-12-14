@@ -9,7 +9,17 @@ import {
 } from 'react-native';
 import Images from '../../constants';
 
-const Greenbox = ({img1, img2, onPress, onPress1, Press, navigation}) => {
+const Greenbox = ({
+  img1,
+  img2,
+  onPress,
+  onPress1,
+  Press,
+  navigation,
+  boxtex1,
+  boxtex2,
+  boxtex3,
+}) => {
   const [data1, setdata1] = useState(0);
   const Data = [
     {
@@ -46,14 +56,13 @@ const Greenbox = ({img1, img2, onPress, onPress1, Press, navigation}) => {
   ];
   const data = [
     {
-      name: 'Buddhism',
-    
+      name: boxtex1,
     },
     {
-      name: 'Quantum Physics',
+      name: boxtex2,
     },
     {
-      name: 'Tools for Content',
+      name: boxtex3,
     },
   ];
   return (
@@ -88,7 +97,7 @@ const Greenbox = ({img1, img2, onPress, onPress1, Press, navigation}) => {
                   <Text
                     style={{
                       textAlign: 'center',
-                      color: data1 === index ? '#fff' : '#000',
+                      color: data1 === index ? '#fff' : '#1C5C2E',
                     }}>
                     {item.title}
                   </Text>
@@ -137,6 +146,7 @@ const Greenbox = ({img1, img2, onPress, onPress1, Press, navigation}) => {
                   <Text
                     style={{
                       textAlign: 'center',
+                      color:'#1C5C2E',
                       fontSize: 12,
                     }}>
                     {item.name}

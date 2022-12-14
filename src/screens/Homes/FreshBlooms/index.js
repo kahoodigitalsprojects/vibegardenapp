@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   View,
   StyleSheet,
@@ -13,48 +13,66 @@ import {Header} from '../../../componrnts';
 import Tooltip from 'react-native-walkthrough-tooltip';
 import Reset from '../../../componrnts/ResetComponent';
 import Result from '../result';
+import {BackHandler} from 'react-native';
+const FressBlooms = ({navigation, route}) => {
+  // const itemId = 'asdas';
 
-const FressBlooms = ({route, navigation}) => {
-  const [isdata, setIsdata] = useState(true);
-  const [state, setState] = useState(false);
-
+  // console.log('route', route.params.itemId);
+  // console.log('route', route.params.otherParam);
+  console.log(' sdfd', navigation);
+  const {otherParam} = route.params;
+  const {itemId} = route.params;
+  const {heart} = route.params;
+  const {plus} = route.params;
+  const {backoption} = route.params;
   const data = [
     {id: 1, icon1: 'heart'},
     {id: 2, icon1: 'heart'},
     {id: 3, icon1: 'heart'},
     {id: 4, icon1: 'heart'},
   ];
+  // const backAction = () => {
+  //   console.log(' freshbloom');
+  //   backoption();
+  //   // navigation.goBack();
+  //   return true;
+  // };
+  // BackHandler.addEventListener('hardwareBackPress', () => {
+  //   // // navigation.navigate('homes');
+  //   // route.params.backoption();
+  //   // console.log('helo ');
+  //   // // navigation.goBack();
+  //   backAction();
+  // });
+
+  useEffect(() => {}, []);
   return (
     <>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        <StatusBar animated={true} backgroundColor="#000" />
+        <StatusBar animated={true} backgroun dColor="#000" />
         <View style={styles.main}>
           <View
             style={{
-              marginVertical: 20,
-              marginTop: 20,
               width: '90%',
               alignSelf: 'center',
             }}>
+            <Text>{itemId}</Text>
             <Header
               iconName="closesquareo"
+              color="#000"
               fontSize={18}
               header2
-              headertext={hedindg}
-              OnPress={() => navigation.replace('Mytabs', {screen: 'Home'})}
+              headertext={otherParam}
+              OnPress={backoption}
             />
             <View style={{marginTop: 30}}>
               <FlatList
                 data={data}
                 keyExtractor={item => item.id}
                 renderItem={({item}) => {
-                  return (
-                    <Reset
-                    
-                    />
-                  );
+                  return <Reset imgtrue={plus} icontrue={heart} />;
                 }}
               />
             </View>
