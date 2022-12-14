@@ -29,7 +29,7 @@ const Story1 = ({navigation, route}) => {
 
         <Swiper
           height={'100%'}
-          paginationStyle={{top: 230}}
+          paginationStyle={{top: 180}}
           horizontal={true}
           autoplay={false}
           bounces={false}

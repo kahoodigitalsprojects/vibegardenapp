@@ -48,8 +48,8 @@ const Video = ({route, navigation}) => {
       img11: Images.Imgs.R3,
     },
     {
-      text1: 'Solid Bloom',
-      img11: Images.Imgs.R3,
+      text1: 'Big Bloom',
+      img11: Images.Imgs.R4,
     },
   ];
   const data2 = [
@@ -172,7 +172,7 @@ const Video = ({route, navigation}) => {
                 <>
                   <View
                     style={{
-                      width: '90%',
+                      width: '100%',
                       alignSelf: 'center',
                       marginVertical: 20,
                     }}>
@@ -225,7 +225,7 @@ const Video = ({route, navigation}) => {
               {Data3.map(index => {
                 return (
                   <View style={{}}>
-                    <ScrollView style={{marginVertical: 10, height: 100}}>
+                    <ScrollView style={{marginVertical: 10, height: 115}}>
                       <View style={styles.item1}>
                         <Userdetails
                           databox1

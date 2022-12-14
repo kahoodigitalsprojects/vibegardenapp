@@ -34,6 +34,7 @@ const Question3 = props => {
           />
           <QComponents
             flowwerlist11={true}
+            width={'100%'}
             iconone
             name2="chevron-down"
             direction2="Description:"

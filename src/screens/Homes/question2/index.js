@@ -52,7 +52,7 @@ const Question2 = props => {
               textforvideo="Resonance Finder Video Here"
               name2="chevron-up"
               video={true}
-              width={'90%'}
+              width={'100%'}
               direction2="Description:"
               Statement="Statement:"
               flow="Flow Through"

@@ -502,7 +502,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                   </TouchableOpacity>
                 </View>
 
-                <View style={{marginTop: 20, width: '90%'}}>
+                <View style={{marginTop: 20}}>
                   <View style={styles.box1}>
                     <FlatList
                       showsHorizontalScrollIndicator={false}
@@ -516,7 +516,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                               alignSelf: 'center',
                               // display: 'flex',
                               // flexGrow: 1,
-                              width: '50%',
+                              // width: '50%',
                               margin: 10,
                             }}>
                             <Imgbox
