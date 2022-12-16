@@ -270,11 +270,12 @@ marginTop1,
           }}>
           <FlatList
             horizontal={true}
+            showsHorizontalScrollIndicator={false}
             data={data}
             renderItem={({item, index}) => {
               return (
                 <>
-                  <View style={{width: '20%', margin: 5}}>
+                  <View style={{width: '24%', margin: 2}}>
                     <TouchableOpacity
                       onPress={item.onPress}
                       style={styles.circle}>

@@ -29,7 +29,7 @@ const Result = props => {
             color="#1C5C2E"
             header2
             OnPress={() =>
-              props.navigation.replace('me', {
+              props.navigation.replace('Mytabs', {screen: 'me'}, {
                 backoption: () =>
                   props.navigation.replace('Mytabs', {screen: 'me'}),
               })
