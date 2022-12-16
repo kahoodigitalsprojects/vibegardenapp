@@ -56,7 +56,9 @@ const GroundWork = props => {
             heartplus
             search1="search1"
             homeheader={true}
-            search={() => navigation.navigate('Homes', {screen: 'Search'})}
+            search={() =>
+              props.navigation.navigate('Homes', {screen: 'Search'})
+            }
             heart
             // plus
           />

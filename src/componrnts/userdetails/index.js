@@ -77,7 +77,6 @@ const Userdetails = ({
                       {
                         fontWeight: '400',
                         fontSize: 14,
-                        marginVertical: 5,
                       },
                     ]}>
                     {text}
@@ -128,8 +127,8 @@ const Userdetails = ({
                 )}
               </View>
             </View>
-            <View style={{width: '76%', padding:3,marginVertical:4}}>
-              <Text style={{fontSize: 12, marginTop: 8,lineHeight:16}}>
+            <View style={{width: '76%', padding: 3, marginVertical: 4}}>
+              <Text style={{fontSize: 12, marginTop: 8, lineHeight: 16}}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
                 aliquyam erat ,

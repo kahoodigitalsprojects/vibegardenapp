@@ -323,7 +323,7 @@ const Settings = props => {
               onPress={() => {
                 props.navigation.navigate('Auth', {
                   screen: 'PrivacyPolicy',
-                  params: {heading1: 'Pricacy Policy'},
+                  params: {heading1: 'Privacy Policy'},
                 });
               }}
               style={[

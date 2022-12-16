@@ -69,9 +69,10 @@ const Pushnotification = props => {
               </TouchableOpacity>
               <TouchableOpacity
                 style={[styles.box, {width: '30%', left: 10}]}
-                onPress={() => {
-                  props.navigation.navigate('signup');
-                }}>
+                // onPress={() => {
+                //   props.navigation.navigate('signup');
+                // }}
+              >
                 <Text style={styles.textA}>7:30 AM</Text>
                 <TouchableOpacity style={{}}>
                   <Icon name="sort-down" size={25} color="#1C5C2E" />
@@ -83,7 +84,9 @@ const Pushnotification = props => {
             </View>
             <View style={{marginTop: 20}}>
               <Pinkbtn
-                onPress={() =>   props.navigation.navigate('Homes', {screen: 'settings'})}
+                onPress={() =>
+                  props.navigation.navigate('Homes', {screen: 'settings'})
+                }
                 width={'60%'}
                 btntxt="Save"
               />

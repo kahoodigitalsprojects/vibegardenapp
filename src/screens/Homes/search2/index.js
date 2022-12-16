@@ -317,7 +317,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                   <View style={styles.box1}>
                     <ScrollView
                       horizontal={true}
-                      showsHorizontalScrollIndicator={true}>
+                      showsHorizontalScrollIndicator={false}>
                       {data.map((item, index) => {
                         return (
                           <>
@@ -354,7 +354,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                   <View style={{}}>
                     <ScrollView
                       horizontal={true}
-                      showsHorizontalScrollIndicator={true}>
+                      showsHorizontalScrollIndicator={false}>
                       {data.map((item, index) => {
                         return (
                           <>

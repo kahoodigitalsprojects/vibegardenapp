@@ -146,7 +146,7 @@ const Greenbox = ({
                   <Text
                     style={{
                       textAlign: 'center',
-                      color:'#1C5C2E',
+                      color: '#1C5C2E',
                       fontSize: 12,
                     }}>
                     {item.name}

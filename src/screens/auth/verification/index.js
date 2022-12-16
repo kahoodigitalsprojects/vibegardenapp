@@ -6,6 +6,7 @@ import {
   Image,
   TextInput,
   TouchableOpacity,
+  ScrollView,
   StatusBar,
 } from 'react-native';
 import {Header, Pinkbtn} from '../../../componrnts';
@@ -13,51 +14,52 @@ import Images from '../../../constants';
 const Verify = props => {
   return (
     <>
-      <StatusBar animated={true} backgroundColor="#000" />
-
-      <View style={styles.main}>
-        <View style={{width: '90%', marginTop: 10}}>
-          <Header iconName="arrowleft" header2 />
-        </View>
-
-        <View style={{width: '85%', marginTop: 30}}>
-          <View
-            style={{width: 100, height: 100, marginTop: 30, marginLeft: -10}}>
-            <Image
-              source={Images.Icons.envelop}
-              style={{width: '100%', height: '100%'}}
-            />
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{flexGrow: 1}}>
+        <View style={styles.main}>
+          <View style={{width: '90%', marginTop: 10}}>
+            <Header iconName="arrowleft" header2 />
           </View>
-          <Text style={{fontSize: 16, color: '#1C5C2E', fontWeight: '600'}}>
-            Show Us Its You Please Check Your Email To Continue
-          </Text>
-          <View>
-            <View style={styles.input}>
-              <TextInput placeholder="" />
-            </View>
+          <View style={{width: '85%', marginTop: 30}}>
             <View
-              style={{
-                justifyContent: 'center',
-                flexDirection: 'row',
-                marginTop: 20,
-              }}>
-              <Text style={styles.txt1}>Didn't sent email?</Text>
-              <Text style={[styles.txt1, {color: 'red', marginLeft: 5}]}>
-                Resend.
-              </Text>
-            </View>
-            <View style={{marginTop: 20}}>
-              <Pinkbtn
-                onPress={() =>
-                  props.navigation.navigate('Homes', {screen: 'journey'})
-                }
-                width={'60%'}
-                btntxt="Continue"
+              style={{width: 100, height: 100, marginTop: 30, marginLeft: -10}}>
+              <Image
+                source={Images.Icons.envelop}
+                style={{width: '100%', height: '100%'}}
               />
             </View>
+            <Text style={{fontSize: 16, color: '#1C5C2E', fontWeight: '600'}}>
+              Show Us Its You Please Check Your Email To Continue
+            </Text>
+            <View>
+              <View style={styles.input}>
+                <TextInput placeholder="" />
+              </View>
+              <View
+                style={{
+                  justifyContent: 'center',
+                  flexDirection: 'row',
+                  marginTop: 20,
+                }}>
+                <Text style={styles.txt1}>Didn't sent email?</Text>
+                <Text style={[styles.txt1, {color: 'red', marginLeft: 5}]}>
+                  Resend.
+                </Text>
+              </View>
+              <View style={{marginTop: 20}}>
+                <Pinkbtn
+                  onPress={() =>
+                    props.navigation.navigate('Homes', {screen: 'journey'})
+                  }
+                  width={'60%'}
+                  btntxt="Continue"
+                />
+              </View>
+            </View>
           </View>
         </View>
-      </View>
+      </ScrollView>
     </>
   );
 };

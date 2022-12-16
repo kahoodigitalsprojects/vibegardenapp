@@ -6,6 +6,7 @@ import {
   Image,
   TextInput,
   TouchableOpacity,
+  ScrollView,
   StatusBar,
 } from 'react-native';
 import {Greenbtn, Header, Pinkbtn} from '../../../componrnts';
@@ -13,62 +14,73 @@ import Images from '../../../constants';
 const ForgetPassword = props => {
   return (
     <>
-      <StatusBar animated={true} backgroundColor="#000" />
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{flexGrow: 1}}>
+        <StatusBar backgroundColor={'transparent'} translucent={true} />
 
-      <View style={styles.main}>
-        <View style={{width: '90%', marginTop: 20}}>
-          <Header
-            fontSize={25}
-            color="#191919B8"
-            iconName="arrowleft"
-            headertext="Forget Password"
-            header2
-            OnPress={() => props.navigation.goBack()}
-          />
-        </View>
+        <View style={styles.main}>
+          <View style={{width: '90%', marginTop: 20}}>
+            <Header
+              fontSize={25}
+              color="#191919B8"
+              iconName="arrowleft"
+              headertext="Forget Password"
+              header2
+              OnPress={() => props.navigation.goBack()}
+            />
+          </View>
 
-        <View style={{width: '85%', marginTop: 30}}>
-          <Text style={{fontSize: 20, lineHeight: 26, marginTop: 20}}>
-            Enter Your Registered Email To Get The Password Reset Link
-          </Text>
+          <View style={{width: '85%', marginTop: 30}}>
+            <Text style={{fontSize: 20, lineHeight: 26, marginTop: 20}}>
+              Enter Your Registered Email To Get The Password Reset Link
+            </Text>
 
-          <Text
-            style={{
-              fontSize: 20,
-              color: '#1C5C2E',
-              fontWeight: '600',
-              marginTop: 15,
-              marginVertical: 5,
-              borderColor: '#1C5C2E',
-              textDecorationLine: 'underline',
-            }}>
-            Email Address:
-          </Text>
+            <Text
+              style={{
+                fontSize: 20,
+                color: '#1C5C2E',
+                fontWeight: '600',
+                marginTop: 15,
+                marginVertical: 5,
+                borderColor: '#1C5C2E',
+                textDecorationLine: 'underline',
+              }}>
+              Email Address:
+            </Text>
 
-          <View>
-            <View style={styles.input}>
-              <TextInput placeholder="Email" style={{paddingLeft: 20}} />
-            </View>
+            <View style={{marginVertical: 4}}>
+              <View style={{height: 45, borderRadius: 15, marginVertical: 10}}>
+                <TextInput
+                  placeholder="Email"
+                  style={{
+                    paddingLeft: 20,
+                    backgroundColor: '#00000029',
+                    borderRadius: 12,
+                  }}
+                />
+              </View>
 
-            <View style={{marginTop: 10}}>
-              <Greenbtn
-                width={'100%'}
-                text1="Submit"
-                // onPress={() => {
-                //   props.navigation.navigate('chuchuhuasDetails');
-                // }}
-              />
+              <View style={{marginTop: 10}}>
+                <Greenbtn
+                  width={'100%'}
+                  text1="Submit"
+                  // onPress={() => {
+                  //   props.navigation.navigate('chuchuhuasDetails');
+                  // }}
+                />
+              </View>
             </View>
           </View>
         </View>
-      </View>
+      </ScrollView>
     </>
   );
 };
 export default ForgetPassword;
 
 const styles = StyleSheet.create({
-  main: {flex: 1, alignItems: 'center'},
+  main: {flex: 1, alignItems: 'center', paddingVertical: 10},
   input: {
     flexDirection: 'row',
     justifyContent: 'space-between',

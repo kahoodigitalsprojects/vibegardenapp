@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {
-  AppRegistry,
+
   StyleSheet,
   Text,
   View,
@@ -29,7 +29,7 @@ const Story1 = ({navigation, route}) => {
 
         <Swiper
           height={'100%'}
-          paginationStyle={{top: 180}}
+          paginationStyle={{top: 590}}
           horizontal={true}
           autoplay={false}
           bounces={false}
@@ -376,5 +376,5 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('myproject', () => SwiperComponent);
+// AppRegistry.registerComponent('myproject', () => SwiperComponent);
 export default Story1;

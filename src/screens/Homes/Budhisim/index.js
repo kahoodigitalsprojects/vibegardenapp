@@ -162,7 +162,7 @@ const Buddhisim = props => {
                   })
                 }
                 color1="#000"
-                textA="Teacher Related"
+                textA="Related Teacher "
               />
               <View style={{marginVertical: 3}}>
                 <View style={{}}>

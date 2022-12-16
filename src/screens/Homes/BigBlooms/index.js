@@ -12,7 +12,6 @@ import {
 import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 import Icon from 'react-native-vector-icons/Feather';
-
 const BigBlooms = ({route, navigation}) => {
   const {newtext} = route.params;
   const {heading1} = route.params;
@@ -46,7 +45,7 @@ const BigBlooms = ({route, navigation}) => {
       <View style={styles.main}>
         <View style={{width: '90%', marginTop: 10}}>
           <Header
-          width={'25%'}
+            width={'25%'}
             iconName="arrowleft"
             header4
             OnPress={() => navigation.goBack('')}
@@ -86,7 +85,7 @@ const BigBlooms = ({route, navigation}) => {
             </View>
           </View>
 
-          <View style={{ marginVertical: 5, alignSelf: 'center'}}>
+          <View style={{marginVertical: 5, width: '100%', alignSelf: 'center'}}>
             <Text
               style={{
                 marginVertical: 10,

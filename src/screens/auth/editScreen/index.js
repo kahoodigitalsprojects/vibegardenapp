@@ -9,7 +9,7 @@ import {
   Switch,
   Image,
   TouchableOpacity,
-  Appearance
+  Appearance,
 } from 'react-native';
 
 import {Header, Pinkbtn, QComponents, Switch1} from '../../../componrnts';
@@ -17,8 +17,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Images from '../../../constants';
 
 const EditScreen = ({navigation, route}) => {
-   let colorScheme = Appearance.getColorScheme();
-   console.log(colorScheme);
+  let colorScheme = Appearance.getColorScheme();
+  console.log(colorScheme);
   const {itemId} = route.params;
   const {otherParam} = route.params;
   const {otherParam1} = route.params;
@@ -34,7 +34,7 @@ const EditScreen = ({navigation, route}) => {
         <View
           style={{
             marginVertical: 10,
-            marginTop: 10,
+            marginTop: 30,
             width: '90%',
             alignSelf: 'center',
           }}>

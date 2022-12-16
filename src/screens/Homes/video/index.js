@@ -125,6 +125,7 @@ const Video = ({route, navigation}) => {
                 flowwerlist={otherParam}
                 iconone1={plus}
                 //   video={true}
+                marginTop1={-20}
                 name11="plus"
                 name="heart-outlined"
                 video2={true}

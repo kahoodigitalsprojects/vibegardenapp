@@ -146,6 +146,7 @@ const styles = StyleSheet.create({
     lineHeight: 42,
   },
   blue: {
+    marginVertical: 10,
     marginTop: 22,
     marginRight: 10,
     width: 20,

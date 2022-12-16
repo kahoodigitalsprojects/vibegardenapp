@@ -102,7 +102,8 @@ const Me = props => {
             // paddingVertical: 20,
             // position: 'absolute',
             // top: 8,
-            height: 60,
+            // height: 60,
+            // marginBottom: 20,
           }}>
           <Header
             img1
@@ -129,7 +130,7 @@ const Me = props => {
                 fontSize: 28,
                 fontWeight: '600',
                 color: '#000000',
-                marginVertical: 10,
+                marginVertical: 20,
               }}>
               Erin
             </Text>

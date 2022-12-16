@@ -36,6 +36,7 @@ const QComponents = ({
   video,
   video2,
   image1,
+marginTop1,
   flowwerlist11,
   Statement,
   flow,
@@ -75,6 +76,7 @@ const QComponents = ({
               width: '100%',
               height: 202,
               marginTop: 10,
+              margin: 20,
             }}>
             <ImageBackground
               resizeMode="cover"
@@ -187,7 +189,7 @@ const QComponents = ({
               style={{
                 // backgroundColor: 'yellow',
                 width: '100%',
-                marginTop: -20,
+                marginTop: -30,
                 flexDirection: 'row',
                 justifyContent: 'space-between',
               }}>
@@ -231,7 +233,7 @@ const QComponents = ({
                   // fontWeight: '300',
                   fontSize: 16,
                   lineHeight: 22,
-                  marginVertical: 5,
+                  marginTop: marginTop1,
                 },
               ]}>
               {Statement}
@@ -255,45 +257,51 @@ const QComponents = ({
               </Text>
             </View>
           )}
-          {flowwerlist11 && (
-            <View style={{padding: 6}}>
-              <FlatList
-                horizontal={true}
-                data={data}
-                renderItem={({item, index}) => {
-                  return (
-                    <>
-                      <View style={{height: '100%'}}>
-                        <TouchableOpacity
-                          onPress={item.onPress}
-                          style={styles.circle}>
-                          <Image
-                            source={item.img1}
-                            style={{width: '100%', height: '100%'}}
-                          />
-                        </TouchableOpacity>
-                        <View style={{width: 78}}>
-                          <Text
-                            style={{
-                              margin: 3,
-                              marginTop: 5,
-                              fontSize: 12,
-                              color: '#000',
-                              textAlign: 'center',
-                              color: '#1C5C2E',
-                            }}>
-                            {item.text1}
-                          </Text>
-                        </View>
-                      </View>
-                    </>
-                  );
-                }}
-              />
-            </View>
-          )}
         </View>
       </View>
+      {flowwerlist11 && (
+        <View
+          style={{
+            width: '100%',
+            alignSelf: 'center',
+            alignItems: 'center',
+
+            justifyContent: 'space-around',
+          }}>
+          <FlatList
+            horizontal={true}
+            data={data}
+            renderItem={({item, index}) => {
+              return (
+                <>
+                  <View style={{width: '20%', margin: 5}}>
+                    <TouchableOpacity
+                      onPress={item.onPress}
+                      style={styles.circle}>
+                      <Image
+                        source={item.img1}
+                        style={{width: '100%', height: '100%'}}
+                      />
+                    </TouchableOpacity>
+                    <View style={{width: 78}}>
+                      <Text
+                        style={{
+                          marginTop: 5,
+                          fontSize: 12,
+                          color: '#000',
+                          textAlign: 'center',
+                          color: '#1C5C2E',
+                        }}>
+                        {item.text1}
+                      </Text>
+                    </View>
+                  </View>
+                </>
+              );
+            }}
+          />
+        </View>
+      )}
     </>
   );
 };
