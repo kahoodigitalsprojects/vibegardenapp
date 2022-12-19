@@ -79,133 +79,52 @@ const All = ({
         </View>
       </View>
       <View style={styles.box2}>
+        {/*  */}
         <FlatList
           showsHorizontalScrollIndicator={false}
-          horizontal={true}
+          horizontal
           data={Data}
-          renderItem={({item}) => {
+          renderItem={({item, index}) => {
             return (
-              <>
-                <View style={{}}>
-                  <View
-                    style={{
-                      alignSelf: 'center',
-                      width: '100%',
-                      flexDirection: 'row',
-                      // backgroundColor: 'yellow',
-                      // margin: 5,
-                    }}>
-                    <View style={{width: 172, height: 229}}>
-                      <ImageBackground
-                        resizeMode="cover"
-                        source={bghome2}
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                          borderRadius: 10,
-                        }}>
-                        <TouchableOpacity
-                          onPress={pressI}
-                          style={{
-                            // backgroundColor: 'pink',
-                            top: 28,
-                            right: 30,
-                            position: 'absolute',
-                            height: 33,
-                            width: 33,
-                            alignSelf: 'flex-end',
-                            // backgroundColor: 'yellow',
-                          }}>
-                          <Image
-                            source={heart1}
-                            resizeMode="contain"
-                            style={{
-                              width: '100%',
-                              height: '100%',
-                              marginLeft: -10,
-                            }}
-                          />
-                          <Icon
-                            name={plus}
-                            color={'#fefefe'}
-                            size={25}
-                            style={{fontWeight: 'bold', position: 'absolute'}}
-                          />
-                        </TouchableOpacity>
-                        <View
-                          style={{
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            position: 'absolute',
-                            top: 100,
-                            left: 60,
-                          }}>
-                          {iconimg && (
-                            <View
-                              style={{
-                                width: 30,
-                                height: 25,
-                                // backgroundColor: 'yellow',
-                              }}>
-                              <Image
-                                source={item.iconimg2}
-                                resizeMode="contain"
-                                style={{
-                                  width: '100%',
-                                  height: '100%',
-                                }}
-                              />
-                            </View>
-                          )}
-                          {iconimg1 && (
-                            <View
-                              style={{
-                                width: 30,
-                                height: 25,
-                                // backgroundColor: 'yellow',
-                              }}>
-                              <Image
-                                source={iconimg1}
-                                resizeMode="contain"
-                                style={{
-                                  width: '100%',
-                                  height: '100%',
-                                }}
-                              />
-                            </View>
-                          )}
-                          <Text
-                            style={{
-                              textAlign: 'center',
-                              fontSize: 26,
-                              marginVertical: 5,
-                            }}>
-                            {title}
-                          </Text>
-                          <View
-                            style={{
-                              width: 40,
-                              height: 15,
-                              borderRadius: 10,
-                              justifyContent: 'center',
-                              backgroundColor: '#CD258D',
-                              alignItems: 'center',
-                            }}>
-                            <Text
-                              style={{
-                                color: '#fff',
-                                fontWeight: 'bold',
-                                fontSize: 10,
-                              }}>
-                              5Min
-                            </Text>
-                          </View>
-                        </View>
-                      </ImageBackground>
-                    </View>
+              <View
+                style={{
+                  backgroundColor: 'red',
+                  width: 172,
+                  height: 229,
+                  borderRadius: 10,
+                  marginRight: index == 0 ? 10 : null,
+                  marginHorizontal: index == 0 ? null : 10,
+                  overflow: 'hidden',
+                }}>
+                {/* <ImageBackground
+                  // resizeMode="cover"
+                  source={bghome2}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+
+                    margin: 0,
+                  }}></ImageBackground> */}
+                <Image
+                  source={bghome2}
+                  style={{
+                    backgroundColor: 'blue',
+                    height: '100%',
+                    width: '100%',
+                  }}
+                />
+                <View
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    // backgroundColor: 'yellow',
+                    width: '100%',
+                    height: '100%',
+                  }}>
+                    <Text>SOME TEXT</Text>
                   </View>
-                </View>
-              </>
+              </View>
             );
           }}
         />
@@ -218,8 +137,12 @@ export default All;
 
 const styles = StyleSheet.create({
   box2: {
-    // backgroundColor:'yellow',
-    marginTop: 10,
+    // backgroundColor: 'yellow',
+    display: 'flex',
+    flexDirection: 'row',
+    width: '100%',
+    // height: 100,
+    marginVertical: 5,
   },
   txtA: {
     color: '#1C5C2E',

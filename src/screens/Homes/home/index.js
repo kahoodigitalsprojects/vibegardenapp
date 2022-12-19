@@ -30,7 +30,7 @@ const Home = ({navigation, route}) => {
     {
       id: 1,
       bg1: Images.BackGround.rectangle2,
-      bg12: Images.BackGround.greenbg,
+      bg12: Images.BackGround.Bg2,
       // heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'Title',
