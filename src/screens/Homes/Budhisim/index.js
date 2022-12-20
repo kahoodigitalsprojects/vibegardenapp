@@ -48,7 +48,7 @@ const Buddhisim = props => {
     {
       id: 1,
       bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      bg12: Images.BackGround.Bg2,
       name: 'TONGLEN',
       title: 'title',
       plus: 'plus',
@@ -57,7 +57,7 @@ const Buddhisim = props => {
     {
       id: 2,
       bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      bg12: Images.BackGround.Bg2,
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
@@ -92,7 +92,6 @@ const Buddhisim = props => {
               width: '90%',
               alignSelf: 'center',
               marginTop: 30,
-              marginVertical: 10,
             }}>
             <Text
               style={{
@@ -108,53 +107,54 @@ const Buddhisim = props => {
             </Text>
           </View>
           <View style={styles.centerbox}>
-            <View style={styles.box1}>
-              <View style={{width: '100%', alignSelf: 'center'}}></View>
-              <FlatList
-                keyExtractor={item => item.id}
-                data={Data}
-                renderItem={({item}) => {
-                  return (
-                    <>
-                      <SeeAll
-                        onPress={() =>
-                          props.navigation.navigate('Homes', {
-                            screen: 'FressBlooms',
-                          })
-                        }
-                        color1="#000"
-                        textA={item.textA}
-                      />
-                      <All
-                        pressI={() =>
-                          props.navigation.navigate('Homes', {
-                            screen: 'Video',
-                            params: {
-                              otherParam: 'Tools to try',
-                              plus: true,
-                              otherParam1: 'TONGLEN',
-                              textflower: 'Did you try this tools?',
-                              icon1: true,
-                              redbtn: true,
-                              plus: true,
-                              backoption: () =>
-                                props.navigation.navigate('Mytabs', {
-                                  screen: 'GroundWork',
-                                }),
-                            },
-                          })
-                        }
-                        homebox
-                        heart1={item.heart1}
-                        plus={item.plus}
-                        bghome2={item.bg12}
-                        title={item.title}
-                      />
-                    </>
-                  );
-                }}
-              />
+            <FlatList
+              keyExtractor={item => item.id}
+              data={Data}
+              renderItem={({item}) => {
+                return (
+                  <>
+                        <View style={{marginTop: 20}}>
+                    <SeeAll
+                      onPress={() =>
+                        props.navigation.navigate('Homes', {
+                          screen: 'FressBlooms',
+                        })
+                      }
+                      color1="#000"
+                      textA={item.textA}
+                    />
+                    </View>
+                    <All
+                      pressI={() =>
+                        props.navigation.navigate('Homes', {
+                          screen: 'Video',
+                          params: {
+                            otherParam: 'Tools to try',
+                            plus: true,
+                            otherParam1: 'TONGLEN',
+                            textflower: 'Did you try this tools?',
+                            icon1: true,
+                            redbtn: true,
+                            plus: true,
+                            backoption: () =>
+                              props.navigation.navigate('Mytabs', {
+                                screen: 'GroundWork',
+                              }),
+                          },
+                        })
+                      }
+                      homebox
+                      heart1={item.heart1}
+                      plus={item.plus}
+                      bghome2={item.bg12}
+                      title={item.title}
+                    />
+                  </>
+                );
+              }}
+            />
 
+            <View style={{marginTop: 20}}>
               <SeeAll
                 onPress={() =>
                   props.navigation.navigate('Homes', {
@@ -164,27 +164,28 @@ const Buddhisim = props => {
                 color1="#000"
                 textA="Related Teacher "
               />
-              <View style={{marginVertical: 3}}>
-                <View style={{}}>
-                  <FlatList
-                    showsHorizontalScrollIndicator={false}
-                    data={data}
-                    renderItem={({item}) => {
-                      return (
-                        <>
-                          <View style={{marginVertical: 10}}>
-                            <Userdetails
-                              databox2
-                              bear={item.Img1}
-                              nametext={true}
-                              names={'Mark'}
-                            />
-                          </View>
-                        </>
-                      );
-                    }}
-                  />
-                </View>
+            </View>
+
+            <View style={{marginVertical: 3}}>
+              <View style={{}}>
+                <FlatList
+                  showsHorizontalScrollIndicator={false}
+                  data={data}
+                  renderItem={({item}) => {
+                    return (
+                      <>
+                        <View style={{marginVertical: 10}}>
+                          <Userdetails
+                            databox2
+                            bear={item.Img1}
+                            nametext={true}
+                            names={'Mark'}
+                          />
+                        </View>
+                      </>
+                    );
+                  }}
+                />
               </View>
             </View>
           </View>
@@ -199,16 +200,16 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   Box1: {
-    width: '90%',
+    width: '95%',
     height: '100%',
     // backgroundColor: 'yellow',
     alignSelf: 'center',
   },
   centerbox: {
-    // backgroundColor: '#1C5C2E',
+    // // backgroundColor: '#1C5C2E',
     width: '100%',
-    // // height: '100%',
-    justifyContent: 'center',
+    // // // height: '100%',
+    // justifyContent: 'center',
   },
   box1: {
     width: '95%',

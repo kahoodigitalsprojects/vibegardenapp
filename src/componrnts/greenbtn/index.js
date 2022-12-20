@@ -15,7 +15,9 @@ const Greenbtn = ({text1, width, onPress}) => {
           borderRadius: 15,
         }}
         onPress={onPress}>
-        <Text style={{color: '#fff', fontSize: 20}}>{text1}</Text>
+        <Text style={{color: '#fff', fontSize: 20, fontFamily: 'Brandon_reg'}}>
+          {text1}
+        </Text>
       </TouchableOpacity>
     </View>
   );

@@ -33,7 +33,13 @@ const PrivacyPolicy = ({navigation, route}) => {
             alignSelf: 'center',
             marginVertical: 20,
           }}>
-          <Text style={{textAlign: 'left', fontSize: 14, color: '#000000'}}>
+          <Text
+            style={{
+              textAlign: 'left',
+              fontSize: 14,
+              color: '#000000',
+              fontFamily: 'Brandon_reg',
+            }}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -45,7 +51,13 @@ const PrivacyPolicy = ({navigation, route}) => {
             sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
           </Text>
-          <Text style={{textAlign: 'left', fontSize: 14, color: '#000000'}}>
+          <Text
+            style={{
+              textAlign: 'left',
+              fontSize: 14,
+              color: '#000000',
+              fontFamily: 'Brandon_reg',
+            }}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -57,7 +69,13 @@ const PrivacyPolicy = ({navigation, route}) => {
             sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
           </Text>
-          <Text style={{textAlign: 'left', fontSize: 14, color: '#000000'}}>
+          <Text
+            style={{
+              textAlign: 'left',
+              fontSize: 14,
+              fontFamily: 'Brandon_reg',
+              color: '#000000',
+            }}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua. Lorem ipsum dolor sit amet, Lorem ipsum

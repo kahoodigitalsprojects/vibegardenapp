@@ -43,9 +43,9 @@ const NotRegisterd = props => {
                 </Text>
               </Text>
             </View>
-            <View style={{marginVertical: 40}}>
+            <View style={{marginVertical: 40, }}>
               <Greenbtn
-                width={'80%'}
+                width={'95%'}
                 text1={'Create an Account'}
                 onPress={() =>
                   props.navigation.navigate('signup', {
@@ -68,6 +68,7 @@ export default NotRegisterd;
 const styles = StyleSheet.create({
   main: {flex: 1, alignItems: 'center'},
   input: {
+    alignSelf: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
     borderBottomWidth: 0.5,
@@ -80,5 +81,6 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     fontSize: 15,
     fontWeight: '400',
+    fontFamily: 'Brandon_reg',
   },
 });

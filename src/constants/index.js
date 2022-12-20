@@ -1,7 +1,7 @@
 const Images = {
   BackGround: {
     Bg1: require('../assests/images/bg1.png'),
-    Bg2: require('../assests//images/3.png'),
+    Bg2: require('../assests//images/newbg.png'),
     storybg1: require('../assests/images/story1.png'),
     storybg2: require('../assests/images/story2.png'),
     storybg3: require('../assests/images/story3.png'),

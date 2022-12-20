@@ -47,7 +47,12 @@ const Resonance = props => {
                   props.navigation.navigate('question2');
                 }}
                 style={styles.btn}>
-                <Text style={{color: '#fff', margin: 10}}>
+                <Text
+                  style={{
+                    color: '#fff',
+                    margin: 10,
+                    fontFamily: 'Brandon_reg',
+                  }}>
                   Resonance Finder
                 </Text>
               </TouchableOpacity>
@@ -62,7 +67,12 @@ const Resonance = props => {
                         <Switch1 marginRight={20} />
                       </View>
                       <View style={{marginTop: 5}}>
-                        <Text styles={{color: '#000', fontSize: 14}}>
+                        <Text
+                          styles={{
+                            color: '#000',
+                            fontSize: 14,
+                            fontFamily: 'Brandon_reg',
+                          }}>
                           {item.Texts}
                         </Text>
                       </View>
@@ -110,6 +120,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     fontSize: 24,
     marginTop: 5,
+    fontFamily: 'Brandon_reg',
   },
   btn: {
     backgroundColor: '#75997E',

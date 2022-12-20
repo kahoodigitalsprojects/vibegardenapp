@@ -57,6 +57,7 @@ const FressBlooms = ({navigation, route}) => {
             style={{
               width: '90%',
               alignSelf: 'center',
+              fontFamily: 'Brandon_reg',
             }}>
             <Text>{itemId}</Text>
             <Header

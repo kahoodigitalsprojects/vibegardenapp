@@ -29,7 +29,7 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
     {
       id: 1,
       bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      bg12: Images.BackGround.Bg2,
       plus: 'plus',
       name: 'TONGLEN',
       title: 'title',
@@ -38,7 +38,7 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
     {
       id: 2,
       bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      bg12: Images.BackGround.Bg2,
       plus: 'plus',
       name: 'TONGLEN',
       title: 'title',
@@ -47,7 +47,7 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
     {
       id: 3,
       bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      bg12: Images.BackGround.Bg2,
       name: 'TONGLEN',
       title: 'title',
       textA: 'Featured Tools:',
@@ -94,7 +94,12 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
             <View style={{width: '100%'}}>
               <View style={{width: '90%', alignSelf: 'center'}}>
                 <Text
-                  style={{textAlign: 'center', fontSize: 28, color: '#000'}}>
+                  style={{
+                    textAlign: 'center',
+                    fontSize: 28,
+                    color: '#000',
+                    fontFamily: 'Brandon_reg',
+                  }}>
                   Blooms Check
                 </Text>
 
@@ -225,10 +230,21 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
                     );
                   }}
                 />
-              
               </View>
-              <View style={{width: '90%', alignSelf: 'center', marginTop: 15}}>
-                <Text style={{color: '#000', fontWeight: '400', fontSize: 20}}>
+              <View
+                style={{
+                  width: '90%',
+                  alignSelf: 'center',
+                  marginTop: 15,
+                  fontFamily: 'Brandon_reg',
+                }}>
+                <Text
+                  style={{
+                    color: '#000',
+                    fontWeight: '400',
+                    fontSize: 20,
+                    fontFamily: 'Brandon_reg',
+                  }}>
                   Refine your Vibe:
                 </Text>
                 <View style={styles.box}>
@@ -300,11 +316,13 @@ const styles = StyleSheet.create({
     color: '#000',
     fontWeight: '400',
     marginTop: 10,
+    fontFamily: 'Brandon_reg',
   },
   txt1: {
     textAlign: 'left',
     fontSize: 18,
     color: '#030303',
+    fontFamily: 'Brandon_reg',
   },
   btn1: {
     width: '50%',
@@ -314,6 +332,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 55,
     borderRadius: 30,
+    fontFamily: 'Brandon_reg',
   },
   box1: {
     width: '90%',

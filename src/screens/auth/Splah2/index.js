@@ -60,9 +60,11 @@ const styles = StyleSheet.create({
     // backgroundColor: '#1C5C2E',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical:20
+    paddingVertical: 20,
   },
   view1: {
+    marginTop: 20,
+    marginVertical: 10,
     width: '90%',
     alignSelf: 'center',
   },
@@ -75,6 +77,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
     marginVertical: 10,
     lineHeight: 44,
+    fontFamily: 'Brandon_reg',
   },
 });
 

@@ -15,6 +15,7 @@ import {Header, Percentage, Pinkbtn} from '../../../componrnts';
 
 import Icon from 'react-native-vector-icons/AntDesign';
 import Images from '../../../constants';
+import LinearGradient from 'react-native-linear-gradient';
 
 const ChuchuasDetails = ({route, navigation}) => {
   const {Image1, Image2, Image3, Image4, newtext, Image5, Image6, Heading} =
@@ -75,6 +76,9 @@ const ChuchuasDetails = ({route, navigation}) => {
                   fontSize: 18,
                   color: '#000',
                   letterSpacing: 0.2,
+                  fontWeight: '6',
+
+                  fontFamily: 'Brandon_reg',
                 }}>
                 {newtext}
               </Text>
@@ -82,7 +86,7 @@ const ChuchuasDetails = ({route, navigation}) => {
 
             <View
               style={{
-                marginTop: 30,
+                marginTop: 45,
 
                 alignItems: 'center',
               }}>
@@ -115,10 +119,12 @@ const ChuchuasDetails = ({route, navigation}) => {
                             justifyContent: 'center',
                             alignItems: 'center',
                             alignSelf: 'center',
+                            marginVertical: 10,
                           }}>
                           <>
                             {data1 === index ? (
-                              <View
+                              <LinearGradient
+                                colors={['#ED535E', '#CD258D']}
                                 style={{
                                   width: 80,
                                   height: 80,
@@ -139,7 +145,7 @@ const ChuchuasDetails = ({route, navigation}) => {
                                     style={{}}
                                   />
                                 </View>
-                              </View>
+                              </LinearGradient>
                             ) : (
                               <View
                                 style={{
@@ -157,6 +163,7 @@ const ChuchuasDetails = ({route, navigation}) => {
                             <Text
                               style={{
                                 textAlign: 'center',
+                                fontFamily: 'Brandon_reg',
                                 color: data1 === index ? '#fff' : '#000',
                               }}>
                               {item.title}
@@ -170,6 +177,7 @@ const ChuchuasDetails = ({route, navigation}) => {
                               textAlign: 'center',
                               fontSize: 12,
                               color: '#1C5C2E',
+                              fontFamily: 'Brandon_reg',
                             }}>
                             {item.text}
                           </Text>
@@ -187,7 +195,7 @@ const ChuchuasDetails = ({route, navigation}) => {
                 btn={true}
                 icons={true}
                 Image1={Image1}
-                btntxt="continue"
+                btntxt="Continue"
                 width={'50%'}
                 onPress={() =>
                   navigation.navigate('MeetScreen2', {
@@ -217,10 +225,11 @@ const styles = StyleSheet.create({
   },
   txt: {
     textAlign: 'left',
-    fontSize: 24,
+    fontSize: 25,
     color: '#1C5C2E',
-    fontWeight: '400',
+    fontWeight: '600',
     marginVertical: 20,
+    fontFamily: 'Brandon_reg',
   },
 
   txt1: {

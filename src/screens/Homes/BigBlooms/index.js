@@ -93,6 +93,7 @@ const BigBlooms = ({route, navigation}) => {
                 // textAlign: 'center',
                 color: '#000',
                 // fontWeight: 'bold',
+                fontFamily: 'Brandon_reg',
                 lineHeight: 30,
               }}>
               Fantastic! Its So Power Full To Discover Tools That Help Us Feel
@@ -105,6 +106,7 @@ const BigBlooms = ({route, navigation}) => {
                 color: '#1C5C2E',
                 fontWeight: '500',
                 marginVertical: 5,
+                fontFamily: 'Brandon_reg',
               }}>
               ADDED TONGLEN FAVORITES
             </Text>
@@ -117,6 +119,7 @@ const BigBlooms = ({route, navigation}) => {
                 // fontWeight: 'bold',
                 marginVertical: 10,
                 textDecorationLine: 'underline',
+                fontFamily: 'Brandon_reg',
               }}>
               Tell Us More
             </Text>
@@ -127,6 +130,7 @@ const BigBlooms = ({route, navigation}) => {
                 // textAlign: 'center',
                 color: '#000',
                 // fontWeight: 'bold',
+                fontFamily: 'Brandon_reg',
               }}>
               Did This Tools
             </Text>
@@ -157,6 +161,7 @@ const BigBlooms = ({route, navigation}) => {
                       // textAlign: 'center',
                       color: '#000',
                       // fontWeight: 'bold',
+                      fontFamily: 'Brandon_reg',
                     }}>
                     {item.text1}
                   </Text>

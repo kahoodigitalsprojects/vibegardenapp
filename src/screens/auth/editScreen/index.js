@@ -92,6 +92,7 @@ const styles = StyleSheet.create({
     color: '#1C5C2E',
     fontSize: 14,
     marginVertical: 5,
+    fontFamily: 'Brandon_reg',
   },
   btns: {
     flexDirection: 'row',

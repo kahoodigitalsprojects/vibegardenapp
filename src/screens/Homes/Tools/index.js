@@ -22,7 +22,7 @@ const Tools = props => {
     {
       id: 1,
       bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      bg12: Images.BackGround.Bg2,
       // heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
@@ -31,7 +31,7 @@ const Tools = props => {
     {
       id: 2,
       bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      bg12: Images.BackGround.Bg2,
       // heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       plus: 'plus',
@@ -75,6 +75,7 @@ const Tools = props => {
                 fontSize: 28,
                 fontWeight: '600',
                 color: '#000000',
+                fontFamily: 'Brandon_reg',
               }}>
               Tools
             </Text>
@@ -87,6 +88,7 @@ const Tools = props => {
                 // fontWeight: '600',
                 color: '#000000',
                 marginVertical: 10,
+                fontFamily: 'Brandon_reg',
               }}>
               Its Blooms Time
             </Text>

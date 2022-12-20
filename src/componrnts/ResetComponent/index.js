@@ -44,13 +44,18 @@ const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
             <View style={{margin: 15, marginVertical: 10}}>
               <View style={{marginVertical: 3}}>
                 <Text
-                  style={{color: '#1C5C2E', fontSize: 16, fontWeight: '500'}}>
+                  style={{
+                    color: '#1C5C2E',
+                    fontSize: 16,
+                    fontWeight: '500',
+                    fontFamily: 'Brandon_reg',
+                  }}>
                   Calm and Rest
                 </Text>
               </View>
 
               <View style={{marginVertical: 3}}>
-                <Text style={{color: '#000'}}>
+                <Text style={{color: '#000', fontFamily: 'Brandon_reg'}}>
                   The session is about becomi...
                 </Text>
               </View>
@@ -95,7 +100,9 @@ const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
                         padding: 1,
                       }}>
                       <Icon2 name="delete" size={12} />
-                      <Text style={{fontSize: 12}}>Remove</Text>
+                      <Text style={{fontSize: 12, fontFamily: 'Brandon_reg'}}>
+                        Remove
+                      </Text>
                     </TouchableOpacity>
                   </View>
                 </Modal>

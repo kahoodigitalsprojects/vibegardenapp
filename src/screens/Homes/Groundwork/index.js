@@ -19,7 +19,7 @@ const GroundWork = props => {
     {
       id: 1,
       bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      bg12: Images.BackGround.Bg2,
       img4: Images.BackGround.rectangle2,
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
@@ -28,7 +28,7 @@ const GroundWork = props => {
     {
       id: 2,
       bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      bg12: Images.BackGround.Bg2,
       img4: Images.BackGround.rectangle2,
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
@@ -158,6 +158,8 @@ const GroundWork = props => {
                               },
                             })
                           }
+                          // iconimg1
+                    
                           onPressALL={item.pressAll}
                           textA={item.textA}
                           heart1={item.heart1}

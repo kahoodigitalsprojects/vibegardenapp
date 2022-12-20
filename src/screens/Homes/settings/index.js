@@ -416,11 +416,13 @@ const styles = StyleSheet.create({
     color: '#1C5C2E',
 
     fontSize: 14,
+    fontFamily: 'Brandon_reg',
   },
   text1: {
     fontSize: 18,
     color: '#191919B8',
     marginVertical: 5,
+    fontFamily: 'Brandon_reg',
   },
   line: {
     width: 283,
@@ -452,12 +454,14 @@ const styles = StyleSheet.create({
     marginTop: 6,
     fontWeight: '600',
     paddingRight: 10,
+    fontFamily: 'Brandon_reg',
   },
   endtext: {
     justifyContent: 'center',
     alignItems: 'center',
     justifyContent: 'center',
     justifyContent: 'space-around',
+    fontFamily: 'Brandon_reg',
   },
 });
 export default Settings;

@@ -63,7 +63,7 @@ const Header = props => {
             />
           </TouchableOpacity>
           {img1 && (
-            <View style={{width: 40, height: 40}}>
+            <View style={{width: 40, height: 4, marginTop: -10}}>
               <Image
                 source={Images.Logos.logo1}
                 resizeMode="contain"
@@ -92,6 +92,7 @@ const Header = props => {
                   fontSize: fontSize,
                   color: '#000',
                   fontWeight: '300',
+                  fontFamily: 'Brandon_reg',
                 }}>
                 {props.headertext}
               </Text>
@@ -161,6 +162,7 @@ const Header = props => {
                     marginTop: 8,
                     color: color,
                     fontWeight: '500',
+                    fontFamily: 'Brandon_reg',
                   }}>
                   {props.headertext}
                 </Text>
@@ -239,6 +241,7 @@ const Header = props => {
                 marginTop: 8,
                 color: color,
                 fontWeight: '500',
+                fontFamily: 'Brandon_reg',
               }}>
               {props.headertext}
             </Text>
@@ -278,19 +281,21 @@ const Header = props => {
                     marginTop: 10,
                     color: color,
                     fontWeight: '500',
+                    fontFamily: 'Brandon_reg',
                   }}>
                   {props.headertext2}
                 </Text>
               </View>
             )}
           </View>
-          <View style={{alignItems: 'center', width: '50%',marginTop:3}}>
+          <View style={{alignItems: 'center', width: '50%', marginTop: 3}}>
             <Text
               style={{
                 fontSize: fontSize,
                 marginTop: 8,
                 color: color,
                 fontWeight: '500',
+                fontFamily: 'Brandon_reg',
               }}>
               {props.headertext}
             </Text>

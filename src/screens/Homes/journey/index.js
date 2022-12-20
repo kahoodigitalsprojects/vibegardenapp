@@ -12,6 +12,7 @@ import {
   ImageBackground,
 } from 'react-native';
 import {Icon} from 'react-native-elements';
+import LinearGradient from 'react-native-linear-gradient';
 import {yellow100} from 'react-native-paper/lib/typescript/styles/colors';
 import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
@@ -53,7 +54,12 @@ const Journey = props => {
           contentContainerStyle={{}}>
           <StatusBar animated={true} backgroundColor="#000" />
           <View style={{}}>
-            <View style={{width: '90%', alignSelf: 'center', marginTop: 10}}>
+            <View
+              style={{
+                width: '90%',
+                alignSelf: 'center',
+                marginTop: 10,
+              }}>
               <Text style={styles.txt}>
                 Which of these journey resonates must?
               </Text>
@@ -83,7 +89,8 @@ const Journey = props => {
                                     {marginTop: 0, opacity: 0.7},
                                   ]}
                                   resizeMode="contain">
-                                  <View
+                                  <LinearGradient
+                                    colors={['#ED535E', '#CD258D']}
                                     style={{
                                       width: 100,
                                       height: 100,
@@ -93,7 +100,7 @@ const Journey = props => {
                                       alignSelf: 'center',
                                       backgroundColor:
                                         data1 === index ? '#CD258D' : '',
-                                      opacity: 0.8,
+                                      opacity: 0.9,
                                       elevation: data1 === index ? 0 : 5,
                                     }}>
                                     <Icon
@@ -102,7 +109,7 @@ const Journey = props => {
                                       color="#fff"
                                       style={{}}
                                     />
-                                  </View>
+                                  </LinearGradient>
                                 </ImageBackground>
                               ) : (
                                 <View style={{}}>
@@ -121,8 +128,10 @@ const Journey = props => {
                               style={{
                                 textAlign: 'center',
                                 margin: 5,
-                                fontSize: 16,
+                                fontSize: 18,
                                 color: '#000',
+                                fontFamily: 'brandon-grotesque-black.',
+                                fontWeight: '600',
                               }}>
                               {item.text}
                             </Text>
@@ -139,7 +148,7 @@ const Journey = props => {
                 onPress={() =>
                   props.navigation.navigate('Homes', {screen: 'meet'})
                 }
-                width={'60%'}
+                width={'50%'}
                 btntxt="Continue"
               />
             </View>
@@ -152,7 +161,7 @@ const Journey = props => {
 export default Journey;
 
 const styles = StyleSheet.create({
-  main: {flex: 1,},
+  main: {flex: 1},
 
   img: {
     width: 100,
@@ -162,10 +171,11 @@ const styles = StyleSheet.create({
   },
   txt: {
     textAlign: 'left',
-    fontSize: 24,
+    fontSize: 25,
     color: '#1C5C2E',
-    fontWeight: '400',
+    fontWeight: '600',
     marginVertical: 20,
+    fontFamily: 'Brandon_reg',
   },
   txt1: {
     textAlign: 'left',

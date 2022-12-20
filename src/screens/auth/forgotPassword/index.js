@@ -32,7 +32,13 @@ const ForgetPassword = props => {
           </View>
 
           <View style={{width: '85%', marginTop: 30}}>
-            <Text style={{fontSize: 20, lineHeight: 26, marginTop: 20}}>
+            <Text
+              style={{
+                fontSize: 20,
+                lineHeight: 26,
+                marginTop: 20,
+                fontFamily: 'Brandon_reg',
+              }}>
               Enter Your Registered Email To Get The Password Reset Link
             </Text>
 
@@ -45,6 +51,7 @@ const ForgetPassword = props => {
                 marginVertical: 5,
                 borderColor: '#1C5C2E',
                 textDecorationLine: 'underline',
+                fontFamily: 'Brandon_reg',
               }}>
               Email Address:
             </Text>
@@ -53,9 +60,11 @@ const ForgetPassword = props => {
               <View style={{height: 45, borderRadius: 15, marginVertical: 10}}>
                 <TextInput
                   placeholder="Email"
+                  placeholderTextColor={'#1C5C2E'}
                   style={{
                     paddingLeft: 20,
-                    backgroundColor: '#00000029',
+                    backgroundColor: '#BCCFC1',
+                    opacity: 0.4,
                     borderRadius: 12,
                   }}
                 />

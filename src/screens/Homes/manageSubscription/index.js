@@ -35,7 +35,11 @@ const ManageSubscription = props => {
         </View>
         <View style={styles.firstview}>
           <View style={styles.row}>
-            <Text style={[styles.text1, {color: 'black'}]}>
+            <Text
+              style={[
+                styles.text1,
+                {color: 'black', fontFamily: 'Brandon_reg'},
+              ]}>
               Subscriptions Info:
             </Text>
             <View style={styles.line}></View>
@@ -133,7 +137,14 @@ const ManageSubscription = props => {
               justifyContent: 'flex-end',
             }}>
             <Text
-              style={[{color: '#1492E6', fontSize: 16, marginVertical: 10}]}>
+              style={[
+                {
+                  color: '#1492E6',
+                  fontSize: 16,
+                  marginVertical: 10,
+                  fontFamily: 'Brandon_reg',
+                },
+              ]}>
               Cancel Subscription
             </Text>
           </TouchableOpacity>
@@ -167,10 +178,12 @@ const styles = StyleSheet.create({
     color: '#1C5C2E',
 
     fontSize: 16,
+    fontFamily: 'Brandon_reg',
   },
   text1: {
     fontSize: 18,
     color: '#191919B8',
+    fontFamily: 'Brandon_reg',
   },
   line: {
     width: '70%',
@@ -197,6 +210,7 @@ const styles = StyleSheet.create({
     color: '#1C5C2E',
     fontWeight: '400',
     marginTop: 6,
+    fontFamily: 'Brandon_reg',
   },
   endtext: {
     // justifyContent: 'center',

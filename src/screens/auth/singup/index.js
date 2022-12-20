@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -17,6 +17,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 const SignUp = ({route, navigation}) => {
   const registerd2 = route.params?.registerd2 || null;
+  const [state, setState] = useState(true);
   return (
     <SafeAreaView style={styles.main}>
       <StatusBar animated={true} backgroundColor="#000" />
@@ -31,7 +32,7 @@ const SignUp = ({route, navigation}) => {
               OnPress={() => navigation.replace('Welcome')}
             />
           </View>
-          <Text style={styles.headtext}>
+          <Text style={[styles.headtext, {fontFamily: 'brandomMedium'}]}>
             You're so very welcome,
             {'\n'} Erin
           </Text>
@@ -40,6 +41,7 @@ const SignUp = ({route, navigation}) => {
               marginTop: 20,
               color: '#1C5C2E',
               fontSize: 18,
+              fontFamily: 'Brandon_reg',
             }}>
             Let's Get You Setup With An Account
           </Text>
@@ -50,16 +52,48 @@ const SignUp = ({route, navigation}) => {
             />
           </View>
           <View>
-            <Text style={{fontSize: 18}}>Sign Up With Email</Text>
-            <View style={styles.input}>
-              <TextInput
-                placeholder="alexasamichael.125@gmail.com"
-                placeholderTextColor="grey"
-              />
-            </View>
-            <View style={styles.input}>
-              <TextInput placeholder="Password" placeholderTextColor="grey" />
-            </View>
+            <Text style={{fontSize: 18, fontFamily: 'Brandon_reg'}}>
+              Sign Up With Email
+            </Text>
+
+            <TouchableOpacity
+              onPress={() => setState(!state)}
+              style={{borderBottomWidth: 1, borderColor: '#1C5C2E'}}>
+              {state === true ? (
+                <View>
+                  <Text
+                    style={{
+                      color: '#1C5C2E',
+                      fontSize: 14,
+                      fontWeight: '900',
+                      marginVertical: 15,
+                      fontFamily: 'Brandon_reg',
+                    }}>
+                    davidmichael.198@gmail.com
+                  </Text>
+                </View>
+              ) : (
+                <View style={{}}>
+                  <TextInput
+                    placeholder="Email Adddress"
+                    placeholderTextColor="#1C5C2E"
+                    style={{opacity: 0.8}}
+                  />
+                </View>
+              )}
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => setState(!state)}
+              style={{borderBottomWidth: 1, borderColor: '#1C5C2E'}}>
+              <View style={{}}>
+                <TextInput
+                  placeholder="Password"
+                  placeholderTextColor="#1C5C2E"
+                  style={{opacity: 0.8}}
+                />
+              </View>
+            </TouchableOpacity>
+
             <View style={{marginTop: 50}}>
               <Pinkbtn
                 onPress={() => {
@@ -85,6 +119,7 @@ const SignUp = ({route, navigation}) => {
                     color: '#1C5C2E',
                     fontSize: 18,
                     textAlign: 'center',
+                    fontFamily: 'Brandon_reg',
                   }}>
                   Already have an account?
                   <Text
@@ -96,6 +131,7 @@ const SignUp = ({route, navigation}) => {
                   </Text>
                 </Text>
               </TouchableOpacity>
+
               <TouchableOpacity
                 onPress={() => {
                   navigation.replace('Story1', {
@@ -116,6 +152,7 @@ const SignUp = ({route, navigation}) => {
                     color: '#1492E6',
                     fontSize: 18,
                     textAlign: 'center',
+                    fontFamily: 'Brandon_reg',
                   }}>
                   Want to See How Works?
                 </Text>
@@ -131,19 +168,21 @@ const SignUp = ({route, navigation}) => {
 const styles = StyleSheet.create({
   main: {flex: 1},
   input: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    borderBottomWidth: 1,
-    borderColor: 'lightgrey',
-    marginVertical: 10,
+    // flexDirection: 'row',
+    // justifyContent: 'space-between',
+    borderBottomWidth: 0.8,
+    borderColor: '#1C5C2E',
+    opacity: 0.6,
     marginTop: 20,
+    fontFamily: 'Brandon_reg',
   },
   headtext: {
     marginTop: 20,
     color: '#1C5C2E',
     fontSize: 25,
-    fontWeight: '700',
-    lineHeight: 42,
+    fontWeight: '600',
+
+    fontFamily: 'Brandon_reg',
   },
   blue: {
     marginVertical: 10,

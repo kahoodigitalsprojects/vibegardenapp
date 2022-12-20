@@ -25,7 +25,10 @@ Mytabs = props => {
           tabBarLabel: 'Garden',
           tabBarIcon: ({focused}) =>
             focused ? (
-              <Image source={Images.Logos.greenlogo} style={styles.activeImg} />
+              <Image
+                source={Images.Logos.greenlogo}
+                style={[styles.activeImg]}
+              />
             ) : (
               <Image source={Images.Logos.greylog} style={styles.deActiveImg} />
             ),

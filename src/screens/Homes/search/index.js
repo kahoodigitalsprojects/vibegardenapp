@@ -27,9 +27,7 @@ const Search = props => {
             props.navigation.navigate('Search2');
           }}
         />
-        <View
-     
-          style={styles.container}>
+        <View style={styles.container}>
           <View
             style={{
               width: '90%',
@@ -52,6 +50,7 @@ const Search = props => {
                 lineHeight: 35,
                 marginTop: 20,
                 textAlign: 'center',
+                fontFamily: 'Brandon_reg',
               }}>
               Search Tools , And{'\n'}Groundwork Videos
             </Text>

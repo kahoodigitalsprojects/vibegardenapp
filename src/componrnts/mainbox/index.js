@@ -52,7 +52,7 @@ const MainBox = ({
                   style={{
                     // backgroundColor: 'pink',
                     height: 33,
-                    marginTop: 12,
+                    marginTop: 35,
                     width: 33,
                   }}>
                   <Image
@@ -66,8 +66,10 @@ const MainBox = ({
                   alignItems: 'center',
                   color: '#000',
                   textAlign: 'center',
-
-                  fontSize: 25,
+                  fontSize: 26,
+                  marginTop: 30,
+                  fontWeight: '600',
+                  fontFamily: 'Brandon_reg',
                 }}>
                 {textone}
               </Text>
@@ -79,6 +81,7 @@ const MainBox = ({
                 borderRadius: 12,
                 // margin: 2,
                 backgroundColor: bgcolor,
+
                 marginTop: 15,
               }}>
               <Text
@@ -87,6 +90,8 @@ const MainBox = ({
                   alignItems: 'center',
                   color: '#fff',
                   textAlign: 'center',
+                  fontFamily: 'Brandon_reg',
+
                   top: 10,
                 }}>
                 {minutes}
@@ -99,9 +104,7 @@ const MainBox = ({
 
                 // margin: 2,
                 left: -85,
-                top: 35,
-
-                marginTop: 15,
+                top: 30,
               }}>
               <Text
                 style={{
@@ -111,6 +114,7 @@ const MainBox = ({
                   textAlign: 'center',
                   top: 15,
                   fontSize: 12,
+                  fontFamily: 'Brandon_reg',
                 }}>
                 {date1}
               </Text>

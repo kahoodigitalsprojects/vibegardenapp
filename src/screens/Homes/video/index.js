@@ -69,7 +69,7 @@ const Video = ({route, navigation}) => {
   const Data2 = [
     {
       bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      bg12: Images.BackGround.Bg2,
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
@@ -159,7 +159,12 @@ const Video = ({route, navigation}) => {
                           alignSelf: 'flex-start',
                         }}>
                         <TouchableOpacity style={[styles.topics, {padding: 6}]}>
-                          <Text style={{color: '#1C5C2E', fontSize: 12}}>
+                          <Text
+                            style={{
+                              color: '#1C5C2E',
+                              fontSize: 12,
+                              fontFamily: 'Brandon_reg',
+                            }}>
                             {item.texlist}
                           </Text>
                         </TouchableOpacity>
@@ -181,6 +186,7 @@ const Video = ({route, navigation}) => {
                       style={{
                         fontSize: 20,
                         color: '#1C5C2E',
+                        fontFamily: 'Brandon_reg',
                       }}>
                       Did you try this tools?
                     </Text>
@@ -216,6 +222,7 @@ const Video = ({route, navigation}) => {
                     color: 'black',
                     fontSize: 14,
                     color: '#1C5C2E',
+                    fontFamily: 'Brandon_reg',
                   }}>
                   Comments
                 </Text>
@@ -257,6 +264,7 @@ const Video = ({route, navigation}) => {
                   color: 'black',
                   fontSize: 20,
                   color: '#1C5C2E',
+                  fontFamily: 'Brandon_reg',
                 }}>
                 Related Content:
               </Text>
@@ -295,6 +303,7 @@ const Video = ({route, navigation}) => {
                   color: 'black',
                   fontSize: 12,
                   marginVertical: 20,
+                  fontFamily: 'Brandon_reg',
                 }}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
@@ -355,12 +364,14 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#1C5C2E',
     marginTop: 5,
+    fontFamily: 'Brandon_reg',
   },
   text1: {
     fontSize: 25,
     textAlign: 'center',
     color: '#000',
     fontWeight: '400',
+    fontFamily: 'Brandon_reg',
   },
   item1: {
     flexDirection: 'row',
@@ -370,6 +381,7 @@ const styles = StyleSheet.create({
     marginVertical: 2,
     fontSize: 20,
     // textAlign: 'center',
+    fontFamily: 'Brandon_reg',
     color: '#1C5C2E',
     fontWeight: '500',
   },

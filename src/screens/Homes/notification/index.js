@@ -95,6 +95,7 @@ const Notification = props => {
                 color: '#F54F84',
                 textAlign: 'right',
                 fontWeight: 'bold',
+                fontFamily: 'Brandon_reg',
               }}>
               Clear All
             </Text>
@@ -113,7 +114,13 @@ const Notification = props => {
                 marginTop: 15,
               }}></View>
             <View style={{}}>
-              <Text style={{fontSize: 18, fontWeight: 'bold', color: '#000'}}>
+              <Text
+                style={{
+                  fontSize: 18,
+                  fontWeight: 'bold',
+                  color: '#000',
+                  fontFamily: 'Brandon_reg',
+                }}>
                 Recent Notification
               </Text>
             </View>
@@ -151,6 +158,7 @@ const Notification = props => {
                               styles.text1,
                               {
                                 marginLeft: 10,
+                                fontFamily: 'Brandon_reg',
                               },
                             ]}>
                             {item.name}
@@ -163,6 +171,7 @@ const Notification = props => {
                                 fontSize: 14,
                                 marginVertical: 5,
                                 marginLeft: 6,
+                                fontFamily: 'Brandon_reg',
                               },
                             ]}>
                             {item.text}
@@ -175,6 +184,7 @@ const Notification = props => {
                             fontSize: 12,
                             color: '#000',
                             fontWeight: 'bold',
+                            fontFamily: 'Brandon_reg',
                           }}>
                           {item.time}
                         </Text>
@@ -184,6 +194,7 @@ const Notification = props => {
                             color: '#000',
                             marginTop: 35,
                             fontWeight: 'bold',
+                            fontFamily: 'Brandon_reg',
                           }}>
                           {item.Date}
                         </Text>
@@ -242,6 +253,7 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: 'bold',
     color: '#000',
+    fontFamily: 'Brandon_reg',
   },
 });
 export default Notification;

@@ -26,18 +26,24 @@ const NameScreen = props => {
             <Image source={Images.Logos.logo1} style={{}} />
           </View>
           <View>
-            <Text style={{fontSize: 18}}>Hi, VibeGardner!</Text>
+            <Text style={{fontSize: 18, fontFamily: 'Brandon_reg'}}>
+              Hi, VibeGardner!
+            </Text>
             <Text
               style={{
                 color: '#1C5C2E',
                 fontSize: 25,
                 marginVertical: 15,
-                fontWeight: 'bold',
+                fontWeight: '600',
+                fontFamily: 'Brandon_reg',
               }}>
               What is your name ?
             </Text>
             <View style={styles.input}>
-              <TextInput placeholder="First Name" />
+              <TextInput
+                placeholder="First Name"
+                placeholderTextColor={'#1C5C2E87'}
+              />
               {/* <Icon name="check" type="AntDesign" /> */}
               <Icon
                 name="check"
@@ -67,6 +73,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     borderBottomWidth: 1,
     borderColor: 'lightgrey',
+    fontFamily: 'Brandon_reg',
   },
 });
 

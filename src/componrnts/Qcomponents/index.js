@@ -36,7 +36,7 @@ const QComponents = ({
   video,
   video2,
   image1,
-marginTop1,
+  marginTop1,
   flowwerlist11,
   Statement,
   flow,
@@ -110,6 +110,7 @@ marginTop1,
                         alignItems: 'center',
                         color: '#fff',
                         textAlign: 'center',
+                        fontFamily: 'Brandon_reg',
                         top: 10,
                       }}>
                       5 min
@@ -142,6 +143,7 @@ marginTop1,
                     fontSize: 18,
                     fontWeight: '500',
                     alignSelf: 'center',
+                    fontFamily: 'Brandon_reg',
                   }}>
                   {textforvideo}
                 </Text>
@@ -172,7 +174,12 @@ marginTop1,
               <Text
                 style={[
                   styles.text2,
-                  {color: '#000', fontSize: 18, marginLeft: 5},
+                  {
+                    color: '#000',
+                    fontSize: 18,
+                    marginLeft: 5,
+                    fontFamily: 'Brandon_reg',
+                  },
                 ]}>
                 {flow}
               </Text>
@@ -196,6 +203,7 @@ marginTop1,
               <Text
                 style={{
                   marginTop: margintopS,
+                  fontFamily: 'Brandon_reg',
                   color: '#1C5C2E',
                   // fontWeight: '300',
                   fontSize: 20,
@@ -219,7 +227,15 @@ marginTop1,
           </View>
           <View style={{marginTop: 6}}>
             {text5 && (
-              <Text style={[{color: '#000', fontSize: 18, lineHeight: 30}]}>
+              <Text
+                style={[
+                  {
+                    color: '#000',
+                    fontSize: 18,
+                    lineHeight: 30,
+                    fontFamily: 'Brandon_reg',
+                  },
+                ]}>
                 {text5}
               </Text>
             )}
@@ -234,6 +250,7 @@ marginTop1,
                   fontSize: 16,
                   lineHeight: 22,
                   marginTop: marginTop1,
+                  fontFamily: 'Brandon_reg',
                 },
               ]}>
               {Statement}
@@ -251,6 +268,7 @@ marginTop1,
                     letterSpacing: 1.5,
                     fontSize: 20,
                     color: '#000',
+                    fontFamily: 'Brandon_reg',
                   },
                 ]}>
                 {text6}
@@ -291,6 +309,7 @@ marginTop1,
                           fontSize: 12,
                           color: '#000',
                           textAlign: 'center',
+                          fontFamily: 'Brandon_reg',
                           color: '#1C5C2E',
                         }}>
                         {item.text1}
@@ -324,12 +343,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#000',
     fontWeight: '400',
+    fontFamily: 'Brandon_reg',
   },
   text2: {
     fontSize: 20,
     // textAlign: 'center',
     color: '#1C5C2E',
     fontWeight: '500',
+    fontFamily: 'Brandon_reg',
   },
   starbg: {
     width: '100%',
