@@ -114,10 +114,9 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textAlign: 'center',
     color: '#000',
-    fontWeight: '500',
     marginVertical: 15,
     lineHeight: 39,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Medium',
   },
   text2: {
     fontSize: 18,
@@ -126,7 +125,7 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
     marginVertical: 15,
     opacity: 0.5,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Medium',
   },
   starbg: {
     width: 200,
@@ -167,7 +166,7 @@ const styles = StyleSheet.create({
     color: '#1C5C2E',
     fontWeight: '400',
     marginTop: 9,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
 });
 export default Pushnotification;

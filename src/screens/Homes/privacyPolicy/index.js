@@ -38,7 +38,7 @@ const PrivacyPolicy = ({navigation, route}) => {
               textAlign: 'left',
               fontSize: 14,
               color: '#000000',
-              fontFamily: 'Brandon_reg',
+              fontFamily: 'BrandonGrotesque-Regular',
             }}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -56,7 +56,7 @@ const PrivacyPolicy = ({navigation, route}) => {
               textAlign: 'left',
               fontSize: 14,
               color: '#000000',
-              fontFamily: 'Brandon_reg',
+              fontFamily: 'BrandonGrotesque-Regular',
             }}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -73,7 +73,7 @@ const PrivacyPolicy = ({navigation, route}) => {
             style={{
               textAlign: 'left',
               fontSize: 14,
-              fontFamily: 'Brandon_reg',
+              fontFamily: 'BrandonGrotesque-Regular',
               color: '#000000',
             }}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam

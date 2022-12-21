@@ -63,7 +63,7 @@ const Registerd = ({route, navigation}) => {
                     fontSize: 15,
                     color: '#000',
                     lineHeight: 30,
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Medium',
                     fontWeight: '660',
                   }}>
                   This Email Is Already Registered With Vibegarden, Please{' '}
@@ -75,7 +75,7 @@ const Registerd = ({route, navigation}) => {
                       // fontWeight: '600',
                       textDecorationLine: 'underline',
                       letterSpacing: 1,
-                      fontFamily: 'Brandon_reg',
+                      fontFamily: 'BrandonGrotesque-Medium',
                     }}>
                     Log In.
                   </Text>
@@ -88,7 +88,7 @@ const Registerd = ({route, navigation}) => {
                   fontWeight: '600',
                   color: '#1C5C2E',
                   paddingLeft: 10,
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Medium',
                 }}>
                 Or
               </Text>
@@ -104,7 +104,7 @@ const Registerd = ({route, navigation}) => {
                   fontSize: 15,
                   color: '#000',
                   lineHeight: 30,
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Medium',
                   fontWeight: '660',
                 }}>
                 Or If You’ve Forgotten Your Password,{' '}
@@ -116,7 +116,7 @@ const Registerd = ({route, navigation}) => {
 
                     textDecorationLine: 'underline',
                     letterSpacing: 1,
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Medium',
                   }}>
                   Click Here.
                 </Text>

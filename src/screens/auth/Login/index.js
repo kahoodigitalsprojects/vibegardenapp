@@ -13,14 +13,30 @@ import {
 import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 import Orientation from 'react-native-orientation-locker';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const Login = ({route, navigation}) => {
+  const [state, setState] = useState(true);
+
   useEffect(() => {
     Orientation.unlockAllOrientations();
+    checkJourney();
   }, []);
+
+  const checkJourney = async value => {
+    try {
+      const check = await AsyncStorage.getItem('journeyCompleted');
+      if (check !== null) {
+        return;
+      } else {
+        await AsyncStorage.setItem('journeyCompleted', 'DONE');
+      }
+    } catch (e) {
+      // saving error
+      console.log(e);
+    }
+  };
   const registerd1 = route.params?.registerd1 || null;
   // console.log(colorScheme);
-  const [state, setState] = useState(true);
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
@@ -39,46 +55,48 @@ const Login = ({route, navigation}) => {
             <Image source={Images.Logos.logo1} style={{}} />
           </View>
           <View>
-            <Text style={{fontSize: 18, fontFamily: 'Brandon_reg'}}>
+            <Text style={{fontSize: 18, fontFamily: 'BrandonGrotesque-Medium'}}>
               Login With Email
             </Text>
-            <TouchableOpacity
-              onPress={() => setState(!state)}
-              style={{borderBottomWidth: 1, borderColor: '#1C5C2E'}}>
-              {state === true ? (
-                <View>
-                  <Text
-                    style={{
-                      color: '#1C5C2E',
-                      fontSize: 14,
-                      fontWeight: '900',
-                      marginVertical: 15,
-                      fontFamily: 'Brandon_reg',
-                    }}>
-                    davidmichael.198@gmail.com
-                  </Text>
-                </View>
-              ) : (
+            <View style={{marginTop: 30}}>
+              <TouchableOpacity
+                onPress={() => setState(!state)}
+                style={{borderBottomWidth: 1, borderColor: '#75997E'}}>
+                {state === true ? (
+                  <View>
+                    <Text
+                      style={{
+                        color: '#1C5C2E',
+                        fontSize: 14,
+                        // fontWeight: '400',
+                        marginVertical: 15,
+                        // fontFamily: 'BrandonGrotesque-Regular',
+                      }}>
+                      davidmichael.198@gmail.com
+                    </Text>
+                  </View>
+                ) : (
+                  <View style={{}}>
+                    <TextInput
+                      placeholder="Email Adddress"
+                      placeholderTextColor="#75997E"
+                      style={{opacity: 0.8}}
+                    />
+                  </View>
+                )}
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => setState(!state)}
+                style={{borderBottomWidth: 1, borderColor: '#75997E'}}>
                 <View style={{}}>
                   <TextInput
-                    placeholder="Email Adddress"
-                    placeholderTextColor="#1C5C2E"
+                    placeholder="Password"
+                    placeholderTextColor="#75997E"
                     style={{opacity: 0.8}}
                   />
                 </View>
-              )}
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => setState(!state)}
-              style={{borderBottomWidth: 1, borderColor: '#1C5C2E'}}>
-              <View style={{}}>
-                <TextInput
-                  placeholder="Password"
-                  placeholderTextColor="#1C5C2E"
-                  style={{opacity: 0.8}}
-                />
-              </View>
-            </TouchableOpacity>
+              </TouchableOpacity>
+            </View>
             <TouchableOpacity
               onPress={() => navigation.navigate('forgerpsaaword')}>
               <Text
@@ -86,9 +104,8 @@ const Login = ({route, navigation}) => {
                   textAlign: 'right',
                   color: '#1C5C2E',
                   fontSize: 14,
-                  fontWeight: '900',
                   marginTop: 5,
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Bold',
                   marginTop: 10,
                 }}>
                 Forget Password?
@@ -126,7 +143,7 @@ const Login = ({route, navigation}) => {
                 color: '#1C5C2E',
                 fontSize: 18,
                 fontWeight: '500',
-                fontFamily: 'Brandon_reg',
+                // fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Or
             </Text>
@@ -148,7 +165,7 @@ const Login = ({route, navigation}) => {
                   color: '#1C5C2E',
                   fontSize: 18,
                   fontWeight: '500',
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Medium',
                 }}>
                 Don't have an account?{' '}
                 <Text

@@ -75,7 +75,7 @@ const Tools = props => {
                 fontSize: 28,
                 fontWeight: '600',
                 color: '#000000',
-                fontFamily: 'Brandon_reg',
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Tools
             </Text>
@@ -88,7 +88,7 @@ const Tools = props => {
                 // fontWeight: '600',
                 color: '#000000',
                 marginVertical: 10,
-                fontFamily: 'Brandon_reg',
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Its Blooms Time
             </Text>

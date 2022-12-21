@@ -41,7 +41,6 @@ const Search2 = ({route, navigation, otherParam}) => {
       bg12: Images.BackGround.Bg2,
       plus: 'plus',
     },
-  
   ];
   databox2 = [
     {
@@ -192,7 +191,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                 <Text
                   style={{
                     color: data1 === 0 ? '#fff' : '#1C5C2E',
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
                   All
                 </Text>
@@ -212,7 +211,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                 <Text
                   style={{
                     color: data1 === 1 ? '#fff' : '#205F2E',
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
                   Tools
                 </Text>
@@ -232,7 +231,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                 <Text
                   style={{
                     color: data1 === 2 ? '#fff' : '#205F2E',
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
                   Ground Work
                 </Text>
@@ -274,7 +273,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                         color: '#1C5C2E',
                         fontSize: 16,
                         margin: 6,
-                        fontFamily: 'Brandon_reg',
+                        fontFamily: 'BrandonGrotesque-Regular',
                       }}>
                       Topics
                     </Text>
@@ -463,7 +462,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                         color: '#1C5C2E',
                         fontSize: 16,
                         margin: 6,
-                        fontFamily: 'Brandon_reg',
+                        fontFamily: 'BrandonGrotesque-Regular',
                       }}>
                       Topics
                     </Text>
@@ -491,7 +490,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                         color: '#1C5C2E',
                         fontSize: 16,
                         margin: 6,
-                        fontFamily: 'Brandon_reg',
+                        fontFamily: 'BrandonGrotesque-Regular',
                       }}>
                       Types
                     </Text>
@@ -558,7 +557,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                         color: '#1C5C2E',
                         fontSize: 16,
                         margin: 6,
-                        fontFamily: 'Brandon_reg',
+                        fontFamily: 'BrandonGrotesque-Regular',
                       }}>
                       Quantum Physics
                     </Text>
@@ -588,7 +587,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                         color: '#1C5C2E',
                         fontSize: 16,
                         margin: 6,
-                        fontFamily: 'Brandon_reg',
+                        fontFamily: 'BrandonGrotesque-Regular',
                       }}>
                       Types
                     </Text>

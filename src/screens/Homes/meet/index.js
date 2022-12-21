@@ -55,7 +55,7 @@ const Meet = props => {
                 width: '90%',
                 alignSelf: 'center',
                 marginTop: 10,
-                fontFamily: 'Brandon_reg',
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
               <Text style={styles.txt}>
                 Brilliant! And Now which Blooms Speaks To your heart?
@@ -203,8 +203,7 @@ const Meet = props => {
                               textAlign: 'center',
                               fontSize: 18,
                               color: '#000',
-                              fontFamily: 'Brandon_reg',
-                              fontWeight: '600',
+                              fontFamily: 'BrandonGrotesque-Medium',
                             }}>
                             {item.text}
                           </Text>
@@ -232,10 +231,9 @@ const Meet = props => {
                 style={[styles.btn1]}>
                 <Text
                   style={{
-                    fontWeight: '400',
                     color: '#fff',
                     fontSize: 20,
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Medium',
                   }}>
                   Continue
                 </Text>
@@ -268,7 +266,7 @@ const styles = StyleSheet.create({
     color: '#1C5C2E',
     fontWeight: '400',
     marginVertical: 10,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Medium',
   },
   txt1: {
     textAlign: 'left',

@@ -14,7 +14,7 @@ const Pinkbtn = ({btntxt, width, onPress, onpres2, onpres3}) => {
               fontWeight: '400',
               color: '#fff',
               fontSize: 18,
-              fontFamily: 'Brandon_reg',
+              fontFamily: 'BrandonGrotesque-Regular',
             }}>
             {btntxt}
           </Text>

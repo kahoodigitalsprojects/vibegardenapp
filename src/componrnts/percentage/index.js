@@ -33,7 +33,7 @@ const Percentage = ({
               // lineHeight: 40,
               fontSize: 18,
               color: '#000',
-              fontWeight: '600',
+              fontFamily: 'BrandonGrotesque-Medium',
             },
           ]}>
           {simpletext1}

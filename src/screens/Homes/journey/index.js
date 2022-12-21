@@ -130,8 +130,7 @@ const Journey = props => {
                                 margin: 5,
                                 fontSize: 18,
                                 color: '#000',
-                                fontFamily: 'brandon-grotesque-black.',
-                                fontWeight: '600',
+                                fontFamily: 'BrandonGrotesque-Medium',
                               }}>
                               {item.text}
                             </Text>
@@ -173,12 +172,13 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     fontSize: 25,
     color: '#1C5C2E',
-    fontWeight: '600',
+    // fontWeight: '600',
     marginVertical: 20,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Medium',
   },
   txt1: {
     textAlign: 'left',
+    fontFamily: 'BrandonGrotesque-Medium',
     fontSize: 18,
     color: '#030303',
   },

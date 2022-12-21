@@ -131,7 +131,7 @@ const Me = props => {
                 fontWeight: '600',
                 color: '#000000',
                 marginVertical: 20,
-                fontFamily: 'Brandon_reg',
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Erin
             </Text>
@@ -157,7 +157,7 @@ const Me = props => {
                   fontSize: 20,
                   fontWeight: '500',
                   marginVertical: 10,
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 Library:
               </Text>
@@ -182,7 +182,7 @@ const Me = props => {
                   fontSize: 20,
                   fontWeight: '500',
                   marginVertical: 10,
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 Bloom 'o' Meter:
               </Text>
@@ -205,7 +205,7 @@ const Me = props => {
                           style={{
                             textAlign: 'center',
                             color: '#fefefe',
-                            fontFamily: 'Brandon_reg',
+                            fontFamily: 'BrandonGrotesque-Regular',
                           }}>
                           {item.text1}
                         </Text>
@@ -237,7 +237,7 @@ const Me = props => {
                     // marginVertical: 10,
                     marginTop: 40,
                     marginLeft: -30,
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
                   Your Graph will appear{'\n'}after 2 days of tracking
                 </Text>

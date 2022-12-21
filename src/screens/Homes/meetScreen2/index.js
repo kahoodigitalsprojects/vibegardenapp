@@ -43,7 +43,7 @@ const MeetScreen2 = ({route, navigation}) => {
                   style={{
                     fontSize: 18,
                     color: '#000',
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Regular',
 
                     lineHeight: 33,
                   }}>
@@ -81,13 +81,13 @@ const styles = StyleSheet.create({
     color: '#000',
     fontWeight: '400',
     marginVertical: 20,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
 
   txt1: {
     textAlign: 'left',
     fontSize: 18,
     color: '#030303',
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
 });

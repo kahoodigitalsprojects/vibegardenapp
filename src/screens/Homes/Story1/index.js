@@ -12,12 +12,14 @@ import React, {useEffect, useRef, useState} from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Orientation from 'react-native-orientation-locker';
 import Images from '../../../constants';
+import {useIsFocused} from '@react-navigation/native';
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
 const Story1 = ({navigation}) => {
+  const isFocused = useIsFocused();
   useEffect(() => {
     Orientation.lockToPortrait();
-  }, []);
+  }, [isFocused]);
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const ref = useRef();
   const updateCurrentSlideIndex = e => {
@@ -122,7 +124,7 @@ const Slide = ({
                 textAlign: 'center',
                 marginVertical: 5,
                 lineHeight: 30,
-                fontFamily: 'Brandon_reg',
+                fontFamily: 'BrandonGrotesque-Regular',
                 paddingHorizontal: 15,
               }}>
               Tools, tips & magic for growing your communication to you!
@@ -137,14 +139,26 @@ const Slide = ({
                 })
               }
               style={styles.btn1}>
-              <Text style={{fontWeight: 'bold', color: '#fff'}}>
+              <Text
+                style={{
+                  fontWeight: 'bold',
+                  color: '#fff',
+                  fontFamily: 'BrandonGrotesque-Medium',
+                }}>
                 Get Started
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => navigation.navigate('namescreen')}
               style={styles.btn2}>
-              <Text style={{fontWeight: 'bold', color: '#fff'}}>Login In</Text>
+              <Text
+                style={{
+                  fontWeight: 'bold',
+                  color: '#fff',
+                  fontFamily: 'BrandonGrotesque-Medium',
+                }}>
+                Login In
+              </Text>
             </TouchableOpacity>
           </View>
         </>

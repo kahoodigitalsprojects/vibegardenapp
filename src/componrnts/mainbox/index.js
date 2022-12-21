@@ -69,7 +69,7 @@ const MainBox = ({
                   fontSize: 26,
                   marginTop: 30,
                   fontWeight: '600',
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 {textone}
               </Text>
@@ -90,7 +90,7 @@ const MainBox = ({
                   alignItems: 'center',
                   color: '#fff',
                   textAlign: 'center',
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Regular',
 
                   top: 10,
                 }}>
@@ -114,7 +114,7 @@ const MainBox = ({
                   textAlign: 'center',
                   top: 15,
                   fontSize: 12,
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 {date1}
               </Text>

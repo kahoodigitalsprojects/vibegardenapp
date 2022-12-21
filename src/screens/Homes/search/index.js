@@ -50,7 +50,7 @@ const Search = props => {
                 lineHeight: 35,
                 marginTop: 20,
                 textAlign: 'center',
-                fontFamily: 'Brandon_reg',
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Search Tools , And{'\n'}Groundwork Videos
             </Text>

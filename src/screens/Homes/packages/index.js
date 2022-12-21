@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginVertical: 4,
     textAlign: 'left',
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   text2: {
     color: '#1492E6',
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginTop: 6,
     textAlign: 'left',
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   row: {
     flexDirection: 'row',

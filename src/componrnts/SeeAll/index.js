@@ -28,18 +28,20 @@ const styles = StyleSheet.create({
   txtA: {
     color: '#1C5C2E',
     fontWeight: '500',
-    fontSize: 18,
-    fontFamily: 'Brandon_reg',
-    fontWeight: '700',
+    fontSize: 20,
+    fontFamily: 'BrandonGrotesque-Medium',
+
     opacity: 0.85,
+    //     BrandonGrotesque-Regular
+    // BrandonGrotesque-BoldItalic
   },
   txtB: {
     color: '#1C5C2E',
     fontWeight: '500',
     fontSize: 14,
     textDecorationLine: 'underline',
-    fontFamily: 'Brandon_reg',
-    fontWeight: '700',
+    fontFamily: 'BrandonGrotesque-Medium',
+
     opacity: 0.85,
   },
 });

@@ -34,7 +34,7 @@ const Contactus = props => {
             OnPress={() => props.navigation.goBack('')}
             headertext="Contact Us"
             fontSize={20}
-            color="#000"
+            color="#191919B8"
           />
 
           <View style={{marginVertical: 25, alignSelf: 'center'}}>
@@ -46,7 +46,7 @@ const Contactus = props => {
                   color: '#000',
                   fontWeight: '500',
                   marginVertical: 5,
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Medium',
                   lineHeight: 34,
                 }}>
                 Please Feel Free To Reach Out To Us To Directly
@@ -78,7 +78,7 @@ const Contactus = props => {
                   color: '#1C5C2E',
                   fontWeight: '400',
                   //   marginVertical: 5,
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Regular',
                   marginLeft: 10,
                 }}>
                 Bloomsupport@vibgarden.com

@@ -86,13 +86,13 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginVertical: 20,
     borderBottomWidth: 1,
-    borderColor: '#1C5C2E',
+    borderColor: '#75997E',
   },
   Text: {
-    color: '#1C5C2E',
+    color: '#75997E',
     fontSize: 14,
     marginVertical: 5,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   btns: {
     flexDirection: 'row',

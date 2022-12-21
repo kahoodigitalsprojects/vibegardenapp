@@ -52,7 +52,7 @@ const PaymentMethod = ({navigation, route, pres}) => {
                   fontWeight: '500',
                   marginVertical: 5,
                   lineHeight: 39,
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 Payment Details
               </Text>
@@ -67,7 +67,7 @@ const PaymentMethod = ({navigation, route, pres}) => {
                     fontWeight: '500',
                     marginVertical: 5,
                     lineHeight: 39,
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
                   Credit Card Or Debit Card
                 </Text>
@@ -79,7 +79,7 @@ const PaymentMethod = ({navigation, route, pres}) => {
                     color: '#1C5C2E',
                     fontWeight: '400',
                     margin: 5,
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
                   Card Number
                 </Text>
@@ -99,7 +99,7 @@ const PaymentMethod = ({navigation, route, pres}) => {
                       color: '#1C5C2E',
                       fontWeight: '400',
                       marginLeft: 10,
-                      fontFamily: 'Brandon_reg',
+                      fontFamily: 'BrandonGrotesque-Regular',
                     }}>
                     4860567867261538
                   </Text>
@@ -123,7 +123,7 @@ const PaymentMethod = ({navigation, route, pres}) => {
                       color: '#1C5C2E',
                       fontWeight: '400',
                       margin: 5,
-                      fontFamily: 'Brandon_reg',
+                      fontFamily: 'BrandonGrotesque-Regular',
                     }}>
                     Expiration Date
                   </Text>
@@ -143,7 +143,7 @@ const PaymentMethod = ({navigation, route, pres}) => {
                         color: '#1C5C2E',
                         fontWeight: '400',
                         marginLeft: 10,
-                        fontFamily: 'Brandon_reg',
+                        fontFamily: 'BrandonGrotesque-Regular',
                       }}>
                       5/2025
                     </Text>
@@ -159,7 +159,7 @@ const PaymentMethod = ({navigation, route, pres}) => {
                       color: '#1C5C2E',
                       fontWeight: '400',
                       margin: 5,
-                      fontFamily: 'Brandon_reg',
+                      fontFamily: 'BrandonGrotesque-Regular',
                     }}>
                     Security Code
                   </Text>
@@ -179,7 +179,7 @@ const PaymentMethod = ({navigation, route, pres}) => {
                         color: '#1C5C2E',
                         fontWeight: '400',
                         marginLeft: 10,
-                        fontFamily: 'Brandon_reg',
+                        fontFamily: 'BrandonGrotesque-Regular',
                       }}>
                       147
                     </Text>

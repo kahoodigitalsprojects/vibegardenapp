@@ -39,7 +39,7 @@ const Question3 = props => {
             name2="chevron-down"
             direction2="Description:"
             flowwerlist={true}
-            Statement="Statement"
+            Statement1="Statement"
             flow="Flow Thtough"
             image1={true}
             text="No idea What a Multiverse is"

@@ -96,9 +96,9 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginVertical: 4,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
-  text2: {color: '#000', fontSize: 18, fontFamily: 'Brandon_reg'},
+  text2: {color: '#000', fontSize: 18, fontFamily: 'BrandonGrotesque-Regular'},
 
   switchView: {
     // backgroundColor: 'green',

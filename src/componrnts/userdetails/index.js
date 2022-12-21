@@ -63,9 +63,9 @@ const Userdetails = ({
                     <Text style={[styles.text1]}>{name}</Text>
                     <Text
                       style={{
-                        fontSize: 12,
-                        color: '#000',
-                        fontWeight: 'bold',
+                        fontSize: 10,
+                        color: '#000000',
+                        fontFamily: 'BrandonGrotesque-Regular',
                       }}>
                       {time}
                     </Text>
@@ -73,10 +73,11 @@ const Userdetails = ({
 
                   <Text
                     style={[
-                      styles.text1,
                       {
-                        fontWeight: '400',
-                        fontSize: 14,
+                        // fontWeight: '400',
+                        fontSize: 10,
+                        color: '#000000',
+                        fontFamily: 'BrandonGrotesque-Regular',
                       },
                     ]}>
                     {text}
@@ -133,7 +134,7 @@ const Userdetails = ({
                   fontSize: 12,
                   marginTop: 14,
                   lineHeight: 16,
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tepor
@@ -143,6 +144,8 @@ const Userdetails = ({
                   style={{
                     color: '#1C5C2E',
                     textDecorationLine: 'underline',
+                    marginRight: 10,
+                    marginBottom: 2,
                   }}>
                   Link
                 </Text>
@@ -197,7 +200,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: 'bold',
     color: '#000',
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Medium',
   },
 });
 export {Userdetails};

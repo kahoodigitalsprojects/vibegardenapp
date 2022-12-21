@@ -34,6 +34,7 @@ const Header = props => {
     colorplus,
     headertext2,
     marginTopplus,
+    show,
   } = props;
   const [state, setState] = useState(false);
   return (
@@ -91,8 +92,7 @@ const Header = props => {
                 style={{
                   fontSize: fontSize,
                   color: '#000',
-                  fontWeight: '300',
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Bold',
                 }}>
                 {props.headertext}
               </Text>
@@ -162,7 +162,7 @@ const Header = props => {
                     marginTop: 8,
                     color: color,
                     fontWeight: '500',
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Medium',
                   }}>
                   {props.headertext}
                 </Text>
@@ -197,6 +197,7 @@ const Header = props => {
       {props.header2 && (
         <View style={styles.header}>
           <TouchableOpacity
+            disabled={(show === true && true) || false}
             onPress={props.OnPress}
             style={{width: '5%', marginTop: 5}}>
             <View
@@ -204,11 +205,15 @@ const Header = props => {
                 width: 40,
                 height: 40,
                 borderRadius: 12,
-                backgroundColor: '#1C5C2E',
+                backgroundColor: (show === true && 'transparent') || '#1C5C2E',
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <Icon2 name={iconName} size={20} color="#fff" />
+              <Icon2
+                name={iconName}
+                size={20}
+                color={(show === true && 'transparent') || '#fff'}
+              />
             </View>
           </TouchableOpacity>
           <View
@@ -234,16 +239,15 @@ const Header = props => {
                 />
               </View>
             )}
-
             <Text
               style={{
                 fontSize: fontSize,
                 marginTop: 8,
                 color: color,
-                fontWeight: '500',
-                fontFamily: 'Brandon_reg',
+
+                fontFamily: 'BrandonGrotesque-bold',
               }}>
-              {props.headertext}
+              {props.headertext1}
             </Text>
           </View>
         </View>
@@ -281,7 +285,7 @@ const Header = props => {
                     marginTop: 10,
                     color: color,
                     fontWeight: '500',
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Medium',
                   }}>
                   {props.headertext2}
                 </Text>
@@ -295,7 +299,7 @@ const Header = props => {
                 marginTop: 8,
                 color: color,
                 fontWeight: '500',
-                fontFamily: 'Brandon_reg',
+                fontFamily: 'BrandonGrotesque-Medium',
               }}>
               {props.headertext}
             </Text>

@@ -51,7 +51,7 @@ const Star = props => {
                 color: '#000',
                 fontWeight: '500',
                 marginVertical: 5,
-                fontFamily: 'Brandon_reg',
+                fontFamily: 'BrandonGrotesque-Medium',
               }}>
               You're Start!
             </Text>
@@ -63,7 +63,7 @@ const Star = props => {
                 color: '#000',
                 fontWeight: '400',
                 lineHeight: 30,
-                fontFamily: 'Brandon_reg',
+                fontFamily: 'BrandonGrotesque-Medium',
               }}>
               Your Feedback Insight Will Help Us Refining Our Tools &
               Recommendations!
@@ -75,7 +75,7 @@ const Star = props => {
                 color: '#1C5C2E',
                 fontWeight: '600',
                 marginVertical: 5,
-                fontFamily: 'Brandon_reg',
+                fontFamily: 'BrandonGrotesque-Medium',
               }}>
               With Gratitude!
             </Text>

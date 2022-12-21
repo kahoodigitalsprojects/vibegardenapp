@@ -55,7 +55,7 @@ const Question2 = props => {
             video={true}
             width={'100%'}
             direction2="Description:"
-            Statement="Statement:"
+            Statement1="Statement:"
             flow="Flow Through"
             margintopS={31}
             number={'1/20'}

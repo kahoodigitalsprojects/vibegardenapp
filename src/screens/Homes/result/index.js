@@ -46,8 +46,8 @@ const Result = props => {
                 fontSize: 31,
                 textAlign: 'center',
                 color: '#000',
-                fontWeight: 'bold',
-                fontFamily: 'Brandon_reg',
+
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Result!
             </Text>
@@ -69,11 +69,10 @@ const Result = props => {
             <Text
               style={{
                 marginVertical: 10,
-                fontSize: 19,
+                fontSize: 20,
                 // textAlign: 'center',
                 color: '#000',
-                fontWeight: '500',
-                fontFamily: 'Brandon_reg',
+                fontFamily: 'BrandonGrotesque-Medium',
               }}>
               What fun your top areas resonance?
             </Text>
@@ -92,11 +91,11 @@ const Result = props => {
             <Text
               style={{
                 marginVertical: 10,
-                fontSize: 19,
+                fontSize: 20,
                 // textAlign: 'center',
                 color: '#000',
                 fontWeight: '400',
-                fontFamily: 'Brandon_reg',
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
               And The rest , in Descending Order:
             </Text>
@@ -142,14 +141,14 @@ const styles = StyleSheet.create({
   },
   text1: {
     marginVertical: 10,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
     color: '#1C5C2E',
 
     fontSize: 16,
   },
   text2: {
     marginVertical: 10,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
     color: '#000',
     fontSize: 16,
     marginLeft: 10,
@@ -157,14 +156,14 @@ const styles = StyleSheet.create({
   text3: {
     color: '#000',
     fontSize: 26,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   text4: {
     marginVertical: 15,
     letterSpacing: 0.6,
-    color: '#000',
+    color: '#030303',
     fontSize: 16,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
 });
 export default Result;

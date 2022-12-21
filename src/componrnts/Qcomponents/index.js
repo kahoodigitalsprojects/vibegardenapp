@@ -38,6 +38,7 @@ const QComponents = ({
   image1,
   marginTop1,
   flowwerlist11,
+  Statement1,
   Statement,
   flow,
   direction,
@@ -110,7 +111,7 @@ const QComponents = ({
                         alignItems: 'center',
                         color: '#fff',
                         textAlign: 'center',
-                        fontFamily: 'Brandon_reg',
+                        fontFamily: 'BrandonGrotesque-Regular',
                         top: 10,
                       }}>
                       5 min
@@ -143,7 +144,7 @@ const QComponents = ({
                     fontSize: 18,
                     fontWeight: '500',
                     alignSelf: 'center',
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
                   {textforvideo}
                 </Text>
@@ -178,7 +179,7 @@ const QComponents = ({
                     color: '#000',
                     fontSize: 18,
                     marginLeft: 5,
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   },
                 ]}>
                 {flow}
@@ -196,18 +197,17 @@ const QComponents = ({
               style={{
                 // backgroundColor: 'yellow',
                 width: '100%',
-                marginTop: -30,
+                marginTop: -25,
                 flexDirection: 'row',
                 justifyContent: 'space-between',
               }}>
               <Text
                 style={{
                   marginTop: margintopS,
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Medium',
                   color: '#1C5C2E',
-                  // fontWeight: '300',
+                  // fontWeight: '700',
                   fontSize: 20,
-                  lineHeight: 22,
                 }}>
                 {direction}
               </Text>
@@ -233,7 +233,7 @@ const QComponents = ({
                     color: '#000',
                     fontSize: 18,
                     lineHeight: 30,
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Medium',
                   },
                 ]}>
                 {text5}
@@ -246,14 +246,26 @@ const QComponents = ({
                 {
                   marginTop: margintopS,
                   color: '#1C5C2E',
-                  // fontWeight: '300',
                   fontSize: 16,
-                  lineHeight: 22,
                   marginTop: marginTop1,
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Medium',
+                  letterSpacing: 1.5,
                 },
               ]}>
               {Statement}
+            </Text>
+            <Text
+              style={[
+                {
+                  marginTop: margintopS,
+                  color: '#1C5C2E',
+                  fontSize: 20,
+                  marginTop: marginTop1,
+                  fontFamily: 'BrandonGrotesque-Medium',
+                  letterSpacing: 1.5,
+                },
+              ]}>
+              {Statement1}
             </Text>
           </View>
           {text6 && (
@@ -263,12 +275,11 @@ const QComponents = ({
                   styles.text2,
                   {
                     color: '#1C5C2E',
-                    fontWeight: '450',
+               
                     fontSize: 22,
-                    letterSpacing: 1.5,
-                    fontSize: 20,
+                    fontSize: 31,
                     color: '#000',
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   },
                 ]}>
                 {text6}
@@ -309,7 +320,7 @@ const QComponents = ({
                           fontSize: 12,
                           color: '#000',
                           textAlign: 'center',
-                          fontFamily: 'Brandon_reg',
+                          fontFamily: 'BrandonGrotesque-Regular',
                           color: '#1C5C2E',
                         }}>
                         {item.text1}
@@ -343,14 +354,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#000',
     fontWeight: '400',
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   text2: {
     fontSize: 20,
     // textAlign: 'center',
     color: '#1C5C2E',
-    fontWeight: '500',
-    fontFamily: 'Brandon_reg',
+    // fontWeight: '500',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   starbg: {
     width: '100%',

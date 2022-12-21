@@ -128,10 +128,10 @@ const Home = ({navigation, route}) => {
               style={{
                 textAlign: 'center',
                 fontSize: 28,
-                fontWeight: '700',
+                fontWeight: '600',
                 color: '#000000',
                 marginTop: 20,
-                fontFamily: 'Brandon_reg',
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Hi, You.
             </Text>

@@ -48,14 +48,18 @@ const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
                     color: '#1C5C2E',
                     fontSize: 16,
                     fontWeight: '500',
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Medium',
                   }}>
                   Calm and Rest
                 </Text>
               </View>
 
               <View style={{marginVertical: 3}}>
-                <Text style={{color: '#000', fontFamily: 'Brandon_reg'}}>
+                <Text
+                  style={{
+                    color: '#000',
+                    fontFamily: 'BrandonGrotesque-Medium',
+                  }}>
                   The session is about becomi...
                 </Text>
               </View>
@@ -70,42 +74,65 @@ const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
           <View style={{width: '10%'}}>
             <View style={styles.container}>
               <View style={styles.centeredView}>
-                <Modal
+                {modalVisible && (
+                  <View style={{marginLeft: -20}}>
+                    <TouchableOpacity
+                      onPress={() => setModalVisible(!modalVisible)}
+                      style={{
+                        backgroundColor: '#fff',
+                        position: 'absolute',
+                        paddingLeft: -30,
+                        padding: 2,
+                        marginTop: 30,
+                        // padding: 20,
+                        // height: 36,
+                        // // marginTop: 5,
+                        borderRadius: 8,
+                        // // marginRight: 180,
+                        // // justifyContent: 'center',
+                        // // alignItems: 'center',
+                        flexDirection: 'row',
+                        padding: 1,
+                      }}>
+                      <Icon2
+                        name="delete"
+                        size={12}
+                        style={{paddingTop: 2, marginLeft: 3, margin: 3}}
+                      />
+                      <Text
+                        style={{
+                          fontSize: 10,
+                          fontFamily: 'BrandonGrotesque-Regular',
+                          margin: 4,
+                          // marginTop: 1,
+                          marginLeft: -2,
+                          marginRight: 2,
+                          margin: 3,
+                        }}>
+                        Remove
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                )}
+                {/* <Modal
                   // animationType="slide"
+                  style={{backgroundColor: 'red'}}
                   transparent={true}
                   visible={modalVisible}
                   onRequestClose={() => {
                     // Alert.alert("Modal has been closed.");
                     setModalVisible(!modalVisible);
-                  }}>
-                  <View
+                  }}> */}
+                {/* <View
                     style={{
                       width: '18%',
-                      margin: 5,
-                      alignSelf: 'flex-end',
-                      marginTop: 150,
-                    }}>
-                    <TouchableOpacity
-                      onPress={() => setModalVisible(!modalVisible)}
-                      style={{
-                        backgroundColor: '#fff',
-                        width: 66,
-                        height: 36,
-                        marginTo4: 5,
-                        borderRadius: 10,
-                        marginRight: 20,
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        flexDirection: 'row',
-                        padding: 1,
-                      }}>
-                      <Icon2 name="delete" size={12} />
-                      <Text style={{fontSize: 12, fontFamily: 'Brandon_reg'}}>
-                        Remove
-                      </Text>
-                    </TouchableOpacity>
-                  </View>
-                </Modal>
+                      // margin: 5,
+                      // alignSelf: 'flex-end',
+                      // marginTop: 150,
+                    }}> */}
+
+                {/* </View> */}
+                {/* </Modal> */}
               </View>
               <TouchableOpacity
                 style={[{marginTop: 8}, styles.button]}

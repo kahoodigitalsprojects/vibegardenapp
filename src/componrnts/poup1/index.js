@@ -116,7 +116,7 @@ const PopUp = ({
                     {
                       textAlign: 'center',
                       color: '#2196F3',
-                      fontFamily: 'Brandon_reg',
+                      fontFamily: 'BrandonGrotesque-Regular',
                     },
                   ]}>
                   1 Year Upgraded
@@ -217,7 +217,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
     textAlign: 'center',
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   modalText: {
     marginBottom: 15,
@@ -225,7 +225,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginVertical: 10,
     color: '#000',
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
 });
 

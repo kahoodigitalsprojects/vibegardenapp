@@ -51,7 +51,7 @@ const Resonance = props => {
                   style={{
                     color: '#fff',
                     margin: 10,
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
                   Resonance Finder
                 </Text>
@@ -71,7 +71,7 @@ const Resonance = props => {
                           styles={{
                             color: '#000',
                             fontSize: 14,
-                            fontFamily: 'Brandon_reg',
+                            fontFamily: 'BrandonGrotesque-Regular',
                           }}>
                           {item.Texts}
                         </Text>
@@ -118,9 +118,9 @@ const styles = StyleSheet.create({
     // backgroundColor: 'green',
     color: '#1C5C2E',
     fontWeight: '500',
-    fontSize: 24,
+    fontSize: 25,
     marginTop: 5,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Medium',
   },
   btn: {
     backgroundColor: '#75997E',

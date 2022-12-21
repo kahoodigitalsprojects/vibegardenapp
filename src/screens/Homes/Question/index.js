@@ -38,7 +38,7 @@ const Question = props => {
             width={'100%'}
             name2="chevron-down"
             direction2="Description:"
-            Statement="Statement:"
+            Statement1="Statement:"
             flow="Flow Through"
             number={'2/20'}
             name="chevron-down"

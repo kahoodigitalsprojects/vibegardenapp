@@ -38,7 +38,7 @@ const ManageSubscription = props => {
             <Text
               style={[
                 styles.text1,
-                {color: 'black', fontFamily: 'Brandon_reg'},
+                {color: 'black', fontFamily: 'BrandonGrotesque-Regular'},
               ]}>
               Subscriptions Info:
             </Text>
@@ -142,7 +142,7 @@ const ManageSubscription = props => {
                   color: '#1492E6',
                   fontSize: 16,
                   marginVertical: 10,
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Regular',
                 },
               ]}>
               Cancel Subscription
@@ -178,12 +178,12 @@ const styles = StyleSheet.create({
     color: '#1C5C2E',
 
     fontSize: 16,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   text1: {
     fontSize: 18,
     color: '#191919B8',
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   line: {
     width: '70%',
@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
     color: '#1C5C2E',
     fontWeight: '400',
     marginTop: 6,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   endtext: {
     // justifyContent: 'center',

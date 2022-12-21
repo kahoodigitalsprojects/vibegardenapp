@@ -37,7 +37,7 @@ const ForgetPassword = props => {
                 fontSize: 20,
                 lineHeight: 26,
                 marginTop: 20,
-                fontFamily: 'Brandon_reg',
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Enter Your Registered Email To Get The Password Reset Link
             </Text>
@@ -51,7 +51,7 @@ const ForgetPassword = props => {
                 marginVertical: 5,
                 borderColor: '#1C5C2E',
                 textDecorationLine: 'underline',
-                fontFamily: 'Brandon_reg',
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Email Address:
             </Text>

@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   img: {alignSelf: 'center'},
   txt: {
     marginVertical: 15,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
     textAlign: 'center',
     fontSize: 14,
     color: '#1C5C2E',

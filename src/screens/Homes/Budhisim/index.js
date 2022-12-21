@@ -98,7 +98,7 @@ const Buddhisim = props => {
                 textAlign: 'center',
                 lineHeight: 25,
                 fontSize: 12,
-                fontWeight: '600',
+                fontFamily: 'BrandonGrotesque-Medium',
                 color: '#000000',
                 // marginVertical: 10,
               }}>
@@ -106,23 +106,23 @@ const Buddhisim = props => {
               Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna.
             </Text>
           </View>
-          <View style={styles.centerbox}>
+          <View style={{width: '90%', alignSelf: 'center'}}>
             <FlatList
               keyExtractor={item => item.id}
               data={Data}
               renderItem={({item}) => {
                 return (
                   <>
-                        <View style={{marginTop: 20}}>
-                    <SeeAll
-                      onPress={() =>
-                        props.navigation.navigate('Homes', {
-                          screen: 'FressBlooms',
-                        })
-                      }
-                      color1="#000"
-                      textA={item.textA}
-                    />
+                    <View style={{}}>
+                      <SeeAll
+                        onPress={() =>
+                          props.navigation.navigate('Homes', {
+                            screen: 'FressBlooms',
+                          })
+                        }
+                        color1="#000"
+                        textA={item.textA}
+                      />
                     </View>
                     <All
                       pressI={() =>

@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
     marginVertical: 10,
     lineHeight: 44,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
 });
 

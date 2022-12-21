@@ -32,7 +32,8 @@ const SignUp = ({route, navigation}) => {
               OnPress={() => navigation.replace('Welcome')}
             />
           </View>
-          <Text style={[styles.headtext, {fontFamily: 'brandomMedium'}]}>
+          <Text
+            style={[styles.headtext, {fontFamily: 'BrandonGrotesque-Bold'}]}>
             You're so very welcome,
             {'\n'} Erin
           </Text>
@@ -41,7 +42,7 @@ const SignUp = ({route, navigation}) => {
               marginTop: 20,
               color: '#1C5C2E',
               fontSize: 18,
-              fontFamily: 'Brandon_reg',
+              fontFamily: 'BrandonGrotesque-Regular',
             }}>
             Let's Get You Setup With An Account
           </Text>
@@ -52,47 +53,49 @@ const SignUp = ({route, navigation}) => {
             />
           </View>
           <View>
-            <Text style={{fontSize: 18, fontFamily: 'Brandon_reg'}}>
+            <Text style={{fontSize: 18, fontFamily: 'BrandonGrotesque-Medium'}}>
               Sign Up With Email
             </Text>
 
-            <TouchableOpacity
-              onPress={() => setState(!state)}
-              style={{borderBottomWidth: 1, borderColor: '#1C5C2E'}}>
-              {state === true ? (
-                <View>
-                  <Text
-                    style={{
-                      color: '#1C5C2E',
-                      fontSize: 14,
-                      fontWeight: '900',
-                      marginVertical: 15,
-                      fontFamily: 'Brandon_reg',
-                    }}>
-                    davidmichael.198@gmail.com
-                  </Text>
-                </View>
-              ) : (
+            <View style={{marginTop: 30}}>
+              <TouchableOpacity
+                onPress={() => setState(!state)}
+                style={{borderBottomWidth: 1, borderColor: '#75997E'}}>
+                {state === true ? (
+                  <View>
+                    <Text
+                      style={{
+                        color: '#1C5C2E',
+                        fontSize: 14,
+                        // fontWeight: '500',
+                        marginVertical: 15,
+                        // fontFamily: 'BrandonGrotesque-Regular',
+                      }}>
+                      davidmichael.198@gmail.com
+                    </Text>
+                  </View>
+                ) : (
+                  <View style={{}}>
+                    <TextInput
+                      placeholder="Email Adddress"
+                      placeholderTextColor="#1C5C2E"
+                      style={{opacity: 0.8}}
+                    />
+                  </View>
+                )}
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => setState(!state)}
+                style={{borderBottomWidth: 1, borderColor: '#75997E'}}>
                 <View style={{}}>
                   <TextInput
-                    placeholder="Email Adddress"
+                    placeholder="Password"
                     placeholderTextColor="#1C5C2E"
                     style={{opacity: 0.8}}
                   />
                 </View>
-              )}
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => setState(!state)}
-              style={{borderBottomWidth: 1, borderColor: '#1C5C2E'}}>
-              <View style={{}}>
-                <TextInput
-                  placeholder="Password"
-                  placeholderTextColor="#1C5C2E"
-                  style={{opacity: 0.8}}
-                />
-              </View>
-            </TouchableOpacity>
+              </TouchableOpacity>
+            </View>
 
             <View style={{marginTop: 50}}>
               <Pinkbtn
@@ -119,7 +122,7 @@ const SignUp = ({route, navigation}) => {
                     color: '#1C5C2E',
                     fontSize: 18,
                     textAlign: 'center',
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Medium',
                   }}>
                   Already have an account?
                   <Text
@@ -152,7 +155,7 @@ const SignUp = ({route, navigation}) => {
                     color: '#1492E6',
                     fontSize: 18,
                     textAlign: 'center',
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
                   Want to See How Works?
                 </Text>
@@ -174,7 +177,7 @@ const styles = StyleSheet.create({
     borderColor: '#1C5C2E',
     opacity: 0.6,
     marginTop: 20,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   headtext: {
     marginTop: 20,
@@ -182,7 +185,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: '600',
 
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   blue: {
     marginVertical: 10,

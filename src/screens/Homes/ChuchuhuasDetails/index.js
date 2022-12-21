@@ -78,7 +78,7 @@ const ChuchuasDetails = ({route, navigation}) => {
                   letterSpacing: 0.2,
                   fontWeight: '6',
 
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 {newtext}
               </Text>
@@ -163,7 +163,7 @@ const ChuchuasDetails = ({route, navigation}) => {
                             <Text
                               style={{
                                 textAlign: 'center',
-                                fontFamily: 'Brandon_reg',
+                                fontFamily: 'BrandonGrotesque-Regular',
                                 color: data1 === index ? '#fff' : '#000',
                               }}>
                               {item.title}
@@ -177,7 +177,7 @@ const ChuchuasDetails = ({route, navigation}) => {
                               textAlign: 'center',
                               fontSize: 12,
                               color: '#1C5C2E',
-                              fontFamily: 'Brandon_reg',
+                              fontFamily: 'BrandonGrotesque-Regular',
                             }}>
                             {item.text}
                           </Text>
@@ -229,7 +229,7 @@ const styles = StyleSheet.create({
     color: '#1C5C2E',
     fontWeight: '600',
     marginVertical: 20,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Medium',
   },
 
   txt1: {

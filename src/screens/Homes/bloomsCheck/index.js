@@ -98,7 +98,7 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
                     textAlign: 'center',
                     fontSize: 28,
                     color: '#000',
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Medium',
                   }}>
                   Blooms Check
                 </Text>
@@ -236,14 +236,14 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
                   width: '90%',
                   alignSelf: 'center',
                   marginTop: 15,
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 <Text
                   style={{
                     color: '#000',
                     fontWeight: '400',
                     fontSize: 20,
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-MEdium',
                   }}>
                   Refine your Vibe:
                 </Text>
@@ -287,7 +287,7 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
                         plus={item.plus}
                         bghome2={item.bg12}
                         title={item.title}
-                        colorA={'#000'}
+                        color1={'#000'}
                       />
                     );
                   }}
@@ -316,13 +316,13 @@ const styles = StyleSheet.create({
     color: '#000',
     fontWeight: '400',
     marginTop: 10,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   txt1: {
     textAlign: 'left',
     fontSize: 18,
     color: '#030303',
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   btn1: {
     width: '50%',
@@ -332,7 +332,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 55,
     borderRadius: 30,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   box1: {
     width: '90%',

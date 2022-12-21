@@ -363,7 +363,7 @@ const Imgbox = ({
                     textAlign: 'center',
                     fontSize: 18,
                     marginVertical: 5,
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
                   {title}
                 </Text>
@@ -381,7 +381,7 @@ const Imgbox = ({
                       color: '#fff',
                       fontWeight: 'bold',
                       fontSize: 10,
-                      fontFamily: 'Brandon_reg',
+                      fontFamily: 'BrandonGrotesque-Regular',
                     }}>
                     5Min
                   </Text>
@@ -499,7 +499,7 @@ const Imgbox = ({
                     textAlign: 'center',
                     fontSize: 18,
                     marginVertical: 5,
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
                   {title}
                 </Text>
@@ -517,7 +517,7 @@ const Imgbox = ({
                       color: '#fff',
                       fontWeight: 'bold',
                       fontSize: 10,
-                      fontFamily: 'Brandon_reg',
+                      fontFamily: 'BrandonGrotesque-Regular',
                     }}>
                     5Min
                   </Text>
@@ -548,7 +548,7 @@ const styles = StyleSheet.create({
     color: '#1C5C2E',
     fontWeight: '500',
     fontSize: 18,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
     fontWeight: '700',
     opacity: 0.85,
   },
@@ -557,7 +557,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     fontSize: 14,
     textDecorationLine: 'underline',
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
     fontWeight: '700',
     opacity: 0.85,
   },

@@ -102,7 +102,7 @@ const CancelSubscription = props => {
                         // textAlign: 'center',
                         color: '#000',
                         // fontWeight: 'bold',
-                        fontFamily: 'Brandon_reg',
+                        fontFamily: 'BrandonGrotesque-Regular',
                       }}>
                       {item.text1}
                     </Text>

@@ -57,9 +57,9 @@ const FressBlooms = ({navigation, route}) => {
             style={{
               width: '90%',
               alignSelf: 'center',
-              fontFamily: 'Brandon_reg',
+              fontFamily: 'BrandonGrotesque-Regular',
             }}>
-            <Text>{itemId}</Text>
+            <Text style={{color: 'yellow'}}>{itemId}</Text>
             <Header
               iconName="closesquareo"
               color="#000"

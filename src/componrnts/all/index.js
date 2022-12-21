@@ -74,7 +74,9 @@ const All = ({
             width: '100%',
             flexDirection: 'row',
             justifyContent: 'space-between',
-            marginVertical: 10,
+            // marginVertical: 10,
+            marginTop: 10,
+            marginVertical: 5,
           }}>
           <Text style={[styles.txtA, {color: color1}]}>{textA}</Text>
           <TouchableOpacity onPress={onPressALL} style={{}}>
@@ -92,7 +94,7 @@ const All = ({
             return (
               <View
                 style={{
-                  backgroundColor: 'red',
+                  // backgroundColor: 'red',
                   width: 172,
                   height: 229,
                   borderRadius: 10,
@@ -155,18 +157,13 @@ const All = ({
 
                       alignItems: 'center',
                     }}>
-                    <View style={{}}>
+                    {iconimg1 && (
                       <View
                         style={{
                           width: 30,
                           height: 25,
                           // backgroundColor: 'yellow',
                         }}>
-                        <Image
-                          source={item.iconimg}
-                          // resizeMode="conatian"
-                          style={{width: 200, height: 2000}}
-                        />
                         <Image
                           source={item.iconimg1}
                           resizeMode="contain"
@@ -176,53 +173,35 @@ const All = ({
                           }}
                         />
                       </View>
-                      {iconimg1 && (
-                        <View
-                          style={{
-                            width: 30,
-                            height: 25,
-                            // backgroundColor: 'yellow',
-                          }}>
-                          <Image
-                            source={item.iconimg1}
-                            resizeMode="contain"
-                            style={{
-                              width: '100%',
-                              height: '100%',
-                            }}
-                          />
-                        </View>
-                      )}
+                    )}
 
-                      <View style={{marginVertical: marginVertical}}>
+                    <View style={{marginVertical: marginVertical}}>
+                      <Text
+                        style={{
+                          textAlign: 'center',
+                          fontSize: 18,
+                          fontFamily: 'BrandonGrotesque-Regular',
+                        }}>
+                        {title}
+                      </Text>
+                      <View
+                        style={{
+                          width: 40,
+                          height: 15,
+                          borderRadius: 10,
+                          justifyContent: 'center',
+                          backgroundColor: '#CD258D',
+                          alignItems: 'center',
+                        }}>
                         <Text
                           style={{
-                            textAlign: 'center',
-                            fontSize: 18,
-                            marginVertical: 5,
-                            fontFamily: 'Brandon_reg',
+                            color: '#fff',
+                            fontWeight: 'bold',
+                            fontSize: 10,
+                            fontFamily: 'BrandonGrotesque-Regular',
                           }}>
-                          {title}
+                          5Min
                         </Text>
-                        <View
-                          style={{
-                            width: 40,
-                            height: 15,
-                            borderRadius: 10,
-                            justifyContent: 'center',
-                            backgroundColor: '#CD258D',
-                            alignItems: 'center',
-                          }}>
-                          <Text
-                            style={{
-                              color: '#fff',
-                              fontWeight: 'bold',
-                              fontSize: 10,
-                              fontFamily: 'Brandon_reg',
-                            }}>
-                            5Min
-                          </Text>
-                        </View>
                       </View>
                     </View>
                   </View>
@@ -245,13 +224,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     // height: 100,
-    marginVertical: 5,
   },
   txtA: {
     color: '#1C5C2E',
     fontWeight: '500',
     fontSize: 18,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
     fontWeight: '700',
     opacity: 0.85,
   },
@@ -260,7 +238,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     fontSize: 14,
     textDecorationLine: 'underline',
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
     fontWeight: '700',
     opacity: 0.85,
   },

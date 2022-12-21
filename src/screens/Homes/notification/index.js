@@ -95,7 +95,7 @@ const Notification = props => {
                 color: '#F54F84',
                 textAlign: 'right',
                 fontWeight: 'bold',
-                fontFamily: 'Brandon_reg',
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Clear All
             </Text>
@@ -119,7 +119,7 @@ const Notification = props => {
                   fontSize: 18,
                   fontWeight: 'bold',
                   color: '#000',
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 Recent Notification
               </Text>
@@ -158,7 +158,7 @@ const Notification = props => {
                               styles.text1,
                               {
                                 marginLeft: 10,
-                                fontFamily: 'Brandon_reg',
+                                fontFamily: 'BrandonGrotesque-Regular',
                               },
                             ]}>
                             {item.name}
@@ -171,7 +171,7 @@ const Notification = props => {
                                 fontSize: 14,
                                 marginVertical: 5,
                                 marginLeft: 6,
-                                fontFamily: 'Brandon_reg',
+                                fontFamily: 'BrandonGrotesque-Regular',
                               },
                             ]}>
                             {item.text}
@@ -184,7 +184,7 @@ const Notification = props => {
                             fontSize: 12,
                             color: '#000',
                             fontWeight: 'bold',
-                            fontFamily: 'Brandon_reg',
+                            fontFamily: 'BrandonGrotesque-Regular',
                           }}>
                           {item.time}
                         </Text>
@@ -194,7 +194,7 @@ const Notification = props => {
                             color: '#000',
                             marginTop: 35,
                             fontWeight: 'bold',
-                            fontFamily: 'Brandon_reg',
+                            fontFamily: 'BrandonGrotesque-Regular',
                           }}>
                           {item.Date}
                         </Text>
@@ -253,7 +253,7 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: 'bold',
     color: '#000',
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
 });
 export default Notification;

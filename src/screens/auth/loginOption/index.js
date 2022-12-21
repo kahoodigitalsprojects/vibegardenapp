@@ -1,4 +1,5 @@
-import React from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import React, {useEffect, useState} from 'react';
 import {
   StyleSheet,
   Button,
@@ -16,6 +17,26 @@ import {Header} from '../../../componrnts';
 import Images from '../../../constants';
 
 const LoginOption = props => {
+  const [show, setShow] = useState(true);
+  useEffect(() => {
+    return () => {
+      checkJourney();
+    };
+  }, []);
+
+  const checkJourney = async value => {
+    try {
+      const check = await AsyncStorage.getItem('journeyCompleted');
+      if (check !== null) {
+        setShow(true);
+      } else {
+        setShow(false);
+      }
+    } catch (e) {
+      // saving error
+      console.log(e);
+    }
+  };
   return (
     <>
       <SafeAreaView style={styles.main}>
@@ -26,6 +47,7 @@ const LoginOption = props => {
           <View style={{width: '90%'}}>
             <View style={{marginTop: 10}}>
               <Header
+                show={show}
                 iconName="arrowleft"
                 header2
                 OnPress={() => props.navigation.replace('Welcome')}
@@ -41,7 +63,7 @@ const LoginOption = props => {
                   marginTop: 20,
                   color: '#1C5C2E',
                   fontSize: 17,
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 Let's Get You Setup With An Account
               </Text>
@@ -59,7 +81,7 @@ const LoginOption = props => {
                     style={{
                       marginTop: 15,
                       textAlign: 'center',
-                      fontFamily: 'Brandon_reg',
+                      fontFamily: 'BrandonGrotesque-Medium',
                     }}>
                     Sign Up With Email
                   </Text>
@@ -76,7 +98,7 @@ const LoginOption = props => {
                     color: '#1C5C2E',
                     fontSize: 18,
                     textAlign: 'center',
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Medium',
                   }}>
                   Don't have an account?{' '}
                   <Text
@@ -100,7 +122,7 @@ const styles = StyleSheet.create({
   main: {flex: 1, alignItems: 'center', color: 'yellow'},
   input: {
     width: '95%',
-    marginTop: 60,
+    marginTop: 100,
     flexDirection: 'row',
     paddingLeft: 40,
     alignSelf: 'center',
@@ -118,7 +140,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: '600',
     lineHeight: 42,
-    fontFamily: 'Brandon_reg',
+    fontFamily: 'BrandonGrotesque-Bold',
   },
 });
 

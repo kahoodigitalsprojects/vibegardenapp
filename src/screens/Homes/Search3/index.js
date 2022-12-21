@@ -108,7 +108,7 @@ const Search3 = ({route, navigation}) => {
                   color: '#afafaa',
                   fontWeight: '450',
                   marginVertical: 5,
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 Success
               </Text>
@@ -120,7 +120,7 @@ const Search3 = ({route, navigation}) => {
                   color: '#1C5C2E',
                   fontWeight: '600',
                   marginVertical: 10,
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 Off You Go!
               </Text>
@@ -132,7 +132,7 @@ const Search3 = ({route, navigation}) => {
                   color: '#000',
                   fontWeight: '450',
                   lineHeight: 30,
-                  fontFamily: 'Brandon_reg',
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 Your Cancelation Is Submitted {'\n'} Be Well!
               </Text>
@@ -167,7 +167,7 @@ const Search3 = ({route, navigation}) => {
               fontWeight: 'bold',
               color: '#1C5C2E',
               marginTop: -30,
-              fontFamily: 'Brandon_reg',
+              fontFamily: 'BrandonGrotesque-Regular',
             }}>
             {itemId}
           </Text>
@@ -187,7 +187,7 @@ const Search3 = ({route, navigation}) => {
                     style={{
                       fontSize: 18,
                       color: '#000',
-                      fontFamily: 'Brandon_reg',
+                      fontFamily: 'BrandonGrotesque-Regular',
                     }}>
                     {item.text1}
                   </Text>

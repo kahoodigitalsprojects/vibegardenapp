@@ -38,7 +38,7 @@ const Question3 = props => {
             direction2="Description:"
             width={'100%'}
             flowwerlist11={true}
-            Statement="Statement"
+            Statement1="Statement"
             flow="Flow Thtough"
             name="chevron-down"
             image1={true}

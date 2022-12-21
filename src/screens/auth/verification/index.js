@@ -35,7 +35,7 @@ const Verify = props => {
                     fontSize: 16,
                     color: '#1C5C2E',
                     fontWeight: '600',
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Medium',
                     lineHeight: 28,
                   }}>
                   Show Us Its You Please Check Your Email To Continue
@@ -51,13 +51,17 @@ const Verify = props => {
                     justifyContent: 'center',
                     flexDirection: 'row',
                     marginTop: 10,
-                    fontFamily: 'Brandon_reg',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
                   <Text style={styles.txt1}>Didn't sent email?</Text>
                   <Text
                     style={[
                       styles.txt1,
-                      {color: 'red', marginLeft: 5, fontFamily: 'Brandon_reg'},
+                      {
+                        color: 'red',
+                        marginLeft: 5,
+                        fontFamily: 'BrandonGrotesque-Medium',
+                      },
                     ]}>
                     Resend.
                   </Text>
