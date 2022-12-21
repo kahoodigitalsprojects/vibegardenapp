@@ -244,10 +244,9 @@ const Header = props => {
                 fontSize: fontSize,
                 marginTop: 8,
                 color: color,
-
                 fontFamily: 'BrandonGrotesque-bold',
               }}>
-              {props.headertext1}
+              {props.headertext}
             </Text>
           </View>
         </View>
