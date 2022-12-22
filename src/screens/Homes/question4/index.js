@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -8,14 +8,14 @@ import {
   StatusBar,
 } from 'react-native';
 
-import {Header, Pinkbtn, QComponents} from '../../../componrnts';
+import { Header, Pinkbtn, QComponents } from '../../../componrnts';
 
 const Question3 = props => {
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
+        contentContainerStyle={{ flexGrow: 1 }}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
@@ -25,10 +25,11 @@ const Question3 = props => {
             alignSelf: 'center',
           }}>
           <Header
+            marginTop={-40}
+            color='#1C5C2E'
             iconName="closesquareo"
             header2
             headertext="Resonance Finder"
-            color="#000"
             fontSize={25}
             OnPress={() => props.navigation.goBack('')}
           />
@@ -52,7 +53,7 @@ const Question3 = props => {
             text6={'We Each Have Angles?'}
           />
         </View>
-        <View style={{marginTop: 20}}>
+        <View style={{ marginTop: 20 }}>
           <Pinkbtn
             width={'60%'}
             btntxt="See Results"

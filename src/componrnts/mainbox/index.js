@@ -8,7 +8,7 @@ import {
 import React from 'react';
 import Images from '../../constants';
 import Icon from 'react-native-vector-icons/AntDesign';
-                 
+
 const MainBox = ({
   route,
   img2,
@@ -21,13 +21,18 @@ const MainBox = ({
   Wheart,
   minutes,
   marginTop11,
+  marginTop,
+  width,
   icon2,
 }) => {
   return (
     <>
-      <View style={{width: 315, height: 234, borderRadius: 10, margin: 3}}>
+      <View style={{
+        width: 330,
+        height: 234, margin: 3, borderRadius: 10
+      }}>
         <ImageBackground
-          resizeMode="contain"
+          // resizeMode="contain"
           style={{
             width: '100%',
             height: '100%',
@@ -53,7 +58,7 @@ const MainBox = ({
                   style={{
                     // backgroundColor: 'pink',
                     height: 33,
-                    marginTop: 35,
+                    marginTop: 10,
                     width: 33,
                   }}>
                   <Image
@@ -68,9 +73,8 @@ const MainBox = ({
                   color: '#000',
                   textAlign: 'center',
                   fontSize: 26,
-                  marginTop: 30,
-                  fontWeight: '600',
-                  fontFamily: 'BrandonGrotesque-Regular',
+                  marginTop: marginTop,
+                  fontFamily: 'BrandonGrotesque-Bold',
                 }}>
                 {textone}
               </Text>
@@ -82,7 +86,6 @@ const MainBox = ({
                 borderRadius: 12,
                 // margin: 2,
                 backgroundColor: bgcolor,
-
                 marginTop: 15,
               }}>
               <Text
@@ -92,7 +95,6 @@ const MainBox = ({
                   color: '#fff',
                   textAlign: 'center',
                   fontFamily: 'BrandonGrotesque-Regular',
-
                   top: 10,
                 }}>
                 {minutes}
@@ -102,10 +104,9 @@ const MainBox = ({
               style={{
                 // width: 77,
                 height: 40,
-
                 // margin: 2,
-                left: -85,
-                top: 30,
+                left: -90,
+                top: 40,
               }}>
               <Text
                 style={{
@@ -134,7 +135,7 @@ const MainBox = ({
                   name="heart"
                   color={'#fff'}
                   size={20}
-                  style={{fontWeight: 'bold', position: 'absolute'}}
+                  style={{ fontWeight: 'bold', position: 'absolute' }}
                 />
               </TouchableOpacity>
             )}
@@ -154,7 +155,7 @@ const MainBox = ({
         <Image
           source={I1}
           resizeMode="contain"
-          style={{width: '100%', height: '100%'}}
+          style={{ width: '100%', height: '100%' }}
         />
       </View>
     </>

@@ -22,6 +22,7 @@ const Images = {
     nopath2: require('../assests/images/Nopath2.png'),
     rectangle2: require('../assests/images/rectangle2.png'),
     path1: require('../assests/images/path.png'),
+    pathbg: require('../assests/images/bg.png'),
   },
   Logos: {
     logo1: require('../assests/images/logo.png'),
@@ -57,7 +58,7 @@ const Images = {
     spiral: require('../assests/images/spiral.png'),
     star: require('../assests/images/star.png'),
     arrow: require('../assests/images/arrow.png'),
-    playbtn: require('../assests/images/playbtn.png'),
+    playbtn: require('../assests/images/play.png'),
     envelop1: require('../assests/images/envelope.png'),
     card: require('../assests/images/card.png'),
     visa: require('../assests/images/visa.png'),

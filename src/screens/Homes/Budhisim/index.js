@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -11,12 +11,12 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import {Header, SeeAll, Userdetails} from '../../../componrnts';
+import { Header, SeeAll, Userdetails } from '../../../componrnts';
 import All from '../../../componrnts/all';
 import Images from '../../../constants';
 
 const Buddhisim = props => {
-  const {Flowersbox, Heading} = props;
+  const { Flowersbox, Heading } = props;
   const data = [
     {
       Img1: Images.Imgs.user2,
@@ -68,7 +68,7 @@ const Buddhisim = props => {
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
+        contentContainerStyle={{ flexGrow: 1 }}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
@@ -78,6 +78,7 @@ const Buddhisim = props => {
             marginTop: 15,
           }}>
           <Header
+            marginTop={-40}
             color="#1C5C2E"
             fontSize={25}
             iconName="left"
@@ -106,25 +107,18 @@ const Buddhisim = props => {
               Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna.
             </Text>
           </View>
-          <View style={styles.centerbox}>
+          <View style={[styles.box2, { marginVertical: 10 }]}>
             <FlatList
+
+              showsHorizontalScrollIndicator={false}
               keyExtractor={item => item.id}
               data={Data}
-              renderItem={({item}) => {
+              renderItem={({ item }) => {
                 return (
                   <>
-                    <View style={{marginTop: 20, width: '90%'}}>
-                      <SeeAll
-                        onPress={() =>
-                          props.navigation.navigate('Homes', {
-                            screen: 'FressBlooms',
-                          })
-                        }
-                        color1="#000"
-                        textA={item.textA}
-                      />
-                    </View>
                     <All
+                      marginVertical={15}
+                      color1="#000"
                       pressI={() =>
                         props.navigation.navigate('Homes', {
                           screen: 'Video',
@@ -143,8 +137,11 @@ const Buddhisim = props => {
                           },
                         })
                       }
-                      homebox
+                      // onPressALL={item.pressAll}
+                      textA={item.textA}
                       heart1={item.heart1}
+                      textB={item.textB}
+                      homebox
                       plus={item.plus}
                       bghome2={item.bg12}
                       title={item.title}
@@ -153,8 +150,9 @@ const Buddhisim = props => {
                 );
               }}
             />
-
-            <View style={{marginTop: 20}}>
+          </View>
+          <View style={styles.centerbox}>
+            <View style={{ marginTop: 20 }}>
               <SeeAll
                 onPress={() =>
                   props.navigation.navigate('Homes', {
@@ -166,15 +164,15 @@ const Buddhisim = props => {
               />
             </View>
 
-            <View style={{marginVertical: 3}}>
+            <View style={{ marginVertical: 3 }}>
               <View style={{}}>
                 <FlatList
                   showsHorizontalScrollIndicator={false}
                   data={data}
-                  renderItem={({item}) => {
+                  renderItem={({ item }) => {
                     return (
                       <>
-                        <View style={{marginVertical: 10}}>
+                        <View style={{ marginVertical: 10 }}>
                           <Userdetails
                             databox2
                             bear={item.Img1}

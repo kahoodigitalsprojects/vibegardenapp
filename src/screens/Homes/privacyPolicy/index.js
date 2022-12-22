@@ -1,13 +1,13 @@
 import React from 'react';
-import {View, StyleSheet, Text, ScrollView, StatusBar} from 'react-native';
-import {Header, StoryData} from '../../../componrnts';
+import { View, StyleSheet, Text, ScrollView, StatusBar } from 'react-native';
+import { Header, StoryData } from '../../../componrnts';
 
-const PrivacyPolicy = ({navigation, route}) => {
-  const {heading1} = route.params;
+const PrivacyPolicy = ({ navigation, route }) => {
+  const { heading1 } = route.params;
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
-      contentContainerStyle={{flexGrow: 1}}>
+      contentContainerStyle={{ flexGrow: 1 }}>
       <StatusBar animated={true} backgroundColor="#000" />
       <View style={styles.main}>
         <View
@@ -18,9 +18,10 @@ const PrivacyPolicy = ({navigation, route}) => {
             alignSelf: 'center',
           }}>
           <Header
+            marginTop={-40}
             iconName="left"
             header2
-            OnPress={() => navigation.navigate('Homes', {screen: 'settings'})}
+            OnPress={() => navigation.navigate('Homes', { screen: 'settings' })}
             headertext={heading1}
             fontSize={25}
             color="#000"

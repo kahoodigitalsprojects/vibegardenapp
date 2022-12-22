@@ -10,8 +10,8 @@ import {
 import React from 'react';
 import Images from '../../constants';
 import Icon from 'react-native-vector-icons/AntDesign';
-import {SeeAll} from '../SeeAll';
-import {FlatList} from 'react-native';
+import { SeeAll } from '../SeeAll';
+import { FlatList } from 'react-native';
 
 const All = ({
   newtext1,
@@ -34,6 +34,7 @@ const All = ({
   plus,
   iconimg1,
   pressI,
+  marginTop
 }) => {
   const Data = [
     {
@@ -71,14 +72,14 @@ const All = ({
       <View>
         <View
           style={{
-            width: '100%',
+            width: '95%',
             flexDirection: 'row',
             justifyContent: 'space-between',
-            // marginVertical: 10,
-            marginTop: 10,
-            marginVertical: 5,
+            marginVertical: marginVertical,
+            marginTop: marginTop,
+            // marginVertical: 5,
           }}>
-          <Text style={[styles.txtA, {color: color1}]}>{textA}</Text>
+          <Text style={[styles.txtA, { color: color1 }]}>{textA}</Text>
           <TouchableOpacity onPress={onPressALL} style={{}}>
             <Text style={styles.txtB}>{textB}</Text>
           </TouchableOpacity>
@@ -90,7 +91,7 @@ const All = ({
           showsHorizontalScrollIndicator={false}
           horizontal
           data={Data}
-          renderItem={({item, index}) => {
+          renderItem={({ item, index }) => {
             return (
               <View
                 style={{
@@ -139,20 +140,20 @@ const All = ({
                       style={{
                         width: '100%',
                         height: '100%',
-                        marginLeft: -10,
+                        marginLeft: 2,
                       }}
                     />
                     <Icon
                       name={plus}
                       color={'#fefefe'}
                       size={25}
-                      style={{fontWeight: 'bold', position: 'absolute'}}
+                      style={{ fontWeight: 'bold', position: 'absolute' }}
                     />
                   </TouchableOpacity>
 
                   <View
                     style={{
-                      marginTop: 120,
+                      marginTop: 100,
                       // backgroundColor: 'yellow',
 
                       alignItems: 'center',
@@ -175,11 +176,12 @@ const All = ({
                       </View>
                     )}
 
-                    <View style={{marginVertical: marginVertical}}>
+                    <View style={{ marginVertical: marginVertical }}>
                       <Text
                         style={{
                           textAlign: 'center',
                           fontSize: 18,
+                          color: '#000',
                           fontFamily: 'BrandonGrotesque-Regular',
                         }}>
                         {title}

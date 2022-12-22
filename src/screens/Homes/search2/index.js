@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -12,15 +12,16 @@ import {
   FlatList,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {SeeAll, Userdetails} from '../../../componrnts';
+import { SeeAll, Userdetails } from '../../../componrnts';
 import All from '../../../componrnts/all';
 import Imgbox from '../../../componrnts/imgbox';
 import MainBox from '../../../componrnts/mainbox';
 import Searcbart1 from '../../../componrnts/searchbar1';
 import Images from '../../../constants';
 
-const Search2 = ({route, navigation, otherParam}) => {
-  // const {newtext} = route.params;
+const Search2 = ({ route, navigation, otherParam }) => {
+  const { textchange } = route.params;
+  const { Mydata } = route.params;
 
   const [data1, setData1] = useState(0);
   databox = [
@@ -57,9 +58,9 @@ const Search2 = ({route, navigation, otherParam}) => {
   ];
 
   const data2 = [
-    {Img1: Images.Imgs.bear},
-    {Img1: Images.Imgs.bear},
-    {Img1: Images.Imgs.bear},
+    { Img1: Images.Imgs.bear },
+    { Img1: Images.Imgs.bear },
+    { Img1: Images.Imgs.bear },
   ];
   const data = [
     {
@@ -157,9 +158,9 @@ const Search2 = ({route, navigation, otherParam}) => {
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
+        contentContainerStyle={{ flexGrow: 1 }}>
         <StatusBar animated={true} backgroundColor="#000" />
-        <View style={{width: '100%'}}>
+        <View style={{ width: '100%' }}>
           <Searcbart1 onpress1={() => navigation.goBack('')} />
         </View>
         <View style={styles.container}>
@@ -238,7 +239,7 @@ const Search2 = ({route, navigation, otherParam}) => {
               </TouchableOpacity>
             </View>
           </View>
-          <View style={{width: '100%', marginTop: 10}}>
+          <View style={{ width: '100%', marginTop: 10 }}>
             {data1 === 0 ? (
               <>
                 <View
@@ -267,7 +268,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                         Name: 'close',
                       });
                     }}
-                    style={[styles.topics, {backgroundColor: '#fff'}]}>
+                    style={[styles.topics, { backgroundColor: '#fff' }]}>
                     <Text
                       style={{
                         color: '#1C5C2E',
@@ -281,13 +282,13 @@ const Search2 = ({route, navigation, otherParam}) => {
                       name="chevron-down"
                       size={18}
                       color="#1C5C2E"
-                      style={{margin: 6}}
+                      style={{ margin: 6 }}
                     />
                   </TouchableOpacity>
                 </View>
 
                 <View>
-                  <View style={{marginVertical: 10}}>
+                  <View style={{ marginVertical: 10 }}>
                     <SeeAll
                       onPress={() =>
                         navigation.navigate('Mytabs', {
@@ -331,7 +332,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                       })}
                     </ScrollView>
                   </View>
-                  <View style={{marginVertical: 10}}>
+                  <View style={{ marginVertical: 10 }}>
                     <SeeAll
                       onPress={() =>
                         navigation.navigate('Mytabs', {
@@ -373,7 +374,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                       })}
                     </ScrollView>
                   </View>
-                  <View style={{marginVertical: 10}}>
+                  <View style={{ marginVertical: 10 }}>
                     <SeeAll
                       onPress={() => {
                         navigation.navigate('Homes', {
@@ -422,15 +423,15 @@ const Search2 = ({route, navigation, otherParam}) => {
                     </ScrollView>
                   </View>
                 </View>
-                <View style={{marginVertical: 20}}>
+                <View style={{ marginVertical: 20 }}>
                   <SeeAll color1="#1C5C2E" textA="TEACHERS" textB="SeeAll" />
                 </View>
 
-                <View style={{marginTop: -15}}>
+                <View style={{ marginTop: -15 }}>
                   <FlatList
                     showsHorizontalScrollIndicator={false}
                     data={data2}
-                    renderItem={({item}) => {
+                    renderItem={({ item }) => {
                       return (
                         <>
                           <View
@@ -477,7 +478,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                       name="chevron-down"
                       size={18}
                       color="#1C5C2E"
-                      style={{margin: 6}}
+                      style={{ margin: 6 }}
                     />
                   </TouchableOpacity>
                   <TouchableOpacity
@@ -505,7 +506,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                       name="chevron-down"
                       size={18}
                       color="#1C5C2E"
-                      style={{margin: 6}}
+                      style={{ margin: 6 }}
                     />
                   </TouchableOpacity>
                 </View>
@@ -515,7 +516,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                     showsHorizontalScrollIndicator={false}
                     keyExtractor={item => item.id}
                     data={databox}
-                    renderItem={({item}) => {
+                    renderItem={({ item }) => {
                       return (
                         <All
                           pressI={() =>
@@ -558,7 +559,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                     alignSelf: 'flex-start',
                     alignSelf: 'center',
                   }}>
-                  <TouchableOpacity onPress={() => {}} style={styles.topics}>
+                  <TouchableOpacity onPress={() => { }} style={styles.topics}>
                     <Text
                       style={{
                         color: '#1C5C2E',
@@ -572,7 +573,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                       name="close"
                       size={18}
                       color="#1C5C2E"
-                      style={{margin: 6}}
+                      style={{ margin: 6 }}
                     />
                   </TouchableOpacity>
 
@@ -602,7 +603,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                       name="chevron-down"
                       size={18}
                       color="#1C5C2E"
-                      style={{margin: 6}}
+                      style={{ margin: 6 }}
                     />
                   </TouchableOpacity>
                 </View>
@@ -612,7 +613,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                     keyExtractor={item => item.id}
                     numColumns={2}
                     data={databox}
-                    renderItem={({item}) => {
+                    renderItem={({ item }) => {
                       return (
                         <View
                           style={{

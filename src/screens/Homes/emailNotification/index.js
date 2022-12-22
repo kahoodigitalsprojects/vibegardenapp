@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   StyleSheet,
@@ -9,7 +9,7 @@ import {
   StatusBar,
   FlatList,
 } from 'react-native';
-import {Header, Pinkbtn, StoryData, Switch1} from '../../../componrnts';
+import { Header, Pinkbtn, StoryData, Switch1 } from '../../../componrnts';
 import Images from '../../../constants';
 
 const EmailNotification = props => {
@@ -36,37 +36,38 @@ const EmailNotification = props => {
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
-      contentContainerStyle={{flexGrow: 1}}>
+      contentContainerStyle={{ flexGrow: 1 }}>
       <StatusBar animated={true} backgroundColor="#000" />
       <View style={styles.main}>
         <View style={styles.container}>
           <Header
+            marginTop={-40}
             iconName="left"
             headertext="Email Notifications"
             color="#000"
             fontSize={20}
             header2
             OnPress={() =>
-              props.navigation.navigate('Homes', {screen: 'settings'})
+              props.navigation.navigate('Homes', { screen: 'settings' })
             }
           />
-          <View style={{marginTop: 10}}>
-            <View style={{width: '100%'}}>
+          <View style={{ marginTop: 10 }}>
+            <View style={{ width: '100%' }}>
               <FlatList
                 showsVerticalScrollIndicator={false}
                 data={data}
-                renderItem={({item}) => {
+                renderItem={({ item }) => {
                   return (
                     <View>
                       <View style={styles.switchView}>
-                        <View styles={{width: '95%'}}>
+                        <View styles={{ width: '95%' }}>
                           <Text style={styles.text1}>{item.text1}</Text>
                         </View>
-                        <View styles={{width: '5%'}}>
+                        <View styles={{ width: '5%' }}>
                           <Switch1 />
                         </View>
                       </View>
-                      <View style={{width: '100%', alignSelf: 'center'}}>
+                      <View style={{ width: '100%', alignSelf: 'center' }}>
                         <Text style={styles.text2}>{item.text2}</Text>
                       </View>
                     </View>
@@ -97,7 +98,7 @@ const styles = StyleSheet.create({
     marginVertical: 4,
     fontFamily: 'BrandonGrotesque-Medium',
   },
-  text2: {color: '#000', fontSize: 18, fontFamily: 'BrandonGrotesque-Regular'},
+  text2: { color: '#000', fontSize: 18, fontFamily: 'BrandonGrotesque-Regular' },
 
   switchView: {
     // backgroundColor: 'green',

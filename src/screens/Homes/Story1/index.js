@@ -1,22 +1,7 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import {
-    AppRegistry,
-    StyleSheet,
-    Text,
-    View,
-    Image,
-    SafeAreaView,
-    ScrollView,
-    StatusBar,
-    TouchableOpacity,
-    ImageBackground,
-} from 'react-native';
+
 import Swiper from 'react-native-swiper';
 import { Header, Pinkbtn, StoryData } from '../../../componrnts';
-
-=======
-import {StatusBar} from 'expo-status-bar';
+import { StatusBar } from 'expo-status-bar';
 import {
   StyleSheet,
   Text,
@@ -26,15 +11,14 @@ import {
   Image,
   FlatList,
 } from 'react-native';
-import React, {useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Orientation from 'react-native-orientation-locker';
->>>>>>> 54440a4c25999ce50254ac84b6cb91ebab562b7e
 import Images from '../../../constants';
-import {useIsFocused} from '@react-navigation/native';
+import { useIsFocused } from '@react-navigation/native';
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
-const Story1 = ({navigation}) => {
+const Story1 = ({ navigation }) => {
   const isFocused = useIsFocused();
   useEffect(() => {
     Orientation.lockToPortrait();
@@ -47,435 +31,435 @@ const Story1 = ({navigation}) => {
     setCurrentSlideIndex(currentIndex);
   };
 
-<<<<<<< HEAD
-const Story1 = ({ navigation, route }) => {
-    const [state, setState] = useState();
+  // <<<<<<< HEAD
+  // const Story1 = ({ navigation, route }) => {
+  //     const [state, setState] = useState();
 
-    const handleClick = () => {};
-    return ( <
-        SafeAreaView style = {
-            { flex: 1, backgroundColor: '#ffffff' } } >
-        <
-        ScrollView showsVerticalScrollIndicator = { false }
-        contentContainerStyle = {
-            { flexGrow: 1 } } >
-        <
-        StatusBar animated = { true }
-        backgroundColor = "#000" / >
-        <
-        Swiper height = { '100%' }
-        paginationStyle = {
-            { top: 180 } }
-        horizontal = { true }
-        autoplay = { false }
-        bounces = { false }
-        buttonWrapperStyle = {
-            {} }
-        showsButtons = { true }
-        pagingEnabled = { false }
-        style = {
-            [styles.wrapper] }
-        activeDotColor = { '#CD258D' }
-        dotStyle = {
-            {
-                width: 15,
-                height: 15,
-                borderRadius: 15,
-                backgroundColor: '#eee',
-            }
-        }
-        activeDotStyle = {
-            {
-                width: 15,
-                height: 15,
-                borderRadius: 15,
-            }
-        } >
-        <
-        SafeAreaView style = { styles.slide2 } >
-        <
-        ImageBackground source = { Images.BackGround.Bg1 }
-        resizeMode = "cover"
-        style = { styles.mainbg } >
-        <
-        ScrollView showsVerticalScrollIndicator = { false }
-        contentContainerStyle = {
-            { flexGrow: 1 } } >
-        <
-        View style = {
-            {
-                marginTop: 50,
-                // marginVertical: 20,
-                justifyContent: 'center',
-                alignItems: 'center',
-            }
-        } >
-        <
-        Image source = { Images.Logos.logo1 }
-        style = {
-            {} }
-        />{' '} <
-        /View>{' '} <
-        View style = {
-            {
-                justifyContent: 'center',
-                alignItems: 'center',
-                // marginVertical: 40,
-            }
-        } >
-        <
-        Text style = { styles.headtext } >
-        <
-        Text style = {
-            { fontWeight: 'bold' } } > VIBE < /Text>GARDEN{' '} <
-        /Text>{' '} <
-        Text style = {
-            {
-                color: '#fff',
-                fontSize: 16,
-                textAlign: 'center',
-            }
-        } >
-        You 're In full bloom{'
-        '} <
-        /Text>{' '} <
-        Text style = {
-            {
-                color: '#fff',
-                fontSize: 20,
-                textAlign: 'center',
-                marginVertical: 5,
-            }
-        } >
-        Tools, tips & magic
-        for growing your communication to you!
-        <
-        /Text>{' '} <
-        /View>{' '} <
-        View style = {
-            {
-                width: '80%',
-                marginTop: 130,
-                alignSelf: 'center',
-            }
-        } >
-        <
-        View style = {
-            {} } >
-        <
-        Pinkbtn width = { '80%' }
-        btntxt = " Get Started"
-        onPress = {
-            () =>
-            navigation.navigate('Auth', {
-                screen: 'login',
-            })
-        }
-        />{' '} <
-        /View>{' '} <
-        TouchableOpacity onPress = {
-            () => navigation.navigate('namescreen') }
-        style = { styles.btn2 } >
-        <
-        Text style = {
-            { fontWeight: 'bold', color: '#fff' } } >
-        Login In { ' ' } <
-        /Text>{' '} <
-        /TouchableOpacity>{' '} <
-        /View>{' '} <
-        /ScrollView>{' '} <
-        /ImageBackground>{' '} <
-        /SafeAreaView> <
-        SafeAreaView style = { styles.slide2 } >
-        <
-        ScrollView showsVerticalScrollIndicator = { false }
-        contentContainerStyle = {
-            { flexGrow: 1 } } >
-        <
-        View style = {
-            {
-                width: '90%',
-                alignSelf: 'center',
-                alignItems: 'center',
-                justifyContent: 'center',
-            }
-        } >
-        <
-        View style = {
-            [styles.img] } >
-        <
-        Image source = { Images.BackGround.storybg1 }
-        resizeMode = "contain"
-        style = {
-            { width: '100%', height: '80%' } }
-        />{' '} <
-        /View>{' '} <
-        Text style = {
-            [styles.txt, { textAlign: 'center', lineHeight: 26 }] } >
-        AND.Embodying our fullness down here can be tricky!So with VibeBloom, we quest together.Kindling one another, as we employ joyful, powerful tools
-        for coming home to ourselves and being all that we truly, uniquely are. { ' ' } <
-        /Text>{' '} <
-        /View>{' '} <
-        View style = {
-            {
-                backgroundColor: '#ffff',
-                marginVertical: 20,
-                position: 'absolute',
-                alignSelf: 'center',
-                bottom: -20,
-            }
-        } >
-        <
-        Text style = {
-            { alignSelf: 'center' } } >
-        Swipe To See How It Works { ' ' } <
-        /Text>{' '} <
-        /View>{' '} <
-        /ScrollView>{' '} <
-        /SafeAreaView>{' '} <
-        SafeAreaView style = { styles.slide2 } >
-        <
-        ScrollView showsVerticalScrollIndicator = { false }
-        contentContainerStyle = {
-            { flexGrow: 1 } } >
-        <
-        View style = {
-            {
-                width: '90%',
-                alignSelf: 'center',
-                alignItems: 'center',
-                justifyContent: 'center',
-            }
-        } >
-        <
-        View style = {
-            [styles.img] } >
-        <
-        Image source = { Images.BackGround.storybg2 }
-        resizeMode = "contain"
-        style = {
-            { width: '100%', height: '80%' } }
-        />{' '} <
-        /View>{' '} <
-        Text style = {
-            [styles.txt, { textAlign: 'center', lineHeight: 26 }] } >
-        AND.Embodying our fullness down here can be tricky!So with VibeBloom, we quest together.Kindling one another, as we employ joyful, powerful tools
-        for coming home to ourselves and being all that we truly, uniquely are. { ' ' } <
-        /Text>{' '} <
-        /View> <
-        View style = {
-            {
-                backgroundColor: '#ffff',
-                marginVertical: 20,
-                position: 'absolute',
-                alignSelf: 'center',
-                bottom: -20,
-            }
-        } >
-        <
-        Text style = {
-            { alignSelf: 'center' } } >
-        Swipe To See How It Works { ' ' } <
-        /Text>{' '} <
-        /View>{' '} <
-        /ScrollView>{' '} <
-        /SafeAreaView>{' '} <
-        SafeAreaView style = { styles.slide2 } >
-        <
-        ScrollView showsVerticalScrollIndicator = { false }
-        contentContainerStyle = {
-            { flexGrow: 1 } } >
-        <
-        View style = {
-            {
-                width: '90%',
-                alignSelf: 'center',
-                // alignItems: 'center',
-                // justifyContent: 'center',
-            }
-        } >
-        <
-        View style = {
-            [styles.img] } >
-        <
-        Image source = { Images.BackGround.storybg3 }
-        resizeMode = "contain"
-        style = {
-            { width: '100%', height: '80%' } }
-        />{' '} <
-        /View>{' '} <
-        Text style = {
-            [styles.txt, { textAlign: 'center', lineHeight: 26 }] } >
-        AND.Embodying our fullness down here can be tricky!So with VibeBloom, we quest together.Kindling one another, as we employ joyful, powerful tools
-        for coming home to ourselves and being all that we truly, uniquely are. { ' ' } <
-        /Text>{' '} <
-        /View>{' '} <
-        /ScrollView>{' '} <
-        /SafeAreaView> <
-        SafeAreaView style = { styles.slide2 } >
-        <
-        ScrollView showsVerticalScrollIndicator = { false }
-        contentContainerStyle = {
-            { flexGrow: 1 } } >
-        <
-        View style = {
-            {
-                width: '90%',
-                alignSelf: 'center',
-                // alignItems: 'center',
-                // justifyContent: 'center',
-            }
-        } >
-        <
-        View style = {
-            [styles.img, { width: 260, height: 440 }] } >
-        <
-        Image source = { Images.BackGround.story4 }
-        resizeMode = "contain"
-        style = {
-            { width: '100%', height: '100%' } }
-        />{' '} <
-        /View>{' '} <
-        Text style = {
-            [styles.txt, { textAlign: 'center', lineHeight: 26 }] } >
-        AND.Embodying our fullness down here can be tricky!So with VibeBloom, we quest together.Kindling one another, as we employ joyful, powerful tools
-        for coming home to ourselves and being all that we truly, uniquely are. { ' ' } <
-        /Text>{' '} <
-        /View> <
-        View style = {
-            {
-                backgroundColor: '#ffff',
-                marginVertical: 10,
-                position: 'absolute',
-                alignSelf: 'center',
-                bottom: -15,
-            }
-        } >
-        <
-        Text style = {
-            { alignSelf: 'center', textAlign: 'center' } } >
-        Swipe To See How It Works { ' ' } <
-        /Text>{' '} <
-        /View>{' '} <
-        /ScrollView>{' '} <
-        /SafeAreaView>{' '} <
-        SafeAreaView style = { styles.slide2 } >
-        <
-        ScrollView showsVerticalScrollIndicator = { false }
-        contentContainerStyle = {
-            { flexGrow: 1 } } >
-        <
-        View style = {
-            {
-                width: '90%',
-                alignSelf: 'center',
+  //     const handleClick = () => {};
+  //     return ( <
+  //         SafeAreaView style = {
+  //             { flex: 1, backgroundColor: '#ffffff' } } >
+  //         <
+  //         ScrollView showsVerticalScrollIndicator = { false }
+  //         contentContainerStyle = {
+  //             { flexGrow: 1 } } >
+  //         <
+  //         StatusBar animated = { true }
+  //         backgroundColor = "#000" / >
+  //         <
+  //         Swiper height = { '100%' }
+  //         paginationStyle = {
+  //             { top: 180 } }
+  //         horizontal = { true }
+  //         autoplay = { false }
+  //         bounces = { false }
+  //         buttonWrapperStyle = {
+  //             {} }
+  //         showsButtons = { true }
+  //         pagingEnabled = { false }
+  //         style = {
+  //             [styles.wrapper] }
+  //         activeDotColor = { '#CD258D' }
+  //         dotStyle = {
+  //             {
+  //                 width: 15,
+  //                 height: 15,
+  //                 borderRadius: 15,
+  //                 backgroundColor: '#eee',
+  //             }
+  //         }
+  //         activeDotStyle = {
+  //             {
+  //                 width: 15,
+  //                 height: 15,
+  //                 borderRadius: 15,
+  //             }
+  //         } >
+  //         <
+  //         SafeAreaView style = { styles.slide2 } >
+  //         <
+  //         ImageBackground source = { Images.BackGround.Bg1 }
+  //         resizeMode = "cover"
+  //         style = { styles.mainbg } >
+  //         <
+  //         ScrollView showsVerticalScrollIndicator = { false }
+  //         contentContainerStyle = {
+  //             { flexGrow: 1 } } >
+  //         <
+  //         View style = {
+  //             {
+  //                 marginTop: 50,
+  //                 // marginVertical: 20,
+  //                 justifyContent: 'center',
+  //                 alignItems: 'center',
+  //             }
+  //         } >
+  //         <
+  //         Image source = { Images.Logos.logo1 }
+  //         style = {
+  //             {} }
+  //         />{' '} <
+  //         /View>{' '} <
+  //         View style = {
+  //             {
+  //                 justifyContent: 'center',
+  //                 alignItems: 'center',
+  //                 // marginVertical: 40,
+  //             }
+  //         } >
+  //         <
+  //         Text style = { styles.headtext } >
+  //         <
+  //         Text style = {
+  //             { fontWeight: 'bold' } } > VIBE < /Text>GARDEN{' '} <
+  //         /Text>{' '} <
+  //         Text style = {
+  //             {
+  //                 color: '#fff',
+  //                 fontSize: 16,
+  //                 textAlign: 'center',
+  //             }
+  //         } >
+  //         You 're In full bloom{'
+  //         '} <
+  //         /Text>{' '} <
+  //         Text style = {
+  //             {
+  //                 color: '#fff',
+  //                 fontSize: 20,
+  //                 textAlign: 'center',
+  //                 marginVertical: 5,
+  //             }
+  //         } >
+  //         Tools, tips & magic
+  //         for growing your communication to you!
+  //         <
+  //         /Text>{' '} <
+  //         /View>{' '} <
+  //         View style = {
+  //             {
+  //                 width: '80%',
+  //                 marginTop: 130,
+  //                 alignSelf: 'center',
+  //             }
+  //         } >
+  //         <
+  //         View style = {
+  //             {} } >
+  //         <
+  //         Pinkbtn width = { '80%' }
+  //         btntxt = " Get Started"
+  //         onPress = {
+  //             () =>
+  //             navigation.navigate('Auth', {
+  //                 screen: 'login',
+  //             })
+  //         }
+  //         />{' '} <
+  //         /View>{' '} <
+  //         TouchableOpacity onPress = {
+  //             () => navigation.navigate('namescreen') }
+  //         style = { styles.btn2 } >
+  //         <
+  //         Text style = {
+  //             { fontWeight: 'bold', color: '#fff' } } >
+  //         Login In { ' ' } <
+  //         /Text>{' '} <
+  //         /TouchableOpacity>{' '} <
+  //         /View>{' '} <
+  //         /ScrollView>{' '} <
+  //         /ImageBackground>{' '} <
+  //         /SafeAreaView> <
+  //         SafeAreaView style = { styles.slide2 } >
+  //         <
+  //         ScrollView showsVerticalScrollIndicator = { false }
+  //         contentContainerStyle = {
+  //             { flexGrow: 1 } } >
+  //         <
+  //         View style = {
+  //             {
+  //                 width: '90%',
+  //                 alignSelf: 'center',
+  //                 alignItems: 'center',
+  //                 justifyContent: 'center',
+  //             }
+  //         } >
+  //         <
+  //         View style = {
+  //             [styles.img] } >
+  //         <
+  //         Image source = { Images.BackGround.storybg1 }
+  //         resizeMode = "contain"
+  //         style = {
+  //             { width: '100%', height: '80%' } }
+  //         />{' '} <
+  //         /View>{' '} <
+  //         Text style = {
+  //             [styles.txt, { textAlign: 'center', lineHeight: 26 }] } >
+  //         AND.Embodying our fullness down here can be tricky!So with VibeBloom, we quest together.Kindling one another, as we employ joyful, powerful tools
+  //         for coming home to ourselves and being all that we truly, uniquely are. { ' ' } <
+  //         /Text>{' '} <
+  //         /View>{' '} <
+  //         View style = {
+  //             {
+  //                 backgroundColor: '#ffff',
+  //                 marginVertical: 20,
+  //                 position: 'absolute',
+  //                 alignSelf: 'center',
+  //                 bottom: -20,
+  //             }
+  //         } >
+  //         <
+  //         Text style = {
+  //             { alignSelf: 'center' } } >
+  //         Swipe To See How It Works { ' ' } <
+  //         /Text>{' '} <
+  //         /View>{' '} <
+  //         /ScrollView>{' '} <
+  //         /SafeAreaView>{' '} <
+  //         SafeAreaView style = { styles.slide2 } >
+  //         <
+  //         ScrollView showsVerticalScrollIndicator = { false }
+  //         contentContainerStyle = {
+  //             { flexGrow: 1 } } >
+  //         <
+  //         View style = {
+  //             {
+  //                 width: '90%',
+  //                 alignSelf: 'center',
+  //                 alignItems: 'center',
+  //                 justifyContent: 'center',
+  //             }
+  //         } >
+  //         <
+  //         View style = {
+  //             [styles.img] } >
+  //         <
+  //         Image source = { Images.BackGround.storybg2 }
+  //         resizeMode = "contain"
+  //         style = {
+  //             { width: '100%', height: '80%' } }
+  //         />{' '} <
+  //         /View>{' '} <
+  //         Text style = {
+  //             [styles.txt, { textAlign: 'center', lineHeight: 26 }] } >
+  //         AND.Embodying our fullness down here can be tricky!So with VibeBloom, we quest together.Kindling one another, as we employ joyful, powerful tools
+  //         for coming home to ourselves and being all that we truly, uniquely are. { ' ' } <
+  //         /Text>{' '} <
+  //         /View> <
+  //         View style = {
+  //             {
+  //                 backgroundColor: '#ffff',
+  //                 marginVertical: 20,
+  //                 position: 'absolute',
+  //                 alignSelf: 'center',
+  //                 bottom: -20,
+  //             }
+  //         } >
+  //         <
+  //         Text style = {
+  //             { alignSelf: 'center' } } >
+  //         Swipe To See How It Works { ' ' } <
+  //         /Text>{' '} <
+  //         /View>{' '} <
+  //         /ScrollView>{' '} <
+  //         /SafeAreaView>{' '} <
+  //         SafeAreaView style = { styles.slide2 } >
+  //         <
+  //         ScrollView showsVerticalScrollIndicator = { false }
+  //         contentContainerStyle = {
+  //             { flexGrow: 1 } } >
+  //         <
+  //         View style = {
+  //             {
+  //                 width: '90%',
+  //                 alignSelf: 'center',
+  //                 // alignItems: 'center',
+  //                 // justifyContent: 'center',
+  //             }
+  //         } >
+  //         <
+  //         View style = {
+  //             [styles.img] } >
+  //         <
+  //         Image source = { Images.BackGround.storybg3 }
+  //         resizeMode = "contain"
+  //         style = {
+  //             { width: '100%', height: '80%' } }
+  //         />{' '} <
+  //         /View>{' '} <
+  //         Text style = {
+  //             [styles.txt, { textAlign: 'center', lineHeight: 26 }] } >
+  //         AND.Embodying our fullness down here can be tricky!So with VibeBloom, we quest together.Kindling one another, as we employ joyful, powerful tools
+  //         for coming home to ourselves and being all that we truly, uniquely are. { ' ' } <
+  //         /Text>{' '} <
+  //         /View>{' '} <
+  //         /ScrollView>{' '} <
+  //         /SafeAreaView> <
+  //         SafeAreaView style = { styles.slide2 } >
+  //         <
+  //         ScrollView showsVerticalScrollIndicator = { false }
+  //         contentContainerStyle = {
+  //             { flexGrow: 1 } } >
+  //         <
+  //         View style = {
+  //             {
+  //                 width: '90%',
+  //                 alignSelf: 'center',
+  //                 // alignItems: 'center',
+  //                 // justifyContent: 'center',
+  //             }
+  //         } >
+  //         <
+  //         View style = {
+  //             [styles.img, { width: 260, height: 440 }] } >
+  //         <
+  //         Image source = { Images.BackGround.story4 }
+  //         resizeMode = "contain"
+  //         style = {
+  //             { width: '100%', height: '100%' } }
+  //         />{' '} <
+  //         /View>{' '} <
+  //         Text style = {
+  //             [styles.txt, { textAlign: 'center', lineHeight: 26 }] } >
+  //         AND.Embodying our fullness down here can be tricky!So with VibeBloom, we quest together.Kindling one another, as we employ joyful, powerful tools
+  //         for coming home to ourselves and being all that we truly, uniquely are. { ' ' } <
+  //         /Text>{' '} <
+  //         /View> <
+  //         View style = {
+  //             {
+  //                 backgroundColor: '#ffff',
+  //                 marginVertical: 10,
+  //                 position: 'absolute',
+  //                 alignSelf: 'center',
+  //                 bottom: -15,
+  //             }
+  //         } >
+  //         <
+  //         Text style = {
+  //             { alignSelf: 'center', textAlign: 'center' } } >
+  //         Swipe To See How It Works { ' ' } <
+  //         /Text>{' '} <
+  //         /View>{' '} <
+  //         /ScrollView>{' '} <
+  //         /SafeAreaView>{' '} <
+  //         SafeAreaView style = { styles.slide2 } >
+  //         <
+  //         ScrollView showsVerticalScrollIndicator = { false }
+  //         contentContainerStyle = {
+  //             { flexGrow: 1 } } >
+  //         <
+  //         View style = {
+  //             {
+  //                 width: '90%',
+  //                 alignSelf: 'center',
 
-                // alignItems: 'center',
-                // justifyContent: 'center',
-            }
-        } >
-        <
-        View style = {
-            [styles.img, { width: 260, height: 440 }] } >
-        <
-        Image source = { Images.BackGround.story5 }
-        resizeMode = "contain"
-        style = {
-            { width: '100%', height: '100%' } }
-        />{' '} <
-        /View>{' '} <
-        Text style = {
-            [styles.txt, { textAlign: 'center', lineHeight: 26 }] } >
-        AND.Embodying our fullness down here can be tricky!So with VibeBloom, we quest together.Kindling one another, as we employ joyful, powerful tools
-        for coming home to ourselves and being all that we truly, uniquely are. { ' ' } <
-        /Text>{' '} <
-        /View> <
-        View style = {
-            {
-                backgroundColor: '#ffff',
-                marginVertical: 20,
-                position: 'absolute',
-                alignSelf: 'center',
-                bottom: -20,
-            }
-        } >
-        <
-        Text style = {
-            { alignSelf: 'center' } } >
-        Swipe To See How It Works { ' ' } <
-        /Text>{' '} <
-        /View>{' '} <
-        /ScrollView>{' '} <
-        /SafeAreaView>{' '} <
-        /Swiper>{' '} <
-        /ScrollView>{' '} <
-        /SafeAreaView>
-    );
-};
+  //                 // alignItems: 'center',
+  //                 // justifyContent: 'center',
+  //             }
+  //         } >
+  //         <
+  //         View style = {
+  //             [styles.img, { width: 260, height: 440 }] } >
+  //         <
+  //         Image source = { Images.BackGround.story5 }
+  //         resizeMode = "contain"
+  //         style = {
+  //             { width: '100%', height: '100%' } }
+  //         />{' '} <
+  //         /View>{' '} <
+  //         Text style = {
+  //             [styles.txt, { textAlign: 'center', lineHeight: 26 }] } >
+  //         AND.Embodying our fullness down here can be tricky!So with VibeBloom, we quest together.Kindling one another, as we employ joyful, powerful tools
+  //         for coming home to ourselves and being all that we truly, uniquely are. { ' ' } <
+  //         /Text>{' '} <
+  //         /View> <
+  //         View style = {
+  //             {
+  //                 backgroundColor: '#ffff',
+  //                 marginVertical: 20,
+  //                 position: 'absolute',
+  //                 alignSelf: 'center',
+  //                 bottom: -20,
+  //             }
+  //         } >
+  //         <
+  //         Text style = {
+  //             { alignSelf: 'center' } } >
+  //         Swipe To See How It Works { ' ' } <
+  //         /Text>{' '} <
+  //         /View>{' '} <
+  //         /ScrollView>{' '} <
+  //         /SafeAreaView>{' '} <
+  //         /Swiper>{' '} <
+  //         /ScrollView>{' '} <
+  //         /SafeAreaView>
+  //     );
+  // };
 
-const styles = StyleSheet.create({
-    slide2: {
-        flex: 1,
-        backgroundColor: '#ffffff',
-    },
+  // const styles = StyleSheet.create({
+  //     slide2: {
+  //         flex: 1,
+  //         backgroundColor: '#ffffff',
+  //     },
 
-    text: {
-        color: '#ffffff',
-        fontSize: 30,
-        fontWeight: 'bold',
-    },
-    img: { alignSelf: 'center', width: 350, height: 430, marginVertical: 10 },
-    txt: {
-        textAlign: 'center',
-        fontSize: 14,
-        color: '#1C5C2E',
-        letterSpacing: 0.5,
-    },
-    main: {
-        // flex: 1,
-    },
-    mainbg: {
-        flex: 1,
-        width: '100%',
-        height: '100%',
-        // position: 'absolute',
-    },
-    headtext: {
-        fontWeight: '300',
-        fontSize: 32,
-        color: '#fff',
-        marginVertical: 15,
-    },
-    btn1: {
-        alignSelf: 'center',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '70%',
-        height: 44,
-        borderRadius: 20,
-        backgroundColor: '#FF4053',
-    },
-    btn2: {
-        alignSelf: 'center',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '80%',
-        height: 55,
-        borderRadius: 30,
-        borderWidth: 2,
-        borderColor: '#fff',
-        marginBottom: 10,
-    },
-});
+  //     text: {
+  //         color: '#ffffff',
+  //         fontSize: 30,
+  //         fontWeight: 'bold',
+  //     },
+  //     img: { alignSelf: 'center', width: 350, height: 430, marginVertical: 10 },
+  //     txt: {
+  //         textAlign: 'center',
+  //         fontSize: 14,
+  //         color: '#1C5C2E',
+  //         letterSpacing: 0.5,
+  //     },
+  //     main: {
+  //         // flex: 1,
+  //     },
+  //     mainbg: {
+  //         flex: 1,
+  //         width: '100%',
+  //         height: '100%',
+  //         // position: 'absolute',
+  //     },
+  //     headtext: {
+  //         fontWeight: '300',
+  //         fontSize: 32,
+  //         color: '#fff',
+  //         marginVertical: 15,
+  //     },
+  //     btn1: {
+  //         alignSelf: 'center',
+  //         justifyContent: 'center',
+  //         alignItems: 'center',
+  //         width: '70%',
+  //         height: 44,
+  //         borderRadius: 20,
+  //         backgroundColor: '#FF4053',
+  //     },
+  //     btn2: {
+  //         alignSelf: 'center',
+  //         justifyContent: 'center',
+  //         alignItems: 'center',
+  //         width: '80%',
+  //         height: 55,
+  //         borderRadius: 30,
+  //         borderWidth: 2,
+  //         borderColor: '#fff',
+  //         marginBottom: 10,
+  //     },
+  // });
 
-export default Story1;
-=======
+  // export default Story1;
+
   const goToNextSlide = () => {
     const nextSlideIndex = currentSlideIndex + 1;
 
     if (nextSlideIndex != slides.length) {
       const offset = nextSlideIndex * WIDTH;
-      ref?.current.scrollToOffset({offset});
+      ref?.current.scrollToOffset({ offset });
       setCurrentSlideIndex(currentSlideIndex + 1);
     }
   };
@@ -484,7 +468,7 @@ export default Story1;
 
     if (prevSlideIndex != slides.length) {
       const offset = prevSlideIndex * WIDTH;
-      ref?.current.scrollToOffset({offset});
+      ref?.current.scrollToOffset({ offset });
       setCurrentSlideIndex(currentSlideIndex - 1);
     }
   };
@@ -494,14 +478,14 @@ export default Story1;
         ref={ref}
         onMomentumScrollEnd={updateCurrentSlideIndex}
         data={slides}
-        contentContainerStyle={{flexGrow: 1}}
+        contentContainerStyle={{ flexGrow: 1 }}
         style={{
           flex: 1,
         }}
         horizontal
         pagingEnabled
         showsHorizontalScrollIndicator={false}
-        renderItem={({item}) => (
+        renderItem={({ item }) => (
           <Slide
             currentSlideIndex={currentSlideIndex}
             goToNextSlide={goToNextSlide}
@@ -524,7 +508,7 @@ const Slide = ({
 }) => {
   return (
     <View
-      style={{alignItems: 'center', justifyContent: 'center', width: WIDTH}}>
+      style={{ alignItems: 'center', justifyContent: 'center', width: WIDTH }}>
       {item.id === 1 ? (
         <>
           <Image
@@ -549,7 +533,7 @@ const Slide = ({
             }}>
             <Image source={Images.Logos.logo1} style={{}} />
             <Text style={styles.headtext}>
-              <Text style={{fontWeight: 'bold'}}>VIBE</Text>GARDEN
+              <Text style={{ fontWeight: 'bold' }}>VIBE</Text>GARDEN
             </Text>
             <Text
               style={{
@@ -572,7 +556,7 @@ const Slide = ({
               Tools, tips & magic for growing your communication to you!
             </Text>
           </View>
-          <View style={{position: 'absolute', bottom: 100, width: '100%'}}>
+          <View style={{ position: 'absolute', bottom: 100, width: '100%' }}>
             <Indicators currentSlideIndex={currentSlideIndex} marginTop={25} />
             <TouchableOpacity
               onPress={() =>
@@ -606,11 +590,11 @@ const Slide = ({
         </>
       ) : (
         <>
-          <View style={{width: '100%', height: HEIGHT / 2}}>
+          <View style={{ width: '100%', height: HEIGHT / 2 }}>
             <Image
               resizeMode="contain"
               source={item.img}
-              style={{height: '100%', width: '100%'}}
+              style={{ height: '100%', width: '100%' }}
             />
           </View>
           <Text
@@ -645,7 +629,7 @@ const Slide = ({
                 flexDirection: 'row',
               }}>
               <TouchableOpacity
-                style={{marginRight: 10}}
+                style={{ marginRight: 10 }}
                 onPress={goToPrevSlide}
                 disabled={item.id === 2 ? true : false}>
                 <Icon name="angle-left" size={20} />
@@ -659,11 +643,11 @@ const Slide = ({
                 Swipe To See How It Works
               </Text>
               <TouchableOpacity
-                style={{marginLeft: 10}}
+                style={{ marginLeft: 10 }}
                 onPress={goToNextSlide}
                 disabled={item.id === 6 ? true : false}>
                 <Text
-                  style={{color: item.id === 6 ? 'transparent' : '#191919B8'}}>
+                  style={{ color: item.id === 6 ? 'transparent' : '#191919B8' }}>
                   <Icon name="angle-right" size={20} />
                 </Text>
               </TouchableOpacity>
@@ -674,7 +658,7 @@ const Slide = ({
     </View>
   );
 };
-const Indicators = ({currentSlideIndex, marginTop, marginBottom = 25}) => {
+const Indicators = ({ currentSlideIndex, marginTop, marginBottom = 25 }) => {
   return (
     <View
       style={{
@@ -706,7 +690,7 @@ const Indicators = ({currentSlideIndex, marginTop, marginBottom = 25}) => {
   );
 };
 const slides = [
-  {id: 1, img: Images.BackGround.Bg1},
+  { id: 1, img: Images.BackGround.Bg1 },
   {
     id: 2,
     img: Images.BackGround.storybg1,
@@ -777,4 +761,4 @@ const styles = StyleSheet.create({
   },
 });
 export default Story1;
->>>>>>> 54440a4c25999ce50254ac84b6cb91ebab562b7e
+

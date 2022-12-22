@@ -20,11 +20,16 @@ const Search = props => {
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
+        contentContainerStyle={{ flexGrow: 1 }}>
         <StatusBar animated={true} backgroundColor="#000" />
         <Searcbart1
           onpress1={() => {
-            props.navigation.navigate('Search2');
+            props.navigation.navigate('Search2', {
+              params: {
+                textchange: 'Quantum Physics',
+                mydata: true
+              }
+            });
           }}
         />
         <View style={styles.container}>
@@ -36,11 +41,11 @@ const Search = props => {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <View style={{width: 80, height: 80}}>
+            <View style={{ width: 80, height: 80 }}>
               <Image
                 source={Images.Logos.logo1}
                 resizeMode="contain"
-                style={{width: '100%', height: '100%'}}
+                style={{ width: '100%', height: '100%' }}
               />
             </View>
             <Text

@@ -9,7 +9,7 @@ import {
   FlatList,
   StatusBar,
 } from 'react-native';
-import {Greenbox, Header, Imgbox, SeeAll, StoryData} from '../../../componrnts';
+import { Greenbox, Header, Imgbox, SeeAll, StoryData } from '../../../componrnts';
 import All from '../../../componrnts/all';
 import MainBox from '../../../componrnts/mainbox';
 import Images from '../../../constants';
@@ -23,7 +23,7 @@ const GroundWork = props => {
       img4: Images.BackGround.rectangle2,
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
-      title: 'title',
+      title: 'Title',
     },
     {
       id: 2,
@@ -32,23 +32,25 @@ const GroundWork = props => {
       img4: Images.BackGround.rectangle2,
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
-      title: 'title',
+      title: 'Title',
     },
   ];
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
+        contentContainerStyle={{ flexGrow: 1 }}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
+
             width: '90%',
             alignSelf: 'center',
             marginVertical: 5,
             marginTop: 25,
           }}>
           <Header
+            marginTop={-30}
             marginLeft={-15}
             heartleft1={25}
             hearttop={5}
@@ -57,14 +59,14 @@ const GroundWork = props => {
             search1="search1"
             homeheader={true}
             search={() =>
-              props.navigation.navigate('Homes', {screen: 'Search'})
+              props.navigation.navigate('Homes', { screen: 'Search' })
             }
             heart
-            // plus
+          // plus
           />
         </View>
         <View style={styles.Box1}>
-          <View style={{width: '90%', alignSelf: 'center'}}>
+          <View style={{ width: '90%', alignSelf: 'center' }}>
             <Text
               style={{
                 textAlign: 'center',
@@ -91,7 +93,7 @@ const GroundWork = props => {
               boxtex3={'Nature'}
               img2
               onPress1={() => {
-                props.navigation.navigate('Homes', {screen: 'Buddhisim'}, {});
+                props.navigation.navigate('Homes', { screen: 'Buddhisim' }, {});
               }}
             />
             <View
@@ -141,7 +143,7 @@ const GroundWork = props => {
                     showsHorizontalScrollIndicator={false}
                     keyExtractor={item => item.id}
                     data={Data}
-                    renderItem={({item}) => {
+                    renderItem={({ item }) => {
                       return (
                         <All
                           pressI={() =>

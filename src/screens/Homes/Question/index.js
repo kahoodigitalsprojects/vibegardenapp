@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -8,14 +8,14 @@ import {
   StatusBar,
 } from 'react-native';
 
-import {Header, Pinkbtn, QComponents} from '../../../componrnts';
+import { Header, Pinkbtn, QComponents } from '../../../componrnts';
 
 const Question = props => {
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
+        contentContainerStyle={{ flexGrow: 1 }}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
@@ -25,7 +25,8 @@ const Question = props => {
             alignSelf: 'center',
           }}>
           <Header
-            color="#000"
+            marginTop={-40}
+            color='#1C5C2E'
             fontSize={25}
             iconName="closesquareo"
             header2
@@ -53,7 +54,7 @@ const Question = props => {
             marginVertical={10}
           />
         </View>
-        <View style={{marginTop: 20}}>
+        <View style={{ marginTop: 20 }}>
           <Pinkbtn
             width={'60%'}
             btntxt="Next"

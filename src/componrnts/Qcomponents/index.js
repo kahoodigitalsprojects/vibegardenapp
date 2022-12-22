@@ -17,7 +17,7 @@ import Icon from 'react-native-vector-icons/Entypo';
 import Icon2 from 'react-native-vector-icons/AntDesign';
 import Icon3 from 'react-native-vector-icons/Ionicons';
 import Images from '../../constants';
-import {color} from 'react-native-elements/dist/helpers';
+import { color } from 'react-native-elements/dist/helpers';
 
 const QComponents = ({
   text1,
@@ -52,7 +52,7 @@ const QComponents = ({
   textforvideo,
 }) => {
   const data = [
-    {text1: text1, img1: Images.Imgs.R1},
+    { text1: text1, img1: Images.Imgs.R1 },
 
     {
       text1: text2,
@@ -88,12 +88,12 @@ const QComponents = ({
                 justifyContent: 'center',
                 alignItems: 'center',
               }}
-              source={Images.BackGround.path1}>
-              <View style={{width: 100, height: 70, alignSelf: 'center'}}>
+              source={Images.BackGround.pathbg}>
+              <View style={{ width: 100, height: 70, alignSelf: 'center' }}>
                 <Image
                   source={Images.Icons.playbtn}
                   resizeMode="contain"
-                  style={{width: '100%', height: '100%'}}
+                  style={{ width: '100%', height: '100%' }}
                 />
                 {redbtn && (
                   <View
@@ -129,7 +129,7 @@ const QComponents = ({
           width: '90%',
           alignSelf: 'center',
         }}>
-        <View style={{marginVertical: 2}}>
+        <View style={{ marginVertical: 2 }}>
           <Text style={styles.text1}>{number}</Text>
           {video && (
             <View style={styles.starbg}>
@@ -148,11 +148,11 @@ const QComponents = ({
                   }}>
                   {textforvideo}
                 </Text>
-                <View style={{width: 160, height: 120}}>
+                <View style={{ width: 160, height: 120 }}>
                   <Image
                     source={Images.Icons.playbtn}
                     resizeMode="contain"
-                    style={{width: '100%', height: '100%'}}
+                    style={{ width: '100%', height: '100%' }}
                   />
                 </View>
               </View>
@@ -164,14 +164,14 @@ const QComponents = ({
               <Image
                 source={Images.Imgs.startbg}
                 resizeMode="contain"
-                style={{width: '100%', height: '100%'}}
+                style={{ width: '100%', height: '100%' }}
               />
             </View>
           )}
 
-          <View style={{flexDirection: 'row'}}>
+          <View style={{ flexDirection: 'row' }}>
             <Text style={styles.text2}>{direction2}</Text>
-            <View style={{flexDirection: 'row'}}>
+            <View style={{ flexDirection: 'row' }}>
               <Text
                 style={[
                   styles.text2,
@@ -187,8 +187,8 @@ const QComponents = ({
 
               {iconone && (
                 <TouchableOpacity
-                  onPress={() => {}}
-                  style={{marginTop: 1, marginLeft: 5}}>
+                  onPress={() => { }}
+                  style={{ marginTop: 1, marginLeft: 5 }}>
                   <Icon name={name2} size={25} color="#1C5C2E" />
                 </TouchableOpacity>
               )}
@@ -211,21 +211,21 @@ const QComponents = ({
                 }}>
                 {direction}
               </Text>
-              <View style={{flexDirection: 'row'}}>
+              <View style={{ flexDirection: 'row' }}>
                 {iconone1 && (
-                  <TouchableOpacity onPress={() => {}} style={{marginRight: 5}}>
+                  <TouchableOpacity onPress={() => { }} style={{ marginRight: 5 }}>
                     <Icon2 name={name11} size={22} color="#1C5C2E" />
                   </TouchableOpacity>
                 )}
                 {icontwo && (
-                  <TouchableOpacity onPress={() => {}} style={{}}>
+                  <TouchableOpacity onPress={() => { }} style={{}}>
                     <Icon name={name2} size={22} color="#EF3A71" />
                   </TouchableOpacity>
                 )}
               </View>
             </View>
           </View>
-          <View style={{marginTop: 6}}>
+          <View style={{ marginTop: 6 }}>
             {text5 && (
               <Text
                 style={[
@@ -240,7 +240,7 @@ const QComponents = ({
               </Text>
             )}
           </View>
-          <View style={{width: width, alignSelf: 'center'}}>
+          <View style={{ width: width, alignSelf: 'center' }}>
             <Text
               style={[
                 {
@@ -268,7 +268,7 @@ const QComponents = ({
             </Text>
           </View>
           {text6 && (
-            <View style={{marginVertical: marginVertical}}>
+            <View style={{ marginVertical: marginVertical }}>
               <Text
                 style={[
                   styles.text2,
@@ -297,19 +297,19 @@ const QComponents = ({
             horizontal={true}
             showsHorizontalScrollIndicator={false}
             data={data}
-            renderItem={({item, index}) => {
+            renderItem={({ item, index }) => {
               return (
                 <>
-                  <View style={{width: '24%', margin: 2}}>
+                  <View style={{ width: '24%', margin: 2 }}>
                     <TouchableOpacity
                       onPress={item.onPress}
                       style={styles.circle}>
                       <Image
                         source={item.img1}
-                        style={{width: '100%', height: '100%'}}
+                        style={{ width: '100%', height: '100%' }}
                       />
                     </TouchableOpacity>
-                    <View style={{width: 78}}>
+                    <View style={{ width: 78 }}>
                       <Text
                         style={{
                           marginTop: 5,
@@ -392,4 +392,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
-export {QComponents};
+export { QComponents };

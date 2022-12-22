@@ -12,21 +12,21 @@ import {
   FlatList,
 } from 'react-native';
 
-import {Header, Pinkbtn, QComponents} from '../../../componrnts';
+import { Header, Pinkbtn, QComponents } from '../../../componrnts';
 
 const Question2 = props => {
   const data = [
-    {text1: 'Yeah,no'},
-    {text1: 'No idea What a Multiverse is'},
-    {text1: 'SMCA Peepsceen to think so'},
-    {text1: 'Shall we Question Heap'},
+    { text1: 'Yeah,no' },
+    { text1: 'No idea What a Multiverse is' },
+    { text1: 'SMCA Peepsceen to think so' },
+    { text1: 'Shall we Question Heap' },
   ];
 
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
+        contentContainerStyle={{ flexGrow: 1 }}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
@@ -37,6 +37,7 @@ const Question2 = props => {
           }}>
           <Header
             // color="#000"
+            marginTop={-40}
             fontSize={25}
             iconName="closesquareo"
             header2
@@ -45,7 +46,7 @@ const Question2 = props => {
             OnPress={() => props.navigation.goBack('')}
           />
         </View>
-        <View style={{width: '100%'}}>
+        <View style={{ width: '100%' }}>
           <QComponents
             marginVertical={10}
             flowwerlist11={true}
@@ -71,7 +72,7 @@ const Question2 = props => {
           />
         </View>
 
-        <View style={{marginTop: 20}}>
+        <View style={{ marginTop: 20 }}>
           <Pinkbtn
             onPress={() => {
               props.navigation.navigate('question');
