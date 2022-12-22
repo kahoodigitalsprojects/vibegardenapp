@@ -137,7 +137,8 @@ const Userdetails = ({
                   fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tepor
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua.
               </Text>
               <View style={{alignSelf: 'flex-end'}}>
                 <Text

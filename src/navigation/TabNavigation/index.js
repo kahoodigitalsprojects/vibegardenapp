@@ -16,6 +16,11 @@ Mytabs = props => {
       initialRouteName={props.fisrt}
       screenOptions={{
         tabBarActiveTintColor: '#1C5C2E',
+        tabBarStyle: {
+          height: 80,
+          borderTopLeftRadius: 20,
+          borderTopRightRadius: 20,
+        },
       }}>
       <Tab.Screen
         name="Home"
@@ -23,6 +28,7 @@ Mytabs = props => {
         options={{
           headerShown: false,
           tabBarLabel: 'Garden',
+          tabBarItemStyle: {paddingBottom: 10},
           tabBarIcon: ({focused}) =>
             focused ? (
               <Image
@@ -41,6 +47,7 @@ Mytabs = props => {
         options={{
           headerShown: false,
           tabBarLabel: 'Tools',
+          tabBarItemStyle: {paddingBottom: 10},
           tabBarIcon: ({focused}) =>
             focused ? (
               <Image source={Images.Logos.hands} style={styles.activeImg} />
@@ -57,6 +64,7 @@ Mytabs = props => {
           tabBarActiveTintColor: '#1C5C2E',
           headerShown: false,
           tabBarLabel: 'Groundwork',
+          tabBarItemStyle: {paddingBottom: 10},
           tabBarIcon: ({focused}) =>
             focused ? (
               <Image source={Images.Icons.leaf} style={styles.activeImg} />
@@ -71,6 +79,7 @@ Mytabs = props => {
         options={{
           headerShown: false,
           tabBarLabel: 'Me',
+          tabBarItemStyle: {paddingBottom: 10},
           tabBarIcon: ({focused}) =>
             focused ? (
               <Image source={Images.Icons.small} style={styles.activeImg} />

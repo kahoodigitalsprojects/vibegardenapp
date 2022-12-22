@@ -38,7 +38,7 @@ const PaymentMethod = ({navigation, route, pres}) => {
             <Header
               iconName="left"
               header4
-              OnPress={() => props.navigation.goBack('')}
+              OnPress={() => navigation.navigate('ManageSubscription')}
               color="#000"
               fontSize={20}
               headertext2={headertext1}

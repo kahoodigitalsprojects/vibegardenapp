@@ -64,7 +64,7 @@ const Registerd = ({route, navigation}) => {
                     color: '#000',
                     lineHeight: 30,
                     fontFamily: 'BrandonGrotesque-Medium',
-                    fontWeight: '660',
+                    fontWeight: '600',
                   }}>
                   This Email Is Already Registered With Vibegarden, Please{' '}
                   <Text
@@ -105,7 +105,7 @@ const Registerd = ({route, navigation}) => {
                   color: '#000',
                   lineHeight: 30,
                   fontFamily: 'BrandonGrotesque-Medium',
-                  fontWeight: '660',
+                  fontWeight: '600',
                 }}>
                 Or If You’ve Forgotten Your Password,{' '}
                 <Text

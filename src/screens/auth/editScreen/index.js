@@ -33,7 +33,7 @@ const EditScreen = ({navigation, route}) => {
         <StatusBar backgroundColor={'transparent'} translucent={true} />
         <View
           style={{
-            marginVertical: 10,
+            // marginVertical: 10,
             marginTop: 30,
             width: '90%',
             alignSelf: 'center',

@@ -14,13 +14,14 @@ import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 import Orientation from 'react-native-orientation-locker';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {useIsFocused} from '@react-navigation/native';
 const Login = ({route, navigation}) => {
   const [state, setState] = useState(true);
-
+  const isFocused = useIsFocused();
   useEffect(() => {
     Orientation.unlockAllOrientations();
     checkJourney();
-  }, []);
+  }, [isFocused]);
 
   const checkJourney = async value => {
     try {
