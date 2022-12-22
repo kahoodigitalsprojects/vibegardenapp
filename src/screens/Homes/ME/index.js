@@ -84,6 +84,11 @@ const Me = props => {
       onPress: () => {
         props.navigation.navigate('Homes', {
           screen: 'Result',
+            params: {
+            backoption: () =>
+              props.navigation.navigate('Mytabs', {screen: 'me'}),
+          },
+     
         });
       },
     },
@@ -102,7 +107,8 @@ const Me = props => {
             // paddingVertical: 20,
             // position: 'absolute',
             // top: 8,
-            height: 60,
+            // height: 60,
+            // marginBottom: 20,
           }}>
           <Header
             img1
@@ -129,7 +135,8 @@ const Me = props => {
                 fontSize: 28,
                 fontWeight: '600',
                 color: '#000000',
-                marginVertical: 10,
+                marginVertical: 20,
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Erin
             </Text>
@@ -155,6 +162,7 @@ const Me = props => {
                   fontSize: 20,
                   fontWeight: '500',
                   marginVertical: 10,
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 Library:
               </Text>
@@ -179,6 +187,7 @@ const Me = props => {
                   fontSize: 20,
                   fontWeight: '500',
                   marginVertical: 10,
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 Bloom 'o' Meter:
               </Text>
@@ -197,7 +206,12 @@ const Me = props => {
                           margin: 5,
                           justifyContent: 'center',
                         }}>
-                        <Text style={{textAlign: 'center', color: '#fefefe'}}>
+                        <Text
+                          style={{
+                            textAlign: 'center',
+                            color: '#fefefe',
+                            fontFamily: 'BrandonGrotesque-Regular',
+                          }}>
                           {item.text1}
                         </Text>
                       </View>
@@ -228,6 +242,7 @@ const Me = props => {
                     // marginVertical: 10,
                     marginTop: 40,
                     marginLeft: -30,
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
                   Your Graph will appear{'\n'}after 2 days of tracking
                 </Text>

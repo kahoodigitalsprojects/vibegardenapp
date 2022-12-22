@@ -8,6 +8,7 @@ import {
 import React from 'react';
 import Images from '../../constants';
 import Icon from 'react-native-vector-icons/AntDesign';
+                 
 const MainBox = ({
   route,
   img2,
@@ -52,7 +53,7 @@ const MainBox = ({
                   style={{
                     // backgroundColor: 'pink',
                     height: 33,
-                    marginTop: 12,
+                    marginTop: 35,
                     width: 33,
                   }}>
                   <Image
@@ -66,8 +67,10 @@ const MainBox = ({
                   alignItems: 'center',
                   color: '#000',
                   textAlign: 'center',
-
-                  fontSize: 25,
+                  fontSize: 26,
+                  marginTop: 30,
+                  fontWeight: '600',
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 {textone}
               </Text>
@@ -79,6 +82,7 @@ const MainBox = ({
                 borderRadius: 12,
                 // margin: 2,
                 backgroundColor: bgcolor,
+
                 marginTop: 15,
               }}>
               <Text
@@ -87,6 +91,8 @@ const MainBox = ({
                   alignItems: 'center',
                   color: '#fff',
                   textAlign: 'center',
+                  fontFamily: 'BrandonGrotesque-Regular',
+
                   top: 10,
                 }}>
                 {minutes}
@@ -99,9 +105,7 @@ const MainBox = ({
 
                 // margin: 2,
                 left: -85,
-                top: 35,
-
-                marginTop: 15,
+                top: 30,
               }}>
               <Text
                 style={{
@@ -111,6 +115,7 @@ const MainBox = ({
                   textAlign: 'center',
                   top: 15,
                   fontSize: 12,
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 {date1}
               </Text>
@@ -119,8 +124,8 @@ const MainBox = ({
               <TouchableOpacity
                 style={{
                   // backgroundColor: 'pink',
-                  top: -25,
-                  right: -80,
+                  top: -20,
+                  right: -95,
                   position: 'absolute',
                   height: 33,
                   width: 33,

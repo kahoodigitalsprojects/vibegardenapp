@@ -28,7 +28,8 @@ const Settings = props => {
             header2
             OnPress={() => props.navigation.navigate('me')}
             headertext="Erin's Settings"
-            fontSize={25}
+            fontSize={20}
+            color={'#191919B8'}
             flower
             img23={Images.Imgs.lotus1}
           />
@@ -323,7 +324,7 @@ const Settings = props => {
               onPress={() => {
                 props.navigation.navigate('Auth', {
                   screen: 'PrivacyPolicy',
-                  params: {heading1: 'Pricacy Policy'},
+                  params: {heading1: 'Privacy Policy'},
                 });
               }}
               style={[
@@ -416,11 +417,13 @@ const styles = StyleSheet.create({
     color: '#1C5C2E',
 
     fontSize: 14,
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   text1: {
     fontSize: 18,
     color: '#191919B8',
     marginVertical: 5,
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   line: {
     width: 283,
@@ -452,12 +455,14 @@ const styles = StyleSheet.create({
     marginTop: 6,
     fontWeight: '600',
     paddingRight: 10,
+    fontFamily: 'BrandonGrotesque-Medium',
   },
   endtext: {
     justifyContent: 'center',
     alignItems: 'center',
     justifyContent: 'center',
     justifyContent: 'space-around',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
 });
 export default Settings;

@@ -12,7 +12,6 @@ import {
 import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 import Icon from 'react-native-vector-icons/Feather';
-
 const BigBlooms = ({route, navigation}) => {
   const {newtext} = route.params;
   const {heading1} = route.params;
@@ -46,7 +45,7 @@ const BigBlooms = ({route, navigation}) => {
       <View style={styles.main}>
         <View style={{width: '90%', marginTop: 10}}>
           <Header
-          width={'25%'}
+            width={'25%'}
             iconName="arrowleft"
             header4
             OnPress={() => navigation.goBack('')}
@@ -71,6 +70,7 @@ const BigBlooms = ({route, navigation}) => {
                 // fontWeight: 'bold',
                 marginTop: 25,
                 marginVertical: 10,
+                fontFamily: 'BrandonGrotesque-Medium',
               }}>
               {heading1}
               Big Blooms
@@ -86,7 +86,7 @@ const BigBlooms = ({route, navigation}) => {
             </View>
           </View>
 
-          <View style={{ marginVertical: 5, alignSelf: 'center'}}>
+          <View style={{marginVertical: 5, width: '100%', alignSelf: 'center'}}>
             <Text
               style={{
                 marginVertical: 10,
@@ -94,6 +94,7 @@ const BigBlooms = ({route, navigation}) => {
                 // textAlign: 'center',
                 color: '#000',
                 // fontWeight: 'bold',
+                fontFamily: 'BrandonGrotesque-Medium',
                 lineHeight: 30,
               }}>
               Fantastic! Its So Power Full To Discover Tools That Help Us Feel
@@ -106,6 +107,7 @@ const BigBlooms = ({route, navigation}) => {
                 color: '#1C5C2E',
                 fontWeight: '500',
                 marginVertical: 5,
+                fontFamily: 'BrandonGrotesque-Medium',
               }}>
               ADDED TONGLEN FAVORITES
             </Text>
@@ -118,6 +120,7 @@ const BigBlooms = ({route, navigation}) => {
                 // fontWeight: 'bold',
                 marginVertical: 10,
                 textDecorationLine: 'underline',
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Tell Us More
             </Text>
@@ -128,6 +131,7 @@ const BigBlooms = ({route, navigation}) => {
                 // textAlign: 'center',
                 color: '#000',
                 // fontWeight: 'bold',
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Did This Tools
             </Text>
@@ -158,6 +162,7 @@ const BigBlooms = ({route, navigation}) => {
                       // textAlign: 'center',
                       color: '#000',
                       // fontWeight: 'bold',
+                      fontFamily: 'BrandonGrotesque-Regular',
                     }}>
                     {item.text1}
                   </Text>

@@ -1,10 +1,20 @@
-import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableWithoutFeedback,
+  TouchableOpacity,
+  Image,
+} from 'react-native';
 import React, {useState} from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon2 from 'react-native-vector-icons/AntDesign';
 import Icon3 from 'react-native-vector-icons/Ionicons';
 import Images from '../../constants';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54440a4c25999ce50254ac84b6cb91ebab562b7e
 import {
   Menu,
   MenuOptions,
@@ -40,6 +50,7 @@ const Header = props => {
     colorplus,
     headertext2,
     marginTopplus,
+    show,
   } = props;
   const [state, setState] = useState(false);
   return (
@@ -69,7 +80,7 @@ const Header = props => {
             />
           </TouchableOpacity>
           {img1 && (
-            <View style={{width: 40, height: 40}}>
+            <View style={{width: 40, height: 4, marginTop: -10}}>
               <Image
                 source={Images.Logos.logo1}
                 resizeMode="contain"
@@ -97,7 +108,7 @@ const Header = props => {
                 style={{
                   fontSize: fontSize,
                   color: '#000',
-                  fontWeight: '300',
+                  fontFamily: 'BrandonGrotesque-Bold',
                 }}>
                 {props.headertext}
               </Text>
@@ -151,6 +162,38 @@ const Header = props => {
                     </TouchableOpacity>
                   </MenuOptions>
                 </Menu>
+<<<<<<< HEAD
+=======
+                {/* {state === true ? (
+                  <View
+                    style={{
+                      position: 'absolute',
+                      top: 50,
+                      right: 1,
+                    }}>
+                    <TouchableWithoutFeedback
+                      onPressIn={props.OnPress}
+                      style={[
+                        styles.greenbox1,
+                        {width: 40, height: 40, padding: 4, marginVertical: 8},
+                      ]}>
+                      <Icon3
+                        name="md-notifications-outline"
+                        size={25}
+                        color="#fff"
+                      />
+                    </TouchableWithoutFeedback>
+                    <TouchableWithoutFeedback
+                      onPress={props.OnPress1}
+                      style={[
+                        styles.greenbox1,
+                        {width: 40, height: 40, padding: 4, marginVertical: 10},
+                      ]}>
+                      <Icon2 name="setting" size={25} color="#fff" />
+                    </TouchableWithoutFeedback>
+                  </View>
+                ) : null} */}
+>>>>>>> 54440a4c25999ce50254ac84b6cb91ebab562b7e
               </View>
             </>
           )}
@@ -178,6 +221,7 @@ const Header = props => {
                     marginTop: 8,
                     color: color,
                     fontWeight: '500',
+                    fontFamily: 'BrandonGrotesque-Medium',
                   }}>
                   {props.headertext}
                 </Text>
@@ -212,6 +256,7 @@ const Header = props => {
       {props.header2 && (
         <View style={styles.header}>
           <TouchableOpacity
+            disabled={(show === true && true) || false}
             onPress={props.OnPress}
             style={{width: '5%', marginTop: 5}}>
             <View
@@ -219,11 +264,15 @@ const Header = props => {
                 width: 40,
                 height: 40,
                 borderRadius: 12,
-                backgroundColor: '#1C5C2E',
+                backgroundColor: (show === true && 'transparent') || '#1C5C2E',
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <Icon2 name={iconName} size={20} color="#fff" />
+              <Icon2
+                name={iconName}
+                size={20}
+                color={(show === true && 'transparent') || '#fff'}
+              />
             </View>
           </TouchableOpacity>
           <View
@@ -249,13 +298,12 @@ const Header = props => {
                 />
               </View>
             )}
-
             <Text
               style={{
                 fontSize: fontSize,
                 marginTop: 8,
                 color: color,
-                fontWeight: '500',
+                fontFamily: 'BrandonGrotesque-bold',
               }}>
               {props.headertext}
             </Text>
@@ -295,6 +343,7 @@ const Header = props => {
                     marginTop: 10,
                     color: color,
                     fontWeight: '500',
+                    fontFamily: 'BrandonGrotesque-Medium',
                   }}>
                   {props.headertext2}
                 </Text>
@@ -308,6 +357,7 @@ const Header = props => {
                 marginTop: 8,
                 color: color,
                 fontWeight: '500',
+                fontFamily: 'BrandonGrotesque-Medium',
               }}>
               {props.headertext}
             </Text>

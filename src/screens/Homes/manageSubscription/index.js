@@ -35,7 +35,11 @@ const ManageSubscription = props => {
         </View>
         <View style={styles.firstview}>
           <View style={styles.row}>
-            <Text style={[styles.text1, {color: 'black'}]}>
+            <Text
+              style={[
+                styles.text1,
+                {color: 'black', fontFamily: 'BrandonGrotesque-Regular'},
+              ]}>
               Subscriptions Info:
             </Text>
             <View style={styles.line}></View>
@@ -129,11 +133,18 @@ const ManageSubscription = props => {
             }}
             style={{
               alignSelf: 'center',
-              marginTop: 110,
+              marginTop: 150,
               justifyContent: 'flex-end',
             }}>
             <Text
-              style={[{color: '#1492E6', fontSize: 16, marginVertical: 10}]}>
+              style={[
+                {
+                  color: '#1492E6',
+                  fontSize: 16,
+                  marginVertical: 10,
+                  fontFamily: 'BrandonGrotesque-Regular',
+                },
+              ]}>
               Cancel Subscription
             </Text>
           </TouchableOpacity>
@@ -153,7 +164,6 @@ const styles = StyleSheet.create({
     width: '100%',
     alignSelf: 'center',
     marginVertical: 10,
-    flexDirection: 'row',
   },
   firstview: {
     marginTop: 30,
@@ -163,14 +173,9 @@ const styles = StyleSheet.create({
     height: '85%',
   },
   text1: {
-    marginVertical: 10,
-    color: '#1C5C2E',
-
-    fontSize: 16,
-  },
-  text1: {
     fontSize: 18,
     color: '#191919B8',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   line: {
     width: '70%',
@@ -182,12 +187,11 @@ const styles = StyleSheet.create({
 
   box: {
     width: 100,
-    justifyContent: 'center',
+    // justifyContent: 'center',
     justifyContent: 'space-around',
     borderWidth: 1,
     borderColor: 'green',
     borderRadius: 25,
-    elevation: 1,
     backgroundColor: '#fff',
     flexDirection: 'row',
     elevation: 6,
@@ -197,6 +201,7 @@ const styles = StyleSheet.create({
     color: '#1C5C2E',
     fontWeight: '400',
     marginTop: 6,
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   endtext: {
     // justifyContent: 'center',

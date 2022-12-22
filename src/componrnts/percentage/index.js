@@ -16,7 +16,6 @@ const Percentage = ({
   simpletext1,
   width,
   paddingVertical,
-  
 
   btn,
   Pertext,
@@ -34,7 +33,7 @@ const Percentage = ({
               // lineHeight: 40,
               fontSize: 18,
               color: '#000',
-              fontWeight: '600',
+              fontFamily: 'BrandonGrotesque-Medium',
             },
           ]}>
           {simpletext1}
@@ -116,9 +115,16 @@ const styles = StyleSheet.create({
     marginTop: 20,
     backgroundColor: '#fff',
     borderRadius: 15,
+    shadowColor: '#CD258D',
+    overflow: 'hidden',
+    shadowOffset: {
+      width: 40,
+      height: 80,
+    },
+    shadowOpacity: 1,
+    shadowRadius: 7.84,
     // height: 273,
-    elevation: 10,
-  
+    elevation: 20,
   },
   img: {
     width: 80,

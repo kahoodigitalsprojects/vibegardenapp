@@ -19,7 +19,7 @@ const GroundWork = props => {
     {
       id: 1,
       bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      bg12: Images.BackGround.Bg2,
       img4: Images.BackGround.rectangle2,
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
@@ -28,7 +28,7 @@ const GroundWork = props => {
     {
       id: 2,
       bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      bg12: Images.BackGround.Bg2,
       img4: Images.BackGround.rectangle2,
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
@@ -56,7 +56,9 @@ const GroundWork = props => {
             heartplus
             search1="search1"
             homeheader={true}
-            search={() => navigation.navigate('Homes', {screen: 'Search'})}
+            search={() =>
+              props.navigation.navigate('Homes', {screen: 'Search'})
+            }
             heart
             // plus
           />
@@ -67,7 +69,7 @@ const GroundWork = props => {
               style={{
                 textAlign: 'center',
                 fontSize: 28,
-                fontWeight: '600',
+                fontFamily: 'BrandonGrotesque-Regular',
                 color: '#000000',
               }}>
               Groundwork
@@ -77,6 +79,7 @@ const GroundWork = props => {
                 textAlign: 'center',
                 fontSize: 18,
                 marginVertical: 10,
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Let's remember together Erin
             </Text>
@@ -156,6 +159,8 @@ const GroundWork = props => {
                               },
                             })
                           }
+                          // iconimg1
+
                           onPressALL={item.pressAll}
                           textA={item.textA}
                           heart1={item.heart1}

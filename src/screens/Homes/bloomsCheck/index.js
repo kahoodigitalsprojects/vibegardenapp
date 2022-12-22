@@ -11,7 +11,7 @@ import {
   SafeAreaView,
 } from 'react-native';
 
-import {Header, Percentage, Pinkbtn} from '../../../componrnts';
+import {Flowers, Header, Percentage, Pinkbtn} from '../../../componrnts';
 
 import Icon from 'react-native-vector-icons/AntDesign';
 import LinearGradient from 'react-native-linear-gradient';
@@ -29,7 +29,7 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
     {
       id: 1,
       bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      bg12: Images.BackGround.Bg2,
       plus: 'plus',
       name: 'TONGLEN',
       title: 'title',
@@ -38,7 +38,7 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
     {
       id: 2,
       bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      bg12: Images.BackGround.Bg2,
       plus: 'plus',
       name: 'TONGLEN',
       title: 'title',
@@ -47,7 +47,7 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
     {
       id: 3,
       bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      bg12: Images.BackGround.Bg2,
       name: 'TONGLEN',
       title: 'title',
       textA: 'Featured Tools:',
@@ -80,34 +80,43 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
           contentContainerStyle={{flexGrow: 1}}>
           <StatusBar animated={true} backgroundColor="#000" />
 
-          <View style={{width: '90%', alignSelf: 'center'}}>
-            <Header
-              header2
-              iconName="closesquareo"
-              OnPress={() => {
-                navigation.goBack();
-              }}
-            />
+          <View style={{width: '100%', alignSelf: 'center'}}>
+            <View style={{width: '90%', alignSelf: 'center'}}>
+              <Header
+                header2
+                iconName="closesquareo"
+                OnPress={() => {
+                  navigation.goBack();
+                }}
+              />
+            </View>
 
             <View style={{width: '100%'}}>
-              <Text style={{textAlign: 'center', fontSize: 28, color: '#000'}}>
-                Blooms Check
-              </Text>
+              <View style={{width: '90%', alignSelf: 'center'}}>
+                <Text
+                  style={{
+                    textAlign: 'center',
+                    fontSize: 28,
+                    color: '#000',
+                    fontFamily: 'BrandonGrotesque-Medium',
+                  }}>
+                  Blooms Check
+                </Text>
 
-              <Text style={styles.txt}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore
-              </Text>
-              <Text
-                style={{
-                  fontSize: 18,
-                  color: '#000',
-                  letterSpacing: 0.2,
-                }}>
-                {newtext}
-              </Text>
-
-              <View style={{marginTop: 30}}>
+                <Text style={styles.txt}>
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore
+                </Text>
+                <Text
+                  style={{
+                    fontSize: 18,
+                    color: '#000',
+                    letterSpacing: 0.2,
+                  }}>
+                  {newtext}
+                </Text>
+              </View>
+              <View style={{justifyContent: 'center', alignItems: 'center'}}>
                 <FlatList
                   showsHorizontalScrollIndicator={false}
                   data={Data}
@@ -117,11 +126,8 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
                       <>
                         <View
                           style={{
-                            margin: 5,
+                            margin: 2,
                             marginTop: 10,
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            alignSelf: 'center',
                           }}>
                           <TouchableOpacity
                             onPress={() => {
@@ -225,54 +231,68 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
                   }}
                 />
               </View>
-              <Text style={{color: '#000', fontWeight: '400', fontSize: 20}}>
-                Refine your Vibe:
-              </Text>
-              <View style={styles.box}>
-                <Percentage
-                  Pertext
-                  icons={true}
-                  btntxt="continue"
-                  Image1={Images.Imgs.lotusb}
-                />
-                <TouchableOpacity
-                  disabled={data1 === false ? true : false}
-                  onPress={() => navigation.navigate('Bigblooms', data)}>
-                  <LinearGradient
-                    colors={['#ED535E', '#CD258D']}
-                    style={[styles.btn1]}>
-                    <Text
-                      style={{
-                        fontWeight: '400',
-                        color: '#fff',
-                        fontSize: 20,
-                      }}>
-                      Save
-                    </Text>
-                  </LinearGradient>
-                </TouchableOpacity>
+              <View
+                style={{
+                  width: '90%',
+                  alignSelf: 'center',
+                  marginTop: 15,
+                  fontFamily: 'BrandonGrotesque-Regular',
+                }}>
+                <Text
+                  style={{
+                    color: '#000',
+                    fontWeight: '400',
+                    fontSize: 20,
+                    fontFamily: 'BrandonGrotesque-MEdium',
+                  }}>
+                  Refine your Vibe:
+                </Text>
+                <View style={styles.box}>
+                  <Percentage
+                    Pertext
+                    icons={true}
+                    btntxt="continue"
+                    Image1={Images.Imgs.lotusb}
+                  />
+                  <TouchableOpacity
+                    disabled={data1 === false ? true : false}
+                    onPress={() => navigation.navigate('Bigblooms', data)}>
+                    <LinearGradient
+                      colors={['#ED535E', '#CD258D']}
+                      style={[styles.btn1]}>
+                      <Text
+                        style={{
+                          fontWeight: '400',
+                          color: '#fff',
+                          fontSize: 20,
+                        }}>
+                        Save
+                      </Text>
+                    </LinearGradient>
+                  </TouchableOpacity>
+                </View>
               </View>
-            </View>
-            <View style={styles.box1}>
-              <FlatList
-                showsHorizontalScrollIndicator={false}
-                keyExtractor={item => item.id}
-                data={Data1}
-                renderItem={({item}) => {
-                  return (
-                    <All
-                      heart1={item.heart1}
-                      textA={item.textA}
-                      textB={item.textB}
-                      homebox
-                      plus={item.plus}
-                      bghome2={item.bg12}
-                      title={item.title}
-                      colorA={'#000'}
-                    />
-                  );
-                }}
-              />
+              <View style={styles.box1}>
+                <FlatList
+                  showsHorizontalScrollIndicator={false}
+                  keyExtractor={item => item.id}
+                  data={Data1}
+                  renderItem={({item}) => {
+                    return (
+                      <All
+                        heart1={item.heart1}
+                        textA={item.textA}
+                        textB={item.textB}
+                        homebox
+                        plus={item.plus}
+                        bghome2={item.bg12}
+                        title={item.title}
+                        color1={'#000'}
+                      />
+                    );
+                  }}
+                />
+              </View>
             </View>
           </View>
         </ScrollView>
@@ -296,11 +316,13 @@ const styles = StyleSheet.create({
     color: '#000',
     fontWeight: '400',
     marginTop: 10,
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   txt1: {
     textAlign: 'left',
     fontSize: 18,
     color: '#030303',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   btn1: {
     width: '50%',
@@ -310,5 +332,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 55,
     borderRadius: 30,
+    fontFamily: 'BrandonGrotesque-Regular',
+  },
+  box1: {
+    width: '90%',
+    alignSelf: 'center',
   },
 });

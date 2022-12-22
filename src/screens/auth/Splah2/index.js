@@ -21,7 +21,7 @@ const Spalsh2 = ({navigation}) => {
           <StatusBar animated={true} backgroundColor="#000" />
 
           <View style={{}}>
-            <View style={{alignSelf: 'center', marginTop: 30}}>
+            <View style={{alignSelf: 'center', marginTop: 100}}>
               <Image source={Images.Logos.logo1} />
             </View>
 
@@ -33,7 +33,7 @@ const Spalsh2 = ({navigation}) => {
               <Text style={styles.text1}>
                 A Few fun question help us personal your experience here
               </Text>
-              <View style={{marginTop: 30, justifyContent: 'flex-end'}}>
+              <View style={{marginTop: 10, justifyContent: 'flex-end'}}>
                 <Pinkbtn
                   onPress={() =>
                     navigation.navigate('signup', {
@@ -60,9 +60,11 @@ const styles = StyleSheet.create({
     // backgroundColor: '#1C5C2E',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical:20
+    paddingVertical: 20,
   },
   view1: {
+    marginTop: 20,
+    marginVertical: 10,
     width: '90%',
     alignSelf: 'center',
   },
@@ -75,6 +77,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
     marginVertical: 10,
     lineHeight: 44,
+    fontFamily: 'BrandonGrotesque-Regular',
   },
 });
 

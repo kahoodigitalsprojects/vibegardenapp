@@ -11,7 +11,8 @@ import {Header} from '../../../componrnts';
 import Reset from '../../../componrnts/ResetComponent';
 import Images from '../../../constants';
 
-const Result = props => {
+const Result = ({navigation, route}) => {
+  const {backoption} = route.params;
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
@@ -28,12 +29,9 @@ const Result = props => {
             fontSize={25}
             color="#1C5C2E"
             header2
-            OnPress={() =>
-              props.navigation.replace('me', {
-                backoption: () =>
-                  props.navigation.replace('Mytabs', {screen: 'me'}),
-              })
-            }
+            // OnPress={backoption}
+            OnPress={() => navigation.navigate('me', {})}
+            // OnPress={backoption}
             headertext="Resonance Finder"
           />
           <View style={{marginVertical: 10}}>
@@ -42,7 +40,7 @@ const Result = props => {
                 fontSize: 31,
                 textAlign: 'center',
                 color: '#000',
-                fontWeight: 'bold',
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Result!
             </Text>
@@ -64,10 +62,10 @@ const Result = props => {
             <Text
               style={{
                 marginVertical: 10,
-                fontSize: 19,
+                fontSize: 20,
                 // textAlign: 'center',
                 color: '#000',
-                fontWeight: '500',
+                fontFamily: 'BrandonGrotesque-Medium',
               }}>
               What fun your top areas resonance?
             </Text>
@@ -86,10 +84,11 @@ const Result = props => {
             <Text
               style={{
                 marginVertical: 10,
-                fontSize: 19,
+                fontSize: 20,
                 // textAlign: 'center',
                 color: '#000',
                 fontWeight: '400',
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
               And The rest , in Descending Order:
             </Text>
@@ -135,12 +134,14 @@ const styles = StyleSheet.create({
   },
   text1: {
     marginVertical: 10,
+    fontFamily: 'BrandonGrotesque-Regular',
     color: '#1C5C2E',
 
     fontSize: 16,
   },
   text2: {
     marginVertical: 10,
+    fontFamily: 'BrandonGrotesque-Regular',
     color: '#000',
     fontSize: 16,
     marginLeft: 10,
@@ -148,12 +149,14 @@ const styles = StyleSheet.create({
   text3: {
     color: '#000',
     fontSize: 26,
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   text4: {
     marginVertical: 15,
     letterSpacing: 0.6,
-    color: '#000',
+    color: '#030303',
     fontSize: 16,
+    fontFamily: 'BrandonGrotesque-Regular',
   },
 });
 export default Result;

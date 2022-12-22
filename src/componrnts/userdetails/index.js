@@ -63,9 +63,9 @@ const Userdetails = ({
                     <Text style={[styles.text1]}>{name}</Text>
                     <Text
                       style={{
-                        fontSize: 12,
-                        color: '#000',
-                        fontWeight: 'bold',
+                        fontSize: 10,
+                        color: '#000000',
+                        fontFamily: 'BrandonGrotesque-Regular',
                       }}>
                       {time}
                     </Text>
@@ -73,11 +73,11 @@ const Userdetails = ({
 
                   <Text
                     style={[
-                      styles.text1,
                       {
-                        fontWeight: '400',
-                        fontSize: 14,
-                        marginVertical: 5,
+                        // fontWeight: '400',
+                        fontSize: 10,
+                        color: '#000000',
+                        fontFamily: 'BrandonGrotesque-Regular',
                       },
                     ]}>
                     {text}
@@ -128,19 +128,29 @@ const Userdetails = ({
                 )}
               </View>
             </View>
-            <View style={{width: '76%', padding:3,marginVertical:4}}>
-              <Text style={{fontSize: 12, marginTop: 8,lineHeight:16}}>
+            <View style={{width: '76%', padding: 3, marginVertical: 4}}>
+              <Text
+                style={{
+                  fontSize: 12,
+                  marginTop: 14,
+                  lineHeight: 16,
+                  fontFamily: 'BrandonGrotesque-Regular',
+                }}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat ,
+                aliquyam erat, sed diam voluptua.
+              </Text>
+              <View style={{alignSelf: 'flex-end'}}>
                 <Text
                   style={{
                     color: '#1C5C2E',
                     textDecorationLine: 'underline',
+                    marginRight: 10,
+                    marginBottom: 2,
                   }}>
                   Link
                 </Text>
-              </Text>
+              </View>
             </View>
           </View>
         </View>
@@ -188,9 +198,10 @@ const styles = StyleSheet.create({
     marginRight: 15,
   },
   text1: {
-    fontSize: 13,
+    fontSize: 12,
     fontWeight: 'bold',
     color: '#000',
+    fontFamily: 'BrandonGrotesque-Medium',
   },
 });
 export {Userdetails};

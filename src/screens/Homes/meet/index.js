@@ -15,6 +15,7 @@ import {
 import Icon from 'react-native-vector-icons/AntDesign';
 import {Header, Pinkbtn} from '../../../componrnts';
 import LinearGradient from 'react-native-linear-gradient';
+
 import Images from '../../../constants';
 
 const Meet = props => {
@@ -49,7 +50,13 @@ const Meet = props => {
           contentContainerStyle={{}}>
           <StatusBar animated={true} backgroundColor="#000" />
           <View style={{}}>
-            <View style={{width: '90%', alignSelf: 'center', marginTop: 10}}>
+            <View
+              style={{
+                width: '90%',
+                alignSelf: 'center',
+                marginTop: 10,
+                fontFamily: 'BrandonGrotesque-Regular',
+              }}>
               <Text style={styles.txt}>
                 Brilliant! And Now which Blooms Speaks To your heart?
               </Text>
@@ -142,7 +149,8 @@ const Meet = props => {
                                   {marginTop: 0, opacity: 0.7},
                                 ]}
                                 resizeMode="contain">
-                                <View
+                                <LinearGradient
+                                  colors={['#ED535E', '#CD258D']}
                                   style={{
                                     width: 100,
                                     height: 100,
@@ -152,9 +160,16 @@ const Meet = props => {
                                     alignSelf: 'center',
                                     backgroundColor:
                                       data1 === index ? '#CD258D' : '',
-                                    opacity: 0.8,
+                                    opacity: 0.9,
                                     elevation: data1 === index ? 0 : 5,
-                                  }}></View>
+                                  }}>
+                                  <Icon
+                                    name="check"
+                                    size={39}
+                                    color="#fff"
+                                    style={{}}
+                                  />
+                                </LinearGradient>
                               </ImageBackground>
                             ) : (
                               <View
@@ -186,8 +201,9 @@ const Meet = props => {
                           <Text
                             style={{
                               textAlign: 'center',
-                              fontSize: 16,
+                              fontSize: 18,
                               color: '#000',
+                              fontFamily: 'BrandonGrotesque-Medium',
                             }}>
                             {item.text}
                           </Text>
@@ -213,7 +229,12 @@ const Meet = props => {
               <LinearGradient
                 colors={['#ED535E', '#CD258D']}
                 style={[styles.btn1]}>
-                <Text style={{fontWeight: '400', color: '#fff', fontSize: 20}}>
+                <Text
+                  style={{
+                    color: '#fff',
+                    fontSize: 20,
+                    fontFamily: 'BrandonGrotesque-Medium',
+                  }}>
                   Continue
                 </Text>
               </LinearGradient>
@@ -241,10 +262,11 @@ const styles = StyleSheet.create({
   },
   txt: {
     // textAlign: 'left',
-    fontSize: 24,
+    fontSize: 25,
     color: '#1C5C2E',
     fontWeight: '400',
     marginVertical: 10,
+    fontFamily: 'BrandonGrotesque-Medium',
   },
   txt1: {
     textAlign: 'left',

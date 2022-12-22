@@ -38,7 +38,7 @@ const Question3 = props => {
             direction2="Description:"
             width={'100%'}
             flowwerlist11={true}
-            Statement="Statement"
+            Statement1="Statement"
             flow="Flow Thtough"
             name="chevron-down"
             image1={true}
@@ -56,7 +56,16 @@ const Question3 = props => {
           <Pinkbtn
             width={'60%'}
             btntxt="See Results"
-            onPress={() => props.navigation.navigate('Result', {})}
+            onPress={() =>
+              props.navigation.navigate('Result', {
+                // params: {
+                //   otherParam: 'Top Tools',
+                //   plus: true,
+                //   backoption: () =>
+                //     props.navigation.navigate('Mytabs', {screen: 'me'}),
+                // },
+              })
+            }
           />
         </View>
       </ScrollView>

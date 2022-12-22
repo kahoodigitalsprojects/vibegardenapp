@@ -57,8 +57,9 @@ const FressBlooms = ({navigation, route}) => {
             style={{
               width: '90%',
               alignSelf: 'center',
+              fontFamily: 'BrandonGrotesque-Regular',
             }}>
-            <Text>{itemId}</Text>
+            <Text style={{color: 'yellow'}}>{itemId}</Text>
             <Header
               iconName="closesquareo"
               color="#000"
@@ -67,7 +68,7 @@ const FressBlooms = ({navigation, route}) => {
               headertext={otherParam}
               OnPress={backoption}
             />
-            <View style={{marginTop: 30}}>
+            <View style={{marginTop: 47}}>
               <FlatList
                 data={data}
                 keyExtractor={item => item.id}

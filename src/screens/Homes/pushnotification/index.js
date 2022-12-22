@@ -69,9 +69,10 @@ const Pushnotification = props => {
               </TouchableOpacity>
               <TouchableOpacity
                 style={[styles.box, {width: '30%', left: 10}]}
-                onPress={() => {
-                  props.navigation.navigate('signup');
-                }}>
+                // onPress={() => {
+                //   props.navigation.navigate('signup');
+                // }}
+              >
                 <Text style={styles.textA}>7:30 AM</Text>
                 <TouchableOpacity style={{}}>
                   <Icon name="sort-down" size={25} color="#1C5C2E" />
@@ -83,7 +84,9 @@ const Pushnotification = props => {
             </View>
             <View style={{marginTop: 20}}>
               <Pinkbtn
-                onPress={() =>   props.navigation.navigate('Homes', {screen: 'settings'})}
+                onPress={() =>
+                  props.navigation.navigate('Homes', {screen: 'settings'})
+                }
                 width={'60%'}
                 btntxt="Save"
               />
@@ -111,9 +114,9 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textAlign: 'center',
     color: '#000',
-    fontWeight: '500',
     marginVertical: 15,
     lineHeight: 39,
+    fontFamily: 'BrandonGrotesque-Medium',
   },
   text2: {
     fontSize: 18,
@@ -122,6 +125,7 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
     marginVertical: 15,
     opacity: 0.5,
+    fontFamily: 'BrandonGrotesque-Medium',
   },
   starbg: {
     width: 200,
@@ -162,6 +166,7 @@ const styles = StyleSheet.create({
     color: '#1C5C2E',
     fontWeight: '400',
     marginTop: 9,
+    fontFamily: 'BrandonGrotesque-Regular',
   },
 });
 export default Pushnotification;

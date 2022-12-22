@@ -30,7 +30,7 @@ const Home = ({navigation, route}) => {
     {
       id: 1,
       bg1: Images.BackGround.rectangle2,
-      bg12: Images.BackGround.greenbg,
+      bg12: Images.BackGround.Bg2,
       // heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'Title',
@@ -53,7 +53,8 @@ const Home = ({navigation, route}) => {
     {
       id: 2,
       bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      bg1: Images.BackGround.rectangle2,
+      bg12: Images.BackGround.Bg2,
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'Title',
@@ -66,7 +67,8 @@ const Home = ({navigation, route}) => {
     {
       id: 3,
       bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      bg1: Images.BackGround.rectangle2,
+      bg12: Images.BackGround.Bg2,
       name: 'TONGLEN',
       title: 'Title',
       textA: 'BUDDHISIM',
@@ -79,7 +81,8 @@ const Home = ({navigation, route}) => {
     {
       id: 4,
       bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      bg1: Images.BackGround.rectangle2,
+      bg12: Images.BackGround.Bg2,
       // heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'Title',
@@ -120,7 +123,7 @@ const Home = ({navigation, route}) => {
           />
         </View>
         <View style={styles.Box1}>
-          <View style={{width: '90%', alignSelf: 'center'}}>
+          <View style={{width: '90%', alignSelf: 'center', marginVertical: 8}}>
             <Text
               style={{
                 textAlign: 'center',
@@ -128,6 +131,7 @@ const Home = ({navigation, route}) => {
                 fontWeight: '600',
                 color: '#000000',
                 marginTop: 20,
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Hi, You.
             </Text>
@@ -251,7 +255,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   box1: {
-    width: '100%',
+    width: '90%',
     alignSelf: 'center',
     // height: '100%',
     backgroundColor: 'yellow',

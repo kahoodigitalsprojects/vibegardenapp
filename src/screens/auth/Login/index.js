@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   View,
   Text,
@@ -12,11 +12,34 @@ import {
 } from 'react-native';
 import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
-
+import Orientation from 'react-native-orientation-locker';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import {useIsFocused} from '@react-navigation/native';
 const Login = ({route, navigation}) => {
+  const [state, setState] = useState(true);
+  const [state1, setState1] = useState(true);
+  const [message, setMessage] = useState('');
+  const isFocused = useIsFocused();
+  useEffect(() => {
+    Orientation.unlockAllOrientations();
+    checkJourney();
+  }, [isFocused]);
+
+  const checkJourney = async value => {
+    try {
+      const check = await AsyncStorage.getItem('journeyCompleted');
+      if (check !== null) {
+        return;
+      } else {
+        await AsyncStorage.setItem('journeyCompleted', 'DONE');
+      }
+    } catch (e) {
+      // saving error
+      console.log(e);
+    }
+  };
   const registerd1 = route.params?.registerd1 || null;
   // console.log(colorScheme);
-
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
@@ -31,20 +54,87 @@ const Login = ({route, navigation}) => {
               OnPress={() => navigation.navigate('loginoption')}
             />
           </View>
-          <View style={{marginVertical: 40}}>
+          <View style={{marginVertical: 20, marginTop: 60}}>
             <Image source={Images.Logos.logo1} style={{}} />
           </View>
           <View>
-            <Text style={{fontSize: 18}}>Login With Email</Text>
-
-            <View style={styles.input}>
-              <TextInput
-                placeholder="Email Address"
-                placeholderTextColor="grey"
-              />
-            </View>
-            <View style={styles.input}>
-              <TextInput placeholder="Password" placeholderTextColor="grey" />
+            <Text
+              style={{
+                fontSize: 18,
+                fontFamily: 'BrandonGrotesque-Medium',
+                marginTop: 17,
+              }}>
+              Login With Email
+            </Text>
+            <View style={{marginTop: 47}}>
+              <TouchableOpacity
+                onPress={() => setState(!state)}
+                style={{borderBottomWidth: 1, borderColor: '#75997E'}}>
+                {state ? (
+                  <View>
+                    <Text
+                      style={{
+                        color: '#1C5C2E',
+                        fontSize: 14,
+                        // fontWeight: '400',
+                        // marginVertical: 15,
+                        // fontFamily: 'BrandonGrotesque-Regular',
+                      }}>
+                      davidmichael.198@gmail.com
+                    </Text>
+                  </View>
+                ) : (
+                  <View style={{}}>
+                    <Text
+                      style={{
+                        color: '#1C5C2E',
+                        fontSize: 14,
+                        
+                        // fontWeight: '400',
+                        // marginVertical: 15,
+                        // fontFamily: 'BrandonGrotesque-Regular',
+                      }}>
+                      Email Adddress
+                    </Text>
+                  </View>
+                )}
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => setState1(!state1)}
+                style={{
+                  borderBottomWidth: 1,
+                  borderColor: '#75997E',
+                  marginTop: 80,
+                }}>
+                {state1 ? (
+                  <View>
+                    <Text
+                      style={{
+                        color: '#1C5C2E',
+                        opacity: 0.65,
+                        fontSize: 14,
+                        // fontWeight: '400',
+                        // marginVertical: 15,
+                        // fontFamily: 'BrandonGrotesque-Regular',
+                      }}>
+                      Password
+                    </Text>
+                  </View>
+                ) : (
+                  <View style={{}}>
+                    <Text
+                      style={{
+                        color: '#1C5C2E',
+                        fontSize: 14,
+                        // fontWeight: '400',
+                        // marginVertical: 15,
+                        // fontFamily: 'BrandonGrotesque-Regular',
+                      }}>
+                      **********
+                    </Text>
+                  </View>
+                )}
+              </TouchableOpacity>
             </View>
             <TouchableOpacity
               onPress={() => navigation.navigate('forgerpsaaword')}>
@@ -53,12 +143,14 @@ const Login = ({route, navigation}) => {
                   textAlign: 'right',
                   color: '#1C5C2E',
                   fontSize: 14,
-                  fontWeight: '900',
+                  marginTop: 5,
+                  fontFamily: 'BrandonGrotesque-Bold',
+                  marginTop: 10,
                 }}>
-                Forgot Password?
+                Forget Password?
               </Text>
             </TouchableOpacity>
-            <View style={{marginTop: 10}}>
+            <View style={{marginTop: 42}}>
               <Pinkbtn
                 onPress={() => {
                   {
@@ -86,10 +178,11 @@ const Login = ({route, navigation}) => {
             <Text
               style={{
                 textAlign: 'center',
-                marginVertical: 10,
+                marginVertical: 20,
                 color: '#1C5C2E',
                 fontSize: 18,
                 fontWeight: '500',
+                // fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Or
             </Text>
@@ -107,19 +200,17 @@ const Login = ({route, navigation}) => {
               <Text
                 style={{
                   textAlign: 'center',
-                  marginVertical: 10,
+
                   color: '#1C5C2E',
                   fontSize: 18,
                   fontWeight: '500',
-                  // backgroundColor: 'pink',
+                  fontFamily: 'BrandonGrotesque-Medium',
                 }}>
-                Don't have an account ?
+                Don't have an account?
                 <Text
-                  styles={{
+                  style={{
                     fontWeight: 'bold',
                     textDecorationLine: 'underline',
-                    textDecorationLine: 'underline',
-                    // color: 'yellow',
                   }}>
                   Sign Up
                 </Text>
@@ -135,11 +226,11 @@ const Login = ({route, navigation}) => {
 const styles = StyleSheet.create({
   main: {flex: 1, alignItems: 'center'},
   input: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    borderBottomWidth: 1,
-    borderColor: 'lightgrey',
-    marginVertical: 10,
+    // flexDirection: 'row',
+    // justifyContent: 'space-between',dlew
+    borderBottomWidth: 0.8,
+    borderColor: '#1C5C2E',
+    opacity: 0.6,
     marginTop: 20,
   },
 });

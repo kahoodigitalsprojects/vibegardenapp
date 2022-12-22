@@ -12,8 +12,9 @@ import {
   FlatList,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {Imgbox, SeeAll, Userdetails} from '../../../componrnts';
+import {SeeAll, Userdetails} from '../../../componrnts';
 import All from '../../../componrnts/all';
+import Imgbox from '../../../componrnts/imgbox';
 import MainBox from '../../../componrnts/mainbox';
 import Searcbart1 from '../../../componrnts/searchbar1';
 import Images from '../../../constants';
@@ -27,26 +28,23 @@ const Search2 = ({route, navigation, otherParam}) => {
       heart1: Images.Icons.heart1,
       title: 'Title',
       iconimg1: Images.Icons.Pcircle,
-    },
-    {
-      heart1: Images.Icons.heart1,
-      title: 'Title',
-      iconimg1: Images.Icons.prectangel,
+      bg12: Images.BackGround.Bg2,
+      plus: 'plus',
+      iconimg: Images.Icons.Pcircle,
     },
 
     {
       heart1: Images.Icons.heart1,
       title: 'Title',
       iconimg1: Images.Icons.sun,
-    },
-    {
       heart1: Images.Icons.heart1,
-      title: 'Title',
-      iconimg1: Images.Icons.Pcircle,
+      bg12: Images.BackGround.Bg2,
+      plus: 'plus',
     },
   ];
   databox2 = [
     {
+      heart1: Images.Icons.heart1,
       heart1: Images.Icons.heart1,
       title: 'Title',
       iconimg1: Images.Icons.pinki,
@@ -165,96 +163,82 @@ const Search2 = ({route, navigation, otherParam}) => {
           <Searcbart1 onpress1={() => navigation.goBack('')} />
         </View>
         <View style={styles.container}>
-          <View style={styles.row}>
+          <View
+            style={{
+              width: '100%',
+              borderBottomWidth: 1,
+              borderColor: '#1C5C2E',
+            }}>
             <View
               style={{
+                width: '95%',
                 alignSelf: 'center',
-                alignSelf: 'center',
-                display: 'flex',
-                flexGrow: 1,
+                // backgroundColor: 'yellow',
+                flexDirection: 'row',
+                justifyContent: 'space-between',
               }}>
               <TouchableOpacity
                 onPress={() => (data1 === 0 ? '' : setData1(0))}
                 style={{
-                  backgroundColor: data1 === 0 ? '#205F2E' : '#D1DED5',
+                  backgroundColor: data1 === 0 ? '#1C5C2E' : '#D1DED5',
                   elevation: data1 === 1 ? 0 : 5,
-                  // width: '33%',
                   borderRadius: 5,
-                  padding: 10,
+                  alignSelf: 'center',
+                  paddingVertical: 5,
                   paddingLeft: 20,
                   paddingRight: 20,
-                  alignSelf: 'center',
-                  marginHorizontal: 28,
-                  // backgroundColor: 'yellow',
                 }}>
                 <Text
                   style={{
-                    color: data1 === 0 ? '#fff' : '#1C5C2E87',
+                    color: data1 === 0 ? '#fff' : '#1C5C2E',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
                   All
                 </Text>
               </TouchableOpacity>
-            </View>
-            <View
-              style={{
-                alignSelf: 'center',
-                alignSelf: 'center',
-                display: 'flex',
-                flexGrow: 1,
-              }}>
+
               <TouchableOpacity
                 onPress={() => (data1 === 1 ? '' : setData1(1))}
                 style={{
                   backgroundColor: data1 === 1 ? '#205F2E' : '#D1DED5',
                   elevation: data1 === 1 ? 0 : 5,
-                  // width: '33%',
                   borderRadius: 5,
-                  padding: 10,
                   alignSelf: 'center',
-                  marginHorizontal: 28,
-                  // backgroundColor: 'yellow',
+                  paddingVertical: 5,
                   paddingLeft: 20,
                   paddingRight: 20,
                 }}>
                 <Text
                   style={{
-                    color: data1 === 1 ? '#fff' : '#1C5C2E87',
+                    color: data1 === 1 ? '#fff' : '#205F2E',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
                   Tools
                 </Text>
               </TouchableOpacity>
-            </View>
-            <View
-              style={{
-                alignSelf: 'center',
-                alignSelf: 'center',
-                display: 'flex',
-                flexGrow: 1,
-              }}>
+
               <TouchableOpacity
                 onPress={() => (data1 === 2 ? '' : setData1(2))}
                 style={{
                   backgroundColor: data1 === 2 ? '#205F2E' : '#D1DED5',
                   elevation: data1 === 1 ? 0 : 5,
-                  // width: '33%',
                   borderRadius: 5,
-                  padding: 10,
                   alignSelf: 'center',
-                  marginHorizontal: 28,
-                  // backgroundColor: 'yellow',
+                  paddingVertical: 5,
                   paddingLeft: 20,
                   paddingRight: 20,
                 }}>
                 <Text
                   style={{
-                    color: data1 === 2 ? '#fff' : '#1C5C2E87',
+                    color: data1 === 2 ? '#fff' : '#205F2E',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
                   Ground Work
                 </Text>
               </TouchableOpacity>
             </View>
           </View>
-          <View style={{width: '100%', marginVertical: 5}}>
+          <View style={{width: '100%', marginTop: 10}}>
             {data1 === 0 ? (
               <>
                 <View
@@ -284,7 +268,13 @@ const Search2 = ({route, navigation, otherParam}) => {
                       });
                     }}
                     style={[styles.topics, {backgroundColor: '#fff'}]}>
-                    <Text style={{color: '#1C5C2E', fontSize: 16, margin: 6}}>
+                    <Text
+                      style={{
+                        color: '#1C5C2E',
+                        fontSize: 16,
+                        margin: 6,
+                        fontFamily: 'BrandonGrotesque-Regular',
+                      }}>
                       Topics
                     </Text>
                     <Icon
@@ -317,7 +307,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                   <View style={styles.box1}>
                     <ScrollView
                       horizontal={true}
-                      showsHorizontalScrollIndicator={true}>
+                      showsHorizontalScrollIndicator={false}>
                       {data.map((item, index) => {
                         return (
                           <>
@@ -344,7 +334,14 @@ const Search2 = ({route, navigation, otherParam}) => {
                   <View style={{marginVertical: 10}}>
                     <SeeAll
                       onPress={() =>
-                        navigation.navigate('Mytabs', {screen: ''})
+                        navigation.navigate('Mytabs', {
+                          screen: '',
+                          params: {
+                            backoption: navigation.navigate('Mytabs', {
+                              screen: 'me',
+                            }),
+                          },
+                        })
                       }
                       color1="#1C5C2E"
                       textA="GROUND WORK"
@@ -354,7 +351,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                   <View style={{}}>
                     <ScrollView
                       horizontal={true}
-                      showsHorizontalScrollIndicator={true}>
+                      showsHorizontalScrollIndicator={false}>
                       {data.map((item, index) => {
                         return (
                           <>
@@ -425,11 +422,11 @@ const Search2 = ({route, navigation, otherParam}) => {
                     </ScrollView>
                   </View>
                 </View>
-                <View style={{}}>
+                <View style={{marginVertical: 20}}>
                   <SeeAll color1="#1C5C2E" textA="TEACHERS" textB="SeeAll" />
                 </View>
 
-                <View style={{}}>
+                <View style={{marginTop: -15}}>
                   <FlatList
                     showsHorizontalScrollIndicator={false}
                     data={data2}
@@ -438,7 +435,6 @@ const Search2 = ({route, navigation, otherParam}) => {
                         <>
                           <View
                             style={{
-                              marginTop: 20,
                               marginVertical: 5,
                               width: '100%',
                               alignSelf: 'center',
@@ -468,7 +464,13 @@ const Search2 = ({route, navigation, otherParam}) => {
                     alignSelf: 'flex-start',
                   }}>
                   <TouchableOpacity style={styles.topics}>
-                    <Text style={{color: '#1C5C2E', fontSize: 16, margin: 6}}>
+                    <Text
+                      style={{
+                        color: '#1C5C2E',
+                        fontSize: 16,
+                        margin: 6,
+                        fontFamily: 'BrandonGrotesque-Regular',
+                      }}>
                       Topics
                     </Text>
                     <Icon
@@ -490,7 +492,13 @@ const Search2 = ({route, navigation, otherParam}) => {
                       });
                     }}
                     style={styles.topics}>
-                    <Text style={{color: '#1C5C2E', fontSize: 16, margin: 6}}>
+                    <Text
+                      style={{
+                        color: '#1C5C2E',
+                        fontSize: 16,
+                        margin: 6,
+                        fontFamily: 'BrandonGrotesque-Regular',
+                      }}>
                       Types
                     </Text>
                     <Icon
@@ -502,56 +510,43 @@ const Search2 = ({route, navigation, otherParam}) => {
                   </TouchableOpacity>
                 </View>
 
-                <View style={{marginTop: 20}}>
-                  <View style={styles.box1}>
-                    <FlatList
-                      showsHorizontalScrollIndicator={false}
-                      keyExtractor={item => item.id}
-                      numColumns={2}
-                      data={databox}
-                      renderItem={({item}) => {
-                        return (
-                          <View
-                            style={{
-                              alignSelf: 'center',
-                              // display: 'flex',
-                              // flexGrow: 1,
-                              // width: '50%',
-                              margin: 10,
-                            }}>
-                            <Imgbox
-                              iconimg={item.iconimg1}
-                              homebox
-                              plus="plus"
-                              title={item.title}
-                            />
-                          </View>
-                        );
-                      }}
-                    />
-                  </View>
+                <View style={[styles.box2, {}]}>
+                  <FlatList
+                    showsHorizontalScrollIndicator={false}
+                    keyExtractor={item => item.id}
+                    data={databox}
+                    renderItem={({item}) => {
+                      return (
+                        <All
+                          pressI={() =>
+                            props.navigation.navigate('Homes', {
+                              screen: 'Video',
+                              params: {
+                                otherParam: false,
+                                plus: false,
+                                otherParam1: 'FAMILY OF LIGHT',
+                                icon1: false,
+                                backoption: () =>
+                                  props.navigation.navigate('Mytabs', {
+                                    screen: 'GroundWork',
+                                  }),
+                              },
+                            })
+                          }
+                          iconimg1
+                          onPressALL={item.pressAll}
+                          textA={item.textA}
+                          // heart1={item.heart1}
+                          textB={item.textB}
+                          homebox
+                          plus={item.plus}
+                          bghome2={item.bg12}
+                          title={item.title}
+                        />
+                      );
+                    }}
+                  />
                 </View>
-                {/* <View style={{}}>
-                  <View style={styles.box1}></View>
-                  <View style={{}}>
-                    <All
-                      plus="plus"
-                      homebox
-                      bghome2={Images.BackGround.greenbg}
-                      title={'title'}
-                    />
-                  </View>
-                  <View style={{}}>
-                    <All
-                      plus="plus"
-                      iconimg
-                      iconimg2={true}
-                      homebox
-                      bghome2={Images.BackGround.greenbg}
-                      title={'title'}
-                    />
-                  </View>
-                </View> */}
               </>
             ) : null}
             {data1 === 2 ? (
@@ -564,7 +559,13 @@ const Search2 = ({route, navigation, otherParam}) => {
                     alignSelf: 'center',
                   }}>
                   <TouchableOpacity onPress={() => {}} style={styles.topics}>
-                    <Text style={{color: '#1C5C2E', fontSize: 16, margin: 6}}>
+                    <Text
+                      style={{
+                        color: '#1C5C2E',
+                        fontSize: 16,
+                        margin: 6,
+                        fontFamily: 'BrandonGrotesque-Regular',
+                      }}>
                       Quantum Physics
                     </Text>
                     <Icon
@@ -588,7 +589,13 @@ const Search2 = ({route, navigation, otherParam}) => {
                       });
                     }}
                     style={styles.topics}>
-                    <Text style={{color: '#1C5C2E', fontSize: 16, margin: 6}}>
+                    <Text
+                      style={{
+                        color: '#1C5C2E',
+                        fontSize: 16,
+                        margin: 6,
+                        fontFamily: 'BrandonGrotesque-Regular',
+                      }}>
                       Types
                     </Text>
                     <Icon
@@ -599,32 +606,36 @@ const Search2 = ({route, navigation, otherParam}) => {
                     />
                   </TouchableOpacity>
                 </View>
-                <View style={{marginTop: 20}}>
-                  <View style={styles.box1}>
-                    <FlatList
-                      showsHorizontalScrollIndicator={false}
-                      keyExtractor={item => item.id}
-                      numColumns={2}
-                      data={databox2}
-                      renderItem={({item}) => {
-                        return (
-                          <View
-                            style={{
-                              alignSelf: 'center',
-                              display: 'flex',
-                              flexGrow: 1,
-                            }}>
-                            <Imgbox
-                              iconimg={item.iconimg1}
-                              homebox
-                              plus="plus"
-                              title={item.title}
-                            />
-                          </View>
-                        );
-                      }}
-                    />
-                  </View>
+                <View style={styles.box1}>
+                  <FlatList
+                    showsHorizontalScrollIndicator={false}
+                    keyExtractor={item => item.id}
+                    numColumns={2}
+                    data={databox}
+                    renderItem={({item}) => {
+                      return (
+                        <View
+                          style={{
+                            alignSelf: 'center',
+                            // display: 'flex',
+                            // flexGrow: 1,
+                            // width: '50%',
+                          }}>
+                          <All
+                            color1="#1C5C2E"
+                            onPressALL={item.pressAll}
+                            textA={item.textA}
+                            // heart1={item.heart1}
+                            textB={item.textB}
+                            homebox
+                            plus={item.plus}
+                            bghome2={item.bg12}
+                            title={item.title}
+                          />
+                        </View>
+                      );
+                    }}
+                  />
                 </View>
               </>
             ) : null}
@@ -660,7 +671,8 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    // justifyContent: 'space-around',
+    justifyContent: 'space-between',
     width: '100%',
 
     // padding: 10,

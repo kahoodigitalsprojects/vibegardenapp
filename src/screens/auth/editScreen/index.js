@@ -9,7 +9,7 @@ import {
   Switch,
   Image,
   TouchableOpacity,
-  Appearance
+  Appearance,
 } from 'react-native';
 
 import {Header, Pinkbtn, QComponents, Switch1} from '../../../componrnts';
@@ -17,8 +17,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Images from '../../../constants';
 
 const EditScreen = ({navigation, route}) => {
-   let colorScheme = Appearance.getColorScheme();
-   console.log(colorScheme);
+  let colorScheme = Appearance.getColorScheme();
+  console.log(colorScheme);
   const {itemId} = route.params;
   const {otherParam} = route.params;
   const {otherParam1} = route.params;
@@ -33,8 +33,8 @@ const EditScreen = ({navigation, route}) => {
         <StatusBar backgroundColor={'transparent'} translucent={true} />
         <View
           style={{
-            marginVertical: 10,
-            marginTop: 10,
+            // marginVertical: 10,
+            marginTop: 30,
             width: '90%',
             alignSelf: 'center',
           }}>
@@ -86,12 +86,13 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginVertical: 20,
     borderBottomWidth: 1,
-    borderColor: '#1C5C2E',
+    borderColor: '#75997E',
   },
   Text: {
-    color: '#1C5C2E',
+    color: '#75997E',
     fontSize: 14,
     marginVertical: 5,
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   btns: {
     flexDirection: 'row',

@@ -31,8 +31,8 @@ const Registerd = ({route, navigation}) => {
           />
           <View
             style={{
-              width: 100,
-              height: 100,
+              width: 120,
+              height: 120,
               marginTop: 30,
               alignSelf: 'center',
             }}>
@@ -58,15 +58,24 @@ const Registerd = ({route, navigation}) => {
                 })
               }>
               <View style={{width: '100%'}}>
-                <Text style={{fontSize: 15, color: '#000'}}>
-                  This Email Is Already Registered With Vibegarden , Please ,
+                <Text
+                  style={{
+                    fontSize: 15,
+                    color: '#000',
+                    lineHeight: 30,
+                    fontFamily: 'BrandonGrotesque-Medium',
+                    fontWeight: '600',
+                  }}>
+                  This Email Is Already Registered With Vibegarden, Please{' '}
                   <Text
                     style={{
-                      fontWeight: '600',
                       color: '#1C5C2E',
-                      paddingLeft: 10,
+                      borderBottomWidth: 1,
+                      textAlign: 'justify',
+                      // fontWeight: '600',
                       textDecorationLine: 'underline',
                       letterSpacing: 1,
+                      fontFamily: 'BrandonGrotesque-Medium',
                     }}>
                     Log In.
                   </Text>
@@ -75,7 +84,12 @@ const Registerd = ({route, navigation}) => {
             </TouchableOpacity>
             <View style={{marginVertical: 20, alignSelf: 'center'}}>
               <Text
-                style={{fontWeight: '600', color: '#1C5C2E', paddingLeft: 10}}>
+                style={{
+                  fontWeight: '600',
+                  color: '#1C5C2E',
+                  paddingLeft: 10,
+                  fontFamily: 'BrandonGrotesque-Medium',
+                }}>
                 Or
               </Text>
             </View>
@@ -85,17 +99,25 @@ const Registerd = ({route, navigation}) => {
                 flexDirection: 'row',
               }}
               onPress={() => navigation.navigate('forgerpsaaword')}>
-              <Text style={{fontSize: 15, color: '#000'}}>
-                Or If You’ve Forgotten Your Password,
+              <Text
+                style={{
+                  fontSize: 15,
+                  color: '#000',
+                  lineHeight: 30,
+                  fontFamily: 'BrandonGrotesque-Medium',
+                }}>
+                Or If You’ve Forgotten Your Password,{' '}
                 <Text
                   style={{
-                    fontWeight: '600',
                     color: '#1C5C2E',
-                    marginLeft: 3,
-                    fontSize: 15,
+                    borderBottomWidth: 1,
+                    textAlign: 'justify',
+
                     textDecorationLine: 'underline',
+                    letterSpacing: 1,
+                    fontFamily: 'BrandonGrotesque-Medium',
                   }}>
-                  Click Here
+                  Click Here.
                 </Text>
               </Text>
             </TouchableOpacity>

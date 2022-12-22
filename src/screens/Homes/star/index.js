@@ -1,4 +1,4 @@
-import React, { startTransition, useState } from 'react';
+import React, {startTransition, useState} from 'react';
 import {
   View,
   Text,
@@ -9,7 +9,7 @@ import {
   Image,
 } from 'react-native';
 
-import { Header, Pinkbtn, QComponents } from '../../../componrnts';
+import {Header, Pinkbtn, QComponents} from '../../../componrnts';
 import Images from '../../../constants';
 
 const Star = props => {
@@ -17,7 +17,7 @@ const Star = props => {
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ flexGrow: 1 }}>
+        contentContainerStyle={{flexGrow: 1}}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
@@ -29,7 +29,9 @@ const Star = props => {
           <Header
             iconName="closesquareo"
             header2
-            OnPress={() => props.navigation.replace('Mytabs',{screen: 'Homes'})}
+            OnPress={() =>
+              props.navigation.replace('Mytabs', {screen: 'Homes'})
+            }
           />
           <View
             style={{
@@ -41,7 +43,7 @@ const Star = props => {
             <Image source={Images.Imgs.nebula} />
           </View>
 
-          <View style={{ marginVertical: 5, alignSelf: 'center' }}>
+          <View style={{marginVertical: 5, alignSelf: 'center'}}>
             <Text
               style={{
                 fontSize: 25,
@@ -49,6 +51,7 @@ const Star = props => {
                 color: '#000',
                 fontWeight: '500',
                 marginVertical: 5,
+                fontFamily: 'BrandonGrotesque-Medium',
               }}>
               You're Start!
             </Text>
@@ -60,6 +63,7 @@ const Star = props => {
                 color: '#000',
                 fontWeight: '400',
                 lineHeight: 30,
+                fontFamily: 'BrandonGrotesque-Medium',
               }}>
               Your Feedback Insight Will Help Us Refining Our Tools &
               Recommendations!
@@ -71,6 +75,7 @@ const Star = props => {
                 color: '#1C5C2E',
                 fontWeight: '600',
                 marginVertical: 5,
+                fontFamily: 'BrandonGrotesque-Medium',
               }}>
               With Gratitude!
             </Text>

@@ -69,7 +69,7 @@ const Video = ({route, navigation}) => {
   const Data2 = [
     {
       bg1: Images.BackGround.black,
-      bg12: Images.BackGround.greenbg,
+      bg12: Images.BackGround.Bg2,
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'title',
@@ -125,6 +125,7 @@ const Video = ({route, navigation}) => {
                 flowwerlist={otherParam}
                 iconone1={plus}
                 //   video={true}
+                marginTop1={-20}
                 name11="plus"
                 name="heart-outlined"
                 video2={true}
@@ -136,7 +137,7 @@ const Video = ({route, navigation}) => {
                 // marginVertical={24}
                 name2="heart-outlined"
                 width={'95%'}
-                Statement="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.."
+                Statementtext="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.."
               />
             </View>
 
@@ -158,7 +159,12 @@ const Video = ({route, navigation}) => {
                           alignSelf: 'flex-start',
                         }}>
                         <TouchableOpacity style={[styles.topics, {padding: 6}]}>
-                          <Text style={{color: '#1C5C2E', fontSize: 12}}>
+                          <Text
+                            style={{
+                              color: '#1C5C2E',
+                              fontSize: 12,
+                              fontFamily: 'BrandonGrotesque-Regular',
+                            }}>
                             {item.texlist}
                           </Text>
                         </TouchableOpacity>
@@ -180,6 +186,7 @@ const Video = ({route, navigation}) => {
                       style={{
                         fontSize: 20,
                         color: '#1C5C2E',
+                        fontFamily: 'BrandonGrotesque-Regular',
                       }}>
                       Did you try this tools?
                     </Text>
@@ -215,6 +222,7 @@ const Video = ({route, navigation}) => {
                     color: 'black',
                     fontSize: 14,
                     color: '#1C5C2E',
+                    fontFamily: 'BrandonGrotesque-Bold',
                   }}>
                   Comments
                 </Text>
@@ -225,7 +233,7 @@ const Video = ({route, navigation}) => {
               {Data3.map(index => {
                 return (
                   <View style={{}}>
-                    <ScrollView style={{marginVertical: 10, height: 115}}>
+                    <ScrollView style={{marginVertical: 10, height: 120}}>
                       <View style={styles.item1}>
                         <Userdetails
                           databox1
@@ -246,16 +254,19 @@ const Video = ({route, navigation}) => {
           </View>
 
           <View
-            style={{
-              width: '95%',
-              alignSelf: 'center',
-            }}>
+            style={
+              {
+                // width: '95%',
+                // alignSelf: 'center',
+              }
+            }>
             <View style={styles.row}>
               <Text
                 style={{
                   color: 'black',
                   fontSize: 20,
                   color: '#1C5C2E',
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 Related Content:
               </Text>
@@ -264,21 +275,34 @@ const Video = ({route, navigation}) => {
               <FlatList
                 showsHorizontalScrollIndicator={false}
                 keyExtractor={item => item.id}
+                numColumns={2}
                 data={Data2}
                 renderItem={({item}) => {
                   return (
-                    <All
-                      textA={item.textA}
-                      textB={item.textB}
-                      homebox
-                      plus={item.plus}
-                      bghome2={item.bg12}
-                      title={item.title}
-                    />
+                    <View
+                      style={{
+                        alignSelf: 'center',
+                        // display: 'flex',
+                        // flexGrow: 1,
+                        // width: '50%',
+                      }}>
+                      <All
+                        color1="#1C5C2E"
+                        onPressALL={item.pressAll}
+                        textA={item.textA}
+                        // heart1={item.heart1}
+                        textB={item.textB}
+                        homebox
+                        plus={item.plus}
+                        bghome2={item.bg12}
+                        title={item.title}
+                      />
+                    </View>
                   );
                 }}
               />
             </View>
+
             <View
               style={{
                 width: '90%',
@@ -294,6 +318,7 @@ const Video = ({route, navigation}) => {
                   color: 'black',
                   fontSize: 12,
                   marginVertical: 20,
+                  fontFamily: 'BrandonGrotesque-Medium',
                 }}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
@@ -354,12 +379,14 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#1C5C2E',
     marginTop: 5,
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   text1: {
     fontSize: 25,
     textAlign: 'center',
     color: '#000',
     fontWeight: '400',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   item1: {
     flexDirection: 'row',
@@ -369,6 +396,7 @@ const styles = StyleSheet.create({
     marginVertical: 2,
     fontSize: 20,
     // textAlign: 'center',
+    fontFamily: 'BrandonGrotesque-Regular',
     color: '#1C5C2E',
     fontWeight: '500',
   },
@@ -386,10 +414,11 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   box1: {
-    width: '100%',
+    width: '90%',
     alignSelf: 'center',
     // height: '100%',
     // backgroundColor: 'yellow',
+    marginTop: -30,
   },
   row: {
     flexDirection: 'row',

@@ -39,7 +39,7 @@ const Greenbox = ({
       Image1: Images.Icons.circle,
       Image2: Images.Icons.blocks,
       title: 'Tools for Shadow',
-      title2: 'build Blocks',
+      title2: 'Build Blocks',
     },
     {
       Image2: Images.Icons.gdownload,
@@ -98,6 +98,8 @@ const Greenbox = ({
                     style={{
                       textAlign: 'center',
                       color: data1 === index ? '#fff' : '#1C5C2E',
+                      fontFamily: 'BrandonGrotesque-Regular',
+                      fontSize: 14,
                     }}>
                     {item.title}
                   </Text>
@@ -115,6 +117,7 @@ const Greenbox = ({
                     <Text
                       style={{
                         textAlign: 'center',
+                        fontFamily: 'BrandonGrotesque-Regular',
                         color: data1 === index ? '#fff' : '#000',
                       }}>
                       {item.title2}
@@ -146,7 +149,8 @@ const Greenbox = ({
                   <Text
                     style={{
                       textAlign: 'center',
-                      color:'#1C5C2E',
+                      fontFamily: 'BrandonGrotesque-Regular',
+                      color: '#1C5C2E',
                       fontSize: 12,
                     }}>
                     {item.name}
@@ -170,7 +174,9 @@ const Greenbox = ({
             justifyContent: 'center',
             alignItems: 'center',
           }}>
-          <Text style={{color: '#fff'}}>+</Text>
+          <Text style={{color: '#fff', fontFamily: 'BrandonGrotesque-Regular'}}>
+            +
+          </Text>
         </TouchableOpacity>
       </View>
     </View>

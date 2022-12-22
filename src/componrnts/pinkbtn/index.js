@@ -9,7 +9,13 @@ const Pinkbtn = ({btntxt, width, onPress, onpres2, onpres3}) => {
         <LinearGradient
           colors={['#ED535E', '#CD258D']}
           style={[styles.btn1, {width: width}]}>
-          <Text style={{fontWeight: '400', color: '#fff', fontSize: 18}}>
+          <Text
+            style={{
+              fontWeight: '400',
+              color: '#fff',
+              fontSize: 18,
+              fontFamily: 'BrandonGrotesque-Regular',
+            }}>
             {btntxt}
           </Text>
         </LinearGradient>
@@ -19,15 +25,24 @@ const Pinkbtn = ({btntxt, width, onPress, onpres2, onpres3}) => {
 };
 
 export {Pinkbtn};
-
 const styles = StyleSheet.create({
   btn1: {
+    shadowColor: 'red',
+    shadowOffset: {
+      width: 50,
+      height: 52,
+    },
+    shadowOpacity: 20.58,
+    shadowRadius: 16.0,
+    elevation: 24,
+
     marginVertical: 15,
     alignSelf: 'center',
     justifyContent: 'center',
     alignItems: 'center',
     height: 55,
+    // elevation: 10,
+    // shadowColor: '#aaaa',
     borderRadius: 30,
-    backgroundColor: '#ED535E',
   },
 });

@@ -43,6 +43,7 @@ const MeetScreen2 = ({route, navigation}) => {
                   style={{
                     fontSize: 18,
                     color: '#000',
+                    fontFamily: 'BrandonGrotesque-Regular',
 
                     lineHeight: 33,
                   }}>
@@ -51,9 +52,7 @@ const MeetScreen2 = ({route, navigation}) => {
               </View>
               <View style={{marginVertical: 20}}>
                 <Pinkbtn
-                  onPress={() =>
-                    navigation.replace('Mytabs', {screen: 'Home'})
-                  }
+                  onPress={() => navigation.replace('Mytabs', {screen: 'Home'})}
                   width={'80%'}
                   btntxt="Take Me To the Garden"
                 />
@@ -82,11 +81,13 @@ const styles = StyleSheet.create({
     color: '#000',
     fontWeight: '400',
     marginVertical: 20,
+    fontFamily: 'BrandonGrotesque-Regular',
   },
 
   txt1: {
     textAlign: 'left',
     fontSize: 18,
     color: '#030303',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
 });

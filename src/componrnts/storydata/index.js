@@ -6,7 +6,7 @@ const StoryData = props => {
     <View>
       {props.storytext1 && (
         <View style={{width: '90%', alignSelf: 'center', marginVertical: 10}}>
-          <Text style={[styles.txt, {textAlign: 'left',lineHeight:24}]}>
+          <Text style={[styles.txt, {textAlign: 'left', lineHeight: 24}]}>
             {props.storytext}
           </Text>
         </View>
@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
   img: {alignSelf: 'center'},
   txt: {
     marginVertical: 15,
+    fontFamily: 'BrandonGrotesque-Regular',
     textAlign: 'center',
     fontSize: 14,
     color: '#1C5C2E',

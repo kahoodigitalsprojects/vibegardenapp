@@ -113,7 +113,11 @@ const PopUp = ({
                 <Text
                   style={[
                     styles.modalText,
-                    {textAlign: 'center', color: '#2196F3'},
+                    {
+                      textAlign: 'center',
+                      color: '#2196F3',
+                      fontFamily: 'BrandonGrotesque-Regular',
+                    },
                   ]}>
                   1 Year Upgraded
                 </Text>
@@ -213,6 +217,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
     textAlign: 'center',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   modalText: {
     marginBottom: 15,
@@ -220,6 +225,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginVertical: 10,
     color: '#000',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
 });
 

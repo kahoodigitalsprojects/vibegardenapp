@@ -35,7 +35,7 @@ const Search3 = ({route, navigation}) => {
     otherParam10,
     otherParam11,
     otherParam12,
-Name
+    Name,
   } = route.params;
   const data = [
     {
@@ -97,7 +97,7 @@ Name
             <Header
               iconName="closesquareo"
               header2
-              OnPress={() => navigation.replace( 'settings')}
+              OnPress={() => navigation.replace('settings')}
             />
 
             <View style={{marginVertical: 5, alignSelf: 'center'}}>
@@ -108,6 +108,7 @@ Name
                   color: '#afafaa',
                   fontWeight: '450',
                   marginVertical: 5,
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 Success
               </Text>
@@ -119,6 +120,7 @@ Name
                   color: '#1C5C2E',
                   fontWeight: '600',
                   marginVertical: 10,
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 Off You Go!
               </Text>
@@ -130,6 +132,7 @@ Name
                   color: '#000',
                   fontWeight: '450',
                   lineHeight: 30,
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 Your Cancelation Is Submitted {'\n'} Be Well!
               </Text>
@@ -164,8 +167,8 @@ Name
               fontWeight: 'bold',
               color: '#1C5C2E',
               marginTop: -30,
+              fontFamily: 'BrandonGrotesque-Regular',
             }}>
-     
             {itemId}
           </Text>
           <FlatList
@@ -180,7 +183,12 @@ Name
                     paddingVertical: 10,
                     marginTop: 15,
                   }}>
-                  <Text style={{fontSize: 18, color: '#000'}}>
+                  <Text
+                    style={{
+                      fontSize: 18,
+                      color: '#000',
+                      fontFamily: 'BrandonGrotesque-Regular',
+                    }}>
                     {item.text1}
                   </Text>
                 </TouchableOpacity>

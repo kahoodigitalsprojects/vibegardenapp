@@ -36,7 +36,9 @@ const QComponents = ({
   video,
   video2,
   image1,
+  marginTop1,
   flowwerlist11,
+  Statement1,
   Statement,
   flow,
   direction,
@@ -75,6 +77,7 @@ const QComponents = ({
               width: '100%',
               height: 202,
               marginTop: 10,
+              margin: 20,
             }}>
             <ImageBackground
               resizeMode="cover"
@@ -108,6 +111,7 @@ const QComponents = ({
                         alignItems: 'center',
                         color: '#fff',
                         textAlign: 'center',
+                        fontFamily: 'BrandonGrotesque-Regular',
                         top: 10,
                       }}>
                       5 min
@@ -140,6 +144,7 @@ const QComponents = ({
                     fontSize: 18,
                     fontWeight: '500',
                     alignSelf: 'center',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
                   {textforvideo}
                 </Text>
@@ -170,7 +175,12 @@ const QComponents = ({
               <Text
                 style={[
                   styles.text2,
-                  {color: '#000', fontSize: 18, marginLeft: 5},
+                  {
+                    color: '#000',
+                    fontSize: 18,
+                    marginLeft: 5,
+                    fontFamily: 'BrandonGrotesque-Regular',
+                  },
                 ]}>
                 {flow}
               </Text>
@@ -187,17 +197,17 @@ const QComponents = ({
               style={{
                 // backgroundColor: 'yellow',
                 width: '100%',
-                marginTop: -20,
+                marginTop: -25,
                 flexDirection: 'row',
                 justifyContent: 'space-between',
               }}>
               <Text
                 style={{
                   marginTop: margintopS,
+                  fontFamily: 'BrandonGrotesque-Medium',
                   color: '#1C5C2E',
-                  // fontWeight: '300',
+                  // fontWeight: '700',
                   fontSize: 20,
-                  lineHeight: 22,
                 }}>
                 {direction}
               </Text>
@@ -217,7 +227,15 @@ const QComponents = ({
           </View>
           <View style={{marginTop: 6}}>
             {text5 && (
-              <Text style={[{color: '#000', fontSize: 18, lineHeight: 30}]}>
+              <Text
+                style={[
+                  {
+                    color: '#000',
+                    fontSize: 18,
+                    lineHeight: 30,
+                    fontFamily: 'BrandonGrotesque-Medium',
+                  },
+                ]}>
                 {text5}
               </Text>
             )}
@@ -227,14 +245,26 @@ const QComponents = ({
               style={[
                 {
                   marginTop: margintopS,
-                  color: '#1C5C2E',
-                  // fontWeight: '300',
+                  color: '#000',
                   fontSize: 16,
-                  lineHeight: 22,
-                  marginVertical: 5,
+                  marginTop: marginTop1,
+                  fontFamily: 'BrandonGrotesque-Regular',
                 },
               ]}>
               {Statement}
+            </Text>
+            <Text
+              style={[
+                {
+                  marginTop: margintopS,
+                  color: '#1C5C2E',
+                  fontSize: 20,
+                  marginTop: marginTop1,
+                  fontFamily: 'BrandonGrotesque-Medium',
+                  // letterSpacing: 1.5,
+                },
+              ]}>
+              {Statement1}
             </Text>
           </View>
           {text6 && (
@@ -243,57 +273,62 @@ const QComponents = ({
                 style={[
                   styles.text2,
                   {
-                    color: '#1C5C2E',
-                    fontWeight: '450',
-                    fontSize: 22,
-                    letterSpacing: 1.5,
-                    fontSize: 20,
+                    fontSize: 31,
                     color: '#000',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   },
                 ]}>
                 {text6}
               </Text>
             </View>
           )}
-          {flowwerlist11 && (
-            <View style={{padding: 6}}>
-              <FlatList
-                horizontal={true}
-                data={data}
-                renderItem={({item, index}) => {
-                  return (
-                    <>
-                      <View style={{height: '100%'}}>
-                        <TouchableOpacity
-                          onPress={item.onPress}
-                          style={styles.circle}>
-                          <Image
-                            source={item.img1}
-                            style={{width: '100%', height: '100%'}}
-                          />
-                        </TouchableOpacity>
-                        <View style={{width: 78}}>
-                          <Text
-                            style={{
-                              margin: 3,
-                              marginTop: 5,
-                              fontSize: 12,
-                              color: '#000',
-                              textAlign: 'center',
-                              color: '#1C5C2E',
-                            }}>
-                            {item.text1}
-                          </Text>
-                        </View>
-                      </View>
-                    </>
-                  );
-                }}
-              />
-            </View>
-          )}
         </View>
       </View>
+      {flowwerlist11 && (
+        <View
+          style={{
+            width: '100%',
+            alignSelf: 'center',
+            alignItems: 'center',
+
+            justifyContent: 'space-around',
+          }}>
+          <FlatList
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+            data={data}
+            renderItem={({item, index}) => {
+              return (
+                <>
+                  <View style={{width: '24%', margin: 2}}>
+                    <TouchableOpacity
+                      onPress={item.onPress}
+                      style={styles.circle}>
+                      <Image
+                        source={item.img1}
+                        style={{width: '100%', height: '100%'}}
+                      />
+                    </TouchableOpacity>
+                    <View style={{width: 78}}>
+                      <Text
+                        style={{
+                          marginTop: 5,
+                          fontSize: 12,
+                          color: '#000',
+                          textAlign: 'center',
+                          fontFamily: 'BrandonGrotesque-Regular',
+                          color: '#1C5C2E',
+                        }}>
+                        {item.text1}
+                      </Text>
+                    </View>
+                  </View>
+                </>
+              );
+            }}
+          />
+        </View>
+      )}
     </>
   );
 };
@@ -315,12 +350,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#000',
     fontWeight: '400',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   text2: {
     fontSize: 20,
     // textAlign: 'center',
     color: '#1C5C2E',
-    fontWeight: '500',
+    // fontWeight: '500',
+    fontFamily: 'BrandonGrotesque-Regular',
   },
   starbg: {
     width: '100%',

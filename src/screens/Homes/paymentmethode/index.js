@@ -35,11 +35,10 @@ const PaymentMethod = ({navigation, route, pres}) => {
               width: '90%',
               alignSelf: 'center',
             }}>
-          
             <Header
               iconName="left"
               header4
-              OnPress={() => props.navigation.goBack('')}
+              OnPress={() => navigation.navigate('ManageSubscription')}
               color="#000"
               fontSize={20}
               headertext2={headertext1}
@@ -53,6 +52,7 @@ const PaymentMethod = ({navigation, route, pres}) => {
                   fontWeight: '500',
                   marginVertical: 5,
                   lineHeight: 39,
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 Payment Details
               </Text>
@@ -64,9 +64,9 @@ const PaymentMethod = ({navigation, route, pres}) => {
                     fontSize: 15,
                     textAlign: 'center',
                     color: '#000',
-                    fontWeight: '500',
-                    marginVertical: 5,
-                    lineHeight: 39,
+                    marginVertical: 10,
+
+                    fontFamily: 'BrandonGrotesque-Bold',
                   }}>
                   Credit Card Or Debit Card
                 </Text>
@@ -78,6 +78,7 @@ const PaymentMethod = ({navigation, route, pres}) => {
                     color: '#1C5C2E',
                     fontWeight: '400',
                     margin: 5,
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
                   Card Number
                 </Text>
@@ -97,6 +98,7 @@ const PaymentMethod = ({navigation, route, pres}) => {
                       color: '#1C5C2E',
                       fontWeight: '400',
                       marginLeft: 10,
+                      fontFamily: 'BrandonGrotesque-Regular',
                     }}>
                     4860567867261538
                   </Text>
@@ -120,6 +122,7 @@ const PaymentMethod = ({navigation, route, pres}) => {
                       color: '#1C5C2E',
                       fontWeight: '400',
                       margin: 5,
+                      fontFamily: 'BrandonGrotesque-Regular',
                     }}>
                     Expiration Date
                   </Text>
@@ -139,6 +142,7 @@ const PaymentMethod = ({navigation, route, pres}) => {
                         color: '#1C5C2E',
                         fontWeight: '400',
                         marginLeft: 10,
+                        fontFamily: 'BrandonGrotesque-Regular',
                       }}>
                       5/2025
                     </Text>
@@ -154,6 +158,7 @@ const PaymentMethod = ({navigation, route, pres}) => {
                       color: '#1C5C2E',
                       fontWeight: '400',
                       margin: 5,
+                      fontFamily: 'BrandonGrotesque-Regular',
                     }}>
                     Security Code
                   </Text>
@@ -173,6 +178,7 @@ const PaymentMethod = ({navigation, route, pres}) => {
                         color: '#1C5C2E',
                         fontWeight: '400',
                         marginLeft: 10,
+                        fontFamily: 'BrandonGrotesque-Regular',
                       }}>
                       147
                     </Text>

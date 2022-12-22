@@ -44,31 +44,31 @@ const Question2 = props => {
             headertext="Resonance Finder"
             OnPress={() => props.navigation.goBack('')}
           />
-          <View style={{width: '100%'}}>
-            <QComponents
-              marginVertical={10}
-              flowwerlist11={true}
-              iconone
-              textforvideo="Resonance Finder Video Here"
-              name2="chevron-up"
-              video={true}
-              width={'100%'}
-              direction2="Description:"
-              Statement="Statement:"
-              flow="Flow Through"
-              margintopS={31}
-              number={'1/20'}
-              text1={'That Bananas'}
-              text2="?"
-              fontSizetext2={34}
-              text3={'May be but how do we know'}
-              text4="OH,100%"
-              text5={
-                'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.'
-              }
-              text6={'Plants are sentilents'}
-            />
-          </View>
+        </View>
+        <View style={{width: '100%'}}>
+          <QComponents
+            marginVertical={10}
+            flowwerlist11={true}
+            iconone
+            textforvideo="Resonance Finder Video Here"
+            name2="chevron-up"
+            video={true}
+            width={'100%'}
+            direction2="Description:"
+            Statement1="Statement:"
+            flow="Flow Through"
+            margintopS={31}
+            number={'1/20'}
+            text1={'That Bananas'}
+            text2="?"
+            fontSizetext2={34}
+            text3={'May be but how do we know'}
+            text4="OH,100%"
+            text5={
+              'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.'
+            }
+            text6={'Plants are sentilents'}
+          />
         </View>
 
         <View style={{marginTop: 20}}>

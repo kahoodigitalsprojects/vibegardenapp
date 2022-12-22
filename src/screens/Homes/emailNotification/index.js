@@ -93,11 +93,11 @@ const styles = StyleSheet.create({
   },
   text1: {
     color: '#000',
-    fontSize: 18,
-    fontWeight: 'bold',
+    fontSize: 20,
     marginVertical: 4,
+    fontFamily: 'BrandonGrotesque-Medium',
   },
-  text2: {color: '#000', fontSize: 18},
+  text2: {color: '#000', fontSize: 18, fontFamily: 'BrandonGrotesque-Regular'},
 
   switchView: {
     // backgroundColor: 'green',
