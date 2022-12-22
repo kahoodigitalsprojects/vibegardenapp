@@ -1,10 +1,22 @@
-import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableWithoutFeedback,
+  TouchableOpacity,
+  Image,
+} from 'react-native';
 import React, {useState} from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon2 from 'react-native-vector-icons/AntDesign';
 import Icon3 from 'react-native-vector-icons/Ionicons';
 import Images from '../../constants';
-
+import {
+  Menu,
+  MenuOptions,
+  MenuOption,
+  MenuTrigger,
+} from 'react-native-popup-menu';
 const Header = props => {
   const {
     color,
@@ -111,10 +123,22 @@ const Header = props => {
                   style={styles.greenbox}>
                   <Icon3 name="ios-menu" size={25} color="#1C5C2E" />
                 </TouchableOpacity>
-                {state === true ? (
-                  <View style={{}}>
+                <Menu
+                  opened={state}
+                  onBackdropPress={() => setState(!state)}
+                  style={{width: 40}}>
+                  <MenuTrigger></MenuTrigger>
+                  <MenuOptions
+                    optionsContainerStyle={{
+                      width: 40,
+                      backgroundColor: 'transparent',
+                      marginLeft: 1.5,
+                    }}>
                     <TouchableOpacity
-                      onPress={props.OnPress}
+                      onPress={() => {
+                        setState(!state);
+                        props.OnPress();
+                      }}
                       style={[
                         styles.greenbox1,
                         {width: 40, height: 40, padding: 4, marginVertical: 8},
@@ -133,8 +157,37 @@ const Header = props => {
                       ]}>
                       <Icon2 name="setting" size={25} color="#fff" />
                     </TouchableOpacity>
+                  </MenuOptions>
+                </Menu>
+                {/* {state === true ? (
+                  <View
+                    style={{
+                      position: 'absolute',
+                      top: 50,
+                      right: 1,
+                    }}>
+                    <TouchableWithoutFeedback
+                      onPressIn={props.OnPress}
+                      style={[
+                        styles.greenbox1,
+                        {width: 40, height: 40, padding: 4, marginVertical: 8},
+                      ]}>
+                      <Icon3
+                        name="md-notifications-outline"
+                        size={25}
+                        color="#fff"
+                      />
+                    </TouchableWithoutFeedback>
+                    <TouchableWithoutFeedback
+                      onPress={props.OnPress1}
+                      style={[
+                        styles.greenbox1,
+                        {width: 40, height: 40, padding: 4, marginVertical: 10},
+                      ]}>
+                      <Icon2 name="setting" size={25} color="#fff" />
+                    </TouchableWithoutFeedback>
                   </View>
-                ) : null}
+                ) : null} */}
               </View>
             </>
           )}

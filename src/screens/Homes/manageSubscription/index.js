@@ -134,10 +134,7 @@ const ManageSubscription = props => {
             style={{
               alignSelf: 'center',
               marginTop: 150,
-<<<<<<< HEAD
-=======
               justifyContent: 'flex-end',
->>>>>>> 3c749e39f1db76297a1f2ef5b5c158d18a0f5f8d
             }}>
             <Text
               style={[
@@ -167,7 +164,6 @@ const styles = StyleSheet.create({
     width: '100%',
     alignSelf: 'center',
     marginVertical: 10,
-    flexDirection: 'row',
   },
   firstview: {
     marginTop: 30,
@@ -175,13 +171,6 @@ const styles = StyleSheet.create({
     width: '90%',
     alignSelf: 'center',
     height: '85%',
-  },
-  text1: {
-    marginVertical: 10,
-    color: '#1C5C2E',
-
-    fontSize: 16,
-    fontFamily: 'BrandonGrotesque-Regular',
   },
   text1: {
     fontSize: 18,
@@ -198,12 +187,11 @@ const styles = StyleSheet.create({
 
   box: {
     width: 100,
-    justifyContent: 'center',
+    // justifyContent: 'center',
     justifyContent: 'space-around',
     borderWidth: 1,
     borderColor: 'green',
     borderRadius: 25,
-    elevation: 1,
     backgroundColor: '#fff',
     flexDirection: 'row',
     elevation: 6,

@@ -17,11 +17,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useIsFocused} from '@react-navigation/native';
 const Login = ({route, navigation}) => {
   const [state, setState] = useState(true);
-<<<<<<< HEAD
   const [state1, setState1] = useState(true);
   const [message, setMessage] = useState('');
-=======
->>>>>>> 3c749e39f1db76297a1f2ef5b5c158d18a0f5f8d
   const isFocused = useIsFocused();
   useEffect(() => {
     Orientation.unlockAllOrientations();
