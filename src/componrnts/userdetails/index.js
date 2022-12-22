@@ -138,7 +138,11 @@ const Userdetails = ({
                 }}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
+<<<<<<< HEAD
                 aliquyam erat, sed diam voluptua. Link
+=======
+                aliquyam erat, sed diam voluptua.
+>>>>>>> 3c749e39f1db76297a1f2ef5b5c158d18a0f5f8d
               </Text>
               <View style={{alignSelf: 'flex-end'}}>
                 <Text

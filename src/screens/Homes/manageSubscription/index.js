@@ -134,6 +134,10 @@ const ManageSubscription = props => {
             style={{
               alignSelf: 'center',
               marginTop: 150,
+<<<<<<< HEAD
+=======
+              justifyContent: 'flex-end',
+>>>>>>> 3c749e39f1db76297a1f2ef5b5c158d18a0f5f8d
             }}>
             <Text
               style={[

@@ -245,7 +245,11 @@ const QComponents = ({
               style={[
                 {
                   marginTop: margintopS,
+<<<<<<< HEAD
                   color: '#000000',
+=======
+                  color: '#000',
+>>>>>>> 3c749e39f1db76297a1f2ef5b5c158d18a0f5f8d
                   fontSize: 16,
                   marginTop: marginTop1,
                   fontFamily: 'BrandonGrotesque-Regular',

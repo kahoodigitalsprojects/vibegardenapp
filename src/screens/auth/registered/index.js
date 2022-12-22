@@ -105,6 +105,10 @@ const Registerd = ({route, navigation}) => {
                   color: '#000',
                   lineHeight: 30,
                   fontFamily: 'BrandonGrotesque-Medium',
+<<<<<<< HEAD
+=======
+                  fontWeight: '600',
+>>>>>>> 3c749e39f1db76297a1f2ef5b5c158d18a0f5f8d
                 }}>
                 Or If You’ve Forgotten Your Password,{' '}
                 <Text

@@ -14,6 +14,9 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-Vibe_Garden-Vibe_GardenTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Vibe_Garden-Vibe_GardenTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		F968583D295317890022AAD6 /* BrandonGrotesque-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F968583A295317890022AAD6 /* BrandonGrotesque-Medium.otf */; };
+		F968583E295317890022AAD6 /* BrandonGrotesque-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F968583B295317890022AAD6 /* BrandonGrotesque-Bold.otf */; };
+		F968583F295317890022AAD6 /* BrandonGrotesque-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F968583C295317890022AAD6 /* BrandonGrotesque-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,12 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Vibe_Garden/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Vibe_Garden-Vibe_GardenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vibe_Garden-Vibe_GardenTests.release.xcconfig"; path = "Target Support Files/Pods-Vibe_Garden-Vibe_GardenTests/Pods-Vibe_Garden-Vibe_GardenTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F968583A295317890022AAD6 /* BrandonGrotesque-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BrandonGrotesque-Medium.otf"; path = "../android/app/src/main/assets/fonts/BrandonGrotesque-Medium.otf"; sourceTree = "<group>"; };
+		F968583B295317890022AAD6 /* BrandonGrotesque-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BrandonGrotesque-Bold.otf"; path = "../android/app/src/main/assets/fonts/BrandonGrotesque-Bold.otf"; sourceTree = "<group>"; };
+		F968583C295317890022AAD6 /* BrandonGrotesque-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BrandonGrotesque-Regular.otf"; path = "../android/app/src/main/assets/fonts/BrandonGrotesque-Regular.otf"; sourceTree = "<group>"; };
+		F968584029531BD30022AAD6 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		F968584129531BD30022AAD6 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		F968584229531BD30022AAD6 /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +125,12 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				F968584229531BD30022AAD6 /* AntDesign.ttf */,
+				F968584029531BD30022AAD6 /* FontAwesome.ttf */,
+				F968584129531BD30022AAD6 /* Ionicons.ttf */,
+				F968583B295317890022AAD6 /* BrandonGrotesque-Bold.otf */,
+				F968583A295317890022AAD6 /* BrandonGrotesque-Medium.otf */,
+				F968583C295317890022AAD6 /* BrandonGrotesque-Regular.otf */,
 				13B07FAE1A68108700A75B9A /* Vibe_Garden */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* Vibe_GardenTests */,
@@ -243,6 +258,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				F968583F295317890022AAD6 /* BrandonGrotesque-Regular.otf in Resources */,
+				F968583E295317890022AAD6 /* BrandonGrotesque-Bold.otf in Resources */,
+				F968583D295317890022AAD6 /* BrandonGrotesque-Medium.otf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZBLGJL7988;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Vibe_Garden/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -512,6 +531,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZBLGJL7988;
 				INFOPLIST_FILE = Vibe_Garden/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
