@@ -5,6 +5,12 @@ import Icon2 from 'react-native-vector-icons/AntDesign';
 import Icon3 from 'react-native-vector-icons/Ionicons';
 import Images from '../../constants';
 
+import {
+  Menu,
+  MenuOptions,
+  MenuOption,
+  MenuTrigger,
+} from 'react-native-popup-menu';
 const Header = props => {
   const {
     color,
@@ -110,30 +116,41 @@ const Header = props => {
                   style={styles.greenbox}>
                   <Icon3 name="ios-menu" size={25} color="#1C5C2E" />
                 </TouchableOpacity>
-                {state === true ? (
-                  <View style={{}}>
+                <Menu
+                  opened={state}
+                  onBackdropPress={() => setState(!state)}
+                  style={{width: 40}}>
+                  <MenuTrigger></MenuTrigger>
+                  <MenuOptions
+                    optionsContainerStyle={{
+                      width: 40,
+                      backgroundColor: 'transparent',
+                      marginLeft: 1.5,
+                    }}>
                     <TouchableOpacity
-                      onPress={props.OnPress}
+                      onPress={() => {
+                        setState(!state);
+                        props.OnPress();
+                      }}
                       style={[
                         styles.greenbox1,
                         {width: 40, height: 40, padding: 4, marginVertical: 8},
                       ]}>
-                      <Icon3
-                        name="md-notifications-outline"
-                        size={25}
-                        color="#fff"
-                      />
+                      <Icon2 name="setting" size={25} color="#fff" />
                     </TouchableOpacity>
                     <TouchableOpacity
-                      onPress={props.OnPress1}
+                      onPress={() => {
+                        setState(!state);
+                        props.OnPress1();
+                      }}
                       style={[
                         styles.greenbox1,
                         {width: 40, height: 40, padding: 4, marginVertical: 10},
                       ]}>
                       <Icon2 name="setting" size={25} color="#fff" />
                     </TouchableOpacity>
-                  </View>
-                ) : null}
+                  </MenuOptions>
+                </Menu>
               </View>
             </>
           )}
@@ -284,7 +301,7 @@ const Header = props => {
               </View>
             )}
           </View>
-          <View style={{alignItems: 'center', width: '50%',marginTop:3}}>
+          <View style={{alignItems: 'center', width: '50%', marginTop: 3}}>
             <Text
               style={{
                 fontSize: fontSize,
