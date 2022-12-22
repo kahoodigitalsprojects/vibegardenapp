@@ -17,10 +17,10 @@ const ForgetPassword = props => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        <StatusBar backgroundColor={'transparent'} translucent={true} />
+        <StatusBar animated={true} backgroundColor="#000" />
 
         <View style={styles.main}>
-          <View style={{width: '90%', marginTop: 20}}>
+          <View style={{width: '90%', marginTop: 10}}>
             <Header
               fontSize={25}
               color="#191919B8"
@@ -37,6 +37,7 @@ const ForgetPassword = props => {
                 fontSize: 20,
                 lineHeight: 26,
                 marginTop: 20,
+                color: '#191919B8',
                 fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Enter Your Registered Email To Get The Password Reset Link
@@ -51,13 +52,13 @@ const ForgetPassword = props => {
                 marginVertical: 5,
                 borderColor: '#1C5C2E',
                 textDecorationLine: 'underline',
-                fontFamily: 'BrandonGrotesque-Regular',
+                fontFamily: 'BrandonGrotesque-Medium',
               }}>
               Email Address:
             </Text>
 
             <View style={{marginVertical: 4}}>
-              <View style={{height: 45, borderRadius: 15, marginVertical: 10}}>
+              <View style={{height: 45, borderRadius: 15, marginVertical: 20}}>
                 <TextInput
                   placeholder="Email"
                   placeholderTextColor={'#1C5C2E'}

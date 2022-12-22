@@ -26,24 +26,20 @@ const NotRegisterd = props => {
               OnPress={() => props.navigation.goBack('')}
             />
 
-            <View style={{width: '100%', arginTop: 30, alignItems: 'center'}}>
-              <View style={{width: 140, height: 140, marginTop: 30}}>
+            <View style={{width: '100%', alignItems: 'center'}}>
+              <View style={{width: 140, height: 140, marginTop: 50}}>
                 <Image
                   source={Images.Icons.envelop}
                   style={{width: '100%', height: '100%'}}
                 />
               </View>
             </View>
-            <View style={{width: '100%'}}>
+            <View style={{width: '100%', marginTop: 20}}>
               <Text style={styles.txt1}>
-                That Email Is Not Registered , Please Try Creating
-                <Text style={[styles.txt1, {textAlign: 'left'}]}>
-                  {' '}
-                  An Account
-                </Text>
+                That Email Is Not Registered , Please Try Creating An Account
               </Text>
             </View>
-            <View style={{marginVertical: 40}}>
+            <View style={{marginTop: 40}}>
               <Greenbtn
                 width={'95%'}
                 text1={'Create an Account'}

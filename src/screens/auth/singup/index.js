@@ -16,10 +16,12 @@ import Images from '../../../constants';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const SignUp = ({route, navigation}) => {
-  const registerd2 = route.params?.registerd2 || null;
   const [state, setState] = useState(true);
+  const [state1, setState1] = useState(true);
+  const registerd2 = route.params?.registerd2 || null;
+
   return (
-    <SafeAreaView style={styles.main}>
+    <SafeAreaView style={[styles.main,{}]}>
       <StatusBar animated={true} backgroundColor="#000" />
       <ScrollView
         showsVerticalScrollIndicator={false}
@@ -39,36 +41,36 @@ const SignUp = ({route, navigation}) => {
           </Text>
           <Text
             style={{
-              marginTop: 20,
+              marginTop: 10,
               color: '#1C5C2E',
               fontSize: 18,
               fontFamily: 'BrandonGrotesque-Regular',
             }}>
             Let's Get You Setup With An Account
           </Text>
-          <View style={{marginVertical: 20}}>
+          <View style={{marginTop: 17}}>
             <Image
               source={Images.Logos.logo1}
               style={{width: 64, height: 65}}
             />
           </View>
-          <View>
+          <View style={{marginTop: 24}}>
             <Text style={{fontSize: 18, fontFamily: 'BrandonGrotesque-Medium'}}>
               Sign Up With Email
             </Text>
 
-            <View style={{marginTop: 30}}>
+            <View style={{marginTop: 50}}>
               <TouchableOpacity
                 onPress={() => setState(!state)}
                 style={{borderBottomWidth: 1, borderColor: '#75997E'}}>
-                {state === true ? (
+                {state ? (
                   <View>
                     <Text
                       style={{
                         color: '#1C5C2E',
                         fontSize: 14,
-                        // fontWeight: '500',
-                        marginVertical: 15,
+                        // fontWeight: '400',
+                        // marginVertical: 15,
                         // fontFamily: 'BrandonGrotesque-Regular',
                       }}>
                       davidmichael.198@gmail.com
@@ -76,28 +78,59 @@ const SignUp = ({route, navigation}) => {
                   </View>
                 ) : (
                   <View style={{}}>
-                    <TextInput
-                      placeholder="Email Adddress"
-                      placeholderTextColor="#1C5C2E"
-                      style={{opacity: 0.8}}
-                    />
+                    <Text
+                      style={{
+                        color: '#1C5C2E',
+                        fontSize: 14,
+
+                        // fontWeight: '400',
+                        // marginVertical: 15,
+                        // fontFamily: 'BrandonGrotesque-Regular',
+                      }}>
+                      Email Adddress
+                    </Text>
                   </View>
                 )}
               </TouchableOpacity>
               <TouchableOpacity
-                onPress={() => setState(!state)}
-                style={{borderBottomWidth: 1, borderColor: '#75997E'}}>
-                <View style={{}}>
-                  <TextInput
-                    placeholder="Password"
-                    placeholderTextColor="#1C5C2E"
-                    style={{opacity: 0.8}}
-                  />
-                </View>
+                onPress={() => setState1(!state1)}
+                style={{
+                  borderBottomWidth: 1,
+                  borderColor: '#75997E',
+                  marginTop: 80,
+                }}>
+                {state1 ? (
+                  <View>
+                    <Text
+                      style={{
+                        color: '#1C5C2E',
+                        opacity: 0.65,
+                        fontSize: 14,
+                        // fontWeight: '400',
+                        // marginVertical: 15,
+                        // fontFamily: 'BrandonGrotesque-Regular',
+                      }}>
+                      Password
+                    </Text>
+                  </View>
+                ) : (
+                  <View style={{}}>
+                    <Text
+                      style={{
+                        color: '#1C5C2E',
+                        fontSize: 14,
+                        // fontWeight: '400',
+                        // marginVertical: 15,
+                        // fontFamily: 'BrandonGrotesque-Regular',
+                      }}>
+                      **********
+                    </Text>
+                  </View>
+                )}
               </TouchableOpacity>
             </View>
 
-            <View style={{marginTop: 50}}>
+            <View style={{marginTop: 37}}>
               <Pinkbtn
                 onPress={() => {
                   registerd2
@@ -113,12 +146,12 @@ const SignUp = ({route, navigation}) => {
               />
 
               <TouchableOpacity
+                style={{marginTop: 35}}
                 onPress={() => {
                   navigation.navigate('loginoption');
                 }}>
                 <Text
                   style={{
-                    marginTop: 35,
                     color: '#1C5C2E',
                     fontSize: 18,
                     textAlign: 'center',
@@ -151,7 +184,7 @@ const SignUp = ({route, navigation}) => {
                 </View>
                 <Text
                   style={{
-                    marginTop: 20,
+                    marginTop: 19,
                     color: '#1492E6',
                     fontSize: 18,
                     textAlign: 'center',
@@ -169,7 +202,7 @@ const SignUp = ({route, navigation}) => {
 };
 
 const styles = StyleSheet.create({
-  main: {flex: 1},
+  main: {flex: 1, },
   input: {
     // flexDirection: 'row',
     // justifyContent: 'space-between',
@@ -180,10 +213,9 @@ const styles = StyleSheet.create({
     fontFamily: 'BrandonGrotesque-Regular',
   },
   headtext: {
-    marginTop: 20,
+    marginTop: 17,
     color: '#1C5C2E',
     fontSize: 25,
-    fontWeight: '600',
 
     fontFamily: 'BrandonGrotesque-Regular',
   },

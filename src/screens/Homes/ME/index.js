@@ -84,6 +84,11 @@ const Me = props => {
       onPress: () => {
         props.navigation.navigate('Homes', {
           screen: 'Result',
+            params: {
+            backoption: () =>
+              props.navigation.navigate('Mytabs', {screen: 'me'}),
+          },
+     
         });
       },
     },

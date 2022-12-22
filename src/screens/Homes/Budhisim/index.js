@@ -10,7 +10,7 @@ import {
   StatusBar,
   TouchableOpacity,
 } from 'react-native';
-import {act} from 'react-test-renderer';
+
 import {Header, SeeAll, Userdetails} from '../../../componrnts';
 import All from '../../../componrnts/all';
 import Images from '../../../constants';
@@ -98,7 +98,7 @@ const Buddhisim = props => {
                 textAlign: 'center',
                 lineHeight: 25,
                 fontSize: 12,
-                fontFamily: 'BrandonGrotesque-Medium',
+                fontWeight: '600',
                 color: '#000000',
                 // marginVertical: 10,
               }}>
@@ -106,14 +106,14 @@ const Buddhisim = props => {
               Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna.
             </Text>
           </View>
-          <View style={{width: '90%', alignSelf: 'center'}}>
+          <View style={styles.centerbox}>
             <FlatList
               keyExtractor={item => item.id}
               data={Data}
               renderItem={({item}) => {
                 return (
                   <>
-                    <View style={{}}>
+                    <View style={{marginTop: 20, width: '90%'}}>
                       <SeeAll
                         onPress={() =>
                           props.navigation.navigate('Homes', {

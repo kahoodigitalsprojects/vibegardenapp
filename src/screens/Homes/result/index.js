@@ -11,7 +11,8 @@ import {Header} from '../../../componrnts';
 import Reset from '../../../componrnts/ResetComponent';
 import Images from '../../../constants';
 
-const Result = props => {
+const Result = ({navigation, route}) => {
+  const {backoption} = route.params;
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
@@ -28,16 +29,9 @@ const Result = props => {
             fontSize={25}
             color="#1C5C2E"
             header2
-            OnPress={() =>
-              props.navigation.replace(
-                'Mytabs',
-                {screen: 'me'},
-                {
-                  backoption: () =>
-                    props.navigation.replace('Mytabs', {screen: 'me'}),
-                },
-              )
-            }
+            // OnPress={backoption}
+            OnPress={() => navigation.navigate('me', {})}
+            // OnPress={backoption}
             headertext="Resonance Finder"
           />
           <View style={{marginVertical: 10}}>
@@ -46,7 +40,6 @@ const Result = props => {
                 fontSize: 31,
                 textAlign: 'center',
                 color: '#000',
-
                 fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Result!

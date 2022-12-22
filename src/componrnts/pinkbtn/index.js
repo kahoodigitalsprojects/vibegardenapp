@@ -25,9 +25,17 @@ const Pinkbtn = ({btntxt, width, onPress, onpres2, onpres3}) => {
 };
 
 export {Pinkbtn};
-
 const styles = StyleSheet.create({
   btn1: {
+    shadowColor: 'red',
+    shadowOffset: {
+      width: 50,
+      height: 52,
+    },
+    shadowOpacity: 20.58,
+    shadowRadius: 16.0,
+    elevation: 24,
+
     marginVertical: 15,
     alignSelf: 'center',
     justifyContent: 'center',
@@ -36,6 +44,5 @@ const styles = StyleSheet.create({
     // elevation: 10,
     // shadowColor: '#aaaa',
     borderRadius: 30,
-    backgroundColor: '#ED535E',
   },
 });

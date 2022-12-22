@@ -8,6 +8,7 @@ import {
 import React from 'react';
 import Images from '../../constants';
 import Icon from 'react-native-vector-icons/AntDesign';
+                 
 const MainBox = ({
   route,
   img2,
@@ -123,8 +124,8 @@ const MainBox = ({
               <TouchableOpacity
                 style={{
                   // backgroundColor: 'pink',
-                  top: -25,
-                  right: -80,
+                  top: -20,
+                  right: -95,
                   position: 'absolute',
                   height: 33,
                   width: 33,

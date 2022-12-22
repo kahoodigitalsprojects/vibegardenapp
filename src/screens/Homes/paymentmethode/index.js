@@ -38,7 +38,7 @@ const PaymentMethod = ({navigation, route, pres}) => {
             <Header
               iconName="left"
               header4
-              OnPress={() => props.navigation.goBack('')}
+              OnPress={() => navigation.navigate('ManageSubscription')}
               color="#000"
               fontSize={20}
               headertext2={headertext1}
@@ -64,10 +64,9 @@ const PaymentMethod = ({navigation, route, pres}) => {
                     fontSize: 15,
                     textAlign: 'center',
                     color: '#000',
-                    fontWeight: '500',
-                    marginVertical: 5,
-                    lineHeight: 39,
-                    fontFamily: 'BrandonGrotesque-Regular',
+                    marginVertical: 10,
+
+                    fontFamily: 'BrandonGrotesque-Bold',
                   }}>
                   Credit Card Or Debit Card
                 </Text>

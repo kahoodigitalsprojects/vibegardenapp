@@ -68,7 +68,7 @@ const FressBlooms = ({navigation, route}) => {
               headertext={otherParam}
               OnPress={backoption}
             />
-            <View style={{marginTop: 30}}>
+            <View style={{marginTop: 47}}>
               <FlatList
                 data={data}
                 keyExtractor={item => item.id}

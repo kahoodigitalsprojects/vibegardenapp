@@ -133,8 +133,7 @@ const ManageSubscription = props => {
             }}
             style={{
               alignSelf: 'center',
-              marginTop: 110,
-              justifyContent: 'flex-end',
+              marginTop: 150,
             }}>
             <Text
               style={[

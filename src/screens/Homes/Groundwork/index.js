@@ -69,7 +69,7 @@ const GroundWork = props => {
               style={{
                 textAlign: 'center',
                 fontSize: 28,
-                fontWeight: '600',
+                fontFamily: 'BrandonGrotesque-Regular',
                 color: '#000000',
               }}>
               Groundwork
@@ -79,6 +79,7 @@ const GroundWork = props => {
                 textAlign: 'center',
                 fontSize: 18,
                 marginVertical: 10,
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Let's remember together Erin
             </Text>
@@ -159,7 +160,7 @@ const GroundWork = props => {
                             })
                           }
                           // iconimg1
-                    
+
                           onPressALL={item.pressAll}
                           textA={item.textA}
                           heart1={item.heart1}

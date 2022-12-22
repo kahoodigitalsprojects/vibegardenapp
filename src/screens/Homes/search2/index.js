@@ -334,7 +334,14 @@ const Search2 = ({route, navigation, otherParam}) => {
                   <View style={{marginVertical: 10}}>
                     <SeeAll
                       onPress={() =>
-                        navigation.navigate('Mytabs', {screen: ''})
+                        navigation.navigate('Mytabs', {
+                          screen: '',
+                          params: {
+                            backoption: navigation.navigate('Mytabs', {
+                              screen: 'me',
+                            }),
+                          },
+                        })
                       }
                       color1="#1C5C2E"
                       textA="GROUND WORK"

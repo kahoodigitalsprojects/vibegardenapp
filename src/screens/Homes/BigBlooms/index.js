@@ -70,7 +70,7 @@ const BigBlooms = ({route, navigation}) => {
                 // fontWeight: 'bold',
                 marginTop: 25,
                 marginVertical: 10,
-                fontFamily: 'BrandonGrotesque-Bold',
+                fontFamily: 'BrandonGrotesque-Medium',
               }}>
               {heading1}
               Big Blooms

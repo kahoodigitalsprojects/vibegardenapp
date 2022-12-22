@@ -245,11 +245,10 @@ const QComponents = ({
               style={[
                 {
                   marginTop: margintopS,
-                  color: '#1C5C2E',
+                  color: '#000000',
                   fontSize: 16,
                   marginTop: marginTop1,
-                  fontFamily: 'BrandonGrotesque-Medium',
-                  letterSpacing: 1.5,
+                  fontFamily: 'BrandonGrotesque-Regular',
                 },
               ]}>
               {Statement}
@@ -262,7 +261,7 @@ const QComponents = ({
                   fontSize: 20,
                   marginTop: marginTop1,
                   fontFamily: 'BrandonGrotesque-Medium',
-                  letterSpacing: 1.5,
+                  // letterSpacing: 1.5,
                 },
               ]}>
               {Statement1}
@@ -275,7 +274,7 @@ const QComponents = ({
                   styles.text2,
                   {
                     color: '#1C5C2E',
-               
+
                     fontSize: 22,
                     fontSize: 31,
                     color: '#000',

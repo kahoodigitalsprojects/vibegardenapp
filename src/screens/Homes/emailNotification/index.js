@@ -93,9 +93,9 @@ const styles = StyleSheet.create({
   },
   text1: {
     color: '#000',
-    fontSize: 18,
+    fontSize: 20,
     marginVertical: 4,
-    fontFamily: 'BrandonGrotesque-bold',
+    fontFamily: 'BrandonGrotesque-Medium',
   },
   text2: {color: '#000', fontSize: 18, fontFamily: 'BrandonGrotesque-Regular'},
 

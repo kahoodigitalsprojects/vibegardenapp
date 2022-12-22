@@ -56,7 +56,16 @@ const Question3 = props => {
           <Pinkbtn
             width={'60%'}
             btntxt="See Results"
-            onPress={() => props.navigation.navigate('Result', {})}
+            onPress={() =>
+              props.navigation.navigate('Result', {
+                // params: {
+                //   otherParam: 'Top Tools',
+                //   plus: true,
+                //   backoption: () =>
+                //     props.navigation.navigate('Mytabs', {screen: 'me'}),
+                // },
+              })
+            }
           />
         </View>
       </ScrollView>

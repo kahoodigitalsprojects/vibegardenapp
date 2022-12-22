@@ -24,7 +24,6 @@ const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
       <View style={styles.main}>
         <View
           style={{
-            marginVertical: 20,
             marginTop: 20,
             width: '100%',
             flexDirection: 'row',
