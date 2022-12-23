@@ -24,27 +24,47 @@ const MainBox = ({
   marginTop,
   width,
   icon2,
+  marginTop2,
 }) => {
   return (
     <>
-      <View style={{
-        width: 330,
-        height: 234, margin: 3, borderRadius: 10
-      }}>
+      <View
+        style={{
+          width: 330,
+          height: 234,
+          margin: 3,
+          borderRadius: 10,
+        }}>
         <ImageBackground
           // resizeMode="contain"
           style={{
             width: '100%',
             height: '100%',
-            justifyContent: 'center',
-            alignItems: 'center',
+            // justifyContent: 'center',
+            // alignItems: 'center',
             borderRadius: 12,
           }}
           source={img2}>
+          {Wheart && (
+            <TouchableOpacity
+              style={{
+                marginTop: 8,
+                width: '95%',
+                alignItems: 'flex-end',
+              }}>
+              <Icon
+                name="heart"
+                color={'#fff'}
+                size={20}
+                style={{fontWeight: 'bold'}}
+              />
+            </TouchableOpacity>
+          )}
           <View
             style={{
               justifyContent: 'center',
               alignItems: 'center',
+              marginTop: 30,
             }}>
             <View
               style={{
@@ -86,59 +106,35 @@ const MainBox = ({
                 borderRadius: 12,
                 // margin: 2,
                 backgroundColor: bgcolor,
-                marginTop: 15,
+                marginTop: 5,
+                justifyContent: 'center',
+                alignItems: 'center',
               }}>
               <Text
                 style={{
-                  justifyContent: 'center',
-                  alignItems: 'center',
                   color: '#fff',
                   textAlign: 'center',
                   fontFamily: 'BrandonGrotesque-Regular',
-                  top: 10,
                 }}>
                 {minutes}
               </Text>
             </View>
-            <View
+          </View>
+          <View
+            style={{
+              marginTop: marginTop2,
+              alignSelf: 'flex-start',
+              marginLeft: 8,
+              width: '100%',
+            }}>
+            <Text
               style={{
-                // width: 77,
-                height: 40,
-                // margin: 2,
-                left: -90,
-                top: 40,
+                color: '#fff',
+                fontSize: 12,
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
-              <Text
-                style={{
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  color: '#fff',
-                  textAlign: 'center',
-                  top: 15,
-                  fontSize: 12,
-                  fontFamily: 'BrandonGrotesque-Regular',
-                }}>
-                {date1}
-              </Text>
-            </View>
-            {Wheart && (
-              <TouchableOpacity
-                style={{
-                  // backgroundColor: 'pink',
-                  top: -20,
-                  right: -95,
-                  position: 'absolute',
-                  height: 33,
-                  width: 33,
-                }}>
-                <Icon
-                  name="heart"
-                  color={'#fff'}
-                  size={20}
-                  style={{ fontWeight: 'bold', position: 'absolute' }}
-                />
-              </TouchableOpacity>
-            )}
+              {date1}
+            </Text>
           </View>
         </ImageBackground>
       </View>
@@ -155,7 +151,7 @@ const MainBox = ({
         <Image
           source={I1}
           resizeMode="contain"
-          style={{ width: '100%', height: '100%' }}
+          style={{width: '100%', height: '100%'}}
         />
       </View>
     </>

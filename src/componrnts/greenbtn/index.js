@@ -8,11 +8,20 @@ const Greenbtn = ({text1, width, onPress}) => {
         style={{
           alignSelf: 'center',
           width: width,
+          shadowColor: '00000029',
           height: 55,
           backgroundColor: '#1C5C2E',
           justifyContent: 'center',
           alignItems: 'center',
           borderRadius: 15,
+          shadowOffset: {
+            width: 50,
+
+            height: 52,
+          },
+          shadowOpacity: 20.58,
+          shadowRadius: 16.0,
+          elevation: 24,
         }}
         onPress={onPress}>
         <Text

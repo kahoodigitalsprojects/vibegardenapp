@@ -24,7 +24,7 @@ const Packages = props => {
               OnPress={() => props.navigation.goBack('')}
               color="#000"
               fontSize={20}
-              headertext2="Swich Packges"
+              headertext2="Switch Packages"
             />
           </View>
           <View style={styles.switchView}>

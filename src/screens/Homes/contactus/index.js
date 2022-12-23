@@ -1,4 +1,4 @@
-import React, { startTransition, useState } from 'react';
+import React, {startTransition, useState} from 'react';
 import {
   View,
   Text,
@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import { Header, Pinkbtn, QComponents } from '../../../componrnts';
+import {Header, Pinkbtn, QComponents} from '../../../componrnts';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Images from '../../../constants';
 
@@ -19,19 +19,17 @@ const Contactus = props => {
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ flexGrow: 1 }}>
+        contentContainerStyle={{flexGrow: 1}}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
             marginVertical: 10,
-
             marginTop: 10,
             width: '90%',
             alignSelf: 'center',
           }}>
           <Header
             marginTop={-40}
-
             iconName="left"
             header2
             OnPress={() => props.navigation.goBack('')}
@@ -40,8 +38,8 @@ const Contactus = props => {
             color="#191919B8"
           />
 
-          <View style={{ marginVertical: 25, alignSelf: 'center' }}>
-            <View style={{ alignSelf: 'center', width: '80%', marginTop: 20 }}>
+          <View style={{marginVertical: 25, alignSelf: 'center'}}>
+            <View style={{alignSelf: 'center', width: '80%', marginTop: 20}}>
               <Text
                 style={{
                   fontSize: 18,

@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   StyleSheet,
   Button,
@@ -13,7 +13,7 @@ import {
   Image,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { Header } from '../../../componrnts';
+import {Header} from '../../../componrnts';
 import Images from '../../../constants';
 
 const LoginOption = props => {
@@ -43,9 +43,8 @@ const LoginOption = props => {
         <StatusBar animated={true} backgroundColor="#000" />
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ flexGrow: 1 }}>
-          <View style={{ width: '90%', alignSelf: 'center' }}>
-
+          contentContainerStyle={{flexGrow: 1}}>
+          <View style={{width: '90%', alignSelf: 'center'}}>
             <Header
               show={show}
               iconName="arrowleft"
@@ -53,10 +52,8 @@ const LoginOption = props => {
               OnPress={() => props.navigation.replace('Welcome')}
             />
 
-            <View style={{ width: '100%', }}>
-              <Text style={styles.headtext}>
-                Welcome Back,  {'\n'} Erin
-              </Text>
+            <View style={{width: '90%', alignSelf:'center'}}>
+              <Text style={styles.headtext}>Welcome Back, {'\n'} Erin</Text>
               <Text
                 style={{
                   marginTop: 20,
@@ -69,10 +66,10 @@ const LoginOption = props => {
               <TouchableOpacity
                 onPress={() => props.navigation.navigate('login')}
                 style={styles.input}>
-                <View style={{ marginTop: 5, paddingRight: 20 }}>
+                <View style={{marginTop: 5, paddingRight: 20}}>
                   <Image
                     source={Images.Icons.bluee}
-                    style={{ width: 40, height: 40 }}
+                    style={{width: 40, height: 40}}
                   />
                 </View>
                 <View>
@@ -87,7 +84,7 @@ const LoginOption = props => {
                 </View>
               </TouchableOpacity>
               <TouchableOpacity
-                style={{ marginTop: 40, marginVertical: 20 }}
+                style={{marginTop: 40, marginVertical: 20}}
                 onPress={() => {
                   props.navigation.navigate('signup');
                 }}>
@@ -118,7 +115,7 @@ const LoginOption = props => {
 };
 
 const styles = StyleSheet.create({
-  main: { flex: 1, },
+  main: {flex: 1},
   input: {
     width: '100%',
     marginTop: 100,

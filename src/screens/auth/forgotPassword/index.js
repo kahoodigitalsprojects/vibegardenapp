@@ -22,6 +22,7 @@ const ForgetPassword = props => {
         <View style={styles.main}>
           <View style={{width: '90%', marginTop: 10}}>
             <Header
+              marginTop={-40}
               fontSize={25}
               color="#191919B8"
               iconName="arrowleft"

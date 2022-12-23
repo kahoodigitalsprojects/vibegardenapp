@@ -10,8 +10,8 @@ import {
 import React from 'react';
 import Images from '../../constants';
 import Icon from 'react-native-vector-icons/AntDesign';
-import { SeeAll } from '../SeeAll';
-import { FlatList } from 'react-native';
+import {SeeAll} from '../SeeAll';
+import {FlatList} from 'react-native';
 
 const All = ({
   newtext1,
@@ -34,7 +34,7 @@ const All = ({
   plus,
   iconimg1,
   pressI,
-  marginTop
+  marginTop,
 }) => {
   const Data = [
     {
@@ -79,7 +79,7 @@ const All = ({
             marginTop: marginTop,
             // marginVertical: 5,
           }}>
-          <Text style={[styles.txtA, { color: color1 }]}>{textA}</Text>
+          <Text style={[styles.txtA, {color: color1}]}>{textA}</Text>
           <TouchableOpacity onPress={onPressALL} style={{}}>
             <Text style={styles.txtB}>{textB}</Text>
           </TouchableOpacity>
@@ -91,7 +91,7 @@ const All = ({
           showsHorizontalScrollIndicator={false}
           horizontal
           data={Data}
-          renderItem={({ item, index }) => {
+          renderItem={({item, index}) => {
             return (
               <View
                 style={{
@@ -147,7 +147,7 @@ const All = ({
                       name={plus}
                       color={'#fefefe'}
                       size={25}
-                      style={{ fontWeight: 'bold', position: 'absolute' }}
+                      style={{fontWeight: 'bold', position: 'absolute'}}
                     />
                   </TouchableOpacity>
 
@@ -176,7 +176,7 @@ const All = ({
                       </View>
                     )}
 
-                    <View style={{ marginVertical: marginVertical }}>
+                    <View style={{}}>
                       <Text
                         style={{
                           textAlign: 'center',

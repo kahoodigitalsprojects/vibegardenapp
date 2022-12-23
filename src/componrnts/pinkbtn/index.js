@@ -2,13 +2,13 @@ import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 
-const Pinkbtn = ({btntxt, width, onPress, onpres2, onpres3}) => {
+const Pinkbtn = ({btntxt, width, onPress, onpres2, onpres3, shadow}) => {
   return (
     <View>
       <TouchableOpacity onPress={onPress}>
         <LinearGradient
           colors={['#ED535E', '#CD258D']}
-          style={[styles.btn1, {width: width}]}>
+          style={[styles.btn1, {width: width, shadowColor: shadow}]}>
           <Text
             style={{
               fontWeight: '400',
@@ -27,7 +27,6 @@ const Pinkbtn = ({btntxt, width, onPress, onpres2, onpres3}) => {
 export {Pinkbtn};
 const styles = StyleSheet.create({
   btn1: {
-    shadowColor: 'red',
     shadowOffset: {
       width: 50,
       height: 52,

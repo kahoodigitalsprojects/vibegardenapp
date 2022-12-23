@@ -24,6 +24,7 @@ const Settings = props => {
       <View style={styles.main}>
         <View style={{marginVertical: 10, width: '90%', alignSelf: 'center'}}>
           <Header
+            marginTop={-40}
             iconName="closesquareo"
             header2
             OnPress={() => props.navigation.navigate('me')}

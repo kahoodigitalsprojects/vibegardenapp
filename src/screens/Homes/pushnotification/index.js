@@ -1,4 +1,4 @@
-import React, { startTransition, useState } from 'react';
+import React, {startTransition, useState} from 'react';
 import {
   View,
   Text,
@@ -11,7 +11,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import { Header, Pinkbtn, QComponents, Switch1 } from '../../../componrnts';
+import {Header, Pinkbtn, QComponents, Switch1} from '../../../componrnts';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Images from '../../../constants';
 
@@ -20,7 +20,7 @@ const Pushnotification = props => {
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ flexGrow: 1 }}>
+        contentContainerStyle={{flexGrow: 1}}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
@@ -32,25 +32,25 @@ const Pushnotification = props => {
           <Header
             iconName="left"
             marginTop={-40}
-
+            marginRight={-30}
             header2
             headertext="Push Notification"
             fontSize={25}
-            color="#000"
+            color="#191919B8"
             OnPress={() =>
-              props.navigation.navigate('Homes', { screen: 'settings' })
+              props.navigation.navigate('Homes', {screen: 'settings'})
             }
           />
-          <View style={{ marginTop: 30, marginVertical: 10 }}>
+          <View style={{marginTop: 30, marginVertical: 10}}>
             <Text style={styles.text1}>
               When Is A Good Time For Me To Send Your Personalized
               Recommendations?
             </Text>
           </View>
 
-          <View style={{ marginVertical: 5, alignSelf: 'center', width: '90%' }}>
+          <View style={{marginVertical: 5, alignSelf: 'center', width: '90%'}}>
             <View
-              style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+              style={{flexDirection: 'row', justifyContent: 'space-between'}}>
               <View style={{}}>
                 <Text style={styles.text2}>Reminder Active:</Text>
               </View>
@@ -70,10 +70,10 @@ const Pushnotification = props => {
                 </TouchableOpacity>
               </TouchableOpacity>
               <TouchableOpacity
-                style={[styles.box, { width: '30%', left: 10 }]}
-              // onPress={() => {
-              //   props.navigation.navigate('signup');
-              // }}
+                style={[styles.box, {width: '30%', left: 10}]}
+                // onPress={() => {
+                //   props.navigation.navigate('signup');
+                // }}
               >
                 <Text style={styles.textA}>7:30 AM</Text>
                 <TouchableOpacity style={{}}>
@@ -84,10 +84,10 @@ const Pushnotification = props => {
             <View style={{}}>
               <Text style={styles.text2}>Set Different Time For Weekend:</Text>
             </View>
-            <View style={{ marginTop: 20 }}>
+            <View style={{marginTop: 20}}>
               <Pinkbtn
                 onPress={() =>
-                  props.navigation.navigate('Homes', { screen: 'settings' })
+                  props.navigation.navigate('Homes', {screen: 'settings'})
                 }
                 width={'60%'}
                 btntxt="Save"

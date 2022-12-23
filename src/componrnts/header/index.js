@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon2 from 'react-native-vector-icons/AntDesign';
 import Icon3 from 'react-native-vector-icons/Ionicons';
@@ -48,18 +48,21 @@ const Header = props => {
     colorplus,
     headertext2,
     marginTopplus,
+    marginRight,
     show,
   } = props;
   const [state, setState] = useState(false);
   return (
-    <View style={{ width: '100%' }}>
+    <View style={{width: '100%'}}>
       {props.homeheader && (
         <View style={styles.header}>
-          <View style={{
-            // backgroundColor: 'teal',
-            flexDirection: 'row', justifyContent: 'space-between',
-            alignItems: 'center'
-          }}>
+          <View
+            style={{
+              // backgroundColor: 'teal',
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}>
             <TouchableOpacity
               onPress={search}
               style={{
@@ -68,15 +71,9 @@ const Header = props => {
                 backgroundColor: gbg,
                 borderRadius: 10,
                 // backgroundColor: 'green',
-                alignSelf: 'flex-start'
+                alignSelf: 'flex-start',
               }}>
-              <Icon2
-                name={search1}
-                size={24}
-                color={color}
-              />
-
-
+              <Icon2 name={search1} size={24} color={color} />
             </TouchableOpacity>
             {heading && (
               <View
@@ -86,17 +83,19 @@ const Header = props => {
                   flexDirection: 'row',
                   justifyContent: 'center',
                   alignItems: 'center',
-                  marginTop: -2
+                  marginTop: -2,
                   // backgroundColor: 'teal'
                 }}>
-                <View style={{
-                  width: 25, height: 25,
-                  //  backgroundColor: 'yellow'
-                }}>
+                <View
+                  style={{
+                    width: 25,
+                    height: 25,
+                    //  backgroundColor: 'yellow'
+                  }}>
                   <Image
                     source={greenicon1}
                     resizeMode="contain"
-                    style={{ width: '100%', height: '100%' }}
+                    style={{width: '100%', height: '100%'}}
                   />
                 </View>
                 <Text
@@ -109,9 +108,9 @@ const Header = props => {
                 </Text>
               </View>
             )}
-            <View style={{ flexDirection: 'row' }}>
+            <View style={{flexDirection: 'row'}}>
               {plus && (
-                <View style={{ marginRight: 8, marginTop: marginTopplus }}>
+                <View style={{marginRight: 8, marginTop: marginTopplus}}>
                   <Icon2 name="plus" size={size} color={colorplus} style={{}} />
                 </View>
               )}
@@ -121,7 +120,7 @@ const Header = props => {
                     name="heart"
                     size={20}
                     color="#EF3A71"
-                    style={{ marginTop: hearttop, marginLeft: heartleft1, }}
+                    style={{marginTop: hearttop, marginLeft: heartleft1}}
                   />
                 </View>
               )}
@@ -142,7 +141,7 @@ const Header = props => {
                   <Menu
                     opened={state}
                     onBackdropPress={() => setState(!state)}
-                    style={{ width: 40 }}>
+                    style={{width: 40}}>
                     <MenuTrigger></MenuTrigger>
                     <MenuOptions
                       optionsContainerStyle={{
@@ -157,7 +156,12 @@ const Header = props => {
                         }}
                         style={[
                           styles.greenbox1,
-                          { width: 40, height: 40, padding: 4, marginVertical: 8 },
+                          {
+                            width: 40,
+                            height: 40,
+                            padding: 4,
+                            marginVertical: 8,
+                          },
                         ]}>
                         <Icon2 name="setting" size={25} color="#fff" />
                       </TouchableOpacity>
@@ -168,7 +172,12 @@ const Header = props => {
                         }}
                         style={[
                           styles.greenbox1,
-                          { width: 40, height: 40, padding: 4, marginVertical: 10 },
+                          {
+                            width: 40,
+                            height: 40,
+                            padding: 4,
+                            marginVertical: 10,
+                          },
                         ]}>
                         <Icon2 name="setting" size={25} color="#fff" />
                       </TouchableOpacity>
@@ -183,7 +192,7 @@ const Header = props => {
             <View style={styles.header}>
               <TouchableOpacity
                 onPress={props.OnPress}
-                style={{ width: '10%', marginTop: 5 }}>
+                style={{width: '10%', marginTop: 5}}>
                 <View
                   style={{
                     width: 40,
@@ -196,7 +205,7 @@ const Header = props => {
                   <Icon2 name={iconName} size={25} color="#fff" />
                 </View>
               </TouchableOpacity>
-              <View style={{ width: '95%', alignItems: 'center' }}>
+              <View style={{width: '95%', alignItems: 'center'}}>
                 <Text
                   style={{
                     fontSize: fontSize,
@@ -216,9 +225,7 @@ const Header = props => {
                 justifyContent: 'space-between',
                 // width: '15%',
                 // marginTop: 5,
-              }}>
-
-            </TouchableOpacity>
+              }}></TouchableOpacity>
           )}
         </View>
       )}
@@ -227,7 +234,7 @@ const Header = props => {
           <TouchableOpacity
             disabled={(show === true && true) || false}
             onPress={props.OnPress}
-            style={{ width: '5%', marginTop: 5 }}>
+            style={{width: '5%', marginTop: 5}}>
             <View
               style={{
                 width: 40,
@@ -259,11 +266,13 @@ const Header = props => {
                   // backgroundColor: 'yellow',
                   width: 34,
                   height: 34,
+                  marginTop: -40,
+                  marginLeft: 340,
                 }}>
                 <Image
                   source={img23}
                   resizeMode="contain"
-                  style={{ width: '100%', height: '100%' }}
+                  style={{width: '100%', height: '100%'}}
                 />
               </View>
             )}
@@ -273,6 +282,9 @@ const Header = props => {
                 marginTop: marginTop,
                 color: color,
                 fontFamily: 'BrandonGrotesque-Medium',
+                // backgroundColor: 'yellow',
+                // textAlign: 'center',
+                marginRight: marginRight,
               }}>
               {props.headertext}
             </Text>
@@ -291,7 +303,7 @@ const Header = props => {
               width: width,
               flexDirection: 'row',
             }}>
-            <TouchableOpacity onPress={props.OnPress} style={{ marginTop: 5 }}>
+            <TouchableOpacity onPress={props.OnPress} style={{marginTop: 5}}>
               <View
                 style={{
                   width: 40,
@@ -305,7 +317,7 @@ const Header = props => {
               </View>
             </TouchableOpacity>
             {headertext2 && (
-              <View style={{ alignItems: 'center', marginLeft: 10 }}>
+              <View style={{alignItems: 'center', marginLeft: 10}}>
                 <Text
                   style={{
                     fontSize: fontSize,
@@ -319,7 +331,7 @@ const Header = props => {
               </View>
             )}
           </View>
-          <View style={{ alignItems: 'center', width: '50%', marginTop: 3 }}>
+          <View style={{alignItems: 'center', width: '50%', marginTop: 3}}>
             <Text
               style={{
                 fontSize: fontSize,
@@ -334,11 +346,17 @@ const Header = props => {
       )}
 
       {img1 && (
-        <View style={{ width: 41, height: 41, alignSelf: 'center', marginTop: marginTop, }}>
+        <View
+          style={{
+            width: 41,
+            height: 41,
+            alignSelf: 'center',
+            marginTop: marginTop,
+          }}>
           <Image
             source={Images.Logos.logo1}
             resizeMode="contain"
-            style={{ width: 41, height: 40 }}
+            style={{width: 41, height: 40}}
           />
         </View>
       )}
@@ -346,7 +364,7 @@ const Header = props => {
   );
 };
 
-export { Header };
+export {Header};
 
 const styles = StyleSheet.create({
   greenbox: {
@@ -368,5 +386,3 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
-
-

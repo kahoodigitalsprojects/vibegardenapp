@@ -89,7 +89,7 @@ const Login = ({route, navigation}) => {
                       style={{
                         color: '#1C5C2E',
                         fontSize: 14,
-                        
+
                         // fontWeight: '400',
                         // marginVertical: 15,
                         // fontFamily: 'BrandonGrotesque-Regular',
@@ -152,6 +152,7 @@ const Login = ({route, navigation}) => {
             </TouchableOpacity>
             <View style={{marginTop: 42}}>
               <Pinkbtn
+                shadow="red"
                 onPress={() => {
                   {
                     registerd1
