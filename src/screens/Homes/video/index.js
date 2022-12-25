@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -25,19 +25,19 @@ import MainBox from '../../../componrnts/mainbox';
 import All from '../../../componrnts/all';
 import Question from '../Question';
 
-const Video = ({route, navigation}) => {
+const Video = ({ route, navigation }) => {
   const [state, setState] = useState(icon1);
-  const {otherParam} = route.params;
-  const {otherParam1} = route.params;
-  const {itemId} = route.params;
-  const {heart} = route.params;
-  const {plus} = route.params;
-  const {icon1} = route.params;
-  const {redbtn} = route.params;
-  const {backoption} = route.params;
+  const { otherParam } = route.params;
+  const { otherParam1 } = route.params;
+  const { itemId } = route.params;
+  const { heart } = route.params;
+  const { plus } = route.params;
+  const { icon1 } = route.params;
+  const { redbtn } = route.params;
+  const { backoption } = route.params;
   // const { Heading } = route.params;
   const Data3 = [
-    {text1: 'Not Really', img11: Images.Imgs.R1},
+    { text1: 'Not Really', img11: Images.Imgs.R1 },
 
     {
       text1: 'Baby Bloom',
@@ -81,7 +81,7 @@ const Video = ({route, navigation}) => {
       <SafeAreaView style={styles.main}>
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{flexGrow: 1}}>
+          contentContainerStyle={{ flexGrow: 1 }}>
           <StatusBar animated={true} backgroundColor="#000" />
 
           <View
@@ -116,12 +116,13 @@ const Video = ({route, navigation}) => {
                 hearttop={4}
                 color="#fff"
                 gbg="#1C5C2E"
+                alignItems="center"
                 homeheader
                 headertext={otherParam1}
                 search={backoption}
               />
             </View>
-            <View style={{width: '100%'}}>
+            <View style={{ width: '100%' }}>
               <QComponents
                 margintopS={-15}
                 flowwerlist={otherParam}
@@ -153,7 +154,7 @@ const Video = ({route, navigation}) => {
                 data={data2}
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}
-                renderItem={({item}) => {
+                renderItem={({ item }) => {
                   return (
                     <>
                       <View
@@ -161,7 +162,7 @@ const Video = ({route, navigation}) => {
                           flexDirection: 'row',
                           alignSelf: 'flex-start',
                         }}>
-                        <TouchableOpacity style={[styles.topics, {padding: 6}]}>
+                        <TouchableOpacity style={[styles.topics, { padding: 6 }]}>
                           <Text
                             style={{
                               color: '#1C5C2E',
@@ -199,7 +200,7 @@ const Video = ({route, navigation}) => {
                     showsHorizontalScrollIndicator={false}
                     horizontal={true}
                     data={Data3}
-                    renderItem={({item, index}) => {
+                    renderItem={({ item, index }) => {
                       return (
                         <>
                           <View style={{}}>
@@ -218,7 +219,7 @@ const Video = ({route, navigation}) => {
               <View
                 style={[
                   styles.row,
-                  {marginVertical: 20, width: '95%', alignSelf: 'center'},
+                  { marginVertical: 20, width: '95%', alignSelf: 'center' },
                 ]}>
                 <Text
                   style={{
@@ -232,12 +233,12 @@ const Video = ({route, navigation}) => {
                 <View style={styles.line}></View>
               </View>
             </View>
-            <View style={{width: '95%', alignSelf: 'center'}}>
+            <View style={{ width: '95%', alignSelf: 'center' }}>
               <FlatList
                 showsVerticalScrollIndicator={false}
-                contentContainerStyle={{height: 160}}
+                contentContainerStyle={{ height: 160 }}
                 data={Data3}
-                renderItem={({item}) => {
+                renderItem={({ item }) => {
                   return (
                     <View style={styles.item1}>
                       <Userdetails
@@ -281,7 +282,7 @@ const Video = ({route, navigation}) => {
                 keyExtractor={item => item.id}
                 numColumns={2}
                 data={Data2}
-                renderItem={({item}) => {
+                renderItem={({ item }) => {
                   return (
                     <View
                       style={{
@@ -315,7 +316,7 @@ const Video = ({route, navigation}) => {
                 marginTop: 4,
               }}>
               <Text style={styles.text}>Additional Resonance:</Text>
-              <Text style={[styles.text, {textDecorationLine: 'underline'}]}>
+              <Text style={[styles.text, { textDecorationLine: 'underline' }]}>
                 Links
               </Text>
               <Text
@@ -333,11 +334,11 @@ const Video = ({route, navigation}) => {
             </View>
           </View>
           <View
-            style={{width: '90%', alignSelf: 'center', alignSelf: 'center'}}>
+            style={{ width: '90%', alignSelf: 'center', alignSelf: 'center' }}>
             <FlatList
               showsHorizontalScrollIndicator={false}
               data={data2}
-              renderItem={({item}) => {
+              renderItem={({ item }) => {
                 return (
                   <>
                     <View

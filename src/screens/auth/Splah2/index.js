@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import {
   View,
   Text,
@@ -8,20 +8,20 @@ import {
   ScrollView,
   SafeAreaView,
 } from 'react-native';
-import {Header, Pinkbtn} from '../../../componrnts';
+import { Header, Pinkbtn } from '../../../componrnts';
 import Images from '../../../constants';
 
-const Spalsh2 = ({navigation}) => {
+const Spalsh2 = ({ navigation }) => {
   return (
     <>
-      <SafeAreaView style={styles.main}>
+      <SafeAreaView >
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{flexGrow: 1}}>
+          contentContainerStyle={{ flexGrow: 1 }}>
           <StatusBar animated={true} backgroundColor="#000" />
 
-          <View style={{}}>
-            <View style={{alignSelf: 'center', marginTop: 100}}>
+          <View style={styles.main}>
+            <View style={{ alignSelf: 'center', marginTop: 100 }}>
               <Image source={Images.Logos.logo1} />
             </View>
 
@@ -33,8 +33,9 @@ const Spalsh2 = ({navigation}) => {
               <Text style={styles.text1}>
                 A Few fun question help us personal your experience here
               </Text>
-              <View style={{marginTop: 10, justifyContent: 'flex-end'}}>
+              <View style={{ marginTop: 10, justifyContent: 'flex-end' }}>
                 <Pinkbtn
+                  shadow={"#CD258D"}
                   onPress={() =>
                     navigation.navigate('signup', {
                       registerd2: () => navigation.navigate('verify'),

@@ -1,36 +1,38 @@
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 
-const Pinkbtn = ({btntxt, width, onPress, onpres2, onpres3, shadow}) => {
+const Pinkbtn = ({ btntxt, width, onPress, onpres2, onpres3, shadow }) => {
   return (
-    <View>
-      <TouchableOpacity onPress={onPress}>
-        <LinearGradient
-          colors={['#ED535E', '#CD258D']}
-          style={[styles.btn1, {width: width, shadowColor: shadow}]}>
-          <Text
-            style={{
-              fontWeight: '400',
-              color: '#fff',
-              fontSize: 18,
-              fontFamily: 'BrandonGrotesque-Regular',
-            }}>
-            {btntxt}
-          </Text>
-        </LinearGradient>
-      </TouchableOpacity>
-    </View>
+
+    <TouchableOpacity onPress={onPress}>
+      <LinearGradient
+        colors={['#ED535E', '#CD258D']}
+        style={[styles.btn1, { width: width, shadowColor: shadow }]}>
+        <Text
+          style={{
+            fontWeight: '400',
+            color: '#fff',
+            fontSize: 18,
+            fontFamily: 'BrandonGrotesque-Regular',
+          }}>
+          {btntxt}
+        </Text>
+      </LinearGradient>
+    </TouchableOpacity>
+
   );
 };
 
-export {Pinkbtn};
+export { Pinkbtn };
 const styles = StyleSheet.create({
   btn1: {
+
     shadowOffset: {
       width: 50,
       height: 52,
     },
+    shadowColor: 'red',
     shadowOpacity: 20.58,
     shadowRadius: 16.0,
     elevation: 24,
@@ -43,5 +45,6 @@ const styles = StyleSheet.create({
     // elevation: 10,
     // shadowColor: '#aaaa',
     borderRadius: 30,
+
   },
 });

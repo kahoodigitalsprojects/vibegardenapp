@@ -1,5 +1,5 @@
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Image, View, StyleSheet} from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Image, View, StyleSheet } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Images from '../../constants';
 import Welcome from '../../screens/auth/Welcome';
@@ -28,8 +28,8 @@ Mytabs = props => {
         options={{
           headerShown: false,
           tabBarLabel: 'Garden',
-          tabBarItemStyle: {paddingBottom: 10},
-          tabBarIcon: ({focused}) =>
+          tabBarItemStyle: { paddingBottom: 10 },
+          tabBarIcon: ({ focused }) =>
             focused ? (
               <Image
                 source={Images.Logos.greenlogo}
@@ -47,8 +47,8 @@ Mytabs = props => {
         options={{
           headerShown: false,
           tabBarLabel: 'Tools',
-          tabBarItemStyle: {paddingBottom: 10},
-          tabBarIcon: ({focused}) =>
+          tabBarItemStyle: { paddingBottom: 10 },
+          tabBarIcon: ({ focused }) =>
             focused ? (
               <Image source={Images.Logos.hands} style={styles.activeImg} />
             ) : (
@@ -64,8 +64,8 @@ Mytabs = props => {
           tabBarActiveTintColor: '#1C5C2E',
           headerShown: false,
           tabBarLabel: 'Groundwork',
-          tabBarItemStyle: {paddingBottom: 10},
-          tabBarIcon: ({focused}) =>
+          tabBarItemStyle: { paddingBottom: 10 },
+          tabBarIcon: ({ focused }) =>
             focused ? (
               <Image source={Images.Icons.leaf} style={styles.activeImg} />
             ) : (
@@ -79,8 +79,8 @@ Mytabs = props => {
         options={{
           headerShown: false,
           tabBarLabel: 'Me',
-          tabBarItemStyle: {paddingBottom: 10},
-          tabBarIcon: ({focused}) =>
+          tabBarItemStyle: { paddingBottom: 10 },
+          tabBarIcon: ({ focused }) =>
             focused ? (
               <Image source={Images.Icons.small} style={styles.activeImg} />
             ) : (

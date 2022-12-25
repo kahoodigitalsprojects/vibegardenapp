@@ -12,9 +12,7 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Searcbart1 from '../../../componrnts/searchbar1';
-
 import Images from '../../../constants';
-
 const Search = props => {
   return (
     <SafeAreaView style={styles.main}>
@@ -25,12 +23,14 @@ const Search = props => {
         <Searcbart1
           onpress1={() => {
             props.navigation.navigate('Search2', {
-              params: {
-                textchange: 'Quantum Physics',
-                mydata: true
-              }
+              // params: {
+              //   textchange: 'Quantum Physics',
+              //   mydata: true
+              // }
             });
           }}
+          onpress2={() => props.navigation.navigate('Mytabs', { screen: 'Home' })}
+
         />
         <View style={styles.container}>
           <View
@@ -69,7 +69,7 @@ const Search = props => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    backgroundColor: '#fefe',
+    backgroundColor: '#fff'
   },
   container: {
     width: '90%',
@@ -78,6 +78,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'center',
     marginTop: 20,
+
   },
   input: {
     width: '100%',

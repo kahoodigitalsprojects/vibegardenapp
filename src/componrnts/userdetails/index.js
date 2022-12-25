@@ -30,10 +30,10 @@ const Userdetails = ({
 }) => {
   return (
     <>
-      <View style={{width: '90%', alignSelf: 'center'}}>
+      <View style={{ width: '90%', alignSelf: 'center' }}>
         {databox1 && (
           <View style={styles.boxouter}>
-            <View style={{width: '95%', alignSelf: 'center'}}>
+            <View style={{ width: '95%', alignSelf: 'center' }}>
               <View
                 style={{
                   justifyContent: 'space-between',
@@ -46,13 +46,13 @@ const Userdetails = ({
                   shadowColor: '#000',
                 }}>
                 <View
-                  style={{width: 60, height: 60, marginTop: 12, margin: 10}}>
+                  style={{ width: 60, height: 60, marginTop: 12, margin: 10 }}>
                   <Image
                     source={Img1}
-                    style={{width: 60, height: 60, borderRadius: 100}}
+                    style={{ width: 60, height: 60, borderRadius: 100 }}
                   />
                 </View>
-                <View style={{width: '80%', height: 100, marginTop: 10}}>
+                <View style={{ width: '80%', height: 100, marginTop: 10 }}>
                   <View
                     style={{
                       width: '100%',
@@ -83,7 +83,7 @@ const Userdetails = ({
                     {text}
                   </Text>
                 </View>
-                <View style={{marginTop: 8}}>
+                <View style={{ marginTop: 8 }}>
                   <Text
                     style={{
                       fontSize: 12,
@@ -101,17 +101,17 @@ const Userdetails = ({
       </View>
 
       {databox2 && (
-        <View style={{backgroundColor: backgroundColor, borderRadius: 12}}>
+        <View style={{ backgroundColor: backgroundColor, borderRadius: 12, opacity: 0.75 }}>
           <View
             style={{
               flexDirection: 'row',
               width: '100%',
             }}>
-            <View style={{width: 44, height: 45, margin: 15}}>
+            <View style={{ width: 44, height: 45, margin: 15 }}>
               <Image
                 source={bear}
                 resizeMode="contain"
-                style={{width: '100%', height: '100%'}}
+                style={{ width: '100%', height: '100%' }}
               />
               <View>
                 {nametext && (
@@ -128,7 +128,7 @@ const Userdetails = ({
                 )}
               </View>
             </View>
-            <View style={{width: '76%', padding: 3, marginVertical: 4}}>
+            <View style={{ width: '76%', padding: 3, marginVertical: 4 }}>
               <Text
                 style={{
                   fontSize: 12,
@@ -140,7 +140,7 @@ const Userdetails = ({
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
                 aliquyam erat, sed diam voluptua.
               </Text>
-              <View style={{alignSelf: 'flex-end'}}>
+              <View style={{ alignSelf: 'flex-end' }}>
                 <Text
                   style={{
                     color: '#1C5C2E',
@@ -204,4 +204,4 @@ const styles = StyleSheet.create({
     fontFamily: 'BrandonGrotesque-Medium',
   },
 });
-export {Userdetails};
+export { Userdetails };

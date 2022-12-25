@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -7,72 +7,81 @@ import {
   StyleSheet,
   StatusBar,
 } from 'react-native';
-
-import {Header, Pinkbtn, QComponents} from '../../../componrnts';
-
+import { Header, Pinkbtn, QComponents } from '../../../componrnts';
+import ResultComponents from '../../../componrnts/resultcompo';
 const Question3 = props => {
+  const [state, setState] = useState()
   return (
-    <SafeAreaView style={styles.main}>
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
-        <StatusBar animated={true} backgroundColor="#000" />
-        <View
-          style={{
-            marginVertical: 10,
-            marginTop: 10,
-            width: '90%',
-            alignSelf: 'center',
-          }}>
-          <Header
-            marginRight={-40}
-            marginTop={-40}
-            color="#1C5C2E"
-            iconName="closesquareo"
-            header2
-            headertext="Resonance Finder"
-            fontSize={25}
-            OnPress={() => props.navigation.goBack('')}
-          />
-          <QComponents
-            iconone
-            name2="chevron-down"
-            direction2="Description:"
-            width={'100%'}
-            flowwerlist11={true}
-            Statement1="Statement"
-            flow="Flow Thtough"
-            name="chevron-down"
-            image1={true}
-            text="No idea What a Multiverse is"
-            headingtext
-            number={'4/20'}
-            text1={'Angels are some people made upto better'}
-            text2="I wish"
-            text3={`'It Feels That's way Sometime'`}
-            text4="I Wrap Myself in that way Nightly"
-            text6={'We Each Have Angles?'}
-          />
-        </View>
-        <View style={{marginTop: 20}}>
-          <Pinkbtn
-            width={'60%'}
-            btntxt="See Results"
-            onPress={() =>
-              props.navigation.replace('Result', {
-                params: {
-                  otherParam: 'Top Tools',
-                  
-                  plus: true,
-                  backoption: () =>
-                    props.navigation.navigate('Mytabs', {screen: 'me'}),
-                },
-              })
-            }
-          />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <>
+      <SafeAreaView style={styles.main}>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{ flexGrow: 1 }}>
+          <StatusBar animated={true} backgroundColor="#000" />
+          <View
+            style={{
+              marginVertical: 10,
+              marginTop: 10,
+              width: '100%',
+              alignSelf: 'center',
+            }}>
+            <Header
+              marginRight={-40}
+              marginTop={-40}
+              color="#1C5C2E"
+              iconName="closesquareo"
+              header2
+              headertext="Resonance Finder"
+              fontSize={25}
+            // OnPress={() => props.navigation.goBack('')}
+            />
+            <QComponents
+              iconone
+              name2="chevron-down"
+              direction2="Description:"
+              width={'100%'}
+              flowwerlist11={true}
+              Statement1="Statement"
+              flow="Flow Thtough"
+              name="chevron-down"
+              image1={true}
+              text="No idea What a Multiverse is"
+              headingtext
+              number={'4/20'}
+              text1={'Angels are some people made upto better'}
+              text2="I wish"
+              text3={`'It Feels That's way Sometime'`}
+              text4="I Wrap Myself in that way Nightly"
+              text6={'We Each Have Angles?'}
+            />
+          </View>
+          <View style={{ marginTop: 20 }}>
+            <Pinkbtn
+              shadow="#00000029"
+              width={'60%'}
+              btntxt="See Results"
+              setVisible={setState}
+              onPress={() =>
+                props.navigation.replace('Homes', {
+                  screen: 'Result',
+                  params: {
+                    otherParam: 'Top Tools',
+                    plus: true,
+                    backoption: () =>
+                      props.navigation.replace('Mytabs', { screen: 'me' }),
+                  },
+                })
+              }
+
+
+
+            />
+          </View>
+        </ScrollView>
+      </SafeAreaView>
+
+
+    </>
   );
 };
 

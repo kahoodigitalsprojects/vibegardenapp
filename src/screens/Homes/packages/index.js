@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   View,
   StyleSheet,
@@ -8,7 +8,7 @@ import {
   FlatList,
   Image,
 } from 'react-native';
-import {Header, Pinkbtn, PopUp, StoryData, Switch1} from '../../../componrnts';
+import { Header, Pinkbtn, PopUp, StoryData, Switch1 } from '../../../componrnts';
 import Icon from 'react-native-vector-icons/AntDesign';
 const Packages = props => {
   const [state, setstate] = useState(false);
@@ -17,7 +17,7 @@ const Packages = props => {
     <>
       <View style={styles.main}>
         <View style={styles.container}>
-          <View style={{marginTop: 10}}>
+          <View style={{ marginTop: 10 }}>
             <Header
               iconName="closesquareo"
               header4
@@ -30,14 +30,14 @@ const Packages = props => {
           <View style={styles.switchView}>
             <View style={styles.row}>
               <Text style={styles.text1}>
-                <Text style={[styles.text1, {color: '#aaa'}]}>
+                <Text style={[styles.text1, { color: '#aaa' }]}>
                   Monthly $22{' '}
                 </Text>
               </Text>
-              <View style={{flexDirection: 'row'}}>
+              <View style={{ flexDirection: 'row' }}>
                 <Image
                   source={require('../../../assests/images/tick.png')}
-                  style={{marginTop: 10, margin: 4}}
+                  style={{ marginTop: 10, margin: 4 }}
                 />
                 <Text style={styles.text2}>Selected </Text>
               </View>
@@ -51,14 +51,14 @@ const Packages = props => {
             <View style={styles.row}>
               <Text style={styles.text1}>
                 <Text
-                  style={[styles.text1, {color: '#1C5C2E', fontWeight: '450'}]}>
+                  style={[styles.text1, { color: '#1C5C2E', fontWeight: '450' }]}>
                   Yearly $264{' '}
                 </Text>
               </Text>
 
               <Image
                 source={require('../../../assests/images/fire.png')}
-                style={{marginTop: 10, margin: 4}}
+                style={{ marginTop: 10, margin: 4 }}
               />
             </View>
 

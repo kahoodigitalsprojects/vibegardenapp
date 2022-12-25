@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -10,20 +10,23 @@ import {
   ScrollView,
   Appearance,
 } from 'react-native';
-import {Header, Pinkbtn} from '../../../componrnts';
+import { Header, Pinkbtn } from '../../../componrnts';
 import Images from '../../../constants';
 import Orientation from 'react-native-orientation-locker';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {useIsFocused} from '@react-navigation/native';
-const Login = ({route, navigation}) => {
+import { useIsFocused } from '@react-navigation/native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+const Login = ({ route, navigation }) => {
   const [state, setState] = useState(true);
   const [state1, setState1] = useState(true);
   const [message, setMessage] = useState('');
   const isFocused = useIsFocused();
+
   useEffect(() => {
     Orientation.unlockAllOrientations();
     checkJourney();
   }, [isFocused]);
+
 
   const checkJourney = async value => {
     try {
@@ -41,23 +44,25 @@ const Login = ({route, navigation}) => {
   const registerd1 = route.params?.registerd1 || null;
   // console.log(colorScheme);
   return (
-    <ScrollView
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={{flexGrow: 1}}>
+    <SafeAreaView style={styles.imageContainer}>
       <StatusBar animated={true} backgroundColor="#000" />
-      <View style={styles.main}>
-        <View style={{width: '90%'}}>
-          <View style={{width: '100%', marginTop: 10}}>
-            <Header
-              iconName="arrowleft"
-              header2
-              OnPress={() => navigation.navigate('loginoption')}
-            />
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ flexGrow: 1 }}>
+        <View style={styles.screenHeader}>
+          <Header
+            iconName="arrowleft"
+            header2
+            OnPress={() => navigation.navigate('loginoption')} />
+        </View>
+        <View style={styles.screenBody}>
+          <View style={styles.logo} >
+            <View style={{ width: 110, height: 120 }}>
+              <Image source={Images.Logos.logo1} resizeMode="contain"
+                style={{ width: '100%', height: '100%' }} />
+            </View>
           </View>
-          <View style={{marginVertical: 20, marginTop: 60}}>
-            <Image source={Images.Logos.logo1} style={{}} />
-          </View>
-          <View>
+          <View style={styles.inputContainer}>
             <Text
               style={{
                 fontSize: 18,
@@ -66,10 +71,10 @@ const Login = ({route, navigation}) => {
               }}>
               Login With Email
             </Text>
-            <View style={{marginTop: 47}}>
+            <View style={{ marginTop: 40 }}>
               <TouchableOpacity
                 onPress={() => setState(!state)}
-                style={{borderBottomWidth: 1, borderColor: '#75997E'}}>
+                style={{ borderBottomWidth: 1, borderColor: '#75997E' }}>
                 {state ? (
                   <View>
                     <Text
@@ -150,89 +155,115 @@ const Login = ({route, navigation}) => {
                 Forget Password?
               </Text>
             </TouchableOpacity>
-            <View style={{marginTop: 42}}>
-              <Pinkbtn
-                shadow="red"
-                onPress={() => {
-                  {
-                    registerd1
-                      ? navigation.replace(
-                          'Mytabs',
-                          {screen: 'Home'},
-                          {
-                            itemId: 86,
-                          },
-                        )
-                      : navigation.navigate(
-                          'Auth',
-                          {screen: 'NotRegisterd'},
-                          {
-                            itemId: 86,
-                          },
-                        );
-                  }
-                }}
-                width={'60%'}
-                btntxt="Continue"
-              />
-            </View>
-            <Text
-              style={{
-                textAlign: 'center',
-                marginVertical: 20,
-                color: '#1C5C2E',
-                fontSize: 18,
-                fontWeight: '500',
-                // fontFamily: 'BrandonGrotesque-Regular',
-              }}>
-              Or
-            </Text>
-            <TouchableOpacity
-              style={{}}
-              onPress={() => {
-                navigation.navigate('signup', {
-                  registerd1: () => navigation.navigate('signup'),
-                  itemId: 86,
-                  registerd2: () =>
-                    navigation.replace('Mytabs', {Screen: 'Home'}),
-                  otherParam: 'anything you want here',
-                });
-              }}>
-              <Text
-                style={{
-                  textAlign: 'center',
-
-                  color: '#1C5C2E',
-                  fontSize: 18,
-                  fontWeight: '500',
-                  fontFamily: 'BrandonGrotesque-Medium',
-                }}>
-                Don't have an account?
-                <Text
-                  style={{
-                    fontWeight: 'bold',
-                    textDecorationLine: 'underline',
-                  }}>
-                  Sign Up
-                </Text>
-              </Text>
-            </TouchableOpacity>
           </View>
         </View>
-      </View>
-    </ScrollView>
+        <View style={{}}>
+          <Pinkbtn
+
+            shadow="'#CD258D'"
+            onPress={() => {
+              {
+                registerd1
+                  ? navigation.replace(
+                    'Mytabs',
+                    { screen: 'Home' },
+                    {
+                      itemId: 86,
+                    },
+                  )
+                  : navigation.navigate(
+                    'Auth',
+                    { screen: 'NotRegisterd' },
+                    {
+                      itemId: 86,
+                    },
+                  );
+              }
+            }}
+            width={'60%'}
+            btntxt="Continue"
+          />
+        </View>
+        <Text
+          style={{
+            textAlign: 'center',
+            marginVertical: 20,
+            color: '#1C5C2E',
+            fontSize: 18,
+            fontWeight: '500',
+            // fontFamily: 'BrandonGrotesque-Regular',
+          }}>
+          Or
+        </Text>
+        <TouchableOpacity
+          style={{}}
+          onPress={() => {
+            navigation.navigate('signup', {
+              registerd1: () => navigation.navigate('signup'),
+              itemId: 86,
+              registerd2: () =>
+                navigation.replace('Mytabs', { Screen: 'Home' }),
+              otherParam: 'anything you want here',
+            });
+          }}>
+          <Text
+            style={{
+              textAlign: 'center',
+
+              color: '#1C5C2E',
+              fontSize: 18,
+              fontWeight: '500',
+              fontFamily: 'BrandonGrotesque-Medium',
+            }}>
+            Don't have an account?
+            <Text
+              style={{
+                fontWeight: 'bold',
+                textDecorationLine: 'underline',
+              }}>
+              Sign Up
+            </Text>
+          </Text>
+        </TouchableOpacity>
+
+
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  main: {flex: 1, alignItems: 'center'},
-  input: {
-    // flexDirection: 'row',
-    // justifyContent: 'space-between',dlew
-    borderBottomWidth: 0.8,
-    borderColor: '#1C5C2E',
-    opacity: 0.6,
+  imageContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: '#ffff'
+  },
+  screenHeader: {
+    width: '90%',
+    // height: 150,
     marginTop: 20,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  screenBody: {
+    width: '90%',
+    alignSelf: 'center',
+  },
+  logo: {
+    width: '100%',
+    // alignItems: 'center',
+    // justifyContent: 'center',
+    marginTop: 40,
+
+  },
+  inputContainer: {
+    width: '100%',
+    backgroundColor: '#ffff'
+    // height: 300,
+    // paddingTop: 40,
+    // justifyContent: 'center',
+    // alignItems: 'center',
   },
 });
 

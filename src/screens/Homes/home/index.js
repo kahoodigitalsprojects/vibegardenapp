@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import {
   View,
   Text,
@@ -10,12 +10,12 @@ import {
   FlatList,
   StatusBar,
 } from 'react-native';
-import {Header, Imgbox, SeeAll, StoryData} from '../../../componrnts';
+import { Header, Imgbox, SeeAll, StoryData } from '../../../componrnts';
 import All from '../../../componrnts/all';
 import MainBox from '../../../componrnts/mainbox';
 import Images from '../../../constants';
 
-const Home = ({navigation, route}) => {
+const Home = ({ navigation, route }) => {
   const backAction = () => {
     // navigation.navigate('Mytabes', {screen: 'homes'});
   };
@@ -24,7 +24,7 @@ const Home = ({navigation, route}) => {
     console.log('home baclhandler called');
     // BackHandler.exitApp();
   });
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
 
   const Data = [
     {
@@ -45,7 +45,7 @@ const Home = ({navigation, route}) => {
           params: {
             otherParam: 'Tools to try',
             plus: true,
-            backoption: () => navigation.navigate('Mytabs', {screen: 'Home'}),
+            backoption: () => navigation.navigate('Mytabs', { screen: 'Home' }),
           },
         });
       },
@@ -98,7 +98,7 @@ const Home = ({navigation, route}) => {
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
+        contentContainerStyle={{ flexGrow: 1 }}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
@@ -108,14 +108,14 @@ const Home = ({navigation, route}) => {
             marginTop: 25,
           }}>
           <Header
-            marginTop={-30}
+            marginTop={-40}
             marginLeft={-15}
             img1
             heartplus
             search1="search1"
             color="green"
             homeheader={true}
-            search={() => navigation.navigate('Homes', {screen: 'Search'})}
+            search={() => navigation.navigate('Homes', { screen: 'Search' })}
             heart
             plus
             size={22}
@@ -124,7 +124,7 @@ const Home = ({navigation, route}) => {
           />
         </View>
         <View style={styles.Box1}>
-          <View style={{width: '90%', alignSelf: 'center', marginVertical: 8}}>
+          <View style={{ width: '90%', alignSelf: 'center', marginVertical: 8 }}>
             <Text
               style={{
                 textAlign: 'center',
@@ -154,7 +154,7 @@ const Home = ({navigation, route}) => {
                       heart: true,
                       icon1: false,
                       backoption: () =>
-                        navigation.navigate('Mytabs', {screen: 'Home'}),
+                        navigation.navigate('Mytabs', { screen: 'Home' }),
                     },
                   })
                 }
@@ -193,7 +193,7 @@ const Home = ({navigation, route}) => {
                 showsHorizontalScrollIndicator={false}
                 keyExtractor={item => item.id}
                 data={Data}
-                renderItem={({item}) => {
+                renderItem={({ item }) => {
                   return (
                     <>
                       <All

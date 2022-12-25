@@ -83,6 +83,7 @@ const Resonance = props => {
             </View>
             <View style={{ marginTop: 8 }}>
               <Pinkbtn
+                shadow="#00000029"
                 onPress={() => {
                   props.navigation.navigate('question2');
                 }}

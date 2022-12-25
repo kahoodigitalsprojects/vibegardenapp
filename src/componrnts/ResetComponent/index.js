@@ -1,4 +1,4 @@
-import React, {isValidElement, useState} from 'react';
+import React, { isValidElement, useState } from 'react';
 import {
   View,
   StyleSheet,
@@ -14,9 +14,9 @@ import Icon from 'react-native-vector-icons/Entypo';
 import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
 import Tooltip from 'react-native-walkthrough-tooltip';
 import Images from '../../constants';
-import {SeeAll} from '../SeeAll';
+import { SeeAll } from '../SeeAll';
 
-const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
+const Reset = ({ Iname, iconname, icontrue, imgtrue, plustimggreen }) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [toolTipVisible, setToolTipVisible] = useState(false);
   return (
@@ -37,11 +37,11 @@ const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
               flexDirection: 'row',
               // justifyContent: 'space-between',
             }}>
-            <View style={{width: 112, height: 80, marginTop: 10}}>
+            <View style={{ width: 112, height: 80, marginTop: 10 }}>
               <Image source={Images.Imgs.pic1} />
             </View>
-            <View style={{margin: 15, marginVertical: 10}}>
-              <View style={{marginVertical: 3}}>
+            <View style={{ margin: 15, marginVertical: 10 }}>
+              <View style={{ marginVertical: 3 }}>
                 <Text
                   style={{
                     color: '#1C5C2E',
@@ -53,7 +53,7 @@ const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
                 </Text>
               </View>
 
-              <View style={{marginVertical: 3}}>
+              <View style={{ marginVertical: 3 }}>
                 <Text
                   style={{
                     color: '#000',
@@ -63,18 +63,18 @@ const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
                 </Text>
               </View>
 
-              <View style={{marginVertical: 3}}>
-                <Text style={{color: '', fontSize: 12}}>
+              <View style={{ marginVertical: 3 }}>
+                <Text style={{ color: '', fontSize: 12 }}>
                   3 min * Date: 10-17-2022
                 </Text>
               </View>
             </View>
           </View>
-          <View style={{width: '10%'}}>
+          <View style={{ width: '10%' }}>
             <View style={styles.container}>
               <View style={styles.centeredView}>
                 {modalVisible && (
-                  <View style={{marginLeft: -20}}>
+                  <View style={{ marginLeft: -20 }}>
                     <TouchableOpacity
                       onPress={() => setModalVisible(!modalVisible)}
                       style={{
@@ -95,8 +95,8 @@ const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
                       }}>
                       <Icon2
                         name="delete"
-                        size={12}
-                        style={{paddingTop: 2, marginLeft: 3, margin: 3}}
+                        size={10}
+                        style={{ paddingTop: 2, marginLeft: 3, margin: 2 }}
                       />
                       <Text
                         style={{
@@ -134,14 +134,14 @@ const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
                 {/* </Modal> */}
               </View>
               <TouchableOpacity
-                style={[{marginTop: 8}, styles.button]}
+                style={[{ marginTop: 8 }, styles.button]}
                 onPress={() => setModalVisible(true)}>
                 <Icon name="dots-three-horizontal" size={22} />
               </TouchableOpacity>
             </View>
-            <TouchableOpacity style={{marginTop: 35}}>
+            <TouchableOpacity style={{ marginTop: 35 }}>
               {icontrue && (
-                <View style={{marginLeft: 4}}>
+                <View style={{ marginLeft: 4 }}>
                   <Icon2 name="heart" size={16} color="red" />
                 </View>
               )}

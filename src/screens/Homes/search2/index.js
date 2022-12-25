@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -12,22 +12,24 @@ import {
   FlatList,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {Header, SeeAll, Userdetails} from '../../../componrnts';
+import { Header, SeeAll, Userdetails } from '../../../componrnts';
 import All from '../../../componrnts/all';
 import Imgbox from '../../../componrnts/imgbox';
 import MainBox from '../../../componrnts/mainbox';
 import Searcbart1 from '../../../componrnts/searchbar1';
-import {Modal} from 'react-native';
+import { Modal } from 'react-native';
 import Images from '../../../constants';
 import Modaldata from '../../../componrnts/modaldata';
-
-const Search2 = ({route, navigation, otherParam}) => {
-  const {textchange} = route.params;
-  const {Mydata} = route.params;
-
-  const [state1, setState1] = useState();
+const Search2 = ({ route, navigation, otherParam }) => {
+  const { textchange } = route.params;
+  const { Mydata } = route.params;
+  const [state, setState] = useState(0);
+  const [state1, setState1] = useState("My Original Text");
+  const [state2, setState2] = useState(0);
+  const [state3, setState3] = useState(0);
   const [data1, setData1] = useState(0);
   const [topicName, setTopicName] = useState('');
+  const [myText, setMyText] = useState("My Original Text");
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
@@ -35,10 +37,12 @@ const Search2 = ({route, navigation, otherParam}) => {
       <SafeAreaView style={styles.main}>
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{flexGrow: 1}}>
+          contentContainerStyle={{ flexGrow: 1 }}>
           <StatusBar animated={true} backgroundColor="#000" />
-          <View style={{width: '100%'}}>
-            <Searcbart1 onpress1={() => navigation.goBack('')} />
+          <View style={{ width: '100%' }}>
+            <Searcbart1
+              onpress2={() => navigation.goBack('')}
+            />
           </View>
           <View style={styles.container}>
             <View
@@ -51,7 +55,6 @@ const Search2 = ({route, navigation, otherParam}) => {
                 style={{
                   width: '95%',
                   alignSelf: 'center',
-                  // backgroundColor: 'yellow',
                   flexDirection: 'row',
                   justifyContent: 'space-between',
                 }}>
@@ -94,7 +97,6 @@ const Search2 = ({route, navigation, otherParam}) => {
                     Tools
                   </Text>
                 </TouchableOpacity>
-
                 <TouchableOpacity
                   onPress={() => (data1 === 2 ? '' : setData1(2))}
                   style={{
@@ -116,47 +118,21 @@ const Search2 = ({route, navigation, otherParam}) => {
                 </TouchableOpacity>
               </View>
             </View>
-            <View style={{width: '100%', marginTop: 10}}>
+            <View style={{ width: '100%', marginTop: 10 }}>
               {data1 === 0 ? (
                 <>
-                  {/* <TouchableOpacity
-                    onPress={() => {
-                      settate1(!state1);
-                    }}
-                    style={{}}>
-                    <Icon name="right" size={25} color="#1C5C2E" />
-                  </TouchableOpacity> */}
                   <View
                     style={{
                       width: '100%',
                       flexDirection: 'row',
                       alignSelf: 'flex-start',
-                      backgroundColor: 'pink',
+                      // backgroundColor: 'pink',
                     }}>
                     <TouchableOpacity
                       onPress={() => {
                         setState1(!state1);
                       }}
-                      //   {
-                      //   /* 1. Navigate to the Details route with params */
-                      //   navigation.navigate('Search3', {
-                      //     itemId: 'Topics',
-                      //     otherParam1: 'Buddhism',
-                      //     otherParam2: 'Plants',
-                      //     otherParam3: 'Quantum Physics',
-                      //     otherParam4: 'Body Wisdom',
-                      //     otherParam5: 'Nature',
-                      //     otherParam6: 'Ascended Master',
-                      //     otherParam7: 'Hight Dimensional',
-                      //     otherParam8: 'Light Beings',
-                      //     otherParam9: 'Ancient Wisdom',
-                      //     otherParam10: 'Western Psychology',
-                      //     otherParam11: 'Mindfullness',
-                      //     otherParam12: 'Science',
-                      //     Name: 'close',
-                      //   });
-                      // }}
-                      style={[styles.topics, {backgroundColor: '#fff'}]}>
+                      style={[styles.topics, { backgroundColor: '#fff' }]} >
                       <Text
                         style={{
                           color: '#1C5C2E',
@@ -170,13 +146,13 @@ const Search2 = ({route, navigation, otherParam}) => {
                         name="chevron-down"
                         size={18}
                         color="#1C5C2E"
-                        style={{margin: 6}}
+                        style={{ margin: 6 }}
                       />
                     </TouchableOpacity>
                   </View>
 
                   <View>
-                    <View style={{marginVertical: 10}}>
+                    <View style={{ marginVertical: 10 }}>
                       <SeeAll
                         onPress={() =>
                           navigation.navigate('Mytabs', {
@@ -220,15 +196,16 @@ const Search2 = ({route, navigation, otherParam}) => {
                         })}
                       </ScrollView>
                     </View>
-                    <View style={{marginVertical: 10}}>
+                    <View style={{ marginVertical: 10 }}>
                       <SeeAll
                         onPress={() =>
-                          navigation.navigate('Mytabs', {
-                            screen: '',
+                          navigation.replace('Homes', {
+                            screen: 'GroundWork',
                             params: {
-                              backoption: navigation.navigate('Mytabs', {
-                                screen: 'me',
-                              }),
+                              otherParam: 'Top Tools',
+                              plus: true,
+                              backoption: () =>
+                                navigation.replace('Mytabs', { screen: 'me' }),
                             },
                           })
                         }
@@ -262,7 +239,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                         })}
                       </ScrollView>
                     </View>
-                    <View style={{marginVertical: 10}}>
+                    <View style={{ marginVertical: 10 }}>
                       <SeeAll
                         onPress={() => {
                           navigation.navigate('Homes', {
@@ -311,15 +288,15 @@ const Search2 = ({route, navigation, otherParam}) => {
                       </ScrollView>
                     </View>
                   </View>
-                  <View style={{marginVertical: 20}}>
+                  <View style={{ marginVertical: 20 }}>
                     <SeeAll color1="#1C5C2E" textA="TEACHERS" textB="SeeAll" />
                   </View>
 
-                  <View style={{marginTop: -15}}>
+                  <View style={{ marginTop: -15 }}>
                     <FlatList
                       showsHorizontalScrollIndicator={false}
                       data={data2}
-                      renderItem={({item}) => {
+                      renderItem={({ item }) => {
                         return (
                           <>
                             <View
@@ -360,26 +337,18 @@ const Search2 = ({route, navigation, otherParam}) => {
                           margin: 6,
                           fontFamily: 'BrandonGrotesque-Regular',
                         }}>
-                        Topics
+                        Quantum Physics
+
                       </Text>
                       <Icon
                         name="chevron-down"
                         size={18}
                         color="#1C5C2E"
-                        style={{margin: 6}}
+                        style={{ margin: 6 }}
                       />
                     </TouchableOpacity>
                     <TouchableOpacity
-                      onPress={() => {
-                        /* 1. Navigate to the Details route with params */
-                        navigation.navigate('Search3', {
-                          itemId: 'Types',
-                          otherParam1: 'Tools For Light',
-                          otherParam2: 'Tools For Shadow',
-                          otherParam3: 'Tools For Connections',
-                          Name: 'close',
-                        });
-                      }}
+                      onPress={() => setState2(!state2)}
                       style={styles.topics}>
                       <Text
                         style={{
@@ -394,7 +363,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                         name="chevron-down"
                         size={18}
                         color="#1C5C2E"
-                        style={{margin: 6}}
+                        style={{ margin: 6 }}
                       />
                     </TouchableOpacity>
                   </View>
@@ -404,7 +373,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                       showsHorizontalScrollIndicator={false}
                       keyExtractor={item => item.id}
                       data={databox}
-                      renderItem={({item}) => {
+                      renderItem={({ item }) => {
                         return (
                           <All
                             pressI={() =>
@@ -447,7 +416,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                       alignSelf: 'flex-start',
                       alignSelf: 'center',
                     }}>
-                    <TouchableOpacity onPress={() => {}} style={styles.topics}>
+                    <TouchableOpacity onPress={() => { }} style={styles.topics}>
                       <Text
                         style={{
                           color: '#1C5C2E',
@@ -461,22 +430,12 @@ const Search2 = ({route, navigation, otherParam}) => {
                         name="close"
                         size={18}
                         color="#1C5C2E"
-                        style={{margin: 6}}
+                        style={{ margin: 6 }}
                       />
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                      onPress={() => {
-                        /* 1. Navigate to the Details route with params */
-                        navigation.navigate('Search3', {
-                          itemId: 'Groundwork Types',
-                          otherParam1: 'Essentials',
-                          otherParam2: 'Building Blocks',
-                          otherParam3: 'Deep Dives',
-                          otherParam4: 'Play!',
-                          Name: 'close',
-                        });
-                      }}
+                      onPress={() => setState3(!state3)}
                       style={styles.topics}>
                       <Text
                         style={{
@@ -491,7 +450,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                         name="chevron-down"
                         size={18}
                         color="#1C5C2E"
-                        style={{margin: 6}}
+                        style={{ margin: 6 }}
                       />
                     </TouchableOpacity>
                   </View>
@@ -501,7 +460,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                       keyExtractor={item => item.id}
                       numColumns={2}
                       data={databox}
-                      renderItem={({item}) => {
+                      renderItem={({ item }) => {
                         return (
                           <View
                             style={{
@@ -533,20 +492,62 @@ const Search2 = ({route, navigation, otherParam}) => {
         </ScrollView>
       </SafeAreaView>
       <Modaldata
-        poup1={true}
+        headtext="Topics"
+        text1="Buddhism"
+        text2="Plants"
+        text3="Quantum Physics"
+        text4="Nature"
+        text5="Ascended Master"
+        text6="Higher Dimensional"
+        text7="Light Beings"
+        text8="Ancient Wisdom"
+        text9="Western Psychology"
+        text10="Mindfulness"
+        text11="Mindfulness"
         Visible={state1}
-        btntext1="Cancel"
-        btntext2="Use This Card"
-        // onpressA={() => {
-        //   props.navigation.navigate('PaymentMethod', {
-        //     headertext1: 'Pay Now',
-        //     pressbtn: true,
-        //   });
-        // }}
         setVisible={setState1}
-        onpress1={() => {
+        onPress={() => {
           setState1(false);
-          setState1(true);
+
+
+        }}
+        onpress1={() => {
+          data1 === 1 ? '' : setData1(1)
+          setState1(false);
+
+        }}
+      />
+      <Modaldata
+        headtext="Topics"
+        text1="Tools For Light"
+        text2="Tools For Shadow"
+        text3="Tools For Connections"
+        Visible={state2}
+        setVisible={setState2}
+        onPress={() => {
+          setState2(false);
+        }}
+        onpress1={() => {
+          state === 1 ? '' : setState(1)
+          setState2(false);
+        }}
+      />
+      <Modaldata
+        headtext="Topics"
+        text1="Essentials"
+        text2="Building Blocks"
+        text3="Deep Dives"
+        text4="Play!"
+        Visible={state3}
+        setVisible={setState3}
+        onPress={() => {
+          setState3(false);
+          setState3(false);
+        }}
+        onpress1={() => {
+          state === 2 ? '' : setState(2)
+          setState3(false);
+          // setState1(false);
         }}
       />
     </>
@@ -600,7 +601,9 @@ const styles = StyleSheet.create({
   },
   topics: {
     // alignSelf: 'flex-start',
-    backgroundColor: '#00000019',
+    backgroundColor: '#eeee',
+    elevation: 1,
+    opacity: 0.5,
     borderColor: '#00000029',
 
     // width: 126,
@@ -653,9 +656,9 @@ databox2 = [
 ];
 
 const data2 = [
-  {Img1: Images.Imgs.bear},
-  {Img1: Images.Imgs.bear},
-  {Img1: Images.Imgs.bear},
+  { Img1: Images.Imgs.bear },
+  { Img1: Images.Imgs.bear },
+  { Img1: Images.Imgs.bear },
 ];
 const data = [
   {

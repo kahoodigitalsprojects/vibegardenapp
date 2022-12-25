@@ -326,6 +326,14 @@ const styles = StyleSheet.create({
     fontFamily: 'BrandonGrotesque-Regular',
   },
   btn1: {
+    shadowOffset: {
+      width: 50,
+      height: 52,
+    },
+    shadowColor: '#00000029',
+    shadowOpacity: 20.58,
+    shadowRadius: 16.0,
+    elevation: 24,
     width: '50%',
     marginVertical: 25,
     alignSelf: 'center',

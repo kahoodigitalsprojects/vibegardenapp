@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -8,14 +8,14 @@ import {
   StatusBar,
 } from 'react-native';
 
-import {Header, Pinkbtn, QComponents} from '../../../componrnts';
+import { Header, Pinkbtn, QComponents } from '../../../componrnts';
 
 const Question = props => {
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
+        contentContainerStyle={{ flexGrow: 1 }}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
@@ -34,36 +34,38 @@ const Question = props => {
             headertext="Resonance Finder"
             OnPress={() => props.navigation.goBack('')}
           />
-          <QComponents
-            flowwerlist11={true}
-            iconone
-            width={'100%'}
-            name2="chevron-down"
-            direction2="Description:"
-            Statement1="Statement:"
-            flow="Flow Through"
-            number={'2/20'}
-            name="chevron-down"
-            image1={true}
-            text="No idea What a Multiverse is"
-            headingtext
-            text1={'Yeah,no'}
-            text2="No idea What a Multiverse is"
-            text3={'SMCA Peepsceen to think so'}
-            text4="Shall we Question Heap"
-            text6={'The Multiverse is Real'}
-            marginVertical={10}
-          />
         </View>
-        <View style={{marginTop: 20}}>
+        <QComponents
+          flowwerlist11={true}
+          iconone
+          width={'100%'}
+          name2="chevron-down"
+          direction2="Description:"
+          Statement1="Statement:"
+          flow="Flow Through"
+          number={'2/20'}
+          name="chevron-down"
+          image1={true}
+          text="No idea What a Multiverse is"
+          headingtext
+          text1={'Yeah,no'}
+          text2="No idea What a Multiverse is"
+          text3={'SMCA Peepsceen to think so'}
+          text4="Shall we Question Heap"
+          text6={'The Multiverse is Real'}
+          marginVertical={10}
+        />
+        <View style={{ marginTop: 20 }}>
           <Pinkbtn
+            shadow="#00000029"
             width={'60%'}
             btntxt="Next"
             onPress={() => props.navigation.navigate('question3')}
           />
         </View>
-      </ScrollView>
-    </SafeAreaView>
+
+      </ScrollView >
+    </SafeAreaView >
   );
 };
 

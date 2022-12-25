@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   StyleSheet,
@@ -9,27 +9,25 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-import {Header} from '../../../componrnts';
-import Tooltip from 'react-native-walkthrough-tooltip';
+import { Header } from '../../../componrnts';
 import Reset from '../../../componrnts/ResetComponent';
-import Result from '../result';
-import {BackHandler} from 'react-native';
-const FressBlooms = ({navigation, route}) => {
+// import { BackHandler } from 'react-native';
+const FressBlooms = ({ navigation, route }) => {
   // const itemId = 'asdas';
 
   // console.log('route', route.params.itemId);
   // console.log('route', route.params.otherParam);
   console.log(' sdfd', navigation);
-  const {otherParam} = route.params;
-  const {itemId} = route.params;
-  const {heart} = route.params;
-  const {plus} = route.params;
-  const {backoption} = route.params;
+  const { otherParam } = route.params;
+  const { itemId } = route.params;
+  const { heart } = route.params;
+  const { plus } = route.params;
+  const { backoption } = route.params;
   const data = [
-    {id: 1, icon1: 'heart'},
-    {id: 2, icon1: 'heart'},
-    {id: 3, icon1: 'heart'},
-    {id: 4, icon1: 'heart'},
+    { id: 1, icon1: 'heart' },
+    { id: 2, icon1: 'heart' },
+    { id: 3, icon1: 'heart' },
+    { id: 4, icon1: 'heart' },
   ];
   // const backAction = () => {
   //   console.log(' freshbloom');
@@ -45,12 +43,12 @@ const FressBlooms = ({navigation, route}) => {
   //   backAction();
   // });
 
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
   return (
     <>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
+        contentContainerStyle={{ flexGrow: 1 }}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View style={styles.main}>
           <View
@@ -59,7 +57,7 @@ const FressBlooms = ({navigation, route}) => {
               alignSelf: 'center',
               fontFamily: 'BrandonGrotesque-Regular',
             }}>
-            <Text style={{color: 'yellow'}}>{itemId}</Text>
+            <Text style={{ color: 'yellow' }}>{itemId}</Text>
             <Header
               marginTop={-40}
               iconName="closesquareo"
@@ -69,11 +67,11 @@ const FressBlooms = ({navigation, route}) => {
               headertext={otherParam}
               OnPress={backoption}
             />
-            <View style={{marginTop: 47}}>
+            <View style={{ marginTop: 47 }}>
               <FlatList
                 data={data}
                 keyExtractor={item => item.id}
-                renderItem={({item}) => {
+                renderItem={({ item }) => {
                   return <Reset imgtrue={plus} icontrue={heart} />;
                 }}
               />
