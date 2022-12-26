@@ -7,21 +7,22 @@ import {
   StatusBar,
   Image,
 } from 'react-native';
-import { Header } from '../../../componrnts';
+import {Header} from '../../../componrnts';
 
 import Images from '../../../constants';
-const Result = ({ navigation, route }) => {
-  const { backoption } = route.params;
+const Result = ({navigation, route}) => {
+  const {backoption} = route.params;
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
-      contentContainerStyle={{ flexGrow: 1 }}>
+      contentContainerStyle={{flexGrow: 1}}>
       <StatusBar animated={true} backgroundColor="#000" />
       <View style={styles.main}>
         <View
           style={{
             width: '90%',
             alignSelf: 'center',
+            marginTop: 15,
           }}>
           <Header
             iconName="closesquareo"
@@ -39,7 +40,7 @@ const Result = ({ navigation, route }) => {
             // OnPress={backoption}
             headertext="Resonance Finder"
           />
-          <View style={{ marginVertical: 10 }}>
+          <View style={{marginVertical: 10}}>
             <Text
               style={{
                 fontSize: 31,
@@ -60,7 +61,7 @@ const Result = ({ navigation, route }) => {
             <Image
               source={Images.Imgs.Rainbow}
               resizeMode="contain"
-              style={{ width: '100%', height: '100%' }}
+              style={{width: '100%', height: '100%'}}
             />
           </View>
           <View>
@@ -116,7 +117,7 @@ const Result = ({ navigation, route }) => {
               </View>
             </View>
           </View>
-          <View style={{ borderBottomWidth: 1, width: 68 }}>
+          <View style={{borderBottomWidth: 1, width: 68}}>
             <Text style={styles.text3}>Note:</Text>
           </View>
           <Text style={styles.text4}>

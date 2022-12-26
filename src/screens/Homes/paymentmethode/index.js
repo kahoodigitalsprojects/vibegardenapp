@@ -37,13 +37,14 @@ const PaymentMethod = ({navigation, route, pres}) => {
             }}>
             <Header
               iconName="left"
+              marginLeft={30}
               header4
               OnPress={() => navigation.navigate('ManageSubscription')}
               color="#000"
               fontSize={20}
               headertext2={headertext1}
             />
-            <View style={{marginTop: 30, alignSelf: 'center', width: '100%'}}>
+            <View style={{marginTop: 30}}>
               <Text
                 style={{
                   fontSize: 37,

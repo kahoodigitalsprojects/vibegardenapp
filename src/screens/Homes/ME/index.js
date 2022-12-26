@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   View,
   Text,
@@ -10,17 +10,17 @@ import {
   TouchableOpacity,
   FlatList,
 } from 'react-native';
-import { Header, Percentage, Pinkbtn } from '../../../componrnts';
+import {Header, Percentage, Pinkbtn} from '../../../componrnts';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon2 from 'react-native-vector-icons/AntDesign';
 import Images from '../../../constants';
-import { BackHandler } from 'react-native';
-import { useNavigationState } from '@react-navigation/native';
+import {BackHandler} from 'react-native';
+import {useNavigationState} from '@react-navigation/native';
 import Header2 from '../../../componrnts/header2';
 import ResultComponents from '../../../componrnts/resultcompo';
 const Me = props => {
   const [state1, setState1] = useState(false);
-  const data = [{ text1: 'Last Weak' }, { text1: '30 days' }, { text1: 'All' }];
+  const data = [{text1: 'Last Weak'}, {text1: '30 days'}, {text1: 'All'}];
   const data1 = [
     {
       img1: Images.Icons.gpluse,
@@ -46,7 +46,7 @@ const Me = props => {
             otherParam: 'Recent Content',
             plus: true,
             backoption: () =>
-              props.navigation.navigate('Mytabs', { screen: 'me' }),
+              props.navigation.navigate('Mytabs', {screen: 'me'}),
           },
         });
       },
@@ -61,7 +61,7 @@ const Me = props => {
             otherParam: 'Favorites',
             heart: true,
             backoption: () =>
-              props.navigation.navigate('Mytabs', { screen: 'me' }),
+              props.navigation.navigate('Mytabs', {screen: 'me'}),
           },
         });
       },
@@ -76,7 +76,7 @@ const Me = props => {
             otherParam: 'Top Tools',
             plus: true,
             backoption: () =>
-              props.navigation.navigate('Mytabs', { screen: 'me' }),
+              props.navigation.navigate('Mytabs', {screen: 'me'}),
           },
         });
       },
@@ -91,11 +91,12 @@ const Me = props => {
             otherParam: 'Top Tools',
             plus: true,
             backoption: () =>
-              props.navigation.navigate('Mytabs', { screen: 'me' }),
+              props.navigation.navigate('Mytabs', {screen: 'me'}),
           },
         });
       },
-    }]
+    },
+  ];
   const state = useNavigationState(state => state);
   const routeName = state.routeNames[state.index];
   console.log('route', routeName);
@@ -126,7 +127,7 @@ const Me = props => {
         <StatusBar animated={true} backgroundColor="#000" />
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ flexGrow: 1 }}>
+          contentContainerStyle={{flexGrow: 1}}>
           <View
             style={{
               width: '90%',
@@ -146,18 +147,18 @@ const Me = props => {
               search1="search1"
               homeheader={true}
               search={() => {
-                props.navigation.navigate('Homes', { screen: 'Search' });
+                props.navigation.navigate('Homes', {screen: 'Search'});
               }}
               OnPress={() =>
-                props.navigation.navigate('Homes', { screen: 'notification' })
+                props.navigation.navigate('Homes', {screen: 'notification'})
               }
               OnPress1={() =>
-                props.navigation.navigate('Homes', { screen: 'settings' })
+                props.navigation.navigate('Homes', {screen: 'settings'})
               }
             />
           </View>
           <View style={styles.Box1}>
-            <View style={{ width: '90%', alignSelf: 'center', marginTop: 20 }}>
+            <View style={{width: '90%', alignSelf: 'center', marginTop: 20}}>
               <Text
                 style={{
                   textAlign: 'center',
@@ -197,14 +198,14 @@ const Me = props => {
                 </Text>
                 <FlatList
                   data={data1}
-                  renderItem={({ item }) => {
+                  renderItem={({item}) => {
                     return (
                       <>
                         <TouchableOpacity
                           onPress={item.onPress}
-                          style={{ flexDirection: 'row', marginVertical: 10 }}>
+                          style={{flexDirection: 'row', marginVertical: 10}}>
                           <Image source={item.img1} />
-                          <Text style={{ marginLeft: 15 }}>{item.text1}</Text>
+                          <Text style={{marginLeft: 15}}>{item.text1}</Text>
                         </TouchableOpacity>
                       </>
                     );
@@ -224,7 +225,7 @@ const Me = props => {
                   <FlatList
                     horizontal={true}
                     data={data}
-                    renderItem={({ item }) => {
+                    renderItem={({item}) => {
                       return (
                         <View
                           style={{
@@ -256,7 +257,7 @@ const Me = props => {
                     marginVertical: 10,
                     flexDirection: 'row',
                   }}>
-                  <View style={{ width: '73%', height: 80, marginVertical: 10 }}>
+                  <View style={{width: '73%', height: 80, marginVertical: 10}}>
                     <Image
                       source={Images.Logos.graph}
                       resizeMode="contain"
@@ -276,13 +277,13 @@ const Me = props => {
                     Your Graph will appear{'\n'}after 2 days of tracking
                   </Text>
                 </View>
-                <View style={{ marginTop: 10 }}>
+                <View style={{marginTop: 10}}>
                   <Pinkbtn
                     width={'65%'}
                     onPress={() => {
                       props.navigation.navigate(
                         'Homes',
-                        { screen: 'BloomsCheck' },
+                        {screen: 'BloomsCheck'},
                         {
                           Image1: Images.Imgs.Rainbow,
                           Image2: Images.Imgs.Rainbow,
@@ -303,7 +304,6 @@ const Me = props => {
           </View>
         </ScrollView>
       </SafeAreaView>
-
     </>
   );
 };
@@ -311,9 +311,9 @@ const Me = props => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
   },
-  Box1: { marginTop: 10 },
+  Box1: {marginTop: 10},
   centerbox: {},
   data: {
     // position: 'relative',
@@ -337,7 +337,6 @@ const styles = StyleSheet.create({
 });
 
 export default Me;
-
 
 // <View >
 // <ResultComponents

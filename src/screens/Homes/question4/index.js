@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -7,22 +7,22 @@ import {
   StyleSheet,
   StatusBar,
 } from 'react-native';
-import { Header, Pinkbtn, QComponents } from '../../../componrnts';
+import {Header, Pinkbtn, QComponents} from '../../../componrnts';
 import ResultComponents from '../../../componrnts/resultcompo';
 const Question3 = props => {
-  const [state, setState] = useState()
+  const [state, setState] = useState();
   return (
     <>
       <SafeAreaView style={styles.main}>
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ flexGrow: 1 }}>
+          contentContainerStyle={{flexGrow: 1}}>
           <StatusBar animated={true} backgroundColor="#000" />
           <View
             style={{
               marginVertical: 10,
-              marginTop: 10,
-              width: '100%',
+              marginTop: 15,
+              width: '90%',
               alignSelf: 'center',
             }}>
             <Header
@@ -33,7 +33,7 @@ const Question3 = props => {
               header2
               headertext="Resonance Finder"
               fontSize={25}
-            // OnPress={() => props.navigation.goBack('')}
+              // OnPress={() => props.navigation.goBack('')}
             />
             <QComponents
               iconone
@@ -55,7 +55,7 @@ const Question3 = props => {
               text6={'We Each Have Angles?'}
             />
           </View>
-          <View style={{ marginTop: 20 }}>
+          <View style={{marginTop: 20}}>
             <Pinkbtn
               shadow="#00000029"
               width={'60%'}
@@ -68,19 +68,14 @@ const Question3 = props => {
                     otherParam: 'Top Tools',
                     plus: true,
                     backoption: () =>
-                      props.navigation.replace('Mytabs', { screen: 'me' }),
+                      props.navigation.replace('Mytabs', {screen: 'me'}),
                   },
                 })
               }
-
-
-
             />
           </View>
         </ScrollView>
       </SafeAreaView>
-
-
     </>
   );
 };

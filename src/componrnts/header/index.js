@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon2 from 'react-native-vector-icons/AntDesign';
 import Icon3 from 'react-native-vector-icons/Ionicons';
@@ -54,7 +54,7 @@ const Header = props => {
   } = props;
   const [state, setState] = useState(false);
   return (
-    <View style={{ width: '100%', }}>
+    <View style={{width: '100%'}}>
       {props.homeheader && (
         <View style={styles.header}>
           <View
@@ -99,7 +99,7 @@ const Header = props => {
                   <Image
                     source={greenicon1}
                     resizeMode="contain"
-                    style={{ width: '100%', height: '100%' }}
+                    style={{width: '100%', height: '100%'}}
                   />
                 </View>
                 <Text
@@ -112,9 +112,9 @@ const Header = props => {
                 </Text>
               </View>
             )}
-            <View style={{ flexDirection: 'row' }}>
+            <View style={{flexDirection: 'row'}}>
               {plus && (
-                <View style={{ marginRight: 8, marginTop: marginTopplus }}>
+                <View style={{marginRight: 8, marginTop: marginTopplus}}>
                   <Icon2 name="plus" size={size} color={colorplus} style={{}} />
                 </View>
               )}
@@ -124,7 +124,7 @@ const Header = props => {
                     name="heart"
                     size={20}
                     color="#EF3A71"
-                    style={{ marginTop: hearttop, marginLeft: heartleft1 }}
+                    style={{marginTop: hearttop, marginLeft: heartleft1}}
                   />
                 </View>
               )}
@@ -146,7 +146,7 @@ const Header = props => {
                   <Menu
                     opened={state}
                     onBackdropPress={() => setState(!state)}
-                    style={{ width: 40, }}>
+                    style={{width: 40}}>
                     <MenuTrigger style={{}}></MenuTrigger>
                     <MenuOptions
                       optionsContainerStyle={{
@@ -167,10 +167,13 @@ const Header = props => {
                             height: 40,
                             padding: 4,
                             marginVertical: 8,
-
                           },
                         ]}>
-                        <Icon3 name="notifications-outline" size={25} color="#fff" />
+                        <Icon3
+                          name="notifications-outline"
+                          size={25}
+                          color="#fff"
+                        />
                       </TouchableOpacity>
                       <TouchableOpacity
                         onPress={() => {
@@ -199,7 +202,7 @@ const Header = props => {
             <View style={styles.header}>
               <TouchableOpacity
                 onPress={props.OnPress}
-                style={{ width: '10%', marginTop: 5 }}>
+                style={{width: '10%', marginTop: 5}}>
                 <View
                   style={{
                     width: 40,
@@ -212,7 +215,7 @@ const Header = props => {
                   <Icon2 name={iconName} size={25} color="#fff" />
                 </View>
               </TouchableOpacity>
-              <View style={{ width: '95%', alignItems: 'center' }}>
+              <View style={{width: '95%', alignItems: 'center'}}>
                 <Text
                   style={{
                     fontSize: fontSize,
@@ -241,7 +244,7 @@ const Header = props => {
           <TouchableOpacity
             disabled={(show === true && true) || false}
             onPress={props.OnPress}
-            style={{ width: '5%', marginTop: 5 }}>
+            style={{width: '5%', marginTop: 5}}>
             <View
               style={{
                 width: 40,
@@ -279,7 +282,7 @@ const Header = props => {
                 <Image
                   source={img23}
                   resizeMode="contain"
-                  style={{ width: '100%', height: '100%' }}
+                  style={{width: '100%', height: '100%'}}
                 />
               </View>
             )}
@@ -310,7 +313,7 @@ const Header = props => {
               width: width,
               flexDirection: 'row',
             }}>
-            <TouchableOpacity onPress={props.OnPress} style={{ marginTop: 5 }}>
+            <TouchableOpacity onPress={props.OnPress} style={{marginTop: 5}}>
               <View
                 style={{
                   width: 40,
@@ -324,12 +327,14 @@ const Header = props => {
               </View>
             </TouchableOpacity>
             {headertext2 && (
-              <View style={{ alignItems: 'center', marginLeft: 10 }}>
+              <View style={{alignItems: 'center', marginLeft: 10}}>
                 <Text
                   style={{
                     fontSize: fontSize,
+                    marginLeft: 40,
                     marginTop: 10,
                     color: color,
+                    textAlign: 'center',
                     fontWeight: '500',
                     fontFamily: 'BrandonGrotesque-Medium',
                   }}>
@@ -338,7 +343,7 @@ const Header = props => {
               </View>
             )}
           </View>
-          <View style={{ alignItems: 'center', width: '50%', marginTop: 3 }}>
+          <View style={{alignItems: 'center', width: '50%', marginTop: 3}}>
             <Text
               style={{
                 fontSize: fontSize,
@@ -360,12 +365,11 @@ const Header = props => {
             alignSelf: 'center',
             marginTop: -40,
             // backgroundColor: '#1C5C2E',
-
           }}>
           <Image
             source={Images.Logos.logo1}
             resizeMode="contain"
-            style={{ width: 41, height: 40 }}
+            style={{width: 41, height: 40}}
           />
         </View>
       )}
@@ -373,7 +377,7 @@ const Header = props => {
   );
 };
 
-export { Header };
+export {Header};
 
 const styles = StyleSheet.create({
   greenbox: {
