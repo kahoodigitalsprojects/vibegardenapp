@@ -12,15 +12,11 @@ const App = props => {
     }, []);
   }
   return (
-
     <MenuProvider>
       <MyStack {...props} />
     </MenuProvider>
   );
-
 }
-
-// return <Video />;
 
 
 export default App;

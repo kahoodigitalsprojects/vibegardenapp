@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -12,37 +12,33 @@ import {
   FlatList,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { Header, SeeAll, Userdetails } from '../../../componrnts';
+import {Header, SeeAll, Userdetails} from '../../../componrnts';
 import All from '../../../componrnts/all';
 import Imgbox from '../../../componrnts/imgbox';
 import MainBox from '../../../componrnts/mainbox';
 import Searcbart1 from '../../../componrnts/searchbar1';
-import { Modal } from 'react-native';
+import {Modal} from 'react-native';
 import Images from '../../../constants';
 import Modaldata from '../../../componrnts/modaldata';
-const Search2 = ({ route, navigation, otherParam }) => {
-  const { textchange } = route.params;
-  const { Mydata } = route.params;
-  const [state, setState] = useState(0);
-  const [state1, setState1] = useState("My Original Text");
-  const [state2, setState2] = useState(0);
-  const [state3, setState3] = useState(0);
-  const [data1, setData1] = useState(0);
-  const [topicName, setTopicName] = useState('');
-  const [myText, setMyText] = useState("My Original Text");
+const Search2 = ({route, navigation, otherParam}) => {
+  const {textchange} = route.params;
+  const {Mydata} = route.params;
+
+  const [activeTab, setActiveTab] = useState(0);
+  const [topicName, setTopicName] = useState('Topics');
+  const [typeName, setTypeName] = useState('Types');
   const [modalVisible, setModalVisible] = useState(false);
+  const [modalType, setModalType] = useState('all');
 
   return (
     <>
       <SafeAreaView style={styles.main}>
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ flexGrow: 1 }}>
+          contentContainerStyle={{flexGrow: 1}}>
           <StatusBar animated={true} backgroundColor="#000" />
-          <View style={{ width: '100%' }}>
-            <Searcbart1
-              onpress2={() => navigation.goBack('')}
-            />
+          <View style={{width: '100%'}}>
+            <Searcbart1 onpress2={() => navigation.goBack('')} />
           </View>
           <View style={styles.container}>
             <View
@@ -59,10 +55,14 @@ const Search2 = ({ route, navigation, otherParam }) => {
                   justifyContent: 'space-between',
                 }}>
                 <TouchableOpacity
-                  onPress={() => (data1 === 0 ? '' : setData1(0))}
+                  onPress={() => {
+                    setActiveTab(0);
+                    setTopicName('Topics');
+                    setTypeName('Types');
+                  }}
                   style={{
-                    backgroundColor: data1 === 0 ? '#1C5C2E' : '#D1DED5',
-                    elevation: data1 === 1 ? 0 : 5,
+                    backgroundColor: activeTab === 0 ? '#1C5C2E' : '#D1DED5',
+                    elevation: activeTab === 1 ? 0 : 5,
                     borderRadius: 5,
                     alignSelf: 'center',
                     paddingVertical: 5,
@@ -71,7 +71,7 @@ const Search2 = ({ route, navigation, otherParam }) => {
                   }}>
                   <Text
                     style={{
-                      color: data1 === 0 ? '#fff' : '#1C5C2E',
+                      color: activeTab === 0 ? '#fff' : '#1C5C2E',
                       fontFamily: 'BrandonGrotesque-Regular',
                     }}>
                     All
@@ -79,10 +79,14 @@ const Search2 = ({ route, navigation, otherParam }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                  onPress={() => (data1 === 1 ? '' : setData1(1))}
+                  onPress={() => {
+                    setActiveTab(1);
+                    setTopicName('Topics');
+                    setTypeName('Types');
+                  }}
                   style={{
-                    backgroundColor: data1 === 1 ? '#205F2E' : '#D1DED5',
-                    elevation: data1 === 1 ? 0 : 5,
+                    backgroundColor: activeTab === 1 ? '#205F2E' : '#D1DED5',
+                    elevation: activeTab === 1 ? 0 : 5,
                     borderRadius: 5,
                     alignSelf: 'center',
                     paddingVertical: 5,
@@ -91,17 +95,21 @@ const Search2 = ({ route, navigation, otherParam }) => {
                   }}>
                   <Text
                     style={{
-                      color: data1 === 1 ? '#fff' : '#205F2E',
+                      color: activeTab === 1 ? '#fff' : '#205F2E',
                       fontFamily: 'BrandonGrotesque-Regular',
                     }}>
                     Tools
                   </Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                  onPress={() => (data1 === 2 ? '' : setData1(2))}
+                  onPress={() => {
+                    setActiveTab(2);
+                    setTopicName('Topics');
+                    setTypeName('Types');
+                  }}
                   style={{
-                    backgroundColor: data1 === 2 ? '#205F2E' : '#D1DED5',
-                    elevation: data1 === 1 ? 0 : 5,
+                    backgroundColor: activeTab === 2 ? '#205F2E' : '#D1DED5',
+                    elevation: activeTab === 1 ? 0 : 5,
                     borderRadius: 5,
                     alignSelf: 'center',
                     paddingVertical: 5,
@@ -110,7 +118,7 @@ const Search2 = ({ route, navigation, otherParam }) => {
                   }}>
                   <Text
                     style={{
-                      color: data1 === 2 ? '#fff' : '#205F2E',
+                      color: activeTab === 2 ? '#fff' : '#205F2E',
                       fontFamily: 'BrandonGrotesque-Regular',
                     }}>
                     Ground Work
@@ -118,8 +126,8 @@ const Search2 = ({ route, navigation, otherParam }) => {
                 </TouchableOpacity>
               </View>
             </View>
-            <View style={{ width: '100%', marginTop: 10 }}>
-              {data1 === 0 ? (
+            <View style={{width: '100%', marginTop: 10}}>
+              {activeTab === 0 ? (
                 <>
                   <View
                     style={{
@@ -130,9 +138,10 @@ const Search2 = ({ route, navigation, otherParam }) => {
                     }}>
                     <TouchableOpacity
                       onPress={() => {
-                        setState1(!state1);
+                        setModalType(1);
+                        setModalVisible(!modalVisible);
                       }}
-                      style={[styles.topics, { backgroundColor: '#fff' }]} >
+                      style={[styles.topics, {backgroundColor: '#fff'}]}>
                       <Text
                         style={{
                           color: '#1C5C2E',
@@ -146,13 +155,13 @@ const Search2 = ({ route, navigation, otherParam }) => {
                         name="chevron-down"
                         size={18}
                         color="#1C5C2E"
-                        style={{ margin: 6 }}
+                        style={{margin: 6}}
                       />
                     </TouchableOpacity>
                   </View>
 
                   <View>
-                    <View style={{ marginVertical: 10 }}>
+                    <View style={{marginVertical: 10}}>
                       <SeeAll
                         onPress={() =>
                           navigation.navigate('Mytabs', {
@@ -196,7 +205,7 @@ const Search2 = ({ route, navigation, otherParam }) => {
                         })}
                       </ScrollView>
                     </View>
-                    <View style={{ marginVertical: 10 }}>
+                    <View style={{marginVertical: 10}}>
                       <SeeAll
                         onPress={() =>
                           navigation.replace('Homes', {
@@ -205,7 +214,7 @@ const Search2 = ({ route, navigation, otherParam }) => {
                               otherParam: 'Top Tools',
                               plus: true,
                               backoption: () =>
-                                navigation.replace('Mytabs', { screen: 'me' }),
+                                navigation.replace('Mytabs', {screen: 'me'}),
                             },
                           })
                         }
@@ -239,7 +248,7 @@ const Search2 = ({ route, navigation, otherParam }) => {
                         })}
                       </ScrollView>
                     </View>
-                    <View style={{ marginVertical: 10 }}>
+                    <View style={{marginVertical: 10}}>
                       <SeeAll
                         onPress={() => {
                           navigation.navigate('Homes', {
@@ -288,15 +297,15 @@ const Search2 = ({ route, navigation, otherParam }) => {
                       </ScrollView>
                     </View>
                   </View>
-                  <View style={{ marginVertical: 20 }}>
+                  <View style={{marginVertical: 20}}>
                     <SeeAll color1="#1C5C2E" textA="TEACHERS" textB="SeeAll" />
                   </View>
 
-                  <View style={{ marginTop: -15 }}>
+                  <View style={{marginTop: -15}}>
                     <FlatList
                       showsHorizontalScrollIndicator={false}
                       data={data2}
-                      renderItem={({ item }) => {
+                      renderItem={({item}) => {
                         return (
                           <>
                             <View
@@ -321,7 +330,7 @@ const Search2 = ({ route, navigation, otherParam }) => {
                   </View>
                 </>
               ) : null}
-              {data1 === 1 ? (
+              {activeTab === 1 ? (
                 <>
                   <View
                     style={{
@@ -329,7 +338,16 @@ const Search2 = ({ route, navigation, otherParam }) => {
                       flexDirection: 'row',
                       alignSelf: 'flex-start',
                     }}>
-                    <TouchableOpacity style={styles.topics}>
+                    <TouchableOpacity
+                      style={styles.topics}
+                      onPress={() => {
+                        if (topicName !== 'Topics') {
+                          setTopicName('Topics');
+                        } else {
+                          setModalType(1);
+                          setModalVisible(!modalVisible);
+                        }
+                      }}>
                       <Text
                         style={{
                           color: '#1C5C2E',
@@ -337,18 +355,33 @@ const Search2 = ({ route, navigation, otherParam }) => {
                           margin: 6,
                           fontFamily: 'BrandonGrotesque-Regular',
                         }}>
-                        Quantum Physics
-
+                        {topicName}
                       </Text>
-                      <Icon
-                        name="chevron-down"
-                        size={18}
-                        color="#1C5C2E"
-                        style={{ margin: 6 }}
-                      />
+                      {topicName !== 'Topics' ? (
+                        <Icon
+                          name="close"
+                          size={18}
+                          color="#1C5C2E"
+                          style={{margin: 6}}
+                        />
+                      ) : (
+                        <Icon
+                          name="chevron-down"
+                          size={18}
+                          color="#1C5C2E"
+                          style={{margin: 6}}
+                        />
+                      )}
                     </TouchableOpacity>
                     <TouchableOpacity
-                      onPress={() => setState2(!state2)}
+                      onPress={() => {
+                        if (typeName !== 'Types') {
+                          setTypeName('Types');
+                        } else {
+                          setModalType(2);
+                          setModalVisible(!modalVisible);
+                        }
+                      }}
                       style={styles.topics}>
                       <Text
                         style={{
@@ -357,14 +390,23 @@ const Search2 = ({ route, navigation, otherParam }) => {
                           margin: 6,
                           fontFamily: 'BrandonGrotesque-Regular',
                         }}>
-                        Types
+                        {typeName}
                       </Text>
-                      <Icon
-                        name="chevron-down"
-                        size={18}
-                        color="#1C5C2E"
-                        style={{ margin: 6 }}
-                      />
+                      {typeName !== 'Types' ? (
+                        <Icon
+                          name="close"
+                          size={18}
+                          color="#1C5C2E"
+                          style={{margin: 6}}
+                        />
+                      ) : (
+                        <Icon
+                          name="chevron-down"
+                          size={18}
+                          color="#1C5C2E"
+                          style={{margin: 6}}
+                        />
+                      )}
                     </TouchableOpacity>
                   </View>
 
@@ -373,7 +415,7 @@ const Search2 = ({ route, navigation, otherParam }) => {
                       showsHorizontalScrollIndicator={false}
                       keyExtractor={item => item.id}
                       data={databox}
-                      renderItem={({ item }) => {
+                      renderItem={({item}) => {
                         return (
                           <All
                             pressI={() =>
@@ -407,7 +449,7 @@ const Search2 = ({ route, navigation, otherParam }) => {
                   </View>
                 </>
               ) : null}
-              {data1 === 2 ? (
+              {activeTab === 2 ? (
                 <>
                   <View
                     style={{
@@ -416,7 +458,16 @@ const Search2 = ({ route, navigation, otherParam }) => {
                       alignSelf: 'flex-start',
                       alignSelf: 'center',
                     }}>
-                    <TouchableOpacity onPress={() => { }} style={styles.topics}>
+                    <TouchableOpacity
+                      style={styles.topics}
+                      onPress={() => {
+                        if (topicName !== 'Topics') {
+                          setTopicName('Topics');
+                        } else {
+                          setModalType(1);
+                          setModalVisible(!modalVisible);
+                        }
+                      }}>
                       <Text
                         style={{
                           color: '#1C5C2E',
@@ -424,18 +475,34 @@ const Search2 = ({ route, navigation, otherParam }) => {
                           margin: 6,
                           fontFamily: 'BrandonGrotesque-Regular',
                         }}>
-                        Quantum Physics
+                        {topicName}
                       </Text>
-                      <Icon
-                        name="close"
-                        size={18}
-                        color="#1C5C2E"
-                        style={{ margin: 6 }}
-                      />
+                      {topicName !== 'Topics' ? (
+                        <Icon
+                          name="close"
+                          size={18}
+                          color="#1C5C2E"
+                          style={{margin: 6}}
+                        />
+                      ) : (
+                        <Icon
+                          name="chevron-down"
+                          size={18}
+                          color="#1C5C2E"
+                          style={{margin: 6}}
+                        />
+                      )}
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                      onPress={() => setState3(!state3)}
+                      onPress={() => {
+                        if (typeName !== 'Types') {
+                          setTypeName('Types');
+                        } else {
+                          setModalType(2);
+                          setModalVisible(!modalVisible);
+                        }
+                      }}
                       style={styles.topics}>
                       <Text
                         style={{
@@ -444,14 +511,23 @@ const Search2 = ({ route, navigation, otherParam }) => {
                           margin: 6,
                           fontFamily: 'BrandonGrotesque-Regular',
                         }}>
-                        Types
+                        {typeName}
                       </Text>
-                      <Icon
-                        name="chevron-down"
-                        size={18}
-                        color="#1C5C2E"
-                        style={{ margin: 6 }}
-                      />
+                      {typeName !== 'Types' ? (
+                        <Icon
+                          name="close"
+                          size={18}
+                          color="#1C5C2E"
+                          style={{margin: 6}}
+                        />
+                      ) : (
+                        <Icon
+                          name="chevron-down"
+                          size={18}
+                          color="#1C5C2E"
+                          style={{margin: 6}}
+                        />
+                      )}
                     </TouchableOpacity>
                   </View>
                   <View style={styles.box1}>
@@ -460,7 +536,7 @@ const Search2 = ({ route, navigation, otherParam }) => {
                       keyExtractor={item => item.id}
                       numColumns={2}
                       data={databox}
-                      renderItem={({ item }) => {
+                      renderItem={({item}) => {
                         return (
                           <View
                             style={{
@@ -492,63 +568,27 @@ const Search2 = ({ route, navigation, otherParam }) => {
         </ScrollView>
       </SafeAreaView>
       <Modaldata
-        headtext="Topics"
-        text1="Buddhism"
-        text2="Plants"
-        text3="Quantum Physics"
-        text4="Nature"
-        text5="Ascended Master"
-        text6="Higher Dimensional"
-        text7="Light Beings"
-        text8="Ancient Wisdom"
-        text9="Western Psychology"
-        text10="Mindfulness"
-        text11="Mindfulness"
-        Visible={state1}
-        setVisible={setState1}
-        onPress={() => {
-          setState1(false);
-
-
-        }}
-        onpress1={() => {
-          data1 === 1 ? '' : setData1(1)
-          setState1(false);
-
-        }}
-      />
-      <Modaldata
-        headtext="Topics"
-        text1="Tools For Light"
-        text2="Tools For Shadow"
-        text3="Tools For Connections"
-        Visible={state2}
-        setVisible={setState2}
-        onPress={() => {
-          setState2(false);
-        }}
-        onpress1={() => {
-          state === 1 ? '' : setState(1)
-          setState2(false);
-        }}
-      />
-      <Modaldata
-        headtext="Topics"
-        text1="Essentials"
-        text2="Building Blocks"
-        text3="Deep Dives"
-        text4="Play!"
-        Visible={state3}
-        setVisible={setState3}
-        onPress={() => {
-          setState3(false);
-          setState3(false);
-        }}
-        onpress1={() => {
-          state === 2 ? '' : setState(2)
-          setState3(false);
-          // setState1(false);
-        }}
+        headtext={
+          activeTab === 0
+            ? 'Topics'
+            : activeTab === 1 && modalType === 1
+            ? 'Tools Topics'
+            : activeTab === 1 && modalType === 2
+            ? 'Tools Types'
+            : activeTab === 2 && modalType === 1
+            ? 'Groundwork Topics'
+            : activeTab === 2 && modalType === 2
+            ? 'Groundwork Types'
+            : null
+        }
+        data={modalType === 1 ? allTopics : typesData}
+        Visible={modalVisible}
+        setVisible={setModalVisible}
+        setTopicName={setTopicName}
+        setTypeName={setTypeName}
+        setActiveTab={setActiveTab}
+        activeTab={activeTab}
+        modalType={modalType}
       />
     </>
   );
@@ -557,7 +597,7 @@ const Search2 = ({ route, navigation, otherParam }) => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    // backgroundColor: '#fefe',
+    // backgroundColor: 'red',
   },
   container: {
     width: '95%',
@@ -622,7 +662,7 @@ const styles = StyleSheet.create({
   },
 });
 export default Search2;
-databox = [
+const databox = [
   {
     heart1: Images.Icons.heart1,
     title: 'Title',
@@ -641,24 +681,84 @@ databox = [
     plus: 'plus',
   },
 ];
-databox2 = [
+const typesData = [
   {
-    heart1: Images.Icons.heart1,
-    heart1: Images.Icons.heart1,
-    title: 'Title',
-    iconimg1: Images.Icons.pinki,
+    title: 'Tools For Light',
+    type: 'tools',
   },
   {
-    heart1: Images.Icons.heart1,
-    title: 'Title',
-    iconimg1: Images.Icons.pinki,
+    title: 'Tools For Shadow',
+    type: 'tools',
+  },
+  {
+    title: 'Tools For Connections',
+    type: 'tools',
+  },
+  {
+    title: 'Essentials',
+    type: 'groundwork',
+  },
+  {
+    title: 'Building Blocks',
+    type: 'groundwork',
+  },
+  {
+    title: 'Deep Dives',
+    type: 'groundwork',
+  },
+  {
+    title: 'Play!',
+    type: 'groundwork',
+  },
+];
+
+const allTopics = [
+  {
+    title: 'Buddhism',
+    type: 'tools',
+  },
+  {
+    title: 'Plants',
+    type: 'groundwork',
+  },
+  {
+    title: 'Quantum Physics',
+    type: 'tools',
+  },
+  {
+    title: 'Nature',
+    type: 'groundwork',
+  },
+  {
+    title: 'Ascended Master',
+    type: 'tools',
+  },
+  {
+    title: 'Higher Dimensional',
+    type: 'tools',
+  },
+  {
+    title: 'Light Beings',
+    type: 'tools',
+  },
+  {
+    title: 'Ancient Wisdom',
+    type: 'tools',
+  },
+  {
+    title: 'Western Psychology',
+    type: 'tools',
+  },
+  {
+    title: 'Mindfulness',
+    type: 'tools',
   },
 ];
 
 const data2 = [
-  { Img1: Images.Imgs.bear },
-  { Img1: Images.Imgs.bear },
-  { Img1: Images.Imgs.bear },
+  {Img1: Images.Imgs.bear},
+  {Img1: Images.Imgs.bear},
+  {Img1: Images.Imgs.bear},
 ];
 const data = [
   {
