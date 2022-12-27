@@ -6,13 +6,14 @@ import HomeStackScreen from './HomeStack';
 import GroundworkStackScreen from './GroundworkStack';
 import ToolsStackScreen from './ToolsStack';
 import MeStackScreen from './MeStack';
-
+import {getFocusedRouteNameFromRoute} from '@react-navigation/native';
 const Tab = createBottomTabNavigator();
 const TabNavigator = () => {
   return (
     <Tab.Navigator
       initialRouteName="Homes"
       screenOptions={{
+        headerShown: false,
         tabBarActiveTintColor: '#1C5C2E',
         tabBarStyle: {
           height: 80,
@@ -23,16 +24,33 @@ const TabNavigator = () => {
       <Tab.Screen
         name="Homes"
         component={HomeStackScreen}
-        options={{
-          headerShown: false,
-          tabBarLabel: 'Garden',
-          tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
-          tabBarIcon: ({focused}) =>
-            focused ? (
-              <Image source={Images.Logos.greenlogo} />
-            ) : (
-              <Image source={Images.Logos.greylog} />
-            ),
+        options={({route}) => {
+          const focusedRouteName = getFocusedRouteNameFromRoute(route);
+          if (focusedRouteName === 'Search') {
+            return {
+              tabBarStyle: {
+                display: 'none',
+                bottom: -200,
+                height: 0,
+              },
+            };
+          }
+          return {
+            tabBarStyle: {
+              display: 'flex',
+              height: 80,
+              borderTopLeftRadius: 20,
+              borderTopRightRadius: 20,
+            },
+            tabBarLabel: 'Garden',
+            tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
+            tabBarIcon: ({focused}) =>
+              focused ? (
+                <Image source={Images.Logos.greenlogo} />
+              ) : (
+                <Image source={Images.Logos.greylog} />
+              ),
+          };
         }}
       />
 
@@ -40,7 +58,6 @@ const TabNavigator = () => {
         name="tools"
         component={ToolsStackScreen}
         options={{
-          headerShown: false,
           tabBarLabel: 'Tools',
           tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
           tabBarIcon: ({focused}) =>
@@ -56,8 +73,6 @@ const TabNavigator = () => {
         name="GroundWork"
         component={GroundworkStackScreen}
         options={{
-          tabBarActiveTintColor: '#1C5C2E',
-          headerShown: false,
           tabBarLabel: 'Groundwork',
           tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
           tabBarIcon: ({focused}) =>
@@ -72,7 +87,6 @@ const TabNavigator = () => {
         name="me"
         component={MeStackScreen}
         options={{
-          headerShown: false,
           tabBarLabel: 'Me',
           tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
           tabBarIcon: ({focused}) =>
