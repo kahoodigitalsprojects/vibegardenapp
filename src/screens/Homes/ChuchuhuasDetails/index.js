@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     color: '#1C5C2E',
     fontWeight: '600',
-    marginVertical: 20,
+
     fontFamily: 'BrandonGrotesque-Medium',
   },
 

@@ -1,12 +1,9 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import * as React from 'react';
-import Journey from '../screens/Homes/journey';
-import Meet from '../screens/Homes/meet';
-import ChuchuasDetails from '../screens/Homes/ChuchuhuasDetails';
+
 import Tools from '../screens/Homes/Tools';
 import Result from '../screens/Homes/result';
-import MeetScreen2 from '../screens/Homes/meetScreen2';
-import BlueLotus from '../screens/Homes/BlueLotus';
+
 import Question from '../screens/Homes/Question';
 import Question2 from '../screens/Homes/question2';
 import Resonance from '../screens/Homes/Resonance';
@@ -32,21 +29,6 @@ export default function ToolsStackScreen() {
         component={Tools}
         options={{headerShown: false}}
       />
-      <ToolsStack.Screen
-        name="journey"
-        component={Journey}
-        options={{headerShown: false}}
-      />
-      <ToolsStack.Screen
-        name="meet"
-        component={Meet}
-        options={{headerShown: false}}
-      />
-      <ToolsStack.Screen
-        name="chuchuhuasDetails"
-        component={ChuchuasDetails}
-        options={{headerShown: false}}
-      />
 
       <ToolsStack.Screen
         name="Result"
@@ -54,16 +36,7 @@ export default function ToolsStackScreen() {
         options={{headerShown: false}}
       />
 
-      <ToolsStack.Screen
-        name="MeetScreen2"
-        component={MeetScreen2}
-        options={{headerShown: false}}
-      />
-      <ToolsStack.Screen
-        name="Bluelotus"
-        component={BlueLotus}
-        options={{headerShown: false}}
-      />
+    
       <ToolsStack.Screen
         name="resonance"
         component={Resonance}

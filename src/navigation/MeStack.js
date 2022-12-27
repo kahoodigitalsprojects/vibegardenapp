@@ -1,13 +1,10 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import * as React from 'react';
-import Journey from '../screens/Homes/journey';
 import Notification from '../screens/Homes/notification';
-import Meet from '../screens/Homes/meet';
-import ChuchuasDetails from '../screens/Homes/ChuchuhuasDetails';
+
 import FressBlooms from '../screens/Homes/FreshBlooms';
 import Me from '../screens/Homes/ME';
-import MeetScreen2 from '../screens/Homes/meetScreen2';
-import BlueLotus from '../screens/Homes/BlueLotus';
+
 import Settings from '../screens/Homes/settings';
 import BloomsCheck from '../screens/Homes/bloomsCheck';
 import BigBlooms from '../screens/Homes/BigBlooms';
@@ -38,37 +35,15 @@ export default function MeStackScreen() {
         options={{headerShown: false}}
       />
 
-      <MeStack.Screen
-        name="journey"
-        component={Journey}
-        options={{headerShown: false}}
-      />
-      <MeStack.Screen
-        name="meet"
-        component={Meet}
-        options={{headerShown: false}}
-      />
-      <MeStack.Screen
-        name="chuchuhuasDetails"
-        component={ChuchuasDetails}
-        options={{headerShown: false}}
-      />
+    
+
       <MeStack.Screen
         name="FressBlooms"
         component={FressBlooms}
         options={{headerShown: false}}
       />
       <MeStack.Screen name="me" component={Me} options={{headerShown: false}} />
-      <MeStack.Screen
-        name="MeetScreen2"
-        component={MeetScreen2}
-        options={{headerShown: false}}
-      />
-      <MeStack.Screen
-        name="Bluelotus"
-        component={BlueLotus}
-        options={{headerShown: false}}
-      />
+
       <MeStack.Screen
         name="settings"
         component={Settings}

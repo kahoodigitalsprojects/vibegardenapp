@@ -53,6 +53,7 @@ const GroundWork = props => {
             marginLeft={-15}
             heartleft1={25}
             hearttop={5}
+            color="green"
             img1
             heartplus
             search1="search1"
@@ -80,7 +81,8 @@ const GroundWork = props => {
                 textAlign: 'center',
                 fontSize: 18,
                 marginVertical: 10,
-                fontFamily: 'BrandonGrotesque-Regular',
+                fontFamily: 'BrandonGrotesque-Medium',
+                color: '#00000066',
               }}>
               Let's remember together Erin
             </Text>

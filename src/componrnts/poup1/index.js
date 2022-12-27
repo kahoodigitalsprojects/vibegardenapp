@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   Alert,
   Modal,
@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import { Button, Overlay } from 'react-native-elements';
+import {Button, Overlay} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Images from '../../constants';
 
@@ -29,7 +29,7 @@ const PopUp = ({
     <>
       {poup1 && (
         <Overlay
-          overlayStyle={{ borderRadius: 20, elevation: 10, width: '85%' }}
+          overlayStyle={{borderRadius: 20, elevation: 10, width: '85%'}}
           style={{}}
           // animationType="slide" // transparent={false}
           visible={Visible}
@@ -39,7 +39,14 @@ const PopUp = ({
           }}>
           <View style={styles.modalView}>
             <Text style={styles.modalText}>
-              You Will Be Charged<Text style={{ color: '#1492E6' }}> $264</Text>{' '}
+              You Will Be Charged
+              <Text
+                style={{
+                  color: '#1492E6',
+                }}>
+                {' '}
+                $264
+              </Text>{' '}
               For Yearly Package!
             </Text>
             <View
@@ -49,24 +56,24 @@ const PopUp = ({
                 alignSelf: 'center',
               }}>
               <Image source={Images.Icons.card} />
-              <Text style={[styles.modalText, { textAlign: 'center' }]}>
+              <Text style={[styles.modalText, {textAlign: 'center'}]}>
                 Saved Cards
               </Text>
             </View>
 
             <View style={styles.btns}>
-              <Text style={{}}>4860567867XXXXXX</Text>
-              <Image source={Images.Icons.visa} style={{ marginTop: 3 }} />
+              <Text style={{color: '#000'}}>4860567867XXXXXX</Text>
+              <Image source={Images.Icons.visa} style={{marginTop: 3}} />
             </View>
             <View style={styles.btns}>
               <TouchableOpacity
                 style={[
                   styles.button,
                   styles.buttonClose,
-                  { borderWidth: 1, backgroundColor: '#fff', padding: 5 },
+                  {borderWidth: 1, backgroundColor: '#fff', padding: 5},
                 ]}
                 onPress={setVisible}>
-                <Text style={[styles.textStyle, { color: '#1C5C2E' }]}>
+                <Text style={[styles.textStyle, {color: '#1C5C2E'}]}>
                   {btntext1}
                 </Text>
               </TouchableOpacity>
@@ -77,12 +84,12 @@ const PopUp = ({
               </TouchableOpacity>
             </View>
             <TouchableOpacity onPress={onpressA} style={styles.btns}>
-              <Text style={{ color: '#1492E6', fontSize: 16 }}>Try New Card</Text>
+              <Text style={{color: '#1492E6', fontSize: 16}}>Try New Card</Text>
               <Icon
                 name="arrowright"
                 size={15}
                 color="#1492E6"
-                style={{ marginTop: 5, marginLeft: 3 }}
+                style={{marginTop: 5, marginLeft: 3}}
               />
             </TouchableOpacity>
           </View>
@@ -90,7 +97,7 @@ const PopUp = ({
       )}
       {poup2 && (
         <Overlay
-          overlayStyle={{ borderRadius: 20, elevation: 10, width: '85%' }}
+          overlayStyle={{borderRadius: 20, elevation: 10, width: '85%'}}
           style={{}}
           // animationType="slide" // transparent={false}
           visible={Visible}
@@ -109,7 +116,7 @@ const PopUp = ({
               <Text style={styles.modalText}>
                 Payment Processed Successfully
               </Text>
-              <View style={{ flexDirection: 'row' }}>
+              <View style={{flexDirection: 'row'}}>
                 <Text
                   style={[
                     styles.modalText,
@@ -145,7 +152,7 @@ const PopUp = ({
       )}
       {poup3 && (
         <Overlay
-          overlayStyle={{ borderRadius: 20, elevation: 10, width: '85%' }}
+          overlayStyle={{borderRadius: 20, elevation: 10, width: '85%'}}
           style={{}}
           // animationType="slide" // transparent={false}
           visible={Visible}
@@ -162,12 +169,12 @@ const PopUp = ({
               }}>
               <Image source={require('../../assests/images/greencheck.png')} />
               <Text
-                style={[styles.modalText, { fontWeight: '600', marginTop: 15 }]}>
+                style={[styles.modalText, {fontWeight: '600', marginTop: 15}]}>
                 Updated Successfully
               </Text>
             </View>
             <TouchableOpacity
-              style={[styles.button, styles.buttonClose, { width: 200 }]}
+              style={[styles.button, styles.buttonClose, {width: 200}]}
               onPress={onpress1}>
               <Text style={[styles.textStyle]}>Done</Text>
             </TouchableOpacity>
@@ -225,8 +232,8 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginVertical: 10,
     color: '#000',
-    fontFamily: 'BrandonGrotesque-Regular',
+    fontFamily: 'BrandonGrotesque-Medium',
   },
 });
 
-export { PopUp };
+export {PopUp};

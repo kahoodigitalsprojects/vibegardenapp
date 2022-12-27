@@ -1,6 +1,6 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import * as React from 'react';
-import Journey from '../screens/Homes/journey';
+
 import Meet from '../screens/Homes/meet';
 import Home from '../screens/Homes/home/index';
 import ChuchuasDetails from '../screens/Homes/ChuchuhuasDetails';
@@ -26,31 +26,6 @@ export default function HomeStackScreen() {
       <HomeStack.Screen
         name="Home"
         component={Home}
-        options={{headerShown: false}}
-      />
-      <HomeStack.Screen
-        name="journey"
-        component={Journey}
-        options={{headerShown: false}}
-      />
-      <HomeStack.Screen
-        name="meet"
-        component={Meet}
-        options={{headerShown: false}}
-      />
-      <HomeStack.Screen
-        name="chuchuhuasDetails"
-        component={ChuchuasDetails}
-        options={{headerShown: false}}
-      />
-      <HomeStack.Screen
-        name="MeetScreen2"
-        component={MeetScreen2}
-        options={{headerShown: false}}
-      />
-      <HomeStack.Screen
-        name="Bluelotus"
-        component={BlueLotus}
         options={{headerShown: false}}
       />
 

@@ -124,6 +124,7 @@ const Me = props => {
               marginTop={-42}
               img1
               toggle
+              color="green"
               marginLeft={-15}
               search1="search1"
               homeheader={true}
@@ -169,7 +170,7 @@ const Me = props => {
                     fontSize: 20,
                     fontWeight: '500',
                     marginVertical: 10,
-                    fontFamily: 'BrandonGrotesque-Regular',
+                    fontFamily: 'BrandonGrotesque-Medium',
                   }}>
                   Library:
                 </Text>
@@ -182,7 +183,9 @@ const Me = props => {
                           onPress={item.onPress}
                           style={{flexDirection: 'row', marginVertical: 10}}>
                           <Image source={item.img1} />
-                          <Text style={{marginLeft: 15}}>{item.text1}</Text>
+                          <Text style={{marginLeft: 15, color: '#030303'}}>
+                            {item.text1}
+                          </Text>
                         </TouchableOpacity>
                       </>
                     );
@@ -194,7 +197,7 @@ const Me = props => {
                     fontSize: 20,
                     fontWeight: '500',
                     marginVertical: 10,
-                    fontFamily: 'BrandonGrotesque-Regular',
+                    fontFamily: 'BrandonGrotesque-Medium',
                   }}>
                   Bloom 'o' Meter:
                 </Text>
@@ -243,7 +246,7 @@ const Me = props => {
                   </View>
                   <Text
                     style={{
-                      // color: '#000',
+                      color: '#030303',
                       fontSize: 12,
                       fontWeight: '500',
                       // marginVertical: 10,

@@ -137,6 +137,7 @@ const Buddhisim = props => {
                       plus={item.plus}
                       bghome2={item.bg12}
                       title={item.title}
+                      marginTop={20}
                     />
                   </>
                 );

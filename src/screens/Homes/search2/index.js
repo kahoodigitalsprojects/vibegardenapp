@@ -9,6 +9,7 @@ import {
   TextInput,
   Image,
   TouchableOpacity,
+  Appearance,
   FlatList,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -161,7 +162,12 @@ const Search2 = ({route, navigation, otherParam}) => {
                   </View>
 
                   <View>
-                    <View style={{marginVertical: 10}}>
+                    <View
+                      style={{
+                        marginVertical: 10,
+                        width: '90%',
+                        alignSelf: 'center',
+                      }}>
                       <SeeAll
                         onPress={() =>
                           navigation.navigate(
@@ -195,7 +201,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                                   heart1={item.heart1}
                                   color={'green'}
                                   minutes={'5 min'}
-                                  marginTop11={50}
+                                  marginTop11={35}
                                 />
                               </View>
                             </>
@@ -227,7 +233,6 @@ const Search2 = ({route, navigation, otherParam}) => {
                             <>
                               <View style={{}}>
                                 <MainBox
-                                  marginTop11={50}
                                   left={60}
                                   bgcolor={'#FF4053'}
                                   TONGLEN="TONGLEN"
@@ -236,6 +241,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                                   img2={item.img3}
                                   color={'green'}
                                   minutes={'5 min'}
+                                  marginTop11={35}
                                 />
                               </View>
                             </>
@@ -243,7 +249,12 @@ const Search2 = ({route, navigation, otherParam}) => {
                         })}
                       </ScrollView>
                     </View>
-                    <View style={{marginVertical: 10}}>
+                    <View
+                      style={{
+                        marginVertical: 10,
+                        width: '90%',
+                        alignSelf: 'center',
+                      }}>
                       <SeeAll
                         onPress={() => {
                           navigation.navigate('me');
@@ -271,7 +282,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                             <>
                               <View style={{}}>
                                 <MainBox
-                                  marginTop11={50}
+                                  marginTop11={35}
                                   minutes={'5 min'}
                                   I1={item.heart1}
                                   img2={item.img4}
@@ -290,7 +301,12 @@ const Search2 = ({route, navigation, otherParam}) => {
                       </ScrollView>
                     </View>
                   </View>
-                  <View style={{marginVertical: 20}}>
+                  <View
+                    style={{
+                      marginVertical: 20,
+                      width: '90%',
+                      alignSelf: 'center',
+                    }}>
                     <SeeAll color1="#1C5C2E" textA="TEACHERS" textB="SeeAll" />
                   </View>
 
@@ -432,6 +448,10 @@ const Search2 = ({route, navigation, otherParam}) => {
                             homebox
                             plus={item.plus}
                             bghome2={item.bg12}
+                            marginVertical={5}
+                            marginTop={10}
+                            marginVertical2={15}
+                            marginTop2={-30}
                             title={item.title}
                           />
                         );
@@ -537,14 +557,20 @@ const Search2 = ({route, navigation, otherParam}) => {
                               // width: '50%',
                             }}>
                             <All
+                              iconimg2
                               color1="#1C5C2E"
                               onPressALL={item.pressAll}
                               textA={item.textA}
                               // heart1={item.heart1}
                               textB={item.textB}
+                              heart1={item.heart1}
                               homebox
-                              plus={item.plus}
+                              // plus={item.plus}
                               bghome2={item.bg12}
+                              marginVertical={5}
+                              marginTop={10}
+                              marginVertical2={15}
+                              marginTop2={-30}
                               title={item.title}
                             />
                           </View>
@@ -634,7 +660,7 @@ const styles = StyleSheet.create({
     // alignSelf: 'flex-start',
     backgroundColor: '#eeee',
     elevation: 1,
-    opacity: 0.5,
+    opacity: 0.75,
     borderColor: '#00000029',
 
     // width: 126,
@@ -773,6 +799,9 @@ const data = [
     two: Images.Imgs.heart1,
     one: Images.Icons.circleplus,
     iconimg2: Images.Icons.Pcircle,
+    centertexr: 'TOOLS FOR LIGHT',
+    centertexr1: 'FAMILY OF LIGHT',
+    centertexr2: 'TONGLEN',
   },
   {
     text1: 'GROUND WORK',
@@ -782,6 +811,9 @@ const data = [
     img4: Images.BackGround.rectangle2,
     two: Images.Imgs.heart1,
     one: Images.Icons.circleplus,
+    centertexr: 'TOOLS FOR LIGHT',
+    centertexr1: 'FAMILY OF LIGHT',
+    centertexr2: 'TONGLEN',
   },
 ];
 const Data = [

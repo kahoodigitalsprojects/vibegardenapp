@@ -52,7 +52,7 @@ const LoginOption = props => {
               OnPress={() => props.navigation.replace('Welcome')}
             />
 
-            <View style={{width: '90%', alignSelf:'center'}}>
+            <View style={{width: '90%', alignSelf: 'center'}}>
               <Text style={styles.headtext}>Welcome Back, {'\n'} Erin</Text>
               <Text
                 style={{
@@ -78,6 +78,7 @@ const LoginOption = props => {
                       marginTop: 15,
                       textAlign: 'center',
                       fontFamily: 'BrandonGrotesque-Medium',
+                      color: '#030303',
                     }}>
                     Sign Up With Email
                   </Text>
@@ -86,7 +87,9 @@ const LoginOption = props => {
               <TouchableOpacity
                 style={{marginTop: 40, marginVertical: 20}}
                 onPress={() => {
-                  props.navigation.navigate('signup');
+                  props.navigation.navigate('signup', {
+                    showVerifyScreen: false,
+                  });
                 }}>
                 <Text
                   style={{

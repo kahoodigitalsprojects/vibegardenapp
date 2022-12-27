@@ -46,19 +46,29 @@ const CancelSubscription = props => {
         <View
           style={{
             marginVertical: 10,
-            marginTop: 10,
+
             width: '90%',
             alignSelf: 'center',
           }}>
           <Header
-            color="#000"
+            marginTop={-40}
+            iconName="left"
+            marginLeft={40}
+            color="#191919B8"
             fontSize={20}
-            iconName="closesquareo"
             header2
             headertext="Cancle Subscriptions"
             OnPress={() => props.navigation.goBack('')}
           />
-          <View style={{}}>
+        </View>
+        <View
+          style={{
+            marginVertical: 10,
+            marginTop: 10,
+            width: '95%',
+            alignSelf: 'center',
+          }}>
+          <View style={{marginTop: -30}}>
             <QComponents
               textforvideo="Good bye Thanks!"
               icontwon
@@ -67,6 +77,7 @@ const CancelSubscription = props => {
               text5={
                 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.'
               }
+              marginTop1={-20}
               text6={'Leaving Because:'}
             />
           </View>
@@ -113,7 +124,7 @@ const CancelSubscription = props => {
           </View>
         </View>
 
-        <View style={{marginTop: 20}}>
+        <View style={{marginTop: 10, alignSelf: 'center', width: '90%'}}>
           <Pinkbtn
             onPress={() => {
               props.navigation.navigate('Search3', {

@@ -11,8 +11,6 @@ import {
 import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 const Registerd = ({route, navigation}) => {
-  const {registerd1} = route.params;
-
   return (
     <>
       <StatusBar animated={true} backgroundColor="#000" />
@@ -51,8 +49,7 @@ const Registerd = ({route, navigation}) => {
               }
               onPress={() =>
                 navigation.navigate('login', {
-                  registerd1: () =>
-                    navigation.replace('Homes', {Screen: 'Home'}),
+                  registerd1: true,
                   itemId: 86,
                   otherParam: 'anything you want here',
                 })

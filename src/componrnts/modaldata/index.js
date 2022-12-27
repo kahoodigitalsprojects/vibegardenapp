@@ -49,7 +49,7 @@ const Modaldata = ({
           // Alert.alert('Modal has been closed.');
           setVisible(Visible);
         }}>
-        <View style={{paddingTop: 25, flex: 1}}>
+        <View style={{flex: 1}}>
           <View
             style={{
               width: '100%',

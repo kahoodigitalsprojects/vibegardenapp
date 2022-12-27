@@ -9,27 +9,27 @@ import {
   ScrollView,
   StatusBar,
 } from 'react-native';
-import { Header, Pinkbtn } from '../../../componrnts';
+import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 const Verify = props => {
   return (
     <>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ flexGrow: 1 }}>
+        contentContainerStyle={{flexGrow: 1}}>
         <View style={styles.main}>
-          <View style={{ width: '90%', marginTop: 10 }}>
+          <View style={{width: '90%', marginTop: 10}}>
             <Header iconName="arrowleft" header2 />
           </View>
-          <View style={{ width: '95%', marginTop: 30 }}>
-            <View style={{ width: 150, height: 150, marginTop: 30 }}>
+          <View style={{width: '95%', marginTop: 30}}>
+            <View style={{width: 150, height: 150, marginTop: 30}}>
               <Image
                 source={Images.Icons.envelop}
-                style={{ width: '100%', height: '100%' }}
+                style={{width: '100%', height: '100%'}}
               />
             </View>
-            <View style={{ width: '90%', alignSelf: 'center' }}>
-              <View style={{ width: '74%' }}>
+            <View style={{width: '90%', alignSelf: 'center'}}>
+              <View style={{width: '74%'}}>
                 <Text
                   style={{
                     fontSize: 16,
@@ -66,12 +66,10 @@ const Verify = props => {
                     Resend.
                   </Text>
                 </View>
-                <View style={{ marginTop: 20 }}>
+                <View style={{marginTop: 20}}>
                   <Pinkbtn
-                    shadow={"#CD258D"}
-                    onPress={() =>
-                      props.navigation.navigate('Homes', { screen: 'journey' })
-                    }
+                    shadow={'#CD258D'}
+                    onPress={() => props.navigation.navigate('journey')}
                     width={'60%'}
                     btntxt="Continue"
                   />
@@ -87,7 +85,7 @@ const Verify = props => {
 export default Verify;
 
 const styles = StyleSheet.create({
-  main: { flex: 1, alignItems: 'center' },
+  main: {flex: 1, alignItems: 'center'},
   input: {
     flexDirection: 'row',
     justifyContent: 'space-between',

@@ -57,6 +57,7 @@ const Tools = props => {
             size={22}
             colorplus={'green'}
             marginTopplus={-2}
+            color="green"
             img1
             heartplus
             search1="search1"
@@ -129,6 +130,8 @@ const Tools = props => {
                         plus={item.plus}
                         bghome2={item.bg12}
                         title={item.title}
+                        marginVertical2={15}
+                        marginTop2={-10}
                       />
                     );
                   }}

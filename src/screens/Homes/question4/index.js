@@ -57,8 +57,8 @@ const Question3 = props => {
           </View>
           <View style={{marginTop: 20}}>
             <Pinkbtn
-              shadow="#00000029"
-              width={'60%'}
+              shadow="#979B9F"
+              width={'55%'}
               btntxt="See Results"
               setVisible={setState}
               onPress={() =>

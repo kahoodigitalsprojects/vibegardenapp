@@ -69,7 +69,9 @@ const ManageSubscription = props => {
               onPress={() => {
                 props.navigation.navigate('Packges');
               }}>
-              <Text style={{fontSize: 12, marginTop: 5}}>Monthly</Text>
+              <Text style={{fontSize: 12, marginTop: 5, color: '#303033'}}>
+                Monthly
+              </Text>
 
               <Icon
                 name="sort-down"
@@ -86,7 +88,15 @@ const ManageSubscription = props => {
           <View style={[styles.row, {justifyContent: 'space-between'}]}>
             <View style={{flexDirection: 'row', marginTop: 10}}>
               <Text style={[styles.text1, {fontSize: 14}]}>Card No:</Text>
-              <Text style={[{fontSize: 12, marginLeft: 10, marginTop: 3}]}>
+              <Text
+                style={[
+                  {
+                    fontSize: 12,
+                    marginLeft: 10,
+                    marginTop: 3,
+                    color: '#303033',
+                  },
+                ]}>
                 48605678xxxxxx
               </Text>
             </View>
@@ -97,14 +107,24 @@ const ManageSubscription = props => {
             />
           </View>
           <View style={{flexDirection: 'row'}}>
-            <Text style={[styles.text1, {fontSize: 14}]}>Card No:</Text>
-            <Text style={[{fontSize: 12, marginLeft: 10, marginTop: 3}]}>
+            <Text style={[styles.text1, {fontSize: 14, color: '#303033'}]}>
+              Card No:
+            </Text>
+            <Text
+              style={[
+                {fontSize: 12, marginLeft: 10, marginTop: 3, color: '#303033'},
+              ]}>
               5/2025
             </Text>
           </View>
           <View style={{flexDirection: 'row', marginTop: 10}}>
-            <Text style={[styles.text1, {fontSize: 14}]}>Card No:</Text>
-            <Text style={[{fontSize: 12, marginLeft: 10, marginTop: 3}]}>
+            <Text style={[styles.text1, {fontSize: 14, color: '#303033'}]}>
+              Card No:
+            </Text>
+            <Text
+              style={[
+                {fontSize: 12, marginLeft: 10, marginTop: 3, color: '#303033'},
+              ]}>
               147
             </Text>
           </View>

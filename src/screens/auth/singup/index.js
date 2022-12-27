@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -11,23 +11,22 @@ import {
   SafeAreaView,
 } from 'react-native';
 
-import { Header, Pinkbtn } from '../../../componrnts';
+import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { shadow } from 'react-native-paper';
+import {shadow} from 'react-native-paper';
 
-const SignUp = ({ route, navigation }) => {
+const SignUp = ({route, navigation}) => {
   const [state, setState] = useState(true);
   const [state1, setState1] = useState(true);
-  const registerd2 = route.params?.registerd2 || null;
-
+  const {showVerifyScreen} = route.params;
   return (
     <>
       <SafeAreaView style={styles.imageContainer}>
         <StatusBar animated={true} backgroundColor="#000" />
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ flexGrow: 1 }}>
+          contentContainerStyle={{flexGrow: 1}}>
           <View style={styles.screenHeader}>
             <Header
               iconName="arrowleft"
@@ -38,8 +37,11 @@ const SignUp = ({ route, navigation }) => {
           <View style={styles.screenBody}>
             <View>
               <Text
-                style={[styles.headtext, { fontFamily: 'BrandonGrotesque-Bold' }]}>
-                You're so very welcome,  {'\n'}
+                style={[
+                  styles.headtext,
+                  {fontFamily: 'BrandonGrotesque-Bold'},
+                ]}>
+                You're so very welcome, {'\n'}
                 Erin
               </Text>
               <Text
@@ -52,26 +54,31 @@ const SignUp = ({ route, navigation }) => {
                 Let's Get You Setup With An Account
               </Text>
             </View>
-            <View style={styles.logo} >
-              <View style={{ width: 64, height: 65, }}>
+            <View style={styles.logo}>
+              <View style={{width: 64, height: 65}}>
                 <Image
-                  source={Images.Logos.logo1} resizeMode="contain"
-                  style={{ width: '100%', }}
+                  source={Images.Logos.logo1}
+                  resizeMode="contain"
+                  style={{width: '100%'}}
                 />
               </View>
             </View>
             <View style={styles.inputContainer}>
-              <View style={{ marginTop: 50 }}>
-                <Text style={{ fontSize: 18, fontFamily: 'BrandonGrotesque-Medium' }}>
+              <View style={{marginTop: 50}}>
+                <Text
+                  style={{
+                    fontSize: 18,
+                    fontFamily: 'BrandonGrotesque-Medium',
+                    color: '#030303',
+                  }}>
                   Sign Up With Email
                 </Text>
               </View>
-              <View style={{ marginTop: 50 }}>
-
+              <View style={{marginTop: 50}}>
                 <View style={{}}>
                   <TouchableOpacity
                     onPress={() => setState(!state)}
-                    style={{ borderBottomWidth: 1, borderColor: '#75997E' }}>
+                    style={{borderBottomWidth: 1, borderColor: '#75997E'}}>
                     {state ? (
                       <View>
                         <Text
@@ -139,23 +146,22 @@ const SignUp = ({ route, navigation }) => {
                   </TouchableOpacity>
                 </View>
 
-                <View style={{ marginVertical: 50 }}>
+                <View style={{marginVertical: 50}}>
                   <Pinkbtn
-                    shadow={"#CD258D"}
-                    onPress={() => {
-                      registerd2
-                        ? navigation.navigate('verify', {})
+                    shadow={'#CD258D'}
+                    onPress={() =>
+                      showVerifyScreen
+                        ? navigation.navigate('verify')
                         : navigation.navigate('registerd', {
-                          registerd1: () => navigation.navigate('signup'),
-                          itemId: 86,
-                          otherParam: 'anything you want here',
-                        });
-                    }}
+                            registerd1: () => navigation.navigate('signup'),
+                          })
+                    }
                     width={'60%'}
                     btntxt="Continue"
                   />
                 </View>
-                <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }}>
+                <View
+                  style={{justifyContent: 'flex-end', alignItems: 'flex-end'}}>
                   <TouchableOpacity
                     style={{
                       flexDirection: 'row',
@@ -186,7 +192,7 @@ const SignUp = ({ route, navigation }) => {
                   <TouchableOpacity
                     onPress={() => {
                       navigation.replace('Story1', {
-                        param: { istrue: true },
+                        param: {istrue: true},
                       });
                     }}
                     style={{
@@ -214,7 +220,6 @@ const SignUp = ({ route, navigation }) => {
           </View>
         </ScrollView>
       </SafeAreaView>
-
     </>
   );
 };
@@ -223,8 +228,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: '#ffff'
-
+    backgroundColor: '#ffff',
   },
   screenHeader: {
     width: '90%',
@@ -242,8 +246,6 @@ const styles = StyleSheet.create({
     width: '100%',
     // alignItems: 'center',
     // justifyContent: 'center',
-
-
   },
   inputContainer: {
     width: '100%',

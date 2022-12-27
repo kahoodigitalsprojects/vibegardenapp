@@ -155,10 +155,8 @@ const Journey = props => {
 
             <View style={{}}>
               <Pinkbtn
-                shadow={'#030303'}
-                onPress={() =>
-                  props.navigation.navigate('Homes', {screen: 'meet'})
-                }
+                shadow={'#00000029'}
+                onPress={() => props.navigation.navigate('meet')}
                 width={'50%'}
                 btntxt="Continue"
               />

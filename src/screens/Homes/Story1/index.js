@@ -555,11 +555,7 @@ const Slide = ({
           <View style={{position: 'absolute', bottom: 100, width: '100%'}}>
             <Indicators currentSlideIndex={currentSlideIndex} marginTop={25} />
             <TouchableOpacity
-              onPress={() =>
-                navigation.navigate('Auth', {
-                  screen: 'login',
-                })
-              }
+              onPress={() => navigation.navigate('login')}
               style={styles.btn1}>
               <Text
                 style={{
@@ -571,7 +567,11 @@ const Slide = ({
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => navigation.navigate('namescreen')}
+              onPress={() =>
+                navigation.navigate('namescreen', {
+                  showVerifyScreen: true,
+                })
+              }
               style={styles.btn2}>
               <Text
                 style={{

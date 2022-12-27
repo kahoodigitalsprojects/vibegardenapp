@@ -35,6 +35,15 @@ const TabNavigator = () => {
               },
             };
           }
+          if (focusedRouteName === 'Search2') {
+            return {
+              tabBarStyle: {
+                display: 'none',
+                bottom: -200,
+                height: 0,
+              },
+            };
+          }
           return {
             tabBarStyle: {
               display: 'flex',

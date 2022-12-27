@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import { Pinkbtn } from '../pinkbtn';
-import { PreventRemoveContext } from '@react-navigation/native';
+import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {Pinkbtn} from '../pinkbtn';
+import {PreventRemoveContext} from '@react-navigation/native';
 
 const Percentage = ({
   Image1,
@@ -22,7 +22,7 @@ const Percentage = ({
 }) => {
   const [count, setCount] = useState(23);
   return (
-    <View style={[styles.box, { paddingVertical: paddingVertical }]}>
+    <View style={[styles.box, {paddingVertical: paddingVertical}]}>
       {simpletext && (
         <Text
           style={[
@@ -48,7 +48,10 @@ const Percentage = ({
           marginVertical: 10,
         }}>
         <View>
-          <Text style={{ marginHorizontal: margin1 }}>{text1}</Text>
+          <Text
+            style={{marginHorizontal: margin1, fontSize: 16, color: '#030303'}}>
+            {text1}
+          </Text>
         </View>
         <View
           style={{
@@ -57,7 +60,7 @@ const Percentage = ({
           }}>
           <Image source={Image1} style={[styles.img]} resizeMode="contain" />
           {Pertext && (
-            <Text style={{ textAlign: 'center', color: 'green' }}>0-25%</Text>
+            <Text style={{textAlign: 'center', color: 'green'}}>0-25%</Text>
           )}
         </View>
 
@@ -75,12 +78,12 @@ const Percentage = ({
             <>
               <TouchableOpacity onPress={() => setCount(count + 1)}>
                 <View style={{}}>
-                  <Icon name="up" size={24} />
+                  <Icon name="up" size={24} color="#747474" />
                 </View>
               </TouchableOpacity>
               <TouchableOpacity onPress={() => setCount(count - 1)}>
                 <View style={{}}>
-                  <Icon name="down" size={24} />
+                  <Icon name="down" size={24} color="#747474" />
                 </View>
               </TouchableOpacity>
             </>
@@ -102,8 +105,13 @@ const Percentage = ({
         </View>
       </View>
       {btn && (
-        <View style={{ marginVertical: 10 }}>
-          <Pinkbtn shadow={"#030303"} onPress={onPress} width={width} btntxt={btntxt} />
+        <View style={{marginVertical: 10}}>
+          <Pinkbtn
+            shadow={'#030303'}
+            onPress={onPress}
+            width={width}
+            btntxt={btntxt}
+          />
         </View>
       )}
     </View>
@@ -133,4 +141,4 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
 });
-export { Percentage };
+export {Percentage};

@@ -4,14 +4,11 @@ import {Text} from 'react-native';
 import {MenuProvider} from 'react-native-popup-menu';
 import RootStack from './src/navigation/RootStack';
 const App = props => {
-  {
-    useEffect(() => {
-      return () => {
-        if (Text.defaultProps == null) Text.defaultProps = {};
-        Text.defaultProps.allowFontScaling = false;
-      };
-    }, []);
-  }
+  useEffect(() => {
+    Text.defaultProps = Text.defaultProps || {};
+    Text.defaultProps.allowFontScaling = false;
+  }, []);
+
   return (
     <MenuProvider>
       {/* <MyStack {...props} /> */}

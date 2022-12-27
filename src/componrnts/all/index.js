@@ -19,6 +19,7 @@ const All = ({
   bghome2,
   title,
   heart1,
+  marginTop2,
   textA,
   textB,
   onPress,
@@ -33,6 +34,7 @@ const All = ({
   marginVertical,
   plus,
   iconimg1,
+
   pressI,
   marginTop,
 }) => {
@@ -46,6 +48,7 @@ const All = ({
       title: 'title',
 
       iconimg1: Images.Icons.Pcircle,
+      iconimg2: Images.Icons.pinki,
     },
     {
       id: 2,
@@ -56,6 +59,7 @@ const All = ({
       title: 'title',
       iconimg2: iconimg2,
       iconimg1: Images.Icons.prectangel,
+      iconimg2: Images.Icons.pinki,
     },
     {
       id: 3,
@@ -65,6 +69,7 @@ const All = ({
       name: 'TONGLEN',
       title: 'title',
       iconimg1: Images.Icons.sun,
+      iconimg2: Images.Icons.pinki,
     },
   ];
   return (
@@ -77,7 +82,7 @@ const All = ({
             justifyContent: 'space-between',
             marginVertical: marginVertical,
             marginTop: marginTop,
-            // marginVertical: 5,
+            marginVertical: 5,
           }}>
           <Text style={[styles.txtA, {color: color1}]}>{textA}</Text>
           <TouchableOpacity onPress={onPressALL} style={{}}>
@@ -161,6 +166,7 @@ const All = ({
                     {iconimg1 && (
                       <View
                         style={{
+                          marginTop: marginTop2,
                           width: 30,
                           height: 25,
                           // backgroundColor: 'yellow',
@@ -175,14 +181,33 @@ const All = ({
                         />
                       </View>
                     )}
+                    {iconimg2 && (
+                      <View
+                        style={{
+                          marginTop: marginTop2,
+                          width: 30,
+                          height: 25,
+                          // backgroundColor: 'yellow',
+                        }}>
+                        <Image
+                          source={item.iconimg2}
+                          resizeMode="contain"
+                          style={{
+                            width: '100%',
+                            height: '100%',
+                          }}
+                        />
+                      </View>
+                    )}
 
                     <View style={{}}>
                       <Text
                         style={{
                           textAlign: 'center',
-                          fontSize: 18,
+                          fontSize: 20,
                           color: '#000',
                           fontFamily: 'BrandonGrotesque-Regular',
+                          marginTop: marginTop2,
                         }}>
                         {title}
                       </Text>
@@ -191,6 +216,7 @@ const All = ({
                           width: 40,
                           height: 15,
                           borderRadius: 10,
+                          marginVertical: 3,
                           justifyContent: 'center',
                           backgroundColor: '#CD258D',
                           alignItems: 'center',

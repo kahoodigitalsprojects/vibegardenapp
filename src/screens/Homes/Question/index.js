@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -8,14 +8,14 @@ import {
   StatusBar,
 } from 'react-native';
 
-import { Header, Pinkbtn, QComponents } from '../../../componrnts';
+import {Header, Pinkbtn, QComponents} from '../../../componrnts';
 
 const Question = props => {
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ flexGrow: 1 }}>
+        contentContainerStyle={{flexGrow: 1}}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
@@ -55,17 +55,16 @@ const Question = props => {
           text6={'The Multiverse is Real'}
           marginVertical={10}
         />
-        <View style={{ marginTop: 20 }}>
+        <View style={{marginTop: 20}}>
           <Pinkbtn
-            shadow="#00000029"
-            width={'60%'}
+            shadow="#979B9F"
+            width={'55%'}
             btntxt="Next"
             onPress={() => props.navigation.navigate('question3')}
           />
         </View>
-
-      </ScrollView >
-    </SafeAreaView >
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 

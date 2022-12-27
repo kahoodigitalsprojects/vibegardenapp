@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -11,10 +11,10 @@ import {
   SafeAreaView,
 } from 'react-native';
 
-import { Header, Percentage, Pinkbtn } from '../../../componrnts';
+import {Header, Percentage, Pinkbtn} from '../../../componrnts';
 
-const MeetScreen2 = ({ route, navigation }) => {
-  const { Image1, newtext } = route.params;
+const MeetScreen2 = ({route, navigation}) => {
+  const {Image1, newtext} = route.params;
 
   const [data1, setdata1] = useState();
 
@@ -23,10 +23,10 @@ const MeetScreen2 = ({ route, navigation }) => {
       <SafeAreaView style={styles.main}>
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ flexGrow: 1 }}>
+          contentContainerStyle={{flexGrow: 1}}>
           <StatusBar animated={true} backgroundColor="#000" />
 
-          <View style={{ width: '90%', alignSelf: 'center' }}>
+          <View style={{width: '90%', alignSelf: 'center'}}>
             <Header
               header2
               iconName="arrowleft"
@@ -37,7 +37,7 @@ const MeetScreen2 = ({ route, navigation }) => {
               <View style={{}}>
                 <Percentage check={true} Image1={Image1} paddingVertical={20} />
               </View>
-              <View style={{ marginTop: 30 }}>
+              <View style={{marginTop: 30}}>
                 <Text style={styles.txt}>Perfect Erin!</Text>
                 <Text
                   style={{
@@ -50,10 +50,10 @@ const MeetScreen2 = ({ route, navigation }) => {
                   {newtext}
                 </Text>
               </View>
-              <View style={{ marginVertical: 20 }}>
+              <View style={{marginVertical: 20}}>
                 <Pinkbtn
-                  shadow={"#030303"}
-                  onPress={() => navigation.navigate('Mytabs', { Screen: 'Home' })}
+                  shadow={'#030303'}
+                  onPress={() => navigation.navigate('Tabs')}
                   width={'80%'}
                   btntxt="Take Me To the Garden"
                 />
@@ -68,7 +68,7 @@ const MeetScreen2 = ({ route, navigation }) => {
 export default MeetScreen2;
 
 const styles = StyleSheet.create({
-  main: { flex: 1, paddingTop: 15 },
+  main: {flex: 1, paddingTop: 15},
 
   img: {
     width: 80,

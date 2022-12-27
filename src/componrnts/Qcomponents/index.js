@@ -276,7 +276,9 @@ const QComponents = ({
               <Text
                 style={[
                   styles.text2,
+
                   {
+                    marginTop: marginTop1,
                     fontSize: 31,
                     color: '#000',
                     fontFamily: 'BrandonGrotesque-Regular',

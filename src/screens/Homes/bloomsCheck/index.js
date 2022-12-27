@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -11,14 +11,14 @@ import {
   SafeAreaView,
 } from 'react-native';
 
-import { Flowers, Header, Percentage, Pinkbtn } from '../../../componrnts';
+import {Flowers, Header, Percentage, Pinkbtn} from '../../../componrnts';
 
 import Icon from 'react-native-vector-icons/AntDesign';
 import LinearGradient from 'react-native-linear-gradient';
 import Images from '../../../constants';
 import All from '../../../componrnts/all';
 
-const BloomsCheck = ({ route, navigation, newtext, Heading }) => {
+const BloomsCheck = ({route, navigation, newtext, Heading}) => {
   // const {Image1, Image2, Image3, Image4, newtext, Image5, Image6, Heading} =
   //   route.params;
 
@@ -32,7 +32,7 @@ const BloomsCheck = ({ route, navigation, newtext, Heading }) => {
       bg12: Images.BackGround.Bg2,
       plus: 'plus',
       name: 'TONGLEN',
-      title: 'title',
+      title: 'Title',
       textA: 'Tools to Try:',
     },
     {
@@ -41,7 +41,7 @@ const BloomsCheck = ({ route, navigation, newtext, Heading }) => {
       bg12: Images.BackGround.Bg2,
       plus: 'plus',
       name: 'TONGLEN',
-      title: 'title',
+      title: 'Title',
       textA: 'Top Tools:',
     },
     {
@@ -49,7 +49,7 @@ const BloomsCheck = ({ route, navigation, newtext, Heading }) => {
       bg1: Images.BackGround.black,
       bg12: Images.BackGround.Bg2,
       name: 'TONGLEN',
-      title: 'title',
+      title: 'Title',
       textA: 'Featured Tools:',
       plus: 'plus',
     },
@@ -77,13 +77,12 @@ const BloomsCheck = ({ route, navigation, newtext, Heading }) => {
       <SafeAreaView style={styles.main}>
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ flexGrow: 1 }}>
+          contentContainerStyle={{flexGrow: 1}}>
           <StatusBar animated={true} backgroundColor="#000" />
 
-          <View style={{ width: '100%', alignSelf: 'center' }}>
-            <View style={{ width: '90%', alignSelf: 'center' }}>
+          <View style={{width: '100%', alignSelf: 'center'}}>
+            <View style={{width: '90%', alignSelf: 'center'}}>
               <Header
-
                 header2
                 iconName="closesquareo"
                 OnPress={() => {
@@ -92,8 +91,8 @@ const BloomsCheck = ({ route, navigation, newtext, Heading }) => {
               />
             </View>
 
-            <View style={{ width: '100%' }}>
-              <View style={{ width: '90%', alignSelf: 'center' }}>
+            <View style={{width: '100%'}}>
+              <View style={{width: '90%', alignSelf: 'center'}}>
                 <Text
                   style={{
                     textAlign: 'center',
@@ -117,12 +116,12 @@ const BloomsCheck = ({ route, navigation, newtext, Heading }) => {
                   {newtext}
                 </Text>
               </View>
-              <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+              <View style={{justifyContent: 'center', alignItems: 'center'}}>
                 <FlatList
                   showsHorizontalScrollIndicator={false}
                   data={Data}
                   horizontal={true}
-                  renderItem={({ item, index }) => {
+                  renderItem={({item, index}) => {
                     return (
                       <>
                         <View
@@ -136,25 +135,25 @@ const BloomsCheck = ({ route, navigation, newtext, Heading }) => {
                               let obj = {};
                               index === 0
                                 ? (obj = {
-                                  Image1: Images.Logos.redleaf1,
-                                  newtext: 'TONGLEN',
-                                })
+                                    Image1: Images.Logos.redleaf1,
+                                    newtext: 'TONGLEN',
+                                  })
                                 : index === 1
-                                  ? (obj = {
+                                ? (obj = {
                                     Image1: Images.Logos.redleaf2,
                                     newtext: 'TONGLEN',
                                   })
-                                  : index === 2
-                                    ? (obj = {
-                                      Image1: Images.Logos.redleaf3,
-                                      newtext: 'TONGLEN',
-                                    })
-                                    : index === 3
-                                      ? (obj = {
-                                        Image1: Images.Logos.redleaf4,
-                                        newtext: 'TONGLEN',
-                                      })
-                                      : null;
+                                : index === 2
+                                ? (obj = {
+                                    Image1: Images.Logos.redleaf3,
+                                    newtext: 'TONGLEN',
+                                  })
+                                : index === 3
+                                ? (obj = {
+                                    Image1: Images.Logos.redleaf4,
+                                    newtext: 'TONGLEN',
+                                  })
+                                : null;
 
                               setData(obj);
                             }}
@@ -216,7 +215,7 @@ const BloomsCheck = ({ route, navigation, newtext, Heading }) => {
                               </Text>
                             </>
                           </TouchableOpacity>
-                          <View style={{ marginVertical: 5, margin: 10 }}>
+                          <View style={{marginVertical: 5, margin: 10}}>
                             <Text
                               style={{
                                 textAlign: 'center',
@@ -278,7 +277,7 @@ const BloomsCheck = ({ route, navigation, newtext, Heading }) => {
                   showsHorizontalScrollIndicator={false}
                   keyExtractor={item => item.id}
                   data={Data1}
-                  renderItem={({ item }) => {
+                  renderItem={({item}) => {
                     return (
                       <All
                         heart1={item.heart1}
@@ -289,6 +288,8 @@ const BloomsCheck = ({ route, navigation, newtext, Heading }) => {
                         bghome2={item.bg12}
                         title={item.title}
                         color1={'#000'}
+                        marginVertical2={15}
+                        marginTop2={-10}
                       />
                     );
                   }}
@@ -304,7 +305,7 @@ const BloomsCheck = ({ route, navigation, newtext, Heading }) => {
 export default BloomsCheck;
 
 const styles = StyleSheet.create({
-  main: { flex: 1, backgroundColor: '#fff', paddingTop: 15 },
+  main: {flex: 1, backgroundColor: '#fff', paddingTop: 15},
   img: {
     width: 80,
     height: 80,

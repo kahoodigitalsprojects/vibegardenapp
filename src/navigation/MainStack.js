@@ -11,10 +11,15 @@ import LoginOption from '../screens/auth/loginOption';
 import Registerd from '../screens/auth/registered';
 import forgetPassword from '../screens/auth/forgotPassword';
 import NotRegisterd from '../screens/auth/notregistered';
-
+import Journey from '../screens/Homes/journey';
 import PrivacyPolicy from '../screens/Homes/privacyPolicy';
 import Story1 from '../screens/Homes/Story1';
 import TabNavigator from './TabNavigator';
+import MeetScreen2 from '../screens/Homes/meetScreen2';
+import BlueLotus from '../screens/Homes/BlueLotus';
+import Meet from '../screens/Homes/meet';
+import ChuchuasDetails from '../screens/Homes/ChuchuhuasDetails';
+
 const StackNavigator = () => {
   const Stack = createNativeStackNavigator();
 
@@ -40,7 +45,6 @@ const StackNavigator = () => {
         component={Login}
         options={{headerShown: false}}
       />
-
       <Stack.Screen
         name="namescreen"
         component={NameScreen}
@@ -84,6 +88,33 @@ const StackNavigator = () => {
       <Stack.Screen
         name="Story1"
         component={Story1}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="journey"
+        component={Journey}
+        options={{headerShown: false}}
+      />
+
+      <Stack.Screen
+        name="meet"
+        component={Meet}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="chuchuhuasDetails"
+        component={ChuchuasDetails}
+        options={{headerShown: false}}
+      />
+
+      <Stack.Screen
+        name="MeetScreen2"
+        component={MeetScreen2}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Bluelotus"
+        component={BlueLotus}
         options={{headerShown: false}}
       />
       <Stack.Screen

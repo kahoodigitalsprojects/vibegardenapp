@@ -6,11 +6,11 @@ import {
   TextInput,
 } from 'react-native';
 import React from 'react';
-import { SearchBar } from 'react-native-elements';
+import {SearchBar} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 const Searcbart1 = props => {
-  const { close1 } = props;
+  const {close1} = props;
   return (
     <View>
       <View
@@ -41,7 +41,10 @@ const Searcbart1 = props => {
             }}>
             <Icon name="search1" size={25} color="#1C5C2E" />
           </TouchableOpacity>
-          <TextInput placeholder="Heart" style={{ width: '80%' }}></TextInput>
+          <TextInput
+            placeholder="Heart"
+            placeholderTextColor={'#979B9F'}
+            style={{width: '80%', color: 'black'}}></TextInput>
         </View>
         <TouchableOpacity
           onPress={props.onpress2}
@@ -55,7 +58,6 @@ const Searcbart1 = props => {
           <Icon name="close" size={25} color="#1C5C2E" />
         </TouchableOpacity>
       </View>
-
     </View>
   );
 };

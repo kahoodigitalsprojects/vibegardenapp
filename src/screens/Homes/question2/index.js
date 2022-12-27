@@ -74,7 +74,7 @@ const Question2 = props => {
               onPress={() => {
                 props.navigation.navigate('question');
               }}
-              width={'60%'}
+              width={'55%'}
               btntxt="Next"
             />
           </View>

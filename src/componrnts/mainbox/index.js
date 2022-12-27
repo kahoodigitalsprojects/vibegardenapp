@@ -102,7 +102,7 @@ const MainBox = ({
             <View
               style={{
                 width: 77,
-                height: 40,
+                height: 30,
                 borderRadius: 12,
                 // margin: 2,
                 backgroundColor: bgcolor,

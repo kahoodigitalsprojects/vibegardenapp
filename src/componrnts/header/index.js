@@ -94,6 +94,7 @@ const Header = props => {
                   style={{
                     width: 25,
                     height: 25,
+                    marginRight: 4,
                     //  backgroundColor: 'yellow'
                   }}>
                   <Image
@@ -194,10 +195,16 @@ const Header = props => {
                             width: 40,
                             height: 40,
                             padding: 4,
+
                             marginVertical: 10,
                           },
                         ]}>
-                        <Icon2 name="setting" size={25} color="#fff" />
+                        <Icon2
+                          name="setting"
+                          size={25}
+                          color="#fff"
+                          style={{}}
+                        />
                       </TouchableOpacity>
                     </MenuOptions>
                   </Menu>

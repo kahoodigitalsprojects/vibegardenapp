@@ -71,6 +71,7 @@ const Login = ({route, navigation}) => {
                 fontSize: 18,
                 fontFamily: 'BrandonGrotesque-Medium',
                 marginTop: 17,
+                color: '#030303',
               }}>
               Login With Email
             </Text>
@@ -160,26 +161,14 @@ const Login = ({route, navigation}) => {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={{}}>
+        <View style={{marginTop: 20}}>
           <Pinkbtn
             shadow="'#CD258D'"
             onPress={() => {
               {
                 registerd1
-                  ? navigation.replace(
-                      'Tabs',
-                      // {screen: 'Home'},
-                      // {
-                      //   itemId: 86,
-                      // },
-                    )
-                  : navigation.navigate(
-                      'NotRegisterd',
-                      // { screen: 'NotRegisterd' },
-                      // {
-                      //   itemId: 86,
-                      // },
-                    );
+                  ? navigation.replace('Tabs')
+                  : navigation.navigate('NotRegisterd');
               }
             }}
             width={'60%'}
@@ -200,12 +189,7 @@ const Login = ({route, navigation}) => {
         <TouchableOpacity
           style={{}}
           onPress={() => {
-            navigation.navigate('signup', {
-              registerd1: () => navigation.navigate('signup'),
-              itemId: 86,
-              registerd2: () => navigation.replace('Mytabs', {Screen: 'Home'}),
-              otherParam: 'anything you want here',
-            });
+            navigation.navigate('signup');
           }}>
           <Text
             style={{

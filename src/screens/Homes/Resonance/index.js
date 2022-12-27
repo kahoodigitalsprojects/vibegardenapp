@@ -66,10 +66,10 @@ const Resonance = props => {
                       <View styles={{}}>
                         <Switch1 marginRight={20} />
                       </View>
-                      <View style={{marginTop: 5}}>
+                      <View style={{marginTop: 3}}>
                         <Text
-                          styles={{
-                            color: '#000',
+                          style={{
+                            color: '#030303',
                             fontSize: 14,
                             fontFamily: 'BrandonGrotesque-Regular',
                           }}>

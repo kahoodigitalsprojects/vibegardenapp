@@ -93,9 +93,9 @@ const Video = ({route, navigation}) => {
             <View
               style={{
                 width: '90%',
-                marginTop: 10,
+
                 alignSelf: 'center',
-                paddingVertical: 10,
+                paddingVertical: 8,
               }}>
               <Header
                 greenicon1={
