@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -11,10 +11,9 @@ import {
   SafeAreaView,
   ImageBackground,
 } from 'react-native';
-import { Icon } from 'react-native-elements';
+import {Icon} from 'react-native-elements';
 import LinearGradient from 'react-native-linear-gradient';
-import { yellow100 } from 'react-native-paper/lib/typescript/styles/colors';
-import { Header, Pinkbtn } from '../../../componrnts';
+import {Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 
 const Journey = props => {
@@ -54,18 +53,21 @@ const Journey = props => {
           contentContainerStyle={{}}>
           <StatusBar animated={true} backgroundColor="#000" />
 
-          <View style={{
-            // backgroundColor: 'yellow',
-            width: '90%',
-            alignSelf: 'center', height: '100%'
-          }}>
+          <View
+            style={{
+              // backgroundColor: 'yellow',
+              width: '90%',
+              alignSelf: 'center',
+              height: '100%',
+            }}>
             <View
-              style={{
-                // backgroundColor: 'red',
-                // width: '90%',
-                // alignSelf: 'center',
-
-              }}>
+              style={
+                {
+                  // backgroundColor: 'red',
+                  // width: '90%',
+                  // alignSelf: 'center',
+                }
+              }>
               <Text style={styles.txt}>
                 Which of these journey resonates must?
               </Text>
@@ -74,10 +76,10 @@ const Journey = props => {
               <FlatList
                 data={Data}
                 numColumns={2}
-                renderItem={({ item, index }) => {
+                renderItem={({item, index}) => {
                   return (
                     <>
-                      <View style={{ marginVertical: 10, flexGrow: 2 }}>
+                      <View style={{marginVertical: 10, flexGrow: 2}}>
                         <View
                           style={{
                             width: '100%',
@@ -94,7 +96,7 @@ const Journey = props => {
                                   source={item.img1}
                                   style={[
                                     styles.img,
-                                    { marginTop: 0, opacity: 0.7 },
+                                    {marginTop: 0, opacity: 0.7},
                                   ]}
                                   resizeMode="contain">
                                   <LinearGradient
@@ -153,16 +155,15 @@ const Journey = props => {
 
             <View style={{}}>
               <Pinkbtn
-                shadow={"#030303"}
+                shadow={'#030303'}
                 onPress={() =>
-                  props.navigation.navigate('Homes', { screen: 'meet' })
+                  props.navigation.navigate('Homes', {screen: 'meet'})
                 }
                 width={'50%'}
                 btntxt="Continue"
               />
             </View>
           </View>
-
         </ScrollView>
       </SafeAreaView>
     </>
@@ -175,7 +176,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     backgroundColor: '#ffff',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
 
   img: {

@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import MyStack from './src/navigation/Stack';
-import { Text } from 'react-native';
-import { MenuProvider } from 'react-native-popup-menu';
+import {Text} from 'react-native';
+import {MenuProvider} from 'react-native-popup-menu';
+import RootStack from './src/navigation/RootStack';
 const App = props => {
   {
     useEffect(() => {
@@ -13,10 +14,10 @@ const App = props => {
   }
   return (
     <MenuProvider>
-      <MyStack {...props} />
+      {/* <MyStack {...props} /> */}
+      <RootStack />
     </MenuProvider>
   );
-}
-
+};
 
 export default App;

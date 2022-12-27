@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -10,8 +10,8 @@ import {
   StatusBar,
   TouchableOpacity,
 } from 'react-native';
-import { act } from 'react-test-renderer';
-import { Greenbox, Header, Imgbox, SeeAll, StoryData } from '../../../componrnts';
+import {act} from 'react-test-renderer';
+import {Greenbox, Header, Imgbox, SeeAll, StoryData} from '../../../componrnts';
 import All from '../../../componrnts/all';
 import Images from '../../../constants';
 
@@ -42,7 +42,7 @@ const Tools = props => {
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ flexGrow: 1 }}>
+        contentContainerStyle={{flexGrow: 1}}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
@@ -61,15 +61,18 @@ const Tools = props => {
             heartplus
             search1="search1"
             homeheader={true}
-            search={() =>
-              props.navigation.navigate('Homes', { screen: 'Search' })
+            search={
+              () => {
+                props.navigation.navigate('Homes', {screen: 'Search'});
+              }
+              // props.navigation.navigate('Homes', { screen: 'Search' })
             }
             heart
             plus
           />
         </View>
         <View style={styles.Box1}>
-          <View style={{ width: '100%', alignItems: 'center' }}>
+          <View style={{width: '100%', alignItems: 'center'}}>
             <Text
               style={{
                 marginTop: 15,
@@ -80,7 +83,7 @@ const Tools = props => {
               Tools
             </Text>
           </View>
-          <View style={{ width: '90%', alignSelf: 'center', marginTop: 5 }}>
+          <View style={{width: '90%', alignSelf: 'center', marginTop: 5}}>
             <Text
               style={{
                 textAlign: 'center',
@@ -99,7 +102,7 @@ const Tools = props => {
               boxtex3={'Plants'}
               img1
               onPress={() => {
-                props.navigation.navigate('Homes', { screen: 'resonance' });
+                props.navigation.navigate('resonance');
               }}
             />
             <View
@@ -108,12 +111,12 @@ const Tools = props => {
                   // backgroundColor: 'blue'
                 }
               }>
-              <View style={[styles.box2, { marginTop: -35 }]}>
+              <View style={[styles.box2, {marginTop: -35}]}>
                 <FlatList
                   showsHorizontalScrollIndicator={false}
                   keyExtractor={item => item.id}
                   data={Data}
-                  renderItem={({ item }) => {
+                  renderItem={({item}) => {
                     return (
                       <All
                         // pressI={() =>

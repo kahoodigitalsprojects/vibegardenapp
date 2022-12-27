@@ -138,7 +138,7 @@ const Auth = () => {
 export const Homes = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen
+      {/* <Stack.Screen
         name="Home"
         component={Home}
         options={{headerShown: false}}
@@ -294,7 +294,7 @@ export const Homes = () => {
         name="CancelSubscription"
         component={CancelSubscription}
         options={{headerShown: false}}
-      />
+      /> */}
     </Stack.Navigator>
   );
 };

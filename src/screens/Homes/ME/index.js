@@ -26,13 +26,10 @@ const Me = props => {
       img1: Images.Icons.gpluse,
       text1: 'Tools to try',
       onPress: () => {
-        props.navigation.navigate('Homes', {
-          screen: 'FressBlooms',
-          params: {
-            otherParam: 'Tools to try',
-            plus: true,
-            backoption: () => props.navigation.replace('me'),
-          },
+        props.navigation.navigate('FressBlooms', {
+          otherParam: 'Tools to try',
+          plus: true,
+          backoption: () => props.navigation.goBack(),
         });
       },
     },
@@ -40,14 +37,10 @@ const Me = props => {
       img1: Images.Icons.arrow,
       text1: 'Recent Content',
       onPress: () => {
-        props.navigation.navigate('Homes', {
-          screen: 'FressBlooms',
-          params: {
-            otherParam: 'Recent Content',
-            plus: true,
-            backoption: () =>
-              props.navigation.navigate('Mytabs', {screen: 'me'}),
-          },
+        props.navigation.navigate('FressBlooms', {
+          otherParam: 'Recent Content',
+          plus: true,
+          backoption: () => props.navigation.goBack(),
         });
       },
     },
@@ -55,14 +48,10 @@ const Me = props => {
       img1: Images.Icons.gheart,
       text1: 'Favorites',
       onPress: () => {
-        props.navigation.navigate('Homes', {
-          screen: 'FressBlooms',
-          params: {
-            otherParam: 'Favorites',
-            heart: true,
-            backoption: () =>
-              props.navigation.navigate('Mytabs', {screen: 'me'}),
-          },
+        props.navigation.navigate('FressBlooms', {
+          otherParam: 'Favorites',
+          heart: true,
+          backoption: () => props.navigation.goBack(),
         });
       },
     },
@@ -70,14 +59,10 @@ const Me = props => {
       img1: Images.Icons.star,
       text1: 'Top Tools',
       onPress: () => {
-        props.navigation.navigate('Homes', {
-          screen: 'FressBlooms',
-          params: {
-            otherParam: 'Top Tools',
-            plus: true,
-            backoption: () =>
-              props.navigation.navigate('Mytabs', {screen: 'me'}),
-          },
+        props.navigation.navigate('FressBlooms', {
+          otherParam: 'Top Tools',
+          plus: true,
+          backoption: () => props.navigation.goBack(),
         });
       },
     },
@@ -85,14 +70,10 @@ const Me = props => {
       img1: Images.Icons.spiral,
       text1: 'Your Resonance Finder Result',
       onPress: () => {
-        props.navigation.navigate('Homes', {
-          screen: 'Result',
-          params: {
-            otherParam: 'Top Tools',
-            plus: true,
-            backoption: () =>
-              props.navigation.navigate('Mytabs', {screen: 'me'}),
-          },
+        props.navigation.navigate('Result', {
+          otherParam: 'Top Tools',
+          plus: true,
+          backoption: () => props.navigation.goBack(),
         });
       },
     },
@@ -149,12 +130,8 @@ const Me = props => {
               search={() => {
                 props.navigation.navigate('Homes', {screen: 'Search'});
               }}
-              OnPress={() =>
-                props.navigation.navigate('Homes', {screen: 'notification'})
-              }
-              OnPress1={() =>
-                props.navigation.navigate('Homes', {screen: 'settings'})
-              }
+              OnPress={() => props.navigation.navigate('notification')}
+              OnPress1={() => props.navigation.navigate('settings')}
             />
           </View>
           <View style={styles.Box1}>
@@ -281,20 +258,16 @@ const Me = props => {
                   <Pinkbtn
                     width={'65%'}
                     onPress={() => {
-                      props.navigation.navigate(
-                        'Homes',
-                        {screen: 'BloomsCheck'},
-                        {
-                          Image1: Images.Imgs.Rainbow,
-                          Image2: Images.Imgs.Rainbow,
-                          Image3: Images.Imgs.Rainbow,
-                          Image4: Images.Imgs.Rainbow,
-                          newtext: 'Update Current Blooms',
-                          Image5: Images.Imgs.Rainbow,
-                          Image6: Images.Imgs.Rainbow,
-                          Heading: 'Update Current Blooms',
-                        },
-                      );
+                      props.navigation.navigate('BloomsCheck', {
+                        Image1: Images.Imgs.Rainbow,
+                        Image2: Images.Imgs.Rainbow,
+                        Image3: Images.Imgs.Rainbow,
+                        Image4: Images.Imgs.Rainbow,
+                        newtext: 'Update Current Blooms',
+                        Image5: Images.Imgs.Rainbow,
+                        Image6: Images.Imgs.Rainbow,
+                        Heading: 'Update Current Blooms',
+                      });
                     }}
                     btntxt="Update Current Blooms"
                   />

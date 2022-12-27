@@ -18,7 +18,7 @@ const Search = props => {
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ flexGrow: 1 }}>
+        contentContainerStyle={{flexGrow: 1}}>
         <StatusBar animated={true} backgroundColor="#000" />
         <Searcbart1
           onpress1={() => {
@@ -29,8 +29,7 @@ const Search = props => {
               // }
             });
           }}
-          onpress2={() => props.navigation.navigate('Mytabs', { screen: 'Home' })}
-
+          onpress2={() => props.navigation.goBack()}
         />
         <View style={styles.container}>
           <View
@@ -41,11 +40,11 @@ const Search = props => {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <View style={{ width: 80, height: 80 }}>
+            <View style={{width: 80, height: 80}}>
               <Image
                 source={Images.Logos.logo1}
                 resizeMode="contain"
-                style={{ width: '100%', height: '100%' }}
+                style={{width: '100%', height: '100%'}}
               />
             </View>
             <Text
@@ -69,7 +68,7 @@ const Search = props => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
   },
   container: {
     width: '90%',
@@ -78,7 +77,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'center',
     marginTop: 20,
-
   },
   input: {
     width: '100%',

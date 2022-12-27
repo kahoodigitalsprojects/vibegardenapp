@@ -8,7 +8,7 @@ import {
   ScrollView,
   StatusBar,
 } from 'react-native';
-import { Header } from '../../../componrnts';
+import {Header} from '../../../componrnts';
 import Images from '../../../constants';
 
 const Notification = props => {
@@ -60,13 +60,13 @@ const Notification = props => {
     <View style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ flexGrow: 1 }}>
+        contentContainerStyle={{flexGrow: 1}}>
         <StatusBar
           animated={true}
           backgroundColor="#000"
-        // barStyle={statusBarStyle}
-        // showHideTransition={statusBarTransition}
-        // hidden={hidden}
+          // barStyle={statusBarStyle}
+          // showHideTransition={statusBarTransition}
+          // hidden={hidden}
         />
         <View
           style={{
@@ -82,7 +82,7 @@ const Notification = props => {
             iconName="closesquareo"
             header2
             headertext="Notification"
-            OnPress={() => props.navigation.goBack('')}
+            OnPress={() => props.navigation.goBack()}
           />
           <View
             style={{
@@ -136,11 +136,11 @@ const Notification = props => {
           <View style={styles.boxouter}>
             <FlatList
               data={data}
-              renderItem={({ item }) => {
+              renderItem={({item}) => {
                 return (
-                  <View style={{ width: '90%', alignSelf: 'center', margin: 3 }}>
+                  <View style={{width: '90%', alignSelf: 'center', margin: 3}}>
                     <View style={styles.box}>
-                      <View style={{ width: '75%', flexDirection: 'row' }}>
+                      <View style={{width: '75%', flexDirection: 'row'}}>
                         <View style={styles.img}>
                           <Image
                             source={item.Img1}
@@ -178,7 +178,7 @@ const Notification = props => {
                           </Text>
                         </View>
                       </View>
-                      <View style={{ marginTop: 10, marginRight: 24 }}>
+                      <View style={{marginTop: 10, marginRight: 24}}>
                         <Text
                           style={{
                             fontSize: 12,

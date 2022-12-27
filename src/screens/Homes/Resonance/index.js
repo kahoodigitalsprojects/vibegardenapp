@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   StyleSheet,
@@ -9,7 +9,7 @@ import {
   Switch,
   FlatList,
 } from 'react-native';
-import { Header, Pinkbtn, StoryData, Switch1 } from '../../../componrnts';
+import {Header, Pinkbtn, StoryData, Switch1} from '../../../componrnts';
 import Images from '../../../constants';
 
 const Resonance = props => {
@@ -20,25 +20,25 @@ const Resonance = props => {
     {
       Texts: 'Buddhism',
     },
-    { Texts: 'Nature' },
-    { Texts: 'Quntum Physics' },
-    { Texts: 'Asteven Master' },
-    { Texts: 'Plants' },
+    {Texts: 'Nature'},
+    {Texts: 'Quntum Physics'},
+    {Texts: 'Asteven Master'},
+    {Texts: 'Plants'},
   ];
 
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
-      contentContainerStyle={{ flexGrow: 1 }}>
+      contentContainerStyle={{flexGrow: 1}}>
       <StatusBar animated={true} backgroundColor="#000" />
       <View style={styles.main}>
         <View style={styles.container}>
           <Header
             iconName="closesquareo"
             header2
-            OnPress={() => props.navigation.goBack('')}
+            OnPress={() => props.navigation.goBack()}
           />
-          <View style={{ marginTop: 10 }}>
+          <View style={{marginTop: 10}}>
             <Text style={styles.text}>Select Your Topic Resonance?</Text>
             <View style={styles.row}>
               <Text style={styles.text}>OR Try Our </Text>
@@ -57,16 +57,16 @@ const Resonance = props => {
                 </Text>
               </TouchableOpacity>
             </View>
-            <View style={{ marginVertical: 20 }}>
+            <View style={{marginVertical: 20}}>
               <FlatList
                 data={data}
-                renderItem={({ item }) => {
+                renderItem={({item}) => {
                   return (
-                    <View style={{ flexDirection: 'row', marginVertical: 15 }}>
+                    <View style={{flexDirection: 'row', marginVertical: 15}}>
                       <View styles={{}}>
                         <Switch1 marginRight={20} />
                       </View>
-                      <View style={{ marginTop: 5 }}>
+                      <View style={{marginTop: 5}}>
                         <Text
                           styles={{
                             color: '#000',
@@ -81,7 +81,7 @@ const Resonance = props => {
                 }}
               />
             </View>
-            <View style={{ marginTop: 8 }}>
+            <View style={{marginTop: 8}}>
               <Pinkbtn
                 shadow="#00000029"
                 onPress={() => {

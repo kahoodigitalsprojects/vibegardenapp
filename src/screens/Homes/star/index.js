@@ -30,7 +30,10 @@ const Star = props => {
             iconName="closesquareo"
             header2
             OnPress={() =>
-              props.navigation.replace('Mytabs', {screen: 'Homes'})
+              props.navigation.reset({
+                index: 0,
+                routes: [{name: 'me'}],
+              })
             }
           />
           <View

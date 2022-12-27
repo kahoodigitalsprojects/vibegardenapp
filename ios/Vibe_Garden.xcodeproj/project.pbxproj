@@ -14,6 +14,9 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-Vibe_Garden-Vibe_GardenTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Vibe_Garden-Vibe_GardenTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		F93EE51D2959C3A100C575CA /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F93EE51C2959C3A100C575CA /* Entypo.ttf */; };
+		F93EE51F2959C4A000C575CA /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F93EE51E2959C49F00C575CA /* MaterialCommunityIcons.ttf */; };
+		F9615132295AC5B40057FDF6 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9615131295AC5B40057FDF6 /* Feather.ttf */; };
 		F968583D295317890022AAD6 /* BrandonGrotesque-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F968583A295317890022AAD6 /* BrandonGrotesque-Medium.otf */; };
 		F968583E295317890022AAD6 /* BrandonGrotesque-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F968583B295317890022AAD6 /* BrandonGrotesque-Bold.otf */; };
 		F968583F295317890022AAD6 /* BrandonGrotesque-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F968583C295317890022AAD6 /* BrandonGrotesque-Regular.otf */; };
@@ -50,6 +53,9 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Vibe_Garden/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Vibe_Garden-Vibe_GardenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vibe_Garden-Vibe_GardenTests.release.xcconfig"; path = "Target Support Files/Pods-Vibe_Garden-Vibe_GardenTests/Pods-Vibe_Garden-Vibe_GardenTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F93EE51C2959C3A100C575CA /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		F93EE51E2959C49F00C575CA /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		F9615131295AC5B40057FDF6 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		F968583A295317890022AAD6 /* BrandonGrotesque-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BrandonGrotesque-Medium.otf"; path = "../android/app/src/main/assets/fonts/BrandonGrotesque-Medium.otf"; sourceTree = "<group>"; };
 		F968583B295317890022AAD6 /* BrandonGrotesque-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BrandonGrotesque-Bold.otf"; path = "../android/app/src/main/assets/fonts/BrandonGrotesque-Bold.otf"; sourceTree = "<group>"; };
 		F968583C295317890022AAD6 /* BrandonGrotesque-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BrandonGrotesque-Regular.otf"; path = "../android/app/src/main/assets/fonts/BrandonGrotesque-Regular.otf"; sourceTree = "<group>"; };
@@ -128,6 +134,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				F9615131295AC5B40057FDF6 /* Feather.ttf */,
+				F93EE51E2959C49F00C575CA /* MaterialCommunityIcons.ttf */,
+				F93EE51C2959C3A100C575CA /* Entypo.ttf */,
 				F968584229531BD30022AAD6 /* AntDesign.ttf */,
 				F968584029531BD30022AAD6 /* FontAwesome.ttf */,
 				F968584129531BD30022AAD6 /* Ionicons.ttf */,
@@ -261,12 +270,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9685846295472280022AAD6 /* AntDesign.ttf in Resources */,
+				F9615132295AC5B40057FDF6 /* Feather.ttf in Resources */,
 				F96858472954722B0022AAD6 /* FontAwesome.ttf in Resources */,
 				F96858482954722E0022AAD6 /* Ionicons.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				F968583F295317890022AAD6 /* BrandonGrotesque-Regular.otf in Resources */,
 				F968583E295317890022AAD6 /* BrandonGrotesque-Bold.otf in Resources */,
+				F93EE51F2959C4A000C575CA /* MaterialCommunityIcons.ttf in Resources */,
 				F968583D295317890022AAD6 /* BrandonGrotesque-Medium.otf in Resources */,
+				F93EE51D2959C3A100C575CA /* Entypo.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

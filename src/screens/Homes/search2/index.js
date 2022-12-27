@@ -164,14 +164,12 @@ const Search2 = ({route, navigation, otherParam}) => {
                     <View style={{marginVertical: 10}}>
                       <SeeAll
                         onPress={() =>
-                          navigation.navigate('Mytabs', {
-                            screen: 'tools',
-                            params: {
-                              backoption: navigation.navigate('Mytabs', {
-                                screen: 'me',
-                              }),
-                            },
-                          })
+                          navigation.navigate(
+                            'tools',
+                            // , {
+                            //   backoption: navigation.navigate('me'),
+                            // }
+                          )
                         }
                         color1="#1C5C2E"
                         textA="TOOLS"
@@ -208,14 +206,11 @@ const Search2 = ({route, navigation, otherParam}) => {
                     <View style={{marginVertical: 10}}>
                       <SeeAll
                         onPress={() =>
-                          navigation.replace('Homes', {
-                            screen: 'GroundWork',
-                            params: {
-                              otherParam: 'Top Tools',
-                              plus: true,
-                              backoption: () =>
-                                navigation.replace('Mytabs', {screen: 'me'}),
-                            },
+                          navigation.navigate('GroundWork', {
+                            otherParam: 'Top Tools',
+                            plus: true,
+                            // backoption: () =>
+                            //   navigation.replace('Mytabs', {screen: 'me'}),
                           })
                         }
                         color1="#1C5C2E"
@@ -251,18 +246,16 @@ const Search2 = ({route, navigation, otherParam}) => {
                     <View style={{marginVertical: 10}}>
                       <SeeAll
                         onPress={() => {
-                          navigation.navigate('Homes', {
-                            screen: 'FressBlooms',
-                            params: {
+                          navigation.navigate('me');
+                          setTimeout(function () {
+                            navigation.navigate('FressBlooms', {
                               otherParam: 'Fresh Blooms',
                               heart: true,
+                            });
+                          }, 100);
 
-                              backoption: () =>
-                                navigation.navigate('Mytabs', {
-                                  screen: 'me',
-                                }),
-                            },
-                          });
+                          //  ,
+                          // });
                         }}
                         textA="FRESH BLOOMS"
                         textB="SeeAll"
@@ -419,7 +412,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                         return (
                           <All
                             pressI={() =>
-                              props.navigation.navigate('Homes', {
+                              props.navigation.navigate('Video', {
                                 screen: 'Video',
                                 params: {
                                   otherParam: false,
@@ -427,9 +420,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                                   otherParam1: 'FAMILY OF LIGHT',
                                   icon1: false,
                                   backoption: () =>
-                                    props.navigation.navigate('Mytabs', {
-                                      screen: 'GroundWork',
-                                    }),
+                                    props.navigation.navigate('GroundWork'),
                                 },
                               })
                             }

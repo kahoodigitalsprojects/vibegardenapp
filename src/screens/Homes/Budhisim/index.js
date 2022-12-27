@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -11,12 +11,12 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import { Header, SeeAll, Userdetails } from '../../../componrnts';
+import {Header, SeeAll, Userdetails} from '../../../componrnts';
 import All from '../../../componrnts/all';
 import Images from '../../../constants';
 
 const Buddhisim = props => {
-  const { Flowersbox, Heading } = props;
+  const {Flowersbox, Heading} = props;
   const data = [
     {
       Img1: Images.Imgs.user2,
@@ -68,7 +68,7 @@ const Buddhisim = props => {
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ flexGrow: 1 }}>
+        contentContainerStyle={{flexGrow: 1}}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
@@ -84,7 +84,7 @@ const Buddhisim = props => {
             iconName="left"
             header2
             headertext="Buddhisim"
-            OnPress={() => props.navigation.goBack('')}
+            OnPress={() => props.navigation.goBack()}
           />
         </View>
         <View style={styles.Box1}>
@@ -107,34 +107,26 @@ const Buddhisim = props => {
               Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna.
             </Text>
           </View>
-          <View style={[styles.box2, { marginVertical: 10 }]}>
+          <View style={[styles.box2, {marginVertical: 10}]}>
             <FlatList
-
               showsHorizontalScrollIndicator={false}
               keyExtractor={item => item.id}
               data={Data}
-              renderItem={({ item }) => {
+              renderItem={({item}) => {
                 return (
                   <>
                     <All
                       marginVertical={15}
                       color1="#000"
                       pressI={() =>
-                        props.navigation.navigate('Homes', {
-                          screen: 'Video',
-                          params: {
-                            otherParam: 'Tools to try',
-                            plus: true,
-                            otherParam1: 'TONGLEN',
-                            textflower: 'Did you try this tools?',
-                            icon1: true,
-                            redbtn: true,
-                            plus: true,
-                            backoption: () =>
-                              props.navigation.navigate('Mytabs', {
-                                screen: 'GroundWork',
-                              }),
-                          },
+                        props.navigation.navigate('Video', {
+                          otherParam: 'Tools to try',
+                          plus: true,
+                          otherParam1: 'TONGLEN',
+                          textflower: 'Did you try this tools?',
+                          icon1: true,
+                          redbtn: true,
+                          backoption: () => props.navigation.goBack(),
                         })
                       }
                       // onPressALL={item.pressAll}
@@ -152,7 +144,7 @@ const Buddhisim = props => {
             />
           </View>
           <View style={styles.centerbox}>
-            <View style={{ marginTop: 20 }}>
+            <View style={{marginTop: 20}}>
               <SeeAll
                 onPress={() =>
                   props.navigation.navigate('Homes', {
@@ -164,15 +156,15 @@ const Buddhisim = props => {
               />
             </View>
 
-            <View style={{ marginVertical: 3 }}>
+            <View style={{marginVertical: 3}}>
               <View style={{}}>
                 <FlatList
                   showsHorizontalScrollIndicator={false}
                   data={data}
-                  renderItem={({ item }) => {
+                  renderItem={({item}) => {
                     return (
                       <>
-                        <View style={{ marginVertical: 10 }}>
+                        <View style={{marginVertical: 10}}>
                           <Userdetails
                             databox2
                             bear={item.Img1}

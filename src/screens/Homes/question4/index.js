@@ -62,14 +62,10 @@ const Question3 = props => {
               btntxt="See Results"
               setVisible={setState}
               onPress={() =>
-                props.navigation.replace('Homes', {
-                  screen: 'Result',
-                  params: {
-                    otherParam: 'Top Tools',
-                    plus: true,
-                    backoption: () =>
-                      props.navigation.replace('Mytabs', {screen: 'me'}),
-                  },
+                props.navigation.replace('Result', {
+                  otherParam: 'Top Tools',
+                  plus: true,
+                  backoption: () => props.navigation.navigate('me'),
                 })
               }
             />

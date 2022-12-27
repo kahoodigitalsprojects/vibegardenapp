@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   View,
   Text,
@@ -10,13 +10,13 @@ import {
   ScrollView,
   Appearance,
 } from 'react-native';
-import { Header, Pinkbtn } from '../../../componrnts';
+import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 import Orientation from 'react-native-orientation-locker';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useIsFocused } from '@react-navigation/native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-const Login = ({ route, navigation }) => {
+import {useIsFocused} from '@react-navigation/native';
+import {SafeAreaView} from 'react-native-safe-area-context';
+const Login = ({route, navigation}) => {
   const [state, setState] = useState(true);
   const [state1, setState1] = useState(true);
   const [message, setMessage] = useState('');
@@ -26,7 +26,6 @@ const Login = ({ route, navigation }) => {
     Orientation.unlockAllOrientations();
     checkJourney();
   }, [isFocused]);
-
 
   const checkJourney = async value => {
     try {
@@ -48,18 +47,22 @@ const Login = ({ route, navigation }) => {
       <StatusBar animated={true} backgroundColor="#000" />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ flexGrow: 1 }}>
+        contentContainerStyle={{flexGrow: 1}}>
         <View style={styles.screenHeader}>
           <Header
             iconName="arrowleft"
             header2
-            OnPress={() => navigation.navigate('loginoption')} />
+            OnPress={() => navigation.navigate('loginoption')}
+          />
         </View>
         <View style={styles.screenBody}>
-          <View style={styles.logo} >
-            <View style={{ width: 110, height: 120 }}>
-              <Image source={Images.Logos.logo1} resizeMode="contain"
-                style={{ width: '100%', height: '100%' }} />
+          <View style={styles.logo}>
+            <View style={{width: 110, height: 120}}>
+              <Image
+                source={Images.Logos.logo1}
+                resizeMode="contain"
+                style={{width: '100%', height: '100%'}}
+              />
             </View>
           </View>
           <View style={styles.inputContainer}>
@@ -71,10 +74,10 @@ const Login = ({ route, navigation }) => {
               }}>
               Login With Email
             </Text>
-            <View style={{ marginTop: 40 }}>
+            <View style={{marginTop: 40}}>
               <TouchableOpacity
                 onPress={() => setState(!state)}
-                style={{ borderBottomWidth: 1, borderColor: '#75997E' }}>
+                style={{borderBottomWidth: 1, borderColor: '#75997E'}}>
                 {state ? (
                   <View>
                     <Text
@@ -159,25 +162,24 @@ const Login = ({ route, navigation }) => {
         </View>
         <View style={{}}>
           <Pinkbtn
-
             shadow="'#CD258D'"
             onPress={() => {
               {
                 registerd1
                   ? navigation.replace(
-                    'Mytabs',
-                    { screen: 'Home' },
-                    {
-                      itemId: 86,
-                    },
-                  )
+                      'Tabs',
+                      // {screen: 'Home'},
+                      // {
+                      //   itemId: 86,
+                      // },
+                    )
                   : navigation.navigate(
-                    'Auth',
-                    { screen: 'NotRegisterd' },
-                    {
-                      itemId: 86,
-                    },
-                  );
+                      'NotRegisterd',
+                      // { screen: 'NotRegisterd' },
+                      // {
+                      //   itemId: 86,
+                      // },
+                    );
               }
             }}
             width={'60%'}
@@ -201,8 +203,7 @@ const Login = ({ route, navigation }) => {
             navigation.navigate('signup', {
               registerd1: () => navigation.navigate('signup'),
               itemId: 86,
-              registerd2: () =>
-                navigation.replace('Mytabs', { Screen: 'Home' }),
+              registerd2: () => navigation.replace('Mytabs', {Screen: 'Home'}),
               otherParam: 'anything you want here',
             });
           }}>
@@ -225,8 +226,6 @@ const Login = ({ route, navigation }) => {
             </Text>
           </Text>
         </TouchableOpacity>
-
-
       </ScrollView>
     </SafeAreaView>
   );
@@ -236,7 +235,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: '#ffff'
+    backgroundColor: '#ffff',
   },
   screenHeader: {
     width: '90%',
@@ -255,11 +254,10 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     // justifyContent: 'center',
     marginTop: 40,
-
   },
   inputContainer: {
     width: '100%',
-    backgroundColor: '#ffff'
+    backgroundColor: '#ffff',
     // height: 300,
     // paddingTop: 40,
     // justifyContent: 'center',

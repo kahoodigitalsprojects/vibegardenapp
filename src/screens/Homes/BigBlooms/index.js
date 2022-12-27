@@ -139,6 +139,7 @@ const BigBlooms = ({route, navigation}) => {
 
           <FlatList
             data={data}
+            keyExtractor={item => item}
             renderItem={({item}) => {
               return (
                 <View

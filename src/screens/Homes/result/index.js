@@ -31,12 +31,10 @@ const Result = ({navigation, route}) => {
             color="#1C5C2E"
             header2
             // OnPress={backoption}
-            OnPress={() =>
-              navigation.replace('me', {
-                screen: 'result',
-                // backoption: navigation.replace('Mytabs', {screen: 'me'}),
-              })
-            }
+            OnPress={() => {
+              navigation.navigate('tools');
+              navigation.navigate('me');
+            }}
             // OnPress={backoption}
             headertext="Resonance Finder"
           />

@@ -48,9 +48,7 @@ const EmailNotification = props => {
             color="#191919B8"
             fontSize={20}
             header2
-            OnPress={() =>
-              props.navigation.navigate('Homes', {screen: 'settings'})
-            }
+            OnPress={() => props.navigation.goBack()}
           />
           <View style={{marginTop: 10}}>
             <View style={{width: '100%'}}>

@@ -9,7 +9,7 @@ import {
   FlatList,
   StatusBar,
 } from 'react-native';
-import { Greenbox, Header, Imgbox, SeeAll, StoryData } from '../../../componrnts';
+import {Greenbox, Header, Imgbox, SeeAll, StoryData} from '../../../componrnts';
 import All from '../../../componrnts/all';
 import MainBox from '../../../componrnts/mainbox';
 import Images from '../../../constants';
@@ -39,11 +39,10 @@ const GroundWork = props => {
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ flexGrow: 1 }}>
+        contentContainerStyle={{flexGrow: 1}}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
-
             width: '90%',
             alignSelf: 'center',
             marginVertical: 5,
@@ -59,14 +58,14 @@ const GroundWork = props => {
             search1="search1"
             homeheader={true}
             search={() =>
-              props.navigation.navigate('Homes', { screen: 'Search' })
+              props.navigation.navigate('Homes', {screen: 'Search'})
             }
             heart
-          // plus
+            // plus
           />
         </View>
         <View style={styles.Box1}>
-          <View style={{ width: '90%', alignSelf: 'center' }}>
+          <View style={{width: '90%', alignSelf: 'center'}}>
             <Text
               style={{
                 textAlign: 'center',
@@ -93,7 +92,7 @@ const GroundWork = props => {
               boxtex3={'Nature'}
               img2
               onPress1={() => {
-                props.navigation.navigate('Homes', { screen: 'Buddhisim' }, {});
+                props.navigation.navigate('Buddhisim');
               }}
             />
             <View
@@ -143,22 +142,16 @@ const GroundWork = props => {
                     showsHorizontalScrollIndicator={false}
                     keyExtractor={item => item.id}
                     data={Data}
-                    renderItem={({ item }) => {
+                    renderItem={({item}) => {
                       return (
                         <All
                           pressI={() =>
-                            props.navigation.navigate('Homes', {
-                              screen: 'Video',
-                              params: {
-                                otherParam: false,
-                                plus: false,
-                                otherParam1: 'FAMILY OF LIGHT',
-                                icon1: false,
-                                backoption: () =>
-                                  props.navigation.navigate('Mytabs', {
-                                    screen: 'GroundWork',
-                                  }),
-                              },
+                            props.navigation.navigate('Video', {
+                              otherParam: false,
+                              plus: false,
+                              otherParam1: 'FAMILY OF LIGHT',
+                              icon1: false,
+                              backoption: () => props.navigation.goBack(),
                             })
                           }
                           // iconimg1

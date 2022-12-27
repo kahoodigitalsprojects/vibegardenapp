@@ -1,7 +1,3 @@
-
-import Swiper from 'react-native-swiper';
-import { Header, Pinkbtn, StoryData } from '../../../componrnts';
-import { StatusBar } from 'expo-status-bar';
 import {
   StyleSheet,
   Text,
@@ -11,14 +7,14 @@ import {
   Image,
   FlatList,
 } from 'react-native';
-import React, { useEffect, useRef, useState } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Orientation from 'react-native-orientation-locker';
 import Images from '../../../constants';
-import { useIsFocused } from '@react-navigation/native';
+import {useIsFocused} from '@react-navigation/native';
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
-const Story1 = ({ navigation }) => {
+const Story1 = ({navigation}) => {
   const isFocused = useIsFocused();
   useEffect(() => {
     Orientation.lockToPortrait();
@@ -459,7 +455,7 @@ const Story1 = ({ navigation }) => {
 
     if (nextSlideIndex != slides.length) {
       const offset = nextSlideIndex * WIDTH;
-      ref?.current.scrollToOffset({ offset });
+      ref?.current.scrollToOffset({offset});
       setCurrentSlideIndex(currentSlideIndex + 1);
     }
   };
@@ -468,7 +464,7 @@ const Story1 = ({ navigation }) => {
 
     if (prevSlideIndex != slides.length) {
       const offset = prevSlideIndex * WIDTH;
-      ref?.current.scrollToOffset({ offset });
+      ref?.current.scrollToOffset({offset});
       setCurrentSlideIndex(currentSlideIndex - 1);
     }
   };
@@ -478,14 +474,14 @@ const Story1 = ({ navigation }) => {
         ref={ref}
         onMomentumScrollEnd={updateCurrentSlideIndex}
         data={slides}
-        contentContainerStyle={{ flexGrow: 1 }}
+        contentContainerStyle={{flexGrow: 1}}
         style={{
           flex: 1,
         }}
         horizontal
         pagingEnabled
         showsHorizontalScrollIndicator={false}
-        renderItem={({ item }) => (
+        renderItem={({item}) => (
           <Slide
             currentSlideIndex={currentSlideIndex}
             goToNextSlide={goToNextSlide}
@@ -508,7 +504,7 @@ const Slide = ({
 }) => {
   return (
     <View
-      style={{ alignItems: 'center', justifyContent: 'center', width: WIDTH }}>
+      style={{alignItems: 'center', justifyContent: 'center', width: WIDTH}}>
       {item.id === 1 ? (
         <>
           <Image
@@ -533,7 +529,7 @@ const Slide = ({
             }}>
             <Image source={Images.Logos.logo1} style={{}} />
             <Text style={styles.headtext}>
-              <Text style={{ fontWeight: 'bold' }}>VIBE</Text>GARDEN
+              <Text style={{fontWeight: 'bold'}}>VIBE</Text>GARDEN
             </Text>
             <Text
               style={{
@@ -556,7 +552,7 @@ const Slide = ({
               Tools, tips & magic for growing your communication to you!
             </Text>
           </View>
-          <View style={{ position: 'absolute', bottom: 100, width: '100%' }}>
+          <View style={{position: 'absolute', bottom: 100, width: '100%'}}>
             <Indicators currentSlideIndex={currentSlideIndex} marginTop={25} />
             <TouchableOpacity
               onPress={() =>
@@ -590,11 +586,11 @@ const Slide = ({
         </>
       ) : (
         <>
-          <View style={{ width: '100%', height: HEIGHT / 2 }}>
+          <View style={{width: '100%', height: HEIGHT / 2}}>
             <Image
               resizeMode="contain"
               source={item.img}
-              style={{ height: '100%', width: '100%' }}
+              style={{height: '100%', width: '100%'}}
             />
           </View>
           <Text
@@ -629,7 +625,7 @@ const Slide = ({
                 flexDirection: 'row',
               }}>
               <TouchableOpacity
-                style={{ marginRight: 10 }}
+                style={{marginRight: 10}}
                 onPress={goToPrevSlide}
                 disabled={item.id === 2 ? true : false}>
                 <Icon name="angle-left" size={20} />
@@ -643,11 +639,11 @@ const Slide = ({
                 Swipe To See How It Works
               </Text>
               <TouchableOpacity
-                style={{ marginLeft: 10 }}
+                style={{marginLeft: 10}}
                 onPress={goToNextSlide}
                 disabled={item.id === 6 ? true : false}>
                 <Text
-                  style={{ color: item.id === 6 ? 'transparent' : '#191919B8' }}>
+                  style={{color: item.id === 6 ? 'transparent' : '#191919B8'}}>
                   <Icon name="angle-right" size={20} />
                 </Text>
               </TouchableOpacity>
@@ -658,7 +654,7 @@ const Slide = ({
     </View>
   );
 };
-const Indicators = ({ currentSlideIndex, marginTop, marginBottom = 25 }) => {
+const Indicators = ({currentSlideIndex, marginTop, marginBottom = 25}) => {
   return (
     <View
       style={{
@@ -690,7 +686,7 @@ const Indicators = ({ currentSlideIndex, marginTop, marginBottom = 25 }) => {
   );
 };
 const slides = [
-  { id: 1, img: Images.BackGround.Bg1 },
+  {id: 1, img: Images.BackGround.Bg1},
   {
     id: 2,
     img: Images.BackGround.storybg1,
@@ -761,4 +757,3 @@ const styles = StyleSheet.create({
   },
 });
 export default Story1;
-

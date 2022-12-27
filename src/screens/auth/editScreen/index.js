@@ -46,7 +46,7 @@ const EditScreen = ({navigation, route}) => {
           headertext={itemId}
           fontSize={25}
           color="#191919B8"
-          OnPress={() => navigation.navigate('Homes', {screen: 'settings'})}
+          OnPress={() => navigation.goBack()}
         />
         <View style={{marginTop: 50}}>
           <View style={styles.center}>

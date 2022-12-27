@@ -21,7 +21,7 @@ const PrivacyPolicy = ({navigation, route}) => {
             marginTop={-40}
             iconName="left"
             header2
-            OnPress={() => navigation.navigate('Homes', {screen: 'settings'})}
+            OnPress={() => navigation.goBack()}
             headertext={heading1}
             fontSize={25}
             color="#191919B8"

@@ -151,6 +151,14 @@ const Header = props => {
                     <MenuOptions
                       optionsContainerStyle={{
                         width: 40,
+                        shadowColor: '#fff',
+                        shadowOffset: {
+                          width: 0,
+                          height: 0,
+                        },
+                        shadowOpacity: 0,
+                        shadowRadius: 0,
+
                         elevation: 0,
                         backgroundColor: '#fff',
                         marginLeft: 1.5,

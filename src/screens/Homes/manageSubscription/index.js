@@ -28,9 +28,7 @@ const ManageSubscription = props => {
             marginLeft={30}
             color="#191919B8"
             header2
-            OnPress={() =>
-              props.navigation.navigate('Homes', {screen: 'settings'})
-            }
+            OnPress={() => props.navigation.goBack()}
             headertext="Manage Subscriptions"
             fontSize={20}
           />

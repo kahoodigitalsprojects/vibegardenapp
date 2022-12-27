@@ -1,4 +1,4 @@
-import React, {startTransition, useState} from 'react';
+import React from 'react';
 import {
   View,
   Text,
@@ -6,14 +6,11 @@ import {
   ScrollView,
   StyleSheet,
   StatusBar,
-  Switch,
-  Image,
   TouchableOpacity,
 } from 'react-native';
 
 import {Header, Pinkbtn, QComponents, Switch1} from '../../../componrnts';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import Images from '../../../constants';
 
 const Pushnotification = props => {
   return (
@@ -37,9 +34,7 @@ const Pushnotification = props => {
             headertext="Push Notification"
             fontSize={25}
             color="#191919B8"
-            OnPress={() =>
-              props.navigation.navigate('Homes', {screen: 'settings'})
-            }
+            OnPress={() => props.navigation.goBack()}
           />
           <View style={{marginTop: 30, marginVertical: 10}}>
             <Text style={styles.text1}>
