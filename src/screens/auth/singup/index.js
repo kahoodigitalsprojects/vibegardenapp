@@ -31,7 +31,7 @@ const SignUp = ({route, navigation}) => {
             <Header
               iconName="arrowleft"
               header2
-              OnPress={() => navigation.replace('Welcome')}
+              OnPress={() => navigation.replace('Story1')}
             />
           </View>
           <View style={styles.screenBody}>
