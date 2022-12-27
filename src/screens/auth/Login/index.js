@@ -189,7 +189,9 @@ const Login = ({route, navigation}) => {
         <TouchableOpacity
           style={{}}
           onPress={() => {
-            navigation.navigate('signup');
+            navigation.navigate('signup', {
+              showVerifyScreen: false,
+            });
           }}>
           <Text
             style={{
