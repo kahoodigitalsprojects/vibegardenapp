@@ -209,7 +209,12 @@ const Search2 = ({route, navigation, otherParam}) => {
                         })}
                       </ScrollView>
                     </View>
-                    <View style={{marginVertical: 10}}>
+                    <View
+                      style={{
+                        marginVertical: 10,
+                        width: '90%',
+                        alignSelf: 'center',
+                      }}>
                       <SeeAll
                         onPress={() =>
                           navigation.navigate('GroundWork', {
@@ -449,9 +454,9 @@ const Search2 = ({route, navigation, otherParam}) => {
                             plus={item.plus}
                             bghome2={item.bg12}
                             marginVertical={5}
-                            marginTop={10}
-                            marginVertical2={15}
-                            marginTop2={-30}
+                            marginTop={15}
+                            marginVertical2={25}
+                            marginTop2={-3}
                             title={item.title}
                           />
                         );
@@ -568,9 +573,9 @@ const Search2 = ({route, navigation, otherParam}) => {
                               // plus={item.plus}
                               bghome2={item.bg12}
                               marginVertical={5}
-                              marginTop={10}
-                              marginVertical2={15}
-                              marginTop2={-30}
+                              marginTop={15}
+                              marginVertical2={25}
+                              marginTop2={-10}
                               title={item.title}
                             />
                           </View>

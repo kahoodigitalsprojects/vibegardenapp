@@ -185,6 +185,7 @@ const All = ({
                       <View
                         style={{
                           marginTop: marginTop2,
+                          marginVertical: 8,
                           width: 30,
                           height: 25,
                           // backgroundColor: 'yellow',
