@@ -22,9 +22,6 @@ import {Modal} from 'react-native';
 import Images from '../../../constants';
 import Modaldata from '../../../componrnts/modaldata';
 const Search2 = ({route, navigation, otherParam}) => {
-  const {textchange} = route.params;
-  const {Mydata} = route.params;
-
   const [activeTab, setActiveTab] = useState(0);
   const [topicName, setTopicName] = useState('Topics');
   const [typeName, setTypeName] = useState('Types');
@@ -33,572 +30,527 @@ const Search2 = ({route, navigation, otherParam}) => {
 
   return (
     <>
-      <SafeAreaView style={styles.main}>
-        <ScrollView
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={{flexGrow: 1}}>
-          <StatusBar animated={true} backgroundColor="#000" />
-          <View style={{width: '100%'}}>
-            <Searcbart1 onpress2={() => navigation.goBack('')} />
-          </View>
-
-          <View
+      <View
+        style={{
+          width: '100%',
+          paddingHorizontal: 20,
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          marginTop: 30,
+        }}>
+        <TouchableOpacity
+          onPress={() => {
+            setActiveTab(0);
+            setTopicName('Topics');
+            setTypeName('Types');
+          }}
+          style={[
+            styles.tabBtn,
+            {
+              backgroundColor: activeTab === 0 ? '#1C5C2E' : '#D1DED5',
+            },
+          ]}>
+          <Text
             style={{
-              width: '100%',
-              borderBottomWidth: 1,
-              borderColor: '#1C5C2E',
-              // backgroundColor: 'red',
+              color: activeTab === 0 ? '#fff' : '#1C5C2E',
+              fontFamily: 'BrandonGrotesque-Regular',
             }}>
-            <View
-              style={{
-                width: '90%',
-                alignSelf: 'center',
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                marginTop: 20,
-              }}>
+            All
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => {
+            setActiveTab(1);
+            setTopicName('Topics');
+            setTypeName('Types');
+          }}
+          style={[
+            styles.tabBtn,
+            {
+              backgroundColor: activeTab === 1 ? '#205F2E' : '#D1DED5',
+            },
+          ]}>
+          <Text
+            style={{
+              color: activeTab === 1 ? '#fff' : '#205F2E',
+              fontFamily: 'BrandonGrotesque-Regular',
+            }}>
+            Tools
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            setActiveTab(2);
+            setTopicName('Topics');
+            setTypeName('Types');
+          }}
+          style={[
+            styles.tabBtn,
+            {
+              backgroundColor: activeTab === 2 ? '#205F2E' : '#D1DED5',
+            },
+          ]}>
+          <Text
+            style={{
+              color: activeTab === 2 ? '#fff' : '#205F2E',
+              fontFamily: 'BrandonGrotesque-Regular',
+            }}>
+            Ground Work
+          </Text>
+        </TouchableOpacity>
+      </View>
+      <View
+        style={{
+          width: '100%',
+          height: 1,
+          backgroundColor: '#1C5C2E',
+        }}
+      />
+      <View style={styles.container}>
+        <View style={{width: '100%'}}>
+          {activeTab === 0 ? (
+            <>
               <TouchableOpacity
                 onPress={() => {
-                  setActiveTab(0);
-                  setTopicName('Topics');
-                  setTypeName('Types');
+                  setModalType(1);
+                  setModalVisible(!modalVisible);
                 }}
-                style={{
-                  backgroundColor: activeTab === 0 ? '#1C5C2E' : '#D1DED5',
-                  elevation: activeTab === 1 ? 0 : 5,
-                  borderRadius: 5,
-                  alignSelf: 'center',
-                  paddingVertical: 5,
-                  paddingLeft: 20,
-                  paddingRight: 20,
-                }}>
+                style={[
+                  styles.topics,
+                  {
+                    backgroundColor: '#fff',
+                  },
+                ]}>
                 <Text
                   style={{
-                    color: activeTab === 0 ? '#fff' : '#1C5C2E',
+                    color: '#1C5C2E',
+                    fontSize: 16,
                     fontFamily: 'BrandonGrotesque-Regular',
                   }}>
-                  All
+                  Topics
                 </Text>
+                <Icon
+                  name="chevron-down"
+                  size={18}
+                  color="#1C5C2E"
+                  style={{margin: 6}}
+                />
               </TouchableOpacity>
 
-              <TouchableOpacity
-                onPress={() => {
-                  setActiveTab(1);
-                  setTopicName('Topics');
-                  setTypeName('Types');
-                }}
-                style={{
-                  backgroundColor: activeTab === 1 ? '#205F2E' : '#D1DED5',
-                  elevation: activeTab === 1 ? 0 : 5,
-                  borderRadius: 5,
-                  alignSelf: 'center',
-                  paddingVertical: 5,
-                  paddingLeft: 20,
-                  paddingRight: 20,
-                }}>
-                <Text
+              <View>
+                <View
                   style={{
-                    color: activeTab === 1 ? '#fff' : '#205F2E',
-                    fontFamily: 'BrandonGrotesque-Regular',
+                    marginVertical: 10,
+                    width: '95%',
+                    alignSelf: 'center',
                   }}>
-                  Tools
-                </Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => {
-                  setActiveTab(2);
-                  setTopicName('Topics');
-                  setTypeName('Types');
-                }}
-                style={{
-                  backgroundColor: activeTab === 2 ? '#205F2E' : '#D1DED5',
-                  elevation: activeTab === 1 ? 0 : 5,
-                  borderRadius: 5,
-                  alignSelf: 'center',
-                  paddingVertical: 5,
-                  paddingLeft: 20,
-                  paddingRight: 20,
-                }}>
-                <Text
-                  style={{
-                    color: activeTab === 2 ? '#fff' : '#205F2E',
-                    fontFamily: 'BrandonGrotesque-Regular',
-                  }}>
-                  Ground Work
-                </Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-          <View style={styles.container}>
-            <View style={{width: '100%', marginTop: 10}}>
-              {activeTab === 0 ? (
-                <>
-                  <View
-                    style={{
-                      width: '90%',
-                      flexDirection: 'row',
-                      // alignSelf: 'flex-start',
-                      // backgroundColor: 'pink',
-                    }}>
-                    <TouchableOpacity
-                      onPress={() => {
-                        setModalType(1);
-                        setModalVisible(!modalVisible);
-                      }}
-                      style={[
-                        styles.topics,
-                        {
-                          backgroundColor: '#fff',
-                          borderWidth: 1,
-                          width: 100,
-                          justifyContent: 'space-between',
-                          borderBottomColor: '#1C5C2E',
-                        },
-                      ]}>
-                      <View>
-                        <Text
-                          style={{
-                            color: '#1C5C2E',
-                            fontSize: 16,
-                            margin: 6,
-
-                            fontFamily: 'BrandonGrotesque-Regular',
-                          }}>
-                          Topics
-                        </Text>
-                      </View>
-                      <View>
-                        <Icon
-                          name="chevron-down"
-                          size={18}
-                          color="#1C5C2E"
-                          style={{margin: 6}}
-                        />
-                      </View>
-                    </TouchableOpacity>
-                  </View>
-
-                  <View>
-                    <View
-                      style={{
-                        marginVertical: 10,
-                        width: '95%',
-                        alignSelf: 'center',
-                      }}>
-                      <SeeAll
-                        onPress={() =>
-                          navigation.navigate(
-                            'tools',
-                            // , {
-                            //   backoption: navigation.navigate('me'),
-                            // }
-                          )
-                        }
-                        color1="#1C5C2E"
-                        textA="TOOLS"
-                        textB="SeeAll"
-                      />
-                    </View>
-                    <View style={styles.box1}>
-                      <ScrollView
-                        horizontal={true}
-                        showsHorizontalScrollIndicator={false}>
-                        {data.map((item, index) => {
-                          return (
-                            <>
-                              <View style={{}}>
-                                <MainBox
-                                  left={60}
-                                  bgcolor={'#FF4053'}
-                                  TONGLEN="TONGLEN"
-                                  textone={item.centertexr}
-                                  I1={item.one}
-                                  item={item.ImgICon}
-                                  img2={item.img2}
-                                  heart1={item.heart1}
-                                  color={'green'}
-                                  minutes={'5 min'}
-                                  marginTop11={35}
-                                />
-                              </View>
-                            </>
-                          );
-                        })}
-                      </ScrollView>
-                    </View>
-                    <View
-                      style={{
-                        marginVertical: 10,
-                        width: '95%',
-                        alignSelf: 'center',
-                      }}>
-                      <SeeAll
-                        onPress={() =>
-                          navigation.navigate('GroundWork', {
-                            otherParam: 'Top Tools',
-                            plus: true,
-                            // backoption: () =>
-                            //   navigation.replace('Mytabs', {screen: 'me'}),
-                          })
-                        }
-                        color1="#1C5C2E"
-                        textA="GROUND WORK"
-                        textB="SeeAll"
-                      />
-                    </View>
-                    <View style={styles.box1}>
-                      <ScrollView
-                        horizontal={true}
-                        showsHorizontalScrollIndicator={false}>
-                        {data.map((item, index) => {
-                          return (
-                            <>
-                              <View style={{}}>
-                                <MainBox
-                                  left={60}
-                                  bgcolor={'#FF4053'}
-                                  TONGLEN="TONGLEN"
-                                  textone={item.centertexr1}
-                                  I1={item.heart1}
-                                  img2={item.img3}
-                                  color={'green'}
-                                  minutes={'5 min'}
-                                  marginTop11={35}
-                                />
-                              </View>
-                            </>
-                          );
-                        })}
-                      </ScrollView>
-                    </View>
-                    <View
-                      style={{
-                        marginVertical: 10,
-                        width: '95%',
-                        alignSelf: 'center',
-                      }}>
-                      <SeeAll
-                        onPress={() => {
-                          navigation.navigate('me');
-                          setTimeout(function () {
-                            navigation.navigate('FressBlooms', {
-                              otherParam: 'Fresh Blooms',
-                              heart: true,
-                            });
-                          }, 100);
-
-                          //  ,
-                          // });
-                        }}
-                        textA="FRESH BLOOMS"
-                        textB="SeeAll"
-                        color1="#1C5C2E"
-                      />
-                    </View>
-                    <View style={styles.box1}>
-                      <ScrollView
-                        horizontal={true}
-                        showsHorizontalScrollIndicator={false}>
-                        {data.map((item, index) => {
-                          return (
-                            <>
-                              <View style={{}}>
-                                <MainBox
-                                  marginTop11={35}
-                                  minutes={'5 min'}
-                                  I1={item.heart1}
-                                  img2={item.img4}
-                                  item={item.ImgICon}
-                                  color={'green'}
-                                  left={60}
-                                  bgcolor={'#FF4053'}
-                                  TONGLEN="TONGLEN"
-                                  textone={item.centertexr2}
-                                  text2={'5 min'}
-                                />
-                              </View>
-                            </>
-                          );
-                        })}
-                      </ScrollView>
-                    </View>
-                  </View>
-                  <View
-                    style={{
-                      marginVertical: 15,
-                      width: '95%',
-                      alignSelf: 'center',
-                    }}>
-                    <SeeAll color1="#1C5C2E" textA="TEACHERS" textB="SeeAll" />
-                  </View>
-
-                  <View style={{marginTop: -15}}>
-                    <FlatList
-                      showsHorizontalScrollIndicator={false}
-                      data={data2}
-                      renderItem={({item}) => {
-                        return (
-                          <>
-                            <View
-                              style={{
-                                marginVertical: 5,
-                                width: '95%',
-                                alignSelf: 'center',
-                              }}>
-                              <Userdetails
-                                backgroundColor={'#00000029'}
-                                databox2
-                                bear={item.Img1}
-                                name={item.name}
-                                time={item.time}
-                                text={item.text}
-                              />
-                            </View>
-                          </>
-                        );
-                      }}
-                    />
-                  </View>
-                </>
-              ) : null}
-              {activeTab === 1 ? (
-                <>
-                  <View
-                    style={{
-                      width: '100%',
-                      flexDirection: 'row',
-                      alignSelf: 'flex-start',
-                    }}>
-                    <TouchableOpacity
-                      style={styles.topics}
-                      onPress={() => {
-                        if (topicName !== 'Topics') {
-                          setTopicName('Topics');
-                        } else {
-                          setModalType(1);
-                          setModalVisible(!modalVisible);
-                        }
-                      }}>
-                      <Text
-                        style={{
-                          color: '#1C5C2E',
-                          fontSize: 16,
-                          margin: 6,
-                          fontFamily: 'BrandonGrotesque-Regular',
-                        }}>
-                        {topicName}
-                      </Text>
-                      {topicName !== 'Topics' ? (
-                        <Icon
-                          name="close"
-                          size={18}
-                          color="#1C5C2E"
-                          style={{margin: 6}}
-                        />
-                      ) : (
-                        <Icon
-                          name="chevron-down"
-                          size={18}
-                          color="#1C5C2E"
-                          style={{margin: 6}}
-                        />
-                      )}
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                      onPress={() => {
-                        if (typeName !== 'Types') {
-                          setTypeName('Types');
-                        } else {
-                          setModalType(2);
-                          setModalVisible(!modalVisible);
-                        }
-                      }}
-                      style={styles.topics}>
-                      <Text
-                        style={{
-                          color: '#1C5C2E',
-                          fontSize: 16,
-                          margin: 6,
-                          fontFamily: 'BrandonGrotesque-Regular',
-                        }}>
-                        {typeName}
-                      </Text>
-                      {typeName !== 'Types' ? (
-                        <Icon
-                          name="close"
-                          size={18}
-                          color="#1C5C2E"
-                          style={{margin: 6}}
-                        />
-                      ) : (
-                        <Icon
-                          name="chevron-down"
-                          size={18}
-                          color="#1C5C2E"
-                          style={{margin: 6}}
-                        />
-                      )}
-                    </TouchableOpacity>
-                  </View>
-
-                  <View style={[styles.box2, {}]}>
-                    <FlatList
-                      showsHorizontalScrollIndicator={false}
-                      keyExtractor={item => item.id}
-                      data={databox}
-                      renderItem={({item}) => {
-                        return (
-                          <All
-                            pressI={() => {
-                              return;
-                            }}
-                            iconimg1
-                            searchTop={-28}
-                            searchmargin={25}
-                            onPressALL={item.pressAll}
-                            textA={item.textA}
-                            // heart1={item.heart1}
-                            textB={item.textB}
-                            homebox
-                            plus={item.plus}
-                            bghome2={item.bg12}
-                            marginVertical={5}
-                            marginTop={15}
-                            marginVertical2={25}
-                            marginTop2={-3}
-                            title={item.title}
-                          />
-                        );
-                      }}
-                    />
-                  </View>
-                </>
-              ) : null}
-              {activeTab === 2 ? (
-                <>
-                  <View
-                    style={{
-                      width: '100%',
-                      flexDirection: 'row',
-                      alignSelf: 'flex-start',
-                      alignSelf: 'center',
-                    }}>
-                    <TouchableOpacity
-                      style={styles.topics}
-                      onPress={() => {
-                        if (topicName !== 'Topics') {
-                          setTopicName('Topics');
-                        } else {
-                          setModalType(1);
-                          setModalVisible(!modalVisible);
-                        }
-                      }}>
-                      <Text
-                        style={{
-                          color: '#1C5C2E',
-                          fontSize: 16,
-                          margin: 6,
-                          fontFamily: 'BrandonGrotesque-Regular',
-                        }}>
-                        {topicName}
-                      </Text>
-                      {topicName !== 'Topics' ? (
-                        <Icon
-                          name="close"
-                          size={18}
-                          color="#1C5C2E"
-                          style={{margin: 6}}
-                        />
-                      ) : (
-                        <Icon
-                          name="chevron-down"
-                          size={18}
-                          color="#1C5C2E"
-                          style={{margin: 6}}
-                        />
-                      )}
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                      onPress={() => {
-                        if (typeName !== 'Types') {
-                          setTypeName('Types');
-                        } else {
-                          setModalType(2);
-                          setModalVisible(!modalVisible);
-                        }
-                      }}
-                      style={styles.topics}>
-                      <Text
-                        style={{
-                          color: '#1C5C2E',
-                          fontSize: 16,
-                          margin: 6,
-                          fontFamily: 'BrandonGrotesque-Regular',
-                        }}>
-                        {typeName}
-                      </Text>
-                      {typeName !== 'Types' ? (
-                        <Icon
-                          name="close"
-                          size={18}
-                          color="#1C5C2E"
-                          style={{margin: 6}}
-                        />
-                      ) : (
-                        <Icon
-                          name="chevron-down"
-                          size={18}
-                          color="#1C5C2E"
-                          style={{margin: 6}}
-                        />
-                      )}
-                    </TouchableOpacity>
-                  </View>
-                  <View>
-                    <FlatList
-                      showsHorizontalScrollIndicator={false}
-                      keyExtractor={item => item.id}
-                      numColumns={2}
-                      data={databox}
-                      renderItem={({item}) => {
-                        return (
-                          <View
-                            style={{
-                              alignSelf: 'center',
-                              // display: 'flex',
-                              // flexGrow: 1,
-                              // width: '50%',
-                            }}>
-                            <All
-                              iconimg2
-                              searchTop={-28}
-                              searchmargin={25}
-                              color1="#1C5C2E"
-                              onPressALL={item.pressAll}
-                              textA={item.textA}
-                              // heart1={item.heart1}
-                              textB={item.textB}
+                  <SeeAll
+                    onPress={() => navigation.navigate('tools')}
+                    color1="#1C5C2E"
+                    textA="TOOLS"
+                    textB="SeeAll"
+                  />
+                </View>
+                <View style={styles.box1}>
+                  <ScrollView
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}>
+                    {data.map((item, index) => {
+                      return (
+                        <>
+                          <View style={{}}>
+                            <MainBox
+                              left={60}
+                              bgcolor={'#FF4053'}
+                              TONGLEN="TONGLEN"
+                              textone={item.centertexr}
+                              I1={item.one}
+                              item={item.ImgICon}
+                              img2={item.img2}
                               heart1={item.heart1}
-                              homebox
-                              // plus={item.plus}
-                              bghome2={item.bg12}
-                              marginVertical={5}
-                              marginTop={15}
-                              marginVertical2={25}
-                              marginTop2={-10}
-                              title={item.title}
+                              color={'green'}
+                              minutes={'5 min'}
+                              marginTop11={35}
                             />
                           </View>
-                        );
-                      }}
+                        </>
+                      );
+                    })}
+                  </ScrollView>
+                </View>
+                <View
+                  style={{
+                    marginVertical: 10,
+                    width: '95%',
+                    alignSelf: 'center',
+                  }}>
+                  <SeeAll
+                    onPress={() =>
+                      navigation.navigate('GroundWork', {
+                        otherParam: 'Top Tools',
+                        plus: true,
+                        // backoption: () =>
+                        //   navigation.replace('Mytabs', {screen: 'me'}),
+                      })
+                    }
+                    color1="#1C5C2E"
+                    textA="GROUND WORK"
+                    textB="SeeAll"
+                  />
+                </View>
+                <View style={styles.box1}>
+                  <ScrollView
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}>
+                    {data.map((item, index) => {
+                      return (
+                        <>
+                          <View style={{}}>
+                            <MainBox
+                              left={60}
+                              bgcolor={'#FF4053'}
+                              TONGLEN="TONGLEN"
+                              textone={item.centertexr1}
+                              I1={item.heart1}
+                              img2={item.img3}
+                              color={'green'}
+                              minutes={'5 min'}
+                              marginTop11={35}
+                            />
+                          </View>
+                        </>
+                      );
+                    })}
+                  </ScrollView>
+                </View>
+                <View
+                  style={{
+                    marginVertical: 10,
+                    width: '95%',
+                    alignSelf: 'center',
+                  }}>
+                  <SeeAll
+                    onPress={() => {
+                      navigation.navigate('me');
+                      setTimeout(function () {
+                        navigation.navigate('FressBlooms', {
+                          otherParam: 'Fresh Blooms',
+                          heart: true,
+                        });
+                      }, 100);
+
+                      //  ,
+                      // });
+                    }}
+                    textA="FRESH BLOOMS"
+                    textB="SeeAll"
+                    color1="#1C5C2E"
+                  />
+                </View>
+                <View style={styles.box1}>
+                  <ScrollView
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}>
+                    {data.map((item, index) => {
+                      return (
+                        <>
+                          <View style={{}}>
+                            <MainBox
+                              marginTop11={35}
+                              minutes={'5 min'}
+                              I1={item.heart1}
+                              img2={item.img4}
+                              item={item.ImgICon}
+                              color={'green'}
+                              left={60}
+                              bgcolor={'#FF4053'}
+                              TONGLEN="TONGLEN"
+                              textone={item.centertexr2}
+                              text2={'5 min'}
+                            />
+                          </View>
+                        </>
+                      );
+                    })}
+                  </ScrollView>
+                </View>
+              </View>
+              <View
+                style={{
+                  marginVertical: 15,
+                  width: '95%',
+                  alignSelf: 'center',
+                }}>
+                <SeeAll color1="#1C5C2E" textA="TEACHERS" textB="SeeAll" />
+              </View>
+
+              <View style={{marginTop: -15}}>
+                <FlatList
+                  showsHorizontalScrollIndicator={false}
+                  data={data2}
+                  renderItem={({item}) => {
+                    return (
+                      <>
+                        <View
+                          style={{
+                            marginVertical: 5,
+                            width: '95%',
+                            alignSelf: 'center',
+                          }}>
+                          <Userdetails
+                            backgroundColor={'#00000029'}
+                            databox2
+                            bear={item.Img1}
+                            name={item.name}
+                            time={item.time}
+                            text={item.text}
+                          />
+                        </View>
+                      </>
+                    );
+                  }}
+                />
+              </View>
+            </>
+          ) : null}
+
+          {activeTab === 1 ? (
+            <>
+              <View
+                style={{
+                  width: '100%',
+                  flexDirection: 'row',
+                  alignSelf: 'flex-start',
+                }}>
+                <TouchableOpacity
+                  style={styles.topics}
+                  onPress={() => {
+                    if (topicName !== 'Topics') {
+                      setTopicName('Topics');
+                    } else {
+                      setModalType(1);
+                      setModalVisible(!modalVisible);
+                    }
+                  }}>
+                  <Text
+                    style={{
+                      color: '#1C5C2E',
+                      fontSize: 16,
+                      margin: 6,
+                      fontFamily: 'BrandonGrotesque-Regular',
+                    }}>
+                    {topicName}
+                  </Text>
+                  {topicName !== 'Topics' ? (
+                    <Icon
+                      name="close"
+                      size={18}
+                      color="#1C5C2E"
+                      style={{margin: 6}}
                     />
-                  </View>
-                </>
-              ) : null}
-            </View>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
+                  ) : (
+                    <Icon
+                      name="chevron-down"
+                      size={18}
+                      color="#1C5C2E"
+                      style={{margin: 6}}
+                    />
+                  )}
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => {
+                    if (typeName !== 'Types') {
+                      setTypeName('Types');
+                    } else {
+                      setModalType(2);
+                      setModalVisible(!modalVisible);
+                    }
+                  }}
+                  style={styles.topics}>
+                  <Text
+                    style={{
+                      color: '#1C5C2E',
+                      fontSize: 16,
+                      margin: 6,
+                      fontFamily: 'BrandonGrotesque-Regular',
+                    }}>
+                    {typeName}
+                  </Text>
+                  {typeName !== 'Types' ? (
+                    <Icon
+                      name="close"
+                      size={18}
+                      color="#1C5C2E"
+                      style={{margin: 6}}
+                    />
+                  ) : (
+                    <Icon
+                      name="chevron-down"
+                      size={18}
+                      color="#1C5C2E"
+                      style={{margin: 6}}
+                    />
+                  )}
+                </TouchableOpacity>
+              </View>
+
+              <View style={[styles.box2, {}]}>
+                <FlatList
+                  showsHorizontalScrollIndicator={false}
+                  keyExtractor={item => item.id}
+                  data={databox}
+                  renderItem={({item}) => {
+                    return (
+                      <All
+                        pressI={() => {
+                          return;
+                        }}
+                        iconimg1
+                        searchTop={-28}
+                        searchmargin={25}
+                        onPressALL={item.pressAll}
+                        textA={item.textA}
+                        // heart1={item.heart1}
+                        textB={item.textB}
+                        homebox
+                        plus={item.plus}
+                        bghome2={item.bg12}
+                        marginVertical={5}
+                        marginTop={15}
+                        marginVertical2={25}
+                        marginTop2={-3}
+                        title={item.title}
+                      />
+                    );
+                  }}
+                />
+              </View>
+            </>
+          ) : null}
+          {activeTab === 2 ? (
+            <>
+              <View
+                style={{
+                  width: '100%',
+                  flexDirection: 'row',
+                  alignSelf: 'flex-start',
+                  alignSelf: 'center',
+                }}>
+                <TouchableOpacity
+                  style={styles.topics}
+                  onPress={() => {
+                    if (topicName !== 'Topics') {
+                      setTopicName('Topics');
+                    } else {
+                      setModalType(1);
+                      setModalVisible(!modalVisible);
+                    }
+                  }}>
+                  <Text
+                    style={{
+                      color: '#1C5C2E',
+                      fontSize: 16,
+                      margin: 6,
+                      fontFamily: 'BrandonGrotesque-Regular',
+                    }}>
+                    {topicName}
+                  </Text>
+                  {topicName !== 'Topics' ? (
+                    <Icon
+                      name="close"
+                      size={18}
+                      color="#1C5C2E"
+                      style={{margin: 6}}
+                    />
+                  ) : (
+                    <Icon
+                      name="chevron-down"
+                      size={18}
+                      color="#1C5C2E"
+                      style={{margin: 6}}
+                    />
+                  )}
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => {
+                    if (typeName !== 'Types') {
+                      setTypeName('Types');
+                    } else {
+                      setModalType(2);
+                      setModalVisible(!modalVisible);
+                    }
+                  }}
+                  style={styles.topics}>
+                  <Text
+                    style={{
+                      color: '#1C5C2E',
+                      fontSize: 16,
+                      margin: 6,
+                      fontFamily: 'BrandonGrotesque-Regular',
+                    }}>
+                    {typeName}
+                  </Text>
+                  {typeName !== 'Types' ? (
+                    <Icon
+                      name="close"
+                      size={18}
+                      color="#1C5C2E"
+                      style={{margin: 6}}
+                    />
+                  ) : (
+                    <Icon
+                      name="chevron-down"
+                      size={18}
+                      color="#1C5C2E"
+                      style={{margin: 6}}
+                    />
+                  )}
+                </TouchableOpacity>
+              </View>
+              <View>
+                <FlatList
+                  showsHorizontalScrollIndicator={false}
+                  keyExtractor={item => item.id}
+                  numColumns={2}
+                  data={databox}
+                  renderItem={({item}) => {
+                    return (
+                      <View
+                        style={{
+                          alignSelf: 'center',
+                          // display: 'flex',
+                          // flexGrow: 1,
+                          // width: '50%',
+                        }}>
+                        <All
+                          iconimg2
+                          searchTop={-28}
+                          searchmargin={25}
+                          color1="#1C5C2E"
+                          onPressALL={item.pressAll}
+                          textA={item.textA}
+                          // heart1={item.heart1}
+                          textB={item.textB}
+                          heart1={item.heart1}
+                          homebox
+                          // plus={item.plus}
+                          bghome2={item.bg12}
+                          marginVertical={5}
+                          marginTop={15}
+                          marginVertical2={25}
+                          marginTop2={-10}
+                          title={item.title}
+                        />
+                      </View>
+                    );
+                  }}
+                />
+              </View>
+            </>
+          ) : null}
+        </View>
+      </View>
       <Modaldata
         headtext={
           activeTab === 0
@@ -630,6 +582,21 @@ const styles = StyleSheet.create({
   main: {
     flex: 1,
     // backgroundColor: 'red',
+  },
+  tabBtn: {
+    borderTopRightRadius: 5,
+    borderTopLeftRadius: 5,
+    paddingVertical: 5,
+    paddingHorizontal: 20,
+    shadowColor: 'rgba(0,0,0,0.5)',
+    shadowOffset: {
+      width: 0,
+      height: 6,
+    },
+    shadowOpacity: 0.37,
+    shadowRadius: 7.49,
+
+    elevation: 12,
   },
   container: {
     width: '95%',
@@ -674,17 +641,27 @@ const styles = StyleSheet.create({
   topics: {
     // alignSelf: 'flex-start',
     backgroundColor: '#eeee',
-    elevation: 1,
     opacity: 0.75,
+    borderWidth: 1,
     borderColor: '#00000029',
-
-    // width: 126,
-    // height: 35,
     borderRadius: 5,
-    // borderWidth: 1,
     flexDirection: 'row',
-    // justifyContent: 'space-around',
-    margin: 10,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: 125,
+    height: 35,
+    paddingHorizontal: 10,
+    marginLeft: 10,
+    marginBottom: 25,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    elevation: 5,
   },
   box1: {
     width: '95%',

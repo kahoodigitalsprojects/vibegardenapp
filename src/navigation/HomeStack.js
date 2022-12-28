@@ -28,17 +28,6 @@ export default function HomeStackScreen() {
         component={Home}
         options={{headerShown: false}}
       />
-
-      <HomeStack.Screen
-        name="Search"
-        component={Search}
-        options={{headerShown: false}}
-      />
-      <HomeStack.Screen
-        name="Search2"
-        component={Search2}
-        options={{headerShown: false}}
-      />
       <HomeStack.Screen
         name="Search3"
         component={Search3}

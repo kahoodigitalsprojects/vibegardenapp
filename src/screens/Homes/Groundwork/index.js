@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -12,9 +12,11 @@ import {
 import {Greenbox, Header, Imgbox, SeeAll, StoryData} from '../../../componrnts';
 import All from '../../../componrnts/all';
 import MainBox from '../../../componrnts/mainbox';
+import SearchModal from '../../../componrnts/SearchModal';
 import Images from '../../../constants';
 
-const GroundWork = props => {
+const GroundWork = ({navigation}) => {
+  const [visible, setVisible] = useState(false);
   const Data = [
     {
       id: 1,
@@ -59,12 +61,7 @@ const GroundWork = props => {
             heartplus
             search1="search1"
             homeheader={true}
-            search={
-              () => {
-                props.navigation.navigate('Homes', {screen: 'Search'});
-              }
-              // props.navigation.navigate('Homes', { screen: 'Search' })
-            }
+            search={() => setVisible(true)}
             heart
             // plus
           />
@@ -114,7 +111,7 @@ const GroundWork = props => {
               boxtex3={'Nature'}
               img2
               onPress1={() => {
-                props.navigation.navigate('Buddhisim');
+                navigation.navigate('Buddhisim');
               }}
             />
             <View
@@ -169,12 +166,12 @@ const GroundWork = props => {
                       return (
                         <All
                           pressI={() =>
-                            props.navigation.navigate('Video', {
+                            navigation.navigate('Video', {
                               otherParam: false,
                               plus: false,
                               otherParam1: 'FAMILY OF LIGHT',
                               icon1: false,
-                              backoption: () => props.navigation.goBack(),
+                              backoption: () => navigation.goBack(),
                             })
                           }
                           // iconimg1
@@ -197,6 +194,11 @@ const GroundWork = props => {
           </View>
         </View>
       </ScrollView>
+      <SearchModal
+        visible={visible}
+        setVisible={setVisible}
+        navigation={navigation}
+      />
     </SafeAreaView>
   );
 };

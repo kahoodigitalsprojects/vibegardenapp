@@ -13,11 +13,11 @@ import {
 import {act} from 'react-test-renderer';
 import {Greenbox, Header, Imgbox, SeeAll, StoryData} from '../../../componrnts';
 import All from '../../../componrnts/all';
+import SearchModal from '../../../componrnts/SearchModal';
 import Images from '../../../constants';
 
-const Tools = props => {
-  const [active, setActive] = useState();
-  const [data1, setdata1] = useState(0);
+const Tools = ({navigation}) => {
+  const [visible, setVisible] = useState(false);
   const Data = [
     {
       id: 1,
@@ -62,12 +62,7 @@ const Tools = props => {
             heartplus
             search1="search1"
             homeheader={true}
-            search={
-              () => {
-                props.navigation.navigate('Homes', {screen: 'Search'});
-              }
-              // props.navigation.navigate('Homes', { screen: 'Search' })
-            }
+            search={() => setVisible(true)}
             heart
             plus
           />
@@ -103,7 +98,7 @@ const Tools = props => {
               boxtex3={'Plants'}
               img1
               onPress={() => {
-                props.navigation.navigate('resonance');
+                navigation.navigate('resonance');
               }}
             />
             <View
@@ -141,6 +136,11 @@ const Tools = props => {
           </View>
         </View>
       </ScrollView>
+      <SearchModal
+        visible={visible}
+        setVisible={setVisible}
+        navigation={navigation}
+      />
     </SafeAreaView>
   );
 };
