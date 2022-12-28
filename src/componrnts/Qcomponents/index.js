@@ -293,11 +293,11 @@ const QComponents = ({
       {flowwerlist11 && (
         <View
           style={{
-            width: '90%',
+            width: '100%',
             alignSelf: 'center',
             alignItems: 'center',
 
-            justifyContent: 'space-around',
+            // justifyContent: 'space-around',
           }}>
           <FlatList
             horizontal={true}
@@ -397,7 +397,6 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
-
     elevation: 5,
     width: 74,
     height: 74,

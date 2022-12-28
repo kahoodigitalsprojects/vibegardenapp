@@ -29,7 +29,7 @@ const Result = ({navigation, route}) => {
             iconName="closesquareo"
             marginTop={-40}
             fontSize={25}
-            color="#1C5C2E"
+            color={'#1C5C2E'}
             header2
             // OnPress={backoption}
             OnPress={() => {
@@ -38,6 +38,7 @@ const Result = ({navigation, route}) => {
             }}
             // OnPress={backoption}
             headertext="Resonance Finder"
+            marginRight={-30}
           />
           <View style={{marginVertical: 10}}>
             <Text

@@ -42,7 +42,7 @@ const Question2 = props => {
               OnPress={() => props.navigation.goBack('')}
             />
           </View>
-          <View style={{width: '100%'}}>
+          <View style={{width: '100%',alignSelf:'center'}}>
             <QComponents
               marginVertical={10}
               flowwerlist11={true}

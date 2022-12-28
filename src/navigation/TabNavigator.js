@@ -45,7 +45,7 @@ const TabNavigator = () => {
               borderTopRightRadius: 20,
             },
             tabBarLabel: 'Garden',
-            // tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? -10 : 10},
+            tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
             tabBarIcon: ({focused}) =>
               focused ? (
                 <Image source={Images.Logos.greenlogo} />
@@ -78,7 +78,7 @@ const TabNavigator = () => {
               borderTopRightRadius: 20,
             },
             tabBarLabel: 'Tools',
-            // tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 10 : 10},
+            tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
             tabBarIcon: ({focused}) =>
               focused ? (
                 <Image source={Images.Logos.hands} />
@@ -111,7 +111,7 @@ const TabNavigator = () => {
               borderTopRightRadius: 20,
             },
             tabBarLabel: 'Groundwork',
-            // tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 10 : 10},
+            tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
             tabBarIcon: ({focused}) =>
               focused ? (
                 <Image source={Images.Icons.leaf} />
@@ -144,7 +144,7 @@ const TabNavigator = () => {
             },
 
             tabBarLabel: 'Me',
-            // tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 10 : 10},
+            tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
             tabBarIcon: ({focused}) =>
               focused ? (
                 <Image source={Images.Icons.small} />
