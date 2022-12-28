@@ -383,7 +383,7 @@ const styles = StyleSheet.create({
   main: {
     flex: 1,
 
-    // backgroundColor: 'pink',
+    backgroundColor: '#fff',
   },
   row: {
     flexDirection: 'row',

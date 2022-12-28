@@ -16,7 +16,7 @@ const TabNavigator = () => {
         headerShown: false,
         tabBarActiveTintColor: '#1C5C2E',
         tabBarStyle: {
-          height: 80,
+          height: 90,
           borderTopLeftRadius: 20,
           borderTopRightRadius: 20,
         },
@@ -26,7 +26,7 @@ const TabNavigator = () => {
         component={HomeStackScreen}
         options={({route}) => {
           const focusedRouteName = getFocusedRouteNameFromRoute(route);
-          if (focusedRouteName === 'Search') {
+          if (hiddenTabrBarScreens.includes(focusedRouteName)) {
             return {
               tabBarStyle: {
                 display: 'none',
@@ -35,24 +35,16 @@ const TabNavigator = () => {
               },
             };
           }
-          if (focusedRouteName === 'Search2') {
-            return {
-              tabBarStyle: {
-                display: 'none',
-                bottom: -200,
-                height: 0,
-              },
-            };
-          }
+
           return {
             tabBarStyle: {
               display: 'flex',
-              height: 80,
+              height: 90,
               borderTopLeftRadius: 20,
               borderTopRightRadius: 20,
             },
             tabBarLabel: 'Garden',
-            tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
+            // tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
             tabBarIcon: ({focused}) =>
               focused ? (
                 <Image source={Images.Logos.greenlogo} />
@@ -68,7 +60,7 @@ const TabNavigator = () => {
         component={ToolsStackScreen}
         options={{
           tabBarLabel: 'Tools',
-          tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
+          // tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
           tabBarIcon: ({focused}) =>
             focused ? (
               <Image source={Images.Logos.hands} />
@@ -97,7 +89,7 @@ const TabNavigator = () => {
         component={MeStackScreen}
         options={({route}) => {
           const focusedRouteName = getFocusedRouteNameFromRoute(route);
-          if (focusedRouteName === 'settings') {
+          if (hiddenTabrBarScreens.includes(focusedRouteName)) {
             return {
               tabBarStyle: {
                 display: 'none',
@@ -109,7 +101,7 @@ const TabNavigator = () => {
           return {
             tabBarStyle: {
               display: 'flex',
-              height: 80,
+              height: 90,
               borderTopLeftRadius: 20,
               borderTopRightRadius: 20,
             },
@@ -128,3 +120,22 @@ const TabNavigator = () => {
   );
 };
 export default TabNavigator;
+
+const hiddenTabrBarScreens = [
+  'PrivacyPolicy',
+  'PrivacyPolicy',
+  'PrivacyPolicy',
+  'Packges',
+  'PrivacyPolicy',
+  'CancelSubscription',
+  'PaymentMethod',
+  'Contactus',
+  'ManageSubscription',
+  'EditScreen',
+  'Pushnotification',
+  'EmailNotification',
+  'notification',
+  'settings',
+  'Search',
+  'Search2',
+];

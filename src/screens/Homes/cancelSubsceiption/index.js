@@ -135,6 +135,7 @@ const CancelSubscription = props => {
             btntxt="Submit"
           />
         </View>
+        <View style={{marginVertical: 15}} />
       </ScrollView>
     </SafeAreaView>
   );
@@ -143,7 +144,7 @@ const CancelSubscription = props => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    backgroundColor: '#fefe',
+    backgroundColor: '#fff',
   },
   container: {
     width: '100%',

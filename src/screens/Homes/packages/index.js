@@ -10,12 +10,13 @@ import {
 } from 'react-native';
 import {Header, Pinkbtn, PopUp, StoryData, Switch1} from '../../../componrnts';
 import Icon from 'react-native-vector-icons/AntDesign';
+import {SafeAreaView} from 'react-native-safe-area-context';
 const Packages = props => {
   const [state, setstate] = useState(false);
   const [state1, setState1] = useState(false);
   return (
-    <>
-      <View style={styles.main}>
+    <SafeAreaView style={styles.main}>
+      <View>
         <View style={styles.container}>
           <View style={{marginTop: 10}}>
             <Header
@@ -28,7 +29,7 @@ const Packages = props => {
             />
           </View>
           <View style={styles.switchView}>
-            <View style={styles.row}>
+            <TouchableOpacity style={styles.row}>
               <Text style={styles.text1}>
                 <Text style={[styles.text1, {color: '#aaa'}]}>
                   Monthly $22{' '}
@@ -41,14 +42,16 @@ const Packages = props => {
                 />
                 <Text style={styles.text2}>Selected </Text>
               </View>
-            </View>
 
-            <TouchableOpacity style={{}}>
               <Icon name="right" size={25} color="#1C5C2E" />
             </TouchableOpacity>
           </View>
           <View style={styles.switchView}>
-            <View style={styles.row}>
+            <TouchableOpacity
+              onPress={() => {
+                setstate(!state);
+              }}
+              style={styles.row}>
               <Text style={styles.text1}>
                 <Text
                   style={[styles.text1, {color: '#1C5C2E', fontWeight: '400'}]}>
@@ -60,13 +63,7 @@ const Packages = props => {
                 source={require('../../../assests/images/fire.png')}
                 style={{marginTop: 10, margin: 4}}
               />
-            </View>
 
-            <TouchableOpacity
-              onPress={() => {
-                setstate(!state);
-              }}
-              style={{}}>
               <Icon name="right" size={25} color="#1C5C2E" />
             </TouchableOpacity>
           </View>
@@ -99,7 +96,7 @@ const Packages = props => {
           }}
         />
       </View>
-    </>
+    </SafeAreaView>
   );
 };
 
@@ -136,7 +133,8 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
-    width: '95%',
+    justifyContent: 'space-between',
+    width: '100%',
   },
   icon1: {
     width: '25%',

@@ -1,15 +1,16 @@
 import React from 'react';
 import {View, StyleSheet, Text, ScrollView, StatusBar} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {Header, StoryData} from '../../../componrnts';
 
 const PrivacyPolicy = ({navigation, route}) => {
   const {heading1} = route.params;
   return (
-    <ScrollView
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={{flexGrow: 1}}>
-      <StatusBar animated={true} backgroundColor="#000" />
-      <View style={styles.main}>
+    <SafeAreaView style={styles.main}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{flexGrow: 1}}>
+        <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
             marginVertical: 20,
@@ -83,15 +84,15 @@ const PrivacyPolicy = ({navigation, route}) => {
             dolor sit amet, consetetur sadipscing elitr,
           </Text>
         </View>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    // backgroundColor: 'pink',
+    backgroundColor: '#fff',
   },
 });
 export default PrivacyPolicy;

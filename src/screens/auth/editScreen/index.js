@@ -26,9 +26,7 @@ const EditScreen = ({navigation, route}) => {
   const {two} = route.params;
 
   return (
-    <ScrollView
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={{flexGrow: 1}}>
+    <SafeAreaView>
       <StatusBar animated={true} backgroundColor="#000" />
 
       <View
@@ -73,7 +71,7 @@ const EditScreen = ({navigation, route}) => {
           </View>
         </View>
       </View>
-    </ScrollView>
+    </SafeAreaView>
   );
 };
 

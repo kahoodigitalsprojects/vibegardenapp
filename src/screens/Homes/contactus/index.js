@@ -60,10 +60,18 @@ const Contactus = props => {
                 borderWidth: 1,
                 borderColor: 'green',
                 borderRadius: 25,
-                elevation: 1,
                 backgroundColor: '#fff',
                 flexDirection: 'row',
                 padding: 15,
+                shadowColor: '#1C5C2E4D',
+                shadowOffset: {
+                  width: 0,
+                  height: 12,
+                },
+                shadowOpacity: 0.58,
+                shadowRadius: 16.0,
+
+                elevation: 24,
               }}>
               <View
                 style={{
@@ -104,7 +112,7 @@ const Contactus = props => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    backgroundColor: '#fefe',
+    backgroundColor: '#fff',
   },
   container: {
     width: '100%',
