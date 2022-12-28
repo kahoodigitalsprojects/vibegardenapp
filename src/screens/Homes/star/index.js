@@ -32,7 +32,7 @@ const Star = props => {
             OnPress={() =>
               props.navigation.reset({
                 index: 0,
-                routes: [{name: 'me'}],
+                routes: [{name: 'Homes'}],
               })
             }
           />
@@ -52,19 +52,17 @@ const Star = props => {
                 fontSize: 25,
                 textAlign: 'center',
                 color: '#000',
-                fontWeight: '500',
                 marginVertical: 5,
-                fontFamily: 'BrandonGrotesque-Medium',
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
-              You're Start!
+              You're Star!
             </Text>
             <Text
               style={{
                 marginVertical: 10,
-                fontSize: 16,
+                fontSize: 18,
                 textAlign: 'center',
                 color: '#000',
-                fontWeight: '400',
                 lineHeight: 30,
                 fontFamily: 'BrandonGrotesque-Medium',
               }}>
@@ -76,9 +74,8 @@ const Star = props => {
                 fontSize: 24,
                 textAlign: 'center',
                 color: '#1C5C2E',
-                fontWeight: '600',
                 marginVertical: 5,
-                fontFamily: 'BrandonGrotesque-Medium',
+                fontFamily: 'BrandonGrotesque-Bold',
               }}>
               With Gratitude!
             </Text>
@@ -92,7 +89,7 @@ const Star = props => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    backgroundColor: '#fefe',
+    backgroundColor: '#fff',
   },
   container: {
     width: '100%',

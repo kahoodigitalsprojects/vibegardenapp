@@ -122,9 +122,11 @@ const TabNavigator = () => {
 export default TabNavigator;
 
 const hiddenTabrBarScreens = [
-  'PrivacyPolicy',
-  'PrivacyPolicy',
-  'PrivacyPolicy',
+  'star',
+  'Bigblooms',
+  'BloomsCheck',
+  'Result',
+  'FressBlooms',
   'Packges',
   'PrivacyPolicy',
   'CancelSubscription',

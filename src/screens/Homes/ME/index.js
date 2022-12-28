@@ -279,6 +279,7 @@ const Me = props => {
               </View>
             </View>
           </View>
+          <View style={{marginVertical: 25}} />
         </ScrollView>
       </SafeAreaView>
     </>

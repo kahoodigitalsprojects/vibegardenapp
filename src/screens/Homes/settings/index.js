@@ -12,14 +12,15 @@ import {Header} from '../../../componrnts';
 import Images from '../../../constants';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Header2 from '../../../componrnts/header2';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const Settings = props => {
   return (
-    <ScrollView
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={{flexGrow: 1}}>
-      <StatusBar animated={true} backgroundColor="#000" />
-      <View style={styles.main}>
+    <SafeAreaView style={styles.main}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{flexGrow: 1}}>
+        <StatusBar animated={true} backgroundColor="#000" />
         <View style={{marginVertical: 10, width: '90%', alignSelf: 'center'}}>
           <Header2
             marginTop={-40}
@@ -375,8 +376,8 @@ const Settings = props => {
             </TouchableOpacity>
           </View>
         </View>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({
