@@ -144,7 +144,7 @@ const QComponents = ({
                     fontSize: 18,
                     fontWeight: '500',
                     alignSelf: 'center',
-                    fontFamily: 'BrandonGrotesque-Medium',
+                    fontFamily: 'BrandonGrotesque-Bold',
                   }}>
                   {textforvideo}
                 </Text>
@@ -281,7 +281,7 @@ const QComponents = ({
                     marginTop: marginTop1,
                     fontSize: 31,
                     color: '#000',
-                    fontFamily: 'BrandonGrotesque-Regular',
+                    fontFamily: 'BrandonGrotesque-Bold',
                   },
                 ]}>
                 {text6}
@@ -315,7 +315,7 @@ const QComponents = ({
                         style={{width: '100%', height: '100%'}}
                       />
                     </TouchableOpacity>
-                    <View style={{width: 78}}>
+                    <View style={{width: 78, margin: 7}}>
                       <Text
                         style={{
                           marginTop: 5,
@@ -390,6 +390,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   circle: {
+    margin: 7,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,

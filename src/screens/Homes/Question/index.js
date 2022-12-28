@@ -35,26 +35,29 @@ const Question = props => {
             OnPress={() => props.navigation.goBack('')}
           />
         </View>
-        <QComponents
-          flowwerlist11={true}
-          iconone
-          width={'100%'}
-          name2="chevron-down"
-          direction2="Description:"
-          Statement1="Statement:"
-          flow="Flow Through"
-          number={'2/20'}
-          name="chevron-down"
-          image1={true}
-          text="No idea What a Multiverse is"
-          headingtext
-          text1={'Yeah,no'}
-          text2="No idea What a Multiverse is"
-          text3={'SMCA Peepsceen to think so'}
-          text4="Shall we Question Heap"
-          text6={'The Multiverse is Real'}
-          marginVertical={10}
-        />
+
+        <View style={{width: '100%', alignSelf: 'center'}}>
+          <QComponents
+            flowwerlist11={true}
+            iconone
+            width={'100%'}
+            name2="chevron-down"
+            direction2="Description:"
+            Statement1="Statement:"
+            flow="Flow Through"
+            number={'2/20'}
+            name="chevron-down"
+            image1={true}
+            text="No idea What a Multiverse is"
+            headingtext
+            text1={'Yeah,no'}
+            text2="No idea What a Multiverse is"
+            text3={'SMCA Peepsceen to think so'}
+            text4="Shall we Question Heap"
+            text6={'The Multiverse is Real'}
+            marginVertical={10}
+          />
+        </View>
         <View style={{marginTop: 20}}>
           <Pinkbtn
             shadow="#979B9F"

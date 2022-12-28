@@ -77,7 +77,7 @@ const CancelSubscription = props => {
               text5={
                 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.'
               }
-              marginTop1={-20}
+              marginTop1={-15}
               text6={'Leaving Because:'}
             />
           </View>
@@ -127,9 +127,7 @@ const CancelSubscription = props => {
           <Pinkbtn
             shadow={'#00000019'}
             onPress={() => {
-              props.navigation.navigate('Search3', {
-                success: true,
-              });
+              props.navigation.navigate('Search3');
             }}
             width={'60%'}
             btntxt="Submit"

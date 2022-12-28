@@ -44,7 +44,6 @@ const MeetScreen2 = ({route, navigation}) => {
                     fontSize: 18,
                     color: '#000',
                     fontFamily: 'BrandonGrotesque-Regular',
-
                     lineHeight: 33,
                   }}>
                   {newtext}
@@ -68,7 +67,7 @@ const MeetScreen2 = ({route, navigation}) => {
 export default MeetScreen2;
 
 const styles = StyleSheet.create({
-  main: {flex: 1, paddingTop: 15},
+  main: {flex: 1, paddingTop: 15, backgroundColor: '#ffff'},
 
   img: {
     width: 80,

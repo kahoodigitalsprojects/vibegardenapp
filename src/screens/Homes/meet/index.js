@@ -248,7 +248,7 @@ const Meet = props => {
 export default Meet;
 
 const styles = StyleSheet.create({
-  main: {flex: 1, paddingTop: 15},
+  main: {flex: 1, paddingTop: 15, backgroundColor: '#ffff'},
 
   img: {
     // width: 136,

@@ -99,6 +99,8 @@ const ChuchuasDetails = ({route, navigation}) => {
                     <>
                       <View
                         style={{
+                          alignSelf: 'center',
+                          alignItems: 'center',
                           margin: 4,
                           marginTop: 10,
                           justifyContent: 'center',
@@ -109,18 +111,20 @@ const ChuchuasDetails = ({route, navigation}) => {
                           onPress={() =>
                             index === true ? '' : setdata1(index)
                           }
-                          style={{
-                            width: '100%',
-                            display: 'flex',
-                            flexGrow: 1,
-                            width: 76,
-                            height: 78,
-                            borderRadius: 100,
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            alignSelf: 'center',
-                            marginVertical: 10,
-                          }}>
+                          style={
+                            {
+                              // width: '100%',
+                              // display: 'flex',
+                              // flexGrow: 1,
+                              // width: 76,
+                              // height: 78,
+                              // borderRadius: 100,
+                              // justifyContent: 'center',
+                              // alignItems: 'center',
+                              // alignSelf: 'center',
+                              // marginVertical: 10,
+                            }
+                          }>
                           <>
                             {data1 === index ? (
                               <LinearGradient
@@ -188,8 +192,9 @@ const ChuchuasDetails = ({route, navigation}) => {
                 }}
               />
             </View>
-            <View style={{width: '90%', alignSelf: 'center'}}>
+            <View style={{width: '90%', alignSelf: 'center', marginTop: 20}}>
               <Percentage
+                paddingVertical={10}
                 simpletext={true}
                 simpletext1="Dial It In If You Have Any Wish:"
                 btn={true}
@@ -215,7 +220,7 @@ const ChuchuasDetails = ({route, navigation}) => {
 export default ChuchuasDetails;
 
 const styles = StyleSheet.create({
-  main: {flex: 1, paddingTop: 15},
+  main: {flex: 1, paddingTop: 15, backgroundColor: '#fff'},
 
   img: {
     width: 80,

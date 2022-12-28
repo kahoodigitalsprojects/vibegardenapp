@@ -32,7 +32,7 @@ const NameScreen = props => {
                 fontSize: 18,
                 fontFamily: 'BrandonGrotesque-Medium',
                 marginVertical: 27,
-                color: '#030303',
+                color: '#aaa',
               }}>
               Hi, VibeGardner!
             </Text>
@@ -81,13 +81,13 @@ const NameScreen = props => {
 };
 
 const styles = StyleSheet.create({
-  main: {flex: 1},
+  main: {flex: 1, backgroundColor: '#ffff'},
   input: {
     marginTop: 40,
     flexDirection: 'row',
     justifyContent: 'space-between',
     borderBottomWidth: 1,
-    borderColor: 'lightgrey',
+    borderColor: '#1C5C2E',
     fontFamily: 'BrandonGrotesque-Regular',
   },
 });

@@ -30,17 +30,19 @@ const Packages = props => {
           </View>
           <View style={styles.switchView}>
             <TouchableOpacity style={styles.row}>
-              <Text style={styles.text1}>
-                <Text style={[styles.text1, {color: '#aaa'}]}>
-                  Monthly $22{' '}
-                </Text>
-              </Text>
               <View style={{flexDirection: 'row'}}>
-                <Image
-                  source={require('../../../assests/images/tick.png')}
-                  style={{marginTop: 10, margin: 4}}
-                />
-                <Text style={styles.text2}>Selected </Text>
+                <Text style={styles.text1}>
+                  <Text style={[styles.text1, {color: '#aaa'}]}>
+                    Monthly $22{' '}
+                  </Text>
+                </Text>
+                <View style={{flexDirection: 'row'}}>
+                  <Image
+                    source={require('../../../assests/images/tick.png')}
+                    style={{marginTop: 10, margin: 4}}
+                  />
+                  <Text style={styles.text2}>Selected </Text>
+                </View>
               </View>
 
               <Icon name="right" size={25} color="#1C5C2E" />
@@ -52,17 +54,22 @@ const Packages = props => {
                 setstate(!state);
               }}
               style={styles.row}>
-              <Text style={styles.text1}>
-                <Text
-                  style={[styles.text1, {color: '#1C5C2E', fontWeight: '400'}]}>
-                  Yearly $264{' '}
+              <View style={{flexDirection: 'row'}}>
+                <Text style={styles.text1}>
+                  <Text
+                    style={[
+                      styles.text1,
+                      {color: '#1C5C2E', fontWeight: '400'},
+                    ]}>
+                    Yearly $264{' '}
+                  </Text>
                 </Text>
-              </Text>
 
-              <Image
-                source={require('../../../assests/images/fire.png')}
-                style={{marginTop: 10, margin: 4}}
-              />
+                <Image
+                  source={require('../../../assests/images/fire.png')}
+                  style={{marginTop: 10, margin: 4}}
+                />
+              </View>
 
               <Icon name="right" size={25} color="#1C5C2E" />
             </TouchableOpacity>

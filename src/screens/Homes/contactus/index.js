@@ -63,15 +63,14 @@ const Contactus = props => {
                 backgroundColor: '#fff',
                 flexDirection: 'row',
                 padding: 15,
-                shadowColor: '#1C5C2E4D',
                 shadowOffset: {
-                  width: 0,
-                  height: 12,
+                  width: 50,
+                  height: 52,
                 },
-                shadowOpacity: 0.58,
+                shadowColor: '#75997E',
+                shadowOpacity: 20.58,
                 shadowRadius: 16.0,
-
-                elevation: 5,
+                elevation: 25,
               }}>
               <View
                 style={{

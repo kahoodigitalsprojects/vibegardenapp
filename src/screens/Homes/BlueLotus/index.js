@@ -20,6 +20,7 @@ const BlueLotus = ({route, navigation}) => {
           }}>
           <Header
             header2
+            marginTop={-40}
             iconName="arrowleft"
             color="#1C5C2E"
             fontSize={25}

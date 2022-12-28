@@ -15,13 +15,13 @@ const Spalsh2 = ({navigation, route}) => {
   const {showVerifyScreen} = route.params;
   return (
     <>
-      <SafeAreaView>
+      <SafeAreaView style={styles.main}>
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1}}>
           <StatusBar animated={true} backgroundColor="#000" />
 
-          <View style={styles.main}>
+          <View style={{}}>
             <View style={{alignSelf: 'center', marginTop: 100}}>
               <Image source={Images.Logos.logo1} />
             </View>
@@ -36,7 +36,7 @@ const Spalsh2 = ({navigation, route}) => {
               </Text>
               <View style={{marginTop: 10, justifyContent: 'flex-end'}}>
                 <Pinkbtn
-                  shadow={'#CD258D'}
+                  shadow="#00000019"
                   onPress={() =>
                     navigation.navigate('signup', {
                       showVerifyScreen: showVerifyScreen,
@@ -59,10 +59,8 @@ const Spalsh2 = ({navigation, route}) => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    // backgroundColor: '#1C5C2E',
-    justifyContent: 'center',
+    backgroundColor: '#ffff',
     alignItems: 'center',
-    paddingVertical: 20,
   },
   view1: {
     marginTop: 20,

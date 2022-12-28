@@ -35,6 +35,8 @@ const Question3 = props => {
               fontSize={25}
               OnPress={() => props.navigation.goBack('')}
             />
+          </View>
+          <View style={{width: '100%', alignSelf: 'center'}}>
             <QComponents
               iconone
               name2="chevron-down"

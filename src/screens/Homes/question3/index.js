@@ -34,6 +34,8 @@ const Question3 = props => {
             headertext="Resonance Finder"
             OnPress={() => props.navigation.goBack('')}
           />
+        </View>
+        <View style={{width: '100%', alignSelf: 'center'}}>
           <QComponents
             flowwerlist11={true}
             width={'100%'}
@@ -54,6 +56,7 @@ const Question3 = props => {
             text6={'Data Help me Accept new concepts.'}
           />
         </View>
+
         <View style={{marginTop: 20}}>
           <Pinkbtn
             shadow="#979B9F"

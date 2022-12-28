@@ -185,4 +185,5 @@ const hiddenTabrBarScreens = [
   'settings',
   'Search',
   'Search2',
+  'Search3',
 ];
