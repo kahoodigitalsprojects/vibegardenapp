@@ -70,7 +70,7 @@ const Question3 = props => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    backgroundColor: '#fefe',
+    backgroundColor: '#ffff',
   },
   container: {
     width: '100%',

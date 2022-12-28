@@ -255,6 +255,7 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
                     Image1={Images.Imgs.lotusb}
                   />
                   <TouchableOpacity
+                    style={styles.btn1}
                     disabled={data1 === false ? true : false}
                     onPress={() => navigation.navigate('Bigblooms', data)}>
                     <LinearGradient
@@ -328,7 +329,7 @@ const styles = StyleSheet.create({
   },
   btn1: {
     shadowOffset: {
-      width: 50,
+      width: 70,
       height: 52,
     },
     shadowColor: '#00000029',
@@ -336,6 +337,17 @@ const styles = StyleSheet.create({
     shadowRadius: 16.0,
     elevation: 24,
     width: '50%',
+  },
+  btn1: {
+    shadowOffset: {
+      width: 70,
+      height: 52,
+    },
+    shadowColor: '#00000029',
+    shadowOpacity: 20.58,
+    shadowRadius: 16.0,
+    elevation: 24,
+    width: '60%',
     marginVertical: 25,
     alignSelf: 'center',
     justifyContent: 'center',

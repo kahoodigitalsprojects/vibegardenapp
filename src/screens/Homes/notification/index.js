@@ -72,7 +72,7 @@ const Notification = props => {
           style={{
             marginVertical: 10,
             // marginTop: 20,
-            width: '95%',
+            width: '90%',
             alignSelf: 'center',
           }}>
           <Header
@@ -86,7 +86,7 @@ const Notification = props => {
           />
           <View
             style={{
-              width: '95%',
+              width: '100%',
               marginVertical: 15,
               justifyContent: 'flex-end',
             }}>
@@ -102,6 +102,7 @@ const Notification = props => {
           </View>
           <View
             style={{
+              width: '90%',
               marginVertical: 10,
               justifyContent: 'space-between',
               flexDirection: 'row',
@@ -118,8 +119,8 @@ const Notification = props => {
                 style={{
                   fontSize: 18,
                   fontWeight: 'bold',
-                  color: '#000',
-                  fontFamily: 'BrandonGrotesque-Regular',
+                  color: '#211E1F',
+                  fontFamily: 'BrandonGrotesque-Medium',
                 }}>
                 Recent Notification
               </Text>
@@ -138,7 +139,7 @@ const Notification = props => {
               data={data}
               renderItem={({item}) => {
                 return (
-                  <View style={{width: '90%', alignSelf: 'center', margin: 3}}>
+                  <View style={{width: '100%', alignSelf: 'center', margin: 3}}>
                     <View style={styles.box}>
                       <View style={{width: '75%', flexDirection: 'row'}}>
                         <View style={styles.img}>
@@ -222,20 +223,17 @@ const styles = StyleSheet.create({
     width: '100%',
     borderRadius: 30,
     height: 86,
-    // borderWidth: 1,
+
     backgroundColor: '#fff',
-    elevation: 5,
-    // borderColor: 'grey',
+    elevation: 6,
     flexDirection: 'row',
     shadowColor: '#000',
     shadowOffset: {
-      width: 1,
+      width: 0,
       height: 2,
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
-
-    // elevation: 1,
   },
 
   boxouter: {},

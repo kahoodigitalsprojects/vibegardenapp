@@ -90,7 +90,7 @@ const Buddhisim = props => {
         <View style={styles.Box1}>
           <View
             style={{
-              width: '90%',
+              width: 250,
               alignSelf: 'center',
               marginTop: 30,
             }}>
@@ -99,9 +99,8 @@ const Buddhisim = props => {
                 textAlign: 'center',
                 lineHeight: 25,
                 fontSize: 12,
-                fontWeight: '600',
                 color: '#000000',
-                // marginVertical: 10,
+                fontFamily: 'BrandonGrotesque-Medium',
               }}>
               Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam
               Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna.

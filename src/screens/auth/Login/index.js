@@ -163,7 +163,7 @@ const Login = ({route, navigation}) => {
         </View>
         <View style={{marginTop: 20}}>
           <Pinkbtn
-            shadow="'#CD258D'"
+            shadow={'#CD258D'}
             onPress={() => {
               {
                 registerd1

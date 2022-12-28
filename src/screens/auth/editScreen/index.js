@@ -59,7 +59,7 @@ const EditScreen = ({navigation, route}) => {
         <View style={{marginVertical: 5, alignSelf: 'center', width: '90%'}}>
           <View style={{marginTop: 20}}>
             <Pinkbtn
-              shadow={'#191919B8'}
+              shadow={'#00000019'}
               // onPress={() =>
               //   props.navigation.navigate('signup', {
               //     registerd1: () => props.navigation.navigate('signup'),

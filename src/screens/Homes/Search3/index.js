@@ -97,7 +97,7 @@ const Search3 = ({route, navigation}) => {
             <Header
               iconName="closesquareo"
               header2
-              OnPress={() => navigation.replace('settings')}
+              OnPress={() => navigation.navigate('settings')}
             />
 
             <View style={{marginVertical: 5, alignSelf: 'center'}}>
@@ -108,7 +108,7 @@ const Search3 = ({route, navigation}) => {
                   color: '#afafaa',
                   fontWeight: '450',
                   marginVertical: 5,
-                  fontFamily: 'BrandonGrotesque-Regular',
+                  fontFamily: 'BrandonGrotesque-Medium',
                 }}>
                 Success
               </Text>
@@ -120,7 +120,7 @@ const Search3 = ({route, navigation}) => {
                   color: '#1C5C2E',
                   fontWeight: '600',
                   marginVertical: 10,
-                  fontFamily: 'BrandonGrotesque-Regular',
+                  fontFamily: 'BrandonGrotesque-Medium',
                 }}>
                 Off You Go!
               </Text>
@@ -132,70 +132,13 @@ const Search3 = ({route, navigation}) => {
                   color: '#000',
                   fontWeight: '450',
                   lineHeight: 30,
-                  fontFamily: 'BrandonGrotesque-Regular',
+                  fontFamily: 'BrandonGrotesque-Medium',
                 }}>
                 Your Cancelation Is Submitted {'\n'} Be Well!
               </Text>
             </View>
           </View>
         )}
-
-        <View
-          style={{
-            width: '90%',
-          }}>
-          <TouchableOpacity
-            onPress={() => {
-              navigation.goBack('');
-            }}
-            // onPress={search}
-            style={{
-              marginTop: 25,
-              width: 20,
-              // width: '90%',
-              alignSelf: 'flex-end',
-              justifyContent: 'flex-end',
-            }}>
-            <Icon name={Name} size={25} color="#1C5C2E" />
-          </TouchableOpacity>
-        </View>
-
-        <View style={styles.container}>
-          <Text
-            style={{
-              fontSize: 25,
-              fontWeight: 'bold',
-              color: '#1C5C2E',
-              marginTop: -30,
-              fontFamily: 'BrandonGrotesque-Regular',
-            }}>
-            {itemId}
-          </Text>
-          <FlatList
-            data={data}
-            renderItem={({item, index}) => {
-              return (
-                <TouchableOpacity
-                  onPress={item.onPress}
-                  style={{
-                    alignItems: 'center',
-                    alignSelf: 'center',
-                    paddingVertical: 10,
-                    marginTop: 15,
-                  }}>
-                  <Text
-                    style={{
-                      fontSize: 18,
-                      color: '#000',
-                      fontFamily: 'BrandonGrotesque-Regular',
-                    }}>
-                    {item.text1}
-                  </Text>
-                </TouchableOpacity>
-              );
-            }}
-          />
-        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -204,7 +147,7 @@ const Search3 = ({route, navigation}) => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    backgroundColor: '#fefe',
+    backgroundColor: '#fff',
   },
   container: {
     width: '90%',

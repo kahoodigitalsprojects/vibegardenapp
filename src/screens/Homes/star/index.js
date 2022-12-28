@@ -52,7 +52,6 @@ const Star = props => {
                 fontSize: 25,
                 textAlign: 'center',
                 color: '#000',
-                fontWeight: '500',
                 marginVertical: 5,
                 fontFamily: 'BrandonGrotesque-Medium',
               }}>
@@ -76,9 +75,8 @@ const Star = props => {
                 fontSize: 24,
                 textAlign: 'center',
                 color: '#1C5C2E',
-                fontWeight: '600',
                 marginVertical: 5,
-                fontFamily: 'BrandonGrotesque-Medium',
+                fontFamily: 'BrandonGrotesque-Bold',
               }}>
               With Gratitude!
             </Text>

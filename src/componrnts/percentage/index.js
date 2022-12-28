@@ -78,12 +78,12 @@ const Percentage = ({
             <>
               <TouchableOpacity onPress={() => setCount(count + 1)}>
                 <View style={{}}>
-                  <Icon name="up" size={24} color="#747474" />
+                  <Icon name="up" size={24} color="#000" />
                 </View>
               </TouchableOpacity>
               <TouchableOpacity onPress={() => setCount(count - 1)}>
                 <View style={{}}>
-                  <Icon name="down" size={24} color="#747474" />
+                  <Icon name="down" size={24} color="#000" />
                 </View>
               </TouchableOpacity>
             </>

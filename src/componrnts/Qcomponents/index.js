@@ -293,7 +293,7 @@ const QComponents = ({
       {flowwerlist11 && (
         <View
           style={{
-            width: '100%',
+            width: '90%',
             alignSelf: 'center',
             alignItems: 'center',
 
@@ -390,9 +390,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   circle: {
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    elevation: 5,
     width: 74,
     height: 74,
     borderRadius: 100,
+    backgroundColor: 'yellow',
     backgroundColor: '#fff',
     justifyContent: 'center',
     alignItems: 'center',

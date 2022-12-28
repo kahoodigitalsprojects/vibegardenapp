@@ -33,7 +33,7 @@ const Question3 = props => {
               header2
               headertext="Resonance Finder"
               fontSize={25}
-              // OnPress={() => props.navigation.goBack('')}
+              OnPress={() => props.navigation.goBack('')}
             />
             <QComponents
               iconone
@@ -79,7 +79,7 @@ const Question3 = props => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    backgroundColor: '#fefe',
+    backgroundColor: '#ffff',
   },
   container: {
     width: '100%',

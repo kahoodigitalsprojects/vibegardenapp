@@ -107,7 +107,7 @@ const MainBox = ({
                 backgroundColor: bgcolor,
                 justifyContent: 'center',
                 alignItems: 'center',
-                marginTop: 6
+                marginTop: 6,
               }}>
               <Text
                 style={{

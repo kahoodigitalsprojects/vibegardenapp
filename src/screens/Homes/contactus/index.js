@@ -71,7 +71,7 @@ const Contactus = props => {
                 shadowOpacity: 0.58,
                 shadowRadius: 16.0,
 
-                elevation: 24,
+                elevation: 5,
               }}>
               <View
                 style={{

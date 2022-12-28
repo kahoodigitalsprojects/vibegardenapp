@@ -84,7 +84,6 @@ const CancelSubscription = props => {
           <View
             style={{
               marginVertical: 8,
-
               width: '90%',
               alignSelf: 'center',
             }}>
@@ -126,6 +125,7 @@ const CancelSubscription = props => {
 
         <View style={{marginTop: 10, alignSelf: 'center', width: '90%'}}>
           <Pinkbtn
+            shadow={'#00000019'}
             onPress={() => {
               props.navigation.navigate('Search3', {
                 success: true,

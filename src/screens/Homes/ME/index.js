@@ -260,6 +260,7 @@ const Me = props => {
                 </View>
                 <View style={{marginTop: 10}}>
                   <Pinkbtn
+                    shadow="#00000019"
                     width={'65%'}
                     onPress={() => {
                       props.navigation.navigate('BloomsCheck', {

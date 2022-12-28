@@ -68,7 +68,7 @@ const Question2 = props => {
             />
           </View>
 
-          <View style={{marginTop: 20, width: '80%'}}>
+          <View style={{marginTop: 20, width: '100%'}}>
             <Pinkbtn
               shadow="#00000029"
               onPress={() => {
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#fefe',
+    backgroundColor: '#fff',
   },
   container: {
     width: '100%',

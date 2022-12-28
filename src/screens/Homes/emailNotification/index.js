@@ -9,6 +9,7 @@ import {
   StatusBar,
   FlatList,
 } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {Header, Pinkbtn, StoryData, Switch1} from '../../../componrnts';
 import Images from '../../../constants';
 
@@ -34,11 +35,11 @@ const EmailNotification = props => {
   ];
 
   return (
-    <ScrollView
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={{flexGrow: 1}}>
-      <StatusBar animated={true} backgroundColor="#000" />
-      <View style={styles.main}>
+    <SafeAreaView style={styles.main}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{flexGrow: 1}}>
+        <StatusBar animated={true} backgroundColor="#000" />
         <View style={styles.container}>
           <Header
             marginTop={-40}
@@ -63,10 +64,10 @@ const EmailNotification = props => {
                           <Text style={styles.text1}>{item.text1}</Text>
                         </View>
                         <View styles={{width: '5%'}}>
-                          <Switch1 />
+                          <Switch1 marginTop={6} />
                         </View>
                       </View>
-                      <View style={{width: '100%', alignSelf: 'center'}}>
+                      <View style={{width: '80%'}}>
                         <Text style={styles.text2}>{item.text2}</Text>
                       </View>
                     </View>
@@ -76,8 +77,8 @@ const EmailNotification = props => {
             </View>
           </View>
         </View>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
@@ -97,7 +98,12 @@ const styles = StyleSheet.create({
     marginVertical: 4,
     fontFamily: 'BrandonGrotesque-Medium',
   },
-  text2: {color: '#000', fontSize: 18, fontFamily: 'BrandonGrotesque-Regular'},
+  text2: {
+    color: '#000',
+    fontSize: 18,
+    fontFamily: 'BrandonGrotesque-Regular',
+    opacity: 0.5,
+  },
 
   switchView: {
     // backgroundColor: 'green',
@@ -105,7 +111,8 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginVertical: 25,
+
+    marginVertical: 15,
   },
 });
 export default EmailNotification;

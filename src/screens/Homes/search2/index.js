@@ -41,100 +41,103 @@ const Search2 = ({route, navigation, otherParam}) => {
           <View style={{width: '100%'}}>
             <Searcbart1 onpress2={() => navigation.goBack('')} />
           </View>
-          <View style={styles.container}>
+
+          <View
+            style={{
+              width: '100%',
+              borderBottomWidth: 1,
+              borderColor: '#1C5C2E',
+              // backgroundColor: 'red',
+            }}>
             <View
               style={{
-                width: '100%',
-                borderBottomWidth: 1,
-                borderColor: '#1C5C2E',
+                width: '90%',
+                alignSelf: 'center',
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                marginTop: 20,
               }}>
-              <View
+              <TouchableOpacity
+                onPress={() => {
+                  setActiveTab(0);
+                  setTopicName('Topics');
+                  setTypeName('Types');
+                }}
                 style={{
-                  width: '95%',
+                  backgroundColor: activeTab === 0 ? '#1C5C2E' : '#D1DED5',
+                  elevation: activeTab === 1 ? 0 : 5,
+                  borderRadius: 5,
                   alignSelf: 'center',
-                  flexDirection: 'row',
-                  justifyContent: 'space-between',
+                  paddingVertical: 5,
+                  paddingLeft: 20,
+                  paddingRight: 20,
                 }}>
-                <TouchableOpacity
-                  onPress={() => {
-                    setActiveTab(0);
-                    setTopicName('Topics');
-                    setTypeName('Types');
-                  }}
+                <Text
                   style={{
-                    backgroundColor: activeTab === 0 ? '#1C5C2E' : '#D1DED5',
-                    elevation: activeTab === 1 ? 0 : 5,
-                    borderRadius: 5,
-                    alignSelf: 'center',
-                    paddingVertical: 5,
-                    paddingLeft: 20,
-                    paddingRight: 20,
+                    color: activeTab === 0 ? '#fff' : '#1C5C2E',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
-                  <Text
-                    style={{
-                      color: activeTab === 0 ? '#fff' : '#1C5C2E',
-                      fontFamily: 'BrandonGrotesque-Regular',
-                    }}>
-                    All
-                  </Text>
-                </TouchableOpacity>
+                  All
+                </Text>
+              </TouchableOpacity>
 
-                <TouchableOpacity
-                  onPress={() => {
-                    setActiveTab(1);
-                    setTopicName('Topics');
-                    setTypeName('Types');
-                  }}
+              <TouchableOpacity
+                onPress={() => {
+                  setActiveTab(1);
+                  setTopicName('Topics');
+                  setTypeName('Types');
+                }}
+                style={{
+                  backgroundColor: activeTab === 1 ? '#205F2E' : '#D1DED5',
+                  elevation: activeTab === 1 ? 0 : 5,
+                  borderRadius: 5,
+                  alignSelf: 'center',
+                  paddingVertical: 5,
+                  paddingLeft: 20,
+                  paddingRight: 20,
+                }}>
+                <Text
                   style={{
-                    backgroundColor: activeTab === 1 ? '#205F2E' : '#D1DED5',
-                    elevation: activeTab === 1 ? 0 : 5,
-                    borderRadius: 5,
-                    alignSelf: 'center',
-                    paddingVertical: 5,
-                    paddingLeft: 20,
-                    paddingRight: 20,
+                    color: activeTab === 1 ? '#fff' : '#205F2E',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
-                  <Text
-                    style={{
-                      color: activeTab === 1 ? '#fff' : '#205F2E',
-                      fontFamily: 'BrandonGrotesque-Regular',
-                    }}>
-                    Tools
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  onPress={() => {
-                    setActiveTab(2);
-                    setTopicName('Topics');
-                    setTypeName('Types');
-                  }}
+                  Tools
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  setActiveTab(2);
+                  setTopicName('Topics');
+                  setTypeName('Types');
+                }}
+                style={{
+                  backgroundColor: activeTab === 2 ? '#205F2E' : '#D1DED5',
+                  elevation: activeTab === 1 ? 0 : 5,
+                  borderRadius: 5,
+                  alignSelf: 'center',
+                  paddingVertical: 5,
+                  paddingLeft: 20,
+                  paddingRight: 20,
+                }}>
+                <Text
                   style={{
-                    backgroundColor: activeTab === 2 ? '#205F2E' : '#D1DED5',
-                    elevation: activeTab === 1 ? 0 : 5,
-                    borderRadius: 5,
-                    alignSelf: 'center',
-                    paddingVertical: 5,
-                    paddingLeft: 20,
-                    paddingRight: 20,
+                    color: activeTab === 2 ? '#fff' : '#205F2E',
+                    fontFamily: 'BrandonGrotesque-Regular',
                   }}>
-                  <Text
-                    style={{
-                      color: activeTab === 2 ? '#fff' : '#205F2E',
-                      fontFamily: 'BrandonGrotesque-Regular',
-                    }}>
-                    Ground Work
-                  </Text>
-                </TouchableOpacity>
-              </View>
+                  Ground Work
+                </Text>
+              </TouchableOpacity>
             </View>
+          </View>
+          <View style={styles.container}>
             <View style={{width: '100%', marginTop: 10}}>
               {activeTab === 0 ? (
                 <>
                   <View
                     style={{
-                      width: '100%',
+                      width: '90%',
                       flexDirection: 'row',
-                      alignSelf: 'flex-start',
+                      // alignSelf: 'flex-start',
                       // backgroundColor: 'pink',
                     }}>
                     <TouchableOpacity
@@ -142,22 +145,36 @@ const Search2 = ({route, navigation, otherParam}) => {
                         setModalType(1);
                         setModalVisible(!modalVisible);
                       }}
-                      style={[styles.topics, {backgroundColor: '#fff'}]}>
-                      <Text
-                        style={{
-                          color: '#1C5C2E',
-                          fontSize: 16,
-                          margin: 6,
-                          fontFamily: 'BrandonGrotesque-Regular',
-                        }}>
-                        Topics
-                      </Text>
-                      <Icon
-                        name="chevron-down"
-                        size={18}
-                        color="#1C5C2E"
-                        style={{margin: 6}}
-                      />
+                      style={[
+                        styles.topics,
+                        {
+                          backgroundColor: '#fff',
+                          borderWidth: 1,
+                          width: 100,
+                          justifyContent: 'space-between',
+                          borderBottomColor: '#1C5C2E',
+                        },
+                      ]}>
+                      <View>
+                        <Text
+                          style={{
+                            color: '#1C5C2E',
+                            fontSize: 16,
+                            margin: 6,
+
+                            fontFamily: 'BrandonGrotesque-Regular',
+                          }}>
+                          Topics
+                        </Text>
+                      </View>
+                      <View>
+                        <Icon
+                          name="chevron-down"
+                          size={18}
+                          color="#1C5C2E"
+                          style={{margin: 6}}
+                        />
+                      </View>
                     </TouchableOpacity>
                   </View>
 
@@ -165,7 +182,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                     <View
                       style={{
                         marginVertical: 10,
-                        width: '90%',
+                        width: '95%',
                         alignSelf: 'center',
                       }}>
                       <SeeAll
@@ -212,7 +229,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                     <View
                       style={{
                         marginVertical: 10,
-                        width: '90%',
+                        width: '95%',
                         alignSelf: 'center',
                       }}>
                       <SeeAll
@@ -229,7 +246,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                         textB="SeeAll"
                       />
                     </View>
-                    <View style={{}}>
+                    <View style={styles.box1}>
                       <ScrollView
                         horizontal={true}
                         showsHorizontalScrollIndicator={false}>
@@ -257,7 +274,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                     <View
                       style={{
                         marginVertical: 10,
-                        width: '90%',
+                        width: '95%',
                         alignSelf: 'center',
                       }}>
                       <SeeAll
@@ -278,7 +295,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                         color1="#1C5C2E"
                       />
                     </View>
-                    <View style={{}}>
+                    <View style={styles.box1}>
                       <ScrollView
                         horizontal={true}
                         showsHorizontalScrollIndicator={false}>
@@ -308,8 +325,8 @@ const Search2 = ({route, navigation, otherParam}) => {
                   </View>
                   <View
                     style={{
-                      marginVertical: 20,
-                      width: '90%',
+                      marginVertical: 15,
+                      width: '95%',
                       alignSelf: 'center',
                     }}>
                     <SeeAll color1="#1C5C2E" textA="TEACHERS" textB="SeeAll" />
@@ -325,7 +342,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                             <View
                               style={{
                                 marginVertical: 5,
-                                width: '100%',
+                                width: '95%',
                                 alignSelf: 'center',
                               }}>
                               <Userdetails
@@ -511,7 +528,6 @@ const Search2 = ({route, navigation, otherParam}) => {
                         />
                       )}
                     </TouchableOpacity>
-
                     <TouchableOpacity
                       onPress={() => {
                         if (typeName !== 'Types') {
@@ -548,7 +564,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                       )}
                     </TouchableOpacity>
                   </View>
-                  <View style={styles.box1}>
+                  <View>
                     <FlatList
                       showsHorizontalScrollIndicator={false}
                       keyExtractor={item => item.id}
@@ -565,6 +581,8 @@ const Search2 = ({route, navigation, otherParam}) => {
                             }}>
                             <All
                               iconimg2
+                              searchTop={-28}
+                              searchmargin={25}
                               color1="#1C5C2E"
                               onPressALL={item.pressAll}
                               textA={item.textA}
@@ -679,7 +697,7 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   box1: {
-    width: '100%',
+    width: '95%',
     alignSelf: 'center',
     // height: '100%',
     // backgroundColor: 'yellow',
