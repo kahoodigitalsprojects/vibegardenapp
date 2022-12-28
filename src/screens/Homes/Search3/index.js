@@ -47,7 +47,6 @@ const Search3 = ({route, navigation}) => {
                 fontSize: 25,
                 textAlign: 'center',
                 color: '#afafaa',
-                fontWeight: '450',
                 marginVertical: 5,
                 fontFamily: 'BrandonGrotesque-Medium',
               }}>
@@ -56,10 +55,9 @@ const Search3 = ({route, navigation}) => {
 
             <Text
               style={{
-                fontSize: 25,
+                fontSize: 28,
                 textAlign: 'center',
                 color: '#1C5C2E',
-                fontWeight: '600',
                 marginVertical: 10,
                 fontFamily: 'BrandonGrotesque-Medium',
               }}>
@@ -71,7 +69,6 @@ const Search3 = ({route, navigation}) => {
                 fontSize: 18,
                 textAlign: 'center',
                 color: '#000',
-                fontWeight: '450',
                 lineHeight: 30,
                 fontFamily: 'BrandonGrotesque-Medium',
               }}>
