@@ -42,7 +42,7 @@ const Question2 = props => {
               OnPress={() => props.navigation.goBack('')}
             />
           </View>
-          <View style={{width: '100%',alignSelf:'center'}}>
+          <View style={{width: '100%', alignSelf: 'center'}}>
             <QComponents
               marginVertical={10}
               flowwerlist11={true}
@@ -65,6 +65,7 @@ const Question2 = props => {
                 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.'
               }
               text6={'Plants are sentilents'}
+              fontfamily="BrandonGrotesque-Regular"
             />
           </View>
 

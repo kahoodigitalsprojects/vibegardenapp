@@ -55,6 +55,7 @@ const Question3 = props => {
               text3={`'It Feels That's way Sometime'`}
               text4="I Wrap Myself in that way Nightly"
               text6={'We Each Have Angles?'}
+              fontfamily="BrandonGrotesque-Regular"
             />
           </View>
           <View style={{marginTop: 20}}>

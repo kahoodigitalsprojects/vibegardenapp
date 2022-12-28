@@ -32,6 +32,7 @@ const Question3 = props => {
             iconName="closesquareo"
             header2
             headertext="Resonance Finder"
+            fontfamily="BrandonGrotesque-Regular"
             OnPress={() => props.navigation.goBack('')}
           />
         </View>

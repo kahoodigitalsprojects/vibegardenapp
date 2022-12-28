@@ -52,7 +52,7 @@ const PaymentMethod = ({navigation, route, pres}) => {
                 fontWeight: '500',
                 marginVertical: 5,
                 lineHeight: 39,
-                fontFamily: 'BrandonGrotesque-Regular',
+                fontFamily: 'BrandonGrotesque-Bold',
               }}>
               Payment Details
             </Text>
@@ -65,7 +65,6 @@ const PaymentMethod = ({navigation, route, pres}) => {
                   textAlign: 'center',
                   color: '#000',
                   marginVertical: 10,
-
                   fontFamily: 'BrandonGrotesque-Bold',
                 }}>
                 Credit Card Or Debit Card
@@ -91,6 +90,15 @@ const PaymentMethod = ({navigation, route, pres}) => {
                   backgroundColor: '#fff',
                   flexDirection: 'row',
                   padding: 15,
+                  shadowColor: '#000',
+                  shadowOffset: {
+                    width: 0,
+                    height: 2,
+                  },
+                  shadowOpacity: 0.25,
+                  shadowRadius: 3.84,
+
+                  elevation: 15,
                 }}>
                 <Text
                   style={{
@@ -135,6 +143,15 @@ const PaymentMethod = ({navigation, route, pres}) => {
                     backgroundColor: '#fff',
                     flexDirection: 'row',
                     padding: 15,
+                    shadowColor: '#000',
+                    shadowOffset: {
+                      width: 0,
+                      height: 2,
+                    },
+                    shadowOpacity: 0.25,
+                    shadowRadius: 3.84,
+
+                    elevation: 15,
                   }}>
                   <Text
                     style={{
@@ -171,6 +188,15 @@ const PaymentMethod = ({navigation, route, pres}) => {
                     backgroundColor: '#fff',
                     flexDirection: 'row',
                     padding: 15,
+                    shadowColor: '#000',
+                    shadowOffset: {
+                      width: 0,
+                      height: 2,
+                    },
+                    shadowOpacity: 0.25,
+                    shadowRadius: 3.84,
+
+                    elevation: 15,
                   }}>
                   <Text
                     style={{

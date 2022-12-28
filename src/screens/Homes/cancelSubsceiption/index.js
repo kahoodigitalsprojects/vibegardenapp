@@ -79,6 +79,7 @@ const CancelSubscription = props => {
               }
               marginTop1={-15}
               text6={'Leaving Because:'}
+              fontfamily="BrandonGrotesque-Bold"
             />
           </View>
           <View

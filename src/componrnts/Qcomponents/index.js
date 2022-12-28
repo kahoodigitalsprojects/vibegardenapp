@@ -26,6 +26,7 @@ const QComponents = ({
   text4,
   text5,
   marginVertical,
+  fontfamily,
   textflower,
   text6,
   name,
@@ -281,7 +282,7 @@ const QComponents = ({
                     marginTop: marginTop1,
                     fontSize: 31,
                     color: '#000',
-                    fontFamily: 'BrandonGrotesque-Bold',
+                    fontFamily: fontfamily,
                   },
                 ]}>
                 {text6}

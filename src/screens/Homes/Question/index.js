@@ -55,6 +55,7 @@ const Question = props => {
             text3={'SMCA Peepsceen to think so'}
             text4="Shall we Question Heap"
             text6={'The Multiverse is Real'}
+            fontfamily="BrandonGrotesque-Regular"
             marginVertical={10}
           />
         </View>

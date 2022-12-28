@@ -258,7 +258,7 @@ const Me = props => {
                     Your Graph will appear{'\n'}after 2 days of tracking
                   </Text>
                 </View>
-                <View style={{marginTop: 10}}>
+                <View style={{marginTop: 30}}>
                   <Pinkbtn
                     shadow="#00000019"
                     width={'65%'}
@@ -280,7 +280,7 @@ const Me = props => {
               </View>
             </View>
           </View>
-          <View style={{marginVertical: 25}} />
+    
         </ScrollView>
       </SafeAreaView>
     </>

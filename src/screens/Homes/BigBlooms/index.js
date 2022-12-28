@@ -55,123 +55,126 @@ const BigBlooms = ({route, navigation}) => {
             color="#000"
           />
         </View>
-        <View style={styles.itms}>
-          <View
-            style={{
-              width: '90%',
-              alignSelf: 'center',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-            <Text
-              style={{
-                fontSize: 28,
-                textAlign: 'center',
-                color: '#000',
-                // fontWeight: 'bold',
-                marginTop: 25,
-                marginVertical: 10,
-                fontFamily: 'BrandonGrotesque-Medium',
-              }}>
-              {heading1}
-              Big Blooms
-            </Text>
+        <View style={{width: '90%', marginTop: 10}}>
+          <View style={styles.itms}>
             <View
-              style={{
-                width: 75,
-                height: 75,
-                marginVertical: 10,
-                alignSelf: 'center',
-              }}>
-              <Image source={Image1} />
+              style={
+                {
+                  // width: '90%',
+                  // alignSelf: 'center',
+                  // alignItems: 'center',
+                  // justifyContent: 'center',
+                }
+              }>
+              <Text
+                style={{
+                  fontSize: 28,
+                  textAlign: 'center',
+                  color: '#000',
+                  // fontWeight: 'bold',
+                  marginTop: 25,
+                  marginVertical: 10,
+                  fontFamily: 'BrandonGrotesque-Medium',
+                }}>
+                {heading1}
+                Big Blooms
+              </Text>
+              <View
+                style={{
+                  width: 75,
+                  height: 75,
+                  marginVertical: 10,
+                  alignSelf: 'center',
+                }}>
+                <Image source={Image1} />
+              </View>
+            </View>
+            <View
+              style={{marginVertical: 5, width: '100%', alignSelf: 'center'}}>
+              <Text
+                style={{
+                  marginVertical: 10,
+                  fontSize: 18,
+                  // textAlign: 'center',
+                  color: '#000',
+                  // fontWeight: 'bold',
+                  fontFamily: 'BrandonGrotesque-Medium',
+                  lineHeight: 30,
+                }}>
+                Fantastic! Its So Power Full To Discover Tools That Help Us Feel
+                Our Light!
+              </Text>
+              <Text
+                style={{
+                  fontSize: 16,
+                  // textAlign: 'center',
+                  color: '#1C5C2E',
+                  fontWeight: '500',
+                  marginVertical: 5,
+                  fontFamily: 'BrandonGrotesque-Medium',
+                }}>
+                ADDED TONGLEN FAVORITES
+              </Text>
+
+              <Text
+                style={{
+                  fontSize: 18,
+                  // textAlign: 'center',
+                  color: '#000',
+                  // fontWeight: 'bold',
+                  marginVertical: 10,
+                  textDecorationLine: 'underline',
+                  fontFamily: 'BrandonGrotesque-Regular',
+                }}>
+                Tell Us More
+              </Text>
+
+              <Text
+                style={{
+                  fontSize: 18,
+                  // textAlign: 'center',
+                  color: '#000',
+                  // fontWeight: 'bold',
+                  fontFamily: 'BrandonGrotesque-Regular',
+                }}>
+                Did This Tools
+              </Text>
+              <FlatList
+                data={data}
+                keyExtractor={item => item}
+                renderItem={({item}) => {
+                  return (
+                    <View
+                      style={{
+                        marginVertical: 8,
+                        flexDirection: 'row',
+                        width: '100%',
+                      }}>
+                      <TouchableOpacity
+                        onPress={() => {}}
+                        style={{
+                          marginTop: 2,
+                        }}>
+                        <Icon name="check-square" size={25} color="#1C5C2E" />
+                      </TouchableOpacity>
+                      <Text
+                        style={{
+                          fontSize: 13,
+                          marginTop: 3,
+                          marginLeft: 8,
+                          // textAlign: 'center',
+                          color: '#000',
+                          // fontWeight: 'bold',
+                          fontFamily: 'BrandonGrotesque-Regular',
+                        }}>
+                        {item.text1}
+                      </Text>
+                    </View>
+                  );
+                }}
+              />
             </View>
           </View>
-
-          <View style={{marginVertical: 5, width: '100%', alignSelf: 'center'}}>
-            <Text
-              style={{
-                marginVertical: 10,
-                fontSize: 18,
-                // textAlign: 'center',
-                color: '#000',
-                // fontWeight: 'bold',
-                fontFamily: 'BrandonGrotesque-Medium',
-                lineHeight: 30,
-              }}>
-              Fantastic! Its So Power Full To Discover Tools That Help Us Feel
-              Our Light!
-            </Text>
-            <Text
-              style={{
-                fontSize: 16,
-                // textAlign: 'center',
-                color: '#1C5C2E',
-                fontWeight: '500',
-                marginVertical: 5,
-                fontFamily: 'BrandonGrotesque-Medium',
-              }}>
-              ADDED TONGLEN FAVORITES
-            </Text>
-
-            <Text
-              style={{
-                fontSize: 18,
-                // textAlign: 'center',
-                color: '#000',
-                // fontWeight: 'bold',
-                marginVertical: 10,
-                textDecorationLine: 'underline',
-                fontFamily: 'BrandonGrotesque-Regular',
-              }}>
-              Tell Us More
-            </Text>
-
-            <Text
-              style={{
-                fontSize: 18,
-                // textAlign: 'center',
-                color: '#000',
-                // fontWeight: 'bold',
-                fontFamily: 'BrandonGrotesque-Regular',
-              }}>
-              Did This Tools
-            </Text>
-          </View>
-
-          <FlatList
-            data={data}
-            keyExtractor={item => item}
-            renderItem={({item}) => {
-              return (
-                <View
-                  style={{
-                    marginVertical: 8,
-                    flexDirection: 'row',
-                    width: '100%',
-                  }}>
-                  <TouchableOpacity
-                    onPress={() => {}}
-                    style={{
-                      marginTop: 2,
-                    }}>
-                    <Icon name="check-square" size={25} color="#1C5C2E" />
-                  </TouchableOpacity>
-                  <Text
-                    style={{
-                      fontSize: 13,
-                      marginTop: 3,
-                      marginLeft: 8,
-                      // textAlign: 'center',
-                      color: '#000',
-                      // fontWeight: 'bold',
-                      fontFamily: 'BrandonGrotesque-Regular',
-                    }}>
-                    {item.text1}
-                  </Text>
-                </View>
-              );
-            }}
-          />
           <View style={{marginTop: 10, width: '100%'}}>
             <Pinkbtn
               width={'60%'}
@@ -192,8 +195,8 @@ const styles = StyleSheet.create({
   },
   itms: {
     marginTop: 10,
-    width: '90%',
-    // alignItems: 'center',
+    // width: '90%',
+    alignItems: 'center',
     // justifyContent: 'center',
     alignSelf: 'center',
   },
