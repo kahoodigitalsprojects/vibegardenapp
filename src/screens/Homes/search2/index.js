@@ -120,6 +120,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                   styles.topics,
                   {
                     backgroundColor: '#fff',
+                    width: 125,
                   },
                 ]}>
                 <Text
@@ -232,16 +233,14 @@ const Search2 = ({route, navigation, otherParam}) => {
                   }}>
                   <SeeAll
                     onPress={() => {
-                      navigation.navigate('me');
-                      setTimeout(function () {
-                        navigation.navigate('FressBlooms', {
+                      navigation.navigate('me', {
+                        screen: 'FressBlooms',
+                        params: {
                           otherParam: 'Fresh Blooms',
                           heart: true,
-                        });
-                      }, 100);
-
-                      //  ,
-                      // });
+                          fromHome: true,
+                        },
+                      });
                     }}
                     textA="FRESH BLOOMS"
                     textB="SeeAll"
@@ -648,7 +647,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    width: 125,
+    // width: 125,
     height: 35,
     paddingHorizontal: 10,
     marginLeft: 10,

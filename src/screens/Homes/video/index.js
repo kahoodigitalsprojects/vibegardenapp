@@ -35,6 +35,7 @@ const Video = ({route, navigation}) => {
   const {icon1} = route.params;
   const {redbtn} = route.params;
   const {backoption} = route.params;
+  const {fromHome} = route.params || null;
   // const { Heading } = route.params;
   const Data3 = [
     {text1: 'Not Really', img11: Images.Imgs.R1},
@@ -119,7 +120,12 @@ const Video = ({route, navigation}) => {
                 alignItems="center"
                 homeheader
                 headertext={otherParam1}
-                search={() => navigation.goBack()}
+                search={() =>
+                  navigation.reset({
+                    index: 0,
+                    routes: [{name: 'GroundWork'}, {name: 'Homes'}],
+                  })
+                }
               />
             </View>
             <View style={{width: '100%'}}>

@@ -152,6 +152,7 @@ const Home = ({navigation, route}) => {
                       otherParam: 'Fresh Blooms',
                       heart: true,
                       icon1: false,
+                      fromHome: true,
                     },
                   });
                 }}
@@ -205,6 +206,7 @@ const Home = ({navigation, route}) => {
                               plus: false,
                               otherParam1: 'FAMILY OF LIGHT',
                               backoption: () => navigation.goBack(),
+                              fromHome: true,
                             },
                           });
                           // setTimeout(function () {

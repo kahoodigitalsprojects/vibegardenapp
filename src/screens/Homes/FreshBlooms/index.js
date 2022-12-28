@@ -23,7 +23,7 @@ const FressBlooms = ({navigation, route}) => {
   const {itemId} = route.params;
   const {heart} = route.params;
   const {plus} = route.params;
-  const {backoption} = route.params;
+  const {fromHome} = route.params || null;
   const data = [
     {id: 1, icon1: 'heart'},
     {id: 2, icon1: 'heart'},
@@ -64,7 +64,17 @@ const FressBlooms = ({navigation, route}) => {
             fontSize={18}
             header2
             headertext={otherParam}
-            OnPress={() => navigation.goBack()}
+            OnPress={() =>
+              fromHome
+                ? navigation.reset({
+                    index: 0,
+                    routes: [{name: 'Homes'}, {name: 'me'}],
+                  })
+                : navigation.reset({
+                    index: 0,
+                    routes: [{name: 'me'}, {name: 'Homes'}],
+                  })
+            }
           />
           <View style={{marginTop: 47}}>
             <FlatList
