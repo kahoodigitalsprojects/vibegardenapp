@@ -17,7 +17,7 @@ const TabNavigator = () => {
         headerShown: false,
         tabBarActiveTintColor: '#1C5C2E',
         tabBarStyle: {
-          height: 90,
+          height: Platform.OS === 'ios' ? 90 : 80,
           borderTopLeftRadius: 20,
           borderTopRightRadius: 20,
         },
@@ -40,12 +40,12 @@ const TabNavigator = () => {
           return {
             tabBarStyle: {
               display: 'flex',
-              height: 90,
+              height: Platform.OS === 'ios' ? 90 : 80,
               borderTopLeftRadius: 20,
               borderTopRightRadius: 20,
             },
             tabBarLabel: 'Garden',
-            // tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
+            tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
             tabBarIcon: ({focused}) =>
               focused ? (
                 <Image source={Images.Logos.greenlogo} />
@@ -73,12 +73,12 @@ const TabNavigator = () => {
           return {
             tabBarStyle: {
               display: 'flex',
-              height: 90,
+              height: Platform.OS === 'ios' ? 90 : 80,
               borderTopLeftRadius: 20,
               borderTopRightRadius: 20,
             },
             tabBarLabel: 'Tools',
-            // tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
+            tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
             tabBarIcon: ({focused}) =>
               focused ? (
                 <Image source={Images.Logos.hands} />
@@ -106,12 +106,12 @@ const TabNavigator = () => {
           return {
             tabBarStyle: {
               display: 'flex',
-              height: 90,
+              height: Platform.OS === 'ios' ? 90 : 80,
               borderTopLeftRadius: 20,
               borderTopRightRadius: 20,
             },
             tabBarLabel: 'Groundwork',
-            // tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
+            tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
             tabBarIcon: ({focused}) =>
               focused ? (
                 <Image source={Images.Icons.leaf} />
@@ -138,13 +138,13 @@ const TabNavigator = () => {
           return {
             tabBarStyle: {
               display: 'flex',
-              height: 90,
+              height: Platform.OS === 'ios' ? 90 : 80,
               borderTopLeftRadius: 20,
               borderTopRightRadius: 20,
             },
 
             tabBarLabel: 'Me',
-            // tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
+            tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
             tabBarIcon: ({focused}) =>
               focused ? (
                 <Image source={Images.Icons.small} />
