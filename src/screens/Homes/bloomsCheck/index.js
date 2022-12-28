@@ -22,8 +22,11 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
   // const {Image1, Image2, Image3, Image4, newtext, Image5, Image6, Heading} =
   //   route.params;
 
-  const [data1, setdata1] = useState(false);
-  const [data, setData] = useState(0);
+  const [data1, setdata1] = useState(0);
+  const [data, setData] = useState({
+    Image1: Images.Logos.redleaf1,
+    newtext: 'TONGLEN',
+  });
   // const [state1, setState1] = useState(false);
   const Data1 = [
     {

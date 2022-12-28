@@ -7,17 +7,18 @@ import {
   StatusBar,
   Image,
 } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {Header} from '../../../componrnts';
 
 import Images from '../../../constants';
 const Result = ({navigation, route}) => {
   const {backoption} = route.params;
   return (
-    <ScrollView
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={{flexGrow: 1}}>
-      <StatusBar animated={true} backgroundColor="#000" />
-      <View style={styles.main}>
+    <SafeAreaView style={styles.main}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{flexGrow: 1}}>
+        <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
             width: '90%',
@@ -123,8 +124,8 @@ const Result = ({navigation, route}) => {
             change as it moves close your the essential resonance!
           </Text>
         </View>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({

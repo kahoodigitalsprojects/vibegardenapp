@@ -59,10 +59,30 @@ const GroundWork = props => {
             heartplus
             search1="search1"
             homeheader={true}
-            search={props.navigation.navigate('Homes', {screen: 'Search'})}
+            search={
+              () => {
+                props.navigation.navigate('Homes', {screen: 'Search'});
+              }
+              // props.navigation.navigate('Homes', { screen: 'Search' })
+            }
             heart
             // plus
           />
+          {/* <Header
+            marginTop={-30}
+            marginLeft={-15}
+            size={22}
+            colorplus={'green'}
+            marginTopplus={-2}
+            color="green"
+            img1
+            heartplus
+            search1="search1"
+            homeheader={true}
+            search={props.navigation.navigate('Homes', {screen: 'Search'})}
+            heart
+            // plus
+          /> */}
         </View>
         <View style={styles.Box1}>
           <View style={{width: '90%', alignSelf: 'center'}}>

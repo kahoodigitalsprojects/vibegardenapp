@@ -9,6 +9,7 @@ import {
   Switch,
   FlatList,
 } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {Header, Pinkbtn, StoryData, Switch1} from '../../../componrnts';
 import Images from '../../../constants';
 
@@ -27,11 +28,11 @@ const Resonance = props => {
   ];
 
   return (
-    <ScrollView
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={{flexGrow: 1}}>
-      <StatusBar animated={true} backgroundColor="#000" />
-      <View style={styles.main}>
+    <SafeAreaView style={styles.main}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{flexGrow: 1}}>
+        <StatusBar animated={true} backgroundColor="#000" />
         <View style={styles.container}>
           <Header
             iconName="closesquareo"
@@ -94,8 +95,8 @@ const Resonance = props => {
             </View>
           </View>
         </View>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 

@@ -9,6 +9,7 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {Header} from '../../../componrnts';
 import Reset from '../../../componrnts/ResetComponent';
 // import { BackHandler } from 'react-native';
@@ -44,41 +45,39 @@ const FressBlooms = ({navigation, route}) => {
   // });
 
   return (
-    <>
+    <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
         <StatusBar animated={true} backgroundColor="#000" />
-        <View style={styles.main}>
-          <View
-            style={{
-              width: '90%',
-              alignSelf: 'center',
-              fontFamily: 'BrandonGrotesque-Regular',
-            }}>
-            <Text style={{color: 'yellow'}}>{itemId}</Text>
-            <Header
-              marginTop={-40}
-              iconName="closesquareo"
-              color="#000"
-              fontSize={18}
-              header2
-              headertext={otherParam}
-              OnPress={() => navigation.goBack()}
+        <View
+          style={{
+            width: '90%',
+            alignSelf: 'center',
+            fontFamily: 'BrandonGrotesque-Regular',
+          }}>
+          <Text style={{color: 'yellow'}}>{itemId}</Text>
+          <Header
+            marginTop={-40}
+            iconName="closesquareo"
+            color="#000"
+            fontSize={18}
+            header2
+            headertext={otherParam}
+            OnPress={() => navigation.goBack()}
+          />
+          <View style={{marginTop: 47}}>
+            <FlatList
+              data={data}
+              keyExtractor={item => item.id}
+              renderItem={({item}) => {
+                return <Reset imgtrue={plus} icontrue={heart} />;
+              }}
             />
-            <View style={{marginTop: 47}}>
-              <FlatList
-                data={data}
-                keyExtractor={item => item.id}
-                renderItem={({item}) => {
-                  return <Reset imgtrue={plus} icontrue={heart} />;
-                }}
-              />
-            </View>
           </View>
         </View>
       </ScrollView>
-    </>
+    </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({

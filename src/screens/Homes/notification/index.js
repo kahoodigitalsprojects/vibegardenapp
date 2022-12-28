@@ -8,6 +8,7 @@ import {
   ScrollView,
   StatusBar,
 } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {Header} from '../../../componrnts';
 import Images from '../../../constants';
 
@@ -57,7 +58,7 @@ const Notification = props => {
     },
   ];
   return (
-    <View style={styles.main}>
+    <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
@@ -208,7 +209,7 @@ const Notification = props => {
           </View>
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 };
 

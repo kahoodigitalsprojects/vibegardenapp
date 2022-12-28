@@ -449,19 +449,9 @@ const Search2 = ({route, navigation, otherParam}) => {
                       renderItem={({item}) => {
                         return (
                           <All
-                            pressI={() =>
-                              props.navigation.navigate('Video', {
-                                screen: 'Video',
-                                params: {
-                                  otherParam: false,
-                                  plus: false,
-                                  otherParam1: 'FAMILY OF LIGHT',
-                                  icon1: false,
-                                  backoption: () =>
-                                    props.navigation.navigate('GroundWork'),
-                                },
-                              })
-                            }
+                            pressI={() => {
+                              return;
+                            }}
                             iconimg1
                             searchTop={-28}
                             searchmargin={25}

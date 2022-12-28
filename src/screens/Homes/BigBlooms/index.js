@@ -12,6 +12,7 @@ import {
 import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 import Icon from 'react-native-vector-icons/Feather';
+import {SafeAreaView} from 'react-native-safe-area-context';
 const BigBlooms = ({route, navigation}) => {
   const {newtext} = route.params;
   const {heading1} = route.params;
@@ -38,11 +39,11 @@ const BigBlooms = ({route, navigation}) => {
     },
   ];
   return (
-    <ScrollView
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={{flexGrow: 1}}>
-      <StatusBar animated={true} backgroundColor="#000" />
-      <View style={styles.main}>
+    <SafeAreaView style={styles.main}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{flexGrow: 1}}>
+        <StatusBar animated={true} backgroundColor="#000" />
         <View style={{width: '90%', marginTop: 10}}>
           <Header
             width={'25%'}
@@ -179,8 +180,8 @@ const BigBlooms = ({route, navigation}) => {
             />
           </View>
         </View>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({

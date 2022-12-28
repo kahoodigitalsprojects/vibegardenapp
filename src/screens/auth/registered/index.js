@@ -8,93 +8,53 @@ import {
   TouchableOpacity,
   StatusBar,
 } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 const Registerd = ({route, navigation}) => {
   return (
-    <>
+    <SafeAreaView style={styles.main}>
       <StatusBar animated={true} backgroundColor="#000" />
-      <View style={styles.main}>
+      <View
+        style={{
+          width: '95%',
+          alignSelf: 'center',
+          marginTop: 20,
+          alignItems: 'center',
+        }}>
+        <Header
+          iconName="closesquareo"
+          header2
+          OnPress={() => navigation.goBack()}
+        />
         <View
           style={{
-            width: '95%',
+            width: 120,
+            height: 120,
+            marginTop: 30,
             alignSelf: 'center',
-            marginTop: 20,
-            alignItems: 'center',
           }}>
-          <Header
-            iconName="closesquareo"
-            header2
-            OnPress={() => navigation.goBack()}
+          <Image
+            source={Images.Icons.envelop}
+            style={{width: '100%', height: '100%'}}
           />
-          <View
-            style={{
-              width: 120,
-              height: 120,
-              marginTop: 30,
-              alignSelf: 'center',
-            }}>
-            <Image
-              source={Images.Icons.envelop}
-              style={{width: '100%', height: '100%'}}
-            />
-          </View>
+        </View>
 
-          <View style={{width: '90%', alignSelf: 'center'}}>
-            <TouchableOpacity
-              style={
-                {
-                  // backgroundColor: 'pink',
-                }
-              }
-              onPress={() =>
-                navigation.navigate('login', {
-                  registerd1: true,
-                  itemId: 86,
-                  otherParam: 'anything you want here',
-                })
-              }>
-              <View style={{width: '100%'}}>
-                <Text
-                  style={{
-                    fontSize: 15,
-                    color: '#000',
-                    lineHeight: 30,
-                    fontFamily: 'BrandonGrotesque-Medium',
-                  }}>
-                  This Email Is Already Registered With Vibegarden, Please{' '}
-                  <Text
-                    style={{
-                      color: '#1C5C2E',
-                      borderBottomWidth: 1,
-                      textAlign: 'justify',
-                      // fontWeight: '600',
-                      textDecorationLine: 'underline',
-                      letterSpacing: 1,
-                      fontFamily: 'BrandonGrotesque-Medium',
-                    }}>
-                    Log In.
-                  </Text>
-                </Text>
-              </View>
-            </TouchableOpacity>
-            <View style={{marginVertical: 20, alignSelf: 'center'}}>
-              <Text
-                style={{
-                  fontWeight: '600',
-                  color: '#1C5C2E',
-                  paddingLeft: 10,
-                  fontFamily: 'BrandonGrotesque-Medium',
-                }}>
-                Or
-              </Text>
-            </View>
-            <TouchableOpacity
-              style={{
+        <View style={{width: '90%', alignSelf: 'center'}}>
+          <TouchableOpacity
+            style={
+              {
                 // backgroundColor: 'pink',
-                flexDirection: 'row',
-              }}
-              onPress={() => navigation.navigate('forgerpsaaword')}>
+              }
+            }
+            onPress={() =>
+              navigation.navigate('login', {
+                registerd1: true,
+                itemId: 86,
+                otherParam: 'anything you want here',
+              })
+            }>
+            <View style={{width: '100%'}}>
               <Text
                 style={{
                   fontSize: 15,
@@ -102,25 +62,64 @@ const Registerd = ({route, navigation}) => {
                   lineHeight: 30,
                   fontFamily: 'BrandonGrotesque-Medium',
                 }}>
-                Or If You’ve Forgotten Your Password,{' '}
+                This Email Is Already Registered With Vibegarden, Please{' '}
                 <Text
                   style={{
                     color: '#1C5C2E',
                     borderBottomWidth: 1,
                     textAlign: 'justify',
-
+                    // fontWeight: '600',
                     textDecorationLine: 'underline',
                     letterSpacing: 1,
                     fontFamily: 'BrandonGrotesque-Medium',
                   }}>
-                  Click Here.
+                  Log In.
                 </Text>
               </Text>
-            </TouchableOpacity>
+            </View>
+          </TouchableOpacity>
+          <View style={{marginVertical: 20, alignSelf: 'center'}}>
+            <Text
+              style={{
+                fontWeight: '600',
+                color: '#1C5C2E',
+                paddingLeft: 10,
+                fontFamily: 'BrandonGrotesque-Medium',
+              }}>
+              Or
+            </Text>
           </View>
+          <TouchableOpacity
+            style={{
+              // backgroundColor: 'pink',
+              flexDirection: 'row',
+            }}
+            onPress={() => navigation.navigate('forgerpsaaword')}>
+            <Text
+              style={{
+                fontSize: 15,
+                color: '#000',
+                lineHeight: 30,
+                fontFamily: 'BrandonGrotesque-Medium',
+              }}>
+              Or If You’ve Forgotten Your Password,{' '}
+              <Text
+                style={{
+                  color: '#1C5C2E',
+                  borderBottomWidth: 1,
+                  textAlign: 'justify',
+
+                  textDecorationLine: 'underline',
+                  letterSpacing: 1,
+                  fontFamily: 'BrandonGrotesque-Medium',
+                }}>
+                Click Here.
+              </Text>
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
-    </>
+    </SafeAreaView>
   );
 };
 export default Registerd;

@@ -57,6 +57,15 @@ const Percentage = ({
           style={{
             alignSelf: 'center',
             marginHorizontal: margin1,
+            shadowColor: 'rgba(0,0,0,0.4)',
+            shadowOffset: {
+              width: 0,
+              height: 12,
+            },
+            shadowOpacity: 0.58,
+            shadowRadius: 16.0,
+
+            elevation: 24,
           }}>
           <Image source={Image1} style={[styles.img]} resizeMode="contain" />
           {Pertext && (

@@ -144,14 +144,14 @@ const Home = ({navigation, route}) => {
               }>
               <SeeAll
                 onPress={() => {
-                  navigation.navigate('me');
-                  setTimeout(function () {
-                    navigation.navigate('FressBlooms', {
+                  navigation.navigate('me', {
+                    screen: 'FressBlooms',
+                    params: {
                       otherParam: 'Fresh Blooms',
                       heart: true,
                       icon1: false,
-                    });
-                  }, 100);
+                    },
+                  });
                 }}
                 color1="#1C5C2E"
                 textA="FRESH BLOOMS"
@@ -195,25 +195,25 @@ const Home = ({navigation, route}) => {
                         marginTop={13}
                         marginBottom={10}
                         color1="#1C5C2E"
-                        pressI={
-                          () => {
-                            navigation.navigate('GroundWork');
-                            setTimeout(function () {
-                              navigation.navigate('Video', {
-                                otherParam: false,
-                                plus: false,
-                                otherParam1: 'FAMILY OF LIGHT',
-                                backoption: () => navigation.goBack(),
-                              });
-                            }, 100);
-                          }
-                          // navigation.navigate('Video', {
-                          //   otherParam: false,
-                          //   plus: false,
-                          //   otherParam1: 'FAMILY OF LIGHT',
-                          //   backoption: () => navigation.navigate('GroundWork'),
-                          // })
-                        }
+                        pressI={() => {
+                          navigation.navigate('GroundWork', {
+                            screen: 'Video',
+                            params: {
+                              otherParam: false,
+                              plus: false,
+                              otherParam1: 'FAMILY OF LIGHT',
+                              backoption: () => navigation.goBack(),
+                            },
+                          });
+                          // setTimeout(function () {
+                          //   navigation.navigate('Video', {
+                          //     otherParam: false,
+                          //     plus: false,
+                          //     otherParam1: 'FAMILY OF LIGHT',
+                          //     backoption: () => navigation.goBack(),
+                          //   });
+                          // }, 100);
+                        }}
                         textA={item.textA}
                         heart1={item.heart1}
                         textB={item.textB}

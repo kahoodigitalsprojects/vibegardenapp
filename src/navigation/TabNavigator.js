@@ -13,6 +13,7 @@ const TabNavigator = () => {
     <Tab.Navigator
       initialRouteName="Homes"
       screenOptions={{
+        unmountOnBlur: true,
         headerShown: false,
         tabBarActiveTintColor: '#1C5C2E',
         tabBarStyle: {
@@ -58,30 +59,66 @@ const TabNavigator = () => {
       <Tab.Screen
         name="tools"
         component={ToolsStackScreen}
-        options={{
-          tabBarLabel: 'Tools',
-          // tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
-          tabBarIcon: ({focused}) =>
-            focused ? (
-              <Image source={Images.Logos.hands} />
-            ) : (
-              <Image source={Images.Logos.layer2} />
-            ),
+        options={({route}) => {
+          const focusedRouteName = getFocusedRouteNameFromRoute(route);
+          if (hiddenTabrBarScreens.includes(focusedRouteName)) {
+            return {
+              tabBarStyle: {
+                display: 'none',
+                bottom: -200,
+                height: 0,
+              },
+            };
+          }
+          return {
+            tabBarStyle: {
+              display: 'flex',
+              height: 90,
+              borderTopLeftRadius: 20,
+              borderTopRightRadius: 20,
+            },
+            tabBarLabel: 'Tools',
+            // tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
+            tabBarIcon: ({focused}) =>
+              focused ? (
+                <Image source={Images.Logos.hands} />
+              ) : (
+                <Image source={Images.Logos.layer2} />
+              ),
+          };
         }}
       />
 
       <Tab.Screen
         name="GroundWork"
         component={GroundworkStackScreen}
-        options={{
-          tabBarLabel: 'Groundwork',
-          tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
-          tabBarIcon: ({focused}) =>
-            focused ? (
-              <Image source={Images.Icons.leaf} />
-            ) : (
-              <Image source={Images.Logos.layer} />
-            ),
+        options={({route}) => {
+          const focusedRouteName = getFocusedRouteNameFromRoute(route);
+          if (hiddenTabrBarScreens.includes(focusedRouteName)) {
+            return {
+              tabBarStyle: {
+                display: 'none',
+                bottom: -200,
+                height: 0,
+              },
+            };
+          }
+          return {
+            tabBarStyle: {
+              display: 'flex',
+              height: 90,
+              borderTopLeftRadius: 20,
+              borderTopRightRadius: 20,
+            },
+            tabBarLabel: 'Groundwork',
+            // tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
+            tabBarIcon: ({focused}) =>
+              focused ? (
+                <Image source={Images.Icons.leaf} />
+              ) : (
+                <Image source={Images.Logos.layer} />
+              ),
+          };
         }}
       />
       <Tab.Screen
@@ -105,8 +142,9 @@ const TabNavigator = () => {
               borderTopLeftRadius: 20,
               borderTopRightRadius: 20,
             },
+
             tabBarLabel: 'Me',
-            tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
+            // tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
             tabBarIcon: ({focused}) =>
               focused ? (
                 <Image source={Images.Icons.small} />
@@ -122,9 +160,18 @@ const TabNavigator = () => {
 export default TabNavigator;
 
 const hiddenTabrBarScreens = [
-  'PrivacyPolicy',
-  'PrivacyPolicy',
-  'PrivacyPolicy',
+  'Video',
+  'Buddhisim',
+  'question4',
+  'question3',
+  'question2',
+  'question',
+  'resonance',
+  'star',
+  'Bigblooms',
+  'BloomsCheck',
+  'Result',
+  'FressBlooms',
   'Packges',
   'PrivacyPolicy',
   'CancelSubscription',
