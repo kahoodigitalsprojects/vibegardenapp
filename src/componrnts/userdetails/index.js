@@ -127,6 +127,7 @@ const Userdetails = ({
                       marginTop: 5,
                       fontWeight: 'bold',
                       fontSize: 13,
+                      color: '#000',
                     }}>
                     {names}
                   </Text>

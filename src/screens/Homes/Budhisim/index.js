@@ -50,7 +50,7 @@ const Buddhisim = props => {
       bg1: Images.BackGround.black,
       bg12: Images.BackGround.Bg2,
       name: 'TONGLEN',
-      title: 'title',
+      title: 'Title',
       plus: 'plus',
       textA: 'Related Tools',
     },
@@ -60,7 +60,7 @@ const Buddhisim = props => {
       bg12: Images.BackGround.Bg2,
       heart1: Images.Icons.heart1,
       name: 'TONGLEN',
-      title: 'title',
+      title: 'Title',
       textA: 'Related Groundwork',
     },
   ];

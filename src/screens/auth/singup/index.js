@@ -69,7 +69,7 @@ const SignUp = ({route, navigation}) => {
                   style={{
                     fontSize: 18,
                     fontFamily: 'BrandonGrotesque-Medium',
-                    color: '#030303',
+                    color: '#aaa',
                   }}>
                   Sign Up With Email
                 </Text>

@@ -20,6 +20,9 @@ const All = ({
   title,
   heart1,
   marginTop2,
+  searchmargin,
+
+  searchTop,
   textA,
   textB,
   onPress,
@@ -31,8 +34,9 @@ const All = ({
   iconimg12,
   iconimg13,
   iconimg14,
-  marginVertical,
+  marginVertical2,
   plus,
+  marginBottom,
   iconimg1,
 
   pressI,
@@ -80,7 +84,7 @@ const All = ({
             width: '95%',
             flexDirection: 'row',
             justifyContent: 'space-between',
-            marginVertical: marginVertical,
+            marginBottom: marginBottom,
             marginTop: marginTop,
             marginVertical: 5,
           }}>
@@ -131,8 +135,8 @@ const All = ({
                     onPress={pressI}
                     style={{
                       // backgroundColor: 'pink',
-                      top: 18,
-                      right: 8,
+                      top: 12,
+                      right: 4,
                       position: 'absolute',
                       height: 33,
                       width: 33,
@@ -163,52 +167,56 @@ const All = ({
 
                       alignItems: 'center',
                     }}>
-                    {iconimg1 && (
-                      <View
-                        style={{
-                          marginTop: marginTop2,
-                          width: 30,
-                          height: 25,
-                          // backgroundColor: 'yellow',
-                        }}>
-                        <Image
-                          source={item.iconimg1}
-                          resizeMode="contain"
+                    <View
+                      style={{
+                        marginVertical: searchmargin,
+                        marginTop: searchTop,
+                      }}>
+                      {iconimg1 && (
+                        <View
                           style={{
-                            width: '100%',
-                            height: '100%',
-                          }}
-                        />
-                      </View>
-                    )}
-                    {iconimg2 && (
-                      <View
-                        style={{
-                          marginTop: marginTop2,
-                          marginVertical: 8,
-                          width: 30,
-                          height: 25,
-                          // backgroundColor: 'yellow',
-                        }}>
-                        <Image
-                          source={item.iconimg2}
-                          resizeMode="contain"
-                          style={{
-                            width: '100%',
-                            height: '100%',
-                          }}
-                        />
-                      </View>
-                    )}
+                            width: 30,
+                            height: 25,
 
-                    <View style={{}}>
+                            // backgroundColor: 'yellow',
+                          }}>
+                          <Image
+                            source={item.iconimg1}
+                            resizeMode="contain"
+                            style={{
+                              width: '100%',
+                              height: '100%',
+                            }}
+                          />
+                        </View>
+                      )}
+                      {iconimg2 && (
+                        <View
+                          style={{
+                            width: 30,
+                            height: 25,
+
+                            // backgroundColor: 'yellow',
+                          }}>
+                          <Image
+                            source={item.iconimg2}
+                            resizeMode="contain"
+                            style={{
+                              width: '100%',
+                              height: '100%',
+                            }}
+                          />
+                        </View>
+                      )}
+                    </View>
+                    <View style={{marginTop: -15}}>
                       <Text
                         style={{
                           textAlign: 'center',
                           fontSize: 20,
                           color: '#000',
-                          fontFamily: 'BrandonGrotesque-Regular',
-                          marginTop: marginTop2,
+                          fontFamily: 'BrandonGrotesque-Medium',
+                          paddingBottom: 10,
                         }}>
                         {title}
                       </Text>

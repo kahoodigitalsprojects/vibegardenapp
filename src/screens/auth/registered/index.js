@@ -61,7 +61,6 @@ const Registerd = ({route, navigation}) => {
                     color: '#000',
                     lineHeight: 30,
                     fontFamily: 'BrandonGrotesque-Medium',
-                    fontWeight: '600',
                   }}>
                   This Email Is Already Registered With Vibegarden, Please{' '}
                   <Text

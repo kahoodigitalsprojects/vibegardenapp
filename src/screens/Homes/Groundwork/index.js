@@ -51,16 +51,15 @@ const GroundWork = props => {
           <Header
             marginTop={-30}
             marginLeft={-15}
-            heartleft1={25}
-            hearttop={5}
+            size={22}
+            colorplus={'green'}
+            marginTopplus={-2}
             color="green"
             img1
             heartplus
             search1="search1"
             homeheader={true}
-            search={() =>
-              props.navigation.navigate('Homes', {screen: 'Search'})
-            }
+            search={props.navigation.navigate('Homes', {screen: 'Search'})}
             heart
             // plus
           />
@@ -70,6 +69,7 @@ const GroundWork = props => {
             <Text
               style={{
                 textAlign: 'center',
+                marginTop: 10,
                 fontSize: 28,
                 fontFamily: 'BrandonGrotesque-Regular',
                 color: '#000000',
@@ -81,8 +81,8 @@ const GroundWork = props => {
                 textAlign: 'center',
                 fontSize: 18,
                 marginVertical: 10,
-                fontFamily: 'BrandonGrotesque-Medium',
-                color: '#00000066',
+                fontFamily: 'BrandonGrotesque-Regular',
+                color: '#000',
               }}>
               Let's remember together Erin
             </Text>
@@ -112,6 +112,7 @@ const GroundWork = props => {
                       <View style={{}}>
                         <MainBox
                           marginTop11={40}
+                          marginTop={30}
                           minutes={'3 min'}
                           icon2={true}
                           left={65}

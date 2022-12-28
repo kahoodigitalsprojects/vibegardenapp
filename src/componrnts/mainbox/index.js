@@ -78,7 +78,7 @@ const MainBox = ({
                   style={{
                     // backgroundColor: 'pink',
                     height: 33,
-                    marginTop: 10,
+                    marginTop: 35,
                     width: 33,
                   }}>
                   <Image
@@ -94,7 +94,7 @@ const MainBox = ({
                   textAlign: 'center',
                   fontSize: 26,
                   marginTop: marginTop,
-                  fontFamily: 'BrandonGrotesque-Bold',
+                  fontFamily: 'BrandonGrotesque-Medium',
                 }}>
                 {textone}
               </Text>
@@ -102,19 +102,20 @@ const MainBox = ({
             <View
               style={{
                 width: 77,
-                height: 30,
+                height: 35,
                 borderRadius: 12,
-                // margin: 2,
                 backgroundColor: bgcolor,
-                marginTop: 5,
                 justifyContent: 'center',
                 alignItems: 'center',
+                marginTop: 6
               }}>
               <Text
                 style={{
                   color: '#fff',
                   textAlign: 'center',
                   fontFamily: 'BrandonGrotesque-Regular',
+                  padding: 5,
+                  margin: 2,
                 }}>
                 {minutes}
               </Text>

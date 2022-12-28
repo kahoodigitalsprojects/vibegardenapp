@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -66,12 +66,12 @@ const Greenbox = ({
     },
   ];
   return (
-    <View style={{ marginVertical: 10 }}>
+    <View style={{marginVertical: 10}}>
       <FlatList
         showsHorizontalScrollIndicator={false}
         horizontal={true}
         data={Data}
-        renderItem={({ item, index }) => {
+        renderItem={({item, index}) => {
           return (
             <TouchableOpacity
               onPress={() => (index === true ? '' : setdata1(index))}
@@ -81,17 +81,16 @@ const Greenbox = ({
                 width: 90,
                 height: 80,
                 borderRadius: 15,
-
                 margin: 5,
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
               {img1 && (
                 <>
-                  <View style={{ width: 24, height: 24, alignSelf: 'center' }}>
+                  <View style={{width: 24, height: 24, alignSelf: 'center'}}>
                     <Image
                       source={item.Image1}
-                      style={{ width: '100%', height: '100%' }}
+                      style={{width: '100%', height: '100%'}}
                     />
                   </View>
                   <Text
@@ -108,17 +107,17 @@ const Greenbox = ({
               <View>
                 {img2 && (
                   <>
-                    <View style={{ width: 24, height: 24, alignSelf: 'center' }}>
+                    <View style={{width: 24, height: 24, alignSelf: 'center'}}>
                       <Image
                         source={item.Image2}
-                        style={{ width: '100%', height: '100%' }}
+                        style={{width: '100%', height: '100%'}}
                       />
                     </View>
                     <Text
                       style={{
                         textAlign: 'center',
                         fontFamily: 'BrandonGrotesque-Regular',
-                        color: data1 === index ? '#fff' : '#000',
+                        color: data1 === index ? '#fff' : '#1C5C2E',
                       }}>
                       {item.title2}
                     </Text>
@@ -129,12 +128,12 @@ const Greenbox = ({
           );
         }}
       />
-      <View View style={{ marginVertical: 30, flexDirection: 'row' }}>
+      <View View style={{marginVertical: 30, flexDirection: 'row'}}>
         <View>
           <FlatList
             horizontal={true}
             data={data}
-            renderItem={({ item, index }) => {
+            renderItem={({item, index}) => {
               return (
                 <TouchableOpacity
                   onPress={onPress1}
@@ -169,12 +168,12 @@ const Greenbox = ({
             width: 25,
             height: 25,
             color: '#fff',
-
+            marginLeft: 10,
             borderRadius: 100,
             justifyContent: 'center',
             alignItems: 'center',
           }}>
-          <Text style={{ color: '#fff', fontFamily: 'BrandonGrotesque-Regular' }}>
+          <Text style={{color: '#fff', fontFamily: 'BrandonGrotesque-Regular'}}>
             +
           </Text>
         </TouchableOpacity>
@@ -214,4 +213,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { Greenbox };
+export {Greenbox};

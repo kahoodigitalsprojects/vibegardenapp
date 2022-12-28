@@ -43,7 +43,7 @@ const Searcbart1 = props => {
           </TouchableOpacity>
           <TextInput
             placeholder="Heart"
-            placeholderTextColor={'#979B9F'}
+            placeholderTextColor={'#323232'}
             style={{width: '80%', color: 'black'}}></TextInput>
         </View>
         <TouchableOpacity

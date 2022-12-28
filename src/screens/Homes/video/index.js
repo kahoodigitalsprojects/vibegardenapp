@@ -113,7 +113,7 @@ const Video = ({route, navigation}) => {
                 fontSize={20}
                 search1="closesquareo"
                 logo11
-                hearttop={4}
+                hearttop={-5}
                 color="#fff"
                 gbg="#1C5C2E"
                 alignItems="center"
@@ -148,7 +148,6 @@ const Video = ({route, navigation}) => {
               style={{
                 width: '90%',
                 alignSelf: 'center',
-                marginVertical: 10,
               }}>
               <FlatList
                 data={data2}
@@ -219,7 +218,7 @@ const Video = ({route, navigation}) => {
               <View
                 style={[
                   styles.row,
-                  {marginVertical: 20, width: '95%', alignSelf: 'center'},
+                  {width: '95%', alignSelf: 'center', marginTop: 10},
                 ]}>
                 <Text
                   style={{
@@ -272,6 +271,7 @@ const Video = ({route, navigation}) => {
                   fontSize: 20,
                   color: '#1C5C2E',
                   fontFamily: 'BrandonGrotesque-Regular',
+                  marginTop: 5,
                 }}>
                 Related Content:
               </Text>
@@ -301,6 +301,7 @@ const Video = ({route, navigation}) => {
                         plus={item.plus}
                         bghome2={item.bg12}
                         title={item.title}
+                        
                       />
                     </View>
                   );
@@ -345,7 +346,7 @@ const Video = ({route, navigation}) => {
                       style={{
                         marginTop: 20,
                         marginVertical: 5,
-                        width: '95%',
+                        width: '100%',
                         alignSelf: 'center',
                       }}>
                       <Userdetails
@@ -423,6 +424,7 @@ const styles = StyleSheet.create({
     width: '90%',
     alignSelf: 'center',
     // height: '100%',
+    marginTop: -25,
     // backgroundColor: 'yellow',
   },
   row: {

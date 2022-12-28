@@ -1,17 +1,18 @@
-import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
 
-const SeeAll = ({ color1, textA, textB, onPress, width }) => {
+const SeeAll = ({color1, textA, textB, onPress, width}) => {
   return (
     <View
       style={{
-        width: width,
+        width: '95%',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginVertical: 10,
-
+        // marginVertical: marginVertical,
+        // marginTop: marginTop,
+        marginVertical: 5,
       }}>
-      <Text style={[styles.txtA, { color: color1 }]}>{textA}</Text>
+      <Text style={[styles.txtA, {color: color1}]}>{textA}</Text>
       <TouchableOpacity onPress={onPress} style={{}}>
         <Text style={styles.txtB}>{textB}</Text>
       </TouchableOpacity>
@@ -19,7 +20,7 @@ const SeeAll = ({ color1, textA, textB, onPress, width }) => {
   );
 };
 
-export { SeeAll };
+export {SeeAll};
 
 const styles = StyleSheet.create({
   header: {
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
   },
   txtA: {
     color: '#1C5C2E',
-    fontWeight: '500',
+    fontWeight: '700',
     fontSize: 20,
     fontFamily: 'BrandonGrotesque-Medium',
 
@@ -38,11 +39,11 @@ const styles = StyleSheet.create({
   },
   txtB: {
     color: '#1C5C2E',
-    fontWeight: '500',
+    fontWeight: '700',
     fontSize: 14,
     textDecorationLine: 'underline',
     fontFamily: 'BrandonGrotesque-Medium',
-
+    marginTop: 4,
     opacity: 0.85,
   },
 });

@@ -77,7 +77,7 @@ const Header = props => {
                 alignItems: alignItems,
                 alignSelf: 'flex-start',
               }}>
-              <Icon2 name={search1} size={25} color={color} />
+              <Icon2 name={search1} size={20} color={color} />
             </TouchableOpacity>
             {heading && (
               <View

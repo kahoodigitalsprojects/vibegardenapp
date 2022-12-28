@@ -71,7 +71,7 @@ const Login = ({route, navigation}) => {
                 fontSize: 18,
                 fontFamily: 'BrandonGrotesque-Medium',
                 marginTop: 17,
-                color: '#030303',
+                color: '#aaa',
               }}>
               Login With Email
             </Text>

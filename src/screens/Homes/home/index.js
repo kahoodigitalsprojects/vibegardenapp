@@ -139,11 +139,10 @@ const Home = ({navigation, route}) => {
             <View
               style={
                 {
-                  // backgroundColor: 'red'
+                  // backgroundColor: 'red',
                 }
               }>
               <SeeAll
-                width={'95%'}
                 onPress={() => {
                   navigation.navigate('me');
                   setTimeout(function () {
@@ -193,7 +192,8 @@ const Home = ({navigation, route}) => {
                   return (
                     <>
                       <All
-                        marginVertical={15}
+                        marginTop={13}
+                        marginBottom={10}
                         color1="#1C5C2E"
                         pressI={
                           () => {

@@ -446,6 +446,8 @@ const Search2 = ({route, navigation, otherParam}) => {
                               })
                             }
                             iconimg1
+                            searchTop={-28}
+                            searchmargin={25}
                             onPressALL={item.pressAll}
                             textA={item.textA}
                             // heart1={item.heart1}
