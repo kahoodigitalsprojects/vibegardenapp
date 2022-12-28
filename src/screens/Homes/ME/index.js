@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -11,25 +11,22 @@ import {
   FlatList,
 } from 'react-native';
 import {Header, Percentage, Pinkbtn} from '../../../componrnts';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import Icon2 from 'react-native-vector-icons/AntDesign';
+
 import Images from '../../../constants';
-import {BackHandler} from 'react-native';
-import {useNavigationState} from '@react-navigation/native';
-import Header2 from '../../../componrnts/header2';
-import ResultComponents from '../../../componrnts/resultcompo';
-const Me = props => {
-  const [state1, setState1] = useState(false);
+
+import SearchModal from '../../../componrnts/SearchModal';
+const Me = ({navigation}) => {
+  const [visible, setVisible] = useState(false);
   const data = [{text1: 'Last Weak'}, {text1: '30 days'}, {text1: 'All'}];
   const data1 = [
     {
       img1: Images.Icons.gpluse,
       text1: 'Tools to try',
       onPress: () => {
-        props.navigation.navigate('FressBlooms', {
+        navigation.navigate('FressBlooms', {
           otherParam: 'Tools to try',
           plus: true,
-          backoption: () => props.navigation.goBack(),
+          backoption: () => navigation.goBack(),
         });
       },
     },
@@ -37,10 +34,10 @@ const Me = props => {
       img1: Images.Icons.arrow,
       text1: 'Recent Content',
       onPress: () => {
-        props.navigation.navigate('FressBlooms', {
+        navigation.navigate('FressBlooms', {
           otherParam: 'Recent Content',
           plus: true,
-          backoption: () => props.navigation.goBack(),
+          backoption: () => navigation.goBack(),
         });
       },
     },
@@ -48,10 +45,10 @@ const Me = props => {
       img1: Images.Icons.gheart,
       text1: 'Favorites',
       onPress: () => {
-        props.navigation.navigate('FressBlooms', {
+        navigation.navigate('FressBlooms', {
           otherParam: 'Favorites',
           heart: true,
-          backoption: () => props.navigation.goBack(),
+          backoption: () => navigation.goBack(),
         });
       },
     },
@@ -59,10 +56,10 @@ const Me = props => {
       img1: Images.Icons.star,
       text1: 'Top Tools',
       onPress: () => {
-        props.navigation.navigate('FressBlooms', {
+        navigation.navigate('FressBlooms', {
           otherParam: 'Top Tools',
           plus: true,
-          backoption: () => props.navigation.goBack(),
+          backoption: () => navigation.goBack(),
         });
       },
     },
@@ -70,37 +67,14 @@ const Me = props => {
       img1: Images.Icons.spiral,
       text1: 'Your Resonance Finder Result',
       onPress: () => {
-        props.navigation.navigate('Result', {
+        navigation.navigate('Result', {
           otherParam: 'Top Tools',
           plus: true,
-          backoption: () => props.navigation.goBack(),
+          backoption: () => navigation.goBack(),
         });
       },
     },
   ];
-  const state = useNavigationState(state => state);
-  const routeName = state.routeNames[state.index];
-  console.log('route', routeName);
-  console.log(' params', props?.route?.params?.screen);
-  // const backAction = () => {
-  //   console.log(' me');
-  //   // backoption();
-  //   if (props?.route?.params?.screen) {
-  //     props.navigation.replace('me');
-  //   }
-  //   return true;
-  // };
-  useEffect(() => {
-    BackHandler.addEventListener('hardwareBackPress', () => {
-      // if (props?.route?.params?.screen) {
-      // props.navigation.replace('Me');
-      // }
-      console.log(' sdfsdfsdf');
-    });
-    // return () => {
-    //   effect
-    // };
-  }, []);
 
   return (
     <>
@@ -114,11 +88,6 @@ const Me = props => {
               width: '90%',
               alignSelf: 'center',
               marginTop: 25,
-              // paddingVertical: 20,
-              // position: 'absolute',
-              // top: 8,
-              // height: 60,
-              // marginBottom: 20,
             }}>
             <Header
               marginTop={-42}
@@ -128,11 +97,9 @@ const Me = props => {
               marginLeft={-15}
               search1="search1"
               homeheader={true}
-              search={() => {
-                props.navigation.navigate('Homes', {screen: 'Search'});
-              }}
-              OnPress={() => props.navigation.navigate('notification')}
-              OnPress1={() => props.navigation.navigate('settings')}
+              search={() => setVisible(true)}
+              OnPress={() => navigation.navigate('notification')}
+              OnPress1={() => navigation.navigate('settings')}
             />
           </View>
           <View style={styles.Box1}>
@@ -263,7 +230,7 @@ const Me = props => {
                     shadow="#00000019"
                     width={'65%'}
                     onPress={() => {
-                      props.navigation.navigate('BloomsCheck', {
+                      navigation.navigate('BloomsCheck', {
                         Image1: Images.Imgs.Rainbow,
                         Image2: Images.Imgs.Rainbow,
                         Image3: Images.Imgs.Rainbow,
@@ -282,6 +249,11 @@ const Me = props => {
           </View>
           <View style={{marginVertical: 25}} />
         </ScrollView>
+        <SearchModal
+          visible={visible}
+          setVisible={setVisible}
+          navigation={navigation}
+        />
       </SafeAreaView>
     </>
   );

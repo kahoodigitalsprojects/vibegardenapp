@@ -7,11 +7,9 @@ import {
   FlatList,
   Modal,
 } from 'react-native';
-import {Button, Overlay} from 'react-native-elements';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import {Overlay} from 'react-native-elements';
+
 import Icon from 'react-native-vector-icons/AntDesign';
-import Images from '../../constants';
-import {Header} from '../header';
 
 const Modaldata = ({
   Visible,
@@ -21,26 +19,16 @@ const Modaldata = ({
   modalType,
   headtext,
   setTypeName,
-  text2,
-  text3,
-  text4,
-  text5,
-  text6,
-  text7,
-  text8,
-  text9,
-  text10,
-  text11,
   activeTab,
   data,
 }) => {
-  const [state1, setState1] = useState(false);
   return (
     <>
       <Overlay
         overlayStyle={{
           height: '100%',
           width: '100%',
+          paddingTop: 50,
         }}
         style={{}}
         // animationType="slide" // transparent={false}

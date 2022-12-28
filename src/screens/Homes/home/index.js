@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -12,9 +12,11 @@ import {
 import {Header, SeeAll} from '../../../componrnts';
 import All from '../../../componrnts/all';
 import MainBox from '../../../componrnts/mainbox';
+import SearchModal from '../../../componrnts/SearchModal';
 import Images from '../../../constants';
 
 const Home = ({navigation, route}) => {
+  const [visible, setVisible] = useState(false);
   const backAction = () => {
     // navigation.navigate('Mytabes', {screen: 'homes'});
   };
@@ -113,7 +115,7 @@ const Home = ({navigation, route}) => {
             search1="search1"
             color="green"
             homeheader={true}
-            search={() => navigation.navigate('Search')}
+            search={() => setVisible(true)}
             heart
             plus
             size={22}
@@ -230,6 +232,11 @@ const Home = ({navigation, route}) => {
           </View>
         </View>
       </ScrollView>
+      <SearchModal
+        visible={visible}
+        setVisible={setVisible}
+        navigation={navigation}
+      />
     </SafeAreaView>
   );
 };

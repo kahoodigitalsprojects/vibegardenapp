@@ -9,29 +9,27 @@ import React from 'react';
 import {SearchBar} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-const Searcbart1 = props => {
-  const {close1} = props;
+const Searcbart1 = ({setIsTyping, onPressRight, onPressLeft}) => {
   return (
-    <View>
+    <View style={{width: '100%', paddingHorizontal: 20}}>
       <View
         style={{
-          width: '90%',
+          width: '100%',
+          // marginHorizontal: 10,
           height: 40,
           backgroundColor: '#BCCFC1',
-          alignSelf: 'center',
           marginTop: 20,
           borderRadius: 12,
-          border: ' none',
           flexDirection: 'row',
           justifyContent: 'space-between',
         }}>
         <View
           style={{
-            width: '86%',
+            flex: 1,
             flexDirection: 'row',
           }}>
           <TouchableOpacity
-            onPress={props.onpress1}
+            onPress={onPressLeft}
             style={{
               width: 40,
               height: 40,
@@ -42,12 +40,18 @@ const Searcbart1 = props => {
             <Icon name="search1" size={25} color="#1C5C2E" />
           </TouchableOpacity>
           <TextInput
+            onFocus={() => setIsTyping(true)}
             placeholder="Heart"
             placeholderTextColor={'#323232'}
-            style={{width: '80%', color: 'black'}}></TextInput>
+            style={{
+              flex: 1,
+              color: 'black',
+              // backgroundColor: 'red',
+            }}
+          />
         </View>
         <TouchableOpacity
-          onPress={props.onpress2}
+          onPress={onPressRight}
           style={{
             width: 40,
             height: 40,
