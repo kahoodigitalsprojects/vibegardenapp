@@ -28,11 +28,7 @@ export default function HomeStackScreen() {
         component={Home}
         options={{headerShown: false}}
       />
-      <HomeStack.Screen
-        name="Search3"
-        component={Search3}
-        options={{headerShown: false}}
-      />
+  
       <HomeStack.Screen
         name="EditScreen"
         component={EditScreen}

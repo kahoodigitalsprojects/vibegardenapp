@@ -19,6 +19,7 @@ import Result from '../screens/Homes/result';
 import EmailNotification from '../screens/Homes/emailNotification';
 import Pushnotification from '../screens/Homes/pushnotification';
 import PrivacyPolicy from '../screens/Homes/privacyPolicy';
+import Search3 from '../screens/Homes/Search3';
 export default function MeStackScreen() {
   const MeStack = createNativeStackNavigator();
 
@@ -110,6 +111,11 @@ export default function MeStackScreen() {
       <MeStack.Screen
         name="PrivacyPolicy"
         component={PrivacyPolicy}
+        options={{headerShown: false}}
+      />
+      <MeStack.Screen
+        name="Search3"
+        component={Search3}
         options={{headerShown: false}}
       />
     </MeStack.Navigator>

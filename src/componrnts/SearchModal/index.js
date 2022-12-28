@@ -1,4 +1,11 @@
-import {StyleSheet, Text, View, Image, ScrollView} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  ScrollView,
+  Platform,
+} from 'react-native';
 import React, {useState} from 'react';
 import {Overlay} from 'react-native-elements';
 import Searcbart1 from '../searchbar1';
@@ -20,7 +27,7 @@ const SearchModal = ({visible, setVisible, navigation}) => {
       onRequestClose={() => {
         setVisible(visible);
       }}>
-      <View style={{marginVertical: 15}} />
+      <View style={{marginVertical: Platform.OS === 'ios' ? 15 : 5}} />
 
       {isTyping ? (
         <ScrollView
