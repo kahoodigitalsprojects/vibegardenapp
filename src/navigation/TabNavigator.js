@@ -92,15 +92,33 @@ const TabNavigator = () => {
       <Tab.Screen
         name="GroundWork"
         component={GroundworkStackScreen}
-        options={{
-          tabBarLabel: 'Groundwork',
-          // tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
-          tabBarIcon: ({focused}) =>
-            focused ? (
-              <Image source={Images.Icons.leaf} />
-            ) : (
-              <Image source={Images.Logos.layer} />
-            ),
+        options={({route}) => {
+          const focusedRouteName = getFocusedRouteNameFromRoute(route);
+          if (hiddenTabrBarScreens.includes(focusedRouteName)) {
+            return {
+              tabBarStyle: {
+                display: 'none',
+                bottom: -200,
+                height: 0,
+              },
+            };
+          }
+          return {
+            tabBarStyle: {
+              display: 'flex',
+              height: 90,
+              borderTopLeftRadius: 20,
+              borderTopRightRadius: 20,
+            },
+            tabBarLabel: 'Groundwork',
+            // tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
+            tabBarIcon: ({focused}) =>
+              focused ? (
+                <Image source={Images.Icons.leaf} />
+              ) : (
+                <Image source={Images.Logos.layer} />
+              ),
+          };
         }}
       />
       <Tab.Screen
@@ -142,6 +160,8 @@ const TabNavigator = () => {
 export default TabNavigator;
 
 const hiddenTabrBarScreens = [
+  'Video',
+  'Buddhisim',
   'question4',
   'question3',
   'question2',

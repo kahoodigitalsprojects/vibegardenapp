@@ -31,11 +31,11 @@ const Star = props => {
             iconName="closesquareo"
             header2
             OnPress={() => {
-              // props.navigation.reset({
-              //   index: 0,
-              //   routes: [{name: 'me'}],
-              // });
-              props.navigation.navigate('me');
+              props.navigation.reset({
+                index: 0,
+                routes: [{name: 'Homes'}, {name: 'me'}],
+              });
+              // props.navigation.navigate('me');
               // props.navigation.navigate('Homes');
             }}
           />
