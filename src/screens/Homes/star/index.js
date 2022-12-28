@@ -1,3 +1,4 @@
+import {CommonActions} from '@react-navigation/native';
 import React, {startTransition, useState} from 'react';
 import {
   View,
@@ -29,12 +30,14 @@ const Star = props => {
           <Header
             iconName="closesquareo"
             header2
-            OnPress={() =>
-              props.navigation.reset({
-                index: 0,
-                routes: [{name: 'Homes'}],
-              })
-            }
+            OnPress={() => {
+              // props.navigation.reset({
+              //   index: 0,
+              //   routes: [{name: 'me'}],
+              // });
+              props.navigation.navigate('me');
+              // props.navigation.navigate('Homes');
+            }}
           />
           <View
             style={{

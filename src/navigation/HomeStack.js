@@ -49,13 +49,13 @@ export default function HomeStackScreen() {
         component={EditScreen}
         options={{headerShown: false}}
       />
-      <HomeStack.Screen
+      {/* <HomeStack.Screen
         name="Packges"
         component={Packages}
         options={{headerShown: false}}
-      />
+      /> */}
 
-      <HomeStack.Screen
+      {/* <HomeStack.Screen
         name="PaymentMethod"
         component={PaymentMethod}
         options={{headerShown: false}}
@@ -64,7 +64,7 @@ export default function HomeStackScreen() {
         name="CancelSubscription"
         component={CancelSubscription}
         options={{headerShown: false}}
-      />
+      /> */}
     </HomeStack.Navigator>
   );
 }

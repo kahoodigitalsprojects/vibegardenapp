@@ -36,7 +36,6 @@ export default function ToolsStackScreen() {
         options={{headerShown: false}}
       />
 
-    
       <ToolsStack.Screen
         name="resonance"
         component={Resonance}
