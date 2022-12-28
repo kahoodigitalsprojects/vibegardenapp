@@ -124,15 +124,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderRadius: 15,
     shadowColor: '#CD258D',
-    overflow: 'hidden',
+    // overflow: 'hidden',
+    // shadowColor: '#000',
     shadowOffset: {
-      width: 40,
-      height: 80,
+      width: 0,
+      height: 12,
     },
-    shadowOpacity: 1,
-    shadowRadius: 7.84,
-    // height: 273,
-    elevation: 20,
+    shadowOpacity: 0.58,
+    shadowRadius: 16.0,
+
+    elevation: 24,
   },
   img: {
     width: 80,

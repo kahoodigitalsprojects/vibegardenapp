@@ -169,7 +169,8 @@ const Me = props => {
                     color: '#000',
                     fontSize: 20,
                     fontWeight: '500',
-                    marginVertical: 10,
+                    marginBottom: 10,
+                    marginTop: 25,
                     fontFamily: 'BrandonGrotesque-Medium',
                   }}>
                   Library:
