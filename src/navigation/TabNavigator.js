@@ -95,15 +95,33 @@ const TabNavigator = () => {
       <Tab.Screen
         name="me"
         component={MeStackScreen}
-        options={{
-          tabBarLabel: 'Me',
-          tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
-          tabBarIcon: ({focused}) =>
-            focused ? (
-              <Image source={Images.Icons.small} />
-            ) : (
-              <Image source={Images.Icons.small} />
-            ),
+        options={({route}) => {
+          const focusedRouteName = getFocusedRouteNameFromRoute(route);
+          if (focusedRouteName === 'settings') {
+            return {
+              tabBarStyle: {
+                display: 'none',
+                bottom: -200,
+                height: 0,
+              },
+            };
+          }
+          return {
+            tabBarStyle: {
+              display: 'flex',
+              height: 80,
+              borderTopLeftRadius: 20,
+              borderTopRightRadius: 20,
+            },
+            tabBarLabel: 'Me',
+            tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
+            tabBarIcon: ({focused}) =>
+              focused ? (
+                <Image source={Images.Icons.small} />
+              ) : (
+                <Image source={Images.Icons.small} />
+              ),
+          };
         }}
       />
     </Tab.Navigator>

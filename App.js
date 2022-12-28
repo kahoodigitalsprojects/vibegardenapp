@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import MyStack from './src/navigation/Stack';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {Text} from 'react-native';
 import {MenuProvider} from 'react-native-popup-menu';
 import RootStack from './src/navigation/RootStack';
@@ -10,10 +10,11 @@ const App = props => {
   }, []);
 
   return (
-    <MenuProvider>
-      {/* <MyStack {...props} /> */}
-      <RootStack />
-    </MenuProvider>
+    <SafeAreaProvider>
+      <MenuProvider>
+        <RootStack />
+      </MenuProvider>
+    </SafeAreaProvider>
   );
 };
 

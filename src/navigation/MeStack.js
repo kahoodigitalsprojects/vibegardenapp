@@ -34,9 +34,6 @@ export default function MeStackScreen() {
         component={Notification}
         options={{headerShown: false}}
       />
-
-    
-
       <MeStack.Screen
         name="FressBlooms"
         component={FressBlooms}
