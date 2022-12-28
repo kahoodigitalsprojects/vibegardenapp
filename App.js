@@ -1,5 +1,8 @@
 import React, {useEffect} from 'react';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {
+  SafeAreaProvider,
+  initialWindowMetrics,
+} from 'react-native-safe-area-context';
 import {Text} from 'react-native';
 import {MenuProvider} from 'react-native-popup-menu';
 import RootStack from './src/navigation/RootStack';
@@ -10,7 +13,7 @@ const App = props => {
   }, []);
 
   return (
-    <SafeAreaProvider>
+    <SafeAreaProvider initialMetrics={initialWindowMetrics}>
       <MenuProvider>
         <RootStack />
       </MenuProvider>
