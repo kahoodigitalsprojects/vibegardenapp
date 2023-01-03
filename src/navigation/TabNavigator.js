@@ -7,6 +7,8 @@ import GroundworkStackScreen from './GroundworkStack';
 import ToolsStackScreen from './ToolsStack';
 import MeStackScreen from './MeStack';
 import {getFocusedRouteNameFromRoute} from '@react-navigation/native';
+import DeviceInfo from 'react-native-device-info';
+let hasNotch = DeviceInfo.hasNotch();
 const Tab = createBottomTabNavigator();
 const TabNavigator = () => {
   return (
@@ -17,7 +19,7 @@ const TabNavigator = () => {
         headerShown: false,
         tabBarActiveTintColor: '#1C5C2E',
         tabBarStyle: {
-          height: Platform.OS === 'ios' ? 85 : 80,
+          height: hasNotch ? 85 : 80,
           borderTopLeftRadius: 20,
           borderTopRightRadius: 20,
         },
@@ -40,12 +42,16 @@ const TabNavigator = () => {
           return {
             tabBarStyle: {
               display: 'flex',
-              height: Platform.OS === 'ios' ? 85 : 80,
+              height: hasNotch ? 85 : 80,
               borderTopLeftRadius: 20,
               borderTopRightRadius: 20,
             },
             tabBarLabel: 'Garden',
-            tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
+            tabBarLabelStyle: {marginBottom: hasNotch ? -5 : 0},
+            tabBarItemStyle: {
+              paddingBottom: hasNotch ? 0 : 10,
+              marginTop: hasNotch ? 5 : 0,
+            },
             tabBarIcon: ({focused}) =>
               focused ? (
                 <>{Images.svgs.gardenDark}</>
@@ -73,12 +79,16 @@ const TabNavigator = () => {
           return {
             tabBarStyle: {
               display: 'flex',
-              height: Platform.OS === 'ios' ? 85 : 80,
+              height: hasNotch ? 85 : 80,
               borderTopLeftRadius: 20,
               borderTopRightRadius: 20,
             },
             tabBarLabel: 'Tools',
-            tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
+            tabBarLabelStyle: {marginBottom: hasNotch ? -5 : 0},
+            tabBarItemStyle: {
+              paddingBottom: hasNotch ? 0 : 10,
+              marginTop: hasNotch ? 5 : 0,
+            },
             tabBarIcon: ({focused}) =>
               focused ? (
                 <>{Images.svgs.toolsDark}</>
@@ -106,12 +116,16 @@ const TabNavigator = () => {
           return {
             tabBarStyle: {
               display: 'flex',
-              height: Platform.OS === 'ios' ? 85 : 80,
+              height: hasNotch ? 85 : 80,
               borderTopLeftRadius: 20,
               borderTopRightRadius: 20,
             },
             tabBarLabel: 'Groundwork',
-            tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
+            tabBarLabelStyle: {marginBottom: hasNotch ? -5 : 0},
+            tabBarItemStyle: {
+              paddingBottom: hasNotch ? 0 : 10,
+              marginTop: hasNotch ? 5 : 0,
+            },
             tabBarIcon: ({focused}) =>
               focused ? (
                 <>{Images.svgs.groundworkDark}</>
@@ -138,13 +152,17 @@ const TabNavigator = () => {
           return {
             tabBarStyle: {
               display: 'flex',
-              height: Platform.OS === 'ios' ? 85 : 80,
+              height: hasNotch ? 85 : 80,
               borderTopLeftRadius: 20,
               borderTopRightRadius: 20,
             },
 
             tabBarLabel: 'Me',
-            tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
+            tabBarLabelStyle: {marginBottom: hasNotch ? -5 : 0},
+            tabBarItemStyle: {
+              paddingBottom: hasNotch ? 0 : 10,
+              marginTop: hasNotch ? 5 : 0,
+            },
             tabBarIcon: () => (
               <Image
                 source={Images.Icons.meIcon}
