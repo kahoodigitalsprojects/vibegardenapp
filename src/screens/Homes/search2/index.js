@@ -316,7 +316,9 @@ const Search2 = ({route, navigation, otherParam}) => {
 
           {activeTab === 1 ? (
             <>
-              <View
+              <ScrollView
+                horizontal
+                showsHorizontalScrollIndicator={false}
                 style={{
                   width: '100%',
                   flexDirection: 'row',
@@ -392,7 +394,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                     />
                   )}
                 </TouchableOpacity>
-              </View>
+              </ScrollView>
 
               <View style={[styles.box2, {}]}>
                 <FlatList
@@ -429,7 +431,9 @@ const Search2 = ({route, navigation, otherParam}) => {
           ) : null}
           {activeTab === 2 ? (
             <>
-              <View
+              <ScrollView
+                horizontal
+                showsHorizontalScrollIndicator={false}
                 style={{
                   width: '100%',
                   flexDirection: 'row',
@@ -506,7 +510,7 @@ const Search2 = ({route, navigation, otherParam}) => {
                     />
                   )}
                 </TouchableOpacity>
-              </View>
+              </ScrollView>
               <View>
                 <FlatList
                   showsHorizontalScrollIndicator={false}
