@@ -178,7 +178,7 @@ const SignUp = ({route, navigation}) => {
                         textAlign: 'center',
                         fontFamily: 'BrandonGrotesque-Medium',
                       }}>
-                      Already have an account?
+                      Already have an account?{' '}
                       <Text
                         style={{
                           fontWeight: 'bold',

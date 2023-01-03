@@ -202,7 +202,7 @@ const Login = ({route, navigation}) => {
               fontWeight: '500',
               fontFamily: 'BrandonGrotesque-Medium',
             }}>
-            Don't have an account?
+            Don't have an account?{' '}
             <Text
               style={{
                 fontWeight: 'bold',

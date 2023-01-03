@@ -29,7 +29,7 @@ const Question3 = props => {
               marginRight={-40}
               marginTop={-40}
               color="#1C5C2E"
-              iconName="closesquareo"
+              iconName="arrowleft"
               header2
               headertext="Resonance Finder"
               fontSize={25}

@@ -107,7 +107,7 @@ const Greenbox = ({
               <View>
                 {img2 && (
                   <>
-                    <View style={{width: 24, height: 24, alignSelf: 'center'}}>
+                    <View style={{width: 28, height: 26, alignSelf: 'center'}}>
                       <Image
                         source={item.Image2}
                         style={{width: '100%', height: '100%'}}

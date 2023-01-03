@@ -103,14 +103,15 @@ const Me = ({navigation}) => {
             />
           </View>
           <View style={styles.Box1}>
-            <View style={{width: '90%', alignSelf: 'center', marginTop: 20}}>
+            <View style={{width: '90%', alignSelf: 'center'}}>
               <Text
                 style={{
                   textAlign: 'center',
                   fontSize: 28,
                   fontWeight: '600',
                   color: '#000000',
-                  marginVertical: 20,
+                  // marginVertical: 10,
+                  marginBottom: 25,
                   fontFamily: 'BrandonGrotesque-Regular',
                 }}>
                 Erin
@@ -127,7 +128,7 @@ const Me = ({navigation}) => {
                   margin1={10}
                   text1="Current Bloom:"
                   Image1={Images.Imgs.lotus1}
-                  icons={true}
+                  // icons={true}
                 />
               </View>
               <View style={styles.data}>
@@ -247,7 +248,6 @@ const Me = ({navigation}) => {
               </View>
             </View>
           </View>
-    
         </ScrollView>
         <SearchModal
           visible={visible}

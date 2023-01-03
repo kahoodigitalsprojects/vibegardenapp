@@ -29,7 +29,7 @@ const Question = props => {
             marginTop={-40}
             color="#1C5C2E"
             fontSize={25}
-            iconName="closesquareo"
+            iconName="arrowleft"
             header2
             headertext="Resonance Finder"
             OnPress={() => props.navigation.goBack('')}

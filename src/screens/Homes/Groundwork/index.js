@@ -63,7 +63,7 @@ const GroundWork = ({navigation}) => {
             homeheader={true}
             search={() => setVisible(true)}
             heart
-            // plus
+            plus
           />
           {/* <Header
             marginTop={-30}
