@@ -92,35 +92,41 @@ const Greenbox = ({
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              {img1 && (
-                <>
-                  <View style={{width: 24, height: 24, alignSelf: 'center'}}>
+              <>
+                <View style={{width: 24, height: 24, alignSelf: 'center'}}>
+                  {index === 0 ? (
                     <Image
-                      source={item.Image1}
+                      source={data1 === 0 ? item.Image1 : item.Image3}
                       style={{width: '100%', height: '100%'}}
                     />
-                  </View>
-
-                  <View style={{width: 24, height: 24, alignSelf: 'center'}}>
+                  ) : (
                     <Image
-                      source={item.Image3}
+                      source={data1 === index ? item.Image3 : item.Image1}
                       style={{width: '100%', height: '100%'}}
                     />
-                  </View>
+                  )}
+                </View>
 
-                  <Text
-                    style={{
-                      textAlign: 'center',
-                      color: data1 === index ? '#fff' : '#1C5C2E',
-                      fontFamily: 'BrandonGrotesque-Regular',
-                      fontSize: 14,
-                    }}>
-                    {item.title}
-                  </Text>
-                </>
-              )}
+                {/* <View style={{width: 24, height: 24, alignSelf: 'center'}}>
+                  <Image
+                    source={item.Image3}
+                    style={{width: '100%', height: '100%'}}
+                  />
+                </View> */}
+
+                <Text
+                  style={{
+                    textAlign: 'center',
+                    color: data1 === index ? '#fff' : '#1C5C2E',
+                    fontFamily: 'BrandonGrotesque-Regular',
+                    fontSize: 12,
+                    width: 45,
+                  }}>
+                  {item.title}
+                </Text>
+              </>
               <View>
-                {img2 && (
+                {/* {img2 && (
                   <>
                     <View style={{width: 28, height: 26, alignSelf: 'center'}}>
                       {index === 0 ? (
@@ -153,7 +159,7 @@ const Greenbox = ({
                       {item.title2}
                     </Text>
                   </>
-                )}
+                )} */}
               </View>
             </TouchableOpacity>
           );
