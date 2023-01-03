@@ -28,7 +28,7 @@ const Modaldata = ({
         overlayStyle={{
           height: '100%',
           width: '100%',
-          paddingTop: 50,
+          paddingTop: 10,
         }}
         style={{}}
         // animationType="slide" // transparent={false}

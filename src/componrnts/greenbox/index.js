@@ -21,10 +21,13 @@ const Greenbox = ({
   boxtex3,
 }) => {
   const [data1, setdata1] = useState(0);
+
+  const [state, setstate] = useState(true);
   const Data = [
     {
       Image1: Images.Icons.upload,
       Image2: Images.Icons.up1,
+      Image3: Images.Icons.downloadgreen,
       title: 'Top',
       title2: 'Top',
       Press: Press,
@@ -32,24 +35,28 @@ const Greenbox = ({
     {
       Image1: Images.Icons.light,
       Image2: Images.Icons.gleaf,
+      Image3: Images.Icons.wsun,
       title: 'Tools For Light',
       title2: 'Essents',
     },
     {
       Image1: Images.Icons.circle,
       Image2: Images.Icons.blocks,
+      Image3: Images.Icons.wcircle,
       title: 'Tools for Shadow',
       title2: 'Build Blocks',
     },
     {
       Image2: Images.Icons.gdownload,
       Image1: Images.Icons.triangle,
+      Image3: Images.Icons.wtrangle,
       title: 'Tools for Content',
       title2: 'Deep Dives',
     },
     {
       Image2: Images.Logos.greenheart,
       Image1: Images.Icons.triangle,
+      Image3: Images.Icons.wtrangle,
       title: 'Tools for Content',
       title2: 'Play',
     },
@@ -93,6 +100,14 @@ const Greenbox = ({
                       style={{width: '100%', height: '100%'}}
                     />
                   </View>
+
+                  <View style={{width: 24, height: 24, alignSelf: 'center'}}>
+                    <Image
+                      source={item.Image3}
+                      style={{width: '100%', height: '100%'}}
+                    />
+                  </View>
+
                   <Text
                     style={{
                       textAlign: 'center',
@@ -108,11 +123,27 @@ const Greenbox = ({
                 {img2 && (
                   <>
                     <View style={{width: 28, height: 26, alignSelf: 'center'}}>
-                      <Image
-                        source={item.Image2}
-                        style={{width: '100%', height: '100%'}}
-                      />
+                      {index === 0 ? (
+                        <>
+                          {data1 === index && (
+                            <Image
+                              source={item.Image2}
+                              style={{width: '100%', height: '100%'}}
+                            />
+                          )}
+                        </>
+                      ) : (
+                        <>
+                          {data1 === index && (
+                            <Image
+                              source={item.Image3}
+                              style={{width: '100%', height: '100%'}}
+                            />
+                          )}
+                        </>
+                      )}
                     </View>
+
                     <Text
                       style={{
                         textAlign: 'center',
@@ -139,7 +170,6 @@ const Greenbox = ({
                   onPress={onPress1}
                   style={{
                     elevation: 2,
-
                     backgroundColor: '#BCCFC1',
                     margin: 5,
                     padding: 5,
