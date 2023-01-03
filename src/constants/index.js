@@ -1,6 +1,6 @@
-import {GardenLight, GardenDark} from '../assests/svgs/GardenSvg';
-import {ToolsLight, ToolsDark} from '../assests/svgs/ToolsSvg';
-import {GroundworkDark, GroundworkLight} from '../assests/svgs/GroundworkSvg';
+import { GardenLight, GardenDark } from '../assests/svgs/GardenSvg';
+import { ToolsLight, ToolsDark } from '../assests/svgs/ToolsSvg';
+import { GroundworkDark, GroundworkLight } from '../assests/svgs/GroundworkSvg';
 const Images = {
   BackGround: {
     Bg1: require('../assests/images/bg1.png'),
@@ -93,6 +93,8 @@ const Images = {
     waves: require('../assests/images/whitewaves.png'),
     wbox: require('../assests/images/whitebox.png'),
     wtrangle: require('../assests/images/wtriangle.png'),
+    greenupload: require('../assests/images/greenupload.png'),
+    greenarrow: require('../assests/images/greenarrow.png')
   },
   Imgs: {
     pic1: require('../assests/images/pic1.png/'),
