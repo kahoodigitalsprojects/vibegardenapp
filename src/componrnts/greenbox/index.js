@@ -90,7 +90,7 @@ const Greenbox = ({
               style={{
                 backgroundColor: data1 === index ? '#1C5C2E87' : '#fff',
                 elevation: data1 === index ? 0 : 5,
-                width: 90,
+                width: 100,
                 height: 80,
                 borderRadius: 15,
                 margin: 5,
@@ -99,7 +99,7 @@ const Greenbox = ({
               }}>
               {img1 && (
                 <>
-                  <View style={{ width: 30, height: 24, alignSelf: 'center' }}>
+                  <View style={{ width: 28, height: 24, alignSelf: 'center' }}>
                     {index === 0 ? (
                       <Image
                         source={data1 === 0 ? item.Image1 : item.Image3}
@@ -135,7 +135,7 @@ const Greenbox = ({
               <View>
                 {img2 && (
                   <>
-                    <View style={{ width: 28, height: 24, alignSelf: 'center' }}>
+                    <View style={{ width: 24, height: 24, alignSelf: 'center' }}>
                       {index === 0 ? (
                         <Image
                           source={data1 === 0 ? item.Image2 : item.Image3}
