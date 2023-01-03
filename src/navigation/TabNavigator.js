@@ -48,9 +48,9 @@ const TabNavigator = () => {
             tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
             tabBarIcon: ({focused}) =>
               focused ? (
-                <Image source={Images.Logos.greenlogo} />
+                <>{Images.svgs.gardenDark}</>
               ) : (
-                <Image source={Images.Logos.greylog} />
+                <>{Images.svgs.gardenLight}</>
               ),
           };
         }}
@@ -81,9 +81,9 @@ const TabNavigator = () => {
             tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
             tabBarIcon: ({focused}) =>
               focused ? (
-                <Image source={Images.Logos.hands} />
+                <>{Images.svgs.toolsDark}</>
               ) : (
-                <Image source={Images.Logos.layer2} />
+                <>{Images.svgs.toolsLight}</>
               ),
           };
         }}
@@ -114,9 +114,9 @@ const TabNavigator = () => {
             tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
             tabBarIcon: ({focused}) =>
               focused ? (
-                <Image source={Images.Icons.leaf} />
+                <>{Images.svgs.groundworkDark}</>
               ) : (
-                <Image source={Images.Logos.layer} />
+                <>{Images.svgs.groundworkLight}</>
               ),
           };
         }}
@@ -145,12 +145,13 @@ const TabNavigator = () => {
 
             tabBarLabel: 'Me',
             tabBarItemStyle: {paddingBottom: Platform.OS === 'ios' ? 0 : 10},
-            tabBarIcon: ({focused}) =>
-              focused ? (
-                <Image source={Images.Icons.small} />
-              ) : (
-                <Image source={Images.Icons.small} />
-              ),
+            tabBarIcon: () => (
+              <Image
+                source={Images.Icons.meIcon}
+                resizeMode="contain"
+                style={{height: 34, width: 34}}
+              />
+            ),
           };
         }}
       />

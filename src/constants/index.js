@@ -1,3 +1,6 @@
+import {GardenLight, GardenDark} from '../assests/svgs/GardenSvg';
+import {ToolsLight, ToolsDark} from '../assests/svgs/ToolsSvg';
+import {GroundworkDark, GroundworkLight} from '../assests/svgs/GroundworkSvg';
 const Images = {
   BackGround: {
     Bg1: require('../assests/images/bg1.png'),
@@ -52,6 +55,8 @@ const Images = {
     bluee: require('../assests/images/bluee.png'),
     heart1: require('../assests/images/heart1.png'),
     small: require('../assests/images/small.png'),
+    meIcon: require('../assests/images/meIcon.png'),
+    meIconSmall: require('../assests/images/meIconSmall.png'),
     leaf: require('../assests/images/leaf.png'),
     gheart: require('../assests/images/gheart.png'),
     gpluse: require('../assests/images/gplus.png'),
@@ -118,6 +123,14 @@ const Images = {
     smallblue1: require('../assests/images/smallblue1.png'),
     bluelotus: require('../assests/images/bluelotus.png'),
     lotusD: require('../assests/images/lotusd.png'),
+  },
+  svgs: {
+    gardenLight: <GardenLight />,
+    gardenDark: <GardenDark />,
+    toolsLight: <ToolsLight />,
+    toolsDark: <ToolsDark />,
+    groundworkLight: <GroundworkLight />,
+    groundworkDark: <GroundworkDark />,
   },
 };
 
