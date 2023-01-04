@@ -24,6 +24,7 @@ import Images from '../../../constants';
 import MainBox from '../../../componrnts/mainbox';
 import All from '../../../componrnts/all';
 import Question from '../Question';
+import {useBackButton} from '../../../hooks/BackHandler';
 
 const Video = ({route, navigation}) => {
   const [state, setState] = useState(icon1);
@@ -37,6 +38,16 @@ const Video = ({route, navigation}) => {
   const {backoption} = route.params;
   const {fromHome} = route.params || null;
   // const { Heading } = route.params;
+
+  //BackHandler
+  const onBackPress = () => {
+    navigation.reset({
+      index: 0,
+      routes: [{name: 'GroundWork'}, {name: 'Homes'}],
+    });
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
   const Data3 = [
     {text1: 'Not Really', img11: Images.Imgs.R1},
 
