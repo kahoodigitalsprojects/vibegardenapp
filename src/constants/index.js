@@ -93,6 +93,8 @@ const Images = {
     waves: require('../assests/images/whitewaves.png'),
     wbox: require('../assests/images/whitebox.png'),
     wtrangle: require('../assests/images/wtriangle.png'),
+    grenarrow: require('../assests/images/greenarrow.png'),
+    wheartoutline: require('../assests/images/wheartoutline.png'),
   },
   Imgs: {
     pic1: require('../assests/images/pic1.png/'),

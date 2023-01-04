@@ -28,6 +28,7 @@ const Greenbox = ({
       Image1: Images.Icons.upload,
       Image2: Images.Icons.up1,
       Image3: Images.Icons.downloadgreen,
+      Image4: Images.Icons.grenarrow,
       title: 'Top',
       title2: 'Top',
       Press: Press,
@@ -36,6 +37,8 @@ const Greenbox = ({
       Image1: Images.Icons.light,
       Image2: Images.Icons.gleaf,
       Image3: Images.Icons.wsun,
+      Image4: Images.Icons.wleafe,
+
       title: 'Tools For Light',
       title2: 'Essents',
     },
@@ -43,6 +46,8 @@ const Greenbox = ({
       Image1: Images.Icons.circle,
       Image2: Images.Icons.blocks,
       Image3: Images.Icons.wcircle,
+      Image4: Images.Icons.wbox,
+
       title: 'Tools for Shadow',
       title2: 'Build Blocks',
     },
@@ -50,6 +55,7 @@ const Greenbox = ({
       Image2: Images.Icons.gdownload,
       Image1: Images.Icons.triangle,
       Image3: Images.Icons.wtrangle,
+      Image4: Images.Icons.waves,
       title: 'Tools for Content',
       title2: 'Deep Dives',
     },
@@ -57,6 +63,7 @@ const Greenbox = ({
       Image2: Images.Logos.greenheart,
       Image1: Images.Icons.triangle,
       Image3: Images.Icons.wtrangle,
+      Image4: Images.Icons.wheartoutline,
       title: 'Tools for Content',
       title2: 'Play',
     },
@@ -93,37 +100,64 @@ const Greenbox = ({
                 alignItems: 'center',
               }}>
               <>
-                <View style={{width: 24, height: 24, alignSelf: 'center'}}>
-                  {index === 0 ? (
-                    <Image
-                      source={data1 === 0 ? item.Image1 : item.Image3}
-                      style={{width: '100%', height: '100%'}}
-                    />
-                  ) : (
-                    <Image
-                      source={data1 === index ? item.Image3 : item.Image1}
-                      style={{width: '100%', height: '100%'}}
-                    />
-                  )}
-                </View>
-
-                {/* <View style={{width: 24, height: 24, alignSelf: 'center'}}>
-                  <Image
-                    source={item.Image3}
-                    style={{width: '100%', height: '100%'}}
-                  />
-                </View> */}
-
-                <Text
-                  style={{
-                    textAlign: 'center',
-                    color: data1 === index ? '#fff' : '#1C5C2E',
-                    fontFamily: 'BrandonGrotesque-Regular',
-                    fontSize: 12,
-                    width: 45,
-                  }}>
-                  {item.title}
-                </Text>
+                {img1 && (
+                  <>
+                    <View style={{width: 24, height: 24, alignSelf: 'center'}}>
+                      {index === 0 ? (
+                        <Image
+                          resizeMode="contain"
+                          source={data1 === 0 ? item.Image1 : item.Image3}
+                          style={{width: '100%', height: '100%'}}
+                        />
+                      ) : (
+                        <Image
+                          resizeMode="contain"
+                          source={data1 === index ? item.Image3 : item.Image1}
+                          style={{width: '100%', height: '100%'}}
+                        />
+                      )}
+                    </View>
+                    <Text
+                      style={{
+                        textAlign: 'center',
+                        color: data1 === index ? '#fff' : '#1C5C2E',
+                        fontFamily: 'BrandonGrotesque-Regular',
+                        fontSize: 12,
+                        width: 45,
+                      }}>
+                      {item.title}
+                    </Text>
+                  </>
+                )}
+                {img2 && (
+                  <>
+                    <View style={{width: 24, height: 24, alignSelf: 'center'}}>
+                      {index === 0 ? (
+                        <Image
+                          source={data1 === 0 ? item.Image2 : item.Image4}
+                          resizeMode="contain"
+                          style={{width: '100%', height: '100%'}}
+                        />
+                      ) : (
+                        <Image
+                          resizeMode="contain"
+                          source={data1 === index ? item.Image4 : item.Image2}
+                          style={{width: '100%', height: '100%'}}
+                        />
+                      )}
+                    </View>
+                    <Text
+                      style={{
+                        textAlign: 'center',
+                        color: data1 === index ? '#fff' : '#1C5C2E',
+                        fontFamily: 'BrandonGrotesque-Regular',
+                        fontSize: 12,
+                        width: 50,
+                      }}>
+                      {item.title2}
+                    </Text>
+                  </>
+                )}
               </>
               <View>
                 {/* {img2 && (
