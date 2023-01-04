@@ -9,6 +9,7 @@ import {
   Image,
   TouchableOpacity,
   FlatList,
+  ImageBackground,
 } from 'react-native';
 import {Header, Percentage, Pinkbtn} from '../../../componrnts';
 
@@ -77,9 +78,12 @@ const Me = ({navigation}) => {
   ];
 
   return (
-    <>
-      <SafeAreaView style={styles.main}>
-        <StatusBar animated={true} backgroundColor="#000" />
+    <SafeAreaView style={styles.main}>
+      <StatusBar animated={true} backgroundColor="#000" />
+      <ImageBackground
+        source={Images.BackGround.backgroundHue}
+        resizeMode="stretch"
+        style={styles.image}>
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1}}>
@@ -123,7 +127,7 @@ const Me = ({navigation}) => {
                   style={styles.cropimg}
                 />
               </View>
-              <View style={styles.wbox}>
+              <View style={{marginTop: 25}}>
                 <Percentage
                   margin1={10}
                   text1="Current Bloom:"
@@ -249,13 +253,13 @@ const Me = ({navigation}) => {
             </View>
           </View>
         </ScrollView>
-        <SearchModal
-          visible={visible}
-          setVisible={setVisible}
-          navigation={navigation}
-        />
-      </SafeAreaView>
-    </>
+      </ImageBackground>
+      <SearchModal
+        visible={visible}
+        setVisible={setVisible}
+        navigation={navigation}
+      />
+    </SafeAreaView>
   );
 };
 
@@ -284,6 +288,11 @@ const styles = StyleSheet.create({
   box1: {
     width: '90%',
     alignSelf: 'center',
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
+    // paddingTop: 100,
   },
 });
 

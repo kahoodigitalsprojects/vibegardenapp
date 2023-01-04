@@ -8,13 +8,13 @@ import {
   BackHandler,
   FlatList,
   StatusBar,
+  ImageBackground,
 } from 'react-native';
 import {Header, SeeAll} from '../../../componrnts';
 import All from '../../../componrnts/all';
 import MainBox from '../../../componrnts/mainbox';
 import SearchModal from '../../../componrnts/SearchModal';
 import Images from '../../../constants';
-
 const Home = ({navigation, route}) => {
   const [visible, setVisible] = useState(false);
   const backAction = () => {
@@ -96,144 +96,150 @@ const Home = ({navigation, route}) => {
   ];
   return (
     <SafeAreaView style={styles.main}>
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
-        <StatusBar animated={true} backgroundColor="#000" />
-        <View
-          style={{
-            width: '90%',
-            alignSelf: 'center',
-            marginVertical: 5,
-            marginTop: 25,
-          }}>
-          <Header
-            marginTop={-40}
-            marginLeft={-15}
-            img1
-            heartplus
-            search1="search1"
-            color="green"
-            homeheader={true}
-            search={() => setVisible(true)}
-            heart
-            plus
-            size={22}
-            colorplus={'green'}
-            marginTopplus={-2}
-          />
-        </View>
-        <View style={styles.Box1}>
-          <View style={{width: '90%', alignSelf: 'center', marginVertical: 8}}>
-            <Text
-              style={{
-                textAlign: 'center',
-                fontSize: 28,
-                fontWeight: '600',
-                color: '#000000',
-                marginTop: 20,
-                fontFamily: 'BrandonGrotesque-Regular',
-              }}>
-              Hi, You.
-            </Text>
+      <ImageBackground
+        source={Images.BackGround.backgroundHue}
+        resizeMode="stretch"
+        style={styles.image}>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{flexGrow: 1}}>
+          <StatusBar animated={true} backgroundColor="#000" />
+          <View
+            style={{
+              width: '90%',
+              alignSelf: 'center',
+              marginVertical: 5,
+              marginTop: 25,
+            }}>
+            <Header
+              marginTop={-40}
+              marginLeft={-15}
+              img1
+              heartplus
+              search1="search1"
+              color="green"
+              homeheader={true}
+              search={() => setVisible(true)}
+              heart
+              plus
+              size={22}
+              colorplus={'green'}
+              marginTopplus={-2}
+            />
           </View>
-          <View style={styles.centerbox}>
+          <View style={styles.Box1}>
             <View
-              style={
-                {
-                  // backgroundColor: 'red',
-                }
-              }>
-              <SeeAll
-                onPress={() => {
-                  navigation.navigate('me', {
-                    screen: 'FressBlooms',
-                    params: {
-                      otherParam: 'Fresh Blooms',
-                      heart: true,
-                      icon1: false,
-                      fromHome: true,
-                    },
-                  });
-                }}
-                color1="#1C5C2E"
-                textA="FRESH BLOOMS"
-                textB="See All"
-              />
+              style={{width: '90%', alignSelf: 'center', marginVertical: 8}}>
+              <Text
+                style={{
+                  textAlign: 'center',
+                  fontSize: 28,
+                  fontWeight: '600',
+                  color: '#000000',
+                  marginTop: 20,
+                  fontFamily: 'BrandonGrotesque-Regular',
+                }}>
+                Hi, You.
+              </Text>
+            </View>
+            <View style={styles.centerbox}>
+              <View
+                style={
+                  {
+                    // backgroundColor: 'red',
+                  }
+                }>
+                <SeeAll
+                  onPress={() => {
+                    navigation.navigate('me', {
+                      screen: 'FressBlooms',
+                      params: {
+                        otherParam: 'Fresh Blooms',
+                        heart: true,
+                        icon1: false,
+                        fromHome: true,
+                      },
+                    });
+                  }}
+                  color1="#1C5C2E"
+                  textA="FRESH BLOOMS"
+                  textB="See All"
+                />
+                <View style={[styles.box2, {}]}>
+                  <ScrollView
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}>
+                    {Data.map((item, index) => {
+                      return (
+                        <MainBox
+                          marginTop11={24}
+                          minutes={'5 min'}
+                          Wheart
+                          left={100}
+                          bgcolor={'#1C5C2E87'}
+                          img2={item.img4}
+                          marginTop2={43}
+                          item={item.ImgICon}
+                          color={'green'}
+                          textone="TONGLEN"
+                          date1={'Posted Date:12-01-2022'}
+                          text2={'5 min'}
+                        />
+                      );
+                    })}
+                  </ScrollView>
+                </View>
+              </View>
+
               <View style={[styles.box2, {}]}>
-                <ScrollView
-                  horizontal={true}
-                  showsHorizontalScrollIndicator={false}>
-                  {Data.map((item, index) => {
+                <FlatList
+                  showsHorizontalScrollIndicator={false}
+                  keyExtractor={item => item.id}
+                  data={Data}
+                  renderItem={({item}) => {
                     return (
-                      <MainBox
-                        marginTop11={24}
-                        minutes={'5 min'}
-                        Wheart
-                        left={100}
-                        bgcolor={'#1C5C2E87'}
-                        img2={item.img4}
-                        marginTop2={43}
-                        item={item.ImgICon}
-                        color={'green'}
-                        textone="TONGLEN"
-                        date1={'Posted Date:12-01-2022'}
-                        text2={'5 min'}
-                      />
+                      <>
+                        <All
+                          marginTop={13}
+                          marginBottom={10}
+                          color1="#1C5C2E"
+                          pressI={() => {
+                            navigation.navigate('GroundWork', {
+                              screen: 'Video',
+                              params: {
+                                otherParam: false,
+                                plus: false,
+                                otherParam1: 'FAMILY OF LIGHT',
+                                backoption: () => navigation.goBack(),
+                                fromHome: true,
+                              },
+                            });
+                            // setTimeout(function () {
+                            //   navigation.navigate('Video', {
+                            //     otherParam: false,
+                            //     plus: false,
+                            //     otherParam1: 'FAMILY OF LIGHT',
+                            //     backoption: () => navigation.goBack(),
+                            //   });
+                            // }, 100);
+                          }}
+                          textA={item.textA}
+                          heart1={item.heart1}
+                          textB={item.textB}
+                          homebox
+                          plus={item.plus}
+                          bghome2={item.bg12}
+                          title={item.title}
+                        />
+                      </>
                     );
-                  })}
-                </ScrollView>
+                  }}
+                />
               </View>
             </View>
-
-            <View style={[styles.box2, {}]}>
-              <FlatList
-                showsHorizontalScrollIndicator={false}
-                keyExtractor={item => item.id}
-                data={Data}
-                renderItem={({item}) => {
-                  return (
-                    <>
-                      <All
-                        marginTop={13}
-                        marginBottom={10}
-                        color1="#1C5C2E"
-                        pressI={() => {
-                          navigation.navigate('GroundWork', {
-                            screen: 'Video',
-                            params: {
-                              otherParam: false,
-                              plus: false,
-                              otherParam1: 'FAMILY OF LIGHT',
-                              backoption: () => navigation.goBack(),
-                              fromHome: true,
-                            },
-                          });
-                          // setTimeout(function () {
-                          //   navigation.navigate('Video', {
-                          //     otherParam: false,
-                          //     plus: false,
-                          //     otherParam1: 'FAMILY OF LIGHT',
-                          //     backoption: () => navigation.goBack(),
-                          //   });
-                          // }, 100);
-                        }}
-                        textA={item.textA}
-                        heart1={item.heart1}
-                        textB={item.textB}
-                        homebox
-                        plus={item.plus}
-                        bghome2={item.bg12}
-                        title={item.title}
-                      />
-                    </>
-                  );
-                }}
-              />
-            </View>
           </View>
-        </View>
-      </ScrollView>
+        </ScrollView>
+      </ImageBackground>
       <SearchModal
         visible={visible}
         setVisible={setVisible}
@@ -265,6 +271,11 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     // height: '100%',
     backgroundColor: 'yellow',
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
+    // paddingTop: 100,
   },
 });
 
