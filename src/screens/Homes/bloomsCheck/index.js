@@ -362,5 +362,6 @@ const styles = StyleSheet.create({
   box1: {
     width: '90%',
     alignSelf: 'center',
+    paddingBottom: 10, 
   },
 });
