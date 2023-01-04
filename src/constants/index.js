@@ -1,6 +1,6 @@
-import {GardenLight, GardenDark} from '../assests/svgs/GardenSvg';
-import {ToolsLight, ToolsDark} from '../assests/svgs/ToolsSvg';
-import {GroundworkDark, GroundworkLight} from '../assests/svgs/GroundworkSvg';
+import { GardenLight, GardenDark } from '../assests/svgs/GardenSvg';
+import { ToolsLight, ToolsDark } from '../assests/svgs/ToolsSvg';
+import { GroundworkDark, GroundworkLight } from '../assests/svgs/GroundworkSvg';
 const Images = {
   BackGround: {
     Bg1: require('../assests/images/bg1.png'),

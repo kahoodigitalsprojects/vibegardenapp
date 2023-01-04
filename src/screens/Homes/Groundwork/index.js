@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -9,13 +9,13 @@ import {
   FlatList,
   StatusBar,
 } from 'react-native';
-import {Greenbox, Header, Imgbox, SeeAll, StoryData} from '../../../componrnts';
+import { Greenbox, Header, Imgbox, SeeAll, StoryData } from '../../../componrnts';
 import All from '../../../componrnts/all';
 import MainBox from '../../../componrnts/mainbox';
 import SearchModal from '../../../componrnts/SearchModal';
 import Images from '../../../constants';
 
-const GroundWork = ({navigation}) => {
+const GroundWork = ({ navigation }) => {
   const [visible, setVisible] = useState(false);
   const Data = [
     {
@@ -41,7 +41,7 @@ const GroundWork = ({navigation}) => {
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
+        contentContainerStyle={{ flexGrow: 1 }}>
         <StatusBar animated={true} backgroundColor="#000" />
         <View
           style={{
@@ -82,7 +82,7 @@ const GroundWork = ({navigation}) => {
           /> */}
         </View>
         <View style={styles.Box1}>
-          <View style={{width: '90%', alignSelf: 'center'}}>
+          <View style={{ width: '90%', alignSelf: 'center' }}>
             <Text
               style={{
                 textAlign: 'center',
@@ -162,7 +162,7 @@ const GroundWork = ({navigation}) => {
                     showsHorizontalScrollIndicator={false}
                     keyExtractor={item => item.id}
                     data={Data}
-                    renderItem={({item}) => {
+                    renderItem={({ item }) => {
                       return (
                         <All
                           pressI={() =>

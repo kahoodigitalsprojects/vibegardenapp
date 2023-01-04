@@ -38,7 +38,6 @@ const Greenbox = ({
       Image2: Images.Icons.gleaf,
       Image3: Images.Icons.wsun,
       Image4: Images.Icons.wleafe,
-
       title: 'Tools For Light',
       title2: 'Essents',
     },
@@ -47,8 +46,7 @@ const Greenbox = ({
       Image2: Images.Icons.blocks,
       Image3: Images.Icons.wcircle,
       Image4: Images.Icons.wbox,
-
-      title: 'Tools for Shadow',
+      title: ' Tools for Shadow',
       title2: 'Build Blocks',
     },
     {
@@ -92,7 +90,7 @@ const Greenbox = ({
               style={{
                 backgroundColor: data1 === index ? '#1C5C2E87' : '#fff',
                 elevation: data1 === index ? 0 : 5,
-                width: 90,
+                width: 100,
                 height: 80,
                 borderRadius: 15,
                 margin: 5,
@@ -129,7 +127,7 @@ const Greenbox = ({
                     </Text>
                   </>
                 )}
-                {img2 && (
+                {/* {img2 && (
                   <>
                     <View style={{width: 24, height: 24, alignSelf: 'center'}}>
                       {index === 0 ? (
@@ -157,43 +155,39 @@ const Greenbox = ({
                       {item.title2}
                     </Text>
                   </>
-                )}
+                )} */}
               </>
               <View>
-                {/* {img2 && (
+                {img2 && (
                   <>
-                    <View style={{width: 28, height: 26, alignSelf: 'center'}}>
+                    <View style={{width: 24, height: 24, alignSelf: 'center'}}>
                       {index === 0 ? (
-                        <>
-                          {data1 === index && (
-                            <Image
-                              source={item.Image2}
-                              style={{width: '100%', height: '100%'}}
-                            />
-                          )}
-                        </>
+                        <Image
+                          resizeMode="contain"
+                          source={data1 === 0 ? item.Image2 : item.Image3}
+                          style={{width: '100%', height: '100%'}}
+                        />
                       ) : (
-                        <>
-                          {data1 === index && (
-                            <Image
-                              source={item.Image3}
-                              style={{width: '100%', height: '100%'}}
-                            />
-                          )}
-                        </>
+                        <Image
+                          resizeMode="contain"
+                          source={data1 === index ? item.Image4 : item.Image2}
+                          style={{width: '100%', height: '100%'}}
+                        />
                       )}
                     </View>
 
                     <Text
                       style={{
                         textAlign: 'center',
-                        fontFamily: 'BrandonGrotesque-Regular',
                         color: data1 === index ? '#fff' : '#1C5C2E',
+                        fontFamily: 'BrandonGrotesque-Regular',
+                        fontSize: 12,
+                        width: 45,
                       }}>
                       {item.title2}
                     </Text>
                   </>
-                )} */}
+                )}
               </View>
             </TouchableOpacity>
           );
