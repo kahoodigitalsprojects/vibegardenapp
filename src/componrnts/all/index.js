@@ -22,6 +22,7 @@ const All = ({
   marginTop2,
   searchmargin,
 
+  plustop,
   searchTop,
   textA,
   textB,
@@ -156,7 +157,11 @@ const All = ({
                       name={plus}
                       color={'#fefefe'}
                       size={25}
-                      style={{fontWeight: 'bold', position: 'absolute'}}
+                      style={{
+                        fontWeight: 'bold',
+                        position: 'absolute',
+                        marginTop: plustop,
+                      }}
                     />
                   </TouchableOpacity>
 

@@ -48,14 +48,15 @@ const FressBlooms = ({navigation, route}) => {
 
   return (
     <SafeAreaView style={styles.main}>
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
-        <StatusBar animated={true} backgroundColor="#000" />
-        <ImageBackground
-          source={Images.BackGround.backgroundHue}
-          resizeMode="stretch"
-          style={styles.image}>
+      <StatusBar animated={true} backgroundColor="#000" />
+
+      <ImageBackground
+        source={Images.BackGround.backgroundHue}
+        resizeMode="stretch"
+        style={styles.image}>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{flexGrow: 1}}>
           <View
             style={{
               width: '90%',
@@ -82,7 +83,7 @@ const FressBlooms = ({navigation, route}) => {
                     })
               }
             />
-            <View style={{marginTop: 47}}>
+            <View style={{marginTop: 15}}>
               <FlatList
                 data={data}
                 keyExtractor={item => item.id}
@@ -92,8 +93,8 @@ const FressBlooms = ({navigation, route}) => {
               />
             </View>
           </View>
-        </ImageBackground>
-      </ScrollView>
+        </ScrollView>
+      </ImageBackground>
     </SafeAreaView>
   );
 };

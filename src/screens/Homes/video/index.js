@@ -107,6 +107,7 @@ const Video = ({route, navigation}) => {
                 heartplus
                 heart
                 plus={plus}
+                hearttop={4}
                 size={22}
                 colorplus={'green'}
                 marginTopplus={2}
@@ -114,7 +115,6 @@ const Video = ({route, navigation}) => {
                 fontSize={20}
                 search1="closesquareo"
                 logo11
-                hearttop={-5}
                 color="#fff"
                 gbg="#1C5C2E"
                 alignItems="center"

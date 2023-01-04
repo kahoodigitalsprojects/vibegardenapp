@@ -70,7 +70,7 @@ const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
               </View>
             </View>
           </View>
-          <View style={{width: '10%'}}>
+          <View style={{width: '10%', marginTop: 4}}>
             <View style={styles.container}>
               <View style={styles.centeredView}>
                 {modalVisible && (
@@ -82,7 +82,7 @@ const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
                         position: 'absolute',
                         paddingLeft: -30,
                         padding: 2,
-                        marginTop: 30,
+                        marginTop: 20,
                         // padding: 20,
                         // height: 36,
                         // // marginTop: 5,
@@ -136,7 +136,7 @@ const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
                 {/* </Modal> */}
               </View>
               <TouchableOpacity
-                style={[{marginTop: 8}, styles.button]}
+                style={[{marginTop: 2}, styles.button]}
                 onPress={() => setModalVisible(true)}>
                 <Icon name="dots-three-horizontal" size={22} color="#030303" />
               </TouchableOpacity>
@@ -157,6 +157,7 @@ const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
                     height: 14,
                     justifyContent: 'center',
                     alignItems: 'center',
+                    marginTop: -16,
                   }}>
                   <View style={{}}>
                     <Icon2 name="plus" size={12} color="#fff" />

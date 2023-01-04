@@ -126,6 +126,7 @@ const Buddhisim = props => {
                         pressI={() =>
                           props.navigation.navigate('Video', {
                             otherParam: 'Tools to try',
+
                             plus: true,
                             otherParam1: 'TONGLEN',
                             textflower: 'Did you try this tools?',
