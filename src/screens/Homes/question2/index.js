@@ -6,6 +6,7 @@ import {
   ScrollView,
   StyleSheet,
   StatusBar,
+  ImageBackground,
   TextInput,
   Image,
   TouchableOpacity,
@@ -13,6 +14,7 @@ import {
 } from 'react-native';
 
 import {Header, Pinkbtn, QComponents} from '../../../componrnts';
+import Images from '../../../constants';
 
 const Question2 = props => {
   const data = [
@@ -23,64 +25,70 @@ const Question2 = props => {
   ];
 
   return (
-    <SafeAreaView>
-      <StatusBar animated={true} backgroundColor="#000" />
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
-        <View style={styles.main}>
-          <View style={{alignSelf: 'center', width: '90%', marginTop: 15}}>
-            <Header
-              // color="#000"
-              marginRight={-40}
-              marginTop={-40}
-              fontSize={25}
-              iconName="closesquareo"
-              header2
-              color="#1C5C2E"
-              headertext="Resonance Finder"
-              OnPress={() => props.navigation.goBack('')}
-            />
-          </View>
-          <View style={{width: '100%', alignSelf: 'center'}}>
-            <QComponents
-              marginVertical={10}
-              flowwerlist11={true}
-              iconone
-              textforvideo="Resonance Finder Video Here"
-              name2="chevron-up"
-              video={true}
-              width={'100%'}
-              direction2="Description:"
-              Statement1="Statement:"
-              flow="Flow Through"
-              margintopS={31}
-              number={'1/20'}
-              text1={'That Bananas'}
-              text2="?"
-              fontSizetext2={34}
-              text3={'May be but how do we know'}
-              text4="OH,100%"
-              text5={
-                'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.'
-              }
-              text6={'Plants are sentilents'}
-              fontfamily="BrandonGrotesque-Regular"
-            />
-          </View>
+    <SafeAreaView style={styles.main}>
+      <StatusBar animated={true} backgroundColpor="#000" />
 
-          <View style={{marginTop: 20, width: '100%'}}>
-            <Pinkbtn
-              shadow="#00000029"
-              onPress={() => {
-                props.navigation.navigate('question');
-              }}
-              width={'55%'}
-              btntxt="Next"
-            />
+      <ImageBackground
+        source={Images.BackGround.backgroundHue}
+        resizeMode="stretch"
+        style={styles.image}>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{flexGrow: 1}}>
+          <View style={{}}>
+            <View style={{alignSelf: 'center', width: '90%', marginTop: 15}}>
+              <Header
+                // color="#000"
+                marginRight={-40}
+                marginTop={-40}
+                fontSize={25}
+                iconName="closesquareo"
+                header2
+                color="#1C5C2E"
+                headertext="Resonance Finder"
+                OnPress={() => props.navigation.goBack('')}
+              />
+            </View>
+            <View style={{width: '100%', alignSelf: 'center'}}>
+              <QComponents
+                marginVertical={10}
+                flowwerlist11={true}
+                iconone
+                textforvideo="Resonance Finder Video Here"
+                name2="chevron-up"
+                video={true}
+                width={'100%'}
+                direction2="Description:"
+                Statement1="Statement:"
+                flow="Flow Through"
+                margintopS={31}
+                number={'1/20'}
+                text1={'That Bananas'}
+                text2="?"
+                fontSizetext2={34}
+                text3={'May be but how do we know'}
+                text4="OH,100%"
+                text5={
+                  'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.'
+                }
+                text6={'Plants are sentilents'}
+                fontfamily="BrandonGrotesque-Regular"
+              />
+            </View>
+
+            <View style={{marginTop: 20, width: '100%'}}>
+              <Pinkbtn
+                shadow="#00000029"
+                onPress={() => {
+                  props.navigation.navigate('question');
+                }}
+                width={'55%'}
+                btntxt="Next"
+              />
+            </View>
           </View>
-        </View>
-      </ScrollView>
+        </ScrollView>
+      </ImageBackground>
     </SafeAreaView>
   );
 };
@@ -111,6 +119,11 @@ const styles = StyleSheet.create({
     // textAlign: 'center',
     color: '#1C5C2E',
     fontWeight: '500',
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
+    // paddingTop: 100,
   },
 });
 export default Question2;

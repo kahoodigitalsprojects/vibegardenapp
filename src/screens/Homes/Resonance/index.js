@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   StatusBar,
   ScrollView,
+  ImageBackground,
   Switch,
   FlatList,
 } from 'react-native';
@@ -29,73 +30,78 @@ const Resonance = props => {
 
   return (
     <SafeAreaView style={styles.main}>
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
-        <StatusBar animated={true} backgroundColor="#000" />
-        <View style={styles.container}>
-          <Header
-            iconName="closesquareo"
-            header2
-            OnPress={() => props.navigation.goBack()}
-          />
-          <View style={{marginTop: 10}}>
-            <Text style={styles.text}>Select Your Topic Resonance?</Text>
-            <View style={styles.row}>
-              <Text style={styles.text}>OR Try Our </Text>
-              <TouchableOpacity
-                onPress={() => {
-                  props.navigation.navigate('question2');
-                }}
-                style={styles.btn}>
-                <Text
-                  style={{
-                    color: '#fff',
-                    margin: 10,
-                    fontFamily: 'BrandonGrotesque-Regular',
-                  }}>
-                  Resonance Finder
-                </Text>
-              </TouchableOpacity>
-            </View>
-            <View style={{marginVertical: 20}}>
-              <FlatList
-                data={data}
-                renderItem={({item}) => {
-                  return (
-                    <View style={{flexDirection: 'row', marginVertical: 15}}>
-                      <View styles={{}}>
-                        <Switch1 marginRight={20} />
+      <StatusBar animated={true} backgroundColor="#000" />
+      <ImageBackground
+        source={Images.BackGround.backgroundHue}
+        resizeMode="stretch"
+        style={styles.image}>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{flexGrow: 1}}>
+          <View style={styles.container}>
+            <Header
+              iconName="closesquareo"
+              header2
+              OnPress={() => props.navigation.goBack()}
+            />
+            <View style={{marginTop: 10}}>
+              <Text style={styles.text}>Select Your Topic Resonance?</Text>
+              <View style={styles.row}>
+                <Text style={styles.text}>OR Try Our </Text>
+                <TouchableOpacity
+                  onPress={() => {
+                    props.navigation.navigate('question2');
+                  }}
+                  style={styles.btn}>
+                  <Text
+                    style={{
+                      color: '#fff',
+                      margin: 10,
+                      fontFamily: 'BrandonGrotesque-Regular',
+                    }}>
+                    Resonance Finder
+                  </Text>
+                </TouchableOpacity>
+              </View>
+              <View style={{marginVertical: 20}}>
+                <FlatList
+                  data={data}
+                  renderItem={({item}) => {
+                    return (
+                      <View style={{flexDirection: 'row', marginVertical: 15}}>
+                        <View styles={{}}>
+                          <Switch1 marginRight={20} />
+                        </View>
+                        <View style={{marginTop: 3}}>
+                          <Text
+                            style={{
+                              color: '#030303',
+                              fontSize: 14,
+                              fontFamily: 'BrandonGrotesque-Regular',
+                            }}>
+                            {item.Texts}
+                          </Text>
+                        </View>
                       </View>
-                      <View style={{marginTop: 3}}>
-                        <Text
-                          style={{
-                            color: '#030303',
-                            fontSize: 14,
-                            fontFamily: 'BrandonGrotesque-Regular',
-                          }}>
-                          {item.Texts}
-                        </Text>
-                      </View>
-                    </View>
-                  );
-                }}
-              />
-            </View>
-            <View style={{marginTop: 8}}>
-              <Pinkbtn
-                shadow="#00000019"
-                onPress={() => {
-                  props.navigation.navigate('question2');
-                }}
-                btntxt="
+                    );
+                  }}
+                />
+              </View>
+              <View style={{marginTop: 8}}>
+                <Pinkbtn
+                  shadow="#00000019"
+                  onPress={() => {
+                    props.navigation.navigate('question2');
+                  }}
+                  btntxt="
             Save"
-                width={230}
-              />
+                  width={230}
+                />
+              </View>
             </View>
           </View>
-        </View>
-      </ScrollView>
+        </ScrollView>
+      </ImageBackground>
     </SafeAreaView>
   );
 };
@@ -138,6 +144,11 @@ const styles = StyleSheet.create({
     width: '90%',
     flexDirection: 'row',
     justifyContent: 'space-around',
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
+    // paddingTop: 100,
   },
 });
 export default Resonance;

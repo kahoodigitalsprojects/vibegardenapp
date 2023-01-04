@@ -6,12 +6,14 @@ import {
   Image,
   FlatList,
   TouchableOpacity,
+  ImageBackground,
   StatusBar,
   ScrollView,
   SafeAreaView,
 } from 'react-native';
 
 import {Header, Percentage, Pinkbtn} from '../../../componrnts';
+import Images from '../../../constants';
 
 const MeetScreen2 = ({route, navigation}) => {
   const {Image1, newtext} = route.params;
@@ -21,45 +23,53 @@ const MeetScreen2 = ({route, navigation}) => {
   return (
     <>
       <SafeAreaView style={styles.main}>
-        <ScrollView
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={{flexGrow: 1}}>
-          <StatusBar animated={true} backgroundColor="#000" />
+        <StatusBar animated={true} backgroundColor="#000" />
+        <ImageBackground
+          source={Images.BackGround.backgroundHue}
+          resizeMode="stretch"
+          style={styles.image}>
+          <ScrollView
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={{flexGrow: 1}}>
+            <View style={{width: '90%', alignSelf: 'center'}}>
+              <Header
+                header2
+                iconName="arrowleft"
+                OnPress={() => navigation.goBack()}
+              />
 
-          <View style={{width: '90%', alignSelf: 'center'}}>
-            <Header
-              header2
-              iconName="arrowleft"
-              OnPress={() => navigation.goBack()}
-            />
-
-            <View style={{}}>
               <View style={{}}>
-                <Percentage check={true} Image1={Image1} paddingVertical={20} />
-              </View>
-              <View style={{marginTop: 30}}>
-                <Text style={styles.txt}>Perfect Erin!</Text>
-                <Text
-                  style={{
-                    fontSize: 18,
-                    color: '#000',
-                    fontFamily: 'BrandonGrotesque-Regular',
-                    lineHeight: 33,
-                  }}>
-                  {newtext}
-                </Text>
-              </View>
-              <View style={{marginVertical: 20}}>
-                <Pinkbtn
-                  shadow={'#030303'}
-                  onPress={() => navigation.navigate('Tabs')}
-                  width={'80%'}
-                  btntxt="Take Me To the Garden"
-                />
+                <View style={{}}>
+                  <Percentage
+                    check={true}
+                    Image1={Image1}
+                    paddingVertical={20}
+                  />
+                </View>
+                <View style={{marginTop: 30}}>
+                  <Text style={styles.txt}>Perfect Erin!</Text>
+                  <Text
+                    style={{
+                      fontSize: 18,
+                      color: '#000',
+                      fontFamily: 'BrandonGrotesque-Regular',
+                      lineHeight: 33,
+                    }}>
+                    {newtext}
+                  </Text>
+                </View>
+                <View style={{marginVertical: 20}}>
+                  <Pinkbtn
+                    shadow={'#030303'}
+                    onPress={() => navigation.navigate('Tabs')}
+                    width={'80%'}
+                    btntxt="Take Me To the Garden"
+                  />
+                </View>
               </View>
             </View>
-          </View>
-        </ScrollView>
+          </ScrollView>
+        </ImageBackground>
       </SafeAreaView>
     </>
   );
@@ -89,5 +99,10 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#030303',
     fontFamily: 'BrandonGrotesque-Regular',
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
+    // paddingTop: 100,
   },
 });

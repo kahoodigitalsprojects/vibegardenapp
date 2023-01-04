@@ -5,75 +5,83 @@ import {
   SafeAreaView,
   ScrollView,
   StyleSheet,
+  ImageBackground,
   StatusBar,
 } from 'react-native';
 import {Header, Pinkbtn, QComponents} from '../../../componrnts';
 import ResultComponents from '../../../componrnts/resultcompo';
+import Images from '../../../constants';
 const Question3 = props => {
   const [state, setState] = useState();
   return (
     <>
       <SafeAreaView style={styles.main}>
-        <ScrollView
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={{flexGrow: 1}}>
-          <StatusBar animated={true} backgroundColor="#000" />
-          <View
-            style={{
-              marginVertical: 10,
-              marginTop: 15,
-              width: '90%',
-              alignSelf: 'center',
-            }}>
-            <Header
-              marginRight={-40}
-              marginTop={-40}
-              color="#1C5C2E"
-              iconName="arrowleft"
-              header2
-              headertext="Resonance Finder"
-              fontSize={25}
-              OnPress={() => props.navigation.goBack('')}
-            />
-          </View>
-          <View style={{width: '100%', alignSelf: 'center'}}>
-            <QComponents
-              iconone
-              name2="chevron-down"
-              direction2="Description:"
-              width={'100%'}
-              flowwerlist11={true}
-              Statement1="Statement"
-              flow="Flow Thtough"
-              name="chevron-down"
-              image1={true}
-              text="No idea What a Multiverse is"
-              headingtext
-              number={'4/20'}
-              text1={'Angels are some people made upto better'}
-              text2="I wish"
-              text3={`'It Feels That's way Sometime'`}
-              text4="I Wrap Myself in that way Nightly"
-              text6={'We Each Have Angles?'}
-              fontfamily="BrandonGrotesque-Regular"
-            />
-          </View>
-          <View style={{marginTop: 20}}>
-            <Pinkbtn
-              shadow="#979B9F"
-              width={'55%'}
-              btntxt="See Results"
-              setVisible={setState}
-              onPress={() =>
-                props.navigation.replace('Result', {
-                  otherParam: 'Top Tools',
-                  plus: true,
-                  backoption: () => props.navigation.navigate('me'),
-                })
-              }
-            />
-          </View>
-        </ScrollView>
+        <StatusBar animated={true} backgroundColor="#000" />
+
+        <ImageBackground
+          source={Images.BackGround.backgroundHue}
+          resizeMode="stretch"
+          style={styles.image}>
+          <ScrollView
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={{flexGrow: 1}}>
+            <View
+              style={{
+                marginVertical: 10,
+                marginTop: 15,
+                width: '90%',
+                alignSelf: 'center',
+              }}>
+              <Header
+                marginRight={-40}
+                marginTop={-40}
+                color="#1C5C2E"
+                iconName="arrowleft"
+                header2
+                headertext="Resonance Finder"
+                fontSize={25}
+                OnPress={() => props.navigation.goBack('')}
+              />
+            </View>
+            <View style={{width: '100%', alignSelf: 'center'}}>
+              <QComponents
+                iconone
+                name2="chevron-down"
+                direction2="Description:"
+                width={'100%'}
+                flowwerlist11={true}
+                Statement1="Statement"
+                flow="Flow Thtough"
+                name="chevron-down"
+                image1={true}
+                text="No idea What a Multiverse is"
+                headingtext
+                number={'4/20'}
+                text1={'Angels are some people made upto better'}
+                text2="I wish"
+                text3={`'It Feels That's way Sometime'`}
+                text4="I Wrap Myself in that way Nightly"
+                text6={'We Each Have Angles?'}
+                fontfamily="BrandonGrotesque-Regular"
+              />
+            </View>
+            <View style={{marginTop: 20}}>
+              <Pinkbtn
+                shadow="#979B9F"
+                width={'55%'}
+                btntxt="See Results"
+                setVisible={setState}
+                onPress={() =>
+                  props.navigation.replace('Result', {
+                    otherParam: 'Top Tools',
+                    plus: true,
+                    backoption: () => props.navigation.navigate('me'),
+                  })
+                }
+              />
+            </View>
+          </ScrollView>
+        </ImageBackground>
       </SafeAreaView>
     </>
   );
@@ -117,6 +125,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
+    // paddingTop: 100,
   },
 });
 export default Question3;

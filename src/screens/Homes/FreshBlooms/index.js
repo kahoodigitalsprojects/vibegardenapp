@@ -8,10 +8,12 @@ import {
   FlatList,
   TextInput,
   TouchableOpacity,
+  ImageBackground,
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {Header} from '../../../componrnts';
 import Reset from '../../../componrnts/ResetComponent';
+import Images from '../../../constants';
 // import { BackHandler } from 'react-native';
 const FressBlooms = ({navigation, route}) => {
   // const itemId = 'asdas';
@@ -50,42 +52,47 @@ const FressBlooms = ({navigation, route}) => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
         <StatusBar animated={true} backgroundColor="#000" />
-        <View
-          style={{
-            width: '90%',
-            alignSelf: 'center',
-            fontFamily: 'BrandonGrotesque-Regular',
-          }}>
-          <Text style={{color: 'yellow'}}>{itemId}</Text>
-          <Header
-            marginTop={-40}
-            iconName="closesquareo"
-            color="#000"
-            fontSize={18}
-            header2
-            headertext={otherParam}
-            OnPress={() =>
-              fromHome
-                ? navigation.reset({
-                    index: 0,
-                    routes: [{name: 'Homes'}, {name: 'me'}],
-                  })
-                : navigation.reset({
-                    index: 0,
-                    routes: [{name: 'me'}, {name: 'Homes'}],
-                  })
-            }
-          />
-          <View style={{marginTop: 47}}>
-            <FlatList
-              data={data}
-              keyExtractor={item => item.id}
-              renderItem={({item}) => {
-                return <Reset imgtrue={plus} icontrue={heart} />;
-              }}
+        <ImageBackground
+          source={Images.BackGround.backgroundHue}
+          resizeMode="stretch"
+          style={styles.image}>
+          <View
+            style={{
+              width: '90%',
+              alignSelf: 'center',
+              fontFamily: 'BrandonGrotesque-Regular',
+            }}>
+            <Text style={{color: 'yellow'}}>{itemId}</Text>
+            <Header
+              marginTop={-40}
+              iconName="closesquareo"
+              color="#000"
+              fontSize={18}
+              header2
+              headertext={otherParam}
+              OnPress={() =>
+                fromHome
+                  ? navigation.reset({
+                      index: 0,
+                      routes: [{name: 'Homes'}, {name: 'me'}],
+                    })
+                  : navigation.reset({
+                      index: 0,
+                      routes: [{name: 'me'}, {name: 'Homes'}],
+                    })
+              }
             />
+            <View style={{marginTop: 47}}>
+              <FlatList
+                data={data}
+                keyExtractor={item => item.id}
+                renderItem={({item}) => {
+                  return <Reset imgtrue={plus} icontrue={heart} />;
+                }}
+              />
+            </View>
           </View>
-        </View>
+        </ImageBackground>
       </ScrollView>
     </SafeAreaView>
   );
@@ -94,6 +101,11 @@ const styles = StyleSheet.create({
   main: {
     flex: 1,
     // backgroundColor: 'pink',
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
+    // paddingTop: 100,
   },
 });
 export default FressBlooms;
