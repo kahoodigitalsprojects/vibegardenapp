@@ -143,7 +143,7 @@ const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
             </View>
             <TouchableOpacity style={{marginTop: 35}}>
               {icontrue && (
-                <View style={{marginLeft: 4}}>
+                <View style={{marginLeft: 4, marginTop: -20}}>
                   <Icon2 name="heart" size={16} color="red" />
                 </View>
               )}
@@ -157,7 +157,7 @@ const Reset = ({Iname, iconname, icontrue, imgtrue, plustimggreen}) => {
                     height: 14,
                     justifyContent: 'center',
                     alignItems: 'center',
-                    marginTop: -16,
+                    marginTop: -17,
                   }}>
                   <View style={{}}>
                     <Icon2 name="plus" size={12} color="#fff" />

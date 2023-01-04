@@ -62,7 +62,7 @@ const ManageSubscription = props => {
             onPress={() => {
               props.navigation.navigate('Packges');
             }}>
-            <Text style={{fontSize: 12, color: '#303033'}}>Monthly</Text>
+            <Text style={{fontSize: 12, color: '#1C5C2E'}}>Monthly</Text>
 
             <Icon
               name="sort-down"

@@ -62,6 +62,7 @@ const Question3 = props => {
               text3={'Sometimes'}
               text4="Always"
               text6={'Data Help me Accept new concepts.'}
+              fontfamily="BrandonGrotesque-Regular"
             />
           </View>
           <View style={{marginTop: 20}}>

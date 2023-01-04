@@ -49,34 +49,35 @@ const Pushnotification = props => {
               <View style={{}}>
                 <Text style={styles.text2}>Reminder Active:</Text>
               </View>
-              <View>
+              <View style={{marginTop: 16}}>
                 <Switch1 />
               </View>
             </View>
-            <View style={styles.btns}>
-              <TouchableOpacity
-                style={styles.box}
-                onPress={() => {
-                  // props.navigation.navigate('signup');
-                }}>
-                <Text style={styles.textA}>After Waking Up</Text>
-                <TouchableOpacity style={{}}>
-                  <Icon name="sort-down" size={25} color="#1C5C2E" />
+
+            <View style={{width: '100%'}}>
+              <View style={styles.btns}>
+                <TouchableOpacity
+                  style={styles.box}
+                  onPress={() => {
+                    // props.navigation.navigate('signup');
+                  }}>
+                  <Text style={styles.textA}>After Waking Up</Text>
+                  <TouchableOpacity style={{}}>
+                    <Icon name="sort-down" size={25} color="#1C5C2E" />
+                  </TouchableOpacity>
                 </TouchableOpacity>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={[styles.box, {width: '30%', left: 10}]}
-                // onPress={() => {
-                //   props.navigation.navigate('signup');
-                // }}
-              >
-                <Text style={styles.textA}>7:30 AM</Text>
-                <TouchableOpacity style={{}}>
-                  <Icon name="sort-down" size={25} color="#1C5C2E" />
+                <TouchableOpacity
+                  style={[styles.box, {width: '30%', left: 10}]}
+                  // onPress={() => {
+                  //   props.navigation.navigate('signup');
+                  // }}
+                >
+                  <Text style={styles.textA}>7:30 AM</Text>
+                  <TouchableOpacity style={{}}>
+                    <Icon name="sort-down" size={25} color="#1C5C2E" />
+                  </TouchableOpacity>
                 </TouchableOpacity>
-              </TouchableOpacity>
-            </View>
-            <View style={{}}>
+              </View>
               <Text style={styles.text2}>Set Different Time For Weekend:</Text>
             </View>
             <View style={{marginTop: 20}}>
@@ -140,8 +141,9 @@ const styles = StyleSheet.create({
   },
   btns: {
     flexDirection: 'row',
-    width: '100%',
-    justifyContent: 'space-around',
+    // width: '100%',
+    // justifyContent: 'space-around',
+    // backgroundColor: 'pink',
   },
   box: {
     padding: 4,

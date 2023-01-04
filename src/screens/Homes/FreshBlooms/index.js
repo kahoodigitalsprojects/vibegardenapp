@@ -83,7 +83,7 @@ const FressBlooms = ({navigation, route}) => {
                     })
               }
             />
-            <View style={{marginTop: 15}}>
+            <View style={{marginTop: 25}}>
               <FlatList
                 data={data}
                 keyExtractor={item => item.id}

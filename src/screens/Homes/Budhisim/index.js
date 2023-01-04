@@ -87,7 +87,7 @@ const Buddhisim = props => {
               marginTop={-40}
               color="#1C5C2E"
               fontSize={25}
-              iconName="left"
+              iconName="arrowleft"
               header2
               headertext="Buddhisim"
               OnPress={() => props.navigation.goBack()}

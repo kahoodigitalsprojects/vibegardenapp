@@ -107,10 +107,10 @@ const Video = ({route, navigation}) => {
                 heartplus
                 heart
                 plus={plus}
-                hearttop={4}
+                hearttop={-4}
                 size={22}
                 colorplus={'green'}
-                marginTopplus={2}
+                marginTopplus={-4}
                 heading
                 fontSize={20}
                 search1="closesquareo"

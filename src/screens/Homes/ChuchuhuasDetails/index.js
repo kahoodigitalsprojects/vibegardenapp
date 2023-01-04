@@ -45,14 +45,14 @@ const ChuchuasDetails = ({route, navigation}) => {
   return (
     <>
       <SafeAreaView style={styles.main}>
-        <ScrollView
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={{flexGrow: 1}}>
-          <StatusBar animated={true} backgroundColor="#000" />
-          <ImageBackground
-            source={Images.BackGround.backgroundHue}
-            resizeMode="stretch"
-            style={styles.image}>
+        <StatusBar animated={true} backgroundColor="#000" />
+        <ImageBackground
+          source={Images.BackGround.backgroundHue}
+          resizeMode="stretch"
+          style={styles.image}>
+          <ScrollView
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={{flexGrow: 1}}>
             <View style={{width: '100%', alignSelf: 'center'}}>
               <View style={{width: '90%', alignSelf: 'center'}}>
                 <Header
@@ -216,8 +216,8 @@ const ChuchuasDetails = ({route, navigation}) => {
                 />
               </View>
             </View>
-          </ImageBackground>
-        </ScrollView>
+          </ScrollView>
+        </ImageBackground>
       </SafeAreaView>
     </>
   );
