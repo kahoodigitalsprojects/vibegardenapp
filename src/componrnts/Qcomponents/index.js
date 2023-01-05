@@ -17,8 +17,13 @@ import Icon from 'react-native-vector-icons/Entypo';
 import Icon2 from 'react-native-vector-icons/AntDesign';
 import Icon3 from 'react-native-vector-icons/Ionicons';
 import Images from '../../constants';
-import {color} from 'react-native-elements/dist/helpers';
-import LinearGradient from 'react-native-linear-gradient';
+import Collapsible from 'react-native-collapsible';
+// import {
+//   Collapse,
+//   CollapseHeader,
+//   CollapseBody,
+//   AccordionList,
+// } from 'accordion-collapse-react-native';
 
 const QComponents = ({
   text1,
@@ -54,6 +59,8 @@ const QComponents = ({
   textforvideo,
 }) => {
   const [data1, setdata1] = useState(0);
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
   const data = [
     {text1: text1, img1: Images.Imgs.R1},
 
@@ -189,11 +196,19 @@ const QComponents = ({
               </Text>
 
               {iconone && (
-                <TouchableOpacity
-                  onPress={() => {}}
-                  style={{marginTop: 1, marginLeft: 5}}>
-                  <Icon name={name2} size={25} color="#1C5C2E" />
-                </TouchableOpacity>
+                <>
+                  <TouchableOpacity
+                    onPress={() => setIsCollapsed(!isCollapsed)}
+                    style={{marginTop: 1, marginLeft: 5}}>
+                    <Icon name={name2} size={25} color="#1C5C2E" />
+                  </TouchableOpacity>
+
+                  <Collapsible collapsed={isCollapsed}>
+                    <View>
+                      <Text>hellow</Text>
+                    </View>
+                  </Collapsible>
+                </>
               )}
             </View>
             <View

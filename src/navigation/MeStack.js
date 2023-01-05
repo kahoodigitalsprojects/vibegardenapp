@@ -27,97 +27,32 @@ export default function MeStackScreen() {
     <MeStack.Navigator
       initialRouteName="me"
       screenOptions={{
-        headerShown: false,
-        headerTransparent: false,
+        headerLeft: () => <></>,
       }}>
-      <MeStack.Screen
-        name="notification"
-        component={Notification}
-        options={{headerShown: false}}
-      />
-      <MeStack.Screen
-        name="FressBlooms"
-        component={FressBlooms}
-        options={{headerShown: false}}
-      />
-      <MeStack.Screen name="me" component={Me} options={{headerShown: false}} />
-
-      <MeStack.Screen
-        name="settings"
-        component={Settings}
-        options={{headerShown: false}}
-      />
-      <MeStack.Screen
-        name="BloomsCheck"
-        component={BloomsCheck}
-        options={{headerShown: false}}
-      />
-      <MeStack.Screen
-        name="Bigblooms"
-        component={BigBlooms}
-        options={{headerShown: false}}
-      />
-      <MeStack.Screen
-        name="star"
-        component={Star}
-        options={{headerShown: false}}
-      />
-      <MeStack.Screen
-        name="EditScreen"
-        component={EditScreen}
-        options={{headerShown: false}}
-      />
-      <MeStack.Screen
-        name="Packges"
-        component={Packages}
-        options={{headerShown: false}}
-      />
+      <MeStack.Screen name="notification" component={Notification} />
+      <MeStack.Screen name="FressBlooms" component={FressBlooms} />
+      <MeStack.Screen name="me" component={Me} />
+      <MeStack.Screen name="settings" component={Settings} />
+      <MeStack.Screen name="BloomsCheck" component={BloomsCheck} />
+      <MeStack.Screen name="Bigblooms" component={BigBlooms} />
+      <MeStack.Screen name="star" component={Star} />
+      <MeStack.Screen name="EditScreen" component={EditScreen} />
+      <MeStack.Screen name="Packges" component={Packages} />
       <MeStack.Screen
         name="ManageSubscription"
         component={ManageSubscription}
-        options={{headerShown: false}}
       />
-
-      <MeStack.Screen
-        name="Contactus"
-        component={Contactus}
-        options={{headerShown: false}}
-      />
-      <MeStack.Screen
-        name="PaymentMethod"
-        component={PaymentMethod}
-        options={{headerShown: false}}
-      />
+      <MeStack.Screen name="Contactus" component={Contactus} />
+      <MeStack.Screen name="PaymentMethod" component={PaymentMethod} />
       <MeStack.Screen
         name="CancelSubscription"
         component={CancelSubscription}
-        options={{headerShown: false}}
       />
-      <MeStack.Screen
-        name="Result"
-        component={Result}
-        options={{headerShown: false}}
-      />
-      <MeStack.Screen
-        name="EmailNotification"
-        component={EmailNotification}
-        options={{headerShown: false}}
-      />
-      <MeStack.Screen
-        name="Pushnotification"
-        component={Pushnotification}
-        options={{headerShown: false}}
-      />
-      <MeStack.Screen
-        name="PrivacyPolicy"
-        component={PrivacyPolicy}
-        options={{headerShown: false}}
-      />
-      <MeStack.Screen
-        name="Search3"
-        component={Search3}
-        options={{headerShown: false}}
-      />
+      <MeStack.Screen name="Result" component={Result} />
+      <MeStack.Screen name="EmailNotification" component={EmailNotification} />
+      <MeStack.Screen name="Pushnotification" component={Pushnotification} />
+      <MeStack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
+      <MeStack.Screen name="Search3" component={Search3} />
     </MeStack.Navigator>
   );
 }

@@ -27,113 +27,27 @@ const StackNavigator = () => {
     <Stack.Navigator
       initialRouteName="Splash"
       screenOptions={{
-        headerShown: false,
-        headerStyle: {
-          backgroundColor: '#f4511e',
-          height: 0,
-        },
-        headerTintColor: '#fff',
-        headerTitleStyle: {
-          fontWeight: 'bold',
-        },
+        headerLeft: () => <></>,
       }}>
-      <Stack.Screen
-        name="Splash"
-        component={Splash}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="Splash2"
-        component={Spalsh2}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="Welcome"
-        component={Welcome}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="login"
-        component={Login}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="namescreen"
-        component={NameScreen}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="signup"
-        component={SignUp}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="verify"
-        component={Verify}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="loginoption"
-        component={LoginOption}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="registerd"
-        component={Registerd}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="forgerpsaaword"
-        component={forgetPassword}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="NotRegisterd"
-        component={NotRegisterd}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="PrivacyPolicy"
-        component={PrivacyPolicy}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="Story1"
-        component={Story1}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="journey"
-        component={Journey}
-        options={{headerShown: false}}
-      />
-
-      <Stack.Screen
-        name="meet"
-        component={Meet}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="chuchuhuasDetails"
-        component={ChuchuasDetails}
-        options={{headerShown: false}}
-      />
-
-      <Stack.Screen
-        name="MeetScreen2"
-        component={MeetScreen2}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="Bluelotus"
-        component={BlueLotus}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="Tabs"
-        component={TabNavigator}
-        options={{headerShown: false}}
-      />
+      <Stack.Screen name="Splash" component={Splash} />
+      <Stack.Screen name="Splash2" component={Spalsh2} />
+      <Stack.Screen name="Welcome" component={Welcome} />
+      <Stack.Screen name="login" component={Login} />
+      <Stack.Screen name="namescreen" component={NameScreen} />
+      <Stack.Screen name="signup" component={SignUp} />
+      <Stack.Screen name="verify" component={Verify} />
+      <Stack.Screen name="loginoption" component={LoginOption} />
+      <Stack.Screen name="registerd" component={Registerd} />
+      <Stack.Screen name="forgerpsaaword" component={forgetPassword} />
+      <Stack.Screen name="NotRegisterd" component={NotRegisterd} />
+      <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
+      <Stack.Screen name="Story1" component={Story1} />
+      <Stack.Screen name="journey" component={Journey} />
+      <Stack.Screen name="meet" component={Meet} />
+      <Stack.Screen name="chuchuhuasDetails" component={ChuchuasDetails} />
+      <Stack.Screen name="MeetScreen2" component={MeetScreen2} />
+      <Stack.Screen name="Bluelotus" component={BlueLotus} />
+      <Stack.Screen name="Tabs" component={TabNavigator} />
     </Stack.Navigator>
   );
 };

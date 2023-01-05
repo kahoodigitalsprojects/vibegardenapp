@@ -21,66 +21,21 @@ export default function ToolsStackScreen() {
     <ToolsStack.Navigator
       initialRouteName="tools"
       screenOptions={{
-        headerShown: false,
-        headerTransparent: true,
+        headerLeft: () => <></>,
       }}>
-      <ToolsStack.Screen
-        name="tools"
-        component={Tools}
-        options={{headerShown: false}}
-      />
-
-      <ToolsStack.Screen
-        name="Result"
-        component={Result}
-        options={{headerShown: false}}
-      />
-
-      <ToolsStack.Screen
-        name="resonance"
-        component={Resonance}
-        options={{headerShown: false}}
-      />
-      <ToolsStack.Screen
-        name="question"
-        component={Question}
-        options={{headerShown: false}}
-      />
-      <ToolsStack.Screen
-        name="question2"
-        component={Question2}
-        options={{headerShown: false}}
-      />
-      <ToolsStack.Screen
-        name="question3"
-        component={Question3}
-        options={{headerShown: false}}
-      />
-      <ToolsStack.Screen
-        name="question4"
-        component={Question4}
-        options={{headerShown: false}}
-      />
-      <ToolsStack.Screen
-        name="EditScreen"
-        component={EditScreen}
-        options={{headerShown: false}}
-      />
-      <ToolsStack.Screen
-        name="Packges"
-        component={Packages}
-        options={{headerShown: false}}
-      />
-
-      <ToolsStack.Screen
-        name="PaymentMethod"
-        component={PaymentMethod}
-        options={{headerShown: false}}
-      />
+      <ToolsStack.Screen name="tools" component={Tools} />
+      <ToolsStack.Screen name="Result" component={Result} />
+      <ToolsStack.Screen name="resonance" component={Resonance} />
+      <ToolsStack.Screen name="question" component={Question} />
+      <ToolsStack.Screen name="question2" component={Question2} />
+      <ToolsStack.Screen name="question3" component={Question3} />
+      <ToolsStack.Screen name="question4" component={Question4} />
+      <ToolsStack.Screen name="EditScreen" component={EditScreen} />
+      <ToolsStack.Screen name="Packges" component={Packages} />
+      <ToolsStack.Screen name="PaymentMethod" component={PaymentMethod} />
       <ToolsStack.Screen
         name="CancelSubscription"
         component={CancelSubscription}
-        options={{headerShown: false}}
       />
     </ToolsStack.Navigator>
   );

@@ -132,12 +132,19 @@ const styles = StyleSheet.create({
   },
   btn: {
     backgroundColor: '#75997E',
-    borderRadius: 10,
+
     height: 44,
+    width: 127,
+    marginLeft: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    marginLeft: 20,
-    opacity: 0.9,
+    borderRadius: 15,
+    shadowColor: '#000',
+    elevation: 6,
+    shadowOffset: {
+      width: 0,
+      height: 7,
+    },
   },
   switchView: {
     // backgroundColor: 'green',
