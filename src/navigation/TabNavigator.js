@@ -17,6 +17,9 @@ const TabNavigator = () => {
       screenOptions={{
         unmountOnBlur: true,
         headerShown: false,
+        headerStyle: {
+          height: 0, // Specify the height of your custom header
+        },
         headerTransparent: true,
         tabBarActiveTintColor: '#1C5C2E',
         tabBarStyle: {
