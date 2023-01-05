@@ -9,11 +9,12 @@ import {
   ScrollView,
   StatusBar,
 } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {Greenbtn, Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 const ForgetPassword = props => {
   return (
-    <>
+    <SafeAreaView>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
@@ -68,6 +69,7 @@ const ForgetPassword = props => {
                     backgroundColor: '#BCCFC1',
                     opacity: 0.4,
                     borderRadius: 12,
+                    height: 50,
                   }}
                 />
               </View>
@@ -85,7 +87,7 @@ const ForgetPassword = props => {
           </View>
         </View>
       </ScrollView>
-    </>
+    </SafeAreaView>
   );
 };
 export default ForgetPassword;
