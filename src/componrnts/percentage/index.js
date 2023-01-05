@@ -100,7 +100,8 @@ const Percentage = ({
           {check && (
             <View
               style={{
-                marginTop: 5,
+                marginTop: 2.5,
+                marginLeft: -5,
                 width: 18,
                 height: 18,
                 borderRadius: 100,

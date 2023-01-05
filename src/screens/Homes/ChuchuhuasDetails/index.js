@@ -43,183 +43,181 @@ const ChuchuasDetails = ({route, navigation}) => {
     },
   ];
   return (
-    <>
-      <SafeAreaView style={styles.main}>
-        <StatusBar animated={true} backgroundColor="#000" />
-        <ImageBackground
-          source={Images.BackGround.backgroundHue}
-          resizeMode="stretch"
-          style={styles.image}>
-          <ScrollView
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={{flexGrow: 1}}>
-            <View style={{width: '100%', alignSelf: 'center'}}>
-              <View style={{width: '90%', alignSelf: 'center'}}>
-                <Header
-                  header2
-                  iconName="arrowleft"
-                  fontSize={25}
-                  color="#1C5C2E"
-                  OnPress={() => {
-                    navigation.navigate('Bluelotus', {
-                      Heading: Heading,
-                      newtext:
-                        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
-                      Image1: Image6,
-                    });
-                  }}
-                />
-              </View>
+    <SafeAreaView style={styles.main}>
+      <StatusBar animated={true} backgroundColor="#000" />
+      <ImageBackground
+        source={Images.BackGround.backgroundHue}
+        resizeMode="stretch"
+        style={styles.image}>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{flexGrow: 1}}>
+          <View style={{width: '100%', alignSelf: 'center'}}>
+            <View style={{width: '90%', alignSelf: 'center'}}>
+              <Header
+                header2
+                iconName="arrowleft"
+                fontSize={25}
+                color="#1C5C2E"
+                OnPress={() => {
+                  navigation.navigate('Bluelotus', {
+                    Heading: Heading,
+                    newtext:
+                      'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+                    Image1: Image6,
+                  });
+                }}
+              />
+            </View>
 
-              <View style={{width: '90%', alignSelf: 'center'}}>
-                <Text style={styles.txt}>
-                  Finally How Bloom is Your Vibe Today?
-                </Text>
-                <Text
-                  style={{
-                    fontSize: 18,
-                    color: '#000',
-                    letterSpacing: 0.2,
-                    fontWeight: '6',
-
-                    fontFamily: 'BrandonGrotesque-Regular',
-                  }}>
-                  {newtext}
-                </Text>
-              </View>
-
-              <View
+            <View style={{width: '90%', alignSelf: 'center'}}>
+              <Text style={styles.txt}>
+                Finally How Bloom is Your Vibe Today?
+              </Text>
+              <Text
                 style={{
-                  marginTop: 45,
+                  fontSize: 18,
+                  color: '#000',
+                  letterSpacing: 0.2,
+                  fontWeight: '600',
 
-                  alignItems: 'center',
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
-                <FlatList
-                  showsHorizontalScrollIndicator={false}
-                  data={Data}
-                  horizontal={true}
-                  renderItem={({item, index}) => {
-                    return (
-                      <>
-                        <View
-                          style={{
-                            alignSelf: 'center',
-                            alignItems: 'center',
-                            margin: 4,
-                            marginTop: 10,
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            alignSelf: 'center',
-                          }}>
-                          <TouchableOpacity
-                            onPress={() =>
-                              index === true ? '' : setdata1(index)
+                {newtext}
+              </Text>
+            </View>
+
+            <View
+              style={{
+                marginTop: 45,
+
+                alignItems: 'center',
+              }}>
+              <FlatList
+                showsHorizontalScrollIndicator={false}
+                data={Data}
+                horizontal={true}
+                renderItem={({item, index}) => {
+                  return (
+                    <>
+                      <View
+                        style={{
+                          alignSelf: 'center',
+                          alignItems: 'center',
+                          margin: 4,
+                          marginTop: 10,
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          alignSelf: 'center',
+                        }}>
+                        <TouchableOpacity
+                          onPress={() =>
+                            index === true ? '' : setdata1(index)
+                          }
+                          style={
+                            {
+                              // width: '100%',
+                              // display: 'flex',
+                              // flexGrow: 1,
+                              // width: 76,
+                              // height: 78,
+                              // borderRadius: 100,
+                              // justifyContent: 'center',
+                              // alignItems: 'center',
+                              // alignSelf: 'center',
+                              // marginVertical: 10,
                             }
-                            style={
-                              {
-                                // width: '100%',
-                                // display: 'flex',
-                                // flexGrow: 1,
-                                // width: 76,
-                                // height: 78,
-                                // borderRadius: 100,
-                                // justifyContent: 'center',
-                                // alignItems: 'center',
-                                // alignSelf: 'center',
-                                // marginVertical: 10,
-                              }
-                            }>
-                            <>
-                              {data1 === index ? (
-                                <LinearGradient
-                                  colors={['#ED535E', '#CD258D']}
-                                  style={{
-                                    width: 80,
-                                    height: 80,
-                                    borderRadius: 100,
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    alignSelf: 'center',
-                                    backgroundColor:
-                                      data1 === index ? '#CD258D' : '',
-                                    opacity: 0.8,
-                                    elevation: data1 === index ? 0 : 5,
-                                  }}>
-                                  <View style={{}}>
-                                    <Icon
-                                      name="check"
-                                      size={39}
-                                      color="#fff"
-                                      style={{}}
-                                    />
-                                  </View>
-                                </LinearGradient>
-                              ) : (
-                                <View
-                                  style={{
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    alignSelf: 'center',
-                                  }}>
-                                  <Image
-                                    source={item.image2}
-                                    style={[styles.img]}
-                                    resizeMode="contain"
+                          }>
+                          <>
+                            {data1 === index ? (
+                              <LinearGradient
+                                colors={['#ED535E', '#CD258D']}
+                                style={{
+                                  width: 80,
+                                  height: 80,
+                                  borderRadius: 100,
+                                  justifyContent: 'center',
+                                  alignItems: 'center',
+                                  alignSelf: 'center',
+                                  backgroundColor:
+                                    data1 === index ? '#CD258D' : '',
+                                  opacity: 0.8,
+                                  elevation: data1 === index ? 0 : 5,
+                                }}>
+                                <View style={{}}>
+                                  <Icon
+                                    name="check"
+                                    size={39}
+                                    color="#fff"
+                                    style={{}}
                                   />
                                 </View>
-                              )}
-                              <Text
+                              </LinearGradient>
+                            ) : (
+                              <View
                                 style={{
-                                  textAlign: 'center',
-                                  fontFamily: 'BrandonGrotesque-Regular',
-                                  color: data1 === index ? '#fff' : '#000',
+                                  justifyContent: 'center',
+                                  alignItems: 'center',
+                                  alignSelf: 'center',
                                 }}>
-                                {item.title}
-                              </Text>
-                            </>
-                          </TouchableOpacity>
-
-                          <View style={{marginVertical: 5, margin: 10}}>
+                                <Image
+                                  source={item.image2}
+                                  style={[styles.img]}
+                                  resizeMode="contain"
+                                />
+                              </View>
+                            )}
                             <Text
                               style={{
                                 textAlign: 'center',
-                                fontSize: 12,
-                                color: '#1C5C2E',
                                 fontFamily: 'BrandonGrotesque-Regular',
+                                color: data1 === index ? '#fff' : '#000',
                               }}>
-                              {item.text}
+                              {item.title}
                             </Text>
-                          </View>
+                          </>
+                        </TouchableOpacity>
+
+                        <View style={{marginVertical: 5, margin: 10}}>
+                          <Text
+                            style={{
+                              textAlign: 'center',
+                              fontSize: 12,
+                              color: '#1C5C2E',
+                              fontFamily: 'BrandonGrotesque-Regular',
+                            }}>
+                            {item.text}
+                          </Text>
                         </View>
-                      </>
-                    );
-                  }}
-                />
-              </View>
-              <View style={{width: '90%', alignSelf: 'center', marginTop: 20}}>
-                <Percentage
-                  paddingVertical={10}
-                  simpletext={true}
-                  simpletext1="Dial It In If You Have Any Wish:"
-                  btn={true}
-                  icons={true}
-                  Image1={Image1}
-                  btntxt="Continue"
-                  width={'50%'}
-                  onPress={() =>
-                    navigation.navigate('MeetScreen2', {
-                      Image1: Image1,
-                      newtext:
-                        'We Have Tools to Support Your Unique Journey to full bloom the world could sure use more of your light?',
-                    })
-                  }
-                />
-              </View>
+                      </View>
+                    </>
+                  );
+                }}
+              />
             </View>
-          </ScrollView>
-        </ImageBackground>
-      </SafeAreaView>
-    </>
+            <View style={{width: '90%', alignSelf: 'center', marginTop: 20}}>
+              <Percentage
+                paddingVertical={10}
+                simpletext={true}
+                simpletext1="Dial It In If You Have Any Wish:"
+                btn={true}
+                icons={true}
+                Image1={Image1}
+                btntxt="Continue"
+                width={'50%'}
+                onPress={() =>
+                  navigation.navigate('MeetScreen2', {
+                    Image1: Image1,
+                    newtext:
+                      'We Have Tools to Support Your Unique Journey to full bloom the world could sure use more of your light?',
+                  })
+                }
+              />
+            </View>
+          </View>
+        </ScrollView>
+      </ImageBackground>
+    </SafeAreaView>
   );
 };
 export default ChuchuasDetails;
@@ -237,8 +235,6 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     fontSize: 25,
     color: '#1C5C2E',
-    fontWeight: '600',
-
     fontFamily: 'BrandonGrotesque-Medium',
   },
 

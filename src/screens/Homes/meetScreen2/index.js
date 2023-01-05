@@ -21,57 +21,50 @@ const MeetScreen2 = ({route, navigation}) => {
   const [data1, setdata1] = useState();
 
   return (
-    <>
-      <SafeAreaView style={styles.main}>
-        <StatusBar animated={true} backgroundColor="#000" />
-        <ImageBackground
-          source={Images.BackGround.backgroundHue}
-          resizeMode="stretch"
-          style={styles.image}>
-          <ScrollView
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={{flexGrow: 1}}>
-            <View style={{width: '90%', alignSelf: 'center'}}>
-              <Header
-                header2
-                iconName="arrowleft"
-                OnPress={() => navigation.goBack()}
-              />
+    <SafeAreaView style={styles.main}>
+      <StatusBar animated={true} backgroundColor="#000" />
+      <ImageBackground
+        source={Images.BackGround.backgroundHue}
+        resizeMode="stretch"
+        style={styles.image}>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{flexGrow: 1}}>
+          <View style={{width: '90%', alignSelf: 'center'}}>
+            <Header
+              header2
+              iconName="arrowleft"
+              OnPress={() => navigation.goBack()}
+            />
 
-              <View style={{}}>
-                <View style={{}}>
-                  <Percentage
-                    check={true}
-                    Image1={Image1}
-                    paddingVertical={20}
-                  />
-                </View>
-                <View style={{marginTop: 30}}>
-                  <Text style={styles.txt}>Perfect Erin!</Text>
-                  <Text
-                    style={{
-                      fontSize: 18,
-                      color: '#000',
-                      fontFamily: 'BrandonGrotesque-Regular',
-                      lineHeight: 33,
-                    }}>
-                    {newtext}
-                  </Text>
-                </View>
-                <View style={{marginVertical: 20}}>
-                  <Pinkbtn
-                    shadow={'#030303'}
-                    onPress={() => navigation.navigate('Tabs')}
-                    width={'80%'}
-                    btntxt="Take Me To the Garden"
-                  />
-                </View>
+            <View style={{}}>
+              <Percentage check={true} Image1={Image1} paddingVertical={20} />
+
+              <View style={{marginTop: 30}}>
+                <Text style={styles.txt}>Perfect Erin!</Text>
+                <Text
+                  style={{
+                    fontSize: 18,
+                    color: '#000',
+                    fontFamily: 'BrandonGrotesque-Regular',
+                    lineHeight: 33,
+                  }}>
+                  {newtext}
+                </Text>
+              </View>
+              <View style={{marginVertical: 20}}>
+                <Pinkbtn
+                  shadow={'#030303'}
+                  onPress={() => navigation.navigate('Tabs')}
+                  width={'80%'}
+                  btntxt="Take Me To the Garden"
+                />
               </View>
             </View>
-          </ScrollView>
-        </ImageBackground>
-      </SafeAreaView>
-    </>
+          </View>
+        </ScrollView>
+      </ImageBackground>
+    </SafeAreaView>
   );
 };
 export default MeetScreen2;
@@ -89,7 +82,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 24,
     color: '#000',
-    fontWeight: '400',
     marginVertical: 20,
     fontFamily: 'BrandonGrotesque-Regular',
   },
