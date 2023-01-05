@@ -132,13 +132,12 @@ const styles = StyleSheet.create({
   },
   btn: {
     backgroundColor: '#75997E',
-
     height: 44,
     width: 127,
     marginLeft: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 15,
+    borderRadius: 25,
     shadowColor: '#000',
     elevation: 6,
     shadowOffset: {

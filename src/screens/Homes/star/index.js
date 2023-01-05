@@ -39,17 +39,22 @@ const Star = props => {
               // props.navigation.navigate('Homes');
             }}
           />
+
           <View
             style={{
-              width: 75,
-              height: 75,
-              marginVertical: 10,
+              marginVertical: 5,
               alignSelf: 'center',
+              // backgroundColor: 'yellow',
+              justifyContent: 'center',
             }}>
-            <Image source={Images.Imgs.nebula} />
-          </View>
-
-          <View style={{marginVertical: 5, alignSelf: 'center'}}>
+            <View
+              style={{
+                marginVertical: 10,
+                alignSelf: 'center',
+                // backgroundColor: 'pink',
+              }}>
+              <Image resizeMode="contain" source={Images.Imgs.nebula} />
+            </View>
             <Text
               style={{
                 fontSize: 25,

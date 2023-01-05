@@ -79,7 +79,7 @@ const BigBlooms = ({route, navigation}) => {
               height: 75,
               // marginTop: 15,
               alignSelf: 'center',
-              marginVertical: 10,
+              marginTop: 20,
             }}>
             <Image source={Image1} />
           </View>
@@ -109,7 +109,7 @@ const BigBlooms = ({route, navigation}) => {
                 // textAlign: 'center',
                 color: '#1C5C2E',
                 fontWeight: '500',
-                marginVertical: 5,
+                marginVertical: 15,
                 fontFamily: 'BrandonGrotesque-Medium',
               }}>
               ADDED TONGLEN FAVORITES
@@ -120,7 +120,7 @@ const BigBlooms = ({route, navigation}) => {
                 fontSize: 18,
 
                 color: '#000',
-                marginVertical: 10,
+                marginVertical: 5,
                 textDecorationLine: 'underline',
                 fontFamily: 'BrandonGrotesque-Regular',
               }}>
@@ -150,7 +150,7 @@ const BigBlooms = ({route, navigation}) => {
                     <TouchableOpacity
                       onPress={() => {}}
                       style={{
-                        marginTop: 2,
+                        marginTop: 3,
                       }}>
                       <Icon name="check-square" size={25} color="#1C5C2E" />
                     </TouchableOpacity>

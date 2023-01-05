@@ -48,7 +48,8 @@ const Question3 = props => {
               flowwerlist11={true}
               width={'100%'}
               iconone
-              name2="chevron-down"
+              name2="chevron-up"
+              name3="chevron-down"
               direction2="Description:"
               flowwerlist={true}
               Statement1="Statement"
@@ -62,6 +63,9 @@ const Question3 = props => {
               text3={'Sometimes'}
               text4="Always"
               text6={'Data Help me Accept new concepts.'}
+              text5={
+                'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.'
+              }
               fontfamily="BrandonGrotesque-Regular"
             />
           </View>

@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import {Pinkbtn} from '../pinkbtn';
-import {PreventRemoveContext} from '@react-navigation/native';
 
 const Percentage = ({
   Image1,
@@ -56,6 +55,7 @@ const Percentage = ({
         <View
           style={{
             alignSelf: 'center',
+            alignItems: 'center',
             marginHorizontal: margin1,
             shadowColor: 'rgba(0,0,0,0.4)',
             shadowOffset: {
@@ -73,6 +73,8 @@ const Percentage = ({
               style={{
                 textAlign: 'center',
                 color: 'green',
+                marginTop: 5,
+                // marginLeft: 10,
               }}>
               0-25%
             </Text>

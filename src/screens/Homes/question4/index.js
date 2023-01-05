@@ -46,7 +46,8 @@ const Question3 = props => {
             <View style={{width: '100%', alignSelf: 'center'}}>
               <QComponents
                 iconone
-                name2="chevron-down"
+                name2="chevron-up"
+                name3="chevron-down"
                 direction2="Description:"
                 width={'100%'}
                 flowwerlist11={true}
@@ -63,6 +64,9 @@ const Question3 = props => {
                 text4="I Wrap Myself in that way Nightly"
                 text6={'We Each Have Angles?'}
                 fontfamily="BrandonGrotesque-Regular"
+                text5={
+                  'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.'
+                }
               />
             </View>
             <View style={{marginTop: 20}}>
@@ -72,7 +76,7 @@ const Question3 = props => {
                 btntxt="See Results"
                 setVisible={setState}
                 onPress={() =>
-                  props.navigation.replace('Result', {
+                  props.navigation.navigate('Result', {
                     otherParam: 'Top Tools',
                     plus: true,
                     backoption: () => props.navigation.navigate('me'),

@@ -47,7 +47,8 @@ const Question = props => {
               flowwerlist11={true}
               iconone
               width={'100%'}
-              name2="chevron-down"
+              name2="chevron-up"
+              name3="chevron-down"
               direction2="Description:"
               Statement1="Statement:"
               flow="Flow Through"
@@ -61,6 +62,9 @@ const Question = props => {
               text3={'SMCA Peepsceen to think so'}
               text4="Shall we Question Heap"
               text6={'The Multiverse is Real'}
+              text5={
+                'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.'
+              }
               fontfamily="BrandonGrotesque-Regular"
               marginVertical={10}
             />
