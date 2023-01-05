@@ -51,6 +51,7 @@ const Question2 = props => {
                 iconone
                 textforvideo="Resonance Finder Video Here"
                 name2="chevron-up"
+                name3="chevron-down"
                 video={true}
                 width={'100%'}
                 direction2="Description:"
