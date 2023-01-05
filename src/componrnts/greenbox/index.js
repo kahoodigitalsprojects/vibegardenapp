@@ -100,7 +100,12 @@ const Greenbox = ({
               <>
                 {img1 && (
                   <>
-                    <View style={{width: 24, height: 24, alignSelf: 'center'}}>
+                    <View
+                      style={{
+                        width: 25,
+                        height: 34,
+                        alignSelf: 'center',
+                      }}>
                       {index === 0 ? (
                         <Image
                           resizeMode="contain"
