@@ -16,17 +16,12 @@ const TabNavigator = () => {
       initialRouteName="Homes"
       screenOptions={{
         unmountOnBlur: true,
-        headerShown: false,
-        headerStyle: {
-          height: 0, // Specify the height of your custom header
-        },
-        headerTransparent: true,
+        // headerShown: false,
+        // headerStyle: {
+        //   height: 0, // Specify the height of your custom header
+        // },
+        // headerTransparent: true,
         tabBarActiveTintColor: '#1C5C2E',
-        tabBarStyle: {
-          height: hasNotch ? 85 : 80,
-          borderTopLeftRadius: 20,
-          borderTopRightRadius: 20,
-        },
       }}>
       <Tab.Screen
         name="Homes"
@@ -35,27 +30,14 @@ const TabNavigator = () => {
           const focusedRouteName = getFocusedRouteNameFromRoute(route);
           if (hiddenTabrBarScreens.includes(focusedRouteName)) {
             return {
-              tabBarStyle: {
-                display: 'none',
-                bottom: -200,
-                height: 0,
-              },
+              tabBarStyle: tabBarHiddenStyles,
             };
           }
-
           return {
-            tabBarStyle: {
-              display: 'flex',
-              height: hasNotch ? 85 : 80,
-              borderTopLeftRadius: 20,
-              borderTopRightRadius: 20,
-            },
+            tabBarStyle: tabBarStyles,
             tabBarLabel: 'Garden',
-            tabBarLabelStyle: {marginBottom: hasNotch ? -5 : 0},
-            tabBarItemStyle: {
-              paddingBottom: hasNotch ? 0 : 10,
-              marginTop: hasNotch ? 5 : 0,
-            },
+            tabBarLabelStyle: tabBarLabelStyles,
+            tabBarItemStyle: tabBarItemStyles,
             tabBarIcon: ({focused}) =>
               focused ? (
                 <>{Images.svgs.gardenDark}</>
@@ -73,26 +55,14 @@ const TabNavigator = () => {
           const focusedRouteName = getFocusedRouteNameFromRoute(route);
           if (hiddenTabrBarScreens.includes(focusedRouteName)) {
             return {
-              tabBarStyle: {
-                display: 'none',
-                bottom: -200,
-                height: 0,
-              },
+              tabBarStyle: tabBarHiddenStyles,
             };
           }
           return {
-            tabBarStyle: {
-              display: 'flex',
-              height: hasNotch ? 85 : 80,
-              borderTopLeftRadius: 20,
-              borderTopRightRadius: 20,
-            },
+            tabBarStyle: tabBarStyles,
             tabBarLabel: 'Tools',
-            tabBarLabelStyle: {marginBottom: hasNotch ? -5 : 0},
-            tabBarItemStyle: {
-              paddingBottom: hasNotch ? 0 : 10,
-              marginTop: hasNotch ? 5 : 0,
-            },
+            tabBarLabelStyle: tabBarLabelStyles,
+            tabBarItemStyle: tabBarItemStyles,
             tabBarIcon: ({focused}) =>
               focused ? (
                 <>{Images.svgs.toolsDark}</>
@@ -110,26 +80,14 @@ const TabNavigator = () => {
           const focusedRouteName = getFocusedRouteNameFromRoute(route);
           if (hiddenTabrBarScreens.includes(focusedRouteName)) {
             return {
-              tabBarStyle: {
-                display: 'none',
-                bottom: -200,
-                height: 0,
-              },
+              tabBarStyle: tabBarHiddenStyles,
             };
           }
           return {
-            tabBarStyle: {
-              display: 'flex',
-              height: hasNotch ? 85 : 80,
-              borderTopLeftRadius: 20,
-              borderTopRightRadius: 20,
-            },
+            tabBarStyle: tabBarStyles,
             tabBarLabel: 'Groundwork',
-            tabBarLabelStyle: {marginBottom: hasNotch ? -5 : 0},
-            tabBarItemStyle: {
-              paddingBottom: hasNotch ? 0 : 10,
-              marginTop: hasNotch ? 5 : 0,
-            },
+            tabBarLabelStyle: tabBarLabelStyles,
+            tabBarItemStyle: tabBarItemStyles,
             tabBarIcon: ({focused}) =>
               focused ? (
                 <>{Images.svgs.groundworkDark}</>
@@ -146,27 +104,14 @@ const TabNavigator = () => {
           const focusedRouteName = getFocusedRouteNameFromRoute(route);
           if (hiddenTabrBarScreens.includes(focusedRouteName)) {
             return {
-              tabBarStyle: {
-                display: 'none',
-                bottom: -200,
-                height: 0,
-              },
+              tabBarStyle: tabBarHiddenStyles,
             };
           }
           return {
-            tabBarStyle: {
-              display: 'flex',
-              height: hasNotch ? 85 : 80,
-              borderTopLeftRadius: 20,
-              borderTopRightRadius: 20,
-            },
-
+            tabBarStyle: tabBarStyles,
             tabBarLabel: 'Me',
-            tabBarLabelStyle: {marginBottom: hasNotch ? -5 : 0},
-            tabBarItemStyle: {
-              paddingBottom: hasNotch ? 0 : 10,
-              marginTop: hasNotch ? 5 : 0,
-            },
+            tabBarLabelStyle: tabBarLabelStyles,
+            tabBarItemStyle: tabBarItemStyles,
             tabBarIcon: () => (
               <Image
                 source={Images.Icons.meIcon}
@@ -181,6 +126,22 @@ const TabNavigator = () => {
   );
 };
 export default TabNavigator;
+const tabBarLabelStyles = {marginBottom: hasNotch ? -5 : 0};
+const tabBarItemStyles = {
+  paddingBottom: hasNotch ? 0 : 10,
+  marginTop: hasNotch ? 5 : 0,
+};
+const tabBarStyles = {
+  display: 'flex',
+  height: hasNotch ? 85 : 80,
+  borderTopLeftRadius: 20,
+  borderTopRightRadius: 20,
+};
+const tabBarHiddenStyles = {
+  display: 'none',
+  bottom: -200,
+  height: 0,
+};
 
 const hiddenTabrBarScreens = [
   'Video',

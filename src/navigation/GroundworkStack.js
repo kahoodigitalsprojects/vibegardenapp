@@ -12,26 +12,11 @@ export default function GroundworkStackScreen() {
     <GroundworkStack.Navigator
       initialRouteName="Groundworkscreen"
       screenOptions={{
-        headerShown: false,
-        headerTransparent: true,
+        headerLeft: () => <></>,
       }}>
-      <GroundworkStack.Screen
-        name="Groundworkscreen"
-        component={GroundWork}
-        options={{headerShown: false}}
-      />
-
-      <GroundworkStack.Screen
-        name="Video"
-        component={Video}
-        options={{headerShown: false}}
-      />
-
-      <GroundworkStack.Screen
-        name="Buddhisim"
-        component={Buddhisim}
-        options={{headerShown: false}}
-      />
+      <GroundworkStack.Screen name="Groundworkscreen" component={GroundWork} />
+      <GroundworkStack.Screen name="Video" component={Video} />
+      <GroundworkStack.Screen name="Buddhisim" component={Buddhisim} />
     </GroundworkStack.Navigator>
   );
 }

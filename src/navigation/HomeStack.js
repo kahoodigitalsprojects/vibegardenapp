@@ -20,36 +20,10 @@ export default function HomeStackScreen() {
   return (
     <HomeStack.Navigator
       screenOptions={{
-        headerShown: false,
-        headerTransparent: true,
+        headerLeft: () => <></>,
       }}>
-      <HomeStack.Screen
-        name="Home"
-        component={Home}
-        options={{headerShown: false}}
-      />
-
-      <HomeStack.Screen
-        name="EditScreen"
-        component={EditScreen}
-        options={{headerShown: false}}
-      />
-      {/* <HomeStack.Screen
-        name="Packges"
-        component={Packages}
-        options={{headerShown: false}}
-      /> */}
-
-      {/* <HomeStack.Screen
-        name="PaymentMethod"
-        component={PaymentMethod}
-        options={{headerShown: false}}
-      />
-      <HomeStack.Screen
-        name="CancelSubscription"
-        component={CancelSubscription}
-        options={{headerShown: false}}
-      /> */}
+      <HomeStack.Screen name="Home" component={Home} />
+      <HomeStack.Screen name="EditScreen" component={EditScreen} />
     </HomeStack.Navigator>
   );
 }
