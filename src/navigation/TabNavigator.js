@@ -17,6 +17,7 @@ const TabNavigator = () => {
       screenOptions={{
         unmountOnBlur: true,
         headerShown: false,
+        headerTransparent: true,
         tabBarActiveTintColor: '#1C5C2E',
         tabBarStyle: {
           height: hasNotch ? 85 : 80,

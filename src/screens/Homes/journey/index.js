@@ -11,7 +11,7 @@ import {
   SafeAreaView,
   ImageBackground,
 } from 'react-native';
-import {Icon} from 'react-native-elements';
+import Icon from 'react-native-vector-icons/AntDesign';
 import LinearGradient from 'react-native-linear-gradient';
 import {Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
