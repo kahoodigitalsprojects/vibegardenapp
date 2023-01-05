@@ -83,6 +83,7 @@ const Packages = props => {
           btntext1="Cancel"
           btntext2="Use This Card"
           onpressA={() => {
+            setstate(false);
             props.navigation.navigate('PaymentMethod', {
               headertext1: 'Pay Now',
               pressbtn: true,

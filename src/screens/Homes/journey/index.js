@@ -174,7 +174,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     backgroundColor: '#ffff',
-    justifyContent: 'center',
   },
 
   img: {

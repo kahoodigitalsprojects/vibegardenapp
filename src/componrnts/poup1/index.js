@@ -72,7 +72,7 @@ const PopUp = ({
                   styles.buttonClose,
                   {borderWidth: 1, backgroundColor: '#fff', padding: 5},
                 ]}
-                onPress={setVisible}>
+                onPress={() => setVisible(!Visible)}>
                 <Text style={[styles.textStyle, {color: '#1C5C2E'}]}>
                   {btntext1}
                 </Text>
@@ -89,7 +89,7 @@ const PopUp = ({
                 name="arrowright"
                 size={15}
                 color="#1492E6"
-                style={{marginTop: 5, marginLeft: 3}}
+                style={{marginTop: 2.5, marginLeft: 5}}
               />
             </TouchableOpacity>
           </View>

@@ -36,7 +36,7 @@ const Settings = props => {
           {/* <Header /> */}
         </View>
 
-        <View style={{marginVertical: 10, marginTop: 40}}>
+        <View style={{marginVertical: 10, marginTop: 80}}>
           <View style={styles.firstview}>
             <View style={styles.first}>
               <View style={{width: '100%', flexDirection: 'row'}}>
@@ -53,22 +53,20 @@ const Settings = props => {
                 styles.row,
                 {
                   width: '90%',
-                  justifyContent: 'center',
-                  // alignSelf: 'center',
                   justifyContent: 'space-between',
+                  marginTop: 20,
                 },
               ]}>
               <View
                 style={{
                   flexDirection: 'row',
+                  alignItems: 'center',
                 }}>
-                <View style={{marginTop: 6}}>
-                  <Image
-                    source={Images.Icons.envelop1}
-                    resizeMode="contain"
-                    style={{width: 12, height: 12, marginTop: 6, margin: 5}}
-                  />
-                </View>
+                <Image
+                  source={Images.Icons.envelop1}
+                  resizeMode="contain"
+                  style={{width: 12, height: 12, margin: 5}}
+                />
 
                 <Text style={styles.text1}>Email Notification</Text>
               </View>
@@ -85,23 +83,20 @@ const Settings = props => {
                 styles.row,
                 {
                   width: '90%',
-                  justifyContent: 'center',
-                  // alignSelf: 'center',
-                  marginTop: 10,
+                  // marginTop: 10,
                   justifyContent: 'space-between',
                 },
               ]}>
               <View
                 style={{
                   flexDirection: 'row',
+                  alignItems: 'center',
                 }}>
-                <View style={{marginTop: 6}}>
-                  <Image
-                    source={Images.Icons.notify}
-                    resizeMode="contain"
-                    style={{width: 15, height: 12, marginTop: 7, margin: 5}}
-                  />
-                </View>
+                <Image
+                  source={Images.Icons.notify}
+                  resizeMode="contain"
+                  style={{width: 12, height: 12, margin: 5}}
+                />
                 <Text style={styles.text1}>Push Notification</Text>
               </View>
               <View style={{marginTop: 6}}>
@@ -128,22 +123,20 @@ const Settings = props => {
                 styles.row,
                 {
                   width: '90%',
-                  justifyContent: 'center',
-                  // alignSelf: 'center',
                   justifyContent: 'space-between',
+                  marginTop: 20,
                 },
               ]}>
               <View
                 style={{
                   flexDirection: 'row',
+                  alignItems: 'center',
                 }}>
-                <View style={{marginTop: 8, margin: 5}}>
-                  <Image
-                    source={Images.Icons.envelop1}
-                    resizeMode="contain"
-                    style={{width: 12, height: 12, marginTop: 5}}
-                  />
-                </View>
+                <Image
+                  source={Images.Icons.envelop1}
+                  resizeMode="contain"
+                  style={{width: 12, height: 12, margin: 5}}
+                />
                 <Text style={styles.text1}>Edit Email</Text>
               </View>
               <View style={{marginTop: 6}}>
@@ -164,22 +157,19 @@ const Settings = props => {
                 styles.row,
                 {
                   width: '90%',
-                  justifyContent: 'center',
-                  // alignSelf: 'center',
                   justifyContent: 'space-between',
                 },
               ]}>
               <View
                 style={{
                   flexDirection: 'row',
+                  alignItems: 'center',
                 }}>
-                <View style={{marginTop: 6, margin: 5}}>
-                  <Image
-                    source={Images.Icons.person}
-                    resizeMode="contain"
-                    style={{width: 12, height: 12, marginTop: 5}}
-                  />
-                </View>
+                <Image
+                  source={Images.Icons.person}
+                  resizeMode="contain"
+                  style={{width: 12, height: 12, margin: 5}}
+                />
                 <Text style={styles.text1}>Edit Name</Text>
               </View>
               <View style={{marginTop: 6}}>
@@ -200,7 +190,6 @@ const Settings = props => {
                 styles.row,
                 {
                   width: '90%',
-                  justifyContent: 'center',
                   // alignSelf: 'center',
                   justifyContent: 'space-between',
                 },
@@ -208,14 +197,13 @@ const Settings = props => {
               <View
                 style={{
                   flexDirection: 'row',
+                  alignItems: 'center',
                 }}>
-                <View style={{marginTop: 6, margin: 5}}>
-                  <Image
-                    source={Images.Icons.lock}
-                    resizeMode="contain"
-                    style={{width: 12, height: 12, marginTop: 5}}
-                  />
-                </View>
+                <Image
+                  source={Images.Icons.lock}
+                  resizeMode="contain"
+                  style={{width: 12, height: 12, margin: 5}}
+                />
                 <Text style={styles.text1}>Change Password</Text>
               </View>
               <View style={{marginTop: 5}}>
@@ -230,22 +218,19 @@ const Settings = props => {
                 styles.row,
                 {
                   width: '90%',
-                  justifyContent: 'center',
-                  // alignSelf: 'center',
                   justifyContent: 'space-between',
                 },
               ]}>
               <View
                 style={{
                   flexDirection: 'row',
+                  alignItems: 'center',
                 }}>
-                <View style={{marginTop: 4, margin: 5}}>
-                  <Image
-                    source={Images.Icons.video}
-                    resizeMode="contain"
-                    style={{width: 12, height: 12, marginTop: 10}}
-                  />
-                </View>
+                <Image
+                  source={Images.Icons.video}
+                  resizeMode="contain"
+                  style={{width: 12, height: 12, margin: 5}}
+                />
                 <Text style={styles.text1}>Manage Subscription</Text>
               </View>
               <View style={{marginTop: 5}}>
@@ -257,7 +242,6 @@ const Settings = props => {
                 styles.row,
                 {
                   width: '90%',
-                  justifyContent: 'center',
                   // alignSelf: 'center',
                   justifyContent: 'space-between',
                 },
@@ -265,14 +249,13 @@ const Settings = props => {
               <View
                 style={{
                   flexDirection: 'row',
+                  alignItems: 'center',
                 }}>
-                <View style={{marginTop: 6}}>
-                  <Image
-                    source={Images.Icons.logout}
-                    resizeMode="contain"
-                    style={{width: 15, height: 12, marginTop: 10, margin: 5}}
-                  />
-                </View>
+                <Image
+                  source={Images.Icons.logout}
+                  resizeMode="contain"
+                  style={{width: 15, height: 12, margin: 5}}
+                />
                 <Text style={styles.text1}>Logout</Text>
               </View>
             </TouchableOpacity>
@@ -292,19 +275,19 @@ const Settings = props => {
                 styles.row,
                 {
                   width: '90%',
-                  justifyContent: 'center',
-                  // alignSelf: 'center',
                   justifyContent: 'space-between',
+                  marginTop: 20,
                 },
               ]}>
               <View
                 style={{
                   flexDirection: 'row',
+                  alignItems: 'center',
                 }}>
                 <Image
                   source={Images.Icons.headphone}
                   resizeMode="contain"
-                  style={{width: 15, height: 12, marginTop: 10, margin: 5}}
+                  style={{width: 15, height: 12, margin: 5}}
                 />
                 <Text style={styles.text1}>Contact us</Text>
               </View>
@@ -323,19 +306,18 @@ const Settings = props => {
                 styles.row,
                 {
                   width: '90%',
-                  justifyContent: 'center',
-                  // alignSelf: 'center',
                   justifyContent: 'space-between',
                 },
               ]}>
               <View
                 style={{
                   flexDirection: 'row',
+                  alignItems: 'center',
                 }}>
                 <Image
                   source={Images.Icons.bars}
                   resizeMode="contain"
-                  style={{width: 15, height: 12, marginTop: 12, margin: 5}}
+                  style={{width: 15, height: 12, margin: 5}}
                 />
 
                 <Text style={styles.text1}>Privacy Policy</Text>
@@ -354,19 +336,18 @@ const Settings = props => {
                 styles.row,
                 {
                   width: '90%',
-                  justifyContent: 'center',
-                  // alignSelf: 'center',
                   justifyContent: 'space-between',
                 },
               ]}>
               <View
                 style={{
                   flexDirection: 'row',
+                  alignItems: 'center',
                 }}>
                 <Image
                   source={Images.Icons.folder}
                   resizeMode="contain"
-                  style={{width: 15, height: 12, marginTop: 12, margin: 5}}
+                  style={{width: 15, height: 12, margin: 5}}
                 />
                 <Text style={styles.text1}>Terms of use</Text>
               </View>
@@ -403,24 +384,20 @@ const styles = StyleSheet.create({
     // marginVertical:10
     // backgroundColor: 'green',
   },
-  text1: {
-    marginVertical: 10,
-    color: '#1C5C2E',
 
-    fontSize: 14,
-    fontFamily: 'BrandonGrotesque-Regular',
-  },
   text1: {
-    fontSize: 18,
+    // fontSize: 18,
+    fontSize: 14,
     color: '#191919B8',
-    marginVertical: 5,
+    // marginTop: 5,
+    // marginVertical: 10,
     fontFamily: 'BrandonGrotesque-Regular',
   },
   line: {
-    width: 283,
+    width: '60%',
     borderBottomWidth: 0.5,
     borderColor: '#afafaa',
-    width: '60%',
+    // flex: 1,
     alignSelf: 'center',
     backgroundColor: 'green',
     marginTop: 8,
@@ -433,7 +410,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'green',
     borderRadius: 25,
-    elevation: 1,
+    // elevation: 1,
     backgroundColor: '#fff',
     flexDirection: 'row',
     elevation: 6,
