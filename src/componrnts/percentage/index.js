@@ -69,7 +69,13 @@ const Percentage = ({
           }}>
           <Image source={Image1} style={[styles.img]} resizeMode="contain" />
           {Pertext && (
-            <Text style={{textAlign: 'center', color: 'green'}}>0-25%</Text>
+            <Text
+              style={{
+                textAlign: 'center',
+                color: 'green',
+              }}>
+              0-25%
+            </Text>
           )}
         </View>
 
@@ -79,6 +85,7 @@ const Percentage = ({
             marginLeft: 10,
             fontSize: 18,
             color: '#979B9F',
+            marginTop: -5,
           }}>
           {count}%
         </Text>
@@ -100,13 +107,14 @@ const Percentage = ({
           {check && (
             <View
               style={{
-                marginTop: 5,
+                marginTop: -5,
                 width: 18,
                 height: 18,
                 borderRadius: 100,
                 backgroundColor: 'green',
                 justifyContent: 'center',
                 alignItems: 'center',
+                marginLeft: -8,
               }}>
               <Icon name="check" size={12} color="#fff" />
             </View>

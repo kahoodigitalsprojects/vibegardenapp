@@ -27,6 +27,7 @@ export default function MeStackScreen() {
     <MeStack.Navigator
       initialRouteName="me"
       screenOptions={{
+        headerShown: false,
         headerLeft: () => <></>,
       }}>
       <MeStack.Screen name="notification" component={Notification} />

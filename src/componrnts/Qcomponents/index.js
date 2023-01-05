@@ -2,11 +2,7 @@ import React, {useState} from 'react';
 import {
   View,
   Text,
-  SafeAreaView,
-  ScrollView,
   StyleSheet,
-  StatusBar,
-  TextInput,
   Image,
   TouchableOpacity,
   FlatList,
@@ -17,6 +13,8 @@ import Icon from 'react-native-vector-icons/Entypo';
 import Icon2 from 'react-native-vector-icons/AntDesign';
 import Icon3 from 'react-native-vector-icons/Ionicons';
 import Images from '../../constants';
+import Collapsible from 'react-native-collapsible';
+import LinearGradient from 'react-native-linear-gradient';
 const QComponents = ({
   text1,
   text2,
@@ -190,16 +188,10 @@ const QComponents = ({
               {iconone && (
                 <>
                   <TouchableOpacity
-                    onPress={() => {}}
+                    onPress={() => setIsCollapsed(!isCollapsed)}
                     style={{marginTop: 1, marginLeft: 5}}>
                     <Icon name={name2} size={25} color="#1C5C2E" />
                   </TouchableOpacity>
-
-                  <Collapsible collapsed={isCollapsed}>
-                    <View>
-                      <Text>hellow</Text>
-                    </View>
-                  </Collapsible>
                 </>
               )}
             </View>
@@ -241,17 +233,19 @@ const QComponents = ({
           </View>
           <View style={{marginTop: 6}}>
             {text5 && (
-              <Text
-                style={[
-                  {
-                    color: '#000',
-                    fontSize: 18,
-                    lineHeight: 30,
-                    fontFamily: 'BrandonGrotesque-Medium',
-                  },
-                ]}>
-                {text5}
-              </Text>
+              <Collapsible collapsed={isCollapsed}>
+                <Text
+                  style={[
+                    {
+                      color: '#000',
+                      fontSize: 18,
+                      lineHeight: 30,
+                      fontFamily: 'BrandonGrotesque-Medium',
+                    },
+                  ]}>
+                  {text5}
+                </Text>
+              </Collapsible>
             )}
           </View>
           <View style={{width: width, alignSelf: 'center'}}>

@@ -21,6 +21,7 @@ export default function ToolsStackScreen() {
     <ToolsStack.Navigator
       initialRouteName="tools"
       screenOptions={{
+        headerShown: false,
         headerLeft: () => <></>,
       }}>
       <ToolsStack.Screen name="tools" component={Tools} />

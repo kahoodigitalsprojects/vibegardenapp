@@ -15,6 +15,8 @@ const TabNavigator = () => {
     <Tab.Navigator
       initialRouteName="Homes"
       screenOptions={{
+        headerShown: false,
+        headerLeft: () => <></>,
         unmountOnBlur: true,
         // headerShown: false,
         // headerStyle: {

@@ -27,6 +27,7 @@ const StackNavigator = () => {
     <Stack.Navigator
       initialRouteName="Splash"
       screenOptions={{
+        headerShown: false,
         headerLeft: () => <></>,
       }}>
       <Stack.Screen name="Splash" component={Splash} />

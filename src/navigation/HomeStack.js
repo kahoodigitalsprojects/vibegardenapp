@@ -20,6 +20,7 @@ export default function HomeStackScreen() {
   return (
     <HomeStack.Navigator
       screenOptions={{
+        headerShown: false,
         headerLeft: () => <></>,
       }}>
       <HomeStack.Screen name="Home" component={Home} />

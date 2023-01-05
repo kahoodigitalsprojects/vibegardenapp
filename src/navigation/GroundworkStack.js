@@ -12,6 +12,7 @@ export default function GroundworkStackScreen() {
     <GroundworkStack.Navigator
       initialRouteName="Groundworkscreen"
       screenOptions={{
+        headerShown: false,
         headerLeft: () => <></>,
       }}>
       <GroundworkStack.Screen name="Groundworkscreen" component={GroundWork} />

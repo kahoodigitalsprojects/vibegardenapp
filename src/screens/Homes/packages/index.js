@@ -99,6 +99,8 @@ const Packages = props => {
           Visible={state1}
           setVisible={setState1}
           onpress1={() => {
+            setstate(false);
+            setState1(false);
             props.navigation.navigate('ManageSubscription');
           }}
         />
