@@ -1,16 +1,11 @@
 import React from 'react';
 import {
   View,
-  Text,
   SafeAreaView,
   ScrollView,
   StyleSheet,
   StatusBar,
   ImageBackground,
-  TextInput,
-  Image,
-  TouchableOpacity,
-  FlatList,
 } from 'react-native';
 
 import {Header, Pinkbtn, QComponents} from '../../../componrnts';
