@@ -15,7 +15,7 @@ import All from '../../../componrnts/all';
 import MainBox from '../../../componrnts/mainbox';
 import SearchModal from '../../../componrnts/SearchModal';
 import Images from '../../../constants';
-
+import {useBackButton} from '../../../hooks/BackHandler';
 const GroundWork = ({navigation}) => {
   const [visible, setVisible] = useState(false);
   const Data = [
@@ -38,6 +38,15 @@ const GroundWork = ({navigation}) => {
       title: 'Title',
     },
   ];
+  //BackHandler
+  const onBackPress = () => {
+    navigation.reset({
+      index: 0,
+      routes: [{name: 'Homes'}],
+    });
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
       <ImageBackground
