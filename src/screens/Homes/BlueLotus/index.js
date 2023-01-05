@@ -1,5 +1,12 @@
 import React from 'react';
-import {View, StyleSheet, Text, ScrollView, StatusBar} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Text,
+  ScrollView,
+  StatusBar,
+  Platform,
+} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {Header, StoryData} from '../../../componrnts';
 import Images from '../../../constants';
@@ -16,7 +23,7 @@ const BlueLotus = ({route, navigation}) => {
         <View
           style={{
             // marginVertical: 10,
-            // marginTop: 20,
+            marginTop: Platform.OS === 'ios' ? 0 : 10,
             width: '90%',
             alignSelf: 'center',
           }}>

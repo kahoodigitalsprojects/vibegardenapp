@@ -14,6 +14,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {Header} from '../../../componrnts';
 import Reset from '../../../componrnts/ResetComponent';
 import Images from '../../../constants';
+import {useBackButton} from '../../../hooks/BackHandler';
 // import { BackHandler } from 'react-native';
 const FressBlooms = ({navigation, route}) => {
   // const itemId = 'asdas';
@@ -32,19 +33,20 @@ const FressBlooms = ({navigation, route}) => {
     {id: 3, icon1: 'heart'},
     {id: 4, icon1: 'heart'},
   ];
-  // const backAction = () => {
-  //   console.log(' freshbloom');
-  //   backoption();
-  //   // navigation.goBack();
-  //   return true;
-  // };
-  // BackHandler.addEventListener('hardwareBackPress', () => {
-  //   // // navigation.navigate('homes');
-  //   // route.params.backoption();
-  //   // console.log('helo ');
-  //   // // navigation.goBack();
-  //   backAction();
-  // });
+  //BackHandler
+  const onBackPress = () => {
+    fromHome
+      ? navigation.reset({
+          index: 0,
+          routes: [{name: 'Homes'}, {name: 'me'}],
+        })
+      : navigation.reset({
+          index: 0,
+          routes: [{name: 'me'}, {name: 'Homes'}],
+        });
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
 
   return (
     <SafeAreaView style={styles.main}>
