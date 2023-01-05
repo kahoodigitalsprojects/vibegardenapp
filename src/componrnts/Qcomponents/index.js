@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -18,6 +18,7 @@ import Icon2 from 'react-native-vector-icons/AntDesign';
 import Icon3 from 'react-native-vector-icons/Ionicons';
 import Images from '../../constants';
 import {color} from 'react-native-elements/dist/helpers';
+import LinearGradient from 'react-native-linear-gradient';
 
 const QComponents = ({
   text1,
@@ -52,6 +53,7 @@ const QComponents = ({
   redbtn,
   textforvideo,
 }) => {
+  const [data1, setdata1] = useState(0);
   const data = [
     {text1: text1, img1: Images.Imgs.R1},
 
@@ -309,12 +311,54 @@ const QComponents = ({
                 <>
                   <View style={{width: '24%', margin: 2}}>
                     <TouchableOpacity
-                      onPress={item.onPress}
-                      style={styles.circle}>
-                      <Image
-                        source={item.img1}
-                        style={{width: '100%', height: '100%'}}
-                      />
+                      activeOpacity={1}
+                      onPress={() => (index === true ? '' : setdata1(index))}
+                      style={{}}>
+                      <>
+                        {data1 === index ? (
+                          <ImageBackground
+                            source={item.img1}
+                            style={[styles.img]}
+                            resizeMode="contain">
+                            <LinearGradient
+                              colors={['#ED535E', '#CD258D']}
+                              style={[
+                                styles.circle,
+
+                                {
+                                  width: 74,
+                                  height: 74,
+                                  // width: 100,
+                                  // height: 100,
+                                  // borderRadius: 100,
+                                  // justifyContent: 'center',
+                                  // alignItems: 'center',
+                                  // alignSelf: 'center',
+                                  backgroundColor:
+                                    data1 === index ? '#CD258D' : '',
+                                  opacity: 0.9,
+                                  // elevation: data1 === index ? 0 : 5,
+                                },
+                              ]}>
+                              <Icon
+                                name="check"
+                                size={39}
+                                color="#fff"
+                                style={{}}
+                              />
+                            </LinearGradient>
+                          </ImageBackground>
+                        ) : (
+                          <View
+                            style={[styles.circle, {width: 74, height: 74}]}>
+                            <Image
+                              source={item.img1}
+                              resizeMode="contain"
+                              style={{width: '100%', height: '100%'}}
+                            />
+                          </View>
+                        )}
+                      </>
                     </TouchableOpacity>
                     <View style={{width: 78, margin: 7}}>
                       <Text
@@ -399,9 +443,8 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
-    elevation: 5,
-    width: 74,
-    height: 74,
+    elevation: 10,
+
     borderRadius: 100,
     backgroundColor: 'yellow',
     backgroundColor: '#fff',

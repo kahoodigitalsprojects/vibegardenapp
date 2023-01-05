@@ -28,7 +28,7 @@ export default function MeStackScreen() {
       initialRouteName="me"
       screenOptions={{
         headerShown: false,
-        headerTransparent: true,
+        headerTransparent: false,
       }}>
       <MeStack.Screen
         name="notification"
