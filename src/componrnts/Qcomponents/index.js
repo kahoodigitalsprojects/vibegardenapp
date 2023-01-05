@@ -29,6 +29,7 @@ const QComponents = ({
   width,
   name11,
   name2,
+  name3,
   number,
   video,
   video2,
@@ -49,7 +50,7 @@ const QComponents = ({
   textforvideo,
 }) => {
   const [data1, setdata1] = useState(0);
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   const data = [
     {text1: text1, img1: Images.Imgs.R1},
@@ -190,7 +191,11 @@ const QComponents = ({
                   <TouchableOpacity
                     onPress={() => setIsCollapsed(!isCollapsed)}
                     style={{marginTop: 1, marginLeft: 5}}>
-                    <Icon name={name2} size={25} color="#1C5C2E" />
+                    {isCollapsed ? (
+                      <Icon name={name3} size={25} color="#1C5C2E" />
+                    ) : (
+                      <Icon name={name2} size={25} color="#1C5C2E" />
+                    )}
                   </TouchableOpacity>
                 </>
               )}
