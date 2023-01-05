@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   View,
   Text,
@@ -13,8 +13,28 @@ import {
 import {Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 import Icon from 'react-native-vector-icons/AntDesign';
+import Orientation from 'react-native-orientation-locker';
+import {useIsFocused} from '@react-navigation/native';
 
 const NameScreen = props => {
+  const isFocused = useIsFocused();
+  useEffect(() => {
+    Orientation.unlockAllOrientations();
+    checkJourney();
+  }, [isFocused]);
+  const checkJourney = async value => {
+    try {
+      const check = await AsyncStorage.getItem('journeyCompleted');
+      if (check !== null) {
+        return;
+      } else {
+        await AsyncStorage.setItem('journeyCompleted', 'DONE');
+      }
+    } catch (e) {
+      // saving error
+      console.log(e);
+    }
+  };
   const {showVerifyScreen} = props.route.params;
   return (
     <SafeAreaView style={styles.main}>

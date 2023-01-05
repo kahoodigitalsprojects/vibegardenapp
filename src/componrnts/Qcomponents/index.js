@@ -17,14 +17,6 @@ import Icon from 'react-native-vector-icons/Entypo';
 import Icon2 from 'react-native-vector-icons/AntDesign';
 import Icon3 from 'react-native-vector-icons/Ionicons';
 import Images from '../../constants';
-import Collapsible from 'react-native-collapsible';
-// import {
-//   Collapse,
-//   CollapseHeader,
-//   CollapseBody,
-//   AccordionList,
-// } from 'accordion-collapse-react-native';
-
 const QComponents = ({
   text1,
   text2,
@@ -198,7 +190,7 @@ const QComponents = ({
               {iconone && (
                 <>
                   <TouchableOpacity
-                    onPress={() => setIsCollapsed(!isCollapsed)}
+                    onPress={() => {}}
                     style={{marginTop: 1, marginLeft: 5}}>
                     <Icon name={name2} size={25} color="#1C5C2E" />
                   </TouchableOpacity>
