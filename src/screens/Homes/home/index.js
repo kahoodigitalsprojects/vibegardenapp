@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   View,
   Text,
@@ -9,6 +9,7 @@ import {
   FlatList,
   StatusBar,
   ImageBackground,
+  Alert,
 } from 'react-native';
 import {Header, SeeAll} from '../../../componrnts';
 import All from '../../../componrnts/all';
@@ -17,14 +18,26 @@ import SearchModal from '../../../componrnts/SearchModal';
 import Images from '../../../constants';
 const Home = ({navigation, route}) => {
   const [visible, setVisible] = useState(false);
-  const backAction = () => {
-    // navigation.navigate('Mytabes', {screen: 'homes'});
-  };
-  BackHandler.addEventListener('hardwareBackPress', () => {
-    // navigation.navigate('Mytabes', {screen: 'homes'});
-    console.log('home baclhandler called');
-    // BackHandler.exitApp();
-  });
+  useEffect(() => {
+    const backAction = () => {
+      Alert.alert('Hold on!', 'Are you sure you want to exit?', [
+        {
+          text: 'Cancel',
+          onPress: () => null,
+          style: 'cancel',
+        },
+        {text: 'YES', onPress: () => BackHandler.exitApp()},
+      ]);
+      return true;
+    };
+
+    const backHandler = BackHandler.addEventListener(
+      'hardwareBackPress',
+      backAction,
+    );
+
+    return () => backHandler.remove();
+  }, []);
 
   const Data = [
     {
