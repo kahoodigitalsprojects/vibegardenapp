@@ -26,6 +26,7 @@ export default function MeStackScreen() {
   return (
     <MeStack.Navigator
       initialRouteName="me"
+      backBehavior="history"
       screenOptions={{
         headerShown: false,
         headerLeft: () => <></>,

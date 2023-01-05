@@ -11,6 +11,7 @@ export default function GroundworkStackScreen() {
   return (
     <GroundworkStack.Navigator
       initialRouteName="Groundworkscreen"
+      backBehavior="history"
       screenOptions={{
         headerShown: false,
         headerLeft: () => <></>,

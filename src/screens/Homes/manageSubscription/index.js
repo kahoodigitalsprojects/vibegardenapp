@@ -197,9 +197,9 @@ const ManageSubscription = props => {
               style={[
                 {
                   color: '#1492E6',
-                  fontSize: 16,
+                  fontSize: 18,
                   marginVertical: 10,
-                  fontFamily: 'BrandonGrotesque-Regular',
+                  fontFamily: 'BrandonGrotesque-Medium',
                 },
               ]}>
               Cancel Subscription

@@ -19,6 +19,7 @@ export default function HomeStackScreen() {
 
   return (
     <HomeStack.Navigator
+      backBehavior="history"
       screenOptions={{
         headerShown: false,
         headerLeft: () => <></>,

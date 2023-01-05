@@ -77,7 +77,10 @@ const CancelSubscription = props => {
               text5={
                 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.'
               }
-              marginTop1={-15}
+              Statement={
+                'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.'
+              }
+              marginTop1={-5}
               text6={'Leaving Because:'}
               fontfamily="BrandonGrotesque-Bold"
             />

@@ -20,6 +20,7 @@ export default function ToolsStackScreen() {
   return (
     <ToolsStack.Navigator
       initialRouteName="tools"
+      backBehavior="history"
       screenOptions={{
         headerShown: false,
         headerLeft: () => <></>,
