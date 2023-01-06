@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -79,12 +79,12 @@ const Greenbox = ({
     },
   ];
   return (
-    <View style={{marginVertical: 10}}>
+    <View style={{ marginVertical: 10 }}>
       <FlatList
         showsHorizontalScrollIndicator={false}
         horizontal={true}
         data={Data}
-        renderItem={({item, index}) => {
+        renderItem={({ item, index }) => {
           return (
             <TouchableOpacity
               onPress={() => (index === true ? '' : setdata1(index))}
@@ -111,13 +111,13 @@ const Greenbox = ({
                         <Image
                           resizeMode="contain"
                           source={data1 === 0 ? item.Image1 : item.Image3}
-                          style={{width: '100%', height: '100%'}}
+                          style={{ width: '100%', height: '100%' }}
                         />
                       ) : (
                         <Image
                           resizeMode="contain"
                           source={data1 === index ? item.Image3 : item.Image1}
-                          style={{width: '100%', height: '100%'}}
+                          style={{ width: '100%', height: '100%' }}
                         />
                       )}
                     </View>
@@ -166,18 +166,18 @@ const Greenbox = ({
               <View>
                 {img2 && (
                   <>
-                    <View style={{width: 24, height: 24, alignSelf: 'center'}}>
+                    <View style={{ width: 24, height: 24, alignSelf: 'center' }}>
                       {index === 0 ? (
                         <Image
                           resizeMode="contain"
                           source={data1 === 0 ? item.Image2 : item.Image3}
-                          style={{width: '100%', height: '100%'}}
+                          style={{ width: '100%', height: '100%' }}
                         />
                       ) : (
                         <Image
                           resizeMode="contain"
                           source={data1 === index ? item.Image4 : item.Image2}
-                          style={{width: '100%', height: '100%'}}
+                          style={{ width: '100%', height: '100%' }}
                         />
                       )}
                     </View>
@@ -199,12 +199,12 @@ const Greenbox = ({
           );
         }}
       />
-      <View View style={{marginVertical: 30, flexDirection: 'row'}}>
+      <View View style={{ marginVertical: 30, flexDirection: 'row' }}>
         <View>
           <FlatList
             horizontal={true}
             data={data}
-            renderItem={({item, index}) => {
+            renderItem={({ item, index }) => {
               return (
                 <TouchableOpacity
                   onPress={onPress1}
@@ -243,7 +243,7 @@ const Greenbox = ({
             justifyContent: 'center',
             alignItems: 'center',
           }}>
-          <Text style={{color: '#fff', fontFamily: 'BrandonGrotesque-Regular'}}>
+          <Text style={{ color: '#fff', fontFamily: 'BrandonGrotesque-Regular' }}>
             +
           </Text>
         </TouchableOpacity>
@@ -283,4 +283,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export {Greenbox};
+export { Greenbox };
