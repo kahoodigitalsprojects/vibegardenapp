@@ -6,14 +6,18 @@ import {
   ScrollView,
   StyleSheet,
   StatusBar,
-  TextInput,
   Image,
-  TouchableOpacity,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import Searcbart1 from '../../../componrnts/searchbar1';
 import Images from '../../../constants';
-const Search = props => {
+import {useBackButton} from '../../../hooks/BackHandler';
+const Search = ({navigation}) => {
+  //BackHandler
+  const onBackPress = () => {
+    navigation.goBack();
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
@@ -22,14 +26,9 @@ const Search = props => {
         <StatusBar animated={true} backgroundColor="#000" />
         <Searcbart1
           onpress1={() => {
-            props.navigation.navigate('Search2', {
-              // params: {
-              //   textchange: 'Quantum Physics',
-              //   mydata: true
-              // }
-            });
+            navigation.navigate('Search2');
           }}
-          onpress2={() => props.navigation.goBack()}
+          onpress2={() => navigation.goBack()}
         />
         <View style={styles.container}>
           <View

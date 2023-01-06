@@ -12,13 +12,19 @@ import {
   ImageBackground,
 } from 'react-native';
 import {Header, Percentage, Pinkbtn} from '../../../componrnts';
-
 import Images from '../../../constants';
-
 import SearchModal from '../../../componrnts/SearchModal';
+import {useBackButton} from '../../../hooks/BackHandler';
 const Me = ({navigation}) => {
   const [visible, setVisible] = useState(false);
-  const data = [{text1: 'Last Weak'}, {text1: '30 days'}, {text1: 'All'}];
+
+  //BackHandler
+  const onBackPress = () => {
+    navigation.navigate('Homes');
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
+
   const data1 = [
     {
       img1: Images.Icons.gpluse,
@@ -269,10 +275,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   Box1: {marginTop: 10},
-  centerbox: {},
-  data: {
-    // position: 'relative',
-  },
+
   imgb: {
     width: 330,
     height: 198,
@@ -292,16 +295,8 @@ const styles = StyleSheet.create({
   image: {
     flex: 1,
     justifyContent: 'center',
-    // paddingTop: 100,
   },
 });
 
 export default Me;
-
-// <View >
-// <ResultComponents
-//   headerText="Resonance Finder"
-//   Visible={state1}
-//   setVisible={setState1}
-//   onpress1={() => { setState1(false) }} />
-// </View>
+const data = [{text1: 'Last Weak'}, {text1: '30 days'}, {text1: 'All'}];
