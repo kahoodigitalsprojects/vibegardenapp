@@ -9,6 +9,7 @@ import {
   Image,
 } from 'react-native';
 import Searcbart1 from '../../../componrnts/searchbar1';
+import {useBackButton} from '../../../hooks/BackHandler';
 import Images from '../../../constants';
 import {useBackButton} from '../../../hooks/BackHandler';
 const Search = ({navigation}) => {

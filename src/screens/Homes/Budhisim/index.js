@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   View,
   Text,
@@ -15,9 +15,15 @@ import {
 import {Header, SeeAll, Userdetails} from '../../../componrnts';
 import All from '../../../componrnts/all';
 import Images from '../../../constants';
+import {useBackButton} from '../../../hooks/BackHandler';
 
-const Buddhisim = props => {
-  const {Flowersbox, Heading} = props;
+const Buddhisim = ({navigation, Flowersbox, Heading}) => {
+  onBackPress = () => {
+    navigation.goBack();
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
+
   const data = [
     {
       Img1: Images.Imgs.user2,
@@ -90,7 +96,7 @@ const Buddhisim = props => {
               iconName="arrowleft"
               header2
               headertext="Buddhisim"
-              OnPress={() => props.navigation.goBack()}
+              OnPress={() => navigation.goBack()}
             />
           </View>
           <View style={styles.Box1}>
@@ -124,7 +130,7 @@ const Buddhisim = props => {
                         marginVertical={15}
                         color1="#000"
                         pressI={() =>
-                          props.navigation.navigate('Video', {
+                          navigation.navigate('Video', {
                             otherParam: 'Tools to try',
 
                             plus: true,
@@ -132,7 +138,7 @@ const Buddhisim = props => {
                             textflower: 'Did you try this tools?',
                             icon1: true,
                             redbtn: true,
-                            backoption: () => props.navigation.goBack(),
+                            backoption: () => navigation.goBack(),
                           })
                         }
                         // onPressALL={item.pressAll}
@@ -154,7 +160,7 @@ const Buddhisim = props => {
               <View style={{marginTop: 20}}>
                 <SeeAll
                   onPress={() =>
-                    props.navigation.navigate('Homes', {
+                    navigation.navigate('Homes', {
                       screen: 'FressBlooms',
                     })
                   }
