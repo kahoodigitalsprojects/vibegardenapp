@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {
   View,
   StyleSheet,
@@ -6,8 +6,6 @@ import {
   ScrollView,
   StatusBar,
   FlatList,
-  TextInput,
-  TouchableOpacity,
   ImageBackground,
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
@@ -15,24 +13,9 @@ import {Header} from '../../../componrnts';
 import Reset from '../../../componrnts/ResetComponent';
 import Images from '../../../constants';
 import {useBackButton} from '../../../hooks/BackHandler';
-// import { BackHandler } from 'react-native';
 const FressBlooms = ({navigation, route}) => {
-  // const itemId = 'asdas';
+  const {otherParam, itemId, heart, plus, fromHome} = route.params || null;
 
-  // console.log('route', route.params.itemId);
-  // console.log('route', route.params.otherParam);
-  console.log(' sdfd', navigation);
-  const {otherParam} = route.params;
-  const {itemId} = route.params;
-  const {heart} = route.params;
-  const {plus} = route.params;
-  const {fromHome} = route.params || null;
-  const data = [
-    {id: 1, icon1: 'heart'},
-    {id: 2, icon1: 'heart'},
-    {id: 3, icon1: 'heart'},
-    {id: 4, icon1: 'heart'},
-  ];
   //BackHandler
   const onBackPress = () => {
     fromHome
@@ -103,12 +86,18 @@ const FressBlooms = ({navigation, route}) => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    // backgroundColor: 'pink',
+    backgroundColor: '#fff',
   },
   image: {
     flex: 1,
     justifyContent: 'center',
-    // paddingTop: 100,
   },
 });
 export default FressBlooms;
+
+const data = [
+  {id: 1, icon1: 'heart'},
+  {id: 2, icon1: 'heart'},
+  {id: 3, icon1: 'heart'},
+  {id: 4, icon1: 'heart'},
+];

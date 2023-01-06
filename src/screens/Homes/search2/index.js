@@ -2,34 +2,33 @@ import React, {useState} from 'react';
 import {
   View,
   Text,
-  SafeAreaView,
   ScrollView,
   StyleSheet,
-  StatusBar,
-  TextInput,
-  Image,
   TouchableOpacity,
-  Appearance,
   FlatList,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {Header, SeeAll, Userdetails} from '../../../componrnts';
+import {SeeAll, Userdetails} from '../../../componrnts';
 import All from '../../../componrnts/all';
-import Imgbox from '../../../componrnts/imgbox';
 import MainBox from '../../../componrnts/mainbox';
-import Searcbart1 from '../../../componrnts/searchbar1';
-import {Modal} from 'react-native';
 import Images from '../../../constants';
 import Modaldata from '../../../componrnts/modaldata';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {useBackButton} from '../../../hooks/BackHandler';
 const Search2 = ({route, navigation, otherParam}) => {
   const [activeTab, setActiveTab] = useState(0);
   const [topicName, setTopicName] = useState('Topics');
   const [typeName, setTypeName] = useState('Types');
   const [modalVisible, setModalVisible] = useState(false);
   const [modalType, setModalType] = useState('all');
-
+  //BackHandler
+  const onBackPress = () => {
+    navigation.goBack();
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
   return (
-    <>
+    <SafeAreaView>
       <View
         style={{
           width: '100%',
@@ -437,8 +436,6 @@ const Search2 = ({route, navigation, otherParam}) => {
                 style={{
                   width: '100%',
                   flexDirection: 'row',
-                  alignSelf: 'flex-start',
-                  alignSelf: 'center',
                 }}>
                 <TouchableOpacity
                   style={styles.topics}
@@ -577,7 +574,7 @@ const Search2 = ({route, navigation, otherParam}) => {
         activeTab={activeTab}
         modalType={modalType}
       />
-    </>
+    </SafeAreaView>
   );
 };
 
@@ -688,7 +685,6 @@ const databox = [
     heart1: Images.Icons.heart1,
     title: 'Title',
     iconimg1: Images.Icons.sun,
-    heart1: Images.Icons.heart1,
     bg12: Images.BackGround.Bg2,
     plus: 'plus',
   },
@@ -789,7 +785,6 @@ const data = [
     text1: 'TOOLS',
     img2: Images.BackGround.path1,
     img3: Images.BackGround.nopath2,
-    img4: Images.BackGround.nopath2,
     img4: Images.BackGround.rectangle2,
     two: Images.Imgs.heart1,
     one: Images.Icons.circleplus,
@@ -802,7 +797,6 @@ const data = [
     text1: 'GROUND WORK',
     img2: Images.BackGround.path1,
     img3: Images.BackGround.nopath2,
-    img4: Images.BackGround.nopath2,
     img4: Images.BackGround.rectangle2,
     two: Images.Imgs.heart1,
     one: Images.Icons.circleplus,

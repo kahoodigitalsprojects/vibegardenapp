@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   FlatList,
   Modal,
+  Platform,
 } from 'react-native';
 import {Overlay} from 'react-native-elements';
 
@@ -28,7 +29,7 @@ const Modaldata = ({
         overlayStyle={{
           height: '100%',
           width: '100%',
-          paddingTop: 10,
+          paddingTop: Platform.OS === 'ios' ? 30 : 10,
         }}
         style={{}}
         // animationType="slide" // transparent={false}

@@ -173,28 +173,32 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
                             }}>
                             <>
                               {data1 === index ? (
-                                <View
-                                  style={{
-                                    width: 80,
-                                    height: 80,
-                                    borderRadius: 100,
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    alignSelf: 'center',
-                                    backgroundColor:
-                                      data1 === index ? '#CD258D' : '',
-                                    opacity: 0.8,
-                                    elevation: data1 === index ? 0 : 5,
-                                  }}>
-                                  <View style={{}}>
+                                <>
+                                  <LinearGradient
+                                    colors={['#ED535E', '#CD258D']}
+                                    style={[
+                                      styles.circle,
+                                      {
+                                        width: 80,
+                                        height: 80,
+                                        borderRadius: 100,
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                        alignSelf: 'center',
+                                        backgroundColor:
+                                          data1 === index ? '#CD258D' : '',
+                                        opacity: 0.8,
+                                        elevation: data1 === index ? 0 : 5,
+                                      },
+                                    ]}>
                                     <Icon
                                       name="check"
                                       size={39}
                                       color="#fff"
                                       style={{}}
                                     />
-                                  </View>
-                                </View>
+                                  </LinearGradient>
+                                </>
                               ) : (
                                 <View
                                   style={{
@@ -362,6 +366,6 @@ const styles = StyleSheet.create({
   box1: {
     width: '90%',
     alignSelf: 'center',
-    paddingBottom: 10, 
+    paddingBottom: 10,
   },
 });

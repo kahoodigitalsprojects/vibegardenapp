@@ -6,16 +6,15 @@ import {
   ScrollView,
   StyleSheet,
   StatusBar,
-  TextInput,
   Image,
-  TouchableOpacity,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import Searcbart1 from '../../../componrnts/searchbar1';
 import {useBackButton} from '../../../hooks/BackHandler';
 import Images from '../../../constants';
+import {useBackButton} from '../../../hooks/BackHandler';
 const Search = ({navigation}) => {
-  onBackPress = () => {
+  //BackHandler
+  const onBackPress = () => {
     navigation.goBack();
     return true;
   };
@@ -28,12 +27,7 @@ const Search = ({navigation}) => {
         <StatusBar animated={true} backgroundColor="#000" />
         <Searcbart1
           onpress1={() => {
-            navigation.navigate('Search2', {
-              // params: {
-              //   textchange: 'Quantum Physics',
-              //   mydata: true
-              // }
-            });
+            navigation.navigate('Search2');
           }}
           onpress2={() => navigation.goBack()}
         />

@@ -11,10 +11,14 @@ import {
 import {Header, Pinkbtn, QComponents} from '../../../componrnts';
 import ResultComponents from '../../../componrnts/resultcompo';
 import Images from '../../../constants';
+import {useBackButton} from '../../../hooks/BackHandler';
 
-const Question3 = props => {
-
-  
+const Question3 = ({navigation}) => {
+  onBackPress = () => {
+    navigation.goBack();
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
 
   const [state, setState] = useState();
   return (
@@ -44,7 +48,7 @@ const Question3 = props => {
                 header2
                 headertext="Resonance Finder"
                 fontSize={25}
-                OnPress={() => props.navigation.goBack('')}
+                OnPress={() => props.navigation.goBack()}
               />
             </View>
             <View style={{width: '100%', alignSelf: 'center'}}>
@@ -80,10 +84,10 @@ const Question3 = props => {
                 btntxt="See Results"
                 setVisible={setState}
                 onPress={() =>
-                  props.navigation.navigate('Result', {
+                  navigation.navigate('Result', {
                     otherParam: 'Top Tools',
                     plus: true,
-                    backoption: () => props.navigation.navigate('me'),
+                    backoption: () => navigation.navigate('me'),
                   })
                 }
               />
