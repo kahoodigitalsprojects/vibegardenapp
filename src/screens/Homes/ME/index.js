@@ -15,6 +15,13 @@ import {Header, Percentage, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 import SearchModal from '../../../componrnts/SearchModal';
 import {useBackButton} from '../../../hooks/BackHandler';
+import {
+  PlusSvg,
+  ArrowBackSvg,
+  HeartSvg,
+  StarSvg,
+  SpiralSvg,
+} from '../../../assests/svgs/MeSvgs';
 const Me = ({navigation}) => {
   const [visible, setVisible] = useState(false);
 
@@ -27,7 +34,7 @@ const Me = ({navigation}) => {
 
   const data1 = [
     {
-      img1: Images.Icons.gpluse,
+      img1: <PlusSvg />,
       text1: 'Tools to try',
       onPress: () => {
         navigation.navigate('FressBlooms', {
@@ -38,7 +45,7 @@ const Me = ({navigation}) => {
       },
     },
     {
-      img1: Images.Icons.arrow,
+      img1: <ArrowBackSvg />,
       text1: 'Recent Content',
       onPress: () => {
         navigation.navigate('FressBlooms', {
@@ -49,7 +56,7 @@ const Me = ({navigation}) => {
       },
     },
     {
-      img1: Images.Icons.gheart,
+      img1: <HeartSvg />,
       text1: 'Favorites',
       onPress: () => {
         navigation.navigate('FressBlooms', {
@@ -60,7 +67,7 @@ const Me = ({navigation}) => {
       },
     },
     {
-      img1: Images.Icons.star,
+      img1: <StarSvg />,
       text1: 'Top Tools',
       onPress: () => {
         navigation.navigate('FressBlooms', {
@@ -71,7 +78,7 @@ const Me = ({navigation}) => {
       },
     },
     {
-      img1: Images.Icons.spiral,
+      img1: <SpiralSvg />,
       text1: 'Your Resonance Finder Result',
       onPress: () => {
         navigation.navigate('Result', {
@@ -161,8 +168,13 @@ const Me = ({navigation}) => {
                         <TouchableOpacity
                           onPress={item.onPress}
                           style={{flexDirection: 'row', marginVertical: 10}}>
-                          <Image source={item.img1} />
-                          <Text style={{marginLeft: 15, color: '#030303'}}>
+                          {item.img1}
+                          <Text
+                            style={{
+                              marginLeft: 15,
+                              color: '#030303',
+                              marginTop: 3,
+                            }}>
                             {item.text1}
                           </Text>
                         </TouchableOpacity>
