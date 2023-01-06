@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -7,7 +7,28 @@ import {
   FlatList,
   TouchableOpacity,
 } from 'react-native';
-import Images from '../../constants';
+import {
+  ArrowUpGreen,
+  ArrowUpWhite,
+  LeafWhite,
+  LeafGreen,
+  BlocksWhite,
+  BlocksGreen,
+  DivesGreen,
+  DivesWhite,
+  PlayGreen,
+  PlayWhite,
+} from '../../assests/svgs/GroundworkSvg';
+import {
+  ArrowUPG,
+  ArrowUPW,
+  GreenSun,
+  WhiteSun,
+  GreenCircle,
+  WhiteCircle,
+  WhiteTriangle,
+  GreenTriangle,
+} from '../../assests/svgs/ToolsSvg';
 
 const Greenbox = ({
   img1,
@@ -25,44 +46,43 @@ const Greenbox = ({
   const [state, setstate] = useState(true);
   const Data = [
     {
-      // Image1: Images.Icons.upload,
-      Imgeg1: '../../assests/svgs/ToolsSvg.js/ArrowUp',
-      Image2: Images.Icons.up1,
-      Image3: Images.Icons.downloadgreen,
-      Image4: Images.Icons.grenarrow,
+      toolsSvgWhite: <ArrowUPW />,
+      toolsSvgGreen: <ArrowUPG />,
+      groundworkSvgWhite: <ArrowUpWhite />,
+      groundworkSvgGreen: <ArrowUpGreen />,
       title: 'Top',
       title2: 'Top',
       Press: Press,
     },
     {
-      Image1: Images.Icons.light,
-      Image2: Images.Icons.gleaf,
-      Image3: Images.Icons.wsun,
-      Image4: Images.Icons.wleafe,
+      toolsSvgWhite: <WhiteSun />,
+      toolsSvgGreen: <GreenSun />,
+      groundworkSvgWhite: <LeafWhite />,
+      groundworkSvgGreen: <LeafGreen />,
       title: 'Tools For Light',
       title2: 'Essents',
     },
     {
-      Image1: Images.Icons.circle,
-      Image2: Images.Icons.blocks,
-      Image3: Images.Icons.wcircle,
-      Image4: Images.Icons.wbox,
+      toolsSvgWhite: <WhiteCircle />,
+      toolsSvgGreen: <GreenCircle />,
+      groundworkSvgWhite: <BlocksWhite />,
+      groundworkSvgGreen: <BlocksGreen />,
       title: ' Tools for Shadow',
       title2: 'Build Blocks',
     },
     {
-      Image2: Images.Icons.gdownload,
-      Image1: Images.Icons.triangle,
-      Image3: Images.Icons.wtrangle,
-      Image4: Images.Icons.waves,
+      toolsSvgWhite: <WhiteTriangle />,
+      toolsSvgGreen: <GreenTriangle />,
+      groundworkSvgWhite: <DivesWhite />,
+      groundworkSvgGreen: <DivesGreen />,
       title: 'Tools for Content',
       title2: 'Deep Dives',
     },
     {
-      Image2: Images.Logos.greenheart,
-      Image1: Images.Icons.triangle,
-      Image3: Images.Icons.wtrangle,
-      Image4: Images.Icons.wheartoutline,
+      toolsSvgWhite: <WhiteTriangle />,
+      toolsSvgGreen: <GreenTriangle />,
+      groundworkSvgWhite: <PlayWhite />,
+      groundworkSvgGreen: <PlayGreen />,
       title: 'Tools for Content',
       title2: 'Play',
     },
@@ -79,12 +99,12 @@ const Greenbox = ({
     },
   ];
   return (
-    <View style={{ marginVertical: 10 }}>
+    <View style={{marginVertical: 10}}>
       <FlatList
         showsHorizontalScrollIndicator={false}
         horizontal={true}
         data={Data}
-        renderItem={({ item, index }) => {
+        renderItem={({item, index}) => {
           return (
             <TouchableOpacity
               onPress={() => (index === true ? '' : setdata1(index))}
@@ -107,19 +127,13 @@ const Greenbox = ({
                         height: 34,
                         alignSelf: 'center',
                       }}>
-                      {index === 0 ? (
-                        <Image
-                          resizeMode="contain"
-                          source={data1 === 0 ? item.Image1 : item.Image3}
-                          style={{ width: '100%', height: '100%' }}
-                        />
-                      ) : (
-                        <Image
-                          resizeMode="contain"
-                          source={data1 === index ? item.Image3 : item.Image1}
-                          style={{ width: '100%', height: '100%' }}
-                        />
-                      )}
+                      {index === 0
+                        ? data1 === 0
+                          ? item.toolsSvgWhite
+                          : item.toolsSvgGreen
+                        : data1 === index
+                        ? item.toolsSvgWhite
+                        : item.toolsSvgGreen}
                     </View>
                     <Text
                       style={{
@@ -163,23 +177,23 @@ const Greenbox = ({
                   </>
                 )} */}
               </>
+              {/* //////////////////////////////////////////////////////////////// */}
+              {/* <Image
+                          resizeMode="contain"
+                          source={data1 === 0 ? item.Image2 : item.Image3}
+                          style={{width: '100%', height: '100%'}}
+                        /> */}
               <View>
                 {img2 && (
                   <>
-                    <View style={{ width: 24, height: 24, alignSelf: 'center' }}>
-                      {index === 0 ? (
-                        <Image
-                          resizeMode="contain"
-                          source={data1 === 0 ? item.Image2 : item.Image3}
-                          style={{ width: '100%', height: '100%' }}
-                        />
-                      ) : (
-                        <Image
-                          resizeMode="contain"
-                          source={data1 === index ? item.Image4 : item.Image2}
-                          style={{ width: '100%', height: '100%' }}
-                        />
-                      )}
+                    <View style={{width: 24, height: 24, alignSelf: 'center'}}>
+                      {index === 0
+                        ? data1 === 0
+                          ? item.groundworkSvgWhite
+                          : item.groundworkSvgGreen
+                        : data1 === index
+                        ? item.groundworkSvgWhite
+                        : item.groundworkSvgGreen}
                     </View>
 
                     <Text
@@ -199,12 +213,12 @@ const Greenbox = ({
           );
         }}
       />
-      <View View style={{ marginVertical: 30, flexDirection: 'row' }}>
+      <View View style={{marginVertical: 30, flexDirection: 'row'}}>
         <View>
           <FlatList
             horizontal={true}
             data={data}
-            renderItem={({ item, index }) => {
+            renderItem={({item, index}) => {
               return (
                 <TouchableOpacity
                   onPress={onPress1}
@@ -243,7 +257,7 @@ const Greenbox = ({
             justifyContent: 'center',
             alignItems: 'center',
           }}>
-          <Text style={{ color: '#fff', fontFamily: 'BrandonGrotesque-Regular' }}>
+          <Text style={{color: '#fff', fontFamily: 'BrandonGrotesque-Regular'}}>
             +
           </Text>
         </TouchableOpacity>
@@ -283,4 +297,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { Greenbox };
+export {Greenbox};
