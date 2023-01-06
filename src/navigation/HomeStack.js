@@ -1,18 +1,7 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import * as React from 'react';
-
-import Meet from '../screens/Homes/meet';
 import Home from '../screens/Homes/home/index';
-import ChuchuasDetails from '../screens/Homes/ChuchuhuasDetails';
-import MeetScreen2 from '../screens/Homes/meetScreen2';
-import BlueLotus from '../screens/Homes/BlueLotus';
-import Search from '../screens/Homes/search';
-import Search2 from '../screens/Homes/search2';
-import Search3 from '../screens/Homes/Search3';
-import Packages from '../screens/Homes/packages';
 import EditScreen from '../screens/auth/editScreen';
-import PaymentMethod from '../screens/Homes/paymentmethode';
-import CancelSubscription from '../screens/Homes/cancelSubsceiption';
 
 export default function HomeStackScreen() {
   const HomeStack = createNativeStackNavigator();

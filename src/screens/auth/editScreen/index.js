@@ -1,37 +1,22 @@
-import React, {startTransition, useState} from 'react';
-import {
-  View,
-  Text,
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  StatusBar,
-  Switch,
-  Image,
-  TouchableOpacity,
-  Appearance,
-} from 'react-native';
-
-import {Header, Pinkbtn, QComponents, Switch1} from '../../../componrnts';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import Images from '../../../constants';
+import React from 'react';
+import {View, Text, SafeAreaView, StyleSheet, StatusBar} from 'react-native';
+import {Header, Pinkbtn} from '../../../componrnts';
+import {useBackButton} from '../../../hooks/BackHandler';
 
 const EditScreen = ({navigation, route}) => {
-  let colorScheme = Appearance.getColorScheme();
-  console.log(colorScheme);
-  const {itemId} = route.params;
-  const {otherParam} = route.params;
-  const {otherParam1} = route.params;
-  const {otherParam2} = route.params;
-  const {two} = route.params;
+  const {itemId, otherParam, otherParam1, otherParam2, two} = route.params;
 
+  //BackHandler
+  const onBackPress = () => {
+    navigation.goBack();
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView>
       <StatusBar animated={true} backgroundColor="#000" />
-
       <View
         style={{
-          // marginVertical: 10,
           marginTop: 10,
           width: '90%',
           alignSelf: 'center',
@@ -60,11 +45,7 @@ const EditScreen = ({navigation, route}) => {
           <View style={{marginTop: 20}}>
             <Pinkbtn
               shadow={'#00000019'}
-              // onPress={() =>
-              //   props.navigation.navigate('signup', {
-              //     registerd1: () => props.navigation.navigate('signup'),
-              //   })
-              // }
+              onPress={() => navigation.goBack()}
               width={'60%'}
               btntxt={otherParam}
             />

@@ -1,10 +1,18 @@
 import React from 'react';
 import {View, StyleSheet, Text, ScrollView, StatusBar} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {Header, StoryData} from '../../../componrnts';
+import {Header} from '../../../componrnts';
+import {useBackButton} from '../../../hooks/BackHandler';
 
 const PrivacyPolicy = ({navigation, route}) => {
   const {heading1} = route.params;
+
+  //BackHandler
+  const onBackPress = () => {
+    navigation.goBack();
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView

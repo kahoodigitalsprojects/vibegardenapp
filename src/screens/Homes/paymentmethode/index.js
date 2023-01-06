@@ -1,4 +1,4 @@
-import React, {startTransition, useState} from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -8,19 +8,20 @@ import {
   StatusBar,
   Image,
 } from 'react-native';
-
-import {Greenbtn, Header, PopUp, QComponents} from '../../../componrnts';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import {Greenbtn, Header, PopUp} from '../../../componrnts';
 import Images from '../../../constants';
-import Settings from '../settings';
+import {useBackButton} from '../../../hooks/BackHandler';
 
-const PaymentMethod = ({navigation, route, pres}) => {
-  const [press, setPress] = useState();
-  const {headertext1} = route.params;
-  const {pressbtn} = route.params;
-
+const PaymentMethod = ({navigation, route}) => {
   const [state1, setState1] = useState(false);
   const [state, setState] = useState(false);
+  const {headertext1, pressbtn} = route.params;
+  //BackHandler
+  const onBackPress = () => {
+    navigation.goBack();
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
@@ -38,7 +39,7 @@ const PaymentMethod = ({navigation, route, pres}) => {
             iconName="left"
             marginLeft={30}
             header4
-            OnPress={() => navigation.navigate('ManageSubscription')}
+            OnPress={() => navigation.goBack()}
             color="#000"
             fontSize={20}
             headertext2={headertext1}
@@ -86,7 +87,6 @@ const PaymentMethod = ({navigation, route, pres}) => {
                   borderWidth: 1,
                   borderColor: 'green',
                   borderRadius: 20,
-                  elevation: 1,
                   backgroundColor: '#fff',
                   flexDirection: 'row',
                   padding: 15,
@@ -139,7 +139,6 @@ const PaymentMethod = ({navigation, route, pres}) => {
                     borderWidth: 1,
                     borderColor: 'green',
                     borderRadius: 20,
-                    elevation: 1,
                     backgroundColor: '#fff',
                     flexDirection: 'row',
                     padding: 15,
@@ -150,7 +149,6 @@ const PaymentMethod = ({navigation, route, pres}) => {
                     },
                     shadowOpacity: 0.25,
                     shadowRadius: 3.84,
-
                     elevation: 15,
                   }}>
                   <Text
@@ -184,7 +182,6 @@ const PaymentMethod = ({navigation, route, pres}) => {
                     borderWidth: 1,
                     borderColor: 'green',
                     borderRadius: 20,
-                    elevation: 1,
                     backgroundColor: '#fff',
                     flexDirection: 'row',
                     padding: 15,
@@ -195,7 +192,6 @@ const PaymentMethod = ({navigation, route, pres}) => {
                     },
                     shadowOpacity: 0.25,
                     shadowRadius: 3.84,
-
                     elevation: 15,
                   }}>
                   <Text
@@ -263,8 +259,6 @@ const styles = StyleSheet.create({
   },
   container: {
     width: '100%',
-    // height: '100%',
-    // justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
   },
@@ -277,7 +271,6 @@ const styles = StyleSheet.create({
   text2: {
     marginVertical: 2,
     fontSize: 20,
-    // textAlign: 'center',
     color: '#1C5C2E',
     fontWeight: '400',
   },

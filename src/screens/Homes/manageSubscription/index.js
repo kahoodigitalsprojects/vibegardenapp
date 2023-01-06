@@ -14,8 +14,15 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon1 from 'react-native-vector-icons/Feather';
 import Images from '../../../constants';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import {useBackButton} from '../../../hooks/BackHandler';
 
-const ManageSubscription = props => {
+const ManageSubscription = ({navigation}) => {
+  //BackHandler
+  const onBackPress = () => {
+    navigation.goBack();
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
       <StatusBar animated={true} backgroundColor="#000" />
@@ -29,7 +36,7 @@ const ManageSubscription = props => {
             marginLeft={30}
             color="#191919B8"
             header2
-            OnPress={() => props.navigation.goBack()}
+            OnPress={() => navigation.goBack()}
             headertext="Manage Subscriptions"
             fontSize={20}
           />
@@ -75,7 +82,7 @@ const ManageSubscription = props => {
               <TouchableOpacity
                 style={styles.box}
                 onPress={() => {
-                  props.navigation.navigate('Packges');
+                  navigation.navigate('Packges');
                 }}>
                 <Text style={{fontSize: 12, color: '#1C5C2E'}}>Monthly</Text>
 
@@ -160,7 +167,7 @@ const ManageSubscription = props => {
               ]}>
               <TouchableOpacity
                 onPress={() => {
-                  props.navigation.navigate('PaymentMethod', {
+                  navigation.navigate('PaymentMethod', {
                     headertext1: 'Manage Subscriptions',
                     pressbtn: false,
                   });
@@ -186,7 +193,7 @@ const ManageSubscription = props => {
           </View>
           <TouchableOpacity
             onPress={() => {
-              props.navigation.navigate('CancelSubscription');
+              navigation.navigate('CancelSubscription');
             }}
             style={{
               alignSelf: 'center',

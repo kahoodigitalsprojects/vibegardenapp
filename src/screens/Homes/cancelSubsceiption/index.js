@@ -6,37 +6,20 @@ import {
   ScrollView,
   StyleSheet,
   StatusBar,
-  TextInput,
-  Image,
   TouchableOpacity,
   FlatList,
 } from 'react-native';
-
 import {Header, Pinkbtn, QComponents} from '../../../componrnts';
 import Icon from 'react-native-vector-icons/Feather';
+import {useBackButton} from '../../../hooks/BackHandler';
 
-const CancelSubscription = props => {
-  const data = [
-    {
-      text1: 'Support healing',
-    },
-    {
-      text1: 'Allow the release  of negative thoughts  Patterns',
-    },
-    {
-      text1: 'Help you connect to approve expenses prespecting',
-    },
-    {
-      text1: 'Remind you  of Your inner knowing',
-    },
-    {
-      text1: 'Increase connection to self love',
-    },
-    {
-      text1: 'Increase connection to self love',
-    },
-  ];
-
+const CancelSubscription = ({navigation}) => {
+  //BackHandler
+  const onBackPress = () => {
+    navigation.goBack();
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
@@ -58,7 +41,7 @@ const CancelSubscription = props => {
             fontSize={20}
             header2
             headertext="Cancle Subscriptions"
-            OnPress={() => props.navigation.goBack('')}
+            OnPress={() => navigation.goBack()}
           />
         </View>
         <View
@@ -131,7 +114,7 @@ const CancelSubscription = props => {
           <Pinkbtn
             shadow={'#00000019'}
             onPress={() => {
-              props.navigation.navigate('Search3');
+              navigation.navigate('Success');
             }}
             width={'60%'}
             btntxt="Submit"
@@ -150,8 +133,6 @@ const styles = StyleSheet.create({
   },
   container: {
     width: '100%',
-    // height: '100%',
-    // justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
   },
@@ -164,9 +145,28 @@ const styles = StyleSheet.create({
   text2: {
     marginVertical: 2,
     fontSize: 20,
-    // textAlign: 'center',
     color: '#1C5C2E',
     fontWeight: '500',
   },
 });
 export default CancelSubscription;
+const data = [
+  {
+    text1: 'Support healing',
+  },
+  {
+    text1: 'Allow the release  of negative thoughts  Patterns',
+  },
+  {
+    text1: 'Help you connect to approve expenses prespecting',
+  },
+  {
+    text1: 'Remind you  of Your inner knowing',
+  },
+  {
+    text1: 'Increase connection to self love',
+  },
+  {
+    text1: 'Increase connection to self love',
+  },
+];

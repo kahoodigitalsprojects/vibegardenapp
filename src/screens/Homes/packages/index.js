@@ -1,19 +1,18 @@
-import React, {useState, useEffect, useRef} from 'react';
-import {
-  View,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  Switch,
-  FlatList,
-  Image,
-} from 'react-native';
-import {Header, Pinkbtn, PopUp, StoryData, Switch1} from '../../../componrnts';
+import React, {useState} from 'react';
+import {View, StyleSheet, Text, TouchableOpacity, Image} from 'react-native';
+import {Header, PopUp} from '../../../componrnts';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {SafeAreaView} from 'react-native-safe-area-context';
-const Packages = props => {
+import {useBackButton} from '../../../hooks/BackHandler';
+const Packages = ({navigation}) => {
   const [state, setstate] = useState(false);
   const [state1, setState1] = useState(false);
+  //BackHandler
+  const onBackPress = () => {
+    navigation.goBack();
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
       <View>
@@ -22,7 +21,7 @@ const Packages = props => {
             <Header
               iconName="closesquareo"
               header4
-              OnPress={() => props.navigation.goBack('')}
+              OnPress={() => navigation.goBack()}
               color="#000"
               fontSize={20}
               headertext2="Switch Packages"
@@ -84,7 +83,7 @@ const Packages = props => {
           btntext2="Use This Card"
           onpressA={() => {
             setstate(false);
-            props.navigation.navigate('PaymentMethod', {
+            navigation.navigate('PaymentMethod', {
               headertext1: 'Pay Now',
               pressbtn: true,
             });
@@ -102,7 +101,7 @@ const Packages = props => {
           onpress1={() => {
             setstate(false);
             setState1(false);
-            props.navigation.navigate('ManageSubscription');
+            navigation.navigate('ManageSubscription');
           }}
         />
       </View>

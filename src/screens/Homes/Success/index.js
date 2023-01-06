@@ -6,28 +6,23 @@ import {
   ScrollView,
   StyleSheet,
   StatusBar,
-  TextInput,
-  Image,
-  TouchableOpacity,
-  FlatList,
 } from 'react-native';
+import {Header} from '../../../componrnts';
+import {useBackButton} from '../../../hooks/BackHandler';
 
-import Icon from 'react-native-vector-icons/FontAwesome';
-import Icon2 from 'react-native-vector-icons/AntDesign';
-import Icon3 from 'react-native-vector-icons/Ionicons';
-import {Header, Userdetails} from '../../../componrnts';
-import Images from '../../../constants';
-
-const Search3 = ({route, navigation}) => {
-  const [state, setSate] = useState(false);
-
+const Success = ({route, navigation}) => {
+  //BackHandler
+  const onBackPress = () => {
+    navigation.pop(3);
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
         <StatusBar animated={true} backgroundColor="#000" />
-
         <View
           style={{
             marginVertical: 10,
@@ -38,7 +33,7 @@ const Search3 = ({route, navigation}) => {
           <Header
             iconName="closesquareo"
             header2
-            OnPress={() => navigation.navigate('settings')}
+            OnPress={() => navigation.pop(3)}
           />
 
           <View style={{marginVertical: 5, alignSelf: 'center'}}>
@@ -108,4 +103,4 @@ const styles = StyleSheet.create({
     // marginTop: 20,
   },
 });
-export default Search3;
+export default Success;

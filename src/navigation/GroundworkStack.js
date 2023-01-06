@@ -1,6 +1,5 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import * as React from 'react';
-
 import GroundWork from '../screens/Homes/Groundwork';
 import Video from '../screens/Homes/video';
 import Buddhisim from '../screens/Homes/Budhisim';

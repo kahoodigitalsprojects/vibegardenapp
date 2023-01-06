@@ -1,10 +1,8 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import * as React from 'react';
 import Notification from '../screens/Homes/notification';
-
 import FressBlooms from '../screens/Homes/FreshBlooms';
 import Me from '../screens/Homes/ME';
-
 import Settings from '../screens/Homes/settings';
 import BloomsCheck from '../screens/Homes/bloomsCheck';
 import BigBlooms from '../screens/Homes/BigBlooms';
@@ -19,7 +17,7 @@ import Result from '../screens/Homes/result';
 import EmailNotification from '../screens/Homes/emailNotification';
 import Pushnotification from '../screens/Homes/pushnotification';
 import PrivacyPolicy from '../screens/Homes/privacyPolicy';
-import Search3 from '../screens/Homes/Search3';
+import Success from '../screens/Homes/Success';
 export default function MeStackScreen() {
   const MeStack = createNativeStackNavigator();
 
@@ -54,7 +52,7 @@ export default function MeStackScreen() {
       <MeStack.Screen name="EmailNotification" component={EmailNotification} />
       <MeStack.Screen name="Pushnotification" component={Pushnotification} />
       <MeStack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
-      <MeStack.Screen name="Search3" component={Search3} />
+      <MeStack.Screen name="Success" component={Success} />
     </MeStack.Navigator>
   );
 }

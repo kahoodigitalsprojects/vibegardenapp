@@ -3,7 +3,6 @@ import * as React from 'react';
 
 import Tools from '../screens/Homes/Tools';
 import Result from '../screens/Homes/result';
-
 import Question from '../screens/Homes/Question';
 import Question2 from '../screens/Homes/question2';
 import Resonance from '../screens/Homes/Resonance';
