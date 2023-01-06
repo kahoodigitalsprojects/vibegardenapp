@@ -13,31 +13,16 @@ import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 import Icon from 'react-native-vector-icons/Feather';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import {useBackButton} from '../../../hooks/BackHandler';
 const BigBlooms = ({route, navigation}) => {
-  const {newtext} = route.params;
-  const {heading1} = route.params;
-  const {Image1} = route.params;
+  const {heading1, newtext, Image1} = route.params;
 
-  const data = [
-    {
-      text1: 'Support healing',
-    },
-    {
-      text1: 'Allow the release  of negative thoughts  Patterns',
-    },
-    {
-      text1: 'Help you connect to approve expenses prespecting',
-    },
-    {
-      text1: 'Remind you  of Your inner knowing',
-    },
-    {
-      text1: 'Increase connection to self love',
-    },
-    {
-      text1: 'Increase connection to self love',
-    },
-  ];
+  const onBackPress = () => {
+    navigation.goBack();
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
+
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
@@ -53,7 +38,7 @@ const BigBlooms = ({route, navigation}) => {
             width={'25%'}
             iconName="arrowleft"
             header4
-            OnPress={() => navigation.goBack('')}
+            OnPress={() => navigation.goBack()}
             headertext={newtext}
             fontSize={20}
             color="#000"
@@ -227,3 +212,23 @@ const styles = StyleSheet.create({
   },
 });
 export default BigBlooms;
+const data = [
+  {
+    text1: 'Support healing',
+  },
+  {
+    text1: 'Allow the release  of negative thoughts  Patterns',
+  },
+  {
+    text1: 'Help you connect to approve expenses prespecting',
+  },
+  {
+    text1: 'Remind you  of Your inner knowing',
+  },
+  {
+    text1: 'Increase connection to self love',
+  },
+  {
+    text1: 'Increase connection to self love',
+  },
+];

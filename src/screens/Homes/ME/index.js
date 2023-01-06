@@ -236,21 +236,12 @@ const Me = ({navigation}) => {
                     Your Graph will appear{'\n'}after 2 days of tracking
                   </Text>
                 </View>
-                <View style={{marginTop: 30}}>
+                <View style={{marginTop: 30, marginBottom: 100}}>
                   <Pinkbtn
                     shadow="#00000019"
                     width={'65%'}
                     onPress={() => {
-                      navigation.navigate('BloomsCheck', {
-                        Image1: Images.Imgs.Rainbow,
-                        Image2: Images.Imgs.Rainbow,
-                        Image3: Images.Imgs.Rainbow,
-                        Image4: Images.Imgs.Rainbow,
-                        newtext: 'Update Current Blooms',
-                        Image5: Images.Imgs.Rainbow,
-                        Image6: Images.Imgs.Rainbow,
-                        Heading: 'Update Current Blooms',
-                      });
+                      navigation.navigate('BloomsCheck');
                     }}
                     btntxt="Update Current Blooms"
                   />

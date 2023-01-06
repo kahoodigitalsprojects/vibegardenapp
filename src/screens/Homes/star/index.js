@@ -1,5 +1,4 @@
-import {CommonActions} from '@react-navigation/native';
-import React, {startTransition, useState} from 'react';
+import React from 'react';
 import {
   View,
   Text,
@@ -10,10 +9,19 @@ import {
   Image,
 } from 'react-native';
 
-import {Header, Pinkbtn, QComponents} from '../../../componrnts';
+import {Header} from '../../../componrnts';
+import {useBackButton} from '../../../hooks/BackHandler';
 import Images from '../../../constants';
 
-const Star = props => {
+const Star = ({navigation}) => {
+  const onBackPress = () => {
+    navigation.reset({
+      index: 0,
+      routes: [{name: 'Homes'}, {name: 'me'}],
+    });
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
@@ -31,12 +39,10 @@ const Star = props => {
             iconName="closesquareo"
             header2
             OnPress={() => {
-              props.navigation.reset({
+              navigation.reset({
                 index: 0,
                 routes: [{name: 'Homes'}, {name: 'me'}],
               });
-              // props.navigation.navigate('me');
-              // props.navigation.navigate('Homes');
             }}
           />
 
