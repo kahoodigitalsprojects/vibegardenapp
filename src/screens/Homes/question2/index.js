@@ -12,13 +12,6 @@ import {Header, Pinkbtn, QComponents} from '../../../componrnts';
 import Images from '../../../constants';
 
 const Question2 = props => {
-  const data = [
-    {text1: 'Yeah,no'},
-    {text1: 'No idea What a Multiverse is'},
-    {text1: 'SMCA Peepsceen to think so'},
-    {text1: 'Shall we Question Heap'},
-  ];
-
   return (
     <SafeAreaView style={styles.main}>
       <StatusBar animated={true} backgroundColpor="#000" />
