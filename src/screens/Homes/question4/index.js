@@ -16,7 +16,7 @@ import {useBackButton} from '../../../hooks/BackHandler';
 const Question3 = ({navigation}) => {
   onBackPress = () => {
     navigation.goBack();
-    return true;
+    return true;Pques
   };
   useBackButton(navigation, onBackPress);
 

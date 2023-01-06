@@ -25,7 +25,8 @@ const Greenbox = ({
   const [state, setstate] = useState(true);
   const Data = [
     {
-      Image1: Images.Icons.upload,
+      // Image1: Images.Icons.upload,
+      Imgeg1: '../../assests/svgs/ToolsSvg.js/ArrowUp',
       Image2: Images.Icons.up1,
       Image3: Images.Icons.downloadgreen,
       Image4: Images.Icons.grenarrow,
