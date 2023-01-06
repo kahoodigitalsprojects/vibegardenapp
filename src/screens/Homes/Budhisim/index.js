@@ -18,7 +18,7 @@ import Images from '../../../constants';
 import {useBackButton} from '../../../hooks/BackHandler';
 
 const Buddhisim = ({navigation, Flowersbox, Heading}) => {
-  onBackPress = () => {
+  const onBackPress = () => {
     navigation.goBack();
     return true;
   };

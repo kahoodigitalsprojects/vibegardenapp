@@ -262,7 +262,7 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
                     Image1={Images.Imgs.lotusb}
                   />
                   <TouchableOpacity
-                    style={styles.btn1}
+                    style={{}}
                     disabled={data1 === false ? true : false}
                     onPress={() => navigation.navigate('Bigblooms', data)}>
                     <LinearGradient

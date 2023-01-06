@@ -14,7 +14,7 @@ import Images from '../../../constants';
 import {useBackButton} from '../../../hooks/BackHandler';
 
 const Question = ({navigation}) => {
-  onBackPress = () => {
+  const onBackPress = () => {
     navigation.goBack();
     return true;
   };
