@@ -1,38 +1,23 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   View,
   StyleSheet,
   Text,
-  TouchableOpacity,
-  Switch,
   ScrollView,
   StatusBar,
   FlatList,
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {Header, Pinkbtn, StoryData, Switch1} from '../../../componrnts';
-import Images from '../../../constants';
+import {Header, Switch1} from '../../../componrnts';
+import {useBackButton} from '../../../hooks/BackHandler';
 
-const EmailNotification = props => {
-  const [isEnabled, setIsEnabled] = useState(false);
-  const [data1, setData1] = useState();
-
-  const data = [
-    {
-      text1: 'Tools Recommendations:',
-      text2: 'Personalized tools suggestions based on your resonance ',
-    },
-    {
-      text1: 'VibeGarden Updates:',
-      text2:
-        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy. ',
-    },
-    {
-      text1: 'Surveys:',
-      text2:
-        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy. ',
-    },
-  ];
+const EmailNotification = ({navigation}) => {
+  //BackHandler
+  const onBackPress = () => {
+    navigation.goBack();
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
 
   return (
     <SafeAreaView style={styles.main}>
@@ -49,7 +34,7 @@ const EmailNotification = props => {
             color="#191919B8"
             fontSize={20}
             header2
-            OnPress={() => props.navigation.goBack()}
+            OnPress={() => navigation.goBack()}
           />
           <View style={{marginTop: 10}}>
             <View style={{width: '100%'}}>
@@ -106,13 +91,27 @@ const styles = StyleSheet.create({
   },
 
   switchView: {
-    // backgroundColor: 'green',
     width: '100%',
     alignSelf: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
-
     marginVertical: 15,
   },
 });
 export default EmailNotification;
+const data = [
+  {
+    text1: 'Tools Recommendations:',
+    text2: 'Personalized tools suggestions based on your resonance ',
+  },
+  {
+    text1: 'VibeGarden Updates:',
+    text2:
+      'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy. ',
+  },
+  {
+    text1: 'Surveys:',
+    text2:
+      'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy. ',
+  },
+];

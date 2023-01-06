@@ -1,19 +1,30 @@
 import React, {useState} from 'react';
-import {StyleSheet, Switch} from 'react-native';
+import ToggleSwitch from 'toggle-switch-react-native';
 
 const Switch1 = props => {
   const [isEnabled, setIsEnabled] = useState(false);
-  const [data1, setData1] = useState();
 
   return (
-    <Switch
-      style={{marginRight: props.marginRight, marginTop: props.marginTop}}
-      trackColor={{false: '#75997E', true: '#1C5C2E'}}
-      value={isEnabled}
-      onValueChange={() => setIsEnabled(!isEnabled)}
+    <ToggleSwitch
+      isOn={isEnabled}
+      onColor="#1C5C2E"
+      offColor="#75997E"
+      thumbOffStyle={{width: 17, height: 17, marginLeft: 6}}
+      thumbOnStyle={{width: 17, height: 17}}
+      trackOnStyle={{
+        height: 27,
+        marginRight: props.marginRight,
+        marginTop: props.marginTop,
+      }}
+      trackOffStyle={{
+        height: 27,
+        marginRight: props.marginRight,
+        marginTop: props.marginTop,
+      }}
+      size="medium"
+      onToggle={() => setIsEnabled(!isEnabled)}
     />
   );
 };
 
-const styles = StyleSheet.create({});
 export {Switch1};

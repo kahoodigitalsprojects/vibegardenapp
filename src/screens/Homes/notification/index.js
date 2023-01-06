@@ -11,52 +11,14 @@ import {
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {Header} from '../../../componrnts';
 import Images from '../../../constants';
-
+import {useBackButton} from '../../../hooks/BackHandler';
 const Notification = props => {
-  const data = [
-    {
-      Img1: Images.BackGround.Bg1,
-      name: 'Alexa Martin',
-      text: ' Lorem ipsum dolor sit amet.',
-      time: '0.2.00 AM',
-      Date: '11/12/21',
-    },
-    {
-      Img1: Images.BackGround.Bg1,
-      name: 'Fiona Collin',
-      text: ' Lorem ipsum dolor sit amet.',
-      time: '0.2.00 AM',
-      Date: '11/12/21',
-    },
-    {
-      Img1: Images.BackGround.Bg1,
-      name: 'Niki Martin',
-      text: ' Lorem ipsum dolor sit amet.',
-      time: '0.2.00 AM',
-      Date: '11/12/21',
-    },
-    {
-      Img1: Images.BackGround.Bg1,
-      name: 'Martha jose',
-      text: ' Lorem ipsum dolor sit amet.',
-      time: '0.2.00 AM',
-      Date: '11/12/21',
-    },
-    {
-      Img1: Images.BackGround.Bg1,
-      name: 'Ziouhan Change',
-      text: ' Lorem ipsum dolor sit amet.',
-      time: '0.2.00 AM',
-      Date: '11/12/21',
-    },
-    {
-      Img1: Images.BackGround.Bg1,
-      name: 'Ziouhan Change',
-      text: ' Lorem ipsum dolor sit amet.',
-      time: '0.2.00 AM',
-      Date: '11/12/21',
-    },
-  ];
+  //BackHandler
+  const onBackPress = () => {
+    props.navigation.goBack();
+    return true;
+  };
+  useBackButton(props.navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
@@ -256,3 +218,48 @@ const styles = StyleSheet.create({
   },
 });
 export default Notification;
+
+const data = [
+  {
+    Img1: Images.BackGround.Bg1,
+    name: 'Alexa Martin',
+    text: ' Lorem ipsum dolor sit amet.',
+    time: '0.2.00 AM',
+    Date: '11/12/21',
+  },
+  {
+    Img1: Images.BackGround.Bg1,
+    name: 'Fiona Collin',
+    text: ' Lorem ipsum dolor sit amet.',
+    time: '0.2.00 AM',
+    Date: '11/12/21',
+  },
+  {
+    Img1: Images.BackGround.Bg1,
+    name: 'Niki Martin',
+    text: ' Lorem ipsum dolor sit amet.',
+    time: '0.2.00 AM',
+    Date: '11/12/21',
+  },
+  {
+    Img1: Images.BackGround.Bg1,
+    name: 'Martha jose',
+    text: ' Lorem ipsum dolor sit amet.',
+    time: '0.2.00 AM',
+    Date: '11/12/21',
+  },
+  {
+    Img1: Images.BackGround.Bg1,
+    name: 'Ziouhan Change',
+    text: ' Lorem ipsum dolor sit amet.',
+    time: '0.2.00 AM',
+    Date: '11/12/21',
+  },
+  {
+    Img1: Images.BackGround.Bg1,
+    name: 'Ziouhan Change',
+    text: ' Lorem ipsum dolor sit amet.',
+    time: '0.2.00 AM',
+    Date: '11/12/21',
+  },
+];

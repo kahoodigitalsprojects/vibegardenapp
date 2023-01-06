@@ -11,8 +11,15 @@ import {
 
 import {Header, Pinkbtn, QComponents, Switch1} from '../../../componrnts';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {useBackButton} from '../../../hooks/BackHandler';
 
-const Pushnotification = props => {
+const Pushnotification = ({navigation}) => {
+  //BackHandler
+  const onBackPress = () => {
+    navigation.goBack();
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
@@ -34,7 +41,7 @@ const Pushnotification = props => {
             headertext="Push Notification"
             fontSize={25}
             color="#191919B8"
-            OnPress={() => props.navigation.goBack()}
+            OnPress={() => navigation.goBack()}
           />
           <View style={{marginTop: 30, marginVertical: 10}}>
             <Text style={styles.text1}>
@@ -42,47 +49,41 @@ const Pushnotification = props => {
               Recommendations?
             </Text>
           </View>
-
           <View style={{marginVertical: 5, alignSelf: 'center', width: '90%'}}>
             <View
               style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-              <View style={{}}>
-                <Text style={styles.text2}>Reminder Active:</Text>
-              </View>
+              <Text style={styles.text2}>Reminder Active:</Text>
               <View style={{marginTop: 16}}>
                 <Switch1 />
               </View>
             </View>
-
             <View style={{width: '100%'}}>
               <View style={styles.btns}>
-                <TouchableOpacity
-                  style={styles.box}
-                  onPress={() => {
-                    // props.navigation.navigate('signup');
-                  }}>
+                <TouchableOpacity style={styles.box}>
                   <Text style={styles.textA}>After Waking Up</Text>
-                  <TouchableOpacity style={{}}>
-                    <Icon name="sort-down" size={25} color="#1C5C2E" />
-                  </TouchableOpacity>
+                  <Icon
+                    style={{marginTop: -10}}
+                    name="sort-down"
+                    size={20}
+                    color="#1C5C2E"
+                  />
                 </TouchableOpacity>
                 <TouchableOpacity
-                  style={[styles.box, {width: '30%', left: 10}]}
-                  // onPress={() => {
-                  //   props.navigation.navigate('signup');
-                  // }}
-                >
+                  style={[styles.box, {width: 100, marginLeft: 10}]}>
                   <Text style={styles.textA}>7:30 AM</Text>
-                  <TouchableOpacity style={{}}>
-                    <Icon name="sort-down" size={25} color="#1C5C2E" />
-                  </TouchableOpacity>
+                  <Icon
+                    style={{marginTop: -10}}
+                    name="sort-down"
+                    size={20}
+                    color="#1C5C2E"
+                  />
                 </TouchableOpacity>
               </View>
               <Text style={styles.text2}>Set Different Time For Weekend:</Text>
             </View>
             <View style={{marginTop: 20}}>
               <Pinkbtn
-                onPress={() => props.navigation.goBack()}
+                onPress={() => navigation.goBack()}
                 width={'60%'}
                 btntxt="Save"
               />
@@ -101,8 +102,6 @@ const styles = StyleSheet.create({
   },
   container: {
     width: '100%',
-    // height: '100%',
-    // justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
   },
@@ -111,7 +110,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#000',
     marginVertical: 15,
-    lineHeight: 39,
     fontFamily: 'BrandonGrotesque-Medium',
   },
   text2: {
@@ -139,30 +137,31 @@ const styles = StyleSheet.create({
   },
   btns: {
     flexDirection: 'row',
-    // width: '100%',
-    // justifyContent: 'space-around',
-    // backgroundColor: 'pink',
   },
   box: {
-    padding: 4,
+    paddingHorizontal: 15,
     marginVertical: 30,
-    width: '70%',
+    width: 200,
     height: 45,
-    justifyContent: 'center',
-    justifyContent: 'space-around',
     borderWidth: 1,
     borderColor: 'green',
     borderRadius: 25,
-    elevation: 1,
     backgroundColor: '#fff',
     flexDirection: 'row',
-    elevation: 6,
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 7,
+    },
+    shadowOpacity: 0.43,
+    shadowRadius: 9.51,
+    elevation: 15,
   },
   textA: {
     fontSize: 14,
     color: '#1C5C2E',
-    fontWeight: '400',
-    marginTop: 9,
     fontFamily: 'BrandonGrotesque-Regular',
   },
 });
