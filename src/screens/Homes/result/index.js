@@ -9,10 +9,18 @@ import {
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {Header} from '../../../componrnts';
-
+import {useBackButton} from '../../../hooks/BackHandler';
 import Images from '../../../constants';
 const Result = ({navigation, route}) => {
   const {backoption} = route.params;
+  const onBackPress = () => {
+    navigation.reset({
+      index: 0,
+      routes: [{name: 'me'}, {name: 'tools'}],
+    });
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
@@ -33,8 +41,10 @@ const Result = ({navigation, route}) => {
             header2
             // OnPress={backoption}
             OnPress={() => {
-              navigation.navigate('tools');
-              navigation.navigate('me');
+              navigation.reset({
+                index: 0,
+                routes: [{name: 'me'}, {name: 'tools'}],
+              });
             }}
             // OnPress={backoption}
             headertext="Resonance Finder"
