@@ -11,8 +11,14 @@ import {
 
 import {Header, Pinkbtn, QComponents} from '../../../componrnts';
 import Images from '../../../constants';
+import {useBackButton} from '../../../hooks/BackHandler';
 
-const Question = props => {
+const Question = ({navigation}) => {
+  onBackPress = () => {
+    navigation.goBack();
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
       <ImageBackground
@@ -38,7 +44,7 @@ const Question = props => {
               iconName="arrowleft"
               header2
               headertext="Resonance Finder"
-              OnPress={() => props.navigation.goBack('')}
+              OnPress={() => navigation.goBack()}
             />
           </View>
 
@@ -74,7 +80,7 @@ const Question = props => {
               shadow="#979B9F"
               width={'55%'}
               btntxt="Next"
-              onPress={() => props.navigation.navigate('question3')}
+              onPress={() => navigation.navigate('question3')}
             />
           </View>
         </ScrollView>

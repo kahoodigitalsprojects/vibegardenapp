@@ -12,9 +12,16 @@ import {
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {Header, Pinkbtn, StoryData, Switch1} from '../../../componrnts';
+import {useBackButton} from '../../../hooks/BackHandler';
 import Images from '../../../constants';
 
-const Resonance = props => {
+const Resonance = ({navigation}) => {
+  onBackPress = () => {
+    navigation.goBack();
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
+
   const [isEnabled, setIsEnabled] = useState(false);
   const [data1, setData1] = useState();
 
@@ -42,7 +49,7 @@ const Resonance = props => {
             <Header
               iconName="closesquareo"
               header2
-              OnPress={() => props.navigation.goBack()}
+              OnPress={() => navigation.goBack()}
             />
             <View style={{marginTop: 10}}>
               <Text style={styles.text}>Select Your Topic Resonance?</Text>
@@ -50,7 +57,7 @@ const Resonance = props => {
                 <Text style={styles.text}>OR Try Our </Text>
                 <TouchableOpacity
                   onPress={() => {
-                    props.navigation.navigate('question2');
+                    navigation.navigate('question2');
                   }}
                   style={styles.btn}>
                   <Text
@@ -91,7 +98,7 @@ const Resonance = props => {
                 <Pinkbtn
                   shadow="#00000019"
                   onPress={() => {
-                    props.navigation.navigate('question2');
+                    navigation.navigate('question2');
                   }}
                   btntxt="
             Save"

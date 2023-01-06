@@ -11,7 +11,11 @@ import {
 import {Header, Pinkbtn, QComponents} from '../../../componrnts';
 import ResultComponents from '../../../componrnts/resultcompo';
 import Images from '../../../constants';
+
 const Question3 = props => {
+
+  
+
   const [state, setState] = useState();
   return (
     <>
