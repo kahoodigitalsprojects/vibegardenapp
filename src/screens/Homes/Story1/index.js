@@ -204,7 +204,8 @@ const Slide = ({
               <TouchableOpacity
                 style={{marginRight: 10}}
                 onPress={goToPrevSlide}
-                disabled={item.id === 2 ? true : false}>
+                // disabled={item.id === 2 ? true : false}
+              >
                 <Icon name="angle-left" size={20} />
               </TouchableOpacity>
               <Text
