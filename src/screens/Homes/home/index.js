@@ -65,10 +65,10 @@ const Home = ({navigation, route}) => {
     },
     {
       id: 2,
-      bg1: Images.BackGround.black,
+      // bg1: Images.BackGround.black,
       bg1: Images.BackGround.rectangle2,
       bg12: Images.BackGround.Bg2,
-      heart1: Images.Icons.heart1,
+      // heart1: Images.Icons.heart1,
       name: 'TONGLEN',
       title: 'Title',
       textA: 'FEATURED GROUNDWORK',
@@ -79,7 +79,7 @@ const Home = ({navigation, route}) => {
     },
     {
       id: 3,
-      bg1: Images.BackGround.black,
+      // bg1: Images.BackGround.black,
       bg1: Images.BackGround.rectangle2,
       bg12: Images.BackGround.Bg2,
       name: 'TONGLEN',
@@ -93,7 +93,7 @@ const Home = ({navigation, route}) => {
     },
     {
       id: 4,
-      bg1: Images.BackGround.black,
+      // bg1: Images.BackGround.black,
       bg1: Images.BackGround.rectangle2,
       bg12: Images.BackGround.Bg2,
       // heart1: Images.Icons.heart1,

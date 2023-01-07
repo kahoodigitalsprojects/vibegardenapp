@@ -162,6 +162,7 @@ const Me = ({navigation}) => {
                 </Text>
                 <FlatList
                   data={data1}
+                  scrollEnabled={false}
                   renderItem={({item}) => {
                     return (
                       <>
@@ -248,7 +249,7 @@ const Me = ({navigation}) => {
                     Your Graph will appear{'\n'}after 2 days of tracking
                   </Text>
                 </View>
-                <View style={{marginTop: 30, marginBottom: 100}}>
+                <View style={{marginTop: 30, marginBottom: 30}}>
                   <Pinkbtn
                     shadow="#00000019"
                     width={'65%'}

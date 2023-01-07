@@ -65,111 +65,119 @@ const Notification = props => {
           </View>
           <View
             style={{
-              width: '90%',
+              width: '100%',
               marginVertical: 10,
               justifyContent: 'space-between',
+              alignItems: 'center',
               flexDirection: 'row',
             }}>
             <View
               style={{
                 backgroundColor: 'grey',
-                width: '28%',
                 height: 1,
-                marginTop: 15,
-              }}></View>
-            <View style={{}}>
-              <Text
-                style={{
-                  fontSize: 18,
-                  fontWeight: 'bold',
-                  color: '#211E1F',
-                  fontFamily: 'BrandonGrotesque-Medium',
-                }}>
-                Recent Notification
-              </Text>
-            </View>
+                flex: 1,
+              }}
+            />
+            <Text
+              style={{
+                fontSize: 18,
+                fontWeight: 'bold',
+                color: '#211E1F',
+                fontFamily: 'BrandonGrotesque-Medium',
+                marginHorizontal: 5,
+              }}>
+              Recent Notification
+            </Text>
 
             <View
               style={{
                 backgroundColor: 'grey',
-                width: '28%',
+                flex: 1,
                 height: 1,
-                marginTop: 15,
-              }}></View>
-          </View>
-          <View style={styles.boxouter}>
-            <FlatList
-              data={data}
-              renderItem={({item}) => {
-                return (
-                  <View style={{width: '100%', alignSelf: 'center', margin: 3}}>
-                    <View style={styles.box}>
-                      <View style={{width: '75%', flexDirection: 'row'}}>
-                        <View style={styles.img}>
-                          <Image
-                            source={item.Img1}
-                            style={{
-                              width: 60,
-                              height: 60,
-                              borderRadius: 100,
-                              marginLeft: 10,
-                            }}
-                          />
-                        </View>
-                        <View style={styles.txtview}>
-                          <Text
-                            style={[
-                              styles.text1,
-                              {
-                                marginLeft: 10,
-                                fontFamily: 'BrandonGrotesque-Regular',
-                              },
-                            ]}>
-                            {item.name}
-                          </Text>
-                          <Text
-                            style={[
-                              styles.text1,
-                              {
-                                fontWeight: '400',
-                                fontSize: 14,
-                                marginVertical: 5,
-                                marginLeft: 6,
-                                fontFamily: 'BrandonGrotesque-Regular',
-                              },
-                            ]}>
-                            {item.text}
-                          </Text>
-                        </View>
-                      </View>
-                      <View style={{marginTop: 10, marginRight: 24}}>
-                        <Text
-                          style={{
-                            fontSize: 12,
-                            color: '#000',
-                            fontWeight: 'bold',
-                            fontFamily: 'BrandonGrotesque-Regular',
-                          }}>
-                          {item.time}
-                        </Text>
-                        <Text
-                          style={{
-                            fontSize: 12,
-                            color: '#000',
-                            marginTop: 35,
-                            fontWeight: 'bold',
-                            fontFamily: 'BrandonGrotesque-Regular',
-                          }}>
-                          {item.Date}
-                        </Text>
-                      </View>
-                    </View>
-                  </View>
-                );
               }}
             />
           </View>
         </View>
+        <FlatList
+          data={data}
+          scrollEnabled={false}
+          ListFooterComponent={<View style={{marginVertical: 15}} />}
+          renderItem={({item}) => {
+            return (
+              <View
+                style={{
+                  width: '90%',
+                  alignSelf: 'center',
+                  // margin: 3,
+                  paddingHorizontal: 5,
+                  paddingVertical: 10,
+                  // backgroundColor: 'red',
+                }}>
+                <View style={styles.box}>
+                  <View style={{width: '75%', flexDirection: 'row'}}>
+                    <View style={styles.img}>
+                      <Image
+                        source={item.Img1}
+                        style={{
+                          width: 60,
+                          height: 60,
+                          borderRadius: 100,
+                          marginLeft: 10,
+                        }}
+                      />
+                    </View>
+                    <View style={styles.txtview}>
+                      <Text
+                        style={[
+                          styles.text1,
+                          {
+                            marginLeft: 10,
+                            fontFamily: 'BrandonGrotesque-Regular',
+                          },
+                        ]}>
+                        {item.name}
+                      </Text>
+                      <Text
+                        style={[
+                          styles.text1,
+                          {
+                            fontWeight: '400',
+                            fontSize: 14,
+                            marginVertical: 5,
+                            marginLeft: 6,
+                            fontFamily: 'BrandonGrotesque-Regular',
+                          },
+                        ]}>
+                        {item.text}
+                      </Text>
+                    </View>
+                  </View>
+                  <View style={{marginTop: 10, marginRight: 24}}>
+                    <Text
+                      style={{
+                        fontSize: 12,
+                        color: '#000',
+                        fontWeight: 'bold',
+                        fontFamily: 'BrandonGrotesque-Regular',
+                      }}>
+                      {item.time}
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 12,
+                        color: '#000',
+                        marginTop: 35,
+                        fontWeight: 'bold',
+                        fontFamily: 'BrandonGrotesque-Regular',
+                      }}>
+                      {item.Date}
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            );
+          }}
+        />
       </ScrollView>
     </SafeAreaView>
   );
@@ -178,28 +186,27 @@ const Notification = props => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    // backgroundColor: 'pink',
+    backgroundColor: '#fff',
   },
   box: {
-    marginVertical: 10,
+    // marginVertical: 10,
     justifyContent: 'space-between',
     width: '100%',
     borderRadius: 30,
     height: 86,
-
-    backgroundColor: '#fff',
-    elevation: 6,
     flexDirection: 'row',
+    backgroundColor: '#fff',
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: 7,
     },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
+    shadowOpacity: 0.43,
+    shadowRadius: 9.51,
+
+    elevation: 15,
   },
 
-  boxouter: {},
   img: {
     marginTop: 10,
     marginLeft: 5,

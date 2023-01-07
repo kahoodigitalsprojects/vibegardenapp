@@ -152,7 +152,7 @@ const Login = ({route, navigation}) => {
                   textAlign: 'right',
                   color: '#1C5C2E',
                   fontSize: 14,
-                  marginTop: 5,
+                  // marginTop: 5,
                   fontFamily: 'BrandonGrotesque-Bold',
                   marginTop: 10,
                 }}>
@@ -167,7 +167,14 @@ const Login = ({route, navigation}) => {
             onPress={() => {
               {
                 registerd1
-                  ? navigation.replace('Tabs')
+                  ? navigation.reset({
+                      index: 0,
+                      routes: [
+                        {
+                          name: 'Tabs',
+                        },
+                      ],
+                    })
                   : navigation.navigate('NotRegisterd');
               }
             }}
