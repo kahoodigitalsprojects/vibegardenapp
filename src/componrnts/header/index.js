@@ -375,7 +375,7 @@ const Header = props => {
             width: 41,
             height: 41,
             alignSelf: 'center',
-            marginTop: -40,
+            marginTop: -50,
             // backgroundColor: '#1C5C2E',
           }}>
           <Image
