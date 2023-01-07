@@ -104,7 +104,7 @@ const QComponents = ({
                       height: 40,
                       borderRadius: 12,
                       // margin: 2,
-                      backgroundColor: '#FF4056',
+                      backgroundColor: '#EF3A71',
                     }}>
                     <Text
                       style={{
@@ -127,7 +127,7 @@ const QComponents = ({
       <View
         style={{
           marginVertical: 10,
-          width: '90%',
+          width: width,
           alignSelf: 'center',
         }}>
         <View style={{marginVertical: 2}}>
@@ -203,7 +203,7 @@ const QComponents = ({
             <View
               style={{
                 // backgroundColor: 'yellow',
-                width: '100%',
+                width: '97%',
                 marginTop: -25,
                 flexDirection: 'row',
                 justifyContent: 'space-between',
@@ -230,7 +230,7 @@ const QComponents = ({
                   <TouchableOpacity
                     onPress={() => {}}
                     style={{marginTop: margintopS}}>
-                    <Icon name={name2} size={22} color="#EF3A71" />
+                    <Icon name={name2} size={24} color="#EF3A71" />
                   </TouchableOpacity>
                 )}
               </View>
@@ -322,38 +322,33 @@ const QComponents = ({
                       style={{}}>
                       <>
                         {data1 === index ? (
-                          <ImageBackground
-                            source={item.img1}
-                            style={[styles.img]}
-                            resizeMode="contain">
-                            <LinearGradient
-                              colors={['#ED535E', '#CD258D']}
-                              style={[
-                                styles.circle,
+                          <LinearGradient
+                            colors={['#ED535E', '#CD258D']}
+                            style={[
+                              styles.circle,
 
-                                {
-                                  width: 74,
-                                  height: 74,
-                                  // width: 100,
-                                  // height: 100,
-                                  // borderRadius: 100,
-                                  // justifyContent: 'center',
-                                  // alignItems: 'center',
-                                  // alignSelf: 'center',
-                                  backgroundColor:
-                                    data1 === index ? '#CD258D' : '',
-                                  opacity: 0.9,
-                                  // elevation: data1 === index ? 0 : 5,
-                                },
-                              ]}>
-                              <Icon
-                                name="check"
-                                size={39}
-                                color="#fff"
-                                style={{}}
-                              />
-                            </LinearGradient>
-                          </ImageBackground>
+                              {
+                                width: 74,
+                                height: 74,
+                                // width: 100,
+                                // height: 100,
+                                // borderRadius: 100,
+                                // justifyContent: 'center',
+                                // alignItems: 'center',
+                                // alignSelf: 'center',
+                                backgroundColor:
+                                  data1 === index ? '#CD258D' : '',
+                                opacity: 0.9,
+                                // elevation: data1 === index ? 0 : 5,
+                              },
+                            ]}>
+                            <Icon
+                              name="check"
+                              size={39}
+                              color="#fff"
+                              style={{}}
+                            />
+                          </LinearGradient>
                         ) : (
                           <View
                             style={[styles.circle, {width: 74, height: 74}]}>

@@ -10,6 +10,7 @@ import {
 import React from 'react';
 import Images from '../../constants';
 import Icon from 'react-native-vector-icons/AntDesign';
+import LinearGradient from 'react-native-linear-gradient';
 import {SeeAll} from '../SeeAll';
 import {FlatList} from 'react-native';
 
@@ -225,6 +226,7 @@ const All = ({
                         }}>
                         {title}
                       </Text>
+
                       <View
                         style={{
                           width: 40,
@@ -235,6 +237,8 @@ const All = ({
                           backgroundColor: '#CD258D',
                           alignItems: 'center',
                         }}>
+                        <LinearGradient
+                          colors={['#ED535E', '#CD258D']}></LinearGradient>
                         <Text
                           style={{
                             color: '#fff',

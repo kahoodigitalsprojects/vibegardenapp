@@ -139,7 +139,7 @@ const Video = ({route, navigation}) => {
                 }
               />
             </View>
-            <View style={{width: '100%'}}>
+            <View style={{width: '100%', alignSelf: 'center'}}>
               <QComponents
                 margintopS={-15}
                 flowwerlist={otherParam}
@@ -163,7 +163,7 @@ const Video = ({route, navigation}) => {
             </View>
             <View
               style={{
-                width: '90%',
+                width: '95%',
                 alignSelf: 'center',
               }}>
               <FlatList
@@ -198,7 +198,7 @@ const Video = ({route, navigation}) => {
                 <>
                   <View
                     style={{
-                      width: '100%',
+                      width: '95%',
                       alignSelf: 'center',
                       marginVertical: 20,
                     }}>
@@ -340,6 +340,7 @@ const Video = ({route, navigation}) => {
                 style={{
                   color: 'black',
                   fontSize: 12,
+                  marginTop: 5,
                   marginVertical: 20,
                   fontFamily: 'BrandonGrotesque-Medium',
                 }}>
