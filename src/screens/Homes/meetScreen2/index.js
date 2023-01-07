@@ -55,7 +55,16 @@ const MeetScreen2 = ({route, navigation}) => {
               <View style={{marginVertical: 20}}>
                 <Pinkbtn
                   shadow={'#030303'}
-                  onPress={() => navigation.navigate('Tabs')}
+                  onPress={() =>
+                    navigation.reset({
+                      index: 0,
+                      routes: [
+                        {
+                          name: 'Tabs',
+                        },
+                      ],
+                    })
+                  }
                   width={'80%'}
                   btntxt="Take Me To the Garden"
                 />
