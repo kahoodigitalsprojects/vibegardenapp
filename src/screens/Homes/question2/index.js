@@ -44,7 +44,7 @@ const Question2 = ({navigation}) => {
                 OnPress={() => navigation.goBack()}
               />
             </View>
-            <View style={{width: '100%', alignSelf: 'center'}}>
+            <View style={{width: '88%', alignSelf: 'center'}}>
               <QComponents
                 marginVertical={10}
                 flowwerlist11={true}
@@ -58,6 +58,7 @@ const Question2 = ({navigation}) => {
                 Statement1="Statement:"
                 flow="Flow Through"
                 margintopS={31}
+                textfontsize={31}
                 number={'1/20'}
                 text1={'That Bananas'}
                 text2="?"

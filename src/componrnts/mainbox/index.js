@@ -8,6 +8,7 @@ import {
 import React from 'react';
 import Images from '../../constants';
 import Icon from 'react-native-vector-icons/AntDesign';
+import {GreenIcon1} from '../../assests/svgs/GroundworkSvg';
 
 const MainBox = ({
   route,
@@ -81,9 +82,10 @@ const MainBox = ({
                     marginTop: 35,
                     width: 33,
                   }}>
-                  <Image
+                  {/* <Image
                     source={require('../../assests/images/greenicon1.png')}
-                  />
+                  /> */}
+                  <GreenIcon1 />
                 </View>
               )}
               <Text

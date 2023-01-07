@@ -26,6 +26,7 @@ const QComponents = ({
   textflower,
   text6,
   name,
+  textfontsize,
   width,
   name11,
   name2,
@@ -138,6 +139,7 @@ const QComponents = ({
                 style={{
                   alignItems: 'center',
                   alignSelf: 'center',
+                  margin: 10,
                 }}>
                 <Text
                   style={{
@@ -288,8 +290,8 @@ const QComponents = ({
 
                   {
                     marginTop: marginTop1,
-                    fontSize: 31,
-                    color: '#000',
+                    fontSize: textfontsize,
+                    color: '#000', // fontSize: 31,
                     fontFamily: fontfamily,
                   },
                 ]}>
@@ -315,7 +317,7 @@ const QComponents = ({
             renderItem={({item, index}) => {
               return (
                 <>
-                  <View style={{width: '24%', margin: 2}}>
+                  <View style={{width: '24%', margin: 1}}>
                     <TouchableOpacity
                       activeOpacity={1}
                       onPress={() => (index === true ? '' : setdata1(index))}

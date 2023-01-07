@@ -16,7 +16,8 @@ import {useBackButton} from '../../../hooks/BackHandler';
 const Question3 = ({navigation}) => {
   onBackPress = () => {
     navigation.goBack();
-    return true;Pques
+    return true;
+    Pques;
   };
   useBackButton(navigation, onBackPress);
 
@@ -51,7 +52,7 @@ const Question3 = ({navigation}) => {
                 OnPress={() => props.navigation.goBack()}
               />
             </View>
-            <View style={{width: '100%', alignSelf: 'center'}}>
+            <View style={{width: '90%', alignSelf: 'center'}}>
               <QComponents
                 iconone
                 name2="chevron-up"
@@ -71,6 +72,7 @@ const Question3 = ({navigation}) => {
                 text3={`'It Feels That's way Sometime'`}
                 text4="I Wrap Myself in that way Nightly"
                 text6={'We Each Have Angles?'}
+                textfontsize={31}
                 fontfamily="BrandonGrotesque-Regular"
                 text5={
                   'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.'

@@ -46,23 +46,18 @@ const CancelSubscription = ({navigation}) => {
         </View>
         <View
           style={{
-            marginVertical: 10,
-            marginTop: 10,
-            width: '95%',
             alignSelf: 'center',
           }}>
-          <View style={{marginTop: -30}}>
+          <View style={{marginTop: -30, width: '88%'}}>
             <QComponents
               textforvideo="Good bye Thanks!"
               icontwon
               name2="chevron-up"
               video={true}
-              text5={
-                'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.'
-              }
               Statement={
                 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.'
               }
+              textfontsize={20}
               marginTop1={-5}
               text6={'Leaving Because:'}
               fontfamily="BrandonGrotesque-Bold"
@@ -71,8 +66,9 @@ const CancelSubscription = ({navigation}) => {
           <View
             style={{
               marginVertical: 8,
-              width: '90%',
-              alignSelf: 'center',
+              // width: '100%',
+              // alignSelf: 'center',
+              // backgroundColor: 'pink',
             }}>
             <FlatList
               data={data}
@@ -82,7 +78,7 @@ const CancelSubscription = ({navigation}) => {
                     style={{
                       marginVertical: 8,
                       flexDirection: 'row',
-                      width: '100%',
+                      // width: '100%',
                     }}>
                     <TouchableOpacity
                       onPress={() => {}}

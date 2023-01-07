@@ -48,7 +48,7 @@ const Question = ({navigation}) => {
             />
           </View>
 
-          <View style={{width: '100%', alignSelf: 'center'}}>
+          <View style={{width: '90%', alignSelf: 'center'}}>
             <QComponents
               flowwerlist11={true}
               iconone
@@ -68,6 +68,7 @@ const Question = ({navigation}) => {
               text3={'SMCA Peepsceen to think so'}
               text4="Shall we Question Heap"
               text6={'The Multiverse is Real'}
+              textfontsize={31}
               text5={
                 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.'
               }

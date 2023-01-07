@@ -49,7 +49,7 @@ const Question3 = ({navigation}) => {
             />
           </View>
 
-          <View style={{width: '100%', alignSelf: 'center'}}>
+          <View style={{width: '90%', alignSelf: 'center'}}>
             <QComponents
               flowwerlist11={true}
               width={'100%'}
@@ -67,6 +67,7 @@ const Question3 = ({navigation}) => {
               text1={'Dont Teast Data'}
               text2="Whose Data?"
               text3={'Sometimes'}
+              textfontsize={31}
               text4="Always"
               text6={'Data Help me Accept new concepts.'}
               text5={

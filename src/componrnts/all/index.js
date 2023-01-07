@@ -203,16 +203,7 @@ const All = ({
                             height: 25,
 
                             // backgroundColor: 'yellow',
-                          }}>
-                          <Image
-                            source={item.iconimg2}
-                            resizeMode="contain"
-                            style={{
-                              width: '100%',
-                              height: '100%',
-                            }}
-                          />
-                        </View>
+                          }}></View>
                       )}
                     </View>
                     <View style={{marginTop: -15}}>
@@ -227,27 +218,29 @@ const All = ({
                         {title}
                       </Text>
 
-                      <View
-                        style={{
-                          width: 40,
-                          height: 15,
-                          borderRadius: 10,
-                          marginVertical: 3,
-                          justifyContent: 'center',
-                          backgroundColor: '#CD258D',
-                          alignItems: 'center',
-                        }}>
+                      <View>
                         <LinearGradient
-                          colors={['#ED535E', '#CD258D']}></LinearGradient>
-                        <Text
+                          colors={['#ED535E', '#CD258D']}
                           style={{
-                            color: '#fff',
-                            fontWeight: 'bold',
-                            fontSize: 10,
-                            fontFamily: 'BrandonGrotesque-Regular',
+                            width: 40,
+                            height: 15,
+                            borderRadius: 10,
+                            marginVertical: 3,
+
+                            justifyContent: 'center',
+                            // backgroundColor: '#CD258D',
+                            alignItems: 'center',
                           }}>
-                          5Min
-                        </Text>
+                          <Text
+                            style={{
+                              color: '#fff',
+                              fontWeight: 'bold',
+                              fontSize: 10,
+                              fontFamily: 'BrandonGrotesque-Regular',
+                            }}>
+                            5Min
+                          </Text>
+                        </LinearGradient>
                       </View>
                     </View>
                   </View>
