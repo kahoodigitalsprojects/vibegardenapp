@@ -429,6 +429,71 @@ function GreenIcon1() {
   );
 }
 
+function GreenIcon2() {
+  return (
+    <Svg
+      xmlns="http://www.w3.org/2000/svg"
+      // xmlns:xlink="http://www.w3.org/1999/xlink"
+      width="25"
+      height="25"
+      viewBox="0 0 25 25">
+      <Defs>
+        <LinearGradient
+          id="linear-gradient"
+          x1="0.5"
+          x2="0.5"
+          y2="1"
+          gradientUnits="objectBoundingBox">
+          <Stop offset="0" stopColor="#205f2e" />
+          <Stop offset="1" stopColor="#7ab03a" />
+        </LinearGradient>
+      </Defs>
+      <G
+        id="Group_38718"
+        data-name="Group 38718"
+        transform="translate(-133 -37.5)">
+        <Circle
+          id="Ellipse_22"
+          data-name="Ellipse 22"
+          cx="12.5"
+          cy="12.5"
+          r="12.5"
+          transform="translate(133 37.5)"
+          fill="url(#linear-gradient)"
+        />
+        <G id="Layer_1-2" transform="translate(138.005 43)">
+          <G
+            id="Group_38640"
+            data-name="Group 38640"
+            transform="translate(-0.005)">
+            <Path
+              id="Path_2718"
+              data-name="Path 2718"
+              d="M1.792,11.019H.973a.972.972,0,0,1-.841-.48.959.959,0,0,1-.012-.967L5.151.5A.974.974,0,0,1,6.856.5l5.091,9.182a.3.3,0,1,1-.531.3L6.325.8a.366.366,0,0,0-.641,0L.651,9.865a.366.366,0,0,0,.32.545H1.79a.3.3,0,1,1,0,.608Z"
+              transform="translate(0.005)"
+              fill="#fff"
+            />
+            <Path
+              id="Path_2719"
+              data-name="Path 2719"
+              d="M27.575,11.019H17.3a.3.3,0,1,1,0-.608H27.575a.362.362,0,0,0,.316-.18.358.358,0,0,0,0-.365L22.865.8a.363.363,0,0,0-.32-.189h0a.361.361,0,0,0-.32.189l-.393.71a.3.3,0,1,1-.531-.3L21.693.5a.959.959,0,0,1,.849-.5h0A.964.964,0,0,1,23.4.5l5.032,9.066a.975.975,0,0,1-.854,1.448Z"
+              transform="translate(-13.552 0)"
+              fill="#fff"
+            />
+            <Path
+              id="Path_2720"
+              data-name="Path 2720"
+              d="M18.388,24.791H8.326a.975.975,0,0,1-.854-1.448l5.066-9.279a.3.3,0,1,1,.535.292L8.006,23.635a.367.367,0,0,0,.32.547H18.388A.362.362,0,0,0,18.7,24a.358.358,0,0,0,0-.365l-.525-.945a.3.3,0,0,1,.531-.3l.525.945a.975.975,0,0,1-.854,1.448Z"
+              transform="translate(-5.857 -11.086)"
+              fill="#fff"
+            />
+          </G>
+        </G>
+      </G>
+    </Svg>
+  );
+}
+
 export {
   GroundworkLight,
   GroundworkDark,
@@ -443,4 +508,5 @@ export {
   PlayGreen,
   PlayWhite,
   GreenIcon1,
+  GreenIcon2,
 };

@@ -18,6 +18,7 @@ import {
   MenuOption,
   MenuTrigger,
 } from 'react-native-popup-menu';
+import {GreenIcon1} from '../../assests/svgs/GroundworkSvg';
 const Header = props => {
   const {
     color,
@@ -97,11 +98,7 @@ const Header = props => {
                     marginRight: 4,
                     //  backgroundColor: 'yellow'
                   }}>
-                  <Image
-                    source={greenicon1}
-                    resizeMode="contain"
-                    style={{width: '100%', height: '100%'}}
-                  />
+                  {greenicon1}
                 </View>
                 <Text
                   style={{

@@ -25,6 +25,7 @@ import MainBox from '../../../componrnts/mainbox';
 import All from '../../../componrnts/all';
 import Question from '../Question';
 import {useBackButton} from '../../../hooks/BackHandler';
+import {GreenIcon1, GreenIcon2} from '../../../assests/svgs/GroundworkSvg';
 
 const Video = ({route, navigation}) => {
   const [state, setState] = useState(icon1);
@@ -110,11 +111,7 @@ const Video = ({route, navigation}) => {
                 paddingVertical: 8,
               }}>
               <Header
-                greenicon1={
-                  state === icon1
-                    ? Images.Logos.greenicon1
-                    : Images.Logos.greenicon2
-                }
+                greenicon1={state === icon1 ? <GreenIcon1 /> : <GreenIcon2 />}
                 heartplus
                 heart
                 plus={plus}
