@@ -49,7 +49,7 @@ const Question3 = ({navigation}) => {
             />
           </View>
 
-          <View style={{width: '90%', alignSelf: 'center'}}>
+          <View style={{width: '88%', alignSelf: 'center'}}>
             <QComponents
               flowwerlist11={true}
               width={'100%'}

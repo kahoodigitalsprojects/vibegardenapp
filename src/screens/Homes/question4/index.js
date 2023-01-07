@@ -52,7 +52,7 @@ const Question3 = ({navigation}) => {
                 OnPress={() => props.navigation.goBack()}
               />
             </View>
-            <View style={{width: '90%', alignSelf: 'center'}}>
+            <View style={{width: '88%', alignSelf: 'center'}}>
               <QComponents
                 iconone
                 name2="chevron-up"

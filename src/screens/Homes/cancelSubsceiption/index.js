@@ -106,7 +106,13 @@ const CancelSubscription = ({navigation}) => {
           </View>
         </View>
 
-        <View style={{marginTop: 10, alignSelf: 'center', width: '90%'}}>
+        <View
+          style={{
+            marginTop: 10,
+            alignSelf: 'center',
+            width: '90%',
+            // backgroundColor: 'yellow',
+          }}>
           <Pinkbtn
             shadow={'#00000019'}
             onPress={() => {
