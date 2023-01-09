@@ -272,7 +272,6 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
   );
 };
 export default BloomsCheck;
-
 const styles = StyleSheet.create({
   main: {flex: 1, backgroundColor: '#fff', paddingTop: 15},
   img: {
@@ -297,7 +296,7 @@ const styles = StyleSheet.create({
   },
 
   btn1: {
-    shadowColor: '#000',
+    shadowColor: '#00000029',
     shadowOffset: {
       width: 0,
       height: 7,

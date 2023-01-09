@@ -13,8 +13,15 @@ import {
 import {Header, Pinkbtn, QComponents} from '../../../componrnts';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Images from '../../../constants';
+import {useBackButton} from '../../../hooks/BackHandler';
 
-const Contactus = props => {
+const Contactus = ({navigation}) => {
+  //BackHandler
+  const onBackPress = () => {
+    navigation.goBack();
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
@@ -32,7 +39,7 @@ const Contactus = props => {
             marginTop={-40}
             iconName="left"
             header2
-            OnPress={() => props.navigation.goBack('')}
+            OnPress={() => navigation.goBack('')}
             headertext="Contact Us"
             fontSize={20}
             color="#191919B8"

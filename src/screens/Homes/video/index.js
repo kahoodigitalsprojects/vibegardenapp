@@ -67,7 +67,7 @@ const Video = ({route, navigation}) => {
   ];
   const data2 = [
     {
-      texlist: 'Buddhidum',
+      texlist: 'Buddhism',
       img1: Images.Imgs.bear,
     },
     {
@@ -136,7 +136,13 @@ const Video = ({route, navigation}) => {
                 }
               />
             </View>
-            <View style={{width: '100%', alignSelf: 'center'}}>
+            <View
+              style={{
+                width: '100%',
+                alignSelf: 'center',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
               <QComponents
                 margintopS={-15}
                 flowwerlist={otherParam}
@@ -208,25 +214,43 @@ const Video = ({route, navigation}) => {
                       Did you try this tools?
                     </Text>
                   </View>
+                  <View
+                    style={{
+                      width: '100%',
+                      alignSelf: 'center',
+                      alignItems: 'center',
+                      // backgroundColor: '#1C5C',
+                    }}>
+                    {/* <FlatList
+                      showsHorizontalScrollIndicator={false}
+                      horizontal={true}
+                      data={Data3}
+                      renderItem={({item, index}) => {
+                        return (
+                          <>
+                            <View style={{}}>
+                              <Flowers
+                                flower1
+                                img1={item.img11}
+                                text1={item.text1}
+                              />
+                            </View>
+                          </>
+                        );
+                      }}
+                    /> */}
 
-                  <FlatList
-                    showsHorizontalScrollIndicator={false}
-                    horizontal={true}
-                    data={Data3}
-                    renderItem={({item, index}) => {
-                      return (
-                        <>
-                          <View style={{}}>
-                            <Flowers
-                              flower1
-                              img1={item.img11}
-                              text1={item.text1}
-                            />
-                          </View>
-                        </>
-                      );
-                    }}
-                  />
+                    <QComponents
+                      width1={ '100%'}
+                      flowwerlist11={true}
+                      marginTop1={-90}
+                      text1={'Not Really'}
+                      text2="Baby Bloom"
+                      text3={'Solid Bloom'}
+                      text4="Big Bloom"
+                      fontfamily="BrandonGrotesque-Regular"
+                    />
+                  </View>
                 </>
               )}
               <View

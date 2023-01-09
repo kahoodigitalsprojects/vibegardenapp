@@ -5,11 +5,18 @@ import {
   TouchableOpacity,
   TextInput,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import {SearchBar} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-const Searcbart1 = ({setIsTyping, onPressRight, onPressLeft}) => {
+const Searcbart1 = ({
+  setIsTyping,
+  onPressRight,
+  onPressLeft,
+  textinputText,
+  setTextInputText,
+}) => {
+  const [text, setText] = useState('');
   return (
     <View style={{width: '100%', paddingHorizontal: 20}}>
       <View
@@ -36,13 +43,19 @@ const Searcbart1 = ({setIsTyping, onPressRight, onPressLeft}) => {
               justifyContent: 'center',
               alignItems: 'center',
               borderRadius: 10,
+              // backgroundColor: 'pink',
             }}>
-            <Icon name="search1" size={25} color="#1C5C2E" />
+            <Icon name="arrowleft" size={25} color="#1C5C2E" />
           </TouchableOpacity>
           <TextInput
             onFocus={() => setIsTyping(true)}
             placeholder="Heart"
             placeholderTextColor={'#323232'}
+            value={text}
+            onChangeText={value => setText(value)}
+            // value={textinputText}
+            // onChange={setTextInputText}
+            // onChangeText={setTextInputText}
             style={{
               flex: 1,
               color: 'black',
@@ -51,7 +64,8 @@ const Searcbart1 = ({setIsTyping, onPressRight, onPressLeft}) => {
           />
         </View>
         <TouchableOpacity
-          onPress={onPressRight}
+          onPress={() => setText('')}
+          // onPress={onPressRight}
           style={{
             width: 40,
             height: 40,

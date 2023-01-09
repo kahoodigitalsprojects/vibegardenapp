@@ -165,7 +165,7 @@ const Buddhisim = ({navigation, Flowersbox, Heading}) => {
                     })
                   }
                   color1="#000"
-                  textA="Related Teacher "
+                  textA="Related Teacher"
                 />
               </View>
 
@@ -177,7 +177,7 @@ const Buddhisim = ({navigation, Flowersbox, Heading}) => {
                     renderItem={({item}) => {
                       return (
                         <>
-                          <View style={{marginVertical: 10}}>
+                          <View style={{}}>
                             <Userdetails
                               databox2
                               bear={item.Img1}

@@ -48,7 +48,7 @@ const CancelSubscription = ({navigation}) => {
           style={{
             alignSelf: 'center',
           }}>
-          <View style={{marginTop: -30, width: '88%'}}>
+          <View style={{marginTop: -40, width: '88%'}}>
             <QComponents
               textforvideo="Good bye Thanks!"
               icontwon
@@ -65,10 +65,10 @@ const CancelSubscription = ({navigation}) => {
           </View>
           <View
             style={{
-              marginVertical: 8,
               // width: '100%',
               // alignSelf: 'center',
               // backgroundColor: 'pink',
+              height: 220,
             }}>
             <FlatList
               data={data}
@@ -77,6 +77,7 @@ const CancelSubscription = ({navigation}) => {
                   <View
                     style={{
                       marginVertical: 8,
+                      marginTop: 5,
                       flexDirection: 'row',
                       // width: '100%',
                     }}>
@@ -85,7 +86,7 @@ const CancelSubscription = ({navigation}) => {
                       style={{
                         marginTop: 2,
                       }}>
-                      <Icon name="check-square" size={25} color="#1C5C2E" />
+                      <Icon name="check-square" size={20} color="#1C5C2E" />
                     </TouchableOpacity>
                     <Text
                       style={{
@@ -108,13 +109,12 @@ const CancelSubscription = ({navigation}) => {
 
         <View
           style={{
-            marginTop: 10,
             alignSelf: 'center',
             width: '90%',
             // backgroundColor: 'yellow',
           }}>
           <Pinkbtn
-            shadow={'#00000019'}
+            shadow={'#00000029'}
             onPress={() => {
               navigation.navigate('Success');
             }}
@@ -122,7 +122,6 @@ const CancelSubscription = ({navigation}) => {
             btntxt="Submit"
           />
         </View>
-        <View style={{marginVertical: 15}} />
       </ScrollView>
     </SafeAreaView>
   );

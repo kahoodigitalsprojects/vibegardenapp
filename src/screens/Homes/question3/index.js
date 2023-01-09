@@ -49,17 +49,18 @@ const Question3 = ({navigation}) => {
             />
           </View>
 
-          <View style={{width: '88%', alignSelf: 'center'}}>
+          <View style={{width: '90%', alignSelf: 'center'}}>
             <QComponents
               flowwerlist11={true}
               width={'100%'}
+              width1={'100%'}
               iconone
               name2="chevron-up"
-              name3="chevron-down"
+            name3="chevron-down"
               direction2="Description:"
               flowwerlist={true}
-              Statement1="Statement"
-              flow="Flow Thtough"
+              Statement1="Statement:"
+              flow="Flow Through"
               image1={true}
               text="No idea What a Multiverse is"
               headingtext

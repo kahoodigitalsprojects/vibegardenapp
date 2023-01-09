@@ -53,6 +53,7 @@ const Question = ({navigation}) => {
               flowwerlist11={true}
               iconone
               width={'100%'}
+              width1={'100%'}
               name2="chevron-up"
               name3="chevron-down"
               direction2="Description:"

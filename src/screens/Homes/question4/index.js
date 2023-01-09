@@ -49,7 +49,7 @@ const Question3 = ({navigation}) => {
                 header2
                 headertext="Resonance Finder"
                 fontSize={25}
-                OnPress={() => props.navigation.goBack()}
+                OnPress={() => navigation.goBack()}
               />
             </View>
             <View style={{width: '88%', alignSelf: 'center'}}>
@@ -59,9 +59,10 @@ const Question3 = ({navigation}) => {
                 name3="chevron-down"
                 direction2="Description:"
                 width={'100%'}
+                width1={'100%'}
                 flowwerlist11={true}
-                Statement1="Statement"
-                flow="Flow Thtough"
+                Statement1="Statement:"
+                flow="Flow Through"
                 name="chevron-down"
                 image1={true}
                 text="No idea What a Multiverse is"

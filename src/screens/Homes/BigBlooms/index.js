@@ -51,7 +51,6 @@ const BigBlooms = ({route, navigation}) => {
               textAlign: 'center',
               color: '#000',
               // fontWeight: 'bold',
-
               // marginVertical: 10,
               fontFamily: 'BrandonGrotesque-Medium',
             }}>
@@ -99,7 +98,6 @@ const BigBlooms = ({route, navigation}) => {
               }}>
               ADDED TONGLEN FAVORITES
             </Text>
-
             <Text
               style={{
                 fontSize: 18,
@@ -111,13 +109,10 @@ const BigBlooms = ({route, navigation}) => {
               }}>
               Tell Us More
             </Text>
-
             <Text
               style={{
                 fontSize: 18,
-
                 color: '#000',
-
                 fontFamily: 'BrandonGrotesque-Regular',
               }}>
               Did This Tools
@@ -157,7 +152,6 @@ const BigBlooms = ({route, navigation}) => {
             />
           </View>
         </View>
-
         <View
           style={{
             marginTop: 10,
@@ -166,6 +160,7 @@ const BigBlooms = ({route, navigation}) => {
             // backgroundColor: 'pink',
           }}>
           <Pinkbtn
+            shadow={'#00000029'}
             width={'60%'}
             btntxt="Submit"
             onPress={() => navigation.navigate('star')}

@@ -11,15 +11,16 @@ import {
 
 import Icon from 'react-native-vector-icons/Entypo';
 import Icon2 from 'react-native-vector-icons/AntDesign';
-import Icon3 from 'react-native-vector-icons/Ionicons';
 import Images from '../../constants';
 import Collapsible from 'react-native-collapsible';
 import LinearGradient from 'react-native-linear-gradient';
+
 const QComponents = ({
   text1,
   text2,
   text3,
   text4,
+  width1,
   text5,
   marginVertical,
   fontfamily,
@@ -180,7 +181,7 @@ const QComponents = ({
                   styles.text2,
                   {
                     color: '#000',
-                    fontSize: 18,
+                    fontSize: 20,
                     marginLeft: 5,
                     fontFamily: 'BrandonGrotesque-Regular',
                   },
@@ -304,9 +305,10 @@ const QComponents = ({
       {flowwerlist11 && (
         <View
           style={{
-            width: '100%',
+            width: width1,
             alignSelf: 'center',
             alignItems: 'center',
+            marginTop: marginTop1,
 
             // justifyContent: 'space-around',
           }}>
@@ -317,7 +319,7 @@ const QComponents = ({
             renderItem={({item, index}) => {
               return (
                 <>
-                  <View style={{width: '24%', margin: 1}}>
+                  <View style={{width: '24%'}}>
                     <TouchableOpacity
                       activeOpacity={1}
                       onPress={() => (index === true ? '' : setdata1(index))}
@@ -330,8 +332,8 @@ const QComponents = ({
                               styles.circle,
 
                               {
-                                width: 74,
-                                height: 74,
+                                width: 80,
+                                height: 80,
                                 // width: 100,
                                 // height: 100,
                                 // borderRadius: 100,
@@ -353,7 +355,7 @@ const QComponents = ({
                           </LinearGradient>
                         ) : (
                           <View
-                            style={[styles.circle, {width: 74, height: 74}]}>
+                            style={[styles.circle, {width: 80, height: 80}]}>
                             <Image
                               source={item.img1}
                               resizeMode="contain"
@@ -408,9 +410,7 @@ const styles = StyleSheet.create({
   },
   text2: {
     fontSize: 20,
-    // textAlign: 'center',
     color: '#1C5C2E',
-    // fontWeight: '500',
     fontFamily: 'BrandonGrotesque-Regular',
   },
   starbg: {

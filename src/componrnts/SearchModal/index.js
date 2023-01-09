@@ -14,6 +14,8 @@ import Images from '../../constants';
 import Search2 from '../../screens/Homes/search2';
 const SearchModal = ({visible, setVisible, navigation}) => {
   const [isTyping, setIsTyping] = useState(false);
+  const [textinputText, setTextInputText] = useState(false);
+
   return (
     <Overlay
       overlayStyle={{
@@ -28,7 +30,7 @@ const SearchModal = ({visible, setVisible, navigation}) => {
         setVisible(visible);
       }}>
       <View style={{marginVertical: Platform.OS === 'ios' ? 15 : 5}} />
-
+      {/* //  && textinputText.length < 1 ? */}
       {isTyping ? (
         <ScrollView
           showsVerticalScrollIndicator={false}
@@ -54,10 +56,18 @@ const SearchModal = ({visible, setVisible, navigation}) => {
               setVisible(false);
               setIsTyping(false);
             }}
-            onPressRight={() => {
-              setVisible(false);
-              setIsTyping(false);
-            }}
+            onPressRight={
+              () => {
+                setVisible(false);
+                setIsTyping(false);
+              }
+              // if (textinputText.length > 1) {
+              //   setTextInputText('');
+              // } else {
+              //   setVisible(false);
+              //   setIsTyping(false);
+              // }
+            }
           />
 
           <View style={styles.container}>

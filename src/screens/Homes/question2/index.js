@@ -44,7 +44,7 @@ const Question2 = ({navigation}) => {
                 OnPress={() => navigation.goBack()}
               />
             </View>
-            <View style={{width: '88%', alignSelf: 'center'}}>
+            <View style={{width: '90%', alignSelf: 'center'}}>
               <QComponents
                 marginVertical={10}
                 flowwerlist11={true}
@@ -54,6 +54,7 @@ const Question2 = ({navigation}) => {
                 name3="chevron-down"
                 video={true}
                 width={'100%'}
+                width1={'100%'}
                 direction2="Description:"
                 Statement1="Statement:"
                 flow="Flow Through"

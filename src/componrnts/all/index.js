@@ -218,12 +218,12 @@ const All = ({
                         {title}
                       </Text>
 
-                      <View>
+                      <View style={{}}>
                         <LinearGradient
                           colors={['#ED535E', '#CD258D']}
                           style={{
                             width: 40,
-                            height: 15,
+                            height: 25,
                             borderRadius: 10,
                             marginVertical: 3,
 
@@ -235,6 +235,7 @@ const All = ({
                             style={{
                               color: '#fff',
                               fontWeight: 'bold',
+                        
                               fontSize: 10,
                               fontFamily: 'BrandonGrotesque-Regular',
                             }}>

@@ -43,14 +43,13 @@ const Flowers = ({text1, img1, onPress, headtext, flower1, width}) => {
             </View>
           )}
           {flower1 && (
-            <View style={{margin: 5, width: width}}>
+            <View style={{width: width}}>
               <TouchableOpacity onPress={onPress} style={styles.circle}>
-                <Image source={img1} style={{width: '100%', height: '100%'}} />
+                <Image source={img1} style={{}} />
               </TouchableOpacity>
-              <View style={{fontSize: 10, width: 80}}>
+              <View style={{}}>
                 <Text
                   style={{
-                    margin: 5,
                     fontSize: 12,
                     color: '#000',
                     textAlign: 'center',

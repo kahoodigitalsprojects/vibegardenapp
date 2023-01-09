@@ -83,6 +83,7 @@ const Pushnotification = ({navigation}) => {
             </View>
             <View style={{marginTop: 20}}>
               <Pinkbtn
+                shadow={'#00000029'}
                 onPress={() => navigation.goBack()}
                 width={'60%'}
                 btntxt="Save"
