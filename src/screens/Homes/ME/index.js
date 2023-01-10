@@ -249,10 +249,16 @@ const Me = ({navigation}) => {
                     Your Graph will appear{'\n'}after 2 days of tracking
                   </Text>
                 </View>
-                <View style={{marginTop: 30, marginBottom: 30}}>
+                <View
+                  style={{
+                    marginTop: 30,
+                    marginBottom: 30,
+                    // backgroundColor: 'red',
+                    alignItems: 'center',
+                  }}>
                   <Pinkbtn
-                    shadow="#00000019"
-                    width={'65%'}
+                    shadow="rgba(0,0,0,0.5)"
+                    width={'75%'}
                     onPress={() => {
                       navigation.navigate('BloomsCheck');
                     }}

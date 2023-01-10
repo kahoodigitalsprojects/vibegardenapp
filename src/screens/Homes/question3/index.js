@@ -77,10 +77,10 @@ const Question3 = ({navigation}) => {
               fontfamily="BrandonGrotesque-Regular"
             />
           </View>
-          <View style={{marginTop: 20}}>
+          <View style={{marginTop: 20, alignItems: 'center'}}>
             <Pinkbtn
-              shadow="#979B9F"
-              width={'55%'}
+              shadow="rgba(0,0,0,0.5)"
+              width={'70%'}
               btntxt="Next"
               onPress={() => navigation.navigate('question4')}
             />

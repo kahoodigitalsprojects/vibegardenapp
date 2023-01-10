@@ -74,13 +74,13 @@ const Question2 = ({navigation}) => {
               />
             </View>
 
-            <View style={{marginTop: 20, width: '100%'}}>
+            <View style={{marginTop: 20, width: '100%', alignItems: 'center'}}>
               <Pinkbtn
-                shadow="#00000029"
+                shadow="rgba(0,0,0,0.5)"
                 onPress={() => {
                   navigation.navigate('question');
                 }}
-                width={'55%'}
+                width={'70%'}
                 btntxt="Next"
               />
             </View>

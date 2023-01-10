@@ -94,15 +94,15 @@ const Resonance = ({navigation}) => {
                   }}
                 />
               </View>
-              <View style={{marginTop: 8}}>
+              <View style={{marginTop: 8, alignItems: 'center'}}>
                 <Pinkbtn
-                  shadow="#00000019"
+                  shadow="rgba(0,0,0,0.5)"
                   onPress={() => {
                     navigation.navigate('question2');
                   }}
                   btntxt="
             Save"
-                  width={230}
+                  width={'75%'}
                 />
               </View>
             </View>
