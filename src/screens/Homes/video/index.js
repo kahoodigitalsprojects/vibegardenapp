@@ -214,32 +214,7 @@ const Video = ({route, navigation}) => {
                       Did you try this tools?
                     </Text>
                   </View>
-                  <View
-                    style={{
-                      width: '100%',
-                      alignSelf: 'center',
-                      alignItems: 'center',
-                      // backgroundColor: '#1C5C',
-                    }}>
-                    {/* <FlatList
-                      showsHorizontalScrollIndicator={false}
-                      horizontal={true}
-                      data={Data3}
-                      renderItem={({item, index}) => {
-                        return (
-                          <>
-                            <View style={{}}>
-                              <Flowers
-                                flower1
-                                img1={item.img11}
-                                text1={item.text1}
-                              />
-                            </View>
-                          </>
-                        );
-                      }}
-                    /> */}
-
+                  <View style={{}}>
                     <QComponents
                       width1={'100%'}
                       flowwerlist11={true}
@@ -274,7 +249,7 @@ const Video = ({route, navigation}) => {
               style={{
                 width: '95%',
                 alignSelf: 'center',
-                backgroundColor: 'yellow',
+                // backgroundColor: 'yellow',
               }}>
               <FlatList
                 showsVerticalScrollIndicator={false}
@@ -323,6 +298,7 @@ const Video = ({route, navigation}) => {
               <FlatList
                 showsHorizontalScrollIndicator={false}
                 keyExtractor={item => item.id}
+                flat
                 numColumns={2}
                 data={Data2}
                 renderItem={({item}) => {

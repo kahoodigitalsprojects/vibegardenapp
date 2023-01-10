@@ -79,7 +79,7 @@ const Registerd = ({route, navigation}) => {
             }}>
             Or If You’ve Forgotten Your Password,{' '}
             <TouchableOpacity
-              style={{marginTop: -2.5}}
+              style={{}}
               onPress={() => navigation.navigate('forgerpsaaword')}>
               <Text
                 style={{

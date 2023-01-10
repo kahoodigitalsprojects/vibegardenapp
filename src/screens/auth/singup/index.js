@@ -49,9 +49,14 @@ const SignUp = ({route, navigation}) => {
         <LoginLogoSmall />
         <Text style={[styles.text, {marginTop: 25}]}>Sign Up With Email</Text>
         <View style={{marginTop: 40}}>
-          <TextInput placeholder="Email Address" style={styles.input} />
+          <TextInput
+            placeholder="Email Address"
+            placeholderTextColor="#aaa"
+            style={styles.input}
+          />
           <TextInput
             placeholder="Password"
+            placeholderTextColor="#aaa"
             style={[styles.input, {marginTop: 60}]}
           />
         </View>
@@ -153,7 +158,8 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
   input: {
-    height: 30,
+    paddingBottom: -10,
+    // height: 30,
     borderBottomColor: '#1C5C2E',
     borderBottomWidth: 0.5,
     fontSize: 14,
