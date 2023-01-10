@@ -15,264 +15,173 @@ import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {shadow} from 'react-native-paper';
+import {LoginLogoSmall} from '../../../assests/svgs/LoginSvgs';
 
 const SignUp = ({route, navigation}) => {
   const [state, setState] = useState(true);
   const [state1, setState1] = useState(true);
   const {showVerifyScreen} = route.params;
   return (
-    <>
-      <SafeAreaView style={styles.imageContainer}>
-        <StatusBar animated={true} backgroundColor="#000" />
-        <ScrollView
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={{flexGrow: 1}}>
-          <View style={styles.screenHeader}>
-            <Header
-              iconName="arrowleft"
-              header2
-              OnPress={() => navigation.replace('Story1')}
-            />
-          </View>
-          <View style={styles.screenBody}>
-            <View>
+    <SafeAreaView style={styles.main}>
+      <StatusBar animated={true} backgroundColor="#000" />
+      <View style={styles.screenHeader}>
+        <Header
+          iconName="arrowleft"
+          header2
+          OnPress={() => navigation.navigate('loginoption')}
+        />
+      </View>
+      <View style={styles.screenBody}>
+        {/* <View style={styles.logo}><LoginLogo /></View> */}
+        <Text style={[styles.text, {fontSize: 25, color: '#1C5C2E'}]}>
+          You're so very welcome,{'\n'} Erin
+        </Text>
+        <Text
+          style={[
+            styles.text,
+            {
+              color: '#1C5C2E',
+              fontFamily: 'BrandonGrotesque-Regular',
+              marginBottom: 15,
+            },
+          ]}>
+          Let's Get You Setup With An Account
+        </Text>
+        <LoginLogoSmall />
+        <Text style={[styles.text, {marginTop: 25}]}>Sign Up With Email</Text>
+        <View style={{marginTop: 40}}>
+          <TextInput placeholder="Email Address" style={styles.input} />
+          <TextInput
+            placeholder="Password"
+            style={[styles.input, {marginTop: 60}]}
+          />
+        </View>
+      </View>
+      <View
+        style={{
+          flex: 1,
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          paddingTop: 25,
+        }}>
+        <Pinkbtn
+          shadow={'#CD258D'}
+          onPress={() =>
+            showVerifyScreen
+              ? navigation.navigate('verify')
+              : navigation.navigate('registerd', {
+                  registerd1: () => navigation.navigate('signup'),
+                })
+          }
+          width={'70%'}
+          btntxt="Continue"
+        />
+        <View>
+          <Text style={styles.bottomLine}>
+            Already have an account?{' '}
+            <TouchableOpacity
+              style={{marginTop: -2.5}}
+              onPress={() => {
+                navigation.navigate('loginoption', {
+                  showVerifyScreen: false,
+                });
+              }}>
               <Text
                 style={[
-                  styles.headtext,
-                  {fontFamily: 'BrandonGrotesque-Bold'},
-                ]}>
-                You're so very welcome, {'\n'}
-                Erin
-              </Text>
-              <Text
-                style={{
-                  // marginVertical: 10,
-                  color: '#1C5C2E',
-                  fontSize: 18,
-                  fontFamily: 'BrandonGrotesque-Regular',
-                }}>
-                Let's Get You Setup With An Account
-              </Text>
-            </View>
-            <View style={styles.logo}>
-              <View style={{width: 64, height: 65}}>
-                <Image
-                  source={Images.Logos.logo1}
-                  resizeMode="contain"
-                  style={{width: '100%'}}
-                />
-              </View>
-            </View>
-            <View style={styles.inputContainer}>
-              <View style={{marginTop: 50}}>
-                <Text
-                  style={{
+                  styles.bottomLine,
+                  {
                     fontSize: 18,
-                    fontFamily: 'BrandonGrotesque-Medium',
-                    color: '#aaa',
-                  }}>
-                  Sign Up With Email
-                </Text>
-              </View>
-              <View style={{marginTop: 50}}>
-                <View style={{}}>
-                  <TouchableOpacity
-                    onPress={() => setState(!state)}
-                    style={{borderBottomWidth: 1, borderColor: '#75997E'}}>
-                    {state ? (
-                      <View>
-                        <Text
-                          style={{
-                            color: '#1C5C2E',
-                            fontSize: 14,
-                            // fontWeight: '400',
-                            // marginVertical: 15,
-                            // fontFamily: 'BrandonGrotesque-Regular',
-                          }}>
-                          davidmichael.198@gmail.com
-                        </Text>
-                      </View>
-                    ) : (
-                      <View style={{}}>
-                        <Text
-                          style={{
-                            color: '#1C5C2E',
-                            fontSize: 14,
-
-                            // fontWeight: '400',
-                            // marginVertical: 15,
-                            // fontFamily: 'BrandonGrotesque-Regular',
-                          }}>
-                          Email Adddress
-                        </Text>
-                      </View>
-                    )}
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    onPress={() => setState1(!state1)}
-                    style={{
-                      borderBottomWidth: 1,
-                      borderColor: '#75997E',
-                      marginTop: 80,
-                    }}>
-                    {state1 ? (
-                      <View>
-                        <Text
-                          style={{
-                            color: '#1C5C2E',
-                            opacity: 0.65,
-                            fontSize: 14,
-                            // fontWeight: '400',
-                            // marginVertical: 15,
-                            // fontFamily: 'BrandonGrotesque-Regular',
-                          }}>
-                          Password
-                        </Text>
-                      </View>
-                    ) : (
-                      <View style={{}}>
-                        <Text
-                          style={{
-                            color: '#1C5C2E',
-                            fontSize: 14,
-                            // fontWeight: '400',
-                            // marginVertical: 15,
-                            // fontFamily: 'BrandonGrotesque-Regular',
-                          }}>
-                          **********
-                        </Text>
-                      </View>
-                    )}
-                  </TouchableOpacity>
-                </View>
-
-                <View style={{marginVertical: 50}}>
-                  <Pinkbtn
-                    shadow={'#CD258D'}
-                    onPress={() =>
-                      showVerifyScreen
-                        ? navigation.navigate('verify')
-                        : navigation.navigate('registerd', {
-                            registerd1: () => navigation.navigate('signup'),
-                          })
-                    }
-                    width={'60%'}
-                    btntxt="Continue"
-                  />
-                </View>
-                <View
-                  style={{justifyContent: 'flex-end', alignItems: 'flex-end'}}>
-                  <TouchableOpacity
-                    style={{
-                      flexDirection: 'row',
-                      alignSelf: 'center',
-                      // marginVertical: 20,
-                    }}
-                    onPress={() => {
-                      navigation.navigate('loginoption');
-                    }}>
-                    <Text
-                      style={{
-                        color: '#1C5C2E',
-                        fontSize: 18,
-                        textAlign: 'center',
-                        fontFamily: 'BrandonGrotesque-Medium',
-                      }}>
-                      Already have an account?{' '}
-                      <Text
-                        style={{
-                          fontWeight: 'bold',
-                          textDecorationLine: 'underline',
-                        }}>
-                        Login
-                      </Text>
-                    </Text>
-                  </TouchableOpacity>
-
-                  <TouchableOpacity
-                    onPress={() => {
-                      navigation.replace('Story1', {
-                        param: {istrue: true},
-                      });
-                    }}
-                    style={{
-                      flexDirection: 'row',
-                      alignSelf: 'center',
-                      // marginVertical: 20,
-                    }}>
-                    <View style={styles.blue}>
-                      <Icon name="play" color={'#fff'} size={12} />
-                    </View>
-                    <Text
-                      style={{
-                        marginTop: 19,
-                        color: '#1492E6',
-                        fontSize: 18,
-                        textAlign: 'center',
-                        fontFamily: 'BrandonGrotesque-Regular',
-                      }}>
-                      Want to See How Works?
-                    </Text>
-                  </TouchableOpacity>
-                </View>
-              </View>
+                    textDecorationLine: 'underline',
+                    fontFamily: 'BrandonGrotesque-Bold',
+                  },
+                ]}>
+                Login
+              </Text>
+            </TouchableOpacity>
+          </Text>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.replace('Story1', {
+                param: {istrue: true},
+              });
+            }}
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              alignSelf: 'center',
+              marginTop: 20,
+            }}>
+            <View style={styles.blue}>
+              <Icon name="play" color={'#fff'} size={8} />
             </View>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+            <Text
+              style={{
+                marginLeft: 10,
+                color: '#1492E6',
+                fontSize: 16,
+                textAlign: 'center',
+                fontFamily: 'BrandonGrotesque-Regular',
+              }}>
+              Want to See How Works?
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  imageContainer: {
+  main: {
     flex: 1,
-    justifyContent: 'center',
     backgroundColor: '#ffff',
   },
   screenHeader: {
     width: '90%',
-    // height: 150,
-    marginTop: 20,
+    marginTop: 10,
     alignSelf: 'center',
     justifyContent: 'center',
     alignItems: 'center',
   },
   screenBody: {
-    width: '90%',
+    width: '85%',
+    // flex: 1,
+    // backgroundColor: 'purple',
     alignSelf: 'center',
   },
   logo: {
-    width: '100%',
-    // alignItems: 'center',
-    // justifyContent: 'center',
+    marginTop: 50,
   },
-  inputContainer: {
-    width: '100%',
-    // height: 300,
-    // paddingTop: 40,
-    // justifyContent: 'center',
-    // alignItems: 'center',
-  },
-
-  headtext: {
-    // marginTop: 17,
+  input: {
+    height: 30,
+    borderBottomColor: '#1C5C2E',
+    borderBottomWidth: 0.5,
+    fontSize: 14,
+    fontFamily: 'BrandonGrotesque-Medium',
     color: '#1C5C2E',
-    fontSize: 25,
-
-    fontFamily: 'BrandonGrotesque-Regular',
+  },
+  bottomLine: {
+    textAlign: 'center',
+    color: '#1C5C2E',
+    fontSize: 18,
+    fontFamily: 'BrandonGrotesque-Medium',
+  },
+  text: {
+    fontSize: 18,
+    fontFamily: 'BrandonGrotesque-Medium',
+    marginTop: 10,
+    color: '#aaa',
+    textAlign: 'left',
   },
   blue: {
-    marginVertical: 10,
-    marginTop: 22,
-    marginRight: 10,
-    width: 20,
-    height: 20,
-    borderRadius: 15,
+    width: 18,
+    height: 18,
+    borderRadius: 10,
     backgroundColor: '#1492E6',
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'center',
+    paddingLeft: 1.5,
   },
 });
-
 export default SignUp;

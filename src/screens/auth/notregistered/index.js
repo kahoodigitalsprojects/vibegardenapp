@@ -10,6 +10,7 @@ import {
   ScrollView,
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import {EnvelopeSvg} from '../../../assests/svgs/LoginSvgs';
 import {Greenbtn, Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 const NotRegisterd = props => {
@@ -25,16 +26,10 @@ const NotRegisterd = props => {
               header2
               OnPress={() => props.navigation.goBack('')}
             />
-
             <View style={{width: '100%', alignItems: 'center'}}>
-              <View style={{width: 140, height: 140, marginTop: 50}}>
-                <Image
-                  source={Images.Icons.envelop}
-                  style={{width: '100%', height: '100%'}}
-                />
-              </View>
+              <EnvelopeSvg />
             </View>
-            <View style={{width: '100%', marginTop: 20}}>
+            <View style={{width: '100%', marginTop: -25}}>
               <Text style={styles.txt1}>
                 That Email Is Not Registered , Please Try Creating An Account
               </Text>
@@ -75,8 +70,7 @@ const styles = StyleSheet.create({
   txt1: {
     color: '#000',
     textAlign: 'left',
-    fontSize: 15,
-    fontWeight: '400',
+    fontSize: 17,
     fontFamily: 'BrandonGrotesque-Medium',
   },
 });

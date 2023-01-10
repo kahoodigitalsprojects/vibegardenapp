@@ -7,6 +7,7 @@ const Pinkbtn = ({btntxt, width, onPress, onpres2, onpres3, shadow}) => {
     <TouchableOpacity
       onPress={onPress}
       style={{
+        width: width,
         shadowColor: shadow,
         shadowOffset: {
           width: 0,

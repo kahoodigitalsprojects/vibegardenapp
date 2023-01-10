@@ -8,14 +8,19 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import {Overlay} from 'react-native-elements';
-import Searcbart1 from '../searchbar1';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import Searcbar from '../searchbar';
 import Images from '../../constants';
-import Search2 from '../../screens/Homes/search2';
+import SearchComponent from '../SearchComponent';
+import {useBackButton} from '../../hooks/BackHandler';
 const SearchModal = ({visible, setVisible, navigation}) => {
   const [isTyping, setIsTyping] = useState(false);
-  const [textinputText, setTextInputText] = useState(false);
-
+  const [textInputText, setTextInputText] = useState('');
+  //BackHandler
+  const onBackPress = () => {
+    setVisible(false);
+    return true;
+  };
+  useBackButton(navigation, onBackPress);
   return (
     <Overlay
       overlayStyle={{
@@ -25,49 +30,57 @@ const SearchModal = ({visible, setVisible, navigation}) => {
         padding: 0,
       }}
       animationType="slide"
+      fullScreen
       visible={visible}
       onRequestClose={() => {
         setVisible(visible);
       }}>
       <View style={{marginVertical: Platform.OS === 'ios' ? 15 : 5}} />
-      {/* //  && textinputText.length < 1 ? */}
       {isTyping ? (
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1}}>
-          <Searcbart1
+          <Searcbar
             setIsTyping={setIsTyping}
+            isTyping={isTyping}
+            text={textInputText}
+            setText={setTextInputText}
             onPressLeft={() => {
               setVisible(false);
               setIsTyping(false);
+              setTextInputText('');
             }}
             onPressRight={() => {
-              setVisible(false);
-              setIsTyping(false);
+              if (textInputText.length > 1) {
+                setTextInputText('');
+                setIsTyping(false);
+              } else {
+                setVisible(false);
+              }
             }}
           />
-          <Search2 navigation={navigation} />
+          <SearchComponent navigation={navigation} />
         </ScrollView>
       ) : (
         <>
-          <Searcbart1
+          <Searcbar
             setIsTyping={setIsTyping}
+            isTyping={isTyping}
+            text={textInputText}
+            setText={setTextInputText}
             onPressLeft={() => {
               setVisible(false);
               setIsTyping(false);
+              setTextInputText('');
             }}
-            onPressRight={
-              () => {
-                setVisible(false);
+            onPressRight={() => {
+              if (textInputText.length > 1) {
+                setTextInputText('');
                 setIsTyping(false);
+              } else {
+                setVisible(false);
               }
-              // if (textinputText.length > 1) {
-              //   setTextInputText('');
-              // } else {
-              //   setVisible(false);
-              //   setIsTyping(false);
-              // }
-            }
+            }}
           />
 
           <View style={styles.container}>

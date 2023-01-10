@@ -20,14 +20,18 @@ const Home = ({navigation, route}) => {
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     const backAction = () => {
-      Alert.alert('Hold on!', 'Are you sure you want to exit?', [
-        {
-          text: 'Cancel',
-          onPress: () => null,
-          style: 'cancel',
-        },
-        {text: 'YES', onPress: () => BackHandler.exitApp()},
-      ]);
+      if (visible) {
+        setVisible(false);
+      } else {
+        Alert.alert('Hold on!', 'Are you sure you want to exit?', [
+          {
+            text: 'Cancel',
+            onPress: () => null,
+            style: 'cancel',
+          },
+          {text: 'YES', onPress: () => BackHandler.exitApp()},
+        ]);
+      }
       return true;
     };
 
@@ -37,6 +41,7 @@ const Home = ({navigation, route}) => {
     );
 
     return () => backHandler.remove();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const Data = [

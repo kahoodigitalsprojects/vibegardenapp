@@ -26,13 +26,15 @@ const Modaldata = ({
   return (
     <>
       <Overlay
+        fullScreen
         overlayStyle={{
           height: '100%',
           width: '100%',
           paddingTop: Platform.OS === 'ios' ? 30 : 10,
         }}
         style={{}}
-        // animationType="slide" // transparent={false}
+        // animationType="slide"
+        // transparent={false}
         visible={Visible}
         onRequestClose={() => {
           // Alert.alert('Modal has been closed.');

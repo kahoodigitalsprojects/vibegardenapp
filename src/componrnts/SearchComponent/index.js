@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
 import {
   View,
@@ -8,25 +9,19 @@ import {
   FlatList,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {SeeAll, Userdetails} from '../../../componrnts';
-import All from '../../../componrnts/all';
-import MainBox from '../../../componrnts/mainbox';
-import Images from '../../../constants';
-import Modaldata from '../../../componrnts/modaldata';
+import {SeeAll, Userdetails} from '..';
+import All from '../all';
+import MainBox from '../mainbox';
+import Images from '../../constants';
+import Modaldata from '../modaldata';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {useBackButton} from '../../../hooks/BackHandler';
-const Search2 = ({route, navigation, otherParam}) => {
+const SearchComponent = ({route, navigation, otherParam}) => {
   const [activeTab, setActiveTab] = useState(0);
   const [topicName, setTopicName] = useState('Topics');
   const [typeName, setTypeName] = useState('Types');
   const [modalVisible, setModalVisible] = useState(false);
   const [modalType, setModalType] = useState('all');
-  //BackHandler
-  const onBackPress = () => {
-    navigation.goBack();
-    return true;
-  };
-  useBackButton(navigation, onBackPress);
+
   return (
     <SafeAreaView>
       <View
@@ -670,7 +665,7 @@ const styles = StyleSheet.create({
     // backgroundColor: 'yellow',
   },
 });
-export default Search2;
+export default SearchComponent;
 const databox = [
   {
     heart1: Images.Icons.heart1,
