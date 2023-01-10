@@ -63,7 +63,8 @@ const LoginOption = props => {
                 }}>
                 Let's Get You Setup With An Account
               </Text>
-              <View style={[styles.input, {marginTop: 5, paddingRight: 20}]}>
+              <View
+                style={[styles.input, {marginVertical: 80, paddingRight: 20}]}>
                 <Image
                   source={Images.Icons.bluee}
                   style={{width: 40, height: 40}}
@@ -82,31 +83,34 @@ const LoginOption = props => {
                   </Text>
                 </TouchableOpacity>
               </View>
-              <TouchableOpacity
-                style={{marginTop: 40, marginVertical: 20}}
-                onPress={() => {
-                  props.navigation.navigate('signup', {
-                    showVerifyScreen: false,
-                  });
+
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignSelf: 'center',
+                  // marginTop: 50,
                 }}>
-                <Text
-                  style={{
-                    marginTop: 25,
-                    color: '#1C5C2E',
-                    fontSize: 18,
-                    textAlign: 'center',
-                    fontFamily: 'BrandonGrotesque-Medium',
+                <Text style={styles.bottomLine}>Don't have an account? </Text>
+                <TouchableOpacity
+                  // style={{marginTop: -2.5}}
+                  onPress={() => {
+                    props.navigation.navigate('signup', {
+                      showVerifyScreen: false,
+                    });
                   }}>
-                  Don't have an account?{' '}
                   <Text
-                    style={{
-                      fontWeight: 'bold',
-                      textDecorationLine: 'underline',
-                    }}>
+                    style={[
+                      styles.bottomLine,
+                      {
+                        fontSize: 18,
+                        textDecorationLine: 'underline',
+                        fontFamily: 'BrandonGrotesque-Bold',
+                      },
+                    ]}>
                     Sign Up
                   </Text>
-                </Text>
-              </TouchableOpacity>
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
         </ScrollView>
@@ -138,6 +142,12 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     lineHeight: 42,
     fontFamily: 'BrandonGrotesque-Bold',
+  },
+  bottomLine: {
+    textAlign: 'center',
+    color: '#1C5C2E',
+    fontSize: 18,
+    fontFamily: 'BrandonGrotesque-Medium',
   },
 });
 

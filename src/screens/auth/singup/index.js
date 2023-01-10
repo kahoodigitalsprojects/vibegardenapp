@@ -80,29 +80,34 @@ const SignUp = ({route, navigation}) => {
           width={'70%'}
           btntxt="Continue"
         />
-        <View style={{flexDirection: 'row', alignSelf: 'center'}}>
-          <Text style={styles.bottomLine}>Already have an account? </Text>
-          <TouchableOpacity
-            style={{marginTop: -2.5}}
-            onPress={() => {
-              navigation.navigate('loginoption', {
-                showVerifyScreen: false,
-              });
-            }}>
-            <Text
-              style={[
-                styles.bottomLine,
-                {
-                  fontSize: 18,
-                  textDecorationLine: 'underline',
-                  fontFamily: 'BrandonGrotesque-Bold',
-                },
-              ]}>
-              Login
-            </Text>
-          </TouchableOpacity>
-        </View>
         <View>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignSelf: 'center',
+              // backgroundColor: 'red',
+            }}>
+            <Text style={styles.bottomLine}>Already have an account? </Text>
+            <TouchableOpacity
+              // style={{marginTop: -2.5}}
+              onPress={() => {
+                navigation.navigate('loginoption', {
+                  showVerifyScreen: false,
+                });
+              }}>
+              <Text
+                style={[
+                  styles.bottomLine,
+                  {
+                    fontSize: 18,
+                    textDecorationLine: 'underline',
+                    fontFamily: 'BrandonGrotesque-Bold',
+                  },
+                ]}>
+                Login
+              </Text>
+            </TouchableOpacity>
+          </View>
           <TouchableOpacity
             onPress={() => {
               navigation.replace('Story1', {
@@ -113,7 +118,7 @@ const SignUp = ({route, navigation}) => {
               flexDirection: 'row',
               alignItems: 'center',
               alignSelf: 'center',
-              marginTop: 10,
+              marginTop: 15,
             }}>
             <View style={styles.blue}>
               <Icon name="play" color={'#fff'} size={8} />

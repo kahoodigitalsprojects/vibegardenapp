@@ -41,43 +41,40 @@ const Registerd = ({route, navigation}) => {
         </View>
 
         <View style={{width: '90%', alignSelf: 'center'}}>
-          <TouchableOpacity
-            style={
-              {
-                // backgroundColor: 'pink',
-              }
-            }
-            onPress={() =>
-              navigation.navigate('login', {
-                registerd1: true,
-                itemId: 86,
-                otherParam: 'anything you want here',
-              })
-            }>
-            <View style={{width: '100%'}}>
-              <Text
-                style={{
-                  fontSize: 15,
-                  color: '#000',
-                  lineHeight: 30,
-                  fontFamily: 'BrandonGrotesque-Medium',
-                }}>
-                This Email Is Already Registered With Vibegarden, Please{' '}
+          <View style={{width: '100%'}}>
+            <Text
+              style={{
+                fontSize: 16,
+                color: '#000',
+                lineHeight: 30,
+                fontFamily: 'BrandonGrotesque-Medium',
+              }}>
+              This Email Is Already Registered With Vibegarden, Please{' '}
+              <TouchableOpacity
+                style={
+                  {
+                    // backgroundColor: 'pink',
+                  }
+                }
+                onPress={() =>
+                  navigation.navigate('login', {
+                    registerd1: true,
+                  })
+                }>
                 <Text
                   style={{
+                    fontSize: 16,
                     color: '#1C5C2E',
                     borderBottomWidth: 1,
                     textAlign: 'justify',
-                    // fontWeight: '600',
                     textDecorationLine: 'underline',
-                    letterSpacing: 1,
-                    fontFamily: 'BrandonGrotesque-Medium',
+                    fontFamily: 'BrandonGrotesque-Bold',
                   }}>
                   Log In.
                 </Text>
-              </Text>
-            </View>
-          </TouchableOpacity>
+              </TouchableOpacity>
+            </Text>
+          </View>
           <View style={{marginVertical: 20, alignSelf: 'center'}}>
             <Text
               style={{
@@ -89,34 +86,34 @@ const Registerd = ({route, navigation}) => {
               Or
             </Text>
           </View>
-          <TouchableOpacity
+          <Text
             style={{
-              // backgroundColor: 'pink',
-              flexDirection: 'row',
-            }}
-            onPress={() => navigation.navigate('forgerpsaaword')}>
-            <Text
-              style={{
-                fontSize: 15,
-                color: '#000',
-                lineHeight: 30,
-                fontFamily: 'BrandonGrotesque-Medium',
-              }}>
-              Or If You’ve Forgotten Your Password,{' '}
+              fontSize: 16,
+              color: '#000',
+              lineHeight: 30,
+              fontFamily: 'BrandonGrotesque-Medium',
+            }}>
+            Or If You’ve Forgotten Your Password,
+            <TouchableOpacity
+              style={
+                {
+                  // backgroundColor: 'pink',
+                }
+              }
+              onPress={() => navigation.navigate('forgerpsaaword')}>
               <Text
                 style={{
+                  fontSize: 16,
                   color: '#1C5C2E',
                   borderBottomWidth: 1,
                   textAlign: 'justify',
-
                   textDecorationLine: 'underline',
-                  letterSpacing: 1,
-                  fontFamily: 'BrandonGrotesque-Medium',
+                  fontFamily: 'BrandonGrotesque-Bold',
                 }}>
-                Click Here.
+                Click Here
               </Text>
-            </Text>
-          </TouchableOpacity>
+            </TouchableOpacity>
+          </Text>
         </View>
       </View>
     </SafeAreaView>

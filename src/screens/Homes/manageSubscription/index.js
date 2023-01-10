@@ -26,179 +26,167 @@ const ManageSubscription = ({navigation}) => {
   return (
     <SafeAreaView style={styles.main}>
       {/* <StatusBar animated={true} backgroundColor="#000" /> */}
-      <ScrollView
+      {/* <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
-        <View style={{marginVertical: 10, width: '90%', alignSelf: 'center'}}>
-          <Header
-            marginTop={-40}
-            iconName="left"
-            marginLeft={30}
-            color="#191919B8"
-            header2
-            OnPress={() => navigation.goBack()}
-            headertext="Manage Subscriptions"
-            fontSize={20}
-          />
-        </View>
-        <View style={{width: '95%', alignSelf: 'center'}}>
-          <View style={styles.mainContainer}>
-            <View style={styles.innerContainer}>
-              <Text style={styles.text1}>Subscriptions Info:</Text>
-              <View style={styles.line}></View>
-            </View>
-            <View
-              style={[
-                styles.innerContainer,
-                {justifyContent: 'space-between'},
-              ]}>
-              <Text style={[styles.text1, {fontSize: 14}]}>
-                Subscriptions Date:
-              </Text>
-              <Text style={[styles.text1, {fontSize: 14, color: '#1C5C2E'}]}>
-                7/8/2022
-              </Text>
-            </View>
-            <View
-              style={[
-                styles.innerContainer,
-                {justifyContent: 'space-between'},
-              ]}>
-              <Text style={[styles.text1, {fontSize: 14}]}>
-                Next Billing Date:
-              </Text>
-              <Text style={[styles.text1, {fontSize: 14, color: '#1C5C2E'}]}>
-                7/10/2022
-              </Text>
-            </View>
-            <View
-              style={[
-                styles.innerContainer,
-                {justifyContent: 'space-between'},
-              ]}>
-              <Text style={[styles.text1, {fontSize: 14, marginTop: 5}]}>
-                Package Selected:
-              </Text>
-              <TouchableOpacity
-                style={styles.box}
-                onPress={() => {
-                  navigation.navigate('Packges');
-                }}>
-                <Text style={{fontSize: 12, color: '#1C5C2E'}}>Monthly</Text>
-
-                <Icon
-                  name="sort-down"
-                  size={15}
-                  color="#1C5C2E"
-                  style={{marginLeft: 5, marginBottom: 5}}
-                />
-              </TouchableOpacity>
-            </View>
+        contentContainerStyle={{flexGrow: 1}}> */}
+      <View style={{marginVertical: 10, width: '90%', alignSelf: 'center'}}>
+        <Header
+          marginTop={-40}
+          iconName="left"
+          marginLeft={30}
+          color="#191919B8"
+          header2
+          OnPress={() => navigation.goBack()}
+          headertext="Manage Subscriptions"
+          fontSize={20}
+        />
+      </View>
+      <View
+        style={{
+          width: '95%',
+          flex: 1,
+          alignSelf: 'center',
+        }}>
+        <View style={styles.mainContainer}>
+          <View style={styles.innerContainer}>
+            <Text style={styles.text1}>Subscriptions Info:</Text>
+            <View style={styles.line}></View>
           </View>
-          <View style={styles.mainContainer}>
-            <View style={styles.innerContainer}>
-              <Text style={styles.text1}>Billing Info:</Text>
-              <View style={styles.line}></View>
-            </View>
-            <View
-              style={[
-                styles.innerContainer,
-                {justifyContent: 'space-between'},
-              ]}>
-              <Text style={[styles.text1, {fontSize: 14}]}>
-                Card No:{' '}
-                <Text
-                  style={[
-                    {
-                      marginLeft: 15,
-                      fontFamily: 'BrandonGrotesque-Regular',
-                    },
-                  ]}>
-                  48605678xxxxxx
-                </Text>
-              </Text>
-              <Image
-                source={Images.Icons.visa}
-                style={{width: 50, height: 15}}
-                resizeMode="cover"
+          <View
+            style={[styles.innerContainer, {justifyContent: 'space-between'}]}>
+            <Text style={[styles.text1, {fontSize: 14}]}>
+              Subscriptions Date:
+            </Text>
+            <Text style={[styles.text1, {fontSize: 14, color: '#1C5C2E'}]}>
+              7/8/2022
+            </Text>
+          </View>
+          <View
+            style={[styles.innerContainer, {justifyContent: 'space-between'}]}>
+            <Text style={[styles.text1, {fontSize: 14}]}>
+              Next Billing Date:
+            </Text>
+            <Text style={[styles.text1, {fontSize: 14, color: '#1C5C2E'}]}>
+              7/10/2022
+            </Text>
+          </View>
+          <View
+            style={[styles.innerContainer, {justifyContent: 'space-between'}]}>
+            <Text style={[styles.text1, {fontSize: 14, marginTop: 5}]}>
+              Package Selected:
+            </Text>
+            <TouchableOpacity
+              style={styles.box}
+              onPress={() => {
+                navigation.navigate('Packges');
+              }}>
+              <Text style={{fontSize: 12, color: '#1C5C2E'}}>Monthly</Text>
+
+              <Icon
+                name="sort-down"
+                size={15}
+                color="#1C5C2E"
+                style={{marginLeft: 5, marginBottom: 5}}
               />
-            </View>
-
-            <View
-              style={[
-                styles.innerContainer,
-                {justifyContent: 'space-between'},
-              ]}>
-              <Text style={[styles.text1, {fontSize: 14}]}>
-                Exp Date:{' '}
-                <Text
-                  style={[
-                    {
-                      marginLeft: 15,
-                      fontFamily: 'BrandonGrotesque-Regular',
-                    },
-                  ]}>
-                  5/2025
-                </Text>
-              </Text>
-            </View>
-            <View
-              style={[
-                styles.innerContainer,
-                {justifyContent: 'space-between'},
-              ]}>
-              <Text style={[styles.text1, {fontSize: 14}]}>
-                Sec Code:{' '}
-                <Text
-                  style={[
-                    {
-                      marginLeft: 15,
-                      fontFamily: 'BrandonGrotesque-Regular',
-                    },
-                  ]}>
-                  147
-                </Text>
-              </Text>
-            </View>
-            <View
-              style={[
-                styles.innerContainer,
-                {justifyContent: 'space-between'},
-              ]}>
-              <TouchableOpacity
-                onPress={() => {
-                  navigation.navigate('PaymentMethod', {
-                    headertext1: 'Manage Subscriptions',
-                    pressbtn: false,
-                  });
-                }}
-                style={{flexDirection: 'row'}}>
-                <Icon1
-                  name="check-square"
-                  size={15}
-                  color="#1C5C2E"
-                  style={{marginTop: 5}}
-                />
-                <Text
-                  style={{
-                    color: '#1C5C2E',
-                    fontSize: 12,
-                    marginLeft: 10,
-                    top: 4,
-                  }}>
-                  Edit Payment Methods
-                </Text>
-              </TouchableOpacity>
-            </View>
+            </TouchableOpacity>
           </View>
+        </View>
+        <View style={styles.mainContainer}>
+          <View style={styles.innerContainer}>
+            <Text style={styles.text1}>Billing Info:</Text>
+            <View style={styles.line}></View>
+          </View>
+          <View
+            style={[styles.innerContainer, {justifyContent: 'space-between'}]}>
+            <Text style={[styles.text1, {fontSize: 14}]}>
+              Card No:{' '}
+              <Text
+                style={[
+                  {
+                    marginLeft: 15,
+                    fontFamily: 'BrandonGrotesque-Regular',
+                  },
+                ]}>
+                48605678xxxxxx
+              </Text>
+            </Text>
+            <Image
+              source={Images.Icons.visa}
+              style={{width: 50, height: 15}}
+              resizeMode="cover"
+            />
+          </View>
+
+          <View
+            style={[styles.innerContainer, {justifyContent: 'space-between'}]}>
+            <Text style={[styles.text1, {fontSize: 14}]}>
+              Exp Date:{' '}
+              <Text
+                style={[
+                  {
+                    marginLeft: 15,
+                    fontFamily: 'BrandonGrotesque-Regular',
+                  },
+                ]}>
+                5/2025
+              </Text>
+            </Text>
+          </View>
+          <View
+            style={[styles.innerContainer, {justifyContent: 'space-between'}]}>
+            <Text style={[styles.text1, {fontSize: 14}]}>
+              Sec Code:{' '}
+              <Text
+                style={[
+                  {
+                    marginLeft: 15,
+                    fontFamily: 'BrandonGrotesque-Regular',
+                  },
+                ]}>
+                147
+              </Text>
+            </Text>
+          </View>
+          <View
+            style={[styles.innerContainer, {justifyContent: 'space-between'}]}>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate('PaymentMethod', {
+                  headertext1: 'Manage Subscriptions',
+                  pressbtn: false,
+                });
+              }}
+              style={{flexDirection: 'row'}}>
+              <Icon1
+                name="check-square"
+                size={15}
+                color="#1C5C2E"
+                style={{marginTop: 5}}
+              />
+              <Text
+                style={{
+                  color: '#1C5C2E',
+                  fontSize: 12,
+                  marginLeft: 10,
+                  top: 4,
+                }}>
+                Edit Payment Methods
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <View
+          style={{
+            alignSelf: 'center',
+            // marginTop: 150,
+            flex: 1,
+            width: '100%',
+            justifyContent: 'flex-end',
+            alignItems: 'center',
+          }}>
           <TouchableOpacity
             onPress={() => {
               navigation.navigate('CancelSubscription');
-            }}
-            style={{
-              alignSelf: 'center',
-              marginTop: 150,
-              justifyContent: 'flex-end',
             }}>
             <Text
               style={[
@@ -213,7 +201,8 @@ const ManageSubscription = ({navigation}) => {
             </Text>
           </TouchableOpacity>
         </View>
-      </ScrollView>
+      </View>
+      {/* </ScrollView> */}
     </SafeAreaView>
   );
 };

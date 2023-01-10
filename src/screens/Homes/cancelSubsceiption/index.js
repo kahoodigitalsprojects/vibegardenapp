@@ -110,6 +110,7 @@ const CancelSubscription = ({navigation}) => {
         <View
           style={{
             alignSelf: 'center',
+            alignItems: 'center',
             width: '90%',
             // backgroundColor: 'yellow',
           }}>
@@ -118,7 +119,7 @@ const CancelSubscription = ({navigation}) => {
             onPress={() => {
               navigation.navigate('Success');
             }}
-            width={'60%'}
+            width={'75%'}
             btntxt="Submit"
           />
         </View>
