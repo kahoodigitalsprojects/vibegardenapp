@@ -3,7 +3,7 @@ import {
   SafeAreaProvider,
   initialWindowMetrics,
 } from 'react-native-safe-area-context';
-import {Platform, Text} from 'react-native';
+import {Platform, Text, StatusBar} from 'react-native';
 import {MenuProvider} from 'react-native-popup-menu';
 import RootStack from './src/navigation/RootStack';
 import {enableScreens} from 'react-native-screens';
@@ -20,6 +20,7 @@ const App = props => {
 
   return (
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+      <StatusBar animated={true} backgroundColor="#000" />
       <MenuProvider>
         <RootStack />
       </MenuProvider>
