@@ -15,7 +15,7 @@ const ForgetPassword = props => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1, alignItems: 'center'}}>
-        <StatusBar animated={true} backgroundColor="#000" />
+        {/* <StatusBar animated={true} backgroundColor="#000" /> */}
 
         <View style={{width: '90%', marginTop: 10}}>
           <Header

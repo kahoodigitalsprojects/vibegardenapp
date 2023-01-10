@@ -24,7 +24,7 @@ const Spalsh = ({navigation}) => {
   };
   return (
     <>
-      <StatusBar animated={true} backgroundColor="#000" />
+      {/* <StatusBar animated={true} backgroundColor="#000" /> */}
       <View style={styles.main}>
         <Image source={Images.Logos.logo1} />
       </View>

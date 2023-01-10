@@ -33,7 +33,7 @@ const FressBlooms = ({navigation, route}) => {
 
   return (
     <SafeAreaView style={styles.main}>
-      <StatusBar animated={true} backgroundColor="#000" />
+      {/* <StatusBar animated={true} backgroundColor="#000" /> */}
 
       <ImageBackground
         source={Images.BackGround.backgroundHue}

@@ -51,7 +51,7 @@ const Journey = props => {
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{}}>
-          <StatusBar animated={true} backgroundColor="#000" />
+          {/* <StatusBar animated={true} backgroundColor="#000" /> */}
 
           <View
             style={{

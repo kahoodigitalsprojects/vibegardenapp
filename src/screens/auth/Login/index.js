@@ -40,7 +40,6 @@ const Login = ({route, navigation}) => {
   // console.log(colorScheme);
   return (
     <SafeAreaView style={styles.main}>
-      <StatusBar animated={true} backgroundColor="#000" />
       <View>
         <View style={styles.screenHeader}>
           <Header

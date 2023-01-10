@@ -14,7 +14,7 @@ const EditScreen = ({navigation, route}) => {
   useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView>
-      <StatusBar animated={true} backgroundColor="#000" />
+      {/* <StatusBar animated={true} backgroundColor="#000" /> */}
       <View
         style={{
           marginTop: 10,

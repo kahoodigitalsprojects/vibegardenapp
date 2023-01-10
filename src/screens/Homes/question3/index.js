@@ -21,7 +21,7 @@ const Question3 = ({navigation}) => {
   useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
-      <StatusBar animated={true} backgroundColor="#000" />
+      {/* <StatusBar animated={true} backgroundColor="#000" /> */}
       <ImageBackground
         source={Images.BackGround.backgroundHue}
         resizeMode="stretch"
@@ -56,7 +56,7 @@ const Question3 = ({navigation}) => {
               width1={'100%'}
               iconone
               name2="chevron-up"
-            name3="chevron-down"
+              name3="chevron-down"
               direction2="Description:"
               flowwerlist={true}
               Statement1="Statement:"

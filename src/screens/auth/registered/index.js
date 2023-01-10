@@ -15,7 +15,6 @@ import Images from '../../../constants';
 const Registerd = ({route, navigation}) => {
   return (
     <SafeAreaView style={styles.main}>
-      <StatusBar animated={true} backgroundColor="#000" />
       <View
         style={{
           width: '95%',
@@ -32,81 +31,67 @@ const Registerd = ({route, navigation}) => {
           <EnvelopeSvg />
         </View>
 
-        <View style={{width: '90%', alignSelf: 'center'}}>
-          <TouchableOpacity
-            style={
-              {
-                // backgroundColor: 'pink',
-              }
-            }
-            onPress={() =>
-              navigation.navigate('login', {
-                registerd1: true,
-                itemId: 86,
-                otherParam: 'anything you want here',
-              })
-            }>
-            <View style={{width: '100%'}}>
+        <View
+          style={{width: '100%', alignItems: 'center', alignSelf: 'center'}}>
+          <Text
+            style={{
+              fontSize: 18,
+              color: '#000',
+              fontFamily: 'BrandonGrotesque-Medium',
+            }}>
+            This Email Is Already Registered With Vibegarden, Please{' '}
+            <TouchableOpacity
+              style={{marginTop: -2.5}}
+              onPress={() =>
+                navigation.navigate('login', {
+                  registerd1: true,
+                  itemId: 86,
+                  otherParam: 'anything you want here',
+                })
+              }>
               <Text
                 style={{
-                  fontSize: 16,
-                  color: '#000',
+                  color: '#1C5C2E',
+                  textDecorationLine: 'underline',
+                  fontSize: 18,
                   fontFamily: 'BrandonGrotesque-Medium',
                 }}>
-                This Email Is Already Registered With Vibegarden, Please{' '}
-                <Text
-                  style={{
-                    color: '#1C5C2E',
-                    borderBottomWidth: 1,
-                    textAlign: 'justify',
-                    // fontWeight: '600',
-                    textDecorationLine: 'underline',
-                    letterSpacing: 1,
-                    fontFamily: 'BrandonGrotesque-Medium',
-                  }}>
-                  Log In.
-                </Text>
+                Log In.
               </Text>
-            </View>
-          </TouchableOpacity>
+            </TouchableOpacity>
+          </Text>
+
           <View style={{marginVertical: 20, alignSelf: 'center'}}>
             <Text
               style={{
-                fontSize: 16,
                 color: '#1C5C2E',
-                fontFamily: 'BrandonGrotesque-Bold',
+                fontFamily: 'BrandonGrotesque-Medium',
               }}>
               Or
             </Text>
           </View>
-          <TouchableOpacity
+
+          <Text
             style={{
-              // backgroundColor: 'pink',
-              flexDirection: 'row',
-            }}
-            onPress={() => navigation.navigate('forgerpsaaword')}>
-            <Text
-              style={{
-                fontSize: 16,
-                color: '#000',
-                lineHeight: 30,
-                fontFamily: 'BrandonGrotesque-Medium',
-              }}>
-              Or If You’ve Forgotten Your Password,{' '}
+              fontSize: 18,
+              color: '#000',
+              fontFamily: 'BrandonGrotesque-Medium',
+            }}>
+            Or If You’ve Forgotten Your Password,{' '}
+            <TouchableOpacity
+              style={{marginTop: -2.5}}
+              onPress={() => navigation.navigate('forgerpsaaword')}>
               <Text
                 style={{
                   color: '#1C5C2E',
-                  borderBottomWidth: 1,
-                  textAlign: 'justify',
-
                   textDecorationLine: 'underline',
-                  letterSpacing: 1,
+                  fontSize: 18,
                   fontFamily: 'BrandonGrotesque-Medium',
                 }}>
-                Click Here.
+                Click Here
               </Text>
-            </Text>
-          </TouchableOpacity>
+            </TouchableOpacity>
+          </Text>
         </View>
       </View>
     </SafeAreaView>

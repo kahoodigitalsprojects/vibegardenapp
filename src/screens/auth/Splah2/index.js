@@ -19,7 +19,7 @@ const Spalsh2 = ({navigation, route}) => {
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1}}>
-          <StatusBar animated={true} backgroundColor="#000" />
+          {/* <StatusBar animated={true} backgroundColor="#000" /> */}
 
           <View style={{}}>
             <View style={{alignSelf: 'center', marginTop: 100}}>

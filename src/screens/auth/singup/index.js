@@ -23,7 +23,6 @@ const SignUp = ({route, navigation}) => {
   const {showVerifyScreen} = route.params;
   return (
     <SafeAreaView style={styles.main}>
-      <StatusBar animated={true} backgroundColor="#000" />
       <View style={styles.screenHeader}>
         <Header
           iconName="arrowleft"
