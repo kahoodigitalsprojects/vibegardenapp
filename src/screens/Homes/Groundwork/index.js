@@ -56,7 +56,7 @@ const GroundWork = ({navigation}) => {
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1}}>
-          <StatusBar animated={true} backgroundColor="#000" />
+          {/* <StatusBar animated={true} backgroundColor="#000" /> */}
           <View
             style={{
               width: '90%',

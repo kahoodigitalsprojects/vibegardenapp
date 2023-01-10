@@ -38,7 +38,7 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        <StatusBar animated={true} backgroundColor="#000" />
+        {/* <StatusBar animated={true} backgroundColor="#000" /> */}
 
         <View style={{width: '100%', alignSelf: 'center'}}>
           <View style={{width: '90%', alignSelf: 'center'}}>

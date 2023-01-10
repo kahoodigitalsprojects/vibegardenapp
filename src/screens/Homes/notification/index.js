@@ -24,13 +24,13 @@ const Notification = props => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        <StatusBar
+        {/* <StatusBar
           animated={true}
           backgroundColor="#000"
           // barStyle={statusBarStyle}
           // showHideTransition={statusBarTransition}
           // hidden={hidden}
-        />
+        /> */}
         <View
           style={{
             marginVertical: 10,

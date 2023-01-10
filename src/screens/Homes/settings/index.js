@@ -36,7 +36,7 @@ const Settings = ({navigation}) => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        <StatusBar animated={true} backgroundColor="#000" />
+        {/* <StatusBar animated={true} backgroundColor="#000" /> */}
         <View style={{marginVertical: 10, width: '90%', alignSelf: 'center'}}>
           <Header2
             marginTop={-40}

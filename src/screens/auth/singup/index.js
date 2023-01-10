@@ -23,7 +23,7 @@ const SignUp = ({route, navigation}) => {
   return (
     <>
       <SafeAreaView style={styles.imageContainer}>
-        <StatusBar animated={true} backgroundColor="#000" />
+        {/* <StatusBar animated={true} backgroundColor="#000" /> */}
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1}}>

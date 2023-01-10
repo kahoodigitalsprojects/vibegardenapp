@@ -14,7 +14,7 @@ import Images from '../../../constants';
 const Registerd = ({route, navigation}) => {
   return (
     <SafeAreaView style={styles.main}>
-      <StatusBar animated={true} backgroundColor="#000" />
+      {/* <StatusBar animated={true} backgroundColor="#000" /> */}
       <View
         style={{
           width: '95%',

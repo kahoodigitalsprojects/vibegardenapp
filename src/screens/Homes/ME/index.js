@@ -92,7 +92,7 @@ const Me = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.main}>
-      <StatusBar animated={true} backgroundColor="#000" />
+      {/* <StatusBar animated={true} backgroundColor="#000" /> */}
       <ImageBackground
         source={Images.BackGround.backgroundHue}
         resizeMode="stretch"

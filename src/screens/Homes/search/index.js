@@ -24,7 +24,7 @@ const Search = ({navigation}) => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        <StatusBar animated={true} backgroundColor="#000" />
+        {/* <StatusBar animated={true} backgroundColor="#000" /> */}
         <Searcbart1
           onpress1={() => {
             navigation.navigate('Search2');

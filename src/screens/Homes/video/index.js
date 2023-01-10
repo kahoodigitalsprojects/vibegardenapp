@@ -95,7 +95,7 @@ const Video = ({route, navigation}) => {
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1}}>
-          <StatusBar animated={true} backgroundColor="#000" />
+          {/* <StatusBar animated={true} backgroundColor="#000" /> */}
 
           <View
             style={{
@@ -241,7 +241,7 @@ const Video = ({route, navigation}) => {
                     /> */}
 
                     <QComponents
-                      width1={ '100%'}
+                      width1={'100%'}
                       flowwerlist11={true}
                       marginTop1={-90}
                       text1={'Not Really'}
@@ -270,7 +270,12 @@ const Video = ({route, navigation}) => {
                 <View style={styles.line}></View>
               </View>
             </View>
-            <View style={{width: '95%', alignSelf: 'center'}}>
+            <View
+              style={{
+                width: '95%',
+                alignSelf: 'center',
+                backgroundColor: 'yellow',
+              }}>
               <FlatList
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={{height: 160}}

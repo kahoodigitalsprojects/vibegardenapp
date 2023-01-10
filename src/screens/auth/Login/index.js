@@ -44,7 +44,6 @@ const Login = ({route, navigation}) => {
   // console.log(colorScheme);
   return (
     <SafeAreaView style={styles.imageContainer}>
-      <StatusBar animated={true} backgroundColor="#000" />
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
