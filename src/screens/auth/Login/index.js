@@ -62,94 +62,99 @@ const Login = ({route, navigation}) => {
             Login With Email
           </Text>
           <View style={{marginTop: 40}}>
-            <TextInput
-              placeholder="Email Address"
-              placeholderTextColor="#aaa"
-              style={styles.input}
-            />
-            <TextInput
-              placeholder="Password"
-              placeholderTextColor="#aaa"
-              style={[styles.input, {marginTop: 60}]}
-            />
-            <View
-              style={{
-                width: '100%',
-                flexDirection: 'row',
-                justifyContent: 'flex-end',
-              }}>
-              <TouchableOpacity
-                style={{marginTop: 10}}
-                onPress={() => navigation.navigate('forgerpsaaword')}>
-                <Text
-                  style={{
-                    textAlign: 'right',
-                    color: '#1C5C2E',
-                    fontSize: 14,
-                    fontFamily: 'BrandonGrotesque-Bold',
-                  }}>
-                  Forget Password?
-                </Text>
-              </TouchableOpacity>
-            </View>
-            <View
-              style={{
-                width: '100%',
-                // flexDirection: 'row',
-                alignItems: 'center',
-                paddingTop: 25,
-              }}>
-              <Pinkbtn
-                shadow={'#CD258D'}
-                onPress={() => {
-                  {
-                    registerd1
-                      ? navigation.reset({
-                          index: 0,
-                          routes: [
-                            {
-                              name: 'Tabs',
-                            },
-                          ],
-                        })
-                      : navigation.navigate('NotRegisterd');
-                  }
-                }}
-                width={'75%'}
-                btntxt="Continue"
+            <View style={{marginVertical: 15}}>
+              <TextInput
+                placeholder="Email Address"
+                placeholderTextColor="#aaa"
+                style={styles.input}
               />
+            </View>
+            <View style={{marginVertical: 15}}>
+              <TextInput
+                placeholder="Password"
+                placeholderTextColor="#aaa"
+                style={styles.input}
+              />
+            </View>
+          </View>
+          <View
+            style={{
+              marginTop: 20,
+              width: '100%',
+              flexDirection: 'row',
+              justifyContent: 'flex-end',
+            }}>
+            <TouchableOpacity
+              style={{marginTop: 10}}
+              onPress={() => navigation.navigate('forgerpsaaword')}>
               <Text
                 style={{
-                  textAlign: 'center',
-                  marginVertical: 20,
+                  textAlign: 'right',
                   color: '#1C5C2E',
-                  fontSize: 18,
-                  fontFamily: 'BrandonGrotesque-Regular',
+                  fontSize: 14,
+                  fontFamily: 'BrandonGrotesque-Bold',
                 }}>
-                Or
+                Forget Password?
               </Text>
-              <Text style={styles.bottomLine}>
-                Don't have an account?{' '}
-                <TouchableOpacity
-                  style={{marginTop: -2.5}}
-                  onPress={() => {
-                    navigation.navigate('signup', {
-                      showVerifyScreen: false,
-                    });
-                  }}>
-                  <Text
-                    style={[
-                      styles.bottomLine,
-                      {
-                        fontSize: 18,
-                        textDecorationLine: 'underline',
-                        fontFamily: 'BrandonGrotesque-Bold',
-                      },
-                    ]}>
-                    Sign Up
-                  </Text>
-                </TouchableOpacity>
-              </Text>
+            </TouchableOpacity>
+          </View>
+          <View
+            style={{
+              width: '100%',
+              // flexDirection: 'row',
+              alignItems: 'center',
+              paddingTop: 25,
+            }}>
+            <Pinkbtn
+              shadow={'#CD258D'}
+              onPress={() => {
+                {
+                  registerd1
+                    ? navigation.reset({
+                        index: 0,
+                        routes: [
+                          {
+                            name: 'Tabs',
+                          },
+                        ],
+                      })
+                    : navigation.navigate('NotRegisterd');
+                }
+              }}
+              width={'75%'}
+              btntxt="Continue"
+            />
+            <Text
+              style={{
+                textAlign: 'center',
+                marginVertical: 20,
+                color: '#1C5C2E',
+                fontSize: 18,
+                fontFamily: 'BrandonGrotesque-Regular',
+              }}>
+              Or
+            </Text>
+            <View style={{flexDirection: 'row', alignSelf: 'center'}}>
+              <Text style={styles.bottomLine}>Don't have an account? </Text>
+              <TouchableOpacity
+                // style={{marginTop: Platform.OS === 'ios' ? -2.5 : 5}}
+                onPress={() => {
+                  navigation.navigate('signup', {
+                    showVerifyScreen: false,
+                  });
+                }}>
+                <Text
+                  style={[
+                    styles.bottomLine,
+                    {
+                      fontSize: 18,
+                      textDecorationLine: 'underline',
+                      fontFamily: 'BrandonGrotesque-Bold',
+                    },
+                  ]}>
+                  Sign Up
+                </Text>
+              </TouchableOpacity>
             </View>
           </View>
         </View>
