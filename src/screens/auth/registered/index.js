@@ -61,7 +61,11 @@ const Registerd = ({route, navigation}) => {
               <Text style={[styles.bottomLine, {color: '#000'}]}>Please</Text>
               <TouchableOpacity
                 // style={{marginTop: -2.5}}
-                onPress={() => navigation.navigate('forgerpsaaword')}>
+                onPress={() =>
+                  navigation.navigate('login', {
+                    registerd1: true,
+                  })
+                }>
                 <Text
                   style={[
                     styles.bottomLine,
