@@ -85,7 +85,6 @@ const SignUp = ({route, navigation}) => {
             style={{
               flexDirection: 'row',
               alignSelf: 'center',
-              // backgroundColor: 'red',
             }}>
             <Text style={styles.bottomLine}>Already have an account? </Text>
             <TouchableOpacity
@@ -118,7 +117,7 @@ const SignUp = ({route, navigation}) => {
               flexDirection: 'row',
               alignItems: 'center',
               alignSelf: 'center',
-              marginTop: 15,
+              marginVertical: 15,
             }}>
             <View style={styles.blue}>
               <Icon name="play" color={'#fff'} size={8} />

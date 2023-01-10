@@ -42,38 +42,40 @@ const Registerd = ({route, navigation}) => {
 
         <View style={{width: '90%', alignSelf: 'center'}}>
           <View style={{width: '100%'}}>
-            <Text
+            <View
               style={{
-                fontSize: 16,
-                color: '#000',
-                lineHeight: 30,
-                fontFamily: 'BrandonGrotesque-Medium',
+                flexDirection: 'row',
+                alignSelf: 'center',
+                // marginTop: 50,
               }}>
-              This Email Is Already Registered With Vibegarden, Please{' '}
+              <Text style={[styles.bottomLine, {color: '#000'}]}>
+                This Email Is Already Registered With Vibegarden,
+              </Text>
+            </View>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignSelf: 'center',
+                // marginTop: 50,
+              }}>
+              <Text style={[styles.bottomLine, {color: '#000'}]}>Please</Text>
               <TouchableOpacity
-                style={
-                  {
-                    // backgroundColor: 'pink',
-                  }
-                }
-                onPress={() =>
-                  navigation.navigate('login', {
-                    registerd1: true,
-                  })
-                }>
+                // style={{marginTop: -2.5}}
+                onPress={() => navigation.navigate('forgerpsaaword')}>
                 <Text
-                  style={{
-                    fontSize: 16,
-                    color: '#1C5C2E',
-                    borderBottomWidth: 1,
-                    textAlign: 'justify',
-                    textDecorationLine: 'underline',
-                    fontFamily: 'BrandonGrotesque-Bold',
-                  }}>
+                  style={[
+                    styles.bottomLine,
+                    {
+                      fontSize: 16,
+                      textDecorationLine: 'underline',
+                      fontFamily: 'BrandonGrotesque-Bold',
+                    },
+                  ]}>
+                  {' '}
                   Log In.
                 </Text>
               </TouchableOpacity>
-            </Text>
+            </View>
           </View>
           <View style={{marginVertical: 20, alignSelf: 'center'}}>
             <Text
@@ -86,34 +88,33 @@ const Registerd = ({route, navigation}) => {
               Or
             </Text>
           </View>
-          <Text
+
+          <View
             style={{
-              fontSize: 16,
-              color: '#000',
-              lineHeight: 30,
-              fontFamily: 'BrandonGrotesque-Medium',
+              flexDirection: 'row',
+              alignSelf: 'center',
+              // marginTop: 50,
             }}>
-            Or If You’ve Forgotten Your Password,
+            <Text style={[styles.bottomLine, {color: '#000'}]}>
+              Or If You’ve Forgotten Your Password,
+            </Text>
             <TouchableOpacity
-              style={
-                {
-                  // backgroundColor: 'pink',
-                }
-              }
+              // style={{marginTop: -2.5}}
               onPress={() => navigation.navigate('forgerpsaaword')}>
               <Text
-                style={{
-                  fontSize: 16,
-                  color: '#1C5C2E',
-                  borderBottomWidth: 1,
-                  textAlign: 'justify',
-                  textDecorationLine: 'underline',
-                  fontFamily: 'BrandonGrotesque-Bold',
-                }}>
+                style={[
+                  styles.bottomLine,
+                  {
+                    fontSize: 16,
+                    textDecorationLine: 'underline',
+                    fontFamily: 'BrandonGrotesque-Bold',
+                  },
+                ]}>
+                {' '}
                 Click Here
               </Text>
             </TouchableOpacity>
-          </Text>
+          </View>
         </View>
       </View>
     </SafeAreaView>
@@ -135,5 +136,11 @@ const styles = StyleSheet.create({
     color: '#000',
     textAlign: 'left',
     fontSize: 16,
+  },
+  bottomLine: {
+    textAlign: 'center',
+    color: '#1C5C2E',
+    fontSize: 16,
+    fontFamily: 'BrandonGrotesque-Medium',
   },
 });
