@@ -124,7 +124,13 @@ const Percentage = ({
         </View>
       </View>
       {btn && (
-        <View style={{marginVertical: 10}}>
+        <View
+          style={{
+            marginVertical: 10,
+            width: '100%',
+            alignItems: 'center',
+            alignSelf: 'center',
+          }}>
           <Pinkbtn
             shadow={'#030303'}
             onPress={onPress}

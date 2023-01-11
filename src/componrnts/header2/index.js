@@ -53,7 +53,7 @@ const Header2 = props => {
   } = props;
   const [state, setState] = useState(false);
   return (
-    <View style={{width: '100%'}}>
+    <View style={{width: '100%', paddingTop: 10}}>
       {props.header2 && (
         <View style={styles.header}>
           <TouchableOpacity

@@ -48,13 +48,13 @@ const Story1 = ({navigation}) => {
   };
   return (
     <View style={styles.container}>
-      <StatusBar
+      {/* <StatusBar
         animated={true}
         backgroundColor="#fff"
         // backgroundColor="transparent"
         color="#000"
         translucent={true}
-      />
+      /> */}
       <FlatList
         ref={ref}
         onMomentumScrollEnd={updateCurrentSlideIndex}

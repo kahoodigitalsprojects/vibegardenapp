@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
   },
   screenHeader: {
     width: '90%',
-    marginTop: 10,
+    marginTop: 25,
     alignSelf: 'center',
     justifyContent: 'center',
     alignItems: 'center',

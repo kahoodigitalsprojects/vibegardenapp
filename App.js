@@ -20,8 +20,13 @@ const App = props => {
 
   return (
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-      <StatusBar animated={true} backgroundColor="#000" />
       <MenuProvider>
+        <StatusBar
+          barStyle="-content"
+          hidden={false}
+          backgroundColor="#000"
+          translucent={true}
+        />
         <RootStack />
       </MenuProvider>
     </SafeAreaProvider>

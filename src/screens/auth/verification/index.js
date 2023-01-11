@@ -66,11 +66,17 @@ const Verify = props => {
                     Resend.
                   </Text>
                 </View>
-                <View style={{marginTop: 20}}>
+                <View
+                  style={{
+                    marginTop: 20,
+                    width: '100%',
+                    alignItems: 'center',
+                    alignSelf: 'center',
+                  }}>
                   <Pinkbtn
                     shadow={'#CD258D'}
                     onPress={() => props.navigation.navigate('journey')}
-                    width={'60%'}
+                    width={'70%'}
                     btntxt="Continue"
                   />
                 </View>

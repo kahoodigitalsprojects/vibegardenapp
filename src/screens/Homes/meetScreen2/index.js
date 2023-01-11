@@ -52,7 +52,13 @@ const MeetScreen2 = ({route, navigation}) => {
                   {newtext}
                 </Text>
               </View>
-              <View style={{marginVertical: 20}}>
+              <View
+                style={{
+                  marginVertical: 20,
+                  width: '100%',
+                  alignItems: 'center',
+                  alignSelf: 'center',
+                }}>
                 <Pinkbtn
                   shadow={'#030303'}
                   onPress={() =>

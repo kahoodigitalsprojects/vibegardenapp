@@ -34,7 +34,13 @@ const Spalsh2 = ({navigation, route}) => {
               <Text style={styles.text1}>
                 A Few fun question help us personal your experience here
               </Text>
-              <View style={{marginTop: 10, justifyContent: 'flex-end'}}>
+              <View
+                style={{
+                  marginTop: 10,
+                  width: '100%',
+                  alignItems: 'center',
+                  alignSelf: 'center',
+                }}>
                 <Pinkbtn
                   shadow="#00000019"
                   onPress={() =>
@@ -44,7 +50,7 @@ const Spalsh2 = ({navigation, route}) => {
                       otherParam: 'anything you want here',
                     })
                   }
-                  width={'60%'}
+                  width={'70%'}
                   btntxt="Let's Roll"
                 />
               </View>

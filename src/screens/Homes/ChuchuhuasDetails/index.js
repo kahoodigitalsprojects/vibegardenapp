@@ -204,7 +204,7 @@ const ChuchuasDetails = ({route, navigation}) => {
                 icons={true}
                 Image1={Image1}
                 btntxt="Continue"
-                width={'50%'}
+                width={'70%'}
                 onPress={() =>
                   navigation.navigate('MeetScreen2', {
                     Image1: Image1,
