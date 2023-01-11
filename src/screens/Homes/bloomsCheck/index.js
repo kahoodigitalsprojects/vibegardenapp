@@ -18,6 +18,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import Images from '../../../constants';
 import All from '../../../componrnts/all';
 import {useBackButton} from '../../../hooks/BackHandler';
+
 const BloomsCheck = ({route, navigation, newtext, Heading}) => {
   // const {Image1, Image2, Image3, Image4, newtext, Image5, Image6, Heading} =
   //   route.params;
@@ -93,22 +94,22 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
                             let obj = {};
                             index === 0
                               ? (obj = {
-                                  Image1: Images.Logos.redleaf1,
+                                  Image1: <FirstSvg />,
                                   newtext: 'TONGLEN',
                                 })
                               : index === 1
                               ? (obj = {
-                                  Image1: Images.Logos.redleaf2,
+                                  Image1: <SecondSvg />,
                                   newtext: 'TONGLEN',
                                 })
                               : index === 2
                               ? (obj = {
-                                  Image1: Images.Logos.redleaf3,
+                                  Image1: <ThirdSvg />,
                                   newtext: 'TONGLEN',
                                 })
                               : index === 3
                               ? (obj = {
-                                  Image1: Images.Logos.redleaf4,
+                                  Image1: <FourthSvg />,
                                   newtext: 'TONGLEN',
                                 })
                               : null;

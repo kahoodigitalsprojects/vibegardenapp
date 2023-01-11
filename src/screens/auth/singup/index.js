@@ -59,6 +59,7 @@ const SignUp = ({route, navigation}) => {
             />
             <TextInput
               placeholder="Password"
+              placeholderTextColor="#aaa"
               style={[styles.input, {marginTop: 60}]}
             />
           </View>

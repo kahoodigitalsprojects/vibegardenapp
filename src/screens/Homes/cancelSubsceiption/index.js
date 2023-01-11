@@ -12,7 +12,6 @@ import {
 import {Header, Pinkbtn, QComponents} from '../../../componrnts';
 import Icon from 'react-native-vector-icons/Feather';
 import {useBackButton} from '../../../hooks/BackHandler';
-
 const CancelSubscription = ({navigation}) => {
   //BackHandler
   const onBackPress = () => {

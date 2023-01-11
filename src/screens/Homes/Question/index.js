@@ -48,11 +48,11 @@ const Question = ({navigation}) => {
             />
           </View>
 
-          <View style={{width: '90%', alignSelf: 'center'}}>
+          <View style={{width: '100%', alignSelf: 'center'}}>
             <QComponents
               flowwerlist11={true}
               iconone
-              width={'100%'}
+              width={'90%'}
               width1={'100%'}
               name2="chevron-up"
               name3="chevron-down"
@@ -77,6 +77,9 @@ const Question = ({navigation}) => {
               marginVertical={10}
             />
           </View>
+          {/* <View>
+            <QComponents flowwerlist11={true} />
+          </View> */}
           <View style={{marginTop: 20, alignItems: 'center'}}>
             <Pinkbtn
               shadow="rgba(0,0,0,0.5)"

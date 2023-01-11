@@ -14,6 +14,12 @@ import Icon2 from 'react-native-vector-icons/AntDesign';
 import Images from '../../constants';
 import Collapsible from 'react-native-collapsible';
 import LinearGradient from 'react-native-linear-gradient';
+import {
+  FirstSvg,
+  FourthSvg,
+  SecondSvg,
+  ThirdSvg,
+} from '../../assests/svgs/QuestionsSvg';
 
 const QComponents = ({
   text1,
@@ -23,6 +29,7 @@ const QComponents = ({
   width1,
   text5,
   marginVertical,
+  alignSelfitems,
   fontfamily,
   textflower,
   text6,
@@ -55,19 +62,19 @@ const QComponents = ({
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const data = [
-    {text1: text1, img1: Images.Imgs.R1},
+    {text1: text1, img1: <FirstSvg />},
 
     {
       text1: text2,
-      img1: Images.Imgs.R2,
+      img1: <SecondSvg />,
     },
     {
       text1: text3,
-      img1: Images.Imgs.R3,
+      img1: <ThirdSvg />,
     },
     {
       text1: text4,
-      img1: Images.Imgs.R4,
+      img1: <FourthSvg />,
     },
   ];
 
@@ -256,7 +263,7 @@ const QComponents = ({
               </Collapsible>
             )}
           </View>
-          <View style={{width: width, alignSelf: 'center'}}>
+          <View style={{width: width, alignSelf: alignSelfitems}}>
             <Text
               style={[
                 {
@@ -305,21 +312,28 @@ const QComponents = ({
       {flowwerlist11 && (
         <View
           style={{
-            width: width1,
-            alignSelf: 'center',
-            alignItems: 'center',
+            width: '100%',
+            // alignSelf: 'center',
+            // alignItems: 'center',
             marginTop: marginTop1,
-
             // justifyContent: 'space-around',
+            backgroundColor: 'pink',
+            paddingHorizontal: 10,
           }}>
           <FlatList
             horizontal={true}
             showsHorizontalScrollIndicator={false}
+            contentContainerStyle={{
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+            }}
             data={data}
+            // ListHeaderComponent={() => <View style={{marginLeft: 5}} />}
+            // listFooterComponent={() => <View style={{marginRight: 5}} />}
             renderItem={({item, index}) => {
               return (
                 <>
-                  <View style={{width: '24%'}}>
+                  <View style={{}}>
                     <TouchableOpacity
                       activeOpacity={1}
                       onPress={() => (index === true ? '' : setdata1(index))}
@@ -330,16 +344,13 @@ const QComponents = ({
                             colors={['#ED535E', '#CD258D']}
                             style={[
                               styles.circle,
-
                               {
                                 width: 80,
                                 height: 80,
-                                // width: 100,
-                                // height: 100,
-                                // borderRadius: 100,
-                                // justifyContent: 'center',
-                                // alignItems: 'center',
-                                // alignSelf: 'center',
+                                borderRadius: 100,
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                alignSelf: 'center',
                                 backgroundColor:
                                   data1 === index ? '#CD258D' : '',
                                 opacity: 0.9,
@@ -356,11 +367,12 @@ const QComponents = ({
                         ) : (
                           <View
                             style={[styles.circle, {width: 80, height: 80}]}>
-                            <Image
+                            {item.img1}
+                            {/* <Image
                               source={item.img1}
                               resizeMode="contain"
                               style={{width: '100%', height: '100%'}}
-                            />
+                            /> */}
                           </View>
                         )}
                       </>
@@ -438,7 +450,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   circle: {
-    margin: 7,
+    // margin: 7,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,

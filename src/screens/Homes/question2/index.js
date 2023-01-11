@@ -30,60 +30,58 @@ const Question2 = ({navigation}) => {
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1}}>
-          <View style={{}}>
-            <View style={{alignSelf: 'center', width: '90%', marginTop: 15}}>
-              <Header
-                // color="#000"
-                marginRight={-40}
-                marginTop={-40}
-                fontSize={25}
-                iconName="closesquareo"
-                header2
-                color="#1C5C2E"
-                headertext="Resonance Finder"
-                OnPress={() => navigation.goBack()}
-              />
-            </View>
-            <View style={{width: '90%', alignSelf: 'center'}}>
-              <QComponents
-                marginVertical={10}
-                flowwerlist11={true}
-                iconone
-                textforvideo="Resonance Finder Video Here"
-                name2="chevron-up"
-                name3="chevron-down"
-                video={true}
-                width={'100%'}
-                width1={'100%'}
-                direction2="Description:"
-                Statement1="Statement:"
-                flow="Flow Through"
-                margintopS={31}
-                textfontsize={31}
-                number={'1/20'}
-                text1={'That Bananas'}
-                text2="?"
-                fontSizetext2={34}
-                text3={'May be but how do we know'}
-                text4="OH,100%"
-                text5={
-                  'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.'
-                }
-                text6={'Plants are sentilents'}
-                fontfamily="BrandonGrotesque-Regular"
-              />
-            </View>
+          <View style={{alignSelf: 'center', width: '90%', marginTop: 15}}>
+            <Header
+              // color="#000"
+              marginRight={-40}
+              marginTop={-40}
+              fontSize={25}
+              iconName="closesquareo"
+              header2
+              color="#1C5C2E"
+              headertext="Resonance Finder"
+              OnPress={() => navigation.goBack()}
+            />
+          </View>
+          <View style={{width: '100%', alignSelf: 'center'}}>
+            <QComponents
+              marginVertical={10}
+              flowwerlist11={true}
+              iconone
+              textforvideo="Resonance Finder Video Here"
+              name2="chevron-up"
+              name3="chevron-down"
+              video={true}
+              width={'90%'}
+              width1={'100%'}
+              direction2="Description:"
+              Statement1="Statement:"
+              flow="Flow Through"
+              margintopS={31}
+              textfontsize={31}
+              number={'1/20'}
+              text1={'That Bananas'}
+              text2="?"
+              fontSizetext2={34}
+              text3={'May be but how do we know'}
+              text4="OH,100%"
+              text5={
+                'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.'
+              }
+              text6={'Plants are sentilents'}
+              fontfamily="BrandonGrotesque-Regular"
+            />
+          </View>
 
-            <View style={{marginTop: 20, width: '100%', alignItems: 'center'}}>
-              <Pinkbtn
-                shadow="rgba(0,0,0,0.5)"
-                onPress={() => {
-                  navigation.navigate('question');
-                }}
-                width={'70%'}
-                btntxt="Next"
-              />
-            </View>
+          <View style={{marginTop: 20, width: '100%', alignItems: 'center'}}>
+            <Pinkbtn
+              shadow="rgba(0,0,0,0.5)"
+              onPress={() => {
+                navigation.navigate('question');
+              }}
+              width={'70%'}
+              btntxt="Next"
+            />
           </View>
         </ScrollView>
       </ImageBackground>

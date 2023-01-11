@@ -51,14 +51,14 @@ const Question3 = ({navigation}) => {
                 OnPress={() => navigation.goBack()}
               />
             </View>
-            <View style={{width: '88%', alignSelf: 'center'}}>
+            <View style={{width: '100%', alignSelf: 'center'}}>
               <QComponents
                 iconone
                 name2="chevron-up"
                 name3="chevron-down"
                 direction2="Description:"
-                width={'100%'}
-                width1={'100%'}
+                width={'90%'}
+                // width1={'100%'}
                 flowwerlist11={true}
                 Statement1="Statement:"
                 flow="Flow Through"
