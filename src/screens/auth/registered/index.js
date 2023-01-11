@@ -9,6 +9,7 @@ import {
   StatusBar,
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import {EnvelopeSvg} from '../../../assests/svgs/LoginSvgs';
 import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 const Registerd = ({route, navigation}) => {
@@ -27,17 +28,8 @@ const Registerd = ({route, navigation}) => {
           header2
           OnPress={() => navigation.goBack()}
         />
-        <View
-          style={{
-            width: 120,
-            height: 120,
-            marginTop: 30,
-            alignSelf: 'center',
-          }}>
-          <Image
-            source={Images.Icons.envelop}
-            style={{width: '100%', height: '100%'}}
-          />
+        <View style={{width: '100%', alignItems: 'center'}}>
+          <EnvelopeSvg />
         </View>
         <View style={{width: '90%', alignSelf: 'center'}}>
           <View>
