@@ -60,7 +60,7 @@ const QComponents = ({
 }) => {
   const [data1, setdata1] = useState(0);
   const [isCollapsed, setIsCollapsed] = useState(true);
-
+  const numColumns = 4;
   const data = [
     {text1: text1, img1: <FirstSvg />},
 
@@ -312,88 +312,75 @@ const QComponents = ({
       {flowwerlist11 && (
         <View
           style={{
-            width: '100%',
-            // alignSelf: 'center',
-            // alignItems: 'center',
             marginTop: marginTop1,
-            // justifyContent: 'space-around',
-            backgroundColor: 'pink',
-            paddingHorizontal: 10,
+            flex: 1,
           }}>
           <FlatList
-            horizontal={true}
-            showsHorizontalScrollIndicator={false}
-            contentContainerStyle={{
-              flexDirection: 'row',
-              flexWrap: 'wrap',
-            }}
+            columnWrapperStyle={{justifyContent: 'space-between'}}
             data={data}
-            // ListHeaderComponent={() => <View style={{marginLeft: 5}} />}
-            // listFooterComponent={() => <View style={{marginRight: 5}} />}
-            renderItem={({item, index}) => {
-              return (
-                <>
-                  <View style={{}}>
-                    <TouchableOpacity
-                      activeOpacity={1}
-                      onPress={() => (index === true ? '' : setdata1(index))}
-                      style={{}}>
-                      <>
-                        {data1 === index ? (
-                          <LinearGradient
-                            colors={['#ED535E', '#CD258D']}
-                            style={[
-                              styles.circle,
-                              {
-                                width: 80,
-                                height: 80,
-                                borderRadius: 100,
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                alignSelf: 'center',
-                                backgroundColor:
-                                  data1 === index ? '#CD258D' : '',
-                                opacity: 0.9,
-                                // elevation: data1 === index ? 0 : 5,
-                              },
-                            ]}>
-                            <Icon
-                              name="check"
-                              size={39}
-                              color="#fff"
-                              style={{}}
-                            />
-                          </LinearGradient>
-                        ) : (
-                          <View
-                            style={[styles.circle, {width: 80, height: 80}]}>
-                            {item.img1}
-                            {/* <Image
-                              source={item.img1}
-                              resizeMode="contain"
-                              style={{width: '100%', height: '100%'}}
-                            /> */}
-                          </View>
-                        )}
-                      </>
-                    </TouchableOpacity>
-                    <View style={{width: 78, margin: 7}}>
-                      <Text
-                        style={{
-                          marginTop: 5,
-                          fontSize: 12,
-                          color: '#000',
-                          textAlign: 'center',
-                          fontFamily: 'BrandonGrotesque-Regular',
-                          color: '#1C5C2E',
-                        }}>
-                        {item.text1}
-                      </Text>
-                    </View>
-                  </View>
-                </>
-              );
+            style={{
+              // height: 100,
+              width: '90%',
+              alignSelf: 'center',
             }}
+            contentContainerStyle={{
+              flex: 1,
+              justifyContent: 'center',
+              padding: 5,
+            }}
+            showsVerticalScrollIndicator={false}
+            ItemSeparatorComponent={() => (
+              <View style={{marginHorizontal: 10}} />
+            )}
+            renderItem={({item, index}) => (
+              <View style={{alignItems: 'center'}}>
+                <TouchableOpacity
+                  activeOpacity={1}
+                  onPress={() => (index === true ? '' : setdata1(index))}
+                  style={{}}>
+                  <>
+                    {data1 === index ? (
+                      <LinearGradient
+                        colors={['#ED535E', '#CD258D']}
+                        style={[
+                          styles.circle,
+                          {
+                            width: 80,
+                            height: 80,
+                            borderRadius: 100,
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            alignSelf: 'center',
+                            backgroundColor: data1 === index ? '#CD258D' : '',
+                            opacity: 0.9,
+                            // elevation: data1 === index ? 0 : 5,
+                          },
+                        ]}>
+                        <Icon name="check" size={39} color="#fff" style={{}} />
+                      </LinearGradient>
+                    ) : (
+                      <View style={[styles.circle, {width: 80, height: 80}]}>
+                        {item.img1}
+                      </View>
+                    )}
+                  </>
+                </TouchableOpacity>
+                <Text
+                  style={{
+                    marginTop: 5,
+                    width: 70,
+                    fontSize: 12,
+                    textAlign: 'center',
+                    fontFamily: 'BrandonGrotesque-Regular',
+                    color: '#1C5C2E',
+                  }}>
+                  {item.text1}
+                </Text>
+              </View>
+            )}
+            //Setting the number of column
+            keyExtractor={(item, index) => index.toString()}
+            numColumns={numColumns}
           />
         </View>
       )}
@@ -461,7 +448,7 @@ const styles = StyleSheet.create({
     elevation: 10,
 
     borderRadius: 100,
-    backgroundColor: 'yellow',
+    // backgroundColor: 'yellow',
     backgroundColor: '#fff',
     justifyContent: 'center',
     alignItems: 'center',
