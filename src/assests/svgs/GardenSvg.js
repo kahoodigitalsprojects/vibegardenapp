@@ -1,5 +1,12 @@
 import React from 'react';
-import Svg, {G, Path} from 'react-native-svg';
+import Svg, {
+  G,
+  Path,
+  Defs,
+  LinearGradient,
+  Stop,
+  Circle,
+} from 'react-native-svg';
 function GardenLight() {
   return (
     <Svg
@@ -222,5 +229,59 @@ function GardenDark() {
     </Svg>
   );
 }
+function CardHeartSvg() {
+  return (
+    <Svg
+      xmlns="http://www.w3.org/2000/svg"
+      // xmlns:xlink="http://www.w3.org/1999/xlink"
+      width="33"
+      height="33"
+      viewBox="0 0 33 33">
+      <Defs>
+        <LinearGradient
+          id="linear-gradient"
+          x1="0.5"
+          x2="0.5"
+          y2="1"
+          gradientUnits="objectBoundingBox">
+          <Stop offset="0" stopColor="#ed535e" />
+          <Stop offset="1" stopColor="#cd258d" />
+        </LinearGradient>
+      </Defs>
+      <G
+        id="Group_38678"
+        data-name="Group 38678"
+        transform="translate(-7652 -1157)">
+        <Circle
+          id="Ellipse_3452"
+          data-name="Ellipse 3452"
+          cx="16.5"
+          cy="16.5"
+          r="16.5"
+          transform="translate(7652 1157)"
+          fill="#fff"
+        />
+        <G
+          id="Group_38136"
+          data-name="Group 38136"
+          transform="translate(7654 1159)">
+          <Path
+            id="Path_91"
+            data-name="Path 91"
+            d="M0,0H30V30H0Z"
+            fill="rgba(0,0,0,0)"
+          />
+          <Path
+            id="Path_92"
+            data-name="Path 92"
+            d="M23.628,15.718,14.253,25,4.878,15.718m0,0A6.25,6.25,0,1,1,14.253,7.51a6.25,6.25,0,1,1,9.375,8.215"
+            transform="translate(0.747 1.247)"
+            fill="url(#linear-gradient)"
+          />
+        </G>
+      </G>
+    </Svg>
+  );
+}
 
-export {GardenLight, GardenDark};
+export {GardenLight, GardenDark, CardHeartSvg};

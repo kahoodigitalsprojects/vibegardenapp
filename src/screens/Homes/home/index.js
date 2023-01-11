@@ -80,7 +80,7 @@ const Home = ({navigation, route}) => {
       textB: 'See All',
       img4: Images.BackGround.rectangle2,
       one: Images.Icons.circleplus,
-      heart1: Images.Icons.heart1,
+      heart1: true,
     },
     {
       id: 3,
@@ -94,7 +94,7 @@ const Home = ({navigation, route}) => {
       textB: 'See All',
       img4: Images.BackGround.rectangle2,
       one: Images.Icons.circleplus,
-      heart1: Images.Icons.heart1,
+      heart1: true,
     },
     {
       id: 4,

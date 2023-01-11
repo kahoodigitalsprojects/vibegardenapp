@@ -13,6 +13,7 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import LinearGradient from 'react-native-linear-gradient';
 import {SeeAll} from '../SeeAll';
 import {FlatList} from 'react-native';
+import {CardHeartSvg} from '../../assests/svgs/GardenSvg';
 
 const All = ({
   newtext1,
@@ -145,7 +146,7 @@ const All = ({
                       alignSelf: 'flex-end',
                       // backgroundColor: 'yellow',
                     }}>
-                    <Image
+                    {/* <Image
                       source={heart1}
                       resizeMode="contain"
                       style={{
@@ -153,7 +154,8 @@ const All = ({
                         height: '100%',
                         marginLeft: 2,
                       }}
-                    />
+                    /> */}
+                    {heart1 && <CardHeartSvg />}
                     <Icon
                       name={plus}
                       color={'#fefefe'}
@@ -235,7 +237,7 @@ const All = ({
                             style={{
                               color: '#fff',
                               fontWeight: 'bold',
-                        
+
                               fontSize: 10,
                               fontFamily: 'BrandonGrotesque-Regular',
                             }}>
