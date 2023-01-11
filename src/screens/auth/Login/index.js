@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   logo: {
-    // marginTop: 50,
+    marginTop: 50,
   },
   input: {
     paddingBottom: -10,
