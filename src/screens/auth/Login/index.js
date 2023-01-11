@@ -89,7 +89,7 @@ const Login = ({route, navigation}) => {
               <TextInput
                 placeholder="Password"
                 placeholderTextColor="#aaa"
-                style={styles.input}
+                style={[styles.input, {marginTop: 15}]}
               />
             </View>
           </View>
@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   logo: {
-    marginTop: 50,
+    marginTop: 25,
   },
   input: {
     paddingBottom: -10,
