@@ -134,7 +134,12 @@ const Login = ({route, navigation}) => {
               }}>
               Or
             </Text>
-            <View style={{flexDirection: 'row', alignSelf: 'center'}}>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignSelf: 'center',
+                marginVertical: 20,
+              }}>
               <Text style={styles.bottomLine}>Don't have an account? </Text>
               <TouchableOpacity
                 // style={{marginTop: Platform.OS === 'ios' ? -2.5 : 5}}

@@ -81,7 +81,14 @@ const Pushnotification = ({navigation}) => {
               </View>
               <Text style={styles.text2}>Set Different Time For Weekend:</Text>
             </View>
-            <View style={{marginTop: 20}}>
+            <View
+              style={{
+                marginTop: 10,
+                width: '100%',
+                alignSelf: 'center',
+                // backgroundColor: 'pink',
+                alignItems: 'center',
+              }}>
               <Pinkbtn
                 shadow={'#00000029'}
                 onPress={() => navigation.goBack()}
