@@ -158,10 +158,11 @@ const BigBlooms = ({route, navigation}) => {
             width: '100%',
             alignSelf: 'center',
             // backgroundColor: 'pink',
+            alignItems: 'center',
           }}>
           <Pinkbtn
             shadow={'#00000029'}
-            width={'60%'}
+            width={'70%'}
             btntxt="Submit"
             onPress={() => navigation.navigate('star')}
           />

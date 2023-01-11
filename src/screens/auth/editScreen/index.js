@@ -17,7 +17,7 @@ const EditScreen = ({navigation, route}) => {
       {/* <StatusBar animated={true} backgroundColor="#000" /> */}
       <View
         style={{
-          marginTop: 10,
+          marginTop: 20,
           width: '90%',
           alignSelf: 'center',
         }}>
@@ -31,7 +31,7 @@ const EditScreen = ({navigation, route}) => {
           color="#191919B8"
           OnPress={() => navigation.goBack()}
         />
-        <View style={{marginTop: 50}}>
+        <View style={{marginTop: 70}}>
           <View style={styles.center}>
             <Text style={[styles.Text]}>{otherParam1} </Text>
           </View>
@@ -41,12 +41,18 @@ const EditScreen = ({navigation, route}) => {
             </View>
           )}
         </View>
-        <View style={{marginVertical: 5, alignSelf: 'center', width: '90%'}}>
-          <View style={{marginTop: 20}}>
+        <View style={{marginVertical: 15, alignSelf: 'center', width: '90%'}}>
+          <View
+            style={{
+              width: '100%',
+              alignSelf: 'center',
+              // backgroundColor: 'pink',
+              alignItems: 'center',
+            }}>
             <Pinkbtn
               shadow={'#00000019'}
               onPress={() => navigation.goBack()}
-              width={'60%'}
+              width={'75%'}
               btntxt={otherParam}
             />
           </View>
@@ -62,7 +68,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   center: {
-    width: '90%',
+    width: '95%',
     alignSelf: 'center',
     marginTop: 10,
     marginVertical: 20,

@@ -100,8 +100,7 @@ const Resonance = ({navigation}) => {
                   onPress={() => {
                     navigation.navigate('question2');
                   }}
-                  btntxt="
-            Save"
+                  btntxt="Save"
                   width={'75%'}
                 />
               </View>

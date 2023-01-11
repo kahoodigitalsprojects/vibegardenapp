@@ -31,7 +31,7 @@ const Searcbar = ({setIsTyping, text, setText, onPressLeft, onPressRight}) => {
         <TouchableOpacity onPress={onPressRight} style={styles.iconBtn}>
           <Icon
             name={text.length > 1 ? 'close' : 'search1'}
-            size={25}
+            size={22}
             color="#1C5C2E"
           />
         </TouchableOpacity>
