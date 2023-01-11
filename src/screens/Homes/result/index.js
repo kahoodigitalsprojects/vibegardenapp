@@ -142,6 +142,7 @@ const Result = ({navigation, route}) => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
+    backgroundColor: '#fff',
     // backgroundColor: 'pink',
   },
   row: {

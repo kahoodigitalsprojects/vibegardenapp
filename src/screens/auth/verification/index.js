@@ -9,24 +9,33 @@ import {
   ScrollView,
   StatusBar,
 } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {EnvelopeSvg} from '../../../assests/svgs/LoginSvgs';
 import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
-const Verify = props => {
+const Verify = ({navigation}) => {
   return (
-    <>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
         <View style={styles.main}>
           <View style={{width: '90%', marginTop: 10}}>
-            <Header iconName="arrowleft" header2 />
+            <Header
+              iconName="arrowleft"
+              header2
+              OnPress={() => navigation.goBack()}
+            />
           </View>
           <View style={{width: '95%', marginTop: 30}}>
-            <View style={{width: 150, height: 150, marginTop: 30}}>
-              <Image
-                source={Images.Icons.envelop}
-                style={{width: '100%', height: '100%'}}
-              />
+            <View
+              style={{
+                width: '100%',
+                alignItems: 'flex-start',
+                marginLeft: -15,
+                marginBottom: -25,
+              }}>
+              <EnvelopeSvg />
             </View>
             <View style={{width: '90%', alignSelf: 'center'}}>
               <View style={{width: '74%'}}>
@@ -34,7 +43,6 @@ const Verify = props => {
                   style={{
                     fontSize: 16,
                     color: '#1C5C2E',
-                    fontWeight: '600',
                     fontFamily: 'BrandonGrotesque-Medium',
                     lineHeight: 28,
                   }}>
@@ -75,7 +83,7 @@ const Verify = props => {
                   }}>
                   <Pinkbtn
                     shadow={'#CD258D'}
-                    onPress={() => props.navigation.navigate('journey')}
+                    onPress={() => navigation.navigate('journey')}
                     width={'70%'}
                     btntxt="Continue"
                   />
@@ -85,7 +93,7 @@ const Verify = props => {
           </View>
         </View>
       </ScrollView>
-    </>
+    </SafeAreaView>
   );
 };
 export default Verify;

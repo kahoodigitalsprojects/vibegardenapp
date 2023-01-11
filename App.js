@@ -7,6 +7,9 @@ import {Platform, Text, StatusBar} from 'react-native';
 import {MenuProvider} from 'react-native-popup-menu';
 import RootStack from './src/navigation/RootStack';
 import {enableScreens} from 'react-native-screens';
+import MyStatusBar from './src/componrnts/statusBar';
+import DeviceInfo from 'react-native-device-info';
+let hasNotch = DeviceInfo.hasNotch();
 const App = props => {
   useEffect(() => {
     Text.defaultProps = Text.defaultProps || {};
@@ -21,11 +24,9 @@ const App = props => {
   return (
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
       <MenuProvider>
-        <StatusBar
-          barStyle="-content"
-          hidden={false}
-          backgroundColor="#000"
-          translucent={true}
+        <MyStatusBar
+          backgroundColor={hasNotch ? 'transparent' : '#000'}
+          barStyle={hasNotch ? 'dark-content' : 'light-content'}
         />
         <RootStack />
       </MenuProvider>

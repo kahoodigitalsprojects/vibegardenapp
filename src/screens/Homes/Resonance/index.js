@@ -16,7 +16,7 @@ import {useBackButton} from '../../../hooks/BackHandler';
 import Images from '../../../constants';
 
 const Resonance = ({navigation}) => {
-  onBackPress = () => {
+  const onBackPress = () => {
     navigation.goBack();
     return true;
   };
@@ -115,6 +115,7 @@ const Resonance = ({navigation}) => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
+    backgroundColor: '#fff',
     // backgroundColor: 'pink',
   },
   container: {

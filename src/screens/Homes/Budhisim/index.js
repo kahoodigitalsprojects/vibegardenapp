@@ -202,6 +202,7 @@ const Buddhisim = ({navigation, Flowersbox, Heading}) => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
+    backgroundColor: '#fff',
   },
   Box1: {
     width: '95%',

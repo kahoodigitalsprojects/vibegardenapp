@@ -154,6 +154,7 @@ const Tools = ({navigation}) => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
+    backgroundColor: '#fff',
   },
   Box1: {
     width: '90%',

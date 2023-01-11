@@ -15,7 +15,7 @@ import {Greenbtn, Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 const NotRegisterd = props => {
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>

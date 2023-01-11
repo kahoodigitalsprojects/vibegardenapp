@@ -93,7 +93,7 @@ const Registerd = ({route, navigation}) => {
 export default Registerd;
 
 const styles = StyleSheet.create({
-  main: {flex: 1},
+  main: {flex: 1, backgroundColor: '#fff'},
   input: {
     flexDirection: 'row',
     justifyContent: 'space-between',
