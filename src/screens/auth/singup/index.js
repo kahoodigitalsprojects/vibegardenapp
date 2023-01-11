@@ -1,25 +1,18 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   View,
   Text,
   StyleSheet,
-  Image,
   TextInput,
   TouchableOpacity,
-  ScrollView,
-  StatusBar,
+  Keyboard,
   SafeAreaView,
 } from 'react-native';
-
 import {Header, Pinkbtn} from '../../../componrnts';
-import Images from '../../../constants';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {shadow} from 'react-native-paper';
 import {LoginLogoSmall} from '../../../assests/svgs/LoginSvgs';
-
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 const SignUp = ({route, navigation}) => {
-  const [state, setState] = useState(true);
-  const [state1, setState1] = useState(true);
   const {showVerifyScreen} = route.params;
   return (
     <SafeAreaView style={styles.main}>
@@ -27,114 +20,133 @@ const SignUp = ({route, navigation}) => {
         <Header
           iconName="arrowleft"
           header2
-          OnPress={() => navigation.navigate('loginoption')}
+          OnPress={() => {
+            Keyboard.dismiss();
+            navigation.navigate('loginoption');
+          }}
         />
       </View>
-      <View style={styles.screenBody}>
-        {/* <View style={styles.logo}><LoginLogo /></View> */}
-        <Text style={[styles.text, {fontSize: 25, color: '#1C5C2E'}]}>
-          You're so very welcome,{'\n'} Erin
-        </Text>
-        <Text
-          style={[
-            styles.text,
-            {
-              color: '#1C5C2E',
-              fontFamily: 'BrandonGrotesque-Regular',
-              marginBottom: 15,
-            },
-          ]}>
-          Let's Get You Setup With An Account
-        </Text>
-        <LoginLogoSmall />
-        <Text style={[styles.text, {marginTop: 25}]}>Sign Up With Email</Text>
-        <View style={{marginTop: 40}}>
-          <TextInput
-            placeholder="Email Address"
-            placeholderTextColor="#aaa"
-            style={styles.input}
-          />
-          <TextInput
-            placeholder="Password"
-            style={[styles.input, {marginTop: 60}]}
-          />
+      <KeyboardAwareScrollView
+        keyboardShouldPersistTaps="handled"
+        enableOnAndroid={true}
+        enableAutomaticScroll={true}
+        bounces={false}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{flexGrow: 1}}>
+        <View style={styles.screenBody}>
+          {/* <View style={styles.logo}><LoginLogo /></View> */}
+          <Text style={[styles.text, {fontSize: 25, color: '#1C5C2E'}]}>
+            You're so very welcome,{'\n'} Erin
+          </Text>
+          <Text
+            style={[
+              styles.text,
+              {
+                color: '#1C5C2E',
+                fontFamily: 'BrandonGrotesque-Regular',
+                marginBottom: 15,
+              },
+            ]}>
+            Let's Get You Setup With An Account
+          </Text>
+          <LoginLogoSmall />
+          <Text style={[styles.text, {marginTop: 25}]}>Sign Up With Email</Text>
+          <View style={{marginTop: 40}}>
+            <TextInput
+              placeholder="Email Address"
+              placeholderTextColor="#aaa"
+              style={styles.input}
+            />
+            <TextInput
+              placeholder="Password"
+              style={[styles.input, {marginTop: 60}]}
+            />
+          </View>
         </View>
-      </View>
-      <View
-        style={{
-          flex: 1,
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          paddingTop: 25,
-        }}>
-        <Pinkbtn
-          shadow={'#CD258D'}
-          onPress={() =>
-            showVerifyScreen
-              ? navigation.navigate('verify')
-              : navigation.navigate('registerd', {
-                  registerd1: () => navigation.navigate('signup'),
-                })
-          }
-          width={'70%'}
-          btntxt="Continue"
-        />
-        <View>
-          <View
-            style={{
-              flexDirection: 'row',
-              alignSelf: 'center',
-            }}>
-            <Text style={styles.bottomLine}>Already have an account? </Text>
-            <TouchableOpacity
-              // style={{marginTop: -2.5}}
-              onPress={() => {
-                navigation.navigate('loginoption', {
-                  showVerifyScreen: false,
-                });
+        <View
+          style={{
+            flex: 1,
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            paddingTop: 25,
+          }}>
+          <Pinkbtn
+            shadow={'#CD258D'}
+            onPress={
+              showVerifyScreen
+                ? () => {
+                    Keyboard.dismiss();
+                    navigation.navigate('verify');
+                  }
+                : () => {
+                    Keyboard.dismiss();
+                    navigation.navigate('registerd', {
+                      registerd1: () => navigation.navigate('signup'),
+                    });
+                  }
+            }
+            width={'70%'}
+            btntxt="Continue"
+          />
+          <View>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignSelf: 'center',
               }}>
+              <Text style={styles.bottomLine}>Already have an account? </Text>
+              <TouchableOpacity
+                // style={{marginTop: -2.5}}
+                onPress={() => {
+                  Keyboard.dismiss();
+                  navigation.navigate('loginoption', {
+                    showVerifyScreen: false,
+                  });
+                }}>
+                <Text
+                  style={[
+                    styles.bottomLine,
+                    {
+                      fontSize: 18,
+                      textDecorationLine: 'underline',
+                      fontFamily: 'BrandonGrotesque-Bold',
+                    },
+                  ]}>
+                  Login
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <TouchableOpacity
+              onPress={() => {
+                Keyboard.dismiss();
+                navigation.replace('Story1', {
+                  param: {istrue: true},
+                });
+              }}
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                alignSelf: 'center',
+                marginVertical: 15,
+              }}>
+              <View style={styles.blue}>
+                <Icon name="play" color={'#fff'} size={8} />
+              </View>
               <Text
-                style={[
-                  styles.bottomLine,
-                  {
-                    fontSize: 18,
-                    textDecorationLine: 'underline',
-                    fontFamily: 'BrandonGrotesque-Bold',
-                  },
-                ]}>
-                Login
+                style={{
+                  marginLeft: 10,
+                  color: '#1492E6',
+                  fontSize: 16,
+                  textAlign: 'center',
+                  fontFamily: 'BrandonGrotesque-Regular',
+                }}>
+                Want to See How Works?
               </Text>
             </TouchableOpacity>
           </View>
-          <TouchableOpacity
-            onPress={() => {
-              navigation.replace('Story1', {
-                param: {istrue: true},
-              });
-            }}
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              alignSelf: 'center',
-              marginVertical: 15,
-            }}>
-            <View style={styles.blue}>
-              <Icon name="play" color={'#fff'} size={8} />
-            </View>
-            <Text
-              style={{
-                marginLeft: 10,
-                color: '#1492E6',
-                fontSize: 16,
-                textAlign: 'center',
-                fontFamily: 'BrandonGrotesque-Regular',
-              }}>
-              Want to See How Works?
-            </Text>
-          </TouchableOpacity>
         </View>
-      </View>
+      </KeyboardAwareScrollView>
     </SafeAreaView>
   );
 };
