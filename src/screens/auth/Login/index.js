@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   TextInput,
   Keyboard,
+  ScrollView,
 } from 'react-native';
 import {Header, Pinkbtn} from '../../../componrnts';
 import Orientation from 'react-native-orientation-locker';
@@ -40,148 +41,152 @@ const Login = ({route, navigation}) => {
 
   return (
     <SafeAreaView style={styles.main}>
-      <Header
-        iconName="arrowleft"
-        OnPress={() => {
-          Keyboard.dismiss();
-          navigation.navigate('loginoption');
-        }}
-      />
-      <KeyboardAwareScrollView
-        keyboardShouldPersistTaps="handled"
-        enableOnAndroid={true}
-        enableAutomaticScroll={true}
-        bounces={false}
+      <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        <View
-          style={{
-            // backgroundColor: 'red',
-            flex: 1,
-            justifyContent: 'space-around',
-            width: '90%',
-            alignSelf: 'center',
-          }}>
-          <View style={styles.logo}>
-            <LoginLogo />
-          </View>
-          <Text
+        <Header
+          iconName="arrowleft"
+          OnPress={() => {
+            Keyboard.dismiss();
+            navigation.navigate('loginoption');
+          }}
+        />
+        <KeyboardAwareScrollView
+          keyboardShouldPersistTaps="handled"
+          enableOnAndroid={true}
+          enableAutomaticScroll={true}
+          bounces={false}
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{flexGrow: 1}}>
+          <View
             style={{
-              fontSize: 18,
-              fontFamily: 'BrandonGrotesque-Medium',
-              marginTop: 17,
-              color: '#aaa',
+              // backgroundColor: 'red',
+              flex: 1,
+              justifyContent: 'space-around',
+              width: '90%',
+              alignSelf: 'center',
             }}>
-            Login With Email
-          </Text>
-          <View style={{marginTop: 40}}>
-            <View style={{marginVertical: 15}}>
-              <TextInput
-                placeholder="Email Address"
-                placeholderTextColor="#aaa"
-                style={styles.input}
-              />
+            <View style={styles.logo}>
+              <LoginLogo />
             </View>
-            <View style={{marginVertical: 15}}>
-              <TextInput
-                placeholder="Password"
-                placeholderTextColor="#aaa"
-                style={[styles.input, {marginTop: 15}]}
-              />
+            <Text
+              style={{
+                fontSize: 18,
+                fontFamily: 'BrandonGrotesque-Medium',
+                marginTop: 17,
+                color: '#aaa',
+              }}>
+              Login With Email
+            </Text>
+            <View style={{marginTop: 40}}>
+              <View style={{marginVertical: 15}}>
+                <TextInput
+                  placeholder="Email Address"
+                  placeholderTextColor="#aaa"
+                  style={styles.input}
+                />
+              </View>
+              <View style={{marginVertical: 15}}>
+                <TextInput
+                  placeholder="Password"
+                  placeholderTextColor="#aaa"
+                  style={[styles.input, {marginTop: 15}]}
+                />
+              </View>
+            </View>
+            <View
+              style={{
+                // marginTop: 20,
+                width: '100%',
+                flexDirection: 'row',
+                justifyContent: 'flex-end',
+              }}>
+              <TouchableOpacity
+                // style={{marginTop: 10}}
+                onPress={() => {
+                  Keyboard.dismiss();
+                  navigation.navigate('forgerpsaaword');
+                }}>
+                <Text
+                  style={{
+                    textAlign: 'right',
+                    color: '#1C5C2E',
+                    fontSize: 14,
+                    fontFamily: 'BrandonGrotesque-Bold',
+                  }}>
+                  Forget Password?
+                </Text>
+              </TouchableOpacity>
             </View>
           </View>
           <View
             style={{
-              // marginTop: 20,
-              width: '100%',
-              flexDirection: 'row',
-              justifyContent: 'flex-end',
+              // backgroundColor: 'blue',
+              flex: 1,
+              justifyContent: 'space-evenly',
+              width: '90%',
+              alignSelf: 'center',
+              alignItems: 'center',
             }}>
-            <TouchableOpacity
-              // style={{marginTop: 10}}
-              onPress={() => {
-                Keyboard.dismiss();
-                navigation.navigate('forgerpsaaword');
+            <Pinkbtn
+              shadow={'#CD258D'}
+              onPress={
+                registerd1
+                  ? () => {
+                      Keyboard.dismiss();
+                      navigation.reset({
+                        index: 0,
+                        routes: [
+                          {
+                            name: 'Tabs',
+                          },
+                        ],
+                      });
+                    }
+                  : () => {
+                      Keyboard.dismiss();
+                      navigation.navigate('NotRegisterd');
+                    }
+              }
+              width={'75%'}
+              btntxt="Continue"
+            />
+            <Text
+              style={{
+                textAlign: 'center',
+                // marginVertical: 20,
+                color: '#1C5C2E',
+                fontSize: 18,
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
-              <Text
-                style={{
-                  textAlign: 'right',
-                  color: '#1C5C2E',
-                  fontSize: 14,
-                  fontFamily: 'BrandonGrotesque-Bold',
+              Or
+            </Text>
+            <View style={{flexDirection: 'row'}}>
+              <Text style={styles.bottomLine}>Don't have an account? </Text>
+              <TouchableOpacity
+                // style={{marginTop: Platform.OS === 'ios' ? -2.5 : 5}}
+                onPress={() => {
+                  Keyboard.dismiss();
+                  navigation.navigate('signup', {
+                    showVerifyScreen: false,
+                  });
                 }}>
-                Forget Password?
-              </Text>
-            </TouchableOpacity>
+                <Text
+                  style={[
+                    styles.bottomLine,
+                    {
+                      fontSize: 18,
+                      textDecorationLine: 'underline',
+                      fontFamily: 'BrandonGrotesque-Bold',
+                    },
+                  ]}>
+                  Sign Up
+                </Text>
+              </TouchableOpacity>
+            </View>
           </View>
-        </View>
-        <View
-          style={{
-            // backgroundColor: 'blue',
-            flex: 1,
-            justifyContent: 'space-evenly',
-            width: '90%',
-            alignSelf: 'center',
-            alignItems: 'center',
-          }}>
-          <Pinkbtn
-            shadow={'#CD258D'}
-            onPress={
-              registerd1
-                ? () => {
-                    Keyboard.dismiss();
-                    navigation.reset({
-                      index: 0,
-                      routes: [
-                        {
-                          name: 'Tabs',
-                        },
-                      ],
-                    });
-                  }
-                : () => {
-                    Keyboard.dismiss();
-                    navigation.navigate('NotRegisterd');
-                  }
-            }
-            width={'75%'}
-            btntxt="Continue"
-          />
-          <Text
-            style={{
-              textAlign: 'center',
-              // marginVertical: 20,
-              color: '#1C5C2E',
-              fontSize: 18,
-              fontFamily: 'BrandonGrotesque-Regular',
-            }}>
-            Or
-          </Text>
-          <View style={{flexDirection: 'row'}}>
-            <Text style={styles.bottomLine}>Don't have an account? </Text>
-            <TouchableOpacity
-              // style={{marginTop: Platform.OS === 'ios' ? -2.5 : 5}}
-              onPress={() => {
-                Keyboard.dismiss();
-                navigation.navigate('signup', {
-                  showVerifyScreen: false,
-                });
-              }}>
-              <Text
-                style={[
-                  styles.bottomLine,
-                  {
-                    fontSize: 18,
-                    textDecorationLine: 'underline',
-                    fontFamily: 'BrandonGrotesque-Bold',
-                  },
-                ]}>
-                Sign Up
-              </Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </KeyboardAwareScrollView>
+        </KeyboardAwareScrollView>
+      </ScrollView>
     </SafeAreaView>
   );
 };

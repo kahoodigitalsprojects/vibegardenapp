@@ -6,6 +6,7 @@ import {
   TextInput,
   TouchableOpacity,
   Keyboard,
+  ScrollView,
   SafeAreaView,
 } from 'react-native';
 import {Header, Pinkbtn} from '../../../componrnts';
@@ -17,135 +18,141 @@ const SignUp = ({route, navigation}) => {
   return (
     <SafeAreaView style={styles.main}>
       {/* <View style={styles.screenHeader}> */}
-      <Header
-        iconName="arrowleft"
-        OnPress={() => {
-          Keyboard.dismiss();
-          navigation.navigate('loginoption');
-        }}
-      />
-      {/* </View> */}
-      <KeyboardAwareScrollView
-        keyboardShouldPersistTaps="handled"
-        enableOnAndroid={true}
-        enableAutomaticScroll={true}
-        bounces={false}
+      <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        <View style={styles.screenBody}>
-          <Text style={[styles.text, {fontSize: 25, color: '#1C5C2E'}]}>
-            You're so very welcome,{'\n'} Erin
-          </Text>
-          <Text
-            style={[
-              styles.text,
-              {
-                color: '#1C5C2E',
-                fontFamily: 'BrandonGrotesque-Regular',
-                marginBottom: 15,
-              },
-            ]}>
-            Let's Get You Setup With An Account
-          </Text>
-          <LoginLogoSmall />
-          <Text style={[styles.text, {marginTop: 25}]}>Sign Up With Email</Text>
-          <View style={{marginTop: 40}}>
-            <TextInput
-              placeholder="Email Address"
-              placeholderTextColor="#aaa"
-              style={styles.input}
-            />
-            <TextInput
-              placeholder="Password"
-              placeholderTextColor="#aaa"
-              style={[styles.input, {marginTop: 60}]}
-            />
+        <Header
+          iconName="arrowleft"
+          OnPress={() => {
+            Keyboard.dismiss();
+            navigation.navigate('loginoption');
+          }}
+        />
+        {/* </View> */}
+        <KeyboardAwareScrollView
+          keyboardShouldPersistTaps="handled"
+          enableOnAndroid={true}
+          enableAutomaticScroll={true}
+          bounces={false}
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{flexGrow: 1}}>
+          <View style={styles.screenBody}>
+            <Text style={[styles.text, {fontSize: 25, color: '#1C5C2E'}]}>
+              You're so very welcome,{'\n'} Erin
+            </Text>
+            <Text
+              style={[
+                styles.text,
+                {
+                  color: '#1C5C2E',
+                  fontFamily: 'BrandonGrotesque-Regular',
+                  marginBottom: 15,
+                },
+              ]}>
+              Let's Get You Setup With An Account
+            </Text>
+            <LoginLogoSmall />
+            <Text style={[styles.text, {marginTop: 25}]}>
+              Sign Up With Email
+            </Text>
+            <View style={{marginTop: 40}}>
+              <TextInput
+                placeholder="Email Address"
+                placeholderTextColor="#aaa"
+                style={styles.input}
+              />
+              <TextInput
+                placeholder="Password"
+                placeholderTextColor="#aaa"
+                style={[styles.input, {marginTop: 60}]}
+              />
+            </View>
           </View>
-        </View>
-        <View
-          style={{
-            flex: 1,
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            paddingTop: 25,
-          }}>
-          <Pinkbtn
-            shadow={'#CD258D'}
-            onPress={
-              showVerifyScreen
-                ? () => {
+          <View
+            style={{
+              flex: 1,
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              paddingTop: 25,
+            }}>
+            <Pinkbtn
+              shadow={'#CD258D'}
+              onPress={
+                showVerifyScreen
+                  ? () => {
+                      Keyboard.dismiss();
+                      navigation.navigate('verify');
+                    }
+                  : () => {
+                      Keyboard.dismiss();
+                      navigation.navigate('registerd', {
+                        registerd1: () => navigation.navigate('signup'),
+                      });
+                    }
+              }
+              width={'70%'}
+              btntxt="Continue"
+            />
+            <View>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignSelf: 'center',
+                }}>
+                <Text style={styles.bottomLine}>Already have an account? </Text>
+                <TouchableOpacity
+                  // style={{marginTop: -2.5}}
+                  onPress={() => {
                     Keyboard.dismiss();
-                    navigation.navigate('verify');
-                  }
-                : () => {
-                    Keyboard.dismiss();
-                    navigation.navigate('registerd', {
-                      registerd1: () => navigation.navigate('signup'),
+                    navigation.navigate('loginoption', {
+                      showVerifyScreen: false,
                     });
-                  }
-            }
-            width={'70%'}
-            btntxt="Continue"
-          />
-          <View>
-            <View
-              style={{
-                flexDirection: 'row',
-                alignSelf: 'center',
-              }}>
-              <Text style={styles.bottomLine}>Already have an account? </Text>
+                  }}>
+                  <Text
+                    style={[
+                      styles.bottomLine,
+                      {
+                        fontSize: 18,
+                        textDecorationLine: 'underline',
+                        fontFamily: 'BrandonGrotesque-Bold',
+                      },
+                    ]}>
+                    Login
+                  </Text>
+                </TouchableOpacity>
+              </View>
               <TouchableOpacity
-                // style={{marginTop: -2.5}}
                 onPress={() => {
                   Keyboard.dismiss();
-                  navigation.navigate('loginoption', {
-                    showVerifyScreen: false,
+                  navigation.replace('Story1', {
+                    param: {istrue: true},
                   });
+                }}
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  alignSelf: 'center',
+                  marginVertical: 15,
                 }}>
+                <View style={styles.blue}>
+                  <Icon name="play" color={'#fff'} size={8} />
+                </View>
                 <Text
-                  style={[
-                    styles.bottomLine,
-                    {
-                      fontSize: 18,
-                      textDecorationLine: 'underline',
-                      fontFamily: 'BrandonGrotesque-Bold',
-                    },
-                  ]}>
-                  Login
+                  style={{
+                    marginLeft: 10,
+                    color: '#1492E6',
+                    fontSize: 16,
+                    textAlign: 'center',
+                    fontFamily: 'BrandonGrotesque-Regular',
+                  }}>
+                  Want to See How Works?
                 </Text>
               </TouchableOpacity>
             </View>
-            <TouchableOpacity
-              onPress={() => {
-                Keyboard.dismiss();
-                navigation.replace('Story1', {
-                  param: {istrue: true},
-                });
-              }}
-              style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                alignSelf: 'center',
-                marginVertical: 15,
-              }}>
-              <View style={styles.blue}>
-                <Icon name="play" color={'#fff'} size={8} />
-              </View>
-              <Text
-                style={{
-                  marginLeft: 10,
-                  color: '#1492E6',
-                  fontSize: 16,
-                  textAlign: 'center',
-                  fontFamily: 'BrandonGrotesque-Regular',
-                }}>
-                Want to See How Works?
-              </Text>
-            </TouchableOpacity>
           </View>
-        </View>
-      </KeyboardAwareScrollView>
+        </KeyboardAwareScrollView>
+      </ScrollView>
     </SafeAreaView>
   );
 };
