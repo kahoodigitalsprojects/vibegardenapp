@@ -7,33 +7,11 @@ import Images from '../../constants';
 
 import {Menu, MenuOptions, MenuTrigger} from 'react-native-popup-menu';
 const Header = ({
-  color,
-  marginTop,
-  alignItems,
-  heartplus,
   toggle,
-  plus,
   heart,
   iconName,
   search,
   fontSize = 25,
-  gbg,
-  flower,
-  img23,
-  heading,
-  img1,
-  search1,
-  hearttop,
-  greenicon1,
-  heartleft1,
-  header4,
-  size,
-  width,
-  colorplus,
-  headertext2,
-  marginTopplus,
-  marginRight,
-  show,
   OnPress,
   headertext,
   headertextColor,
@@ -55,14 +33,10 @@ const Header = ({
           <View style={{flex: 1, height: 40}}>
             <TouchableOpacity
               onPress={OnPress}
-              style={{
-                width: 40,
-                height: 40,
-                borderRadius: 12,
-                backgroundColor: search ? 'transparent' : '#1C5C2E',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
+              style={[
+                styles.iconLeft,
+                {backgroundColor: search ? 'transparent' : '#1C5C2E'},
+              ]}>
               <Icon2
                 name={iconName}
                 size={leftIconSize}
@@ -77,14 +51,7 @@ const Header = ({
               style={{width: 40, height: 40}}
             />
           </View>
-          <View
-            style={{
-              flex: 1,
-              height: 40,
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'flex-end',
-            }}>
+          <View style={styles.heartPlusContainer}>
             <TouchableOpacity style={[styles.iconRight, {marginRight: 5}]}>
               <Icon2 name="plus" size={20} color="#1C5C2E" style={{}} />
             </TouchableOpacity>
@@ -247,5 +214,20 @@ const styles = StyleSheet.create({
     // backgroundColor: search ? 'transparent' : '#1C5C2E',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  iconLeft: {
+    width: 40,
+    height: 40,
+    borderRadius: 12,
+
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  heartPlusContainer: {
+    flex: 1,
+    height: 40,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
   },
 });

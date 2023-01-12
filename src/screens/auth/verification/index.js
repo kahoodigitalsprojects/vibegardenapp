@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, TextInput} from 'react-native';
+import {View, Text, StyleSheet, TextInput, ScrollView} from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {EnvelopeSvg} from '../../../assests/svgs/LoginSvgs';
@@ -7,11 +7,6 @@ import {Header, Pinkbtn} from '../../../componrnts';
 const Verify = ({navigation}) => {
   return (
     <SafeAreaView style={styles.main}>
-      <Header
-        iconName="arrowleft"
-        header2
-        OnPress={() => navigation.goBack()}
-      />
       <KeyboardAwareScrollView
         keyboardShouldPersistTaps="handled"
         enableOnAndroid={true}
@@ -19,11 +14,17 @@ const Verify = ({navigation}) => {
         bounces={false}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
+        <Header
+          iconName="arrowleft"
+          header2
+          OnPress={() => navigation.goBack()}
+        />
         <View style={{width: '95%', marginTop: 30}}>
           <View
             style={{
               width: '100%',
               alignItems: 'flex-start',
+              // backgroundColor: 'red',
               marginLeft: -15,
               marginBottom: -25,
             }}>
@@ -39,10 +40,8 @@ const Verify = ({navigation}) => {
               }}>
               Show Us Its You Please Check Your Email To Continue
             </Text>
-
-            <View style={styles.input}>
-              <TextInput placeholder="" />
-            </View>
+            {/* <View style={{flex: 1, backgroundColor: 'red'}}></View> */}
+            <TextInput style={styles.input} />
             <View
               style={{
                 justifyContent: 'center',
@@ -84,15 +83,16 @@ const Verify = ({navigation}) => {
 export default Verify;
 
 const styles = StyleSheet.create({
-  main: {flex: 1, alignItems: 'center', backgroundColor: '#fff'},
+  main: {flex: 1, backgroundColor: '#fff'},
   input: {
-    // flexDirection: 'row',
-    // justifyContent: 'space-between',
-    borderBottomWidth: 0.5,
-    borderBottomColor: '#1C5C2E',
-    // marginVertical: 50,
+    paddingBottom: -10,
     marginTop: 50,
-    marginBottom: 10,
+    // height: 30,
+    borderBottomColor: '#1C5C2E',
+    borderBottomWidth: 0.5,
+    fontSize: 14,
+    fontFamily: 'BrandonGrotesque-Medium',
+    color: '#1C5C2E',
   },
   txt1: {
     color: '#1C5C2E',
