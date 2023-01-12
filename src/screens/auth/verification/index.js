@@ -7,13 +7,11 @@ import {Header, Pinkbtn} from '../../../componrnts';
 const Verify = ({navigation}) => {
   return (
     <SafeAreaView style={styles.main}>
-      <View style={{width: '90%', marginTop: 10}}>
-        <Header
-          iconName="arrowleft"
-          header2
-          OnPress={() => navigation.goBack()}
-        />
-      </View>
+      <Header
+        iconName="arrowleft"
+        header2
+        OnPress={() => navigation.goBack()}
+      />
       <KeyboardAwareScrollView
         keyboardShouldPersistTaps="handled"
         enableOnAndroid={true}

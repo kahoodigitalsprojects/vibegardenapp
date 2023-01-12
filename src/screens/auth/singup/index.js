@@ -16,16 +16,15 @@ const SignUp = ({route, navigation}) => {
   const {showVerifyScreen} = route.params;
   return (
     <SafeAreaView style={styles.main}>
-      <View style={styles.screenHeader}>
-        <Header
-          iconName="arrowleft"
-          header2
-          OnPress={() => {
-            Keyboard.dismiss();
-            navigation.navigate('loginoption');
-          }}
-        />
-      </View>
+      {/* <View style={styles.screenHeader}> */}
+      <Header
+        iconName="arrowleft"
+        OnPress={() => {
+          Keyboard.dismiss();
+          navigation.navigate('loginoption');
+        }}
+      />
+      {/* </View> */}
       <KeyboardAwareScrollView
         keyboardShouldPersistTaps="handled"
         enableOnAndroid={true}

@@ -18,11 +18,9 @@ import Images from '../../../constants';
 const MeetScreen2 = ({route, navigation}) => {
   const {Image1, newtext} = route.params;
 
-  const [data1, setdata1] = useState();
-
   return (
     <SafeAreaView style={styles.main}>
-      {/* <StatusBar animated={true} backgroundColor="#000" /> */}
+      <Header iconName="arrowleft" OnPress={() => navigation.goBack()} />
       <ImageBackground
         source={Images.BackGround.backgroundHue}
         resizeMode="stretch"
@@ -31,12 +29,6 @@ const MeetScreen2 = ({route, navigation}) => {
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1}}>
           <View style={{width: '90%', alignSelf: 'center'}}>
-            <Header
-              header2
-              iconName="arrowleft"
-              OnPress={() => navigation.goBack()}
-            />
-
             <View style={{}}>
               <Percentage check={true} Image1={Image1} paddingVertical={20} />
 

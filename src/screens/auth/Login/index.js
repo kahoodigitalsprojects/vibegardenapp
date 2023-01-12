@@ -40,16 +40,13 @@ const Login = ({route, navigation}) => {
 
   return (
     <SafeAreaView style={styles.main}>
-      <View style={styles.screenHeader}>
-        <Header
-          iconName="arrowleft"
-          header2
-          OnPress={() => {
-            Keyboard.dismiss();
-            navigation.navigate('loginoption');
-          }}
-        />
-      </View>
+      <Header
+        iconName="arrowleft"
+        OnPress={() => {
+          Keyboard.dismiss();
+          navigation.navigate('loginoption');
+        }}
+      />
       <KeyboardAwareScrollView
         keyboardShouldPersistTaps="handled"
         enableOnAndroid={true}
