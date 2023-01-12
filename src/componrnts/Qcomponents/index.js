@@ -180,7 +180,7 @@ const QComponents = ({
             </View>
           )}
 
-          <View style={{flexDirection: 'row'}}>
+          <View style={{flexDirection: 'row', width: width1}}>
             <Text style={styles.text2}>{direction2}</Text>
             <View style={{flexDirection: 'row'}}>
               <Text

@@ -31,7 +31,7 @@ const Spalsh2 = ({navigation, route}) => {
             showVerifyScreen: showVerifyScreen,
           })
         }
-        width={'70%'}
+        width={'75%'}
         btntxt="Let's Roll"
       />
     </SafeAreaView>

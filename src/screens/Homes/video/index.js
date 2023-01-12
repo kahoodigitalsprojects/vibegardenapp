@@ -159,52 +159,56 @@ const Video = ({route, navigation}) => {
                 // name11="plus",
                 // marginVertical={24}
                 name2="heart-outlined"
-                width={'95%'}
+                width={'92%'}
                 Statement="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.."
                 Statementtext="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di At vero eos et accusam et justo duo.."
               />
             </View>
             <View
-              style={{
-                width: '95%',
-                alignSelf: 'center',
-              }}>
-              <FlatList
-                data={data2}
-                horizontal={true}
-                showsHorizontalScrollIndicator={false}
-                renderItem={({item}) => {
-                  return (
-                    <>
-                      <View
-                        style={{
-                          flexDirection: 'row',
-                          alignSelf: 'flex-start',
-                        }}>
-                        <TouchableOpacity style={[styles.topics, {padding: 6}]}>
-                          <Text
-                            style={{
-                              color: '#1C5C2E',
-                              fontSize: 12,
-                              fontFamily: 'BrandonGrotesque-Regular',
-                            }}>
-                            {item.texlist}
-                          </Text>
-                        </TouchableOpacity>
-                      </View>
-                    </>
-                  );
-                }}
-              />
+              style={
+                {
+                  // width: '95%',
+                  // alignSelf: 'center',
+                }
+              }>
+              <View
+                style={{
+                  width: '95%',
+                  alignSelf: 'center',
+                }}>
+                <FlatList
+                  data={data2}
+                  horizontal={true}
+                  showsHorizontalScrollIndicator={false}
+                  renderItem={({item}) => {
+                    return (
+                      <>
+                        <View
+                          style={{
+                            flexDirection: 'row',
+                            alignSelf: 'flex-start',
+                          }}>
+                          <TouchableOpacity
+                            style={[styles.topics, {padding: 6}]}>
+                            <Text
+                              style={{
+                                color: '#1C5C2E',
+                                fontSize: 12,
+                                fontFamily: 'BrandonGrotesque-Regular',
+                              }}>
+                              {item.texlist}
+                            </Text>
+                          </TouchableOpacity>
+                        </View>
+                      </>
+                    );
+                  }}
+                />
+              </View>
 
               {otherParam && (
                 <>
-                  <View
-                    style={{
-                      width: '95%',
-                      alignSelf: 'center',
-                      marginVertical: 20,
-                    }}>
+                  <View style={{width: '92%', alignSelf: 'center'}}>
                     <Text
                       style={{
                         fontSize: 20,
@@ -231,7 +235,7 @@ const Video = ({route, navigation}) => {
               <View
                 style={[
                   styles.row,
-                  {width: '95%', alignSelf: 'center', marginTop: 10},
+                  {width: '90%', alignSelf: 'center', marginTop: 10},
                 ]}>
                 <Text
                   style={{
