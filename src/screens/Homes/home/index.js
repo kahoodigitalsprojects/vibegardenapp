@@ -1,3 +1,4 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, {useEffect, useState} from 'react';
 import {
   View,
@@ -18,6 +19,23 @@ import SearchModal from '../../../componrnts/SearchModal';
 import Images from '../../../constants';
 const Home = ({navigation, route}) => {
   const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    checkJourney();
+  }, []);
+  const checkJourney = async value => {
+    try {
+      const check = await AsyncStorage.getItem('journeyCompleted');
+      if (check !== null) {
+        return;
+      } else {
+        await AsyncStorage.setItem('journeyCompleted', 'DONE');
+      }
+    } catch (e) {
+      // saving error
+      console.log(e);
+    }
+  };
   useEffect(() => {
     const backAction = () => {
       if (visible) {

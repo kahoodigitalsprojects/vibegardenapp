@@ -1,33 +1,20 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  ScrollView,
-  StatusBar,
-} from 'react-native';
+import {View, Text, StyleSheet, TextInput, ScrollView} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {Greenbtn, Header} from '../../../componrnts';
-const ForgetPassword = props => {
+const ForgetPassword = ({navigation}) => {
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1, alignItems: 'center'}}>
-        {/* <StatusBar animated={true} backgroundColor="#000" /> */}
-
-        <View style={{width: '90%', marginTop: 10}}>
-          <Header
-            marginTop={-40}
-            fontSize={25}
-            color="#191919B8"
-            iconName="arrowleft"
-            headertext="Forget Password"
-            header2
-            OnPress={() => props.navigation.goBack()}
-          />
-        </View>
+        <Header
+          // fontSize={25}
+          headertextColor="#191919B8"
+          iconName="arrowleft"
+          headertext="Forget Password"
+          OnPress={() => navigation.goBack()}
+        />
 
         <View style={{width: '85%', marginTop: 30}}>
           <Text
@@ -73,9 +60,7 @@ const ForgetPassword = props => {
               <Greenbtn
                 width={'100%'}
                 text1="Submit"
-                // onPress={() => {
-                //   props.navigation.navigate('chuchuhuasDetails');
-                // }}
+                onPress={() => navigation.goBack()}
               />
             </View>
           </View>

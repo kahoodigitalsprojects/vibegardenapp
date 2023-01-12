@@ -22,21 +22,8 @@ const NameScreen = props => {
   const isFocused = useIsFocused();
   useEffect(() => {
     Orientation.unlockAllOrientations();
-    // checkJourney();
   }, [isFocused]);
-  // const checkJourney = async value => {
-  //   try {
-  //     const check = await AsyncStorage.getItem('journeyCompleted');
-  //     if (check !== null) {
-  //       return;
-  //     } else {
-  //       await AsyncStorage.setItem('journeyCompleted', 'DONE');
-  //     }
-  //   } catch (e) {
-  //     // saving error
-  //     console.log(e);
-  //   }
-  // };
+
   const {showVerifyScreen} = props.route.params;
   return (
     <SafeAreaView style={styles.main}>
@@ -47,7 +34,6 @@ const NameScreen = props => {
         bounces={false}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        {/* <StatusBar animated={true} backgroundColor="#000" /> */}
         <View style={{marginTop: 119, width: '90%', alignSelf: 'center'}}>
           <View style={{}}>
             <LoginLogo />

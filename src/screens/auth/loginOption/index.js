@@ -1,14 +1,9 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {
   StyleSheet,
-  Button,
   View,
   SafeAreaView,
-  ScrollView,
   Text,
-  StatusBar,
-  Alert,
   TouchableOpacity,
   Image,
 } from 'react-native';
@@ -17,105 +12,75 @@ import {Header} from '../../../componrnts';
 import Images from '../../../constants';
 
 const LoginOption = props => {
-  const [show, setShow] = useState(true);
-  useEffect(() => {
-    return () => {
-      checkJourney();
-    };
-  }, []);
-
-  const checkJourney = async value => {
-    try {
-      const check = await AsyncStorage.getItem('journeyCompleted');
-      if (check !== null) {
-        setShow(true);
-      } else {
-        setShow(false);
-      }
-    } catch (e) {
-      // saving error
-      console.log(e);
-    }
-  };
   return (
-    <>
-      <SafeAreaView style={styles.main}>
-        {/* <StatusBar animated={true} backgroundColor="#000" /> */}
-        <ScrollView
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={{flexGrow: 1}}>
-          <View style={{width: '90%', alignSelf: 'center'}}>
-            <Header
-              show={show}
-              iconName="arrowleft"
-              header2
-              OnPress={() => props.navigation.replace('Welcome')}
-            />
+    <SafeAreaView style={styles.main}>
+      <Header
+        iconName="arrowleft"
+        OnPress={() => props.navigation.replace('Story1')}
+      />
 
-            <View style={{width: '90%', alignSelf: 'center'}}>
-              <Text style={styles.headtext}>Welcome Back, {'\n'} Erin</Text>
+      <View style={{width: '90%', alignSelf: 'center'}}>
+        <View style={{width: '90%', alignSelf: 'center'}}>
+          <Text style={styles.headtext}>Welcome Back, {'\n'} Erin</Text>
+          <Text
+            style={{
+              marginTop: 20,
+              color: '#1C5C2E',
+              fontSize: 17,
+              fontFamily: 'BrandonGrotesque-Regular',
+            }}>
+            Let's Get You Setup With An Account
+          </Text>
+          <View style={[styles.input, {marginVertical: 80, paddingRight: 20}]}>
+            <Image
+              source={Images.Icons.bluee}
+              style={{width: 40, height: 40}}
+            />
+            <TouchableOpacity
+              style={{paddingLeft: 20, marginTop: -7}}
+              onPress={() => props.navigation.navigate('login')}>
               <Text
                 style={{
-                  marginTop: 20,
-                  color: '#1C5C2E',
-                  fontSize: 17,
-                  fontFamily: 'BrandonGrotesque-Regular',
+                  marginTop: 15,
+                  textAlign: 'center',
+                  fontFamily: 'BrandonGrotesque-Medium',
+                  color: '#030303',
                 }}>
-                Let's Get You Setup With An Account
+                Sign Up With Email
               </Text>
-              <View
-                style={[styles.input, {marginVertical: 80, paddingRight: 20}]}>
-                <Image
-                  source={Images.Icons.bluee}
-                  style={{width: 40, height: 40}}
-                />
-                <TouchableOpacity
-                  style={{paddingLeft: 20, marginTop: -7}}
-                  onPress={() => props.navigation.navigate('login')}>
-                  <Text
-                    style={{
-                      marginTop: 15,
-                      textAlign: 'center',
-                      fontFamily: 'BrandonGrotesque-Medium',
-                      color: '#030303',
-                    }}>
-                    Sign Up With Email
-                  </Text>
-                </TouchableOpacity>
-              </View>
-
-              <View
-                style={{
-                  flexDirection: 'row',
-                  alignSelf: 'center',
-                  // marginTop: 50,
-                }}>
-                <Text style={styles.bottomLine}>Don't have an account? </Text>
-                <TouchableOpacity
-                  // style={{marginTop: -2.5}}
-                  onPress={() => {
-                    props.navigation.navigate('signup', {
-                      showVerifyScreen: false,
-                    });
-                  }}>
-                  <Text
-                    style={[
-                      styles.bottomLine,
-                      {
-                        fontSize: 18,
-                        textDecorationLine: 'underline',
-                        fontFamily: 'BrandonGrotesque-Bold',
-                      },
-                    ]}>
-                    Sign Up
-                  </Text>
-                </TouchableOpacity>
-              </View>
-            </View>
+            </TouchableOpacity>
           </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+
+          <View
+            style={{
+              flexDirection: 'row',
+              alignSelf: 'center',
+              // marginTop: 50,
+            }}>
+            <Text style={styles.bottomLine}>Don't have an account? </Text>
+            <TouchableOpacity
+              // style={{marginTop: -2.5}}
+              onPress={() => {
+                props.navigation.navigate('signup', {
+                  showVerifyScreen: false,
+                });
+              }}>
+              <Text
+                style={[
+                  styles.bottomLine,
+                  {
+                    fontSize: 18,
+                    textDecorationLine: 'underline',
+                    fontFamily: 'BrandonGrotesque-Bold',
+                  },
+                ]}>
+                Sign Up
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </View>
+    </SafeAreaView>
   );
 };
 
