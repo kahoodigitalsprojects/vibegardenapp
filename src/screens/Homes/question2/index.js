@@ -21,7 +21,6 @@ const Question2 = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.main}>
-      {/* <StatusBar animated={true} backgroundColpor="#000" /> */}
 
       <ImageBackground
         source={Images.BackGround.backgroundHue}

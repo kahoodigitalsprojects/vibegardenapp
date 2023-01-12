@@ -321,7 +321,7 @@ const QComponents = ({
             data={data}
             style={{
               // height: 100,
-              width: '90%',
+              width: '92.5%',
               alignSelf: 'center',
             }}
             contentContainerStyle={{
@@ -330,11 +330,11 @@ const QComponents = ({
               padding: 5,
             }}
             showsVerticalScrollIndicator={false}
-            ItemSeparatorComponent={() => (
-              <View style={{marginHorizontal: 10}} />
-            )}
+            // ItemSeparatorComponent={() => (
+            //   <View style={{marginHorizontal: 15}} />
+            // )}
             renderItem={({item, index}) => (
-              <View style={{alignItems: 'center'}}>
+              <View style={{alignItems: 'center', marginRight: 1.5}}>
                 <TouchableOpacity
                   activeOpacity={1}
                   onPress={() => (index === true ? '' : setdata1(index))}
