@@ -18,6 +18,8 @@ const Header = ({
   logo,
   right,
   menu1,
+  heartPress,
+  plusPress,
   menu2,
   settings,
   leftIconSize = 20,
@@ -52,10 +54,12 @@ const Header = ({
             />
           </View>
           <View style={styles.heartPlusContainer}>
-            <TouchableOpacity style={[styles.iconRight, {marginRight: 5}]}>
+            <TouchableOpacity
+              onPress={plusPress}
+              style={[styles.iconRight, {marginRight: 5}]}>
               <Icon2 name="plus" size={20} color="#1C5C2E" style={{}} />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.iconRight}>
+            <TouchableOpacity onPress={heartPress} style={styles.iconRight}>
               <Icon name="heart" size={20} color="#EF3A71" />
             </TouchableOpacity>
           </View>

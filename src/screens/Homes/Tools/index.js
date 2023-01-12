@@ -45,6 +45,24 @@ const Tools = ({navigation}) => {
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1}}>
           <Header
+            heartPress={() =>
+              navigation.navigate('me', {
+                screen: 'FressBlooms',
+                params: {
+                  otherParam: 'Fresh Blooms',
+                  heart: true,
+                },
+              })
+            }
+            plusPress={() =>
+              navigation.navigate('me', {
+                screen: 'FressBlooms',
+                params: {
+                  otherParam: 'Fresh Blooms',
+                  plus: true,
+                },
+              })
+            }
             iconName="search1"
             OnPress={() => setVisible(true)}
             search={true}
