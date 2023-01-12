@@ -1,5 +1,12 @@
 import React from 'react';
-import {View, Text, SafeAreaView, StyleSheet, StatusBar} from 'react-native';
+import {
+  View,
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  StatusBar,
+} from 'react-native';
 import {Header, Pinkbtn} from '../../../componrnts';
 import {useBackButton} from '../../../hooks/BackHandler';
 
@@ -14,47 +21,51 @@ const EditScreen = ({navigation, route}) => {
   useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView>
-      <Header
-        iconName="left"
-        headertext={itemId}
-        headertextColor="#191919B8"
-        fontWeight="Bold"
-        fontSize={20}
-        leftIconSize={15}
-        OnPress={() => navigation.goBack()}
-      />
-      <View
-        style={{
-          width: '90%',
-          alignSelf: 'center',
-        }}>
-        <View style={{marginTop: 100}}>
-          <View style={styles.center}>
-            <Text style={[styles.Text]}>{otherParam1} </Text>
-          </View>
-          {two && (
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{flexGrow: 1}}>
+        <Header
+          iconName="left"
+          headertext={itemId}
+          headertextColor="#191919B8"
+          fontWeight="Bold"
+          fontSize={20}
+          leftIconSize={15}
+          OnPress={() => navigation.goBack()}
+        />
+        <View
+          style={{
+            width: '90%',
+            alignSelf: 'center',
+          }}>
+          <View style={{marginTop: 100}}>
             <View style={styles.center}>
-              <Text style={styles.Text}>{otherParam2} </Text>
+              <Text style={[styles.Text]}>{otherParam1} </Text>
             </View>
-          )}
-        </View>
-        <View style={{marginVertical: 15, alignSelf: 'center', width: '90%'}}>
-          <View
-            style={{
-              width: '100%',
-              alignSelf: 'center',
-              // backgroundColor: 'pink',
-              alignItems: 'center',
-            }}>
-            <Pinkbtn
-              shadow={'#00000019'}
-              onPress={() => navigation.goBack()}
-              width={'75%'}
-              btntxt={otherParam}
-            />
+            {two && (
+              <View style={styles.center}>
+                <Text style={styles.Text}>{otherParam2} </Text>
+              </View>
+            )}
+          </View>
+          <View style={{marginVertical: 15, alignSelf: 'center', width: '90%'}}>
+            <View
+              style={{
+                width: '100%',
+                alignSelf: 'center',
+                // backgroundColor: 'pink',
+                alignItems: 'center',
+              }}>
+              <Pinkbtn
+                shadow={'#00000019'}
+                onPress={() => navigation.goBack()}
+                width={'75%'}
+                btntxt={otherParam}
+              />
+            </View>
           </View>
         </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };

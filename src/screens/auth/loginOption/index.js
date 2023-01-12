@@ -5,6 +5,7 @@ import {
   SafeAreaView,
   Text,
   TouchableOpacity,
+  ScrollView,
   Image,
 } from 'react-native';
 import {Header} from '../../../componrnts';
@@ -17,69 +18,72 @@ const LoginOption = props => {
         iconName="arrowleft"
         OnPress={() => props.navigation.replace('Story1')}
       />
-
-      <View style={{width: '90%', alignSelf: 'center'}}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{flexGrow: 1}}>
         <View style={{width: '90%', alignSelf: 'center'}}>
-          <Text style={styles.headtext}>Welcome Back, {'\n'} Erin</Text>
-          <Text
-            style={{
-              marginTop: 20,
-              color: '#1C5C2E',
-              fontSize: 17,
-              fontFamily: 'BrandonGrotesque-Regular',
-            }}>
-            Let's Get You Setup With An Account
-          </Text>
-          <TouchableOpacity
-            style={{paddingLeft: 20, marginTop: -7}}
-            onPress={() => props.navigation.navigate('login')}>
-            <View
-              style={[styles.input, {marginVertical: 80, paddingRight: 20}]}>
-              <Image
-                source={Images.Icons.bluee}
-                style={{width: 40, height: 40}}
-              />
-
-              <Text
-                style={{
-                  marginTop: 15,
-                  textAlign: 'center',
-                  fontFamily: 'BrandonGrotesque-Medium',
-                  color: '#030303',
-                }}>
-                Sign Up With Email
-              </Text>
-            </View>
-          </TouchableOpacity>
-          <View
-            style={{
-              flexDirection: 'row',
-              alignSelf: 'center',
-              // marginTop: 50,
-            }}>
-            <Text style={styles.bottomLine}>Don't have an account? </Text>
-            <TouchableOpacity
-              // style={{marginTop: -2.5}}
-              onPress={() => {
-                props.navigation.navigate('signup', {
-                  showVerifyScreen: false,
-                });
+          <View style={{width: '90%', alignSelf: 'center'}}>
+            <Text style={styles.headtext}>Welcome Back, {'\n'} Erin</Text>
+            <Text
+              style={{
+                marginTop: 20,
+                color: '#1C5C2E',
+                fontSize: 17,
+                fontFamily: 'BrandonGrotesque-Regular',
               }}>
-              <Text
-                style={[
-                  styles.bottomLine,
-                  {
-                    fontSize: 18,
-                    textDecorationLine: 'underline',
-                    fontFamily: 'BrandonGrotesque-Bold',
-                  },
-                ]}>
-                Sign Up
-              </Text>
+              Let's Get You Setup With An Account
+            </Text>
+            <TouchableOpacity
+              style={{paddingLeft: 20, marginTop: -7}}
+              onPress={() => props.navigation.navigate('login')}>
+              <View
+                style={[styles.input, {marginVertical: 80, paddingRight: 20}]}>
+                <Image
+                  source={Images.Icons.bluee}
+                  style={{width: 40, height: 40}}
+                />
+
+                <Text
+                  style={{
+                    marginTop: 15,
+                    textAlign: 'center',
+                    fontFamily: 'BrandonGrotesque-Medium',
+                    color: '#030303',
+                  }}>
+                  Sign Up With Email
+                </Text>
+              </View>
             </TouchableOpacity>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignSelf: 'center',
+                // marginTop: 50,
+              }}>
+              <Text style={styles.bottomLine}>Don't have an account? </Text>
+              <TouchableOpacity
+                // style={{marginTop: -2.5}}
+                onPress={() => {
+                  props.navigation.navigate('signup', {
+                    showVerifyScreen: false,
+                  });
+                }}>
+                <Text
+                  style={[
+                    styles.bottomLine,
+                    {
+                      fontSize: 18,
+                      textDecorationLine: 'underline',
+                      fontFamily: 'BrandonGrotesque-Bold',
+                    },
+                  ]}>
+                  Sign Up
+                </Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };

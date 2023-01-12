@@ -19,48 +19,53 @@ const Success = ({route, navigation}) => {
   useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
-      <Header iconName="closesquareo" OnPress={() => navigation.pop(3)} />
-      <View
-        style={{
-          marginVertical: 25,
-          width: '90%',
-          alignSelf: 'center',
-        }}>
-        <View style={{marginVertical: 5, alignSelf: 'center'}}>
-          <Text
-            style={{
-              fontSize: 25,
-              textAlign: 'center',
-              color: '#afafaa',
-              marginVertical: 5,
-              fontFamily: 'BrandonGrotesque-Medium',
-            }}>
-            Success
-          </Text>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{flexGrow: 1}}>
+        <Header iconName="closesquareo" OnPress={() => navigation.pop(3)} />
 
-          <Text
-            style={{
-              fontSize: 28,
-              textAlign: 'center',
-              color: '#1C5C2E',
-              marginVertical: 10,
-              fontFamily: 'BrandonGrotesque-Medium',
-            }}>
-            Off You Go!
-          </Text>
-          <Text
-            style={{
-              marginVertical: 10,
-              fontSize: 18,
-              textAlign: 'center',
-              color: '#000',
-              lineHeight: 30,
-              fontFamily: 'BrandonGrotesque-Medium',
-            }}>
-            Your Cancelation Is Submitted {'\n'} Be Well!
-          </Text>
+        <View
+          style={{
+            marginVertical: 25,
+            width: '90%',
+            alignSelf: 'center',
+          }}>
+          <View style={{marginVertical: 5, alignSelf: 'center'}}>
+            <Text
+              style={{
+                fontSize: 25,
+                textAlign: 'center',
+                color: '#afafaa',
+                marginVertical: 5,
+                fontFamily: 'BrandonGrotesque-Medium',
+              }}>
+              Success
+            </Text>
+
+            <Text
+              style={{
+                fontSize: 28,
+                textAlign: 'center',
+                color: '#1C5C2E',
+                marginVertical: 10,
+                fontFamily: 'BrandonGrotesque-Medium',
+              }}>
+              Off You Go!
+            </Text>
+            <Text
+              style={{
+                marginVertical: 10,
+                fontSize: 18,
+                textAlign: 'center',
+                color: '#000',
+                lineHeight: 30,
+                fontFamily: 'BrandonGrotesque-Medium',
+              }}>
+              Your Cancelation Is Submitted {'\n'} Be Well!
+            </Text>
+          </View>
         </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
