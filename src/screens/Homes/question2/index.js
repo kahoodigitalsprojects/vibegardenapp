@@ -30,19 +30,13 @@ const Question2 = ({navigation}) => {
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1}}>
-          <View style={{alignSelf: 'center', width: '90%', marginTop: 15}}>
-            <Header
-              // color="#000"
-              marginRight={-40}
-              marginTop={-40}
-              fontSize={25}
-              iconName="closesquareo"
-              header2
-              color="#1C5C2E"
-              headertext="Resonance Finder"
-              OnPress={() => navigation.goBack()}
-            />
-          </View>
+          <Header
+            fontSize={25}
+            iconName="closesquareo"
+            headertextColor="#1C5C2E"
+            headertext="Resonance Finder"
+            OnPress={() => navigation.goBack()}
+          />
           <View style={{width: '100%', alignSelf: 'center'}}>
             <QComponents
               marginVertical={10}

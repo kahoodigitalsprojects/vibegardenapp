@@ -21,7 +21,6 @@ const Question3 = ({navigation}) => {
   useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
-      {/* <StatusBar animated={true} backgroundColor="#000" /> */}
       <ImageBackground
         source={Images.BackGround.backgroundHue}
         resizeMode="stretch"
@@ -29,25 +28,12 @@ const Question3 = ({navigation}) => {
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1}}>
-          <View
-            style={{
-              marginVertical: 10,
-              marginTop: 10,
-              width: '90%',
-              alignSelf: 'center',
-            }}>
-            <Header
-              marginRight={-40}
-              marginTop={-40}
-              color="#1C5C2E"
-              fontSize={25}
-              iconName="arrowleft"
-              header2
-              headertext="Resonance Finder"
-              fontfamily="BrandonGrotesque-Regular"
-              OnPress={() => navigation.goBack()}
-            />
-          </View>
+          <Header
+            headertextColor="#1C5C2E"
+            iconName="arrowleft"
+            headertext="Resonance Finder"
+            OnPress={() => navigation.goBack()}
+          />
 
           <View style={{width: '100%', alignSelf: 'center'}}>
             <QComponents

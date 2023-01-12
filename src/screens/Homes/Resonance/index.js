@@ -37,7 +37,6 @@ const Resonance = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.main}>
-      <StatusBar animated={true} backgroundColor="#000" />
       <ImageBackground
         source={Images.BackGround.backgroundHue}
         resizeMode="stretch"
@@ -45,12 +44,8 @@ const Resonance = ({navigation}) => {
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1}}>
+          <Header iconName="closesquareo" OnPress={() => navigation.goBack()} />
           <View style={styles.container}>
-            <Header
-              iconName="closesquareo"
-              header2
-              OnPress={() => navigation.goBack()}
-            />
             <View style={{marginTop: 10}}>
               <Text style={styles.text}>Select Your Topic Resonance?</Text>
               <View style={styles.row}>

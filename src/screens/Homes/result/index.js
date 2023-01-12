@@ -26,30 +26,23 @@ const Result = ({navigation, route}) => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        {/* <StatusBar animated={true} backgroundColor="#000" /> */}
+        <Header
+          iconName="closesquareo"
+          headertextColor="#1C5C2E"
+          OnPress={() => {
+            navigation.reset({
+              index: 0,
+              routes: [{name: 'me'}, {name: 'tools'}],
+            });
+          }}
+          headertext="Resonance Finder"
+        />
         <View
           style={{
             width: '90%',
             alignSelf: 'center',
             marginTop: 15,
           }}>
-          <Header
-            iconName="closesquareo"
-            marginTop={-40}
-            fontSize={25}
-            color={'#1C5C2E'}
-            header2
-            // OnPress={backoption}
-            OnPress={() => {
-              navigation.reset({
-                index: 0,
-                routes: [{name: 'me'}, {name: 'tools'}],
-              });
-            }}
-            // OnPress={backoption}
-            headertext="Resonance Finder"
-            marginRight={-30}
-          />
           <View style={{marginVertical: 10}}>
             <Text
               style={{
