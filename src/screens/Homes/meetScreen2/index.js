@@ -9,8 +9,8 @@ import {
   ImageBackground,
   StatusBar,
   ScrollView,
-  SafeAreaView,
 } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 import {Header, Percentage, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';

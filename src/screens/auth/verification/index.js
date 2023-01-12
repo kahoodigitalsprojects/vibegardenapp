@@ -7,81 +7,77 @@ import {Header, Pinkbtn} from '../../../componrnts';
 const Verify = ({navigation}) => {
   return (
     <SafeAreaView style={styles.main}>
-      <SafeAreaView
+      <Header
+        iconName="arrowleft"
+        header2
+        OnPress={() => navigation.goBack()}
+      />
+      <KeyboardAwareScrollView
+        keyboardShouldPersistTaps="handled"
+        enableOnAndroid={true}
+        enableAutomaticScroll={true}
+        bounces={false}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        <Header
-          iconName="arrowleft"
-          header2
-          OnPress={() => navigation.goBack()}
-        />
-        <KeyboardAwareScrollView
-          keyboardShouldPersistTaps="handled"
-          enableOnAndroid={true}
-          enableAutomaticScroll={true}
-          bounces={false}
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={{flexGrow: 1}}>
-          <View style={{width: '95%', marginTop: 30}}>
+        <View style={{width: '95%', marginTop: 30}}>
+          <View
+            style={{
+              width: '100%',
+              alignItems: 'flex-start',
+              marginLeft: -15,
+              marginBottom: -25,
+            }}>
+            <EnvelopeSvg />
+          </View>
+          <View style={{width: '90%', alignSelf: 'center'}}>
+            <Text
+              style={{
+                width: '74%',
+                fontSize: 16,
+                color: '#1C5C2E',
+                fontFamily: 'BrandonGrotesque-Medium',
+              }}>
+              Show Us Its You Please Check Your Email To Continue
+            </Text>
+
+            <View style={styles.input}>
+              <TextInput placeholder="" />
+            </View>
             <View
               style={{
-                width: '100%',
-                alignItems: 'flex-start',
-                marginLeft: -15,
-                marginBottom: -25,
+                justifyContent: 'center',
+                flexDirection: 'row',
+                marginTop: 10,
               }}>
-              <EnvelopeSvg />
-            </View>
-            <View style={{width: '90%', alignSelf: 'center'}}>
+              <Text style={styles.txt1}>Didn't sent email?</Text>
               <Text
-                style={{
-                  width: '74%',
-                  fontSize: 16,
-                  color: '#1C5C2E',
-                  fontFamily: 'BrandonGrotesque-Medium',
-                }}>
-                Show Us Its You Please Check Your Email To Continue
+                style={[
+                  styles.txt1,
+                  {
+                    color: 'red',
+                    marginLeft: 5,
+                  },
+                ]}>
+                Resend.
               </Text>
-
-              <View style={styles.input}>
-                <TextInput placeholder="" />
-              </View>
-              <View
-                style={{
-                  justifyContent: 'center',
-                  flexDirection: 'row',
-                  marginTop: 10,
-                }}>
-                <Text style={styles.txt1}>Didn't sent email?</Text>
-                <Text
-                  style={[
-                    styles.txt1,
-                    {
-                      color: 'red',
-                      marginLeft: 5,
-                    },
-                  ]}>
-                  Resend.
-                </Text>
-              </View>
-              <View
-                style={{
-                  marginTop: 20,
-                  width: '100%',
-                  alignItems: 'center',
-                  alignSelf: 'center',
-                }}>
-                <Pinkbtn
-                  shadow={'#CD258D'}
-                  onPress={() => navigation.navigate('journey')}
-                  width={'70%'}
-                  btntxt="Continue"
-                />
-              </View>
+            </View>
+            <View
+              style={{
+                marginTop: 20,
+                width: '100%',
+                alignItems: 'center',
+                alignSelf: 'center',
+              }}>
+              <Pinkbtn
+                shadow={'#CD258D'}
+                onPress={() => navigation.navigate('journey')}
+                width={'70%'}
+                btntxt="Continue"
+              />
             </View>
           </View>
-        </KeyboardAwareScrollView>
-      </SafeAreaView>
+        </View>
+      </KeyboardAwareScrollView>
     </SafeAreaView>
   );
 };

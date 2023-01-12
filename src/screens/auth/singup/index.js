@@ -7,17 +7,16 @@ import {
   TouchableOpacity,
   Keyboard,
   ScrollView,
-  SafeAreaView,
 } from 'react-native';
 import {Header, Pinkbtn} from '../../../componrnts';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {LoginLogoSmall} from '../../../assests/svgs/LoginSvgs';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import {SafeAreaView} from 'react-native-safe-area-context';
 const SignUp = ({route, navigation}) => {
   const {showVerifyScreen} = route.params;
   return (
     <SafeAreaView style={styles.main}>
-      {/* <View style={styles.screenHeader}> */}
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
@@ -28,7 +27,6 @@ const SignUp = ({route, navigation}) => {
             navigation.navigate('loginoption');
           }}
         />
-        {/* </View> */}
         <KeyboardAwareScrollView
           keyboardShouldPersistTaps="handled"
           enableOnAndroid={true}

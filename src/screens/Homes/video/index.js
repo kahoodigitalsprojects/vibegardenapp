@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {
   View,
   Text,
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   TouchableOpacity,
@@ -14,6 +13,7 @@ import Images from '../../../constants';
 import All from '../../../componrnts/all';
 import {useBackButton} from '../../../hooks/BackHandler';
 import {GreenIcon1, GreenIcon2} from '../../../assests/svgs/GroundworkSvg';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const Video = ({route, navigation}) => {
   const [state, setState] = useState(icon1);

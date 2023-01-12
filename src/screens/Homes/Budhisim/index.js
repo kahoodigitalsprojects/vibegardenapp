@@ -4,13 +4,13 @@ import {
   Text,
   StyleSheet,
   Image,
-  SafeAreaView,
   ScrollView,
   FlatList,
   ImageBackground,
   StatusBar,
   TouchableOpacity,
 } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 import {Header, SeeAll, Userdetails} from '../../../componrnts';
 import All from '../../../componrnts/all';

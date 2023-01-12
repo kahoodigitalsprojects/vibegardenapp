@@ -8,7 +8,6 @@ import {
   TouchableOpacity,
   StatusBar,
   ScrollView,
-  SafeAreaView,
   ImageBackground,
 } from 'react-native';
 
@@ -17,6 +16,7 @@ import {Header, Pinkbtn} from '../../../componrnts';
 import LinearGradient from 'react-native-linear-gradient';
 
 import Images from '../../../constants';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const Meet = props => {
   const [data2, setData2] = useState({});

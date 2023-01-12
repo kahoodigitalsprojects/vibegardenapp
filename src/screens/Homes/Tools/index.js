@@ -3,15 +3,11 @@ import {
   View,
   Text,
   StyleSheet,
-  Image,
-  SafeAreaView,
   ScrollView,
   FlatList,
-  StatusBar,
-  TouchableOpacity,
   ImageBackground,
 } from 'react-native';
-import {act} from 'react-test-renderer';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {Greenbox, Header, Imgbox, SeeAll, StoryData} from '../../../componrnts';
 import All from '../../../componrnts/all';
 import SearchModal from '../../../componrnts/SearchModal';

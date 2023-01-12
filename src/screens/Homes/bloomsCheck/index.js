@@ -8,7 +8,6 @@ import {
   TouchableOpacity,
   StatusBar,
   ScrollView,
-  SafeAreaView,
 } from 'react-native';
 
 import {Header, Percentage} from '../../../componrnts';
@@ -18,6 +17,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import Images from '../../../constants';
 import All from '../../../componrnts/all';
 import {useBackButton} from '../../../hooks/BackHandler';
+import {SafeAreaView} from 'react-native-safe-area-context';
 const BloomsCheck = ({route, navigation, newtext, Heading}) => {
   // const {Image1, Image2, Image3, Image4, newtext, Image5, Image6, Heading} =
   //   route.params;

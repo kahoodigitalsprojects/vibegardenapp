@@ -2,12 +2,12 @@ import React from 'react';
 import {
   StyleSheet,
   View,
-  SafeAreaView,
   Text,
   TouchableOpacity,
   ScrollView,
   Image,
 } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {Header} from '../../../componrnts';
 import Images from '../../../constants';
 

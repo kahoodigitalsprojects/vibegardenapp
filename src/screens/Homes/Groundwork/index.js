@@ -4,12 +4,12 @@ import {
   Text,
   StyleSheet,
   Image,
-  SafeAreaView,
   ScrollView,
   FlatList,
   StatusBar,
   ImageBackground,
 } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {Greenbox, Header, Imgbox, SeeAll, StoryData} from '../../../componrnts';
 import All from '../../../componrnts/all';
 import MainBox from '../../../componrnts/mainbox';

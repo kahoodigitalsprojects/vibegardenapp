@@ -3,7 +3,6 @@ import {
   View,
   Text,
   ScrollView,
-  SafeAreaView,
   StatusBar,
   StyleSheet,
   Image,
@@ -22,6 +21,7 @@ import {
   StarSvg,
   SpiralSvg,
 } from '../../../assests/svgs/MeSvgs';
+import {SafeAreaView} from 'react-native-safe-area-context';
 const Me = ({navigation}) => {
   const [visible, setVisible] = useState(false);
 

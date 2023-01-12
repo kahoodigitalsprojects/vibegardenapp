@@ -37,7 +37,7 @@ const BlueLotus = ({route, navigation}) => {
             OnPress={() => navigation.goBack()}
           />
         </View>
-        <View style={{marginTop: 10,}}>
+        <View style={{marginTop: 10}}>
           <StoryData storytext1 storytext={newtext} storyimage Img={Image1} />
         </View>
       </ScrollView>

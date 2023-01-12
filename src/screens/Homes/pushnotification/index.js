@@ -2,7 +2,6 @@ import React from 'react';
 import {
   View,
   Text,
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   StatusBar,
@@ -12,6 +11,7 @@ import {
 import {Header, Pinkbtn, QComponents, Switch1} from '../../../componrnts';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {useBackButton} from '../../../hooks/BackHandler';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const Pushnotification = ({navigation}) => {
   //BackHandler
@@ -86,7 +86,7 @@ const Pushnotification = ({navigation}) => {
               <Pinkbtn
                 shadow={'#00000029'}
                 onPress={() => navigation.goBack()}
-                width={'60%'}
+                width={'70%'}
                 btntxt="Save"
               />
             </View>

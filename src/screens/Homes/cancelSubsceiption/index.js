@@ -2,7 +2,6 @@ import React from 'react';
 import {
   View,
   Text,
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   StatusBar,
@@ -12,6 +11,7 @@ import {
 import {Header, Pinkbtn, QComponents} from '../../../componrnts';
 import Icon from 'react-native-vector-icons/Feather';
 import {useBackButton} from '../../../hooks/BackHandler';
+import {SafeAreaView} from 'react-native-safe-area-context';
 const CancelSubscription = ({navigation}) => {
   //BackHandler
   const onBackPress = () => {

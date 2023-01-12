@@ -2,12 +2,12 @@ import React, {useState} from 'react';
 import {
   View,
   Text,
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   StatusBar,
   ImageBackground,
 } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 import {Header, Pinkbtn, QComponents} from '../../../componrnts';
 import Images from '../../../constants';

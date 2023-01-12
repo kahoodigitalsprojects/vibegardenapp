@@ -1,12 +1,12 @@
 import React from 'react';
 import {
   View,
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   StatusBar,
   ImageBackground,
 } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 import {Header, Pinkbtn, QComponents} from '../../../componrnts';
 import Images from '../../../constants';
@@ -21,7 +21,6 @@ const Question2 = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.main}>
-
       <ImageBackground
         source={Images.BackGround.backgroundHue}
         resizeMode="stretch"

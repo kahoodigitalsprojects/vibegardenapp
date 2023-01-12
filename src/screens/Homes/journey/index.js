@@ -8,13 +8,13 @@ import {
   TouchableOpacity,
   StatusBar,
   ScrollView,
-  SafeAreaView,
   ImageBackground,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import LinearGradient from 'react-native-linear-gradient';
 import {Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const Journey = props => {
   const [data1, setdata1] = useState(0);

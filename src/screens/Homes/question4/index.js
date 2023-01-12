@@ -2,24 +2,21 @@ import React, {useState} from 'react';
 import {
   View,
   Text,
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   ImageBackground,
   StatusBar,
 } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {Header, Pinkbtn, QComponents} from '../../../componrnts';
-import ResultComponents from '../../../componrnts/resultcompo';
 import Images from '../../../constants';
 import {useBackButton} from '../../../hooks/BackHandler';
-
 const Question3 = ({navigation}) => {
   const onBackPress = () => {
     navigation.goBack();
     return true;
   };
   useBackButton(navigation, onBackPress);
-
   const [state, setState] = useState();
   return (
     <>

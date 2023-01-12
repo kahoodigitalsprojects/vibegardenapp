@@ -1,12 +1,6 @@
 import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  StatusBar,
-} from 'react-native';
+import {View, Text, ScrollView, StyleSheet, StatusBar} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {Header} from '../../../componrnts';
 import {useBackButton} from '../../../hooks/BackHandler';
 
@@ -23,7 +17,6 @@ const Success = ({route, navigation}) => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
         <Header iconName="closesquareo" OnPress={() => navigation.pop(3)} />
-
         <View
           style={{
             marginVertical: 25,

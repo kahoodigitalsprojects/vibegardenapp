@@ -9,7 +9,6 @@ import {
   StatusBar,
   ImageBackground,
   ScrollView,
-  SafeAreaView,
 } from 'react-native';
 
 import {Header, Percentage, Pinkbtn} from '../../../componrnts';
@@ -17,6 +16,7 @@ import {Header, Percentage, Pinkbtn} from '../../../componrnts';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Images from '../../../constants';
 import LinearGradient from 'react-native-linear-gradient';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const ChuchuasDetails = ({route, navigation}) => {
   const {Image1, Image2, Image3, Image4, newtext, Image5, Image6, Heading} =

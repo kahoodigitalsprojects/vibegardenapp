@@ -2,7 +2,6 @@ import React, {startTransition, useState} from 'react';
 import {
   View,
   Text,
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   StatusBar,
@@ -14,6 +13,7 @@ import {Header, Pinkbtn, QComponents} from '../../../componrnts';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Images from '../../../constants';
 import {useBackButton} from '../../../hooks/BackHandler';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const Contactus = ({navigation}) => {
   //BackHandler

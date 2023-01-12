@@ -2,7 +2,6 @@ import React from 'react';
 import {
   View,
   Text,
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   StatusBar,
@@ -12,6 +11,7 @@ import {
 import {Header} from '../../../componrnts';
 import {useBackButton} from '../../../hooks/BackHandler';
 import Images from '../../../constants';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const Star = ({navigation}) => {
   const onBackPress = () => {
