@@ -31,14 +31,16 @@ const LoginOption = props => {
             }}>
             Let's Get You Setup With An Account
           </Text>
-          <View style={[styles.input, {marginVertical: 80, paddingRight: 20}]}>
-            <Image
-              source={Images.Icons.bluee}
-              style={{width: 40, height: 40}}
-            />
-            <TouchableOpacity
-              style={{paddingLeft: 20, marginTop: -7}}
-              onPress={() => props.navigation.navigate('login')}>
+          <TouchableOpacity
+            style={{paddingLeft: 20, marginTop: -7}}
+            onPress={() => props.navigation.navigate('login')}>
+            <View
+              style={[styles.input, {marginVertical: 80, paddingRight: 20}]}>
+              <Image
+                source={Images.Icons.bluee}
+                style={{width: 40, height: 40}}
+              />
+
               <Text
                 style={{
                   marginTop: 15,
@@ -48,9 +50,8 @@ const LoginOption = props => {
                 }}>
                 Sign Up With Email
               </Text>
-            </TouchableOpacity>
-          </View>
-
+            </View>
+          </TouchableOpacity>
           <View
             style={{
               flexDirection: 'row',

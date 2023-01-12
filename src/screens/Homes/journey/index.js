@@ -74,7 +74,6 @@ const Journey = props => {
             </View>
             <View style={{}}>
               <FlatList
-                style={{height: 50, backgroundColor: 'red', flexGrow: 0}}
                 data={Data}
                 numColumns={2}
                 renderItem={({item, index}) => {
