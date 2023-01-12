@@ -14,24 +14,21 @@ const EditScreen = ({navigation, route}) => {
   useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView>
-      {/* <StatusBar animated={true} backgroundColor="#000" /> */}
+      <Header
+        iconName="left"
+        headertext={itemId}
+        headertextColor="#191919B8"
+        fontWeight="Bold"
+        fontSize={20}
+        leftIconSize={15}
+        OnPress={() => navigation.goBack()}
+      />
       <View
         style={{
-          marginTop: 20,
           width: '90%',
           alignSelf: 'center',
         }}>
-        <Header
-          iconName="left"
-          marginTop={-40}
-          marginRight={-40}
-          header2
-          headertext={itemId}
-          fontSize={25}
-          color="#191919B8"
-          OnPress={() => navigation.goBack()}
-        />
-        <View style={{marginTop: 70}}>
+        <View style={{marginTop: 100}}>
           <View style={styles.center}>
             <Text style={[styles.Text]}>{otherParam1} </Text>
           </View>

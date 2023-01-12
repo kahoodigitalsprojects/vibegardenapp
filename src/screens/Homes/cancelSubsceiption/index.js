@@ -24,30 +24,21 @@ const CancelSubscription = ({navigation}) => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        <StatusBar animated={true} backgroundColor="#000" />
-        <View
-          style={{
-            marginVertical: 10,
+        <Header
+          iconName="left"
+          headertext="Cancle Subscriptions"
+          headertextColor="#191919B8"
+          fontWeight="Bold"
+          fontSize={20}
+          leftIconSize={15}
+          OnPress={() => navigation.goBack()}
+        />
 
-            width: '90%',
-            alignSelf: 'center',
-          }}>
-          <Header
-            marginTop={-40}
-            iconName="left"
-            marginLeft={40}
-            color="#191919B8"
-            fontSize={20}
-            header2
-            headertext="Cancle Subscriptions"
-            OnPress={() => navigation.goBack()}
-          />
-        </View>
         <View
           style={{
             alignSelf: 'center',
           }}>
-          <View style={{marginTop: -40, width: '88%'}}>
+          <View style={{marginTop: -15, width: '88%'}}>
             <QComponents
               textforvideo="Good bye Thanks!"
               icontwon

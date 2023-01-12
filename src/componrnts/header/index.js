@@ -16,7 +16,7 @@ const Header = ({
   heart,
   iconName,
   search,
-  fontSize,
+  fontSize = 25,
   gbg,
   flower,
   img23,
@@ -41,6 +41,10 @@ const Header = ({
   right,
   menu1,
   menu2,
+  settings,
+  leftIconSize = 20,
+  fontWeight = 'Medium',
+  textToLeft,
 }) => {
   const [state, setState] = useState(false);
   return (
@@ -60,7 +64,7 @@ const Header = ({
               }}>
               <Icon2
                 name={iconName}
-                size={20}
+                size={leftIconSize}
                 color={search ? '#1C5C2E' : '#fff'}
               />
             </TouchableOpacity>
@@ -72,7 +76,26 @@ const Header = ({
               style={{width: 40, height: 40}}
             />
           </View>
-          <View style={{flex: 1, backgroundColor: 'yellow', height: 40}}></View>
+          <View
+            style={{
+              flex: 1,
+              height: 40,
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'flex-end',
+            }}>
+            <TouchableOpacity style={[styles.iconRight, {marginRight: 5}]}>
+              <Icon2 name="plus" size={20} color="#1C5C2E" style={{}} />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.iconRight}>
+              <Icon
+                name="heart"
+                size={20}
+                color="#EF3A71"
+                // style={{marginTop: hearttop, marginLeft: heartleft1}}
+              />
+            </TouchableOpacity>
+          </View>
         </>
       ) : (
         <>
@@ -88,7 +111,7 @@ const Header = ({
             }}>
             <Icon2
               name={iconName}
-              size={20}
+              size={leftIconSize}
               color={search ? '#1C5C2E' : '#fff'}
             />
           </TouchableOpacity>
@@ -99,14 +122,30 @@ const Header = ({
               style={{width: 40, height: 40}}
             />
           ) : (
-            <Text
+            <View
               style={{
-                fontSize: 25,
-                color: headertextColor,
-                fontFamily: 'BrandonGrotesque-Medium',
+                flexDirection: 'row',
+                marginRight: textToLeft ? 'auto' : 0,
+                marginLeft: textToLeft ? 15 : 0,
+                alignItems: 'center',
+                justifyContent: 'center',
               }}>
-              {headertext}
-            </Text>
+              {settings && (
+                <Image
+                  source={Images.Imgs.lotus1}
+                  resizeMode="contain"
+                  style={{width: 34, height: 34, marginRight: 10}}
+                />
+              )}
+              <Text
+                style={{
+                  fontSize: fontSize,
+                  color: headertextColor,
+                  fontFamily: `BrandonGrotesque-${fontWeight}`,
+                }}>
+                {headertext}
+              </Text>
+            </View>
           )}
           {toggle ? (
             <View>
@@ -197,6 +236,14 @@ const styles = StyleSheet.create({
     height: 43,
     width: 43,
     borderRadius: 12,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  iconRight: {
+    width: 30,
+    height: 30,
+    borderRadius: 12,
+    // backgroundColor: search ? 'transparent' : '#1C5C2E',
     justifyContent: 'center',
     alignItems: 'center',
   },

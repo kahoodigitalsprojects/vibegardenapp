@@ -24,6 +24,7 @@ import {
   SubscriptionSvg,
   TermsSvg,
 } from '../../../assests/svgs/SettingsSvgs';
+import {Header} from '../../../componrnts';
 const Settings = ({navigation}) => {
   //BackHandler
   const onBackPress = () => {
@@ -36,21 +37,16 @@ const Settings = ({navigation}) => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        {/* <StatusBar animated={true} backgroundColor="#000" /> */}
-        <View style={{marginVertical: 10, width: '90%', alignSelf: 'center'}}>
-          <Header2
-            marginTop={-40}
-            iconName="closesquareo"
-            header2
-            OnPress={() => navigation.goBack()}
-            headertext="Erin's Settings"
-            fontSize={20}
-            color={'#191919B8'}
-            flower
-            img23={Images.Imgs.lotus1}
-          />
-        </View>
-        <View style={{marginVertical: 10, marginTop: 80}}>
+        <Header
+          fontSize={20}
+          fontWeight="Bold"
+          headertextColor="#191919B8"
+          iconName="closesquareo"
+          headertext="Erin's Settings"
+          settings={true}
+          OnPress={() => navigation.goBack()}
+        />
+        <View style={{marginTop: 80}}>
           <View style={styles.firstview}>
             <View style={styles.headingRow}>
               <Text style={styles.textA}>Notification</Text>
@@ -260,6 +256,7 @@ const Settings = ({navigation}) => {
             </TouchableOpacity>
           </View>
         </View>
+        <View style={{marginVertical: 15}} />
       </ScrollView>
     </SafeAreaView>
   );

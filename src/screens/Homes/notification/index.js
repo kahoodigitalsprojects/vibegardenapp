@@ -24,33 +24,23 @@ const Notification = props => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        {/* <StatusBar
-          animated={true}
-          backgroundColor="#000"
-          // barStyle={statusBarStyle}
-          // showHideTransition={statusBarTransition}
-          // hidden={hidden}
-        /> */}
+        <Header
+          fontSize={20}
+          fontWeight="Bold"
+          headertextColor="#191919B8"
+          iconName="closesquareo"
+          headertext="Notification"
+          OnPress={() => props.navigation.goBack()}
+        />
         <View
           style={{
-            marginVertical: 10,
-            // marginTop: 20,
             width: '90%',
             alignSelf: 'center',
           }}>
-          <Header
-            marginTop={-40}
-            fontSize={25}
-            color="#191919B8"
-            iconName="closesquareo"
-            header2
-            headertext="Notification"
-            OnPress={() => props.navigation.goBack()}
-          />
           <View
             style={{
               width: '100%',
-              marginVertical: 15,
+              marginVertical: 10,
               justifyContent: 'flex-end',
             }}>
             <Text

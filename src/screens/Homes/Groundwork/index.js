@@ -56,45 +56,13 @@ const GroundWork = ({navigation}) => {
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1}}>
-          {/* <StatusBar animated={true} backgroundColor="#000" /> */}
-          <View
-            style={{
-              width: '90%',
-              alignSelf: 'center',
-              marginVertical: 5,
-              marginTop: 25,
-            }}>
-            <Header
-              marginTop={-30}
-              marginLeft={-15}
-              size={22}
-              colorplus={'green'}
-              marginTopplus={-2}
-              color="green"
-              img1
-              heartplus
-              search1="search1"
-              homeheader={true}
-              search={() => setVisible(true)}
-              heart
-              plus
-            />
-            {/* <Header
-            marginTop={-30}
-            marginLeft={-15}
-            size={22}
-            colorplus={'green'}
-            marginTopplus={-2}
-            color="green"
-            img1
-            heartplus
-            search1="search1"
-            homeheader={true}
-            search={props.navigation.navigate('Homes', {screen: 'Search'})}
-            heart
-            // plus
-          /> */}
-          </View>
+          <Header
+            iconName="search1"
+            OnPress={() => setVisible(true)}
+            search={true}
+            logo={true}
+            right="heartplus"
+          />
           <View style={styles.Box1}>
             <View style={{width: '90%', alignSelf: 'center'}}>
               <Text

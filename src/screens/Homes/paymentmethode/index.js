@@ -24,54 +24,100 @@ const PaymentMethod = ({navigation, route}) => {
   useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
-        {/* <StatusBar animated={true} backgroundColor="#000" /> */}
-        <View
+      <Header
+        iconName="left"
+        headertext="Manage Subscriptions"
+        headertextColor="#191919B8"
+        fontWeight="Bold"
+        fontSize={20}
+        leftIconSize={15}
+        OnPress={() => navigation.goBack()}
+      />
+      <View
+        style={{
+          marginVertical: 10,
+          width: '90%',
+          alignSelf: 'center',
+        }}>
+        <Text
           style={{
-            marginVertical: 10,
-            marginTop: 10,
-            width: '90%',
-            alignSelf: 'center',
+            fontSize: 37,
+            textAlign: 'center',
+            color: '#000',
+            fontWeight: '500',
+            marginVertical: 5,
+            marginTop: 30,
+            lineHeight: 39,
+            fontFamily: 'BrandonGrotesque-Bold',
           }}>
-          <Header
-            iconName="left"
-            marginLeft={30}
-            header4
-            OnPress={() => navigation.goBack()}
-            color="#000"
-            fontSize={20}
-            headertext2={headertext1}
-          />
-          <View style={{marginTop: 30}}>
+          Payment Details
+        </Text>
+        <View style={{}}>
+          <View style={{}}>
             <Text
               style={{
-                fontSize: 37,
+                fontSize: 15,
                 textAlign: 'center',
                 color: '#000',
-                fontWeight: '500',
-                marginVertical: 5,
-                lineHeight: 39,
+                marginVertical: 10,
                 fontFamily: 'BrandonGrotesque-Bold',
               }}>
-              Payment Details
+              Credit Card Or Debit Card
             </Text>
           </View>
-          <View style={{}}>
-            <View style={{}}>
+          <View style={{width: '90%', alignSelf: 'center'}}>
+            <Text
+              style={{
+                fontSize: 10,
+                color: '#1C5C2E',
+                fontWeight: '400',
+                margin: 5,
+                fontFamily: 'BrandonGrotesque-Regular',
+              }}>
+              Card Number
+            </Text>
+            <View
+              style={{
+                borderWidth: 1,
+                borderColor: 'green',
+                borderRadius: 20,
+                backgroundColor: '#fff',
+                flexDirection: 'row',
+                padding: 15,
+                shadowColor: '#000',
+                shadowOffset: {
+                  width: 0,
+                  height: 2,
+                },
+                shadowOpacity: 0.25,
+                shadowRadius: 3.84,
+
+                elevation: 15,
+              }}>
               <Text
                 style={{
-                  fontSize: 15,
-                  textAlign: 'center',
-                  color: '#000',
-                  marginVertical: 10,
-                  fontFamily: 'BrandonGrotesque-Bold',
+                  fontSize: 10,
+                  color: '#1C5C2E',
+                  fontWeight: '400',
+                  marginLeft: 10,
+                  fontFamily: 'BrandonGrotesque-Regular',
                 }}>
-                Credit Card Or Debit Card
+                4860567867261538
               </Text>
             </View>
-            <View style={{width: '90%', alignSelf: 'center'}}>
+          </View>
+          <View
+            style={{
+              width: '90%',
+              alignSelf: 'center',
+              flexDirection: 'row',
+              justifyContent: 'space-around',
+              marginTop: 10,
+            }}>
+            <View
+              style={{
+                width: '45%',
+              }}>
               <Text
                 style={{
                   fontSize: 10,
@@ -80,7 +126,7 @@ const PaymentMethod = ({navigation, route}) => {
                   margin: 5,
                   fontFamily: 'BrandonGrotesque-Regular',
                 }}>
-                Card Number
+                Expiration Date
               </Text>
               <View
                 style={{
@@ -97,7 +143,6 @@ const PaymentMethod = ({navigation, route}) => {
                   },
                   shadowOpacity: 0.25,
                   shadowRadius: 3.84,
-
                   elevation: 15,
                 }}>
                 <Text
@@ -108,127 +153,75 @@ const PaymentMethod = ({navigation, route}) => {
                     marginLeft: 10,
                     fontFamily: 'BrandonGrotesque-Regular',
                   }}>
-                  4860567867261538
+                  5/2025
                 </Text>
               </View>
             </View>
             <View
               style={{
-                width: '90%',
-                alignSelf: 'center',
-                flexDirection: 'row',
-                justifyContent: 'space-around',
-                marginTop: 10,
+                width: '45%',
               }}>
+              <Text
+                style={{
+                  fontSize: 10,
+                  color: '#1C5C2E',
+                  fontWeight: '400',
+                  margin: 5,
+                  fontFamily: 'BrandonGrotesque-Regular',
+                }}>
+                Security Code
+              </Text>
               <View
                 style={{
-                  width: '45%',
+                  borderWidth: 1,
+                  borderColor: 'green',
+                  borderRadius: 20,
+                  backgroundColor: '#fff',
+                  flexDirection: 'row',
+                  padding: 15,
+                  shadowColor: '#000',
+                  shadowOffset: {
+                    width: 0,
+                    height: 2,
+                  },
+                  shadowOpacity: 0.25,
+                  shadowRadius: 3.84,
+                  elevation: 15,
                 }}>
                 <Text
                   style={{
                     fontSize: 10,
                     color: '#1C5C2E',
                     fontWeight: '400',
-                    margin: 5,
+                    marginLeft: 10,
                     fontFamily: 'BrandonGrotesque-Regular',
                   }}>
-                  Expiration Date
+                  147
                 </Text>
-                <View
-                  style={{
-                    borderWidth: 1,
-                    borderColor: 'green',
-                    borderRadius: 20,
-                    backgroundColor: '#fff',
-                    flexDirection: 'row',
-                    padding: 15,
-                    shadowColor: '#000',
-                    shadowOffset: {
-                      width: 0,
-                      height: 2,
-                    },
-                    shadowOpacity: 0.25,
-                    shadowRadius: 3.84,
-                    elevation: 15,
-                  }}>
-                  <Text
-                    style={{
-                      fontSize: 10,
-                      color: '#1C5C2E',
-                      fontWeight: '400',
-                      marginLeft: 10,
-                      fontFamily: 'BrandonGrotesque-Regular',
-                    }}>
-                    5/2025
-                  </Text>
-                </View>
-              </View>
-              <View
-                style={{
-                  width: '45%',
-                }}>
-                <Text
-                  style={{
-                    fontSize: 10,
-                    color: '#1C5C2E',
-                    fontWeight: '400',
-                    margin: 5,
-                    fontFamily: 'BrandonGrotesque-Regular',
-                  }}>
-                  Security Code
-                </Text>
-                <View
-                  style={{
-                    borderWidth: 1,
-                    borderColor: 'green',
-                    borderRadius: 20,
-                    backgroundColor: '#fff',
-                    flexDirection: 'row',
-                    padding: 15,
-                    shadowColor: '#000',
-                    shadowOffset: {
-                      width: 0,
-                      height: 2,
-                    },
-                    shadowOpacity: 0.25,
-                    shadowRadius: 3.84,
-                    elevation: 15,
-                  }}>
-                  <Text
-                    style={{
-                      fontSize: 10,
-                      color: '#1C5C2E',
-                      fontWeight: '400',
-                      marginLeft: 10,
-                      fontFamily: 'BrandonGrotesque-Regular',
-                    }}>
-                    147
-                  </Text>
-                </View>
-              </View>
-            </View>
-
-            <View style={{marginTop: 20}}>
-              <Greenbtn
-                width={'60%'}
-                text1="Update"
-                onPress={() => {
-                  pressbtn ? setState(!state) : setState1(!state1);
-                }}
-              />
-            </View>
-            <View style={{marginTop: 30}}>
-              <View style={{width: '90%', height: 28, alignSelf: 'center'}}>
-                <Image
-                  source={Images.Logos.payment}
-                  resizeMode="contain"
-                  style={{width: '100%', height: '100%'}}
-                />
               </View>
             </View>
           </View>
+
+          <View style={{marginTop: 20}}>
+            <Greenbtn
+              width={'60%'}
+              text1="Update"
+              onPress={() => {
+                pressbtn ? setState(!state) : setState1(!state1);
+              }}
+            />
+          </View>
+          <View style={{marginTop: 30}}>
+            <View style={{width: '90%', height: 28, alignSelf: 'center'}}>
+              <Image
+                source={Images.Logos.payment}
+                resizeMode="contain"
+                style={{width: '100%', height: '100%'}}
+              />
+            </View>
+          </View>
         </View>
-      </ScrollView>
+      </View>
 
       <View>
         <PopUp

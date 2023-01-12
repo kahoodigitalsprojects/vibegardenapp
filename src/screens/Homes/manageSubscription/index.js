@@ -25,22 +25,16 @@ const ManageSubscription = ({navigation}) => {
   useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
-      {/* <StatusBar animated={true} backgroundColor="#000" /> */}
-      {/* <ScrollView
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}> */}
-      <View style={{marginVertical: 10, width: '90%', alignSelf: 'center'}}>
-        <Header
-          marginTop={-40}
-          iconName="left"
-          marginLeft={30}
-          color="#191919B8"
-          header2
-          OnPress={() => navigation.goBack()}
-          headertext="Manage Subscriptions"
-          fontSize={20}
-        />
-      </View>
+      <Header
+        iconName="left"
+        headertext="Manage Subscriptions"
+        headertextColor="#191919B8"
+        fontWeight="Bold"
+        fontSize={20}
+        leftIconSize={15}
+        OnPress={() => navigation.goBack()}
+      />
+
       <View
         style={{
           width: '95%',
@@ -202,7 +196,6 @@ const ManageSubscription = ({navigation}) => {
           </TouchableOpacity>
         </View>
       </View>
-      {/* </ScrollView> */}
     </SafeAreaView>
   );
 };

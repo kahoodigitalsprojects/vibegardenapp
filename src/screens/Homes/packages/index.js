@@ -15,64 +15,58 @@ const Packages = ({navigation}) => {
   useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
-      <View>
-        <View style={styles.container}>
-          <View style={{marginTop: 10}}>
-            <Header
-              iconName="closesquareo"
-              header4
-              OnPress={() => navigation.goBack()}
-              color="#000"
-              fontSize={20}
-              headertext2="Switch Packages"
-            />
-          </View>
-          <View style={styles.switchView}>
-            <TouchableOpacity style={styles.row}>
-              <View style={{flexDirection: 'row'}}>
-                <Text style={styles.text1}>
-                  <Text style={[styles.text1, {color: '#aaa'}]}>
-                    Monthly $22{' '}
-                  </Text>
+      <Header
+        iconName="closesquareo"
+        OnPress={() => navigation.goBack()}
+        headertextColor="#191919B8"
+        fontWeight="Bold"
+        fontSize={20}
+        textToLeft={true}
+        headertext="Switch Packages"
+      />
+      <View style={styles.container}>
+        <View style={styles.switchView}>
+          <TouchableOpacity style={styles.row}>
+            <View style={{flexDirection: 'row'}}>
+              <Text style={styles.text1}>
+                <Text style={[styles.text1, {color: '#aaa'}]}>
+                  Monthly $22{' '}
                 </Text>
-                <View style={{flexDirection: 'row'}}>
-                  <Image
-                    source={require('../../../assests/images/tick.png')}
-                    style={{marginTop: 10, margin: 4}}
-                  />
-                  <Text style={styles.text2}>Selected </Text>
-                </View>
-              </View>
-
-              <Icon name="right" size={25} color="#1C5C2E" />
-            </TouchableOpacity>
-          </View>
-          <View style={styles.switchView}>
-            <TouchableOpacity
-              onPress={() => {
-                setstate(!state);
-              }}
-              style={styles.row}>
+              </Text>
               <View style={{flexDirection: 'row'}}>
-                <Text style={styles.text1}>
-                  <Text
-                    style={[
-                      styles.text1,
-                      {color: '#1C5C2E', fontWeight: '400'},
-                    ]}>
-                    Yearly $264{' '}
-                  </Text>
-                </Text>
-
                 <Image
-                  source={require('../../../assests/images/fire.png')}
+                  source={require('../../../assests/images/tick.png')}
                   style={{marginTop: 10, margin: 4}}
                 />
+                <Text style={styles.text2}>Selected </Text>
               </View>
+            </View>
 
-              <Icon name="right" size={25} color="#1C5C2E" />
-            </TouchableOpacity>
-          </View>
+            <Icon name="right" size={25} color="#1C5C2E" />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.switchView}>
+          <TouchableOpacity
+            onPress={() => {
+              setstate(!state);
+            }}
+            style={styles.row}>
+            <View style={{flexDirection: 'row'}}>
+              <Text style={styles.text1}>
+                <Text
+                  style={[styles.text1, {color: '#1C5C2E', fontWeight: '400'}]}>
+                  Yearly $264{' '}
+                </Text>
+              </Text>
+
+              <Image
+                source={require('../../../assests/images/fire.png')}
+                style={{marginTop: 10, margin: 4}}
+              />
+            </View>
+
+            <Icon name="right" size={25} color="#1C5C2E" />
+          </TouchableOpacity>
         </View>
       </View>
       <View>

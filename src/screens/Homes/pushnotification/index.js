@@ -22,83 +22,71 @@ const Pushnotification = ({navigation}) => {
   useBackButton(navigation, onBackPress);
   return (
     <SafeAreaView style={styles.main}>
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flexGrow: 1}}>
-        {/* <StatusBar animated={true} backgroundColor="#000" /> */}
-        <View
-          style={{
-            marginVertical: 10,
-            marginTop: 10,
-            width: '90%',
-            alignSelf: 'center',
-          }}>
-          <Header
-            iconName="left"
-            marginTop={-40}
-            marginRight={-30}
-            header2
-            headertext="Push Notification"
-            fontSize={25}
-            color="#191919B8"
-            OnPress={() => navigation.goBack()}
-          />
-          <View style={{marginTop: 30, marginVertical: 10}}>
-            <Text style={styles.text1}>
-              When Is A Good Time For Me To Send Your Personalized
-              Recommendations?
-            </Text>
+      <Header
+        iconName="left"
+        headertext="Push Notification"
+        headertextColor="#191919B8"
+        fontWeight="Bold"
+        fontSize={20}
+        leftIconSize={15}
+        OnPress={() => navigation.goBack()}
+      />
+      <View
+        style={{
+          width: '90%',
+          alignSelf: 'center',
+        }}>
+        <Text style={styles.text1}>
+          When Is A Good Time For Me To Send Your Personalized Recommendations?
+        </Text>
+        <View style={{marginVertical: 5, alignSelf: 'center', width: '90%'}}>
+          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+            <Text style={styles.text2}>Reminder Active:</Text>
+            <View style={{marginTop: 16}}>
+              <Switch1 />
+            </View>
           </View>
-          <View style={{marginVertical: 5, alignSelf: 'center', width: '90%'}}>
-            <View
-              style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-              <Text style={styles.text2}>Reminder Active:</Text>
-              <View style={{marginTop: 16}}>
-                <Switch1 />
-              </View>
+          <View style={{width: '100%'}}>
+            <View style={styles.btns}>
+              <TouchableOpacity style={styles.box}>
+                <Text style={styles.textA}>After Waking Up</Text>
+                <Icon
+                  style={{marginTop: -10}}
+                  name="sort-down"
+                  size={20}
+                  color="#1C5C2E"
+                />
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[styles.box, {width: 100, marginLeft: 10}]}>
+                <Text style={styles.textA}>7:30 AM</Text>
+                <Icon
+                  style={{marginTop: -10}}
+                  name="sort-down"
+                  size={20}
+                  color="#1C5C2E"
+                />
+              </TouchableOpacity>
             </View>
-            <View style={{width: '100%'}}>
-              <View style={styles.btns}>
-                <TouchableOpacity style={styles.box}>
-                  <Text style={styles.textA}>After Waking Up</Text>
-                  <Icon
-                    style={{marginTop: -10}}
-                    name="sort-down"
-                    size={20}
-                    color="#1C5C2E"
-                  />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  style={[styles.box, {width: 100, marginLeft: 10}]}>
-                  <Text style={styles.textA}>7:30 AM</Text>
-                  <Icon
-                    style={{marginTop: -10}}
-                    name="sort-down"
-                    size={20}
-                    color="#1C5C2E"
-                  />
-                </TouchableOpacity>
-              </View>
-              <Text style={styles.text2}>Set Different Time For Weekend:</Text>
-            </View>
-            <View
-              style={{
-                marginTop: 10,
-                width: '100%',
-                alignSelf: 'center',
-                // backgroundColor: 'pink',
-                alignItems: 'center',
-              }}>
-              <Pinkbtn
-                shadow={'#00000029'}
-                onPress={() => navigation.goBack()}
-                width={'60%'}
-                btntxt="Save"
-              />
-            </View>
+            <Text style={styles.text2}>Set Different Time For Weekend:</Text>
+          </View>
+          <View
+            style={{
+              marginTop: 10,
+              width: '100%',
+              alignSelf: 'center',
+              // backgroundColor: 'pink',
+              alignItems: 'center',
+            }}>
+            <Pinkbtn
+              shadow={'#00000029'}
+              onPress={() => navigation.goBack()}
+              width={'60%'}
+              btntxt="Save"
+            />
           </View>
         </View>
-      </ScrollView>
+      </View>
     </SafeAreaView>
   );
 };
@@ -117,7 +105,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textAlign: 'center',
     color: '#000',
-    marginVertical: 15,
+    marginVertical: 25,
     fontFamily: 'BrandonGrotesque-Medium',
   },
   text2: {

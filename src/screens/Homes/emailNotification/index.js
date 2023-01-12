@@ -24,43 +24,37 @@ const EmailNotification = ({navigation}) => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        {/* <StatusBar animated={true} backgroundColor="#000" /> */}
+        <Header
+          iconName="left"
+          headertext="Email Notifications"
+          headertextColor="#191919B8"
+          fontWeight="Bold"
+          fontSize={20}
+          leftIconSize={15}
+          OnPress={() => navigation.goBack()}
+        />
         <View style={styles.container}>
-          <Header
-            marginTop={-40}
-            marginRight={-30}
-            iconName="left"
-            headertext="Email Notifications"
-            color="#191919B8"
-            fontSize={20}
-            header2
-            OnPress={() => navigation.goBack()}
-          />
-          <View style={{marginTop: 10}}>
-            <View style={{width: '100%'}}>
-              <FlatList
-                showsVerticalScrollIndicator={false}
-                data={data}
-                renderItem={({item}) => {
-                  return (
-                    <View>
-                      <View style={styles.switchView}>
-                        <View styles={{width: '95%'}}>
-                          <Text style={styles.text1}>{item.text1}</Text>
-                        </View>
-                        <View styles={{width: '5%'}}>
-                          <Switch1 marginTop={6} />
-                        </View>
-                      </View>
-                      <View style={{width: '80%'}}>
-                        <Text style={styles.text2}>{item.text2}</Text>
-                      </View>
+          <FlatList
+            showsVerticalScrollIndicator={false}
+            data={data}
+            renderItem={({item}) => {
+              return (
+                <View>
+                  <View style={styles.switchView}>
+                    <View styles={{width: '95%'}}>
+                      <Text style={styles.text1}>{item.text1}</Text>
                     </View>
-                  );
-                }}
-              />
-            </View>
-          </View>
+                    <View styles={{width: '5%'}}>
+                      <Switch1 marginTop={6} />
+                    </View>
+                  </View>
+                  <View style={{width: '80%'}}>
+                    <Text style={styles.text2}>{item.text2}</Text>
+                  </View>
+                </View>
+              );
+            }}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>
