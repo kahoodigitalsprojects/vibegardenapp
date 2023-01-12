@@ -100,25 +100,16 @@ const Me = ({navigation}) => {
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1}}>
-          <View
-            style={{
-              width: '90%',
-              alignSelf: 'center',
-              marginTop: 25,
-            }}>
-            <Header
-              marginTop={-42}
-              img1
-              toggle
-              color="green"
-              marginLeft={-15}
-              search1="search1"
-              homeheader={true}
-              search={() => setVisible(true)}
-              OnPress={() => navigation.navigate('notification')}
-              OnPress1={() => navigation.navigate('settings')}
-            />
-          </View>
+          <Header
+            logo={true}
+            iconName="search1"
+            search={true}
+            toggle={true}
+            OnPress={() => setVisible(true)}
+            menu1={() => navigation.navigate('notification')}
+            menu2={() => navigation.navigate('settings')}
+          />
+
           <View style={styles.Box1}>
             <View style={{width: '90%', alignSelf: 'center'}}>
               <Text

@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import {Header} from '../../../componrnts';
 import Images from '../../../constants';
 

@@ -15,77 +15,70 @@ import Images from '../../../constants';
 const Registerd = ({route, navigation}) => {
   return (
     <SafeAreaView style={styles.main}>
-      <StatusBar animated={true} backgroundColor="#000" />
+      <Header iconName="closesquareo" OnPress={() => navigation.goBack()} />
       <View
         style={{
-          width: '95%',
+          width: '90%',
           alignSelf: 'center',
           marginTop: 20,
           alignItems: 'center',
         }}>
-        <Header
-          iconName="closesquareo"
-          header2
-          OnPress={() => navigation.goBack()}
-        />
         <View style={{width: '100%', alignItems: 'center'}}>
           <EnvelopeSvg />
         </View>
-        <View style={{width: '90%', alignSelf: 'center'}}>
-          <View>
-            <Text style={[styles.bottomLine, {color: '#000'}]}>
-              This Email Is Already Registered With Vibegarden, Please{' '}
-              <Text
-                onPress={() => {
-                  // console.log('hi');
-                  navigation.navigate('login', {
-                    registerd1: true,
-                  });
-                }}
-                style={[
-                  // styles.bottomLine,
-                  {
-                    color: '#1C5C2E',
-                    fontSize: 16,
-                    textDecorationLine: 'underline',
-                    fontFamily: 'BrandonGrotesque-Bold',
-                  },
-                ]}>
-                {' '}
-                Log In.
-              </Text>
-            </Text>
-          </View>
-          <View style={{alignSelf: 'center', marginVertical: 20}}>
-            <Text
-              style={{
-                fontWeight: '600',
-                color: '#1C5C2E',
-                paddingLeft: 10,
-                fontFamily: 'BrandonGrotesque-Medium',
-              }}>
-              Or
-            </Text>
-          </View>
-
+        <View>
           <Text style={[styles.bottomLine, {color: '#000'}]}>
-            Or If You’ve Forgotten Your Password,
+            This Email Is Already Registered With Vibegarden, Please{' '}
             <Text
               onPress={() => {
                 // console.log('hi');
-                navigation.navigate('forgerpsaaword');
+                navigation.navigate('login', {
+                  registerd1: true,
+                });
               }}
-              style={{
-                color: '#1C5C2E',
-                fontSize: 16,
-                textDecorationLine: 'underline',
-                fontFamily: 'BrandonGrotesque-Bold',
-              }}>
+              style={[
+                // styles.bottomLine,
+                {
+                  color: '#1C5C2E',
+                  fontSize: 16,
+                  textDecorationLine: 'underline',
+                  fontFamily: 'BrandonGrotesque-Bold',
+                },
+              ]}>
               {' '}
-              Click Here
+              Log In.
             </Text>
           </Text>
         </View>
+        <View style={{alignSelf: 'center', marginVertical: 20}}>
+          <Text
+            style={{
+              fontWeight: '600',
+              color: '#1C5C2E',
+              paddingLeft: 10,
+              fontFamily: 'BrandonGrotesque-Medium',
+            }}>
+            Or
+          </Text>
+        </View>
+
+        <Text style={[styles.bottomLine, {color: '#000'}]}>
+          Or If You’ve Forgotten Your Password,
+          <Text
+            onPress={() => {
+              // console.log('hi');
+              navigation.navigate('forgerpsaaword');
+            }}
+            style={{
+              color: '#1C5C2E',
+              fontSize: 16,
+              textDecorationLine: 'underline',
+              fontFamily: 'BrandonGrotesque-Bold',
+            }}>
+            {' '}
+            Click Here
+          </Text>
+        </Text>
       </View>
     </SafeAreaView>
   );

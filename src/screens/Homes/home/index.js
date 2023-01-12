@@ -139,30 +139,13 @@ const Home = ({navigation, route}) => {
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1}}>
-          <StatusBar animated={true} backgroundColor="#000" />
-          <View
-            style={{
-              width: '90%',
-              alignSelf: 'center',
-              marginVertical: 5,
-              marginTop: 25,
-            }}>
-            <Header
-              marginTop={-40}
-              marginLeft={-15}
-              img1
-              heartplus
-              search1="search1"
-              color="green"
-              homeheader={true}
-              search={() => setVisible(true)}
-              heart
-              plus
-              size={22}
-              colorplus={'green'}
-              marginTopplus={-2}
-            />
-          </View>
+          <Header
+            iconName="search1"
+            OnPress={() => setVisible(true)}
+            search={true}
+            logo={true}
+            right="heartplus"
+          />
           <View style={styles.Box1}>
             <View
               style={{width: '90%', alignSelf: 'center', marginVertical: 8}}>
