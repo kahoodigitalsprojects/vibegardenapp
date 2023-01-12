@@ -50,7 +50,7 @@ const Spalsh2 = ({navigation, route}) => {
                       otherParam: 'anything you want here',
                     })
                   }
-                  width={'70%'}
+                  width={'75%'}
                   btntxt="Let's Roll"
                 />
               </View>
