@@ -14,6 +14,7 @@ import Images from '../../../constants';
 import Icon from 'react-native-vector-icons/Feather';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {useBackButton} from '../../../hooks/BackHandler';
+import {BigBloomsSvg} from '../../../assests/svgs/QuestionsSvg';
 const BigBlooms = ({route, navigation}) => {
   const {heading1, newtext, Image1} = route.params;
 
@@ -28,22 +29,13 @@ const BigBlooms = ({route, navigation}) => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        {/* <StatusBar animated={true} backgroundColor="#000" /> */}
-        <View
-          style={{
-            width: '100%',
-            marginTop: 10,
-          }}>
-          <Header
-            width={'25%'}
-            iconName="arrowleft"
-            header4
-            OnPress={() => navigation.goBack()}
-            headertext={newtext}
-            fontSize={20}
-            color="#000"
-          />
-        </View>
+        <Header
+          iconName="arrowleft"
+          OnPress={() => navigation.goBack()}
+          headertext={newtext}
+          fontSize={20}
+          headertextColor="#000"
+        />
         <View style={styles.itms}>
           <Text
             style={{
@@ -65,7 +57,7 @@ const BigBlooms = ({route, navigation}) => {
               alignSelf: 'center',
               marginTop: 20,
             }}>
-            <Image source={Image1} />
+            <BigBloomsSvg />
           </View>
         </View>
         <View
@@ -74,7 +66,7 @@ const BigBlooms = ({route, navigation}) => {
             width: '100%',
             // backgroundColor: 'pink',
           }}>
-          <View style={{width: '96%', alignSelf: 'center'}}>
+          <View style={{width: '90%', alignSelf: 'center'}}>
             <Text
               style={{
                 fontSize: 18,
@@ -174,8 +166,8 @@ const BigBlooms = ({route, navigation}) => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    // backgroundColor: 'pink',
-    alignItems: 'center',
+    backgroundColor: '#fff',
+    // alignItems: 'center',
   },
   itms: {
     marginTop: 10,

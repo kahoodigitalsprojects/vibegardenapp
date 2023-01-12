@@ -9,7 +9,6 @@ const ForgetPassword = ({navigation}) => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1, alignItems: 'center'}}>
         <Header
-          // fontSize={25}
           headertextColor="#191919B8"
           iconName="arrowleft"
           headertext="Forget Password"

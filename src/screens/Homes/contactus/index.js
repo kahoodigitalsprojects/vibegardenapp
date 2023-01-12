@@ -27,7 +27,15 @@ const Contactus = ({navigation}) => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        {/* <StatusBar animated={true} backgroundColor="#000" /> */}
+        <Header
+          iconName="left"
+          OnPress={() => navigation.goBack()}
+          headertext="Contact Us"
+          headertextColor="#191919B8"
+          fontWeight="Bold"
+          fontSize={20}
+          color="#191919B8"
+        />
         <View
           style={{
             marginVertical: 10,
@@ -35,16 +43,6 @@ const Contactus = ({navigation}) => {
             width: '90%',
             alignSelf: 'center',
           }}>
-          <Header
-            marginTop={-40}
-            iconName="left"
-            header2
-            OnPress={() => navigation.goBack('')}
-            headertext="Contact Us"
-            fontSize={20}
-            color="#191919B8"
-          />
-
           <View style={{marginVertical: 25, alignSelf: 'center'}}>
             <View style={{alignSelf: 'center', width: '80%', marginTop: 20}}>
               <Text

@@ -45,6 +45,7 @@ const Header = ({
   leftIconSize = 20,
   fontWeight = 'Medium',
   textToLeft,
+  greenIcon,
 }) => {
   const [state, setState] = useState(false);
   return (
@@ -88,12 +89,7 @@ const Header = ({
               <Icon2 name="plus" size={20} color="#1C5C2E" style={{}} />
             </TouchableOpacity>
             <TouchableOpacity style={styles.iconRight}>
-              <Icon
-                name="heart"
-                size={20}
-                color="#EF3A71"
-                // style={{marginTop: hearttop, marginLeft: heartleft1}}
-              />
+              <Icon name="heart" size={20} color="#EF3A71" />
             </TouchableOpacity>
           </View>
         </>
@@ -137,6 +133,7 @@ const Header = ({
                   style={{width: 34, height: 34, marginRight: 10}}
                 />
               )}
+              {greenIcon && <View style={{marginRight: 10}}>{greenIcon}</View>}
               <Text
                 style={{
                   fontSize: fontSize,
@@ -209,6 +206,10 @@ const Header = ({
                 </MenuOptions>
               </Menu>
             </View>
+          ) : heart ? (
+            <TouchableOpacity style={styles.iconRight}>
+              <Icon name="heart" size={25} color="#EF3A71" />
+            </TouchableOpacity>
           ) : (
             <View style={{width: 40, height: 40}}></View>
           )}

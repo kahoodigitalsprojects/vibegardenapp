@@ -5,25 +5,13 @@ import {
   SafeAreaView,
   ScrollView,
   StyleSheet,
-  StatusBar,
-  TextInput,
-  Image,
   TouchableOpacity,
   FlatList,
 } from 'react-native';
 
-import {
-  Flowers,
-  Header,
-  Pinkbtn,
-  QComponents,
-  Userdetails,
-} from '../../../componrnts';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import {Header, QComponents, Userdetails} from '../../../componrnts';
 import Images from '../../../constants';
-import MainBox from '../../../componrnts/mainbox';
 import All from '../../../componrnts/all';
-import Question from '../Question';
 import {useBackButton} from '../../../hooks/BackHandler';
 import {GreenIcon1, GreenIcon2} from '../../../assests/svgs/GroundworkSvg';
 
@@ -95,47 +83,27 @@ const Video = ({route, navigation}) => {
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1}}>
-          {/* <StatusBar animated={true} backgroundColor="#000" /> */}
-
+          <Header
+            greenIcon={state === icon1 ? <GreenIcon1 /> : <GreenIcon2 />}
+            heart={true}
+            fontSize={20}
+            iconName="closesquareo"
+            color="#fff"
+            gbg="#1C5C2E"
+            headertext={otherParam1}
+            OnPress={() =>
+              navigation.reset({
+                index: 0,
+                routes: [{name: 'GroundWork'}, {name: 'Homes'}],
+              })
+            }
+          />
           <View
             style={{
               marginVertical: 10,
               marginTop: 10,
               // width: '90%',
             }}>
-            <View
-              style={{
-                width: '90%',
-
-                alignSelf: 'center',
-                paddingVertical: 8,
-              }}>
-              <Header
-                greenicon1={state === icon1 ? <GreenIcon1 /> : <GreenIcon2 />}
-                heartplus
-                heart
-                plus={plus}
-                hearttop={-4}
-                size={22}
-                colorplus={'green'}
-                marginTopplus={-4}
-                heading
-                fontSize={20}
-                search1="closesquareo"
-                logo11
-                color="#fff"
-                gbg="#1C5C2E"
-                alignItems="center"
-                homeheader
-                headertext={otherParam1}
-                search={() =>
-                  navigation.reset({
-                    index: 0,
-                    routes: [{name: 'GroundWork'}, {name: 'Homes'}],
-                  })
-                }
-              />
-            </View>
             <View
               style={{
                 width: '100%',
@@ -239,7 +207,7 @@ const Video = ({route, navigation}) => {
                 ]}>
                 <Text
                   style={{
-                    color: 'black',
+                    // color: 'black',
                     fontSize: 14,
                     color: '#1C5C2E',
                     fontFamily: 'BrandonGrotesque-Bold',
@@ -289,7 +257,7 @@ const Video = ({route, navigation}) => {
             <View style={styles.row}>
               <Text
                 style={{
-                  color: 'black',
+                  // color: 'black',
                   fontSize: 20,
                   color: '#1C5C2E',
                   fontFamily: 'BrandonGrotesque-Regular',
@@ -335,7 +303,6 @@ const Video = ({route, navigation}) => {
               style={{
                 width: '90%',
                 alignSelf: 'center',
-                alignSelf: 'center',
                 marginTop: 4,
               }}>
               <Text style={styles.text}>Additional Resonance:</Text>
@@ -357,8 +324,7 @@ const Video = ({route, navigation}) => {
               <Text style={styles.text}>Suggested Teachers:</Text>
             </View>
           </View>
-          <View
-            style={{width: '90%', alignSelf: 'center', alignSelf: 'center'}}>
+          <View style={{width: '90%', alignSelf: 'center'}}>
             <FlatList
               showsHorizontalScrollIndicator={false}
               data={data2}
@@ -405,7 +371,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   text: {
-    color: 'black',
+    // color: 'black',
     fontSize: 20,
     color: '#1C5C2E',
     marginTop: 5,
@@ -455,8 +421,6 @@ const styles = StyleSheet.create({
     // backgroundColor: 'green',
     width: '90%',
     alignSelf: 'center',
-
-    flexDirection: 'row',
   },
   line: {
     width: '80%',

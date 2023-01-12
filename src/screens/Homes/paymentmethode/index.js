@@ -26,7 +26,8 @@ const PaymentMethod = ({navigation, route}) => {
     <SafeAreaView style={styles.main}>
       <Header
         iconName="left"
-        headertext="Manage Subscriptions"
+        headertext="Pay Now"
+        textToLeft={true}
         headertextColor="#191919B8"
         fontWeight="Bold"
         fontSize={20}

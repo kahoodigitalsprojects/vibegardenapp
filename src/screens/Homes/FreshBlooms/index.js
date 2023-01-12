@@ -33,8 +33,6 @@ const FressBlooms = ({navigation, route}) => {
 
   return (
     <SafeAreaView style={styles.main}>
-      {/* <StatusBar animated={true} backgroundColor="#000" /> */}
-
       <ImageBackground
         source={Images.BackGround.backgroundHue}
         resizeMode="stretch"
@@ -42,32 +40,30 @@ const FressBlooms = ({navigation, route}) => {
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1}}>
+          <Header
+            iconName="closesquareo"
+            headertextColor="#000"
+            fontWeight="Regular"
+            fontSize={18}
+            headertext={otherParam}
+            OnPress={() =>
+              fromHome
+                ? navigation.reset({
+                    index: 0,
+                    routes: [{name: 'Homes'}, {name: 'me'}],
+                  })
+                : navigation.reset({
+                    index: 0,
+                    routes: [{name: 'me'}, {name: 'Homes'}],
+                  })
+            }
+          />
           <View
             style={{
               width: '90%',
               alignSelf: 'center',
               fontFamily: 'BrandonGrotesque-Regular',
             }}>
-            <Text style={{color: 'yellow'}}>{itemId}</Text>
-            <Header
-              marginTop={-40}
-              iconName="closesquareo"
-              color="#000"
-              fontSize={18}
-              header2
-              headertext={otherParam}
-              OnPress={() =>
-                fromHome
-                  ? navigation.reset({
-                      index: 0,
-                      routes: [{name: 'Homes'}, {name: 'me'}],
-                    })
-                  : navigation.reset({
-                      index: 0,
-                      routes: [{name: 'me'}, {name: 'Homes'}],
-                    })
-              }
-            />
             <View style={{marginTop: 25}}>
               <FlatList
                 data={data}

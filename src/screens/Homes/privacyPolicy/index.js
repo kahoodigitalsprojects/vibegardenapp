@@ -18,24 +18,15 @@ const PrivacyPolicy = ({navigation, route}) => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        {/* <StatusBar animated={true} backgroundColor="#000" /> */}
-        <View
-          style={{
-            marginVertical: 20,
-            marginTop: 10,
-            width: '90%',
-            alignSelf: 'center',
-          }}>
-          <Header
-            marginTop={-40}
-            iconName="left"
-            header2
-            OnPress={() => navigation.goBack()}
-            headertext={heading1}
-            fontSize={25}
-            color="#191919B8"
-          />
-        </View>
+        <Header
+          iconName="left"
+          OnPress={() => navigation.goBack()}
+          headertext={heading1}
+          headertextColor="#191919B8"
+          fontWeight="Bold"
+          fontSize={20}
+          color="#191919B8"
+        />
         <View
           style={{
             marginTop: 15,

@@ -299,5 +299,33 @@ function FourthSvg() {
     </Svg>
   );
 }
+function BigBloomsSvg() {
+  return (
+    <Svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="76.43"
+      height="37.836"
+      viewBox="0 0 76.43 37.836">
+      <G id="Layer_1-2" transform="translate(0 0)">
+        <G id="Group_38569" data-name="Group 38569" transform="translate(0 0)">
+          <Path
+            id="Path_2657"
+            data-name="Path 2657"
+            d="M71.038.1a2.313,2.313,0,0,1,2.86,2.86A51.172,51.172,0,0,1,60.931,24.794,51.119,51.119,0,0,1,39.146,37.741a2.313,2.313,0,0,1-2.86-2.86A51.4,51.4,0,0,1,71.038.1Z"
+            transform="translate(2.436 0)"
+            fill="#ff4053"
+          />
+          <Path
+            id="Path_2658"
+            data-name="Path 2658"
+            d="M2.956.1A2.31,2.31,0,0,0,.1,2.956,51.172,51.172,0,0,0,13.064,24.794,51.119,51.119,0,0,0,34.848,37.741a2.313,2.313,0,0,0,2.86-2.86A51.172,51.172,0,0,0,24.741,13.043,51.245,51.245,0,0,0,2.956.1Z"
+            transform="translate(0 0)"
+            fill="#ff4053"
+          />
+        </G>
+      </G>
+    </Svg>
+  );
+}
 
-export {FirstSvg, SecondSvg, ThirdSvg, FourthSvg};
+export {FirstSvg, SecondSvg, ThirdSvg, FourthSvg, BigBloomsSvg};

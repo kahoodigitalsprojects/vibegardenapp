@@ -38,16 +38,8 @@ const BloomsCheck = ({route, navigation, newtext, Heading}) => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        {/* <StatusBar animated={true} backgroundColor="#000" /> */}
-
         <View style={{width: '100%', alignSelf: 'center'}}>
-          <View style={{width: '90%', alignSelf: 'center'}}>
-            <Header
-              header2
-              iconName="closesquareo"
-              OnPress={() => navigation.goBack()}
-            />
-          </View>
+          <Header iconName="closesquareo" OnPress={() => navigation.goBack()} />
 
           <View style={{width: '100%'}}>
             <View style={{width: '90%', alignSelf: 'center'}}>

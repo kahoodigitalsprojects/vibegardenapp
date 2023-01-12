@@ -82,23 +82,13 @@ const Buddhisim = ({navigation, Flowersbox, Heading}) => {
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1}}>
-          <View
-            style={{
-              width: '90%',
-              alignSelf: 'center',
-              marginVertical: 5,
-              marginTop: 15,
-            }}>
-            <Header
-              marginTop={-40}
-              color="#1C5C2E"
-              fontSize={25}
-              iconName="arrowleft"
-              header2
-              headertext="Buddhisim"
-              OnPress={() => navigation.goBack()}
-            />
-          </View>
+          <Header
+            headertextColor="#1C5C2E"
+            fontSize={25}
+            iconName="arrowleft"
+            headertext="Buddhisim"
+            OnPress={() => navigation.goBack()}
+          />
           <View style={styles.Box1}>
             <View
               style={{

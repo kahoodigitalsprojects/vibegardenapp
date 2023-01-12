@@ -27,73 +27,63 @@ const Star = ({navigation}) => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
-        {/* <StatusBar animated={true} backgroundColor="#000" /> */}
+        <Header
+          iconName="closesquareo"
+          OnPress={() => {
+            navigation.reset({
+              index: 0,
+              routes: [{name: 'Homes'}, {name: 'me'}],
+            });
+          }}
+        />
         <View
           style={{
-            marginVertical: 10,
+            marginVertical: 15,
             marginTop: 10,
             width: '90%',
             alignSelf: 'center',
+            justifyContent: 'center',
           }}>
-          <Header
-            iconName="closesquareo"
-            header2
-            OnPress={() => {
-              navigation.reset({
-                index: 0,
-                routes: [{name: 'Homes'}, {name: 'me'}],
-              });
-            }}
-          />
-
           <View
             style={{
-              marginVertical: 5,
+              marginVertical: 10,
               alignSelf: 'center',
-              // backgroundColor: 'yellow',
-              justifyContent: 'center',
+              // backgroundColor: 'pink',
             }}>
-            <View
-              style={{
-                marginVertical: 10,
-                alignSelf: 'center',
-                // backgroundColor: 'pink',
-              }}>
-              <Image resizeMode="contain" source={Images.Imgs.nebula} />
-            </View>
-            <Text
-              style={{
-                fontSize: 25,
-                textAlign: 'center',
-                color: '#000',
-                marginVertical: 5,
-                fontFamily: 'BrandonGrotesque-Regular',
-              }}>
-              You're Star!
-            </Text>
-            <Text
-              style={{
-                marginVertical: 10,
-                fontSize: 18,
-                textAlign: 'center',
-                color: '#000',
-                lineHeight: 30,
-                fontFamily: 'BrandonGrotesque-Medium',
-              }}>
-              Your Feedback Insight Will Help Us Refining Our Tools &
-              Recommendations!
-            </Text>
-            <Text
-              style={{
-                fontSize: 24,
-                textAlign: 'center',
-                color: '#1C5C2E',
-                marginVertical: 5,
-                fontFamily: 'BrandonGrotesque-Bold',
-              }}>
-              With Gratitude!
-            </Text>
+            <Image resizeMode="contain" source={Images.Imgs.nebula} />
           </View>
+          <Text
+            style={{
+              fontSize: 25,
+              textAlign: 'center',
+              color: '#000',
+              marginVertical: 5,
+              fontFamily: 'BrandonGrotesque-Regular',
+            }}>
+            You're Star!
+          </Text>
+          <Text
+            style={{
+              marginVertical: 10,
+              fontSize: 18,
+              textAlign: 'center',
+              color: '#000',
+              lineHeight: 30,
+              fontFamily: 'BrandonGrotesque-Medium',
+            }}>
+            Your Feedback Insight Will Help Us Refining Our Tools &
+            Recommendations!
+          </Text>
+          <Text
+            style={{
+              fontSize: 24,
+              textAlign: 'center',
+              color: '#1C5C2E',
+              marginVertical: 5,
+              fontFamily: 'BrandonGrotesque-Bold',
+            }}>
+            With Gratitude!
+          </Text>
         </View>
       </ScrollView>
     </SafeAreaView>
