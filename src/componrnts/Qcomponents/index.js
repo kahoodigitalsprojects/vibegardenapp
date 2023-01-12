@@ -57,9 +57,10 @@ const QComponents = ({
   icontwo,
   redbtn,
   textforvideo,
+  colapse,
 }) => {
   const [data1, setdata1] = useState(0);
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(colapse);
   const numColumns = 4;
   const data = [
     {text1: text1, img1: <FirstSvg />},
@@ -201,7 +202,7 @@ const QComponents = ({
                   <TouchableOpacity
                     onPress={() => setIsCollapsed(!isCollapsed)}
                     style={{marginTop: 1, marginLeft: 5}}>
-                    {isCollapsed ? (
+                    {isCollapsed === colapse ? (
                       <Icon name={name3} size={25} color="#1C5C2E" />
                     ) : (
                       <Icon name={name2} size={25} color="#1C5C2E" />

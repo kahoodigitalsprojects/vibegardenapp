@@ -59,6 +59,7 @@ const Question3 = ({navigation}) => {
                 direction2="Description:"
                 width={'90%'}
                 // width1={'100%'}
+                colapse={true}
                 flowwerlist11={true}
                 Statement1="Statement:"
                 flow="Flow Through"
