@@ -34,7 +34,6 @@ const SignUp = ({route, navigation}) => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
         <View style={styles.screenBody}>
-          {/* <View style={styles.logo}><LoginLogo /></View> */}
           <Text style={[styles.text, {fontSize: 25, color: '#1C5C2E'}]}>
             You're so very welcome,{'\n'} Erin
           </Text>
@@ -159,7 +158,7 @@ const styles = StyleSheet.create({
   },
   screenHeader: {
     width: '90%',
-    marginTop: 25,
+    marginTop: 15,
     alignSelf: 'center',
     justifyContent: 'center',
     alignItems: 'center',
@@ -191,7 +190,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 18,
     fontFamily: 'BrandonGrotesque-Medium',
-    marginTop: 10,
+    marginTop: 0,
     color: '#aaa',
     textAlign: 'left',
   },

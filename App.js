@@ -9,6 +9,9 @@ import RootStack from './src/navigation/RootStack';
 import {enableScreens} from 'react-native-screens';
 import MyStatusBar from './src/componrnts/statusBar';
 import DeviceInfo from 'react-native-device-info';
+import {LogBox} from 'react-native';
+//Ignore all log notifications
+LogBox.ignoreAllLogs();
 let hasNotch = DeviceInfo.hasNotch();
 const App = props => {
   useEffect(() => {
@@ -25,8 +28,8 @@ const App = props => {
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
       <MenuProvider>
         <MyStatusBar
-          backgroundColor={hasNotch ? 'transparent' : '#000'}
-          barStyle={hasNotch ? 'dark-content' : 'light-content'}
+          backgroundColor={Platform.OS === 'ios' ? 'transparent' : '#000'}
+          barStyle={Platform.OS === 'ios' ? 'dark-content' : 'light-content'}
         />
         <RootStack />
       </MenuProvider>

@@ -122,7 +122,7 @@ const Login = ({route, navigation}) => {
           style={{
             // backgroundColor: 'blue',
             flex: 1,
-            justifyContent: 'center',
+            justifyContent: 'space-evenly',
             width: '90%',
             alignSelf: 'center',
             alignItems: 'center',
@@ -153,7 +153,7 @@ const Login = ({route, navigation}) => {
           <Text
             style={{
               textAlign: 'center',
-              marginVertical: 20,
+              // marginVertical: 20,
               color: '#1C5C2E',
               fontSize: 18,
               fontFamily: 'BrandonGrotesque-Regular',

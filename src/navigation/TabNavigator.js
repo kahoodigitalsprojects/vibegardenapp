@@ -133,6 +133,7 @@ const tabBarStyles = {
   height: hasNotch ? 85 : 80,
   borderTopLeftRadius: 20,
   borderTopRightRadius: 20,
+  // backgroundColor: 'red',
 };
 const tabBarHiddenStyles = {
   display: 'none',

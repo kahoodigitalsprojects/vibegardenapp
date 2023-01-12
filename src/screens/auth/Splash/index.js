@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {View, Text, StyleSheet, Image, StatusBar} from 'react-native';
 import Images from '../../../constants';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {LoginLogo} from '../../../assests/svgs/LoginSvgs';
 const Spalsh = ({navigation}) => {
   useEffect(() => {
     setTimeout(() => {
@@ -26,7 +27,7 @@ const Spalsh = ({navigation}) => {
     <>
       {/* <StatusBar animated={true} backgroundColor="#000" /> */}
       <View style={styles.main}>
-        <Image source={Images.Logos.logo1} />
+        <LoginLogo />
       </View>
     </>
   );

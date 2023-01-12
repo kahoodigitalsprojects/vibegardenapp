@@ -8,57 +8,33 @@ import {
   ScrollView,
   SafeAreaView,
 } from 'react-native';
+import {LoginLogo} from '../../../assests/svgs/LoginSvgs';
 import {Header, Pinkbtn} from '../../../componrnts';
 import Images from '../../../constants';
 
 const Spalsh2 = ({navigation, route}) => {
   const {showVerifyScreen} = route.params;
   return (
-    <>
-      <SafeAreaView style={styles.main}>
-        <ScrollView
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={{flexGrow: 1}}>
-          {/* <StatusBar animated={true} backgroundColor="#000" /> */}
-
-          <View style={{}}>
-            <View style={{alignSelf: 'center', marginTop: 100}}>
-              <Image source={Images.Logos.logo1} />
-            </View>
-
-            <View style={styles.view1}>
-              <Text style={styles.text1}>
-                Welcome vibe Gardner Huzzah! Its you're first time visiting Vibe
-                Garden Mobile App!
-              </Text>
-              <Text style={styles.text1}>
-                A Few fun question help us personal your experience here
-              </Text>
-              <View
-                style={{
-                  marginTop: 10,
-                  width: '100%',
-                  alignItems: 'center',
-                  alignSelf: 'center',
-                }}>
-                <Pinkbtn
-                  shadow="#00000019"
-                  onPress={() =>
-                    navigation.navigate('signup', {
-                      showVerifyScreen: showVerifyScreen,
-                      itemId: 86,
-                      otherParam: 'anything you want here',
-                    })
-                  }
-                  width={'70%'}
-                  btntxt="Let's Roll"
-                />
-              </View>
-            </View>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <SafeAreaView style={styles.main}>
+      <LoginLogo />
+      <Text style={styles.text1}>
+        Welcome vibe Gardner{'\n'} Huzzah! Its you're first time{'\n'} visiting
+        Vibe Garden{'\n'} Mobile App!
+      </Text>
+      <Text style={styles.text1}>
+        A Few fun question help{'\n'} us personal{'\n'} your experience here
+      </Text>
+      <Pinkbtn
+        shadow="#00000019"
+        onPress={() =>
+          navigation.navigate('signup', {
+            showVerifyScreen: showVerifyScreen,
+          })
+        }
+        width={'70%'}
+        btntxt="Let's Roll"
+      />
+    </SafeAreaView>
   );
 };
 
@@ -67,23 +43,15 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#ffff',
     alignItems: 'center',
+    justifyContent: 'center',
   },
-  view1: {
-    marginTop: 20,
-    marginVertical: 10,
-    width: '90%',
-    alignSelf: 'center',
-  },
-  logo1: {
-    marginVertical: 20,
-  },
+
   text1: {
     textAlign: 'center',
     color: '#1C5C2E',
     fontSize: 28,
     marginVertical: 10,
-    lineHeight: 44,
-    fontFamily: 'BrandonGrotesque-Regular',
+    fontFamily: 'BrandonGrotesque-Light',
   },
 });
 
