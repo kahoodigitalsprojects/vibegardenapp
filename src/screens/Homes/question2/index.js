@@ -52,11 +52,12 @@ const Question2 = ({navigation}) => {
               name2="chevron-up"
               name3="chevron-down"
               video={true}
+              colapse={false}
               width={'90%'}
               width1={'100%'}
               direction2="Description:"
               Statement1="Statement:"
-              flow="Flow Through"
+              // flow="Flow Through"
               margintopS={31}
               textfontsize={31}
               number={'1/20'}

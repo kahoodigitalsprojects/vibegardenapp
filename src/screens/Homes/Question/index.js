@@ -59,6 +59,7 @@ const Question = ({navigation}) => {
               direction2="Description:"
               Statement1="Statement:"
               flow="Flow Through"
+              colapse={true}
               number={'2/20'}
               name="chevron-down"
               image1={true}
